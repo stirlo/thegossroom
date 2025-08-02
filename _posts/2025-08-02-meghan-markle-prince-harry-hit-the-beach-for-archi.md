@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Meghan Markle & Prince Harry Hit the Beach for Archie's Surf Lessons"
-date: 2025-08-02 10:17:37 +0000
+date: 2025-08-02 11:14:48 +0000
 categories: gossip
 tags: ['meghan-markle', 'royalty', 'charity', 'controversy', 'media', 'source-tmz', 'drama-explosive']
 drama_score: 12

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Child star from original Willy Wonka film reveals how much he still earns from movie 54 YEARS later"
-date: 2025-08-02 10:17:52 +0000
+date: 2025-08-02 11:15:03 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-daily_mail', 'drama-rising']
 drama_score: 2

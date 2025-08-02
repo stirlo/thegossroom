@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What's The Big Frigin' Difference?!"
-date: 2025-08-02 10:17:37 +0000
+date: 2025-08-02 11:14:48 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-tmz', 'drama-rising']
 drama_score: 3

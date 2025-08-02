@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jeannie Seely, Razor-Sharp Country Singer Known as ‘Miss Country Soul,’ Dead at 85"
-date: 2025-08-02 10:17:54 +0000
+date: 2025-08-02 11:15:06 +0000
 categories: gossip
 tags: ['jeannie-seely', 'auto-discovered', 'new', 'source-rolling_stone', 'drama-rising']
 drama_score: 4

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Diddy Wants A RETRIAL! The Slap On The Wrist Was Too Hard?!?"
-date: 2025-08-02 10:17:38 +0000
+date: 2025-08-02 11:14:50 +0000
 categories: gossip
 tags: ['diddy', 'hiphop', 'legal', 'controversy', 'music', 'business', 'source-perez_hilton', 'drama-explosive']
 drama_score: 21

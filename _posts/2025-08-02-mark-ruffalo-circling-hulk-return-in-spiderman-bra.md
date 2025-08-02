@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mark Ruffalo Circling Hulk Return in ‘Spider-Man: Brand New Day’"
-date: 2025-08-02 10:17:46 +0000
+date: 2025-08-02 11:14:57 +0000
 categories: gossip
 tags: ['tom-holland', 'movies', 'spiderman', 'marvel', 'dating', 'source-variety_alt', 'drama-rising']
 drama_score: 2

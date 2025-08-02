@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nancy Meyers Reacts To ‘The Holiday’ Limited Series: “News To Me”"
-date: 2025-08-02 10:17:48 +0000
+date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-deadline', 'drama-rising']
 drama_score: 2

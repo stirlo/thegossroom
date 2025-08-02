@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stars and Scars -- You Be the Judge"
-date: 2025-08-02 10:17:37 +0000
+date: 2025-08-02 11:14:48 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-tmz', 'drama-hot']
 drama_score: 9

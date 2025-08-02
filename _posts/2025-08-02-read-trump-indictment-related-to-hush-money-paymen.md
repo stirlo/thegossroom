@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "READ: Trump indictment related to hush money payment"
-date: 2025-08-02 10:18:12 +0000
+date: 2025-08-02 11:15:24 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-cnn_entertainment', 'drama-rising']
 drama_score: 2

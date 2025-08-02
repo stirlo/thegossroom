@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What were the Twins thinking? Who is MLB's team to beat? Making sense of the trade deadline's biggest surprises"
-date: 2025-08-02 10:18:10 +0000
+date: 2025-08-02 11:15:22 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-espn', 'drama-mild']
 drama_score: 1

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vast Data in talks with Alphabet’s CapitalG, Nvidia to fund round at up to $30B valuation"
-date: 2025-08-02 10:18:11 +0000
+date: 2025-08-02 11:15:23 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-techcrunch', 'drama-mild']
 drama_score: 1

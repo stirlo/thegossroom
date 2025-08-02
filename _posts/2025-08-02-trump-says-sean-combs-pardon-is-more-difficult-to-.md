@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trump Says Sean Combs Pardon Is ‘More Difficult to Do’ Since Combs Was ‘Hostile’ to Him"
-date: 2025-08-02 10:17:54 +0000
+date: 2025-08-02 11:15:06 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-rolling_stone', 'drama-hot']
 drama_score: 6

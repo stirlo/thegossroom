@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "They REDACTED Trump's Name From The Epstein Files! And 'Dozens' Of Others, Too!"
-date: 2025-08-02 10:17:38 +0000
+date: 2025-08-02 11:14:50 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-perez_hilton', 'drama-explosive']
 drama_score: 21

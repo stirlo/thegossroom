@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dead & Company’s Golden Gate Park Celebration Of 60 Years Of The Grateful Dead: Every Song From Night 1"
-date: 2025-08-02 10:17:56 +0000
+date: 2025-08-02 11:15:07 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-billboard', 'drama-rising']
 drama_score: 2

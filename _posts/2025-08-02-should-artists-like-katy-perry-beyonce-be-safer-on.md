@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Should Artists Like Katy Perry & Beyonce Be Safer on Stage? Fans Get Real About Concert Scares | Billboard News"
-date: 2025-08-02 10:17:56 +0000
+date: 2025-08-02 11:15:07 +0000
 categories: gossip
 tags: ['beyonce', 'music', 'pop', 'hiphop', 'fashion', 'awards', 'business', 'source-billboard', 'drama-hot']
 drama_score: 8

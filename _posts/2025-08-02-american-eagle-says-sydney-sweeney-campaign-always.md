@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "American Eagle Says Sydney Sweeney Campaign ‘Always Was About the Jeans’ After Backlash"
-date: 2025-08-02 10:17:54 +0000
+date: 2025-08-02 11:15:06 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'tv', 'movies', 'fashion', 'controversy', 'source-rolling_stone', 'drama-hot']
 drama_score: 6

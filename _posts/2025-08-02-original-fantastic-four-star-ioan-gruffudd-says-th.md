@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Original ‘Fantastic Four’ Star Ioan Gruffudd Says the ‘Plan Was to Do Three Movies’ but Studio Cut Franchise Short: ‘Decisions Beyond My Control’"
-date: 2025-08-02 10:17:46 +0000
+date: 2025-08-02 11:14:57 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-variety_alt', 'drama-rising']
 drama_score: 2

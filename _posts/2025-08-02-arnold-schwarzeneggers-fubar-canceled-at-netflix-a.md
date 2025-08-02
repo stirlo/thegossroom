@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Arnold Schwarzenegger’s ‘FUBAR’ Canceled at Netflix After Two Seasons"
-date: 2025-08-02 10:17:47 +0000
+date: 2025-08-02 11:14:58 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 2

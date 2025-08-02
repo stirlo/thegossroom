@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jeannie Seely, “Don’t Touch Me” Singer and Longtime Grand Ole Opry Host, Dies at 85"
-date: 2025-08-02 10:17:47 +0000
+date: 2025-08-02 11:14:58 +0000
 categories: gossip
 tags: ['dolly-parton', 'music', 'country', 'charity', 'business', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 4

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ALEX BRUMMER: Donald Trump's deals are a global blow"
-date: 2025-08-02 10:17:52 +0000
+date: 2025-08-02 11:15:03 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-daily_mail', 'drama-explosive']
 drama_score: 10

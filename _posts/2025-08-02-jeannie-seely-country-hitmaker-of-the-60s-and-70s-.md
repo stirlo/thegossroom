@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jeannie Seely, Country Hitmaker of the ’60s and ’70s and 58-Year Mainstay of the Grand Ole Opry, Dies at 85"
-date: 2025-08-02 10:17:46 +0000
+date: 2025-08-02 11:14:57 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-variety_alt', 'drama-explosive']
 drama_score: 10

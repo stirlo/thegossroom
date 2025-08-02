@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Marc Maron Jokes He’s “Not Afraid to Die Anymore” as Long as This Taylor Swift Song Is Playing"
-date: 2025-08-02 10:17:47 +0000
+date: 2025-08-02 11:14:58 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-hollywood_reporter', 'drama-hot']
 drama_score: 6

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hailey Bieber’s Favorite Transitional Top Is Taking Over Hollywood"
-date: 2025-08-02 10:17:58 +0000
+date: 2025-08-02 11:15:10 +0000
 categories: gossip
 tags: ['bieber', 'music', 'pop', 'controversy', 'mental-health', 'marriage', 'source-elle_alt', 'drama-explosive']
 drama_score: 12

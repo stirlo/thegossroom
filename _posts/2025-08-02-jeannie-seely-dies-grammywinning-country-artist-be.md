@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jeannie Seely Dies: Grammy-Winning Country Artist Behind ‘Don’t Touch Me’ Was 85"
-date: 2025-08-02 10:17:48 +0000
+date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['jeannie-seely', 'auto-discovered', 'new', 'source-deadline', 'drama-rising']
 drama_score: 4

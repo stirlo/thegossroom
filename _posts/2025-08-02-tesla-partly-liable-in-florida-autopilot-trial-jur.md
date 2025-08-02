@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tesla partly liable in Florida Autopilot trial, jury awards $200M in damages"
-date: 2025-08-02 10:18:11 +0000
+date: 2025-08-02 11:15:23 +0000
 categories: gossip
 tags: ['elon-musk', 'tech', 'business', 'controversy', 'social-media', 'space', 'source-techcrunch', 'drama-hot']
 drama_score: 5

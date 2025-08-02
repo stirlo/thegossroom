@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jeannie Seely, Grand Ole Opry Star and Country Music Trailblazer, Dies at 85"
-date: 2025-08-02 10:17:56 +0000
+date: 2025-08-02 11:15:07 +0000
 categories: gossip
 tags: ['jeannie-seely', 'auto-discovered', 'new', 'source-billboard', 'drama-rising']
 drama_score: 4

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gay Makeup Artist Who Was Sent To El Salvador Prison -- Despite Entering US Legally! -- Claims He Was Raped By Guards"
-date: 2025-08-02 10:17:38 +0000
+date: 2025-08-02 11:14:50 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-perez_hilton', 'drama-hot']
 drama_score: 9

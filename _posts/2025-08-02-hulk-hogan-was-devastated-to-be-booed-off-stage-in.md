@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hulk Hogan Was 'Devastated' To Be Booed Off Stage In Final WWE Appearance Before Death"
-date: 2025-08-02 10:17:38 +0000
+date: 2025-08-02 11:14:50 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-perez_hilton', 'drama-rising']
 drama_score: 3

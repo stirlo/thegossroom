@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Liam Neeson 'Expressed' His Feelings for Pamela Anderson 1st, Was 'Smitten'"
-date: 2025-08-02 10:17:43 +0000
+date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['liam-neeson', 'auto-discovered', 'new', 'source-us_weekly', 'drama-hot']
 drama_score: 6

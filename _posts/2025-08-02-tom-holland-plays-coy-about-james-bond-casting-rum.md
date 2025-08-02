@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tom Holland Plays Coy About James Bond Casting Rumors: “There’s Speculation”"
-date: 2025-08-02 10:17:48 +0000
+date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['tom-holland', 'movies', 'spiderman', 'marvel', 'dating', 'source-deadline', 'drama-rising']
 drama_score: 4
