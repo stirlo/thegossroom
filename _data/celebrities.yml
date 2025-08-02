@@ -1,0 +1,459 @@
+# The Gossip Room Celebrity Database
+# Complete list with drama scores, tags, and status tracking
+
+# EXPLOSIVE DRAMA (2000+ mentions)
+trump:
+  drama_score: 2500
+  tags: ["politics", "controversy", "government", "legal"]
+  category: "politics"
+  status: "explosive"
+
+diddy:
+  drama_score: 1800
+  tags: ["hiphop", "legal", "controversy", "music", "business"]
+  category: "hiphop"
+  status: "explosive"
+
+kanye:
+  drama_score: 1500
+  tags: ["hiphop", "controversy", "fashion", "music", "mental-health"]
+  category: "hiphop"
+  status: "explosive"
+
+# HOT THIS WEEK (1000-1999 mentions)
+taylor_swift:
+  drama_score: 1200
+  tags: ["music", "pop", "awards", "fashion", "dating"]
+  category: "music"
+  status: "hot"
+
+elon_musk:
+  drama_score: 1100
+  tags: ["tech", "business", "controversy", "social-media", "space"]
+  category: "tech"
+  status: "hot"
+
+biden:
+  drama_score: 1000
+  tags: ["politics", "government", "international"]
+  category: "politics"
+  status: "hot"
+
+# RISING STARS (500-999 mentions)
+kardashian:
+  drama_score: 900
+  tags: ["reality-tv", "fashion", "business", "beauty"]
+  category: "reality-tv"
+  status: "hot"
+
+drake:
+  drama_score: 900
+  tags: ["hiphop", "music", "beef", "controversy", "awards"]
+  category: "hiphop"
+  status: "hot"
+
+meghan_markle:
+  drama_score: 800
+  tags: ["royalty", "charity", "controversy", "media"]
+  category: "royalty"
+  status: "hot"
+
+beyonce:
+  drama_score: 800
+  tags: ["music", "pop", "hiphop", "fashion", "awards", "business"]
+  category: "music"
+  status: "hot"
+
+jake_paul:
+  drama_score: 800
+  tags: ["sports", "boxing", "youtube", "controversy", "business"]
+  category: "sports"
+  status: "hot"
+
+jenner:
+  drama_score: 750
+  tags: ["reality-tv", "fashion", "business", "beauty", "controversy"]
+  category: "reality-tv"
+  status: "hot"
+
+justin_baldoni:
+  drama_score: 750
+  tags: ["movies", "controversy", "legal", "directing"]
+  category: "movies"
+  status: "rising"
+
+prince_harry:
+  drama_score: 700
+  tags: ["royalty", "charity", "controversy", "media", "military"]
+  category: "royalty"
+  status: "hot"
+
+ariana_grande:
+  drama_score: 700
+  tags: ["music", "pop", "broadway", "fashion", "dating"]
+  category: "music"
+  status: "hot"
+
+pete_davidson:
+  drama_score: 650
+  tags: ["comedy", "snl", "controversy", "dating", "mental-health"]
+  category: "comedy"
+  status: "hot"
+
+selena_gomez:
+  drama_score: 650
+  tags: ["music", "pop", "tv", "fashion", "mental-health", "business"]
+  category: "music"
+  status: "hot"
+
+blake_lively:
+  drama_score: 600
+  tags: ["movies", "fashion", "controversy", "business"]
+  category: "movies"
+  status: "hot"
+
+bieber:
+  drama_score: 600
+  tags: ["music", "pop", "controversy", "mental-health", "marriage"]
+  category: "music"
+  status: "cooling"
+
+sydney_sweeney:
+  drama_score: 550
+  tags: ["tv", "movies", "fashion", "controversy"]
+  category: "tv"
+  status: "rising"
+
+lebron_james:
+  drama_score: 500
+  tags: ["sports", "nba", "business", "social-justice"]
+  category: "sports"
+  status: "hot"
+
+# COOLING DOWN (200-499 mentions)
+ryan_reynolds:
+  drama_score: 400
+  tags: ["movies", "comedy", "business", "marriage"]
+  category: "movies"
+  status: "cooling"
+
+rihanna:
+  drama_score: 450
+  tags: ["music", "fashion", "business", "beauty", "pregnancy"]
+  category: "music"
+  status: "cooling"
+
+britney_spears:
+  drama_score: 350
+  tags: ["music", "pop", "legal", "mental-health", "conservatorship"]
+  category: "music"
+  status: "cooling"
+
+amber_heard:
+  drama_score: 300
+  tags: ["movies", "legal", "controversy", "domestic-violence"]
+  category: "movies"
+  status: "cooling"
+
+johnny_depp:
+  drama_score: 280
+  tags: ["movies", "legal", "controversy", "music"]
+  category: "movies"
+  status: "cooling"
+
+will_smith:
+  drama_score: 250
+  tags: ["movies", "controversy", "awards", "family"]
+  category: "movies"
+  status: "cooling"
+
+# ADDITIONAL CELEBRITIES
+dua_lipa:
+  drama_score: 400
+  tags: ["music", "pop", "fashion", "dating"]
+  category: "music"
+  status: "hot"
+
+olivia_rodrigo:
+  drama_score: 450
+  tags: ["music", "pop", "teen", "awards"]
+  category: "music"
+  status: "rising"
+
+billie_eilish:
+  drama_score: 500
+  tags: ["music", "pop", "alternative", "fashion", "mental-health"]
+  category: "music"
+  status: "hot"
+
+zendaya:
+  drama_score: 550
+  tags: ["movies", "tv", "fashion", "disney", "spiderman"]
+  category: "movies"
+  status: "hot"
+
+tom_holland:
+  drama_score: 400
+  tags: ["movies", "spiderman", "marvel", "dating"]
+  category: "movies"
+  status: "hot"
+
+timothee_chalamet:
+  drama_score: 350
+  tags: ["movies", "fashion", "indie", "awards"]
+  category: "movies"
+  status: "hot"
+
+anya_taylor_joy:
+  drama_score: 300
+  tags: ["movies", "tv", "fashion", "chess"]
+  category: "movies"
+  status: "rising"
+
+florence_pugh:
+  drama_score: 280
+  tags: ["movies", "fashion", "controversy"]
+  category: "movies"
+  status: "rising"
+
+margot_robbie:
+  drama_score: 450
+  tags: ["movies", "barbie", "fashion", "business"]
+  category: "movies"
+  status: "hot"
+
+ryan_gosling:
+  drama_score: 350
+  tags: ["movies", "barbie", "music", "memes"]
+  category: "movies"
+  status: "hot"
+
+# SPORTS FIGURES
+serena_williams:
+  drama_score: 300
+  tags: ["sports", "tennis", "business", "pregnancy"]
+  category: "sports"
+  status: "cooling"
+
+tom_brady:
+  drama_score: 400
+  tags: ["sports", "nfl", "retirement", "divorce"]
+  category: "sports"
+  status: "cooling"
+
+cristiano_ronaldo:
+  drama_score: 500
+  tags: ["sports", "soccer", "business", "controversy"]
+  category: "sports"
+  status: "hot"
+
+lionel_messi:
+  drama_score: 450
+  tags: ["sports", "soccer", "awards", "transfer"]
+  category: "sports"
+  status: "hot"
+
+# TECH/BUSINESS
+mark_zuckerberg:
+  drama_score: 400
+  tags: ["tech", "business", "meta", "controversy"]
+  category: "tech"
+  status: "cooling"
+
+jeff_bezos:
+  drama_score: 350
+  tags: ["tech", "business", "space", "divorce"]
+  category: "tech"
+  status: "cooling"
+
+# REALITY TV
+khloe_kardashian:
+  drama_score: 400
+  tags: ["reality-tv", "fashion", "business", "dating"]
+  category: "reality-tv"
+  status: "hot"
+
+kourtney_kardashian:
+  drama_score: 350
+  tags: ["reality-tv", "fashion", "business", "marriage"]
+  category: "reality-tv"
+  status: "hot"
+
+scott_disick:
+  drama_score: 250
+  tags: ["reality-tv", "dating", "controversy"]
+  category: "reality-tv"
+  status: "cooling"
+
+# COMEDY/TV
+kevin_hart:
+  drama_score: 300
+  tags: ["comedy", "movies", "controversy", "business"]
+  category: "comedy"
+  status: "cooling"
+
+dave_chappelle:
+  drama_score: 350
+  tags: ["comedy", "controversy", "netflix"]
+  category: "comedy"
+  status: "cooling"
+
+# MEMORIAL SECTION - Deceased Celebrities
+liam_payne:
+  drama_score: 400
+  tags: ["music", "pop", "memorial", "one-direction"]
+  category: "music"
+  status: "memorial"
+  death_date: "2024-10-16"
+  memorial_expires: "2026-04-16"
+
+juice_wrld:
+  drama_score: 200
+  tags: ["hiphop", "music", "memorial", "mental-health"]
+  category: "hiphop"
+  status: "memorial"
+  death_date: "2019-12-08"
+  memorial_expires: "2021-06-08"
+
+xxxtentacion:
+  drama_score: 150
+  tags: ["hiphop", "music", "memorial", "controversy"]
+  category: "hiphop"
+  status: "memorial"
+  death_date: "2018-06-18"
+  memorial_expires: "2020-12-18"
+
+mac_miller:
+  drama_score: 180
+  tags: ["hiphop", "music", "memorial", "mental-health"]
+  category: "hiphop"
+  status: "memorial"
+  death_date: "2018-09-07"
+  memorial_expires: "2020-03-07"
+
+pop_smoke:
+  drama_score: 120
+  tags: ["hiphop", "music", "memorial", "drill"]
+  category: "hiphop"
+  status: "memorial"
+  death_date: "2020-02-19"
+  memorial_expires: "2021-08-19"
+
+nipsey_hussle:
+  drama_score: 100
+  tags: ["hiphop", "music", "memorial", "community"]
+  category: "hiphop"
+  status: "memorial"
+  death_date: "2019-03-31"
+  memorial_expires: "2020-09-30"
+
+# INTERNATIONAL CELEBRITIES
+bts:
+  drama_score: 600
+  tags: ["music", "kpop", "international", "awards"]
+  category: "music"
+  status: "hot"
+
+blackpink:
+  drama_score: 450
+  tags: ["music", "kpop", "international", "fashion"]
+  category: "music"
+  status: "hot"
+
+# OLDER GENERATION STILL RELEVANT
+madonna:
+  drama_score: 200
+  tags: ["music", "pop", "controversy", "health"]
+  category: "music"
+  status: "cooling"
+
+cher:
+  drama_score: 150
+  tags: ["music", "movies", "twitter", "politics"]
+  category: "music"
+  status: "cooling"
+
+dolly_parton:
+  drama_score: 180
+  tags: ["music", "country", "charity", "business"]
+  category: "music"
+  status: "cooling"
+
+# NETFLIX/STREAMING STARS
+millie_bobby_brown:
+  drama_score: 300
+  tags: ["tv", "netflix", "stranger-things", "movies"]
+  category: "tv"
+  status: "rising"
+
+noah_schnapp:
+  drama_score: 200
+  tags: ["tv", "netflix", "stranger-things", "controversy"]
+  category: "tv"
+  status: "cooling"
+
+# TIKTOK/SOCIAL MEDIA
+charli_damelio:
+  drama_score: 250
+  tags: ["tiktok", "social-media", "dance", "teen"]
+  category: "social-media"
+  status: "cooling"
+
+addison_rae:
+  drama_score: 200
+  tags: ["tiktok", "social-media", "dance", "business"]
+  category: "social-media"
+  status: "cooling"
+
+# FASHION/MODELS
+gigi_hadid:
+  drama_score: 300
+  tags: ["fashion", "modeling", "dating", "family"]
+  category: "fashion"
+  status: "hot"
+
+bella_hadid:
+  drama_score: 280
+  tags: ["fashion", "modeling", "health", "controversy"]
+  category: "fashion"
+  status: "hot"
+
+kendall_jenner:
+  drama_score: 400
+  tags: ["fashion", "modeling", "reality-tv", "business"]
+  category: "fashion"
+  status: "hot"
+
+# CHEFS/FOOD
+gordon_ramsay:
+  drama_score: 200
+  tags: ["food", "tv", "business", "controversy"]
+  category: "tv"
+  status: "cooling"
+
+# PODCASTERS/MEDIA
+joe_rogan:
+  drama_score: 500
+  tags: ["podcast", "controversy", "spotify", "comedy"]
+  category: "media"
+  status: "hot"
+
+# GAMING/STREAMING
+pewdiepie:
+  drama_score: 150
+  tags: ["gaming", "youtube", "controversy"]
+  category: "gaming"
+  status: "cooling"
+
+# LATE NIGHT TV
+jimmy_fallon:
+  drama_score: 100
+  tags: ["tv", "comedy", "tonight-show"]
+  category: "tv"
+  status: "cooling"
+
+stephen_colbert:
+  drama_score: 120
+  tags: ["tv", "comedy", "politics", "late-show"]
+  category: "tv"
+  status: "cooling"
