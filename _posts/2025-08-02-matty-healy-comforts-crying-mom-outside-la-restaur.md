@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Matty Healy comforts crying mom outside LA restaurant after Taylor Swift jab"
-date: 2025-08-02 18:24:31 +0000
+date: 2025-08-02 19:13:44 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-page_six', 'drama-hot']
 drama_score: 6
