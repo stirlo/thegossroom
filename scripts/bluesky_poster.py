@@ -181,10 +181,10 @@ class HighFrequencyGossipPoster:
         return best_gossip
 
     def create_bluesky_post(self, gossip):
-        """Create engaging Bluesky post text"""
+        """Create engaging Bluesky post text with dynamic tags from the article"""
         celebrity = gossip['primary_celebrity'].replace('_', ' ').title() if gossip['primary_celebrity'] else "Celebrity"
 
-        # Drama level indicators (adjusted for high-frequency posting)
+        # Drama level indicators
         if gossip['drama_score'] >= 40:
             drama_emoji = "🔥🔥🔥 EXPLOSIVE"
         elif gossip['drama_score'] >= 25:
@@ -210,9 +210,40 @@ class HighFrequencyGossipPoster:
 
         # Add direct post URL
         post_text += f"{gossip['post_url']}\n\n"
-        post_text += "#CelebrityGossip #Drama #Entertainment #TheGossipRoom"
 
-        # Bluesky has 300 character limit
+        # DYNAMIC TAGS: Use article's actual tags
+        if gossip.get('tags') and len(gossip['tags']) > 0:
+            hashtags = []
+            for tag in gossip['tags']:
+                # Clean up tag: remove spaces, special chars, make hashtag-friendly
+                clean_tag = tag.replace(' ', '').replace('-', '').replace('_', '')
+                clean_tag = ''.join(c for c in clean_tag if c.isalnum())
+                if clean_tag and len(clean_tag) > 2:  # Only use meaningful tags
+                    hashtags.append(f"#{clean_tag}")
+
+            # Add hashtags if we have any, respecting 300 char limit
+            if hashtags:
+                hashtag_text = " ".join(hashtags)
+                # Check if adding hashtags would exceed 300 chars
+                if len(post_text + hashtag_text) <= 300:
+                    post_text += hashtag_text
+                else:
+                    # Add as many hashtags as fit
+                    remaining_chars = 300 - len(post_text)
+                    current_length = 0
+                    used_hashtags = []
+
+                    for hashtag in hashtags:
+                        if current_length + len(hashtag) + 1 <= remaining_chars:  # +1 for space
+                            used_hashtags.append(hashtag)
+                            current_length += len(hashtag) + 1
+                        else:
+                            break
+
+                    if used_hashtags:
+                        post_text += " ".join(used_hashtags)
+
+        # Ensure we're under 300 characters
         return post_text[:300]
 
     def post_to_bluesky(self, text):
