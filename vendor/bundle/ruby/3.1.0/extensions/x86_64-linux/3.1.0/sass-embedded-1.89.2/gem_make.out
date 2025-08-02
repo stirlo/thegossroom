@@ -1,0 +1,5 @@
+current directory: /home/runner/work/thegossroom/thegossroom/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.89.2/ext/sass
+/opt/hostedtoolcache/Ruby/3.1.7/x64/bin/ruby -I/opt/hostedtoolcache/Ruby/3.1.7/x64/lib/ruby/3.1.0 -rrubygems /home/runner/work/thegossroom/thegossroom/vendor/bundle/ruby/3.1.0/gems/rake-13.3.0/exe/rake RUBYARCHDIR\=/home/runner/work/thegossroom/thegossroom/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.89.2 RUBYLIBDIR\=/home/runner/work/thegossroom/thegossroom/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.89.2
+gem install --force --install-dir /home/runner/work/thegossroom/thegossroom/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.89.2/ext/sass/ruby --no-document --ignore-dependencies --platform x86_64-linux-gnu --version 1.89.2 sass-embedded
+mv /home/runner/work/thegossroom/thegossroom/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.89.2/ext/sass/ruby/gems/sass-embedded-1.89.2-x86_64-linux-gnu/ext/sass/dart-sass dart-sass
+rm -rf /home/runner/work/thegossroom/thegossroom/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.89.2/ext/sass/ruby
