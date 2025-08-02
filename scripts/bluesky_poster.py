@@ -68,27 +68,25 @@ class HighFrequencyGossipPoster:
             yaml.dump(posted_items, f, default_flow_style=False)
 
     def generate_post_url(self, filename):
-        """Generate Jekyll post URL from filename"""
-        # Example: 2025-08-02-khloe-kardashian-drama.md
-        # Becomes: https://thegossroom.com/gossip/2025/08/02/khloe-kardashian-drama.html
+    """Generate Jekyll post URL - /YYYY/MM/DD/post-name/ format"""
 
-        if not filename.endswith('.md'):
-            return "https://thegossroom.com"
+    if not filename.endswith('.md'):
+        return "https://thegossroom.com"
 
-        # Extract date and slug
-        name_without_ext = filename[:-3]  # Remove .md
+    name_without_ext = filename[:-3]  # Remove .md
 
-        if len(name_without_ext) < 10:
-            return "https://thegossroom.com"
+    if len(name_without_ext) < 10:
+        return "https://thegossroom.com"
 
-        date_part = name_without_ext[:10]  # 2025-08-02
-        slug_part = name_without_ext[11:]  # khloe-kardashian-drama
+    date_part = name_without_ext[:10]  # 2025-08-02
+    slug_part = name_without_ext[11:]  # post-name
 
-        try:
-            year, month, day = date_part.split('-')
-            return f"https://thegossroom.com/gossip/{year}/{month}/{day}/{slug_part}.html"
-        except:
-            return "https://thegossroom.com"
+    try:
+        year, month, day = date_part.split('-')
+        # Clean structure: /YYYY/MM/DD/post-name/
+        return f"https://thegossroom.com/{year}/{month}/{day}/{slug_part}/"
+    except:
+        return "https://thegossroom.com"
 
     def find_best_gossip(self):
         """Find best unposted gossip: HOTTEST first, then NEWEST"""
