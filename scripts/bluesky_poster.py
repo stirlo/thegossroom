@@ -67,6 +67,29 @@ class HighFrequencyGossipPoster:
         with open(posted_file, 'w') as f:
             yaml.dump(posted_items, f, default_flow_style=False)
 
+    def generate_post_url(self, filename):
+        """Generate Jekyll post URL from filename"""
+        # Example: 2025-08-02-khloe-kardashian-drama.md
+        # Becomes: https://thegossroom.com/gossip/2025/08/02/khloe-kardashian-drama.html
+
+        if not filename.endswith('.md'):
+            return "https://thegossroom.com"
+
+        # Extract date and slug
+        name_without_ext = filename[:-3]  # Remove .md
+
+        if len(name_without_ext) < 10:
+            return "https://thegossroom.com"
+
+        date_part = name_without_ext[:10]  # 2025-08-02
+        slug_part = name_without_ext[11:]  # khloe-kardashian-drama
+
+        try:
+            year, month, day = date_part.split('-')
+            return f"https://thegossroom.com/gossip/{year}/{month}/{day}/{slug_part}.html"
+        except:
+            return "https://thegossroom.com"
+
     def find_best_gossip(self):
         """Find best unposted gossip: HOTTEST first, then NEWEST"""
         posted_items = self.load_posted_tracking()
@@ -117,7 +140,8 @@ class HighFrequencyGossipPoster:
                                 'primary_celebrity': front_matter.get('primary_celebrity', ''),
                                 'source_url': front_matter.get('source_url', ''),
                                 'tags': front_matter.get('tags', []),
-                                'excerpt': front_matter.get('excerpt', '')
+                                'excerpt': front_matter.get('excerpt', ''),
+                                'post_url': self.generate_post_url(post_file.name)  # NEW: Generate direct link
                             })
 
             except Exception as e:
@@ -133,6 +157,7 @@ class HighFrequencyGossipPoster:
 
         best_gossip = candidates[0]
         print(f"🎯 Selected: Score {best_gossip['drama_score']}, Date {best_gossip['post_date'].strftime('%Y-%m-%d %H:%M')}")
+        print(f"🔗 Direct link: {best_gossip['post_url']}")
 
         return best_gossip
 
@@ -164,7 +189,8 @@ class HighFrequencyGossipPoster:
         title = gossip['title'][:100] + "..." if len(gossip['title']) > 100 else gossip['title']
         post_text += f"📰 {title}\n\n"
 
-        post_text += f"🔗 thegossroom.com\n\n"
+        # NEW: Use direct post URL instead of homepage
+        post_text += f"🔗 {gossip['post_url']}\n\n"
         post_text += "#CelebrityGossip #Drama #Entertainment #TheGossipRoom"
 
         # Bluesky has 300 character limit
