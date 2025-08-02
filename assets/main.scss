@@ -1,320 +1,194 @@
 ---
-# Jekyll needs this front matter
+layout: default
+title: "The Gossip Room - Real-Time Celebrity Drama"
+description: "Track celebrity drama scores, rising stars, and explosive entertainment news in real-time."
 ---
 
-@import "minima";
+# 🎭 The Gossip Room
 
-/* The Gossip Room - Your Beautiful Pink & Yellow Theme */
-:root {
-  /* Your gorgeous color palette */
-  --primary-pink: #ff69b4;
-  --hot-pink: #ff1493;
-  --eye-searing-yellow: #ffff00;
-  --bright-yellow: #ffd700;
-  --neon-green: #39ff14;
-  --electric-blue: #00bfff;
-  --deep-purple: #8a2be2;
-  --black: #000000;
-  --white: #ffffff;
-  --gray: #808080;
+## 📊 Drama Index - Live Celebrity Tracking
 
-  /* Drama colors */
-  --explosive-red: #ff0000;
-  --rising-orange: #ff8c00;
-  --cooling-blue: #87ceeb;
-  --memorial-gray: #696969;
+<div class="drama-stats">
+  <h3>🔥 Current Drama Temperature: <span class="drama-score">{{ site.data.celebrities | map: 'drama_score' | sum }}</span></h3>
+  <p><em>Updated hourly from {{ site.data.celebrities | size }} tracked celebrities</em></p>
+</div>
+
+## 🏷️ Trending Drama Tags
+
+<div class="tag-cloud-compact">
+{% assign sorted_tags = site.tags | sort %}
+{% assign drama_tags = sorted_tags | where_exp: "tag", "tag[1].size > 1" %}
+{% for tag in drama_tags limit: 25 %}
+  <span class="tag-bubble">
+    <a href="#" onclick="filterPosts('{{ tag[0] }}'); return false;">
+      #{{ tag[0] | replace: '_', ' ' | replace: '-', ' ' }} 
+      <small>({{ tag[1].size }})</small>
+    </a>
+  </span>
+{% endfor %}
+</div>
+
+<script>
+function filterPosts(tag) {
+  // Simple filter - could be enhanced later
+  alert('Filtering by: ' + tag + '\n\nThis feature will be enhanced soon!');
 }
+</script>
 
-/* Dark/Light mode detection */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: var(--black);
-    --text-color: var(--white);
-    --accent-color: var(--primary-pink);
-  }
-}
+## 🚨 Celebrity Categories
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-color: var(--white);
-    --text-color: var(--black);
-    --accent-color: var(--hot-pink);
-  }
-}
+<div id="celebrity-categories">
 
-/* Base styling */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
+### 💥 Explosive Drama (1500+ Score)
+<div id="explosive">
+{% assign explosive_celebs = site.data.celebrities | where: "status", "explosive" %}
+{% for celebrity_data in explosive_celebs limit: 10 %}
+  {% assign celebrity_name = celebrity_data[0] %}
+  {% assign celebrity_info = celebrity_data[1] %}
+  <div class="celebrity-card">
+    <strong>{{ celebrity_name | replace: '_', ' ' | upcase }}</strong> 
+    <span class="drama-score">{{ celebrity_info.drama_score }}</span>
+    <div class="tags">
+      {% for tag in celebrity_info.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+{% if explosive_celebs.size == 0 %}
+  <p><em>No explosive drama right now... suspiciously quiet! 🤔</em></p>
+{% endif %}
+</div>
 
-/* Header styling */
-h1, h2, h3 {
-  color: var(--accent-color);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
+### 🔥 Hot This Week (800-1499 Score)
+<div id="hot-this-week">
+{% assign hot_celebs = site.data.celebrities | where: "status", "hot" %}
+{% for celebrity_data in hot_celebs limit: 15 %}
+  {% assign celebrity_name = celebrity_data[0] %}
+  {% assign celebrity_info = celebrity_data[1] %}
+  <div class="celebrity-card">
+    <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
+    <span class="drama-score">{{ celebrity_info.drama_score }}</span>
+    <div class="tags">
+      {% for tag in celebrity_info.tags limit: 3 %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+{% if hot_celebs.size == 0 %}
+  <p><em>Building up the heat... 🌡️</em></p>
+{% endif %}
+</div>
 
-h1 {
-  font-size: 3em;
-  text-align: center;
-  margin: 20px 0;
-  background: linear-gradient(45deg, var(--primary-pink), var(--eye-searing-yellow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+### ⭐ Rising Stars (300-799 Score)
+<div id="rising-stars">
+{% assign rising_celebs = site.data.celebrities | where: "status", "rising" %}
+{% for celebrity_data in rising_celebs limit: 20 %}
+  {% assign celebrity_name = celebrity_data[0] %}
+  {% assign celebrity_info = celebrity_data[1] %}
+  <div class="celebrity-card">
+    <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
+    <span class="drama-score">{{ celebrity_info.drama_score }}</span>
+    <div class="tags">
+      {% for tag in celebrity_info.tags limit: 2 %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+</div>
 
-/* Drama Index Styling */
-.drama-index {
-  background: linear-gradient(135deg, var(--primary-pink), var(--bright-yellow));
-  padding: 20px;
-  border-radius: 15px;
-  margin: 20px 0;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
+### 🧊 Cooling Down (Under 300 Score)
+<div id="cooling-down">
+{% assign cooling_celebs = site.data.celebrities | where: "status", "cooling" %}
+{% for celebrity_data in cooling_celebs limit: 10 %}
+  {% assign celebrity_name = celebrity_data[0] %}
+  {% assign celebrity_info = celebrity_data[1] %}
+  <div class="celebrity-card">
+    <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
+    <span class="drama-score">{{ celebrity_info.drama_score }}</span>
+  </div>
+{% endfor %}
+</div>
 
-.drama-score {
-  font-size: 2em;
-  font-weight: bold;
-  color: var(--eye-searing-yellow);
-  text-shadow: 2px 2px 4px var(--black);
-}
+### 🕊️ Memorial
+<div id="memorial">
+{% assign memorial_celebs = site.data.celebrities | where: "status", "memorial" %}
+{% for celebrity_data in memorial_celebs %}
+  {% assign celebrity_name = celebrity_data[0] %}
+  {% assign celebrity_info = celebrity_data[1] %}
+  <div class="celebrity-card">
+    <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
+    <span class="memorial-note">{{ celebrity_info.memorial_note | default: "Remembered" }}</span>
+  </div>
+{% endfor %}
+{% if memorial_celebs.size == 0 %}
+  <p><em>No memorials currently tracked</em></p>
+{% endif %}
+</div>
 
-/* Celebrity Categories */
-#celebrity-categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin: 30px 0;
-}
+</div>
 
-#hot-this-week {
-  background: linear-gradient(45deg, var(--explosive-red), var(--primary-pink));
-  padding: 15px;
-  border-radius: 10px;
-  border: 3px solid var(--eye-searing-yellow);
-}
+## 📰 Latest Gossip
 
-#rising-stars {
-  background: linear-gradient(45deg, var(--rising-orange), var(--bright-yellow));
-  padding: 15px;
-  border-radius: 10px;
-  border: 3px solid var(--neon-green);
-}
+<div class="recent-posts">
+{% for post in site.posts limit: 10 %}
+  <div class="post-preview">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="post-meta">
+      <span class="date">{{ post.date | date: "%B %d, %Y" }}</span> | 
+      <span class="drama-level status-{{ post.drama_score | divided_by: 5 | plus: 1 }}">
+        Drama Score: {{ post.drama_score | default: 0 }}
+      </span>
+      {% if post.primary_celebrity %}
+        | <span class="primary-celeb">{{ post.primary_celebrity | replace: '_', ' ' | title }}</span>
+      {% endif %}
+    </p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    <div class="post-tags">
+      {% for tag in post.tags limit: 5 %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
 
-#explosive {
-  background: linear-gradient(45deg, var(--explosive-red), var(--deep-purple));
-  padding: 15px;
-  border-radius: 10px;
-  border: 3px solid var(--eye-searing-yellow);
-  animation: pulse 2s infinite;
-}
+{% if site.posts.size == 0 %}
+  <div class="no-posts">
+    <h3>🚀 Getting Ready for Drama!</h3>
+    <p>RSS feeds are being processed... First gossip posts coming soon!</p>
+    <p><em>Check back in an hour for the latest celebrity drama! 🎭</em></p>
+  </div>
+{% endif %}
+</div>
 
-#cooling-down {
-  background: linear-gradient(45deg, var(--cooling-blue), var(--electric-blue));
-  padding: 15px;
-  border-radius: 10px;
-  border: 3px solid var(--white);
-}
+## 🔍 Drama Statistics
 
-#memorial {
-  background: linear-gradient(45deg, var(--memorial-gray), var(--black));
-  padding: 15px;
-  border-radius: 10px;
-  border: 3px solid var(--white);
-  opacity: 0.8;
-}
+<div class="drama-stats">
+  <div class="stat-grid">
+    <div class="stat-item">
+      <h4>Total Celebrities Tracked</h4>
+      <span class="big-number">{{ site.data.celebrities | size }}</span>
+    </div>
+    <div class="stat-item">
+      <h4>Total Drama Score</h4>
+      <span class="big-number">{{ site.data.celebrities | map: 'drama_score' | sum }}</span>
+    </div>
+    <div class="stat-item">
+      <h4>Explosive Drama</h4>
+      <span class="big-number">{{ site.data.celebrities | where: "status", "explosive" | size }}</span>
+    </div>
+    <div class="stat-item">
+      <h4>Rising Stars</h4>
+      <span class="big-number">{{ site.data.celebrities | where: "status", "rising" | size }}</span>
+    </div>
+  </div>
+</div>
 
-/* Pulse animation for explosive drama */
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
-}
+---
 
-/* Links */
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: var(--eye-searing-yellow);
-  text-shadow: 0 0 5px var(--primary-pink);
-}
-
-/* Post styling */
-.post-preview {
-  background: rgba(255, 105, 180, 0.1);
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-  border-left: 5px solid var(--primary-pink);
-  transition: all 0.3s ease;
-}
-
-.post-preview:hover {
-  background: rgba(255, 105, 180, 0.2);
-  transform: translateX(10px);
-  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
-}
-
-/* Footer */
-footer {
-  background: linear-gradient(45deg, var(--black), var(--deep-purple));
-  color: var(--white);
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-footer a {
-  color: var(--eye-searing-yellow);
-  margin: 0 10px;
-}
-
-footer a:hover {
-  color: var(--primary-pink);
-  text-shadow: 0 0 10px var(--eye-searing-yellow);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  h1 { font-size: 2em; }
-  #celebrity-categories { grid-template-columns: 1fr; }
-  .post-preview:hover { transform: none; }
-}
-
-/* Eye-searing highlights */
-.highlight {
-  background: var(--eye-searing-yellow);
-  color: var(--black);
-  padding: 2px 5px;
-  border-radius: 3px;
-  font-weight: bold;
-}
-
-/* Drama status indicators */
-.status-hot { color: var(--explosive-red); }
-.status-rising { color: var(--rising-orange); }
-.status-explosive { 
-  color: var(--explosive-red); 
-  animation: pulse 1s infinite;
-}
-.status-cooling { color: var(--cooling-blue); }
-.status-memorial { color: var(--memorial-gray); }
-
-
-/* Celebrity Cards */
-.celebrity-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border-left: 4px solid var(--accent-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.celebrity-card:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
-}
-
-.celebrity-card .drama-score {
-  font-weight: bold;
-  color: var(--eye-searing-yellow);
-  font-size: 1.2em;
-}
-
-.celebrity-card .memorial-note {
-  font-style: italic;
-  color: var(--memorial-gray);
-}
-
-/* Tags */
-.tags, .post-tags {
-  margin-top: 5px;
-}
-
-.tag {
-  background: var(--primary-pink);
-  color: var(--white);
-  padding: 2px 6px;
-  border-radius: 12px;
-  font-size: 0.8em;
-  margin-right: 5px;
-  display: inline-block;
-}
-
-/* Statistics */
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.stat-item {
-  text-align: center;
-  background: rgba(255, 105, 180, 0.2);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.big-number {
-  display: block;
-  font-size: 2.5em;
-  font-weight: bold;
-  color: var(--eye-searing-yellow);
-  text-shadow: 2px 2px 4px var(--black);
-}
-
-/* No posts message */
-.no-posts {
-  text-align: center;
-  background: linear-gradient(45deg, var(--primary-pink), var(--bright-yellow));
-  padding: 30px;
-  border-radius: 15px;
-  margin: 20px 0;
-}
-
-.update-info {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.tag-cloud-compact {
-  margin: 1rem 0;
-  line-height: 1.8;
-}
-
-.tag-small {
-  display: inline-block;
-  margin: 0.2rem 0.3rem;
-  font-size: 0.8rem;
-
-  a {
-    background: linear-gradient(45deg, #ff69b4, #ffd700);
-    color: #000;
-    padding: 0.2rem 0.5rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 500;
-
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
-    }
-  }
-}
+<div class="update-info">
+  <p><em>🤖 Automatically updated every hour from 25+ celebrity news sources</em></p>
+  <p><em>⚡ Real-time drama scoring • 🎯 Auto-discovery of new celebrities • 📊 Historical trend tracking</em></p>
+</div>
