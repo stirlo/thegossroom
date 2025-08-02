@@ -20,20 +20,13 @@ description: "Track celebrity drama scores, rising stars, and explosive entertai
 {% assign drama_tags = sorted_tags | where_exp: "tag", "tag[1].size > 1" %}
 {% for tag in drama_tags limit: 25 %}
   <span class="tag-bubble">
-    <a href="#" onclick="filterPosts('{{ tag[0] }}'); return false;">
+    <a href="/tag/{{ tag[0] | slugify }}/" class="tag-display">
       #{{ tag[0] | replace: '_', ' ' | replace: '-', ' ' }} 
       <small>({{ tag[1].size }})</small>
     </a>
   </span>
 {% endfor %}
 </div>
-
-<script>
-function filterPosts(tag) {
-  // Simple filter - could be enhanced later
-  alert('Filtering by: ' + tag + '\n\nThis feature will be enhanced soon!');
-}
-</script>
 
 ## 🚨 Celebrity Categories
 
