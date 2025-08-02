@@ -39,61 +39,60 @@ class EnhancedGossipScraper:
             logger.warning("celebrities.yml not found")
             return {}
 
-  def load_rss_feeds(self):
-    """Complete RSS feeds with weights for importance"""
-    return {
-        # TIER 1: Premium Celebrity Gossip (Weight 3)
-        'tmz': {'url': 'https://www.tmz.com/rss.xml', 'weight': 3},
-        'perez_hilton': {'url': 'https://perezhilton.com/feed/', 'weight': 3},
-        'just_jared': {'url': 'https://www.justjared.com/rss.xml', 'weight': 3},
-        'e_news': {'url': 'http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml', 'weight': 3},
-        'people_celebrities': {'url': 'https://people.com/tag/celebrities/rss', 'weight': 3},
-        'people_all': {'url': 'https://people.com/feeds/all.rss', 'weight': 3},
-        'entertainment_tonight': {'url': 'https://www.etonline.com/feed', 'weight': 3},
-        'us_magazine_celebrity': {'url': 'https://www.usmagazine.com/celebrity-news/feed/', 'weight': 3},
-        'us_weekly': {'url': 'https://www.usmagazine.com/feed/', 'weight': 3},
+    def load_rss_feeds(self):
+        """Complete RSS feeds with weights for importance"""
+        return {
+            # TIER 1: Premium Celebrity Gossip (Weight 3)
+            'tmz': {'url': 'https://www.tmz.com/rss.xml', 'weight': 3},
+            'perez_hilton': {'url': 'https://perezhilton.com/feed/', 'weight': 3},
+            'just_jared': {'url': 'https://www.justjared.com/rss.xml', 'weight': 3},
+            'e_news': {'url': 'http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml', 'weight': 3},
+            'people_celebrities': {'url': 'https://people.com/tag/celebrities/rss', 'weight': 3},
+            'people_all': {'url': 'https://people.com/feeds/all.rss', 'weight': 3},
+            'entertainment_tonight': {'url': 'https://www.etonline.com/feed', 'weight': 3},
+            'us_magazine_celebrity': {'url': 'https://www.usmagazine.com/celebrity-news/feed/', 'weight': 3},
+            'us_weekly': {'url': 'https://www.usmagazine.com/feed/', 'weight': 3},
 
-        # TIER 2: Major Entertainment News (Weight 2)
-        'entertainment_weekly': {'url': 'http://feeds.feedburner.com/entertainmentweekly/latest', 'weight': 2},
-        'variety': {'url': 'https://variety.com/v/feed/', 'weight': 2},
-        'variety_alt': {'url': 'https://variety.com/feed/', 'weight': 2},
-        'hollywood_reporter': {'url': 'https://www.hollywoodreporter.com/feed/', 'weight': 2},
-        'deadline': {'url': 'https://deadline.com/feed/', 'weight': 2},
-        'page_six': {'url': 'https://pagesix.com/feed/', 'weight': 2},
-        'hello_magazine': {'url': 'https://www.hellomagazine.com/rss/showbiz.rss', 'weight': 2},
-        'huffpost_entertainment': {'url': 'https://www.huffpost.com/section/entertainment/feed', 'weight': 2},
-        'daily_mail': {'url': 'https://www.dailymail.co.uk/articles.rss', 'weight': 2},
-        'metro_showbiz': {'url': 'https://metro.co.uk/tag/showbiz/rss/', 'weight': 2},
+            # TIER 2: Major Entertainment News (Weight 2)
+            'entertainment_weekly': {'url': 'http://feeds.feedburner.com/entertainmentweekly/latest', 'weight': 2},
+            'variety': {'url': 'https://variety.com/v/feed/', 'weight': 2},
+            'variety_alt': {'url': 'https://variety.com/feed/', 'weight': 2},
+            'hollywood_reporter': {'url': 'https://www.hollywoodreporter.com/feed/', 'weight': 2},
+            'deadline': {'url': 'https://deadline.com/feed/', 'weight': 2},
+            'page_six': {'url': 'https://pagesix.com/feed/', 'weight': 2},
+            'hello_magazine': {'url': 'https://www.hellomagazine.com/rss/showbiz.rss', 'weight': 2},
+            'huffpost_entertainment': {'url': 'https://www.huffpost.com/section/entertainment/feed', 'weight': 2},
+            'daily_mail': {'url': 'https://www.dailymail.co.uk/articles.rss', 'weight': 2},
+            'metro_showbiz': {'url': 'https://metro.co.uk/tag/showbiz/rss/', 'weight': 2},
 
-        # TIER 2: Music Sources (Weight 2)
-        'rolling_stone': {'url': 'https://www.rollingstone.com/feed/', 'weight': 2},
-        'billboard': {'url': 'https://www.billboard.com/feed/', 'weight': 2},
+            # TIER 2: Music Sources (Weight 2)
+            'rolling_stone': {'url': 'https://www.rollingstone.com/feed/', 'weight': 2},
+            'billboard': {'url': 'https://www.billboard.com/feed/', 'weight': 2},
 
-        # TIER 2: Fashion & Lifestyle (Weight 2)
-        'elle': {'url': 'https://www.elle.com/rss/everything/', 'weight': 2},
-        'elle_alt': {'url': 'https://www.elle.com/rss/all.xml/', 'weight': 2},
-        'vogue': {'url': 'https://www.vogue.com/rss/index.xml', 'weight': 2},
-        'vogue_alt': {'url': 'https://www.vogue.com/feed/rss', 'weight': 2},
-        'harpers_bazaar': {'url': 'https://www.harpersbazaar.com/rss', 'weight': 2},
-        'gq': {'url': 'https://www.gq.com/rss/all', 'weight': 2},
-        'esquire': {'url': 'https://www.esquire.com/rss/', 'weight': 2},
+            # TIER 2: Fashion & Lifestyle (Weight 2)
+            'elle': {'url': 'https://www.elle.com/rss/everything/', 'weight': 2},
+            'elle_alt': {'url': 'https://www.elle.com/rss/all.xml/', 'weight': 2},
+            'vogue': {'url': 'https://www.vogue.com/rss/index.xml', 'weight': 2},
+            'vogue_alt': {'url': 'https://www.vogue.com/feed/rss', 'weight': 2},
+            'harpers_bazaar': {'url': 'https://www.harpersbazaar.com/rss', 'weight': 2},
+            'gq': {'url': 'https://www.gq.com/rss/all', 'weight': 2},
+            'esquire': {'url': 'https://www.esquire.com/rss/', 'weight': 2},
 
-        # TIER 3: Specialty Sources (Weight 1)
-        'pitchfork': {'url': 'https://pitchfork.com/rss/news/', 'weight': 1},
-        'newscelebrity': {'url': 'https://www.newsclebrity.com/feed/', 'weight': 1},
-        'nine_celebrity': {'url': 'http://www.9celebrity.com/feed/', 'weight': 1},
-        'highsnobiety': {'url': 'https://www.highsnobiety.com/feed/', 'weight': 1},
-        'hypebeast': {'url': 'https://hypebeast.com/rss', 'weight': 1},
-        'sneaker_news': {'url': 'https://sneakernews.com/feed/', 'weight': 1},
-        'high_heel_confidential': {'url': 'http://www.highheelconfidential.com/feed/', 'weight': 1},
+            # TIER 3: Specialty Sources (Weight 1)
+            'pitchfork': {'url': 'https://pitchfork.com/rss/news/', 'weight': 1},
+            'newscelebrity': {'url': 'https://www.newsclebrity.com/feed/', 'weight': 1},
+            'nine_celebrity': {'url': 'http://www.9celebrity.com/feed/', 'weight': 1},
+            'highsnobiety': {'url': 'https://www.highsnobiety.com/feed/', 'weight': 1},
+            'hypebeast': {'url': 'https://hypebeast.com/rss', 'weight': 1},
+            'sneaker_news': {'url': 'https://sneakernews.com/feed/', 'weight': 1},
+            'high_heel_confidential': {'url': 'http://www.highheelconfidential.com/feed/', 'weight': 1},
 
-        # TIER 3: Sports/Tech/General (Weight 1)
-        'espn': {'url': 'https://www.espn.com/espn/rss/news', 'weight': 1},
-        'techcrunch': {'url': 'https://techcrunch.com/feed/', 'weight': 1},
-        'cnn_entertainment': {'url': 'http://rss.cnn.com/rss/edition.rss', 'weight': 1},
-        'bbc_entertainment': {'url': 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'weight': 1},
-    }
-
+            # TIER 3: Sports/Tech/General (Weight 1)
+            'espn': {'url': 'https://www.espn.com/espn/rss/news', 'weight': 1},
+            'techcrunch': {'url': 'https://techcrunch.com/feed/', 'weight': 1},
+            'cnn_entertainment': {'url': 'http://rss.cnn.com/rss/edition.rss', 'weight': 1},
+            'bbc_entertainment': {'url': 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'weight': 1},
+        }
 
     def load_drama_data(self):
         """Load existing drama tracking data"""
