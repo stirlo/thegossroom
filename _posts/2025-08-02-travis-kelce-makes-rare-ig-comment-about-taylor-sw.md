@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Travis Kelce Makes Rare IG Comment About Taylor Swift! He's Still Her Biggest Fan!"
-date: 2025-08-02 19:13:29 +0000
+date: 2025-08-02 20:18:13 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-perez_hilton', 'drama-explosive']
 drama_score: 30
