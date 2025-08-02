@@ -14,12 +14,26 @@ highlighter: rouge
 permalink: /:year/:month/:day/:title/
 timezone: UTC
 
-# Plugins
+# Plugins (full power!)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-archives
+  - jekyll-redirect-from
+  - jekyll-compose
+
+# Archives configuration
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
 
 # Pagination
 paginate: 10
