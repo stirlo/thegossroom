@@ -293,3 +293,28 @@ footer a:hover {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+
+.tag-cloud-compact {
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+.tag-small {
+  display: inline-block;
+  margin: 0.2rem 0.3rem;
+  font-size: 0.8rem;
+
+  a {
+    background: linear-gradient(45deg, #ff69b4, #ffd700);
+    color: #000;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
+    }
+  }
+}
