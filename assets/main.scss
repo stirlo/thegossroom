@@ -208,3 +208,88 @@ footer a:hover {
 }
 .status-cooling { color: var(--cooling-blue); }
 .status-memorial { color: var(--memorial-gray); }
+
+
+/* Celebrity Cards */
+.celebrity-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.celebrity-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.celebrity-card .drama-score {
+  font-weight: bold;
+  color: var(--eye-searing-yellow);
+  font-size: 1.2em;
+}
+
+.celebrity-card .memorial-note {
+  font-style: italic;
+  color: var(--memorial-gray);
+}
+
+/* Tags */
+.tags, .post-tags {
+  margin-top: 5px;
+}
+
+.tag {
+  background: var(--primary-pink);
+  color: var(--white);
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* Statistics */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  text-align: center;
+  background: rgba(255, 105, 180, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.big-number {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--eye-searing-yellow);
+  text-shadow: 2px 2px 4px var(--black);
+}
+
+/* No posts message */
+.no-posts {
+  text-align: center;
+  background: linear-gradient(45deg, var(--primary-pink), var(--bright-yellow));
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.update-info {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
