@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nintendo raising original Switch console prices due to ‘market conditions’"
-date: 2025-08-02 10:01:59 +0000
+date: 2025-08-02 10:18:11 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-techcrunch', 'drama-rising']
 drama_score: 3

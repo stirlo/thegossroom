@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trump pleads not guilty to 34 felony counts"
-date: 2025-08-02 10:02:00 +0000
+date: 2025-08-02 10:18:12 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-cnn_entertainment', 'drama-rising']
 drama_score: 2

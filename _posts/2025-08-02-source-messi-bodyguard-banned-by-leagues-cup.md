@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Source: Messi bodyguard banned by Leagues Cup"
-date: 2025-08-02 10:01:58 +0000
+date: 2025-08-02 10:18:10 +0000
 categories: gossip
 tags: ['lionel-messi', 'sports', 'soccer', 'awards', 'transfer', 'source-espn', 'drama-mild']
 drama_score: 1

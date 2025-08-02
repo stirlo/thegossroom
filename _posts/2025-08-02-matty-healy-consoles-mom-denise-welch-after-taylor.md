@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Matty Healy Consoles Mom Denise Welch After Taylor Swift Comments"
-date: 2025-08-02 10:01:26 +0000
+date: 2025-08-02 10:17:42 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-us_weekly', 'drama-explosive']
 drama_score: 18

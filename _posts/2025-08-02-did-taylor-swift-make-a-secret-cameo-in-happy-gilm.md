@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Did Taylor Swift Make a Secret Cameo in Happy Gilmore 2? Here’s What Really Happened"
-date: 2025-08-02 10:01:45 +0000
+date: 2025-08-02 10:17:58 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-elle_alt', 'drama-hot']
 drama_score: 6

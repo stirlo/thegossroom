@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "American Eagle Releases Official Statement on Sydney Sweeney's Jeans Ad"
-date: 2025-08-02 10:01:21 +0000
+date: 2025-08-02 10:17:37 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'tv', 'movies', 'fashion', 'controversy', 'source-tmz', 'drama-hot']
 drama_score: 9

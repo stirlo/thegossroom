@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tom Holland Weighs in on James Bond Speculation: “It’s the Pinnacle of Working in Our Industry”"
-date: 2025-08-02 10:01:33 +0000
+date: 2025-08-02 10:17:47 +0000
 categories: gossip
 tags: ['tom-holland', 'movies', 'spiderman', 'marvel', 'dating', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 2

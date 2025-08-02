@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rihanna Knows There’s No Such Thing as Too Many Accessories"
-date: 2025-08-02 10:01:46 +0000
+date: 2025-08-02 10:18:00 +0000
 categories: gossip
 tags: ['rihanna', 'music', 'fashion', 'business', 'beauty', 'pregnancy', 'source-vogue_alt', 'drama-rising']
 drama_score: 4
