@@ -24,11 +24,46 @@ class EnhancedGossipScraper:
     def __init__(self):
         self.base_path = Path('.')
         self.celebrities = self.load_celebrities()
+        self.celebrity_names = self.load_celebrity_names()  # NEW: Load from Celebrities.txt
         self.rss_feeds = self.load_rss_feeds()
         self.drama_data = self.load_drama_data()
         self.new_posts = []
         self.celebrity_mentions = defaultdict(int)
         self.potential_new_celebrities = Counter()
+
+        # NEW: Define gossip and business keywords
+        self.gossip_keywords = [
+            'drama', 'scandal', 'controversy', 'relationship', 'dating', 
+            'breakup', 'marriage', 'divorce', 'affair', 'feud', 'fight',
+            'arrest', 'lawsuit', 'court', 'trial', 'charges', 'guilty',
+            'pregnant', 'baby', 'wedding', 'engaged', 'split', 'cheating',
+            'rehab', 'addiction', 'overdose', 'death', 'died', 'funeral',
+            'fashion', 'red carpet', 'awards', 'premiere', 'party',
+            'social media', 'instagram', 'twitter', 'tiktok', 'viral',
+            'paparazzi', 'photos', 'spotted', 'seen', 'exclusive',
+            'romance', 'love', 'hate', 'beef', 'diss', 'shade', 'tea'
+        ]
+
+        self.business_keywords = [
+            'vc industry', 'venture capital', 'funding round', 'ipo', 
+            'stock price', 'earnings', 'quarterly', 'revenue', 'profit',
+            'acquisition', 'merger', 'valuation', 'investment', 'startup',
+            'cryptocurrency', 'bitcoin', 'blockchain', 'nft', 'defi',
+            'software', 'hardware', 'algorithm', 'api', 'database',
+            'cloud computing', 'artificial intelligence', 'machine learning',
+            'cybersecurity', 'data breach', 'privacy policy', 'market analysis',
+            'financial report', 'economic', 'inflation', 'interest rates',
+            'gdp', 'unemployment', 'federal reserve', 'wall street'
+        ]
+
+    def load_celebrity_names(self):
+        """NEW: Load celebrity names from Celebrities.txt"""
+        try:
+            with open(self.base_path / 'Celebrities.txt', 'r', encoding='utf-8') as f:
+                return [line.strip().lower() for line in f.readlines() if line.strip()]
+        except FileNotFoundError:
+            logger.warning("Celebrities.txt not found! Using fallback list.")
+            return ['taylor swift', 'kanye west', 'kim kardashian', 'drake', 'beyonce']
 
     def load_celebrities(self):
         """Load celebrity database"""
@@ -110,6 +145,42 @@ class EnhancedGossipScraper:
         text = re.sub(r'<[^>]+>', '', text)
         text = re.sub(r'\s+', ' ', text).strip()
         return text
+
+    def is_celebrity_gossip(self, title, content):
+        """NEW: Enhanced filtering - must be celebrity gossip, not business/tech"""
+        full_text = f"{title} {content}".lower()
+
+        # Step 1: Must contain at least one celebrity from our list
+        celebrity_mentions = []
+        for celebrity in self.celebrity_names:
+            if celebrity in full_text:
+                celebrity_mentions.append(celebrity)
+
+        if not celebrity_mentions:
+            logger.debug(f"❌ No celebrity mentions: {title[:50]}...")
+            return False, []
+
+        # Step 2: Must have gossip context
+        gossip_score = sum(1 for keyword in self.gossip_keywords if keyword in full_text)
+
+        # Step 3: Must NOT be business/tech heavy
+        business_score = sum(1 for keyword in self.business_keywords if keyword in full_text)
+
+        # Decision logic
+        has_gossip_context = gossip_score >= 1  # At least 1 gossip keyword
+        is_business_heavy = business_score >= 2  # 2+ business keywords = reject
+
+        if has_gossip_context and not is_business_heavy:
+            logger.info(f"✅ Valid gossip: {len(celebrity_mentions)} celebrities, {gossip_score} gossip keywords")
+            return True, celebrity_mentions
+        elif not has_gossip_context:
+            logger.debug(f"❌ No gossip context: {title[:50]}... (gossip score: {gossip_score})")
+            return False, []
+        elif is_business_heavy:
+            logger.debug(f"❌ Too business-focused: {title[:50]}... (business score: {business_score})")
+            return False, []
+
+        return False, []
 
     def extract_celebrity_mentions(self, title, content, source_weight=1):
         """Enhanced celebrity detection with context awareness"""
@@ -212,6 +283,7 @@ class EnhancedGossipScraper:
                 logger.warning(f"Feed {feed_name} has parsing issues")
 
             articles_processed = 0
+            articles_rejected = 0
 
             for entry in feed.entries[:20]:  # Limit to recent articles
                 # Check if article is recent (last 24 hours)
@@ -227,7 +299,14 @@ class EnhancedGossipScraper:
                 if not title:
                     continue
 
-                # Extract celebrity mentions
+                # NEW: First check if it's celebrity gossip
+                is_gossip, found_celebrities = self.is_celebrity_gossip(title, content)
+
+                if not is_gossip:
+                    articles_rejected += 1
+                    continue
+
+                # Extract celebrity mentions (existing logic)
                 mentions = self.extract_celebrity_mentions(title, content, feed_info['weight'])
 
                 # Auto-discovery
@@ -240,7 +319,7 @@ class EnhancedGossipScraper:
                         self.new_posts.append(post_data)
                         articles_processed += 1
 
-            logger.info(f"Processed {articles_processed} articles from {feed_name}")
+            logger.info(f"✅ {feed_name}: {articles_processed} gossip posts, {articles_rejected} rejected")
             time.sleep(1)  # Be nice to servers
 
         except Exception as e:
@@ -376,6 +455,7 @@ mentions: {dict(mentions)}
     def run(self):
         """Main scraping process"""
         logger.info("Starting Enhanced Gossip Room scraper...")
+        logger.info(f"Loaded {len(self.celebrity_names)} celebrities from Celebrities.txt")
 
         # Scrape all feeds
         for feed_name, feed_info in self.rss_feeds.items():
@@ -393,7 +473,7 @@ mentions: {dict(mentions)}
         # Save all data
         self.save_data()
 
-        logger.info("Gossip scraping complete!")
+        logger.info("🎭 Gossip scraping complete!")
         logger.info(f"Total mentions tracked: {sum(self.celebrity_mentions.values())}")
         logger.info(f"New posts created: {len(self.new_posts)}")
 
