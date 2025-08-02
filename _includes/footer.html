@@ -1,0 +1,42 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+          </li>
+          {%- if site.email -%}
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{- site.description | escape -}}</p>
+
+        <!-- CRUCIAL SEO INTERLINKING FOOTER -->
+        <div class="footer-links">
+          <a href="https://www.mozilla.org/en-US/MPL/2.0/" target="_blank" rel="noopener" title="Mozilla Public License">©</a> | 
+          <a href="https://thefinerpoints.blog" target="_blank" rel="noopener" title="The Finer Points Blog">TFP</a> | 
+          <a href="https://laboratory.stirlo.com" target="_blank" rel="noopener" title="The Laboratory">The Laboratory</a> | 
+          <a href="https://thankyou.stirlo.com" target="_blank" rel="noopener" title="Thank You Page">Thank You</a>
+        </div>
+
+        <div class="drama-footer">
+          <p><em>🎭 Real-time celebrity drama tracking • Updated hourly from {{ site.data.celebrities | size | default: "80+" }} celebrities</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
