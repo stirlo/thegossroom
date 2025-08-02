@@ -8,6 +8,7 @@ import requests
 import yaml
 import json
 import os
+import re
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -87,6 +88,26 @@ class HighFrequencyGossipPoster:
             return f"https://thegossroom.com/{year}/{month}/{day}/{slug_part}/"
         except:
             return "https://thegossroom.com"
+
+    def create_facets_for_urls(self, text):
+        """Create facets for clickable URLs in Bluesky posts"""
+        url_pattern = r'https?://[^\s]+'
+        urls = list(re.finditer(url_pattern, text))
+
+        facets = []
+        for match in urls:
+            facets.append({
+                "index": {
+                    "byteStart": len(text[:match.start()].encode('utf-8')),
+                    "byteEnd": len(text[:match.end()].encode('utf-8'))
+                },
+                "features": [{
+                    "$type": "app.bsky.richtext.facet#link",
+                    "uri": match.group()
+                }]
+            })
+
+        return facets
 
     def find_best_gossip(self):
         """Find best unposted gossip: HOTTEST first, then NEWEST"""
@@ -187,7 +208,7 @@ class HighFrequencyGossipPoster:
         title = gossip['title'][:100] + "..." if len(gossip['title']) > 100 else gossip['title']
         post_text += f"📰 {title}\n\n"
 
-        # Fixed: No chain emoji, direct post URL
+        # Add direct post URL
         post_text += f"{gossip['post_url']}\n\n"
         post_text += "#CelebrityGossip #Drama #Entertainment #TheGossipRoom"
 
@@ -195,9 +216,12 @@ class HighFrequencyGossipPoster:
         return post_text[:300]
 
     def post_to_bluesky(self, text):
-        """Post content to Bluesky"""
+        """Post content to Bluesky with clickable links using facets"""
         if not self.session:
             return False
+
+        # Create facets for clickable URLs
+        facets = self.create_facets_for_urls(text)
 
         post_data = {
             "repo": self.session["did"],
@@ -209,6 +233,10 @@ class HighFrequencyGossipPoster:
             }
         }
 
+        # Add facets if URLs found
+        if facets:
+            post_data["record"]["facets"] = facets
+
         headers = {
             "Authorization": f"Bearer {self.session['accessJwt']}",
             "Content-Type": "application/json"
@@ -219,10 +247,11 @@ class HighFrequencyGossipPoster:
                                    json=post_data, headers=headers, timeout=30)
 
             if response.status_code == 200:
-                print("✅ Successfully posted to Bluesky")
+                print("✅ Successfully posted to Bluesky with clickable links")
                 return True
             else:
                 print(f"❌ Bluesky post failed: {response.status_code}")
+                print(f"Response: {response.text}")
                 return False
         except Exception as e:
             print(f"❌ Bluesky post error: {e}")
