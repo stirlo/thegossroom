@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        ~ 
+        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+      {%- if page.author -%}
+        • {% for author in page.author %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+            {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      {%- endif -%}
+
+      {%- if page.drama_score -%}
+        • <span class="drama-score">Drama Score: {{ page.drama_score }}</span>
+      {%- endif -%}
+
+      {%- if page.primary_celebrity -%}
+        • <span class="primary-celebrity">{{ page.primary_celebrity | replace: '_', ' ' | title }}</span>
+      {%- endif -%}
+    </p>
+
+    {%- if page.tags.size > 0 -%}
+    <div class="post-tags">
+      {%- for tag in page.tags -%}
+        <span class="tag">{{ tag }}</span>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if page.source_url -%}
+  <div class="post-source">
+    <p><strong>Source:</strong> <a href="{{ page.source_url }}" target="_blank" rel="noopener">{{ page.source | default: "Original Article" }}</a></p>
+  </div>
+  {%- endif -%}
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
