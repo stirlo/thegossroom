@@ -1,0 +1,79 @@
+# Site settings
+title: "The Gossip Room"
+email: s@oursquadis.top
+description: >-
+  Real-time celebrity gossip aggregation with drama scoring and trending analysis.
+  Track the hottest entertainment news and rising stars with The Gossip Room.
+baseurl: ""
+url: "https://stirlo.github.io/thegossroom"
+github_username: stirlo
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: UTC
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  celebrities:
+    output: true
+    permalink: /celebrities/:name/
+
+# SEO and Social
+author: "The Gossip Room"
+social:
+  name: "The Gossip Room"
+  links:
+    - "https://github.com/stirlo/thegossroom"
+
+# Footer links for SEO network (your actual links)
+footer_links:
+  license: "https://github.com/stirlo/thegossroom/blob/main/LICENSE"
+  tfp: "https://tfp.la/"
+  laboratory: "https://thelaboratory.cc"
+  thank_you: "https://thelaboratory.cc/thankyou.html"
+
+# Drama Index settings
+drama_index:
+  update_frequency: "hourly"
+  score_decay: 0.9
+  rising_star_threshold: 5
+  explosive_threshold: 50
+
+# RSS Processing
+rss_processing:
+  max_articles_per_feed: 20
+  processing_frequency: "0 * * * *"  # Every hour
+  deduplication_window: 30  # days
+
+# Bluesky integration
+bluesky:
+  max_posts_per_hour: 2
+  drama_threshold: 100
+  rising_star_alerts: true
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - scripts/
+  - requirements.txt
+  - README.md
+  - "*.py"
