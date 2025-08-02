@@ -34,9 +34,17 @@ description: "Track celebrity drama scores, rising stars, and explosive entertai
 
 ### 💥 Explosive Drama (1500+ Score)
 <div id="explosive">
-{% assign explosive_celebs = site.data.celebrities | where_exp: "item", "item[1].drama_score >= 1500" %}
+{% assign explosive_celebs = "" | split: "" %}
+{% for celebrity_data in site.data.celebrities %}
+  {% assign celebrity_info = celebrity_data[1] %}
+  {% if celebrity_info.drama_score >= 1500 %}
+    {% assign explosive_celebs = explosive_celebs | push: celebrity_data %}
+  {% endif %}
+{% endfor %}
+
 {% if explosive_celebs.size > 0 %}
-  {% for celebrity_data in explosive_celebs limit: 10 %}
+  {% assign explosive_sorted = explosive_celebs | sort: '[1].drama_score' | reverse %}
+  {% for celebrity_data in explosive_sorted limit: 10 %}
     {% assign celebrity_name = celebrity_data[0] %}
     {% assign celebrity_info = celebrity_data[1] %}
     <div class="celebrity-card">
@@ -56,9 +64,17 @@ description: "Track celebrity drama scores, rising stars, and explosive entertai
 
 ### 🔥 Hot This Week (800-1499 Score)
 <div id="hot-this-week">
-{% assign hot_celebs = site.data.celebrities | where_exp: "item", "item[1].drama_score >= 800 and item[1].drama_score < 1500" %}
+{% assign hot_celebs = "" | split: "" %}
+{% for celebrity_data in site.data.celebrities %}
+  {% assign celebrity_info = celebrity_data[1] %}
+  {% if celebrity_info.drama_score >= 800 and celebrity_info.drama_score < 1500 %}
+    {% assign hot_celebs = hot_celebs | push: celebrity_data %}
+  {% endif %}
+{% endfor %}
+
 {% if hot_celebs.size > 0 %}
-  {% for celebrity_data in hot_celebs limit: 15 %}
+  {% assign hot_sorted = hot_celebs | sort: '[1].drama_score' | reverse %}
+  {% for celebrity_data in hot_sorted limit: 15 %}
     {% assign celebrity_name = celebrity_data[0] %}
     {% assign celebrity_info = celebrity_data[1] %}
     <div class="celebrity-card">
@@ -76,50 +92,77 @@ description: "Track celebrity drama scores, rising stars, and explosive entertai
 {% endif %}
 </div>
 
-
 ### ⭐ Rising Stars (300-799 Score)
 <div id="rising-stars">
-{% assign rising_celebs = site.data.celebrities | where: "status", "rising" %}
-{% for celebrity_data in rising_celebs limit: 20 %}
-  {% assign celebrity_name = celebrity_data[0] %}
+{% assign rising_celebs = "" | split: "" %}
+{% for celebrity_data in site.data.celebrities %}
   {% assign celebrity_info = celebrity_data[1] %}
-  <div class="celebrity-card">
-    <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
-    <span class="drama-score">{{ celebrity_info.drama_score }}</span>
-    <div class="tags">
-      {% for tag in celebrity_info.tags limit: 2 %}
-        <span class="tag">{{ tag }}</span>
-      {% endfor %}
-    </div>
-  </div>
+  {% if celebrity_info.drama_score >= 300 and celebrity_info.drama_score < 800 %}
+    {% assign rising_celebs = rising_celebs | push: celebrity_data %}
+  {% endif %}
 {% endfor %}
+
+{% if rising_celebs.size > 0 %}
+  {% assign rising_sorted = rising_celebs | sort: '[1].drama_score' | reverse %}
+  {% for celebrity_data in rising_sorted limit: 20 %}
+    {% assign celebrity_name = celebrity_data[0] %}
+    {% assign celebrity_info = celebrity_data[1] %}
+    <div class="celebrity-card">
+      <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
+      <span class="drama-score">{{ celebrity_info.drama_score }}</span>
+      <div class="tags">
+        {% for tag in celebrity_info.tags limit: 2 %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <p><em>Everyone's heating up! 🌡️</em></p>
+{% endif %}
 </div>
 
 ### 🧊 Cooling Down (Under 300 Score)
 <div id="cooling-down">
-{% assign cooling_celebs = site.data.celebrities | where: "status", "cooling" %}
-{% for celebrity_data in cooling_celebs limit: 10 %}
-  {% assign celebrity_name = celebrity_data[0] %}
+{% assign cooling_celebs = "" | split: "" %}
+{% for celebrity_data in site.data.celebrities %}
   {% assign celebrity_info = celebrity_data[1] %}
-  <div class="celebrity-card">
-    <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
-    <span class="drama-score">{{ celebrity_info.drama_score }}</span>
-  </div>
+  {% if celebrity_info.drama_score < 300 and celebrity_info.status != 'memorial' %}
+    {% assign cooling_celebs = cooling_celebs | push: celebrity_data %}
+  {% endif %}
 {% endfor %}
+
+{% if cooling_celebs.size > 0 %}
+  {% assign cooling_sorted = cooling_celebs | sort: '[1].drama_score' | reverse %}
+  {% for celebrity_data in cooling_sorted limit: 10 %}
+    {% assign celebrity_name = celebrity_data[0] %}
+    {% assign celebrity_info = celebrity_data[1] %}
+    <div class="celebrity-card">
+      <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
+      <span class="drama-score">{{ celebrity_info.drama_score }}</span>
+    </div>
+  {% endfor %}
+{% else %}
+  <p><em>Everyone's heating up! 🔥</em></p>
+{% endif %}
 </div>
 
 ### 🕊️ Memorial
 <div id="memorial">
 {% assign memorial_celebs = site.data.celebrities | where: "status", "memorial" %}
-{% for celebrity_data in memorial_celebs %}
-  {% assign celebrity_name = celebrity_data[0] %}
-  {% assign celebrity_info = celebrity_data[1] %}
-  <div class="celebrity-card">
-    <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
-    <span class="memorial-note">{{ celebrity_info.memorial_note | default: "Remembered" }}</span>
-  </div>
-{% endfor %}
-{% if memorial_celebs.size == 0 %}
+{% if memorial_celebs.size > 0 %}
+  {% for celebrity_data in memorial_celebs %}
+    {% assign celebrity_name = celebrity_data[0] %}
+    {% assign celebrity_info = celebrity_data[1] %}
+    <div class="celebrity-card memorial">
+      <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
+      <span class="memorial-note">{{ celebrity_info.memorial_note | default: "Remembered" }}</span>
+      {% if celebrity_info.death_date %}
+        <small class="death-date">({{ celebrity_info.death_date }})</small>
+      {% endif %}
+    </div>
+  {% endfor %}
+{% else %}
   <p><em>No memorials currently tracked</em></p>
 {% endif %}
 </div>
@@ -173,11 +216,23 @@ description: "Track celebrity drama scores, rising stars, and explosive entertai
     </div>
     <div class="stat-item">
       <h4>Explosive Drama</h4>
-      <span class="big-number">{{ site.data.celebrities | where: "status", "explosive" | size }}</span>
+      {% assign explosive_count = 0 %}
+      {% for celebrity_data in site.data.celebrities %}
+        {% if celebrity_data[1].drama_score >= 1500 %}
+          {% assign explosive_count = explosive_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      <span class="big-number">{{ explosive_count }}</span>
     </div>
     <div class="stat-item">
       <h4>Rising Stars</h4>
-      <span class="big-number">{{ site.data.celebrities | where: "status", "rising" | size }}</span>
+      {% assign rising_count = 0 %}
+      {% for celebrity_data in site.data.celebrities %}
+        {% if celebrity_data[1].drama_score >= 300 and celebrity_data[1].drama_score < 800 %}
+          {% assign rising_count = rising_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      <span class="big-number">{{ rising_count }}</span>
     </div>
   </div>
 </div>
