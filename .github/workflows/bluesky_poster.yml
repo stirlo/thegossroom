@@ -1,0 +1,42 @@
+name: Post to Bluesky
+
+on:
+  schedule:
+    - cron: '15 */1 * * *'  # Every hour at 15 minutes past
+    - cron: '45 */1 * * *'  # Every hour at 45 minutes past
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  post-to-bluesky:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pyyaml python-dateutil
+
+      - name: Post hottest gossip to Bluesky
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+        run: python scripts/bluesky_poster.py
+
+      - name: Commit posted tracking
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _data/bluesky_posted.yml
+          git diff --staged --quiet || git commit -m "Update Bluesky posted tracking [skip ci]"
+          git push
