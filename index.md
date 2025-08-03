@@ -47,38 +47,62 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
 <section class="hottest-now">
   <h2>🔥 Hottest Drama Right Now</h2>
   <div class="celebrity-temperature-grid">
-    {% assign sorted_celebrities = site.data.celebrities | sort: 'drama_score' | reverse %}
-    {% assign shown_hot = 0 %}
-    {% for celebrity_data in sorted_celebrities %}
-      {% assign celebrity_name = celebrity_data[0] %}
-      {% assign celebrity_info = celebrity_data[1] %}
-      {% if celebrity_info.drama_score >= 50 and shown_hot < 12 %}
-        {% assign shown_hot = shown_hot | plus: 1 %}
-        {% assign temp_class = 'mild' %}
-        {% if celebrity_info.drama_score >= 85 %}
-          {% assign temp_class = 'explosive' %}
-        {% elsif celebrity_info.drama_score >= 70 %}
-          {% assign temp_class = 'hot' %}
-        {% elsif celebrity_info.drama_score >= 50 %}
-          {% assign temp_class = 'rising' %}
+    {% if site.data.celebrities %}
+      {% comment %} Convert hash to array and sort by drama_score {% endcomment %}
+      {% assign celebrity_array = '' | split: '' %}
+      {% for celebrity_pair in site.data.celebrities %}
+        {% assign celebrity_name = celebrity_pair[0] %}
+        {% assign celebrity_info = celebrity_pair[1] %}
+        {% assign drama_score = celebrity_info.drama_score | default: 0 %}
+        {% if drama_score >= 50 %}
+          {% assign celebrity_with_score = celebrity_name | append: '|' | append: drama_score %}
+          {% assign celebrity_array = celebrity_array | push: celebrity_with_score %}
         {% endif %}
+      {% endfor %}
 
-        <div class="celebrity-temp-card temp-{{ temp_class }}">
-          <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
-            <h3>{{ celebrity_name | replace: '_', ' ' | title }}</h3>
-            <div class="temperature">{{ celebrity_info.drama_score | default: 0 }}°</div>
-            <div class="status">{{ celebrity_info.status | default: 'unknown' | upcase }}</div>
-            {% if celebrity_info.temperature_change %}
-              {% assign change = celebrity_info.temperature_change %}
-              <div class="change {% if change > 0 %}rising{% else %}falling{% endif %}">
-                {% if change > 0 %}↗️ +{{ change }}°{% else %}↘️ {{ change }}°{% endif %}
-              </div>
-            {% endif %}
-            <div class="category">{{ celebrity_info.category | default: 'celebrity' | upcase }}</div>
-          </a>
-        </div>
-      {% endif %}
-    {% endfor %}
+      {% comment %} Sort and display top celebrities {% endcomment %}
+      {% assign sorted_array = celebrity_array | sort | reverse %}
+      {% assign shown_hot = 0 %}
+
+      {% for celebrity_entry in sorted_array %}
+        {% if shown_hot < 12 %}
+          {% assign parts = celebrity_entry | split: '|' %}
+          {% assign celebrity_name = parts[0] %}
+          {% assign celebrity_info = site.data.celebrities[celebrity_name] %}
+          {% assign drama_score = celebrity_info.drama_score | default: 0 %}
+
+          {% assign temp_class = 'mild' %}
+          {% if drama_score >= 85 %}
+            {% assign temp_class = 'explosive' %}
+          {% elsif drama_score >= 70 %}
+            {% assign temp_class = 'hot' %}
+          {% elsif drama_score >= 50 %}
+            {% assign temp_class = 'rising' %}
+          {% endif %}
+
+          <div class="celebrity-temp-card temp-{{ temp_class }}">
+            <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
+              <h3>{{ celebrity_info.display_name | default: celebrity_name | replace: '_', ' ' | title }}</h3>
+              <div class="temperature">{{ drama_score }}°</div>
+              <div class="status">{{ celebrity_info.status | default: 'unknown' | upcase }}</div>
+              {% if celebrity_info.temperature_change %}
+                {% assign change = celebrity_info.temperature_change %}
+                <div class="change {% if change > 0 %}rising{% else %}falling{% endif %}">
+                  {% if change > 0 %}↗️ +{{ change }}°{% else %}↘️ {{ change }}°{% endif %}
+                </div>
+              {% endif %}
+              <div class="category">{{ celebrity_info.category | default: 'celebrity' | upcase }}</div>
+            </a>
+          </div>
+
+          {% assign shown_hot = shown_hot | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <div class="no-celebrities">
+        <p>🔍 No celebrity data available yet. Check back soon for drama temperatures!</p>
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -87,33 +111,42 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
   <h2>🚨 Latest Explosive Drama</h2>
   <div class="posts-grid">
     {% assign explosive_posts = site.posts | where_exp: "post", "post.drama_score >= 70" | sort: 'date' | reverse %}
-    {% for post in explosive_posts limit: 8 %}
-      {% assign temp_class = 'mild' %}
-      {% if post.drama_score >= 85 %}
-        {% assign temp_class = 'explosive' %}
-      {% elsif post.drama_score >= 70 %}
-        {% assign temp_class = 'hot' %}
-      {% endif %}
+    {% if explosive_posts.size > 0 %}
+      {% for post in explosive_posts limit: 8 %}
+        {% assign temp_class = 'mild' %}
+        {% assign drama_score = post.drama_score | default: 0 %}
+        {% if drama_score >= 85 %}
+          {% assign temp_class = 'explosive' %}
+        {% elsif drama_score >= 70 %}
+          {% assign temp_class = 'hot' %}
+        {% endif %}
 
-      <article class="post-card temp-{{ temp_class }}">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <div class="post-meta">
-          <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
-          <span class="temperature">🌡️ {{ post.drama_score | default: 0 }}°</span>
-          {% if post.primary_celebrity %}
-            <a href="/tag/{{ post.primary_celebrity | slugify }}/" class="primary-celeb">
-              {{ post.primary_celebrity | replace: '_', ' ' | title }}
-            </a>
+        <article class="post-card temp-{{ temp_class }}">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <div class="post-meta">
+            <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+            <span class="temperature">🌡️ {{ drama_score }}°</span>
+            {% if post.primary_celebrity %}
+              <a href="/tag/{{ post.primary_celebrity | slugify }}/" class="primary-celeb">
+                {{ post.primary_celebrity | replace: '_', ' ' | title }}
+              </a>
+            {% endif %}
+          </div>
+          <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          {% if post.tags and post.tags.size > 0 %}
+            <div class="post-tags">
+              {% for tag in post.tags limit: 4 %}
+                <a href="/tag/{{ tag | slugify }}/" class="tag">{{ tag | replace: '_', ' ' | title }}</a>
+              {% endfor %}
+            </div>
           {% endif %}
-        </div>
-        <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        <div class="post-tags">
-          {% for tag in post.tags limit: 4 %}
-            <a href="/tag/{{ tag | slugify }}/" class="tag">{{ tag | replace: '_', ' ' | title }}</a>
-          {% endfor %}
-        </div>
-      </article>
-    {% endfor %}
+        </article>
+      {% endfor %}
+    {% else %}
+      <div class="no-posts">
+        <p>🔥 No explosive drama yet! Check back soon for the hottest gossip.</p>
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -121,39 +154,43 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
 <section class="trending-categories">
   <h2>📊 Drama by Category</h2>
   <div class="category-grid">
-    {% assign categories = site.data.celebrities | group_by: 'category' %}
-    {% for category_group in categories %}
-      {% assign category = category_group.name %}
-      {% assign celebrities = category_group.items %}
-      {% assign avg_temp = 0 %}
-      {% assign active_count = 0 %}
+    {% if site.data.celebrities %}
+      {% assign categories = site.data.celebrities | group_by: 'category' %}
+      {% for category_group in categories %}
+        {% assign category = category_group.name %}
+        {% assign celebrities = category_group.items %}
+        {% assign avg_temp = 0 %}
+        {% assign active_count = 0 %}
+        {% assign total_temp = 0 %}
 
-      {% for celeb in celebrities %}
-        {% if celeb.drama_score > 0 %}
-          {% assign avg_temp = avg_temp | plus: celeb.drama_score %}
-          {% assign active_count = active_count | plus: 1 %}
+        {% for celeb in celebrities %}
+          {% assign celeb_score = celeb.drama_score | default: 0 %}
+          {% if celeb_score > 0 %}
+            {% assign total_temp = total_temp | plus: celeb_score %}
+            {% assign active_count = active_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+
+        {% if active_count > 0 %}
+          {% assign avg_temp = total_temp | divided_by: active_count %}
+          {% assign temp_class = 'mild' %}
+          {% if avg_temp >= 70 %}
+            {% assign temp_class = 'hot' %}
+          {% elsif avg_temp >= 50 %}
+            {% assign temp_class = 'rising' %}
+          {% elsif avg_temp < 30 %}
+            {% assign temp_class = 'cooling' %}
+          {% endif %}
+
+          <div class="category-card temp-{{ temp_class }}">
+            <h3>{{ category | default: 'Other' | title }}</h3>
+            <div class="category-temp">{{ avg_temp }}°</div>
+            <div class="category-count">{{ active_count }} active</div>
+            <div class="category-total">{{ celebrities.size }} total</div>
+          </div>
         {% endif %}
       {% endfor %}
-
-      {% if active_count > 0 %}
-        {% assign avg_temp = avg_temp | divided_by: active_count %}
-        {% assign temp_class = 'mild' %}
-        {% if avg_temp >= 70 %}
-          {% assign temp_class = 'hot' %}
-        {% elsif avg_temp >= 50 %}
-          {% assign temp_class = 'rising' %}
-        {% elsif avg_temp < 30 %}
-          {% assign temp_class = 'cooling' %}
-        {% endif %}
-
-        <div class="category-card temp-{{ temp_class }}">
-          <h3>{{ category | default: 'Other' | title }}</h3>
-          <div class="category-temp">{{ avg_temp }}°</div>
-          <div class="category-count">{{ active_count }} active</div>
-          <div class="category-total">{{ celebrities.size }} total</div>
-        </div>
-      {% endif %}
-    {% endfor %}
+    {% endif %}
   </div>
 </section>
 
@@ -163,15 +200,16 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
   <div class="posts-list">
     {% for post in site.posts limit: 20 %}
       {% assign temp_class = 'freezing' %}
-      {% if post.drama_score >= 85 %}
+      {% assign drama_score = post.drama_score | default: 0 %}
+      {% if drama_score >= 85 %}
         {% assign temp_class = 'explosive' %}
-      {% elsif post.drama_score >= 70 %}
+      {% elsif drama_score >= 70 %}
         {% assign temp_class = 'hot' %}
-      {% elsif post.drama_score >= 50 %}
+      {% elsif drama_score >= 50 %}
         {% assign temp_class = 'rising' %}
-      {% elsif post.drama_score >= 30 %}
+      {% elsif drama_score >= 30 %}
         {% assign temp_class = 'mild' %}
-      {% elsif post.drama_score >= 10 %}
+      {% elsif drama_score >= 10 %}
         {% assign temp_class = 'cooling' %}
       {% endif %}
 
@@ -179,18 +217,20 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <div class="post-meta">
           <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
-          <span class="temperature">{{ post.drama_score | default: 0 }}°</span>
+          <span class="temperature">{{ drama_score }}°</span>
           {% if post.primary_celebrity %}
             <a href="/tag/{{ post.primary_celebrity | slugify }}/" class="primary-celeb">
               {{ post.primary_celebrity | replace: '_', ' ' | title }}
             </a>
           {% endif %}
         </div>
-        <div class="post-tags">
-          {% for tag in post.tags limit: 6 %}
-            <a href="/tag/{{ tag | slugify }}/" class="tag">{{ tag | replace: '_', ' ' | title }}</a>
-          {% endfor %}
-        </div>
+        {% if post.tags and post.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in post.tags limit: 6 %}
+              <a href="/tag/{{ tag | slugify }}/" class="tag">{{ tag | replace: '_', ' ' | title }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
       </article>
     {% endfor %}
   </div>
