@@ -3,94 +3,377 @@
 
 @import "minima";
 
-// Temperature Color Palette
-$temp-explosive: #ff0000;
-$temp-hot: #ff4500;
-$temp-rising: #ff8c00;
-$temp-mild: #ffa500;
-$temp-cooling: #87ceeb;
-$temp-freezing: #b0e0e6;
+/* ==========================================================================
+   THE GOSSIP ROOM - COMPLETE WITH DARK/LIGHT MODE SWITCHING RESTORED
+   ========================================================================== */
 
-// Base styling
+/* Your gorgeous color palette - RESTORED */
+:root {
+  --primary-pink: #ff69b4;
+  --hot-pink: #ff1493;
+  --eye-searing-yellow: #ffff00;
+  --bright-yellow: #ffd700;
+  --neon-green: #39ff14;
+  --electric-blue: #00bfff;
+  --deep-purple: #8a2be2;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #808080;
+
+  /* Drama colors */
+  --explosive-red: #ff0000;
+  --rising-orange: #ff8c00;
+  --cooling-blue: #87ceeb;
+  --memorial-gray: #696969;
+}
+
+/* 🌙☀️ DARK/LIGHT MODE DETECTION - RESTORED! */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--black);
+    --text-color: var(--white);
+    --accent-color: var(--primary-pink);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-border: rgba(255, 255, 255, 0.2);
+    --shadow-color: rgba(255, 105, 180, 0.3);
+  }
+
+  body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+    color: var(--white);
+  }
+
+  .page-content {
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .site-header {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Dark mode celebrity cards */
+  .celebrity-temp-card {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border);
+    color: var(--white);
+
+    &.temp-explosive {
+      background: linear-gradient(135deg, rgba(255, 0, 0, 0.3), rgba(204, 0, 0, 0.2)) !important;
+      box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+    }
+
+    &.temp-hot {
+      background: linear-gradient(135deg, rgba(255, 69, 0, 0.3), rgba(204, 51, 0, 0.2)) !important;
+      box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
+    }
+
+    &.temp-rising {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.3), rgba(204, 102, 0, 0.2)) !important;
+      box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
+    }
+
+    &.temp-mild {
+      background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(204, 119, 0, 0.2)) !important;
+      box-shadow: 0 10px 30px rgba(255, 165, 0, 0.4);
+    }
+
+    &.temp-cooling {
+      background: linear-gradient(135deg, rgba(135, 206, 235, 0.3), rgba(95, 158, 160, 0.2)) !important;
+      box-shadow: 0 10px 30px rgba(135, 206, 235, 0.4);
+    }
+
+    &.temp-freezing {
+      background: linear-gradient(135deg, rgba(176, 224, 230, 0.3), rgba(135, 206, 235, 0.2)) !important;
+      box-shadow: 0 10px 30px rgba(176, 224, 230, 0.4);
+    }
+  }
+
+  /* Dark mode post cards */
+  .post-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    h3 a, .post-title a {
+      color: var(--white);
+    }
+
+    .post-meta {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .excerpt {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  /* Dark mode explanation section */
+  .temperature-explanation {
+    background: linear-gradient(135deg, rgba(168, 237, 234, 0.2), rgba(254, 214, 227, 0.2)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    .explanation-item {
+      background: rgba(255, 255, 255, 0.1) !important;
+      color: var(--white);
+
+      h3 {
+        color: var(--primary-pink) !important;
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  /* Dark mode temperature dashboard */
+  .temperature-dashboard {
+    background: linear-gradient(135deg, rgba(116, 185, 255, 0.3), rgba(9, 132, 227, 0.2)) !important;
+    border: 1px solid rgba(116, 185, 255, 0.3);
+  }
+
+  /* Dark mode posts list */
+  .posts-list .post-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--white);
+    border-left-color: var(--primary-pink);
+
+    h3 a {
+      color: var(--white);
+    }
+
+    .post-meta {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: var(--white);
+    --text-color: var(--black);
+    --accent-color: var(--hot-pink);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-border: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+  }
+
+  body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: var(--black);
+  }
+
+  .page-content {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+  }
+
+  .site-header {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  /* Light mode celebrity cards - keep original gradients */
+  .celebrity-temp-card {
+    &.temp-explosive {
+      background: linear-gradient(135deg, var(--explosive-red), #cc0000) !important;
+      color: white;
+    }
+
+    &.temp-hot {
+      background: linear-gradient(135deg, #ff4500, #cc3300) !important;
+      color: white;
+    }
+
+    &.temp-rising {
+      background: linear-gradient(135deg, var(--rising-orange), #cc6600) !important;
+      color: white;
+    }
+
+    &.temp-mild {
+      background: linear-gradient(135deg, #ffa500, #cc7700) !important;
+      color: white;
+    }
+
+    &.temp-cooling {
+      background: linear-gradient(135deg, var(--cooling-blue), #5f9ea0) !important;
+      color: #333;
+    }
+
+    &.temp-freezing {
+      background: linear-gradient(135deg, #b0e0e6, #87ceeb) !important;
+      color: #333;
+    }
+  }
+
+  .post-card {
+    background: white !important;
+    color: #333;
+
+    h3 a, .post-title a {
+      color: #2d3436;
+    }
+
+    .post-meta {
+      color: #636e72;
+    }
+
+    .excerpt {
+      color: #495057;
+    }
+  }
+}
+
+/* Fix ## markdown artifacts */
+h1, h2, h3, h4, h5, h6 {
+  &::before, &::after {
+    content: "" !important;
+    display: none !important;
+  }
+}
+
+.post-title, .page-title, .section-title, .hero-title, .celebrity-name, .explanation-title {
+  &::before, &::after {
+    content: "" !important;
+    display: none !important;
+  }
+}
+
+/* Base styling with GORGEOUS background */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   min-height: 100vh;
+  transition: all 0.3s ease;
 }
 
 .site-header {
-  background: rgba(255, 255, 255, 0.95);
+  background-color: var(--card-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--card-border);
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: all 0.3s ease;
 }
 
 .page-content {
-  background: rgba(255, 255, 255, 0.95);
+  background-color: var(--card-bg);
   backdrop-filter: blur(10px);
   margin: 20px;
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  transition: all 0.3s ease;
 }
 
-// Homepage Hero
+/* HOMEPAGE HERO - EXPLOSIVE GRADIENT RESTORED */
 .homepage-hero {
-  text-align: center;
-  margin-bottom: 40px;
+  background: linear-gradient(135deg, var(--primary-pink), var(--eye-searing-yellow)) !important;
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  text-align: center;
   border-radius: 20px;
+  margin-bottom: 40px;
   color: white;
-
-  h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  .hero-subtitle {
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    opacity: 0.9;
-  }
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-// Temperature Legend
+.homepage-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.hero-title, .homepage-hero h1 {
+  font-size: 3.5em !important;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, var(--white), var(--bright-yellow)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+  color: rgba(255,255,255,0.95);
+}
+
+/* TEMPERATURE LEGEND - RESTORED BEAUTY */
 .temperature-legend {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
+  position: relative;
+  z-index: 2;
 
   span {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
     padding: 8px 15px;
     border-radius: 25px;
     font-size: 0.9em;
     font-weight: bold;
-    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3) !important;
+      transform: translateY(-2px);
+    }
   }
 }
 
-// Temperature Dashboard
+/* TEMPERATURE DASHBOARD - FIERY GRADIENT */
 .temperature-dashboard {
-  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  background: linear-gradient(135deg, #74b9ff, #0984e3) !important;
   border-radius: 15px;
   padding: 30px;
   margin-bottom: 40px;
   color: white;
+  box-shadow: 0 15px 35px rgba(116, 185, 255, 0.3);
+  transition: all 0.3s ease;
 
-  h2 {
+  h2, .section-title {
     text-align: center;
     margin-bottom: 25px;
     font-size: 2.2em;
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 }
 
@@ -101,31 +384,39 @@ body {
 
   .temp-stat {
     text-align: center;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 20px;
-    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.25) !important;
+    }
 
     .number {
       display: block;
       font-size: 2.5em;
       font-weight: bold;
       margin-bottom: 5px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
 
     .label {
       font-size: 1.1em;
       opacity: 0.9;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-
-    &.explosive { border-left: 5px solid $temp-explosive; }
-    &.hot { border-left: 5px solid $temp-hot; }
-    &.rising { border-left: 5px solid $temp-rising; }
-    &.mild { border-left: 5px solid $temp-mild; }
   }
 }
 
-// Celebrity Temperature Grid
+/* CELEBRITY TEMPERATURE CARDS - INDIVIDUAL GRADIENTS RESTORED */
 .celebrity-temperature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -139,27 +430,50 @@ body {
   text-align: center;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+  }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   .celebrity-link {
     text-decoration: none;
     color: inherit;
     display: block;
+    position: relative;
+    z-index: 2;
   }
 
-  h3 {
+  h3, .celebrity-name {
     margin-bottom: 15px;
     font-size: 1.3em;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
   .temperature {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
   .status {
@@ -169,60 +483,44 @@ body {
     padding: 5px 10px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.2);
+    opacity: 0.9;
+    letter-spacing: 1px;
   }
 
   .change {
     font-size: 0.9em;
     margin-bottom: 10px;
+    font-weight: 600;
 
-    &.rising { color: #27ae60; }
-    &.falling { color: #e74c3c; }
+    &.rising { 
+      color: #00ff88;
+      text-shadow: 0 0 10px rgba(0,255,136,0.5);
+    }
+    &.falling { 
+      color: #ff4757;
+      text-shadow: 0 0 10px rgba(255,71,87,0.5);
+    }
   }
 
   .category {
     font-size: 0.8em;
     opacity: 0.8;
-  }
-
-  // Temperature-based styling
-  &.temp-explosive {
-    background: linear-gradient(135deg, $temp-explosive, #cc0000);
-    color: white;
-    border-color: $temp-explosive;
-  }
-
-  &.temp-hot {
-    background: linear-gradient(135deg, $temp-hot, #cc3300);
-    color: white;
-    border-color: $temp-hot;
-  }
-
-  &.temp-rising {
-    background: linear-gradient(135deg, $temp-rising, #cc6600);
-    color: white;
-    border-color: $temp-rising;
-  }
-
-  &.temp-mild {
-    background: linear-gradient(135deg, $temp-mild, #cc7700);
-    color: white;
-    border-color: $temp-mild;
-  }
-
-  &.temp-cooling {
-    background: linear-gradient(135deg, $temp-cooling, #5f9ea0);
-    color: #333;
-    border-color: $temp-cooling;
-  }
-
-  &.temp-freezing {
-    background: linear-gradient(135deg, $temp-freezing, #87ceeb);
-    color: #333;
-    border-color: $temp-freezing;
+    letter-spacing: 1px;
   }
 }
 
-// Posts Grid
+/* Pulse animation for explosive drama - RESTORED */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+.celebrity-temp-card.temp-explosive {
+  animation: pulse 2s infinite;
+}
+
+/* POSTS GRID - GRADIENT BORDERS RESTORED */
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -234,22 +532,46 @@ body {
   border-radius: 15px;
   padding: 25px;
   transition: all 0.3s ease;
-  border-left: 5px solid #ddd;
+  position: relative;
+  border: 3px solid transparent;
+  background-clip: padding-box;
 
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 3px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #ff9ff3, #54a0ff);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
   }
 
-  h3 {
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px var(--shadow-color);
+  }
+
+  h3, .post-title {
     margin-bottom: 15px;
 
     a {
       text-decoration: none;
-      color: inherit;
+      color: var(--text-color);
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      transition: all 0.3s ease;
 
       &:hover {
-        color: #e74c3c;
+        background: linear-gradient(135deg, #ff6b6b, #feca57);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     }
   }
@@ -257,24 +579,36 @@ body {
   .post-meta {
     margin-bottom: 15px;
     font-size: 0.9em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 
     .date, .temperature {
       margin-right: 15px;
     }
 
     .temperature {
-      font-weight: bold;
+      background: linear-gradient(135deg, #ff4757, #ff6348);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.8rem;
     }
 
     .primary-celeb {
-      background: rgba(0, 0, 0, 0.1);
-      padding: 3px 8px;
-      border-radius: 12px;
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
       text-decoration: none;
-      font-size: 0.85em;
+      font-weight: 600;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
 
       &:hover {
-        background: rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(108,92,231,0.4);
       }
     }
   }
@@ -284,116 +618,65 @@ body {
     line-height: 1.5;
   }
 
-  // Temperature-based styling for posts
+  /* Temperature-based styling for posts - RESTORED */
   &.temp-explosive {
     background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(204, 0, 0, 0.05));
-    border-left-color: $temp-explosive;
+    border-left: 5px solid var(--explosive-red);
   }
 
   &.temp-hot {
     background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(204, 51, 0, 0.05));
-    border-left-color: $temp-hot;
+    border-left: 5px solid #ff4500;
   }
 
   &.temp-rising {
     background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(204, 102, 0, 0.05));
-    border-left-color: $temp-rising;
+    border-left: 5px solid var(--rising-orange);
   }
 
   &.temp-mild {
     background: linear-gradient(135deg, rgba(255, 165, 0, 0.1), rgba(204, 119, 0, 0.05));
-    border-left-color: $temp-mild;
+    border-left: 5px solid #ffa500;
   }
 
   &.temp-cooling {
     background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(95, 158, 160, 0.05));
-    border-left-color: $temp-cooling;
+    border-left: 5px solid var(--cooling-blue);
   }
 
   &.temp-freezing {
     background: linear-gradient(135deg, rgba(176, 224, 230, 0.1), rgba(135, 206, 235, 0.05));
-    border-left-color: $temp-freezing;
+    border-left: 5px solid #b0e0e6;
   }
 }
 
-// Post Tags
+/* POST TAGS - GRADIENT STYLING RESTORED */
 .post-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 
   .tag {
-    background: rgba(0, 0, 0, 0.1);
-    padding: 4px 10px;
-    border-radius: 15px;
+    background: linear-gradient(135deg, #e17055, #fdcb6e) !important;
+    color: white !important;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
     text-decoration: none;
-    font-size: 0.8em;
-    transition: all 0.2s ease;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.2);
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(225,112,85,0.4);
+      background: linear-gradient(135deg, #d63031, #e84393) !important;
+      color: white !important;
     }
   }
 }
 
-// Category Grid
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.category-card {
-  text-align: center;
-  padding: 25px;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  h3 {
-    margin-bottom: 15px;
-  }
-
-  .category-temp {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .category-count, .category-total {
-    font-size: 0.9em;
-    margin-bottom: 5px;
-  }
-
-  // Temperature-based styling
-  &.temp-hot {
-    background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(204, 51, 0, 0.1));
-    border: 2px solid $temp-hot;
-  }
-
-  &.temp-rising {
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2), rgba(204, 102, 0, 0.1));
-    border: 2px solid $temp-rising;
-  }
-
-  &.temp-mild {
-    background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(204, 119, 0, 0.1));
-    border: 2px solid $temp-mild;
-  }
-
-  &.temp-cooling {
-    background: linear-gradient(135deg, rgba(135, 206, 235, 0.2), rgba(95, 158, 160, 0.1));
-    border: 2px solid $temp-cooling;
-  }
-}
-
-// All Posts List
+/* ALL POSTS LIST - ALTERNATING GRADIENTS RESTORED */
 .posts-list {
   .post-item {
     padding: 20px;
@@ -403,19 +686,23 @@ body {
     transition: all 0.2s ease;
 
     &:hover {
-      transform: translateX(5px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transform: translateX(10px);
+      box-shadow: 0 10px 30px var(--shadow-color);
     }
 
-    h3 {
+    h3, .post-title {
       margin-bottom: 10px;
 
       a {
         text-decoration: none;
         color: inherit;
+        transition: all 0.3s ease;
 
         &:hover {
-          color: #e74c3c;
+          background: linear-gradient(135deg, #ff6b6b, #feca57);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
       }
     }
@@ -425,13 +712,19 @@ body {
       font-size: 0.9em;
 
       .temperature {
-        font-weight: bold;
+        background: linear-gradient(135deg, #ff4757, #ff6348);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.8rem;
         margin-left: 15px;
       }
 
       .primary-celeb {
-        background: rgba(0, 0, 0, 0.1);
-        padding: 2px 6px;
+        background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+        color: white;
+        padding: 0.2rem 0.6rem;
         border-radius: 10px;
         text-decoration: none;
         font-size: 0.85em;
@@ -439,45 +732,46 @@ body {
       }
     }
 
-    // Temperature-based styling
+    /* Temperature-based styling - RESTORED */
     &.temp-explosive { 
-      background: rgba(255, 0, 0, 0.05);
-      border-left-color: $temp-explosive;
+      background: linear-gradient(90deg, rgba(255,0,0,0.05) 0%, var(--card-bg) 10%);
+      border-left-color: var(--explosive-red);
     }
     &.temp-hot { 
-      background: rgba(255, 69, 0, 0.05);
-      border-left-color: $temp-hot;
+      background: linear-gradient(90deg, rgba(255,69,0,0.05) 0%, var(--card-bg) 10%);
+      border-left-color: #ff4500;
     }
     &.temp-rising { 
-      background: rgba(255, 140, 0, 0.05);
-      border-left-color: $temp-rising;
+      background: linear-gradient(90deg, rgba(255,140,0,0.05) 0%, var(--card-bg) 10%);
+      border-left-color: var(--rising-orange);
     }
     &.temp-mild { 
-      background: rgba(255, 165, 0, 0.05);
-      border-left-color: $temp-mild;
+      background: linear-gradient(90deg, rgba(255,165,0,0.05) 0%, var(--card-bg) 10%);
+      border-left-color: #ffa500;
     }
     &.temp-cooling { 
-      background: rgba(135, 206, 235, 0.05);
-      border-left-color: $temp-cooling;
+      background: linear-gradient(90deg, rgba(135,206,235,0.05) 0%, var(--card-bg) 10%);
+      border-left-color: var(--cooling-blue);
     }
     &.temp-freezing { 
-      background: rgba(176, 224, 230, 0.05);
-      border-left-color: $temp-freezing;
+      background: linear-gradient(90deg, rgba(176,224,230,0.05) 0%, var(--card-bg) 10%);
+      border-left-color: #b0e0e6;
     }
   }
 }
 
-// Explanation Section
+/* EXPLANATION SECTION - SUBTLE GRADIENTS RESTORED */
 .temperature-explanation {
-  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  background: linear-gradient(135deg, #a8edea, #fed6e3) !important;
   border-radius: 15px;
   padding: 30px;
   margin-top: 40px;
+  transition: all 0.3s ease;
 
-  h2 {
+  h2, .section-title {
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
+    color: #333 !important;
   }
 }
 
@@ -487,37 +781,61 @@ body {
   gap: 25px;
 
   .explanation-item {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.7) !important;
     padding: 20px;
     border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
 
-    h3 {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      padding: 1px;
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #54a0ff);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      z-index: -1;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    h3, .explanation-title {
       margin-bottom: 15px;
-      color: #333;
     }
 
     p {
       line-height: 1.6;
-      color: #555;
     }
   }
 }
 
-// Buttons
+/* BUTTONS - EPIC GRADIENT RESTORED */
 .btn-view-more, .btn-more-drama {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 25%, #ff9ff3 50%, #54a0ff 75%, #5f27cd 100%) !important;
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+  color: white !important;
   padding: 12px 25px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    color: white !important;
   }
 }
 
@@ -526,15 +844,33 @@ body {
   margin-top: 30px;
 }
 
-// Mobile Responsiveness
+/* 🌙☀️ MODE TOGGLE INDICATOR (Optional visual indicator) */
+.mode-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .page-content {
     margin: 10px;
     padding: 20px;
   }
 
-  .homepage-hero h1 {
-    font-size: 2.5em;
+  .homepage-hero h1, .hero-title {
+    font-size: 2.5em !important;
   }
 
   .temperature-legend {
@@ -555,10 +891,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .explanation-grid {
     grid-template-columns: 1fr;
   }
@@ -569,42 +901,8 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
   .celebrity-temp-card,
   .post-card {
     padding: 15px;
-  }
-}
-
-// Clickable elements
-.clickable-tag, .celebrity-link, .primary-celeb {
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
-// Loading states
-.loading {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-// Print styles
-@media print {
-  .temperature-legend,
-  .btn-view-more,
-  .btn-more-drama {
-    display: none;
-  }
-
-  .post-card,
-  .celebrity-temp-card {
-    break-inside: avoid;
   }
 }
