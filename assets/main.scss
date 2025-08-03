@@ -343,3 +343,106 @@ footer a:hover {
   font-weight: bold;
   font-size: 0.9rem;
 }
+
+/* Clickable Celebrity Cards */
+.celebrity-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+  }
+}
+
+/* Clickable Tags Styling */
+.tag, .tag-display {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: white;
+  }
+}
+
+/* Post Tags Specific */
+.post-tags .tag {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+
+  &:hover {
+    background: linear-gradient(135deg, #feca57 0%, #ff6b6b 100%);
+  }
+}
+
+/* Related Posts Tags */
+.related-post-card .tag {
+  background: linear-gradient(135deg, #48cae4 0%, #023e8a 100%);
+  font-size: 0.7em;
+
+  &:hover {
+    background: linear-gradient(135deg, #023e8a 0%, #48cae4 100%);
+  }
+}
+
+/* Related Articles Grid */
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.related-post-card {
+  background: rgba(255,255,255,0.05);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  h3 a {
+    color: #ff6b6b;
+    text-decoration: none;
+
+    &:hover {
+      color: #feca57;
+    }
+  }
+
+  .related-meta {
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.7);
+    margin: 8px 0;
+  }
+
+  .related-excerpt {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 8px 0;
+  }
+
+  .related-tags {
+    margin-top: 8px;
+  }
+}
+
