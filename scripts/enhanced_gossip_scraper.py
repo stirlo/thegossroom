@@ -326,12 +326,21 @@ class EnhancedGossipScraper:
             logger.error(f"Error scraping {feed_name}: {e}")
 
     def create_blog_post(self, title, content, link, mentions, source):
-        """Create Jekyll blog post with enhanced metadata"""
-        # Generate filename
+        # Generate filename with proper sanitization
         date_str = datetime.now().strftime('%Y-%m-%d')
+    
+        # Clean slug generation - prevents trailing hyphens
         slug = re.sub(r'[^a-zA-Z0-9\s]', '', title).strip()
-        slug = re.sub(r'\s+', '-', slug).lower()[:50]
+        slug = re.sub(r'\s+', '-', slug).lower()
+        slug = slug[:50]  # Truncate first
+        slug = slug.strip('-')  # Remove leading/trailing hyphens
+    
+        # Ensure slug isn't empty after cleaning
+        if not slug:
+            slug = 'untitled-post'
+    
         filename = f"{date_str}-{slug}.md"
+
 
         # Determine primary celebrity and drama level
         primary_celebrity = max(mentions.keys(), key=mentions.get)
