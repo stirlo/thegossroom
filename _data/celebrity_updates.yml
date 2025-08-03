@@ -1,0 +1,38 @@
+# Celebrity Updates - Auto-processed hourly, then reset
+# Add new celebrities, brands, or update existing ones below
+
+add_celebrities:
+  # Add new celebrities here - they'll be auto-added to celebrities.yml
+  # - name: 'New Celebrity Name'
+  #   drama_score: 100
+  #   status: 'active'
+  #   tags: ['tag1', 'tag2']
+  #   category: 'celebrity'
+  #   discovery_source: 'manual'
+
+add_brands:
+  # Add fashion/lifestyle brands here
+  # - name: 'Brand Name'
+  #   drama_score: 50
+  #   status: 'active'
+  #   tags: ['fashion', 'brand']
+  #   category: 'brand'
+  #   discovery_source: 'manual'
+
+update_existing:
+  # Update existing celebrity info
+  # celebrity_name:
+  #   drama_score: 500
+  #   add_tags: ['new_tag1', 'new_tag2']
+  #   remove_tags: ['old_tag']
+  #   status: 'active'
+
+promote_to_active:
+  # Promote discovered celebrities to active status
+  # - 'discovered_celebrity_name'
+
+set_memorial:
+  # Move celebrities to memorial status
+  # celebrity_name:
+  #   death_date: '2024-01-01'
+  #   memorial_note: 'Remembered for their contributions'
