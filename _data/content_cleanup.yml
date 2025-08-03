@@ -1,26 +1,170 @@
-# Content Cleanup - Auto-processed hourly, then reset
-# Add cleanup tasks below, they'll run and this file will reset
+# Content Cleanup Management
+# Manage article removal, archiving, and temperature adjustments
 
-remove_posts:
-  # Add post filenames to remove (without .md extension)
-  # - '2024-01-01-post-filename-without-extension'
-  # - '2024-01-02-another-post-to-remove'
+# ARTICLE REMOVAL REQUESTS
+removal_requests:
+  # Format: filename (without .md extension)
+  # articles_to_remove:
+  #   - "2025-01-15-bad-article-title"
+  #   - "2025-02-20-another-bad-post"
 
-bulk_remove_tags:
-  # Remove unwanted tags from posts
-  # unwanted_tag:
-  #   older_than_days: 30
-  # tech_tag:
-  #   from_celebrity: 'celebrity_name'
-  #   older_than_days: 7
+  # Reasons for removal
+  removal_reasons:
+    # "2025-01-15-bad-article-title": "Duplicate content"
+    # "2025-02-20-another-bad-post": "Factually incorrect"
 
-fix_drama_scores:
-  # Fix posts with incorrect drama scores
-  # post_filename:
-  #   new_drama_score: 150
-  # another_post:
-  #   new_drama_score: 0  # This will hide it from homepage
+# DRAMA SCORE ADJUSTMENTS
+drama_score_adjustments:
+  # Adjust drama scores for specific articles
+  # Format: filename: new_score
+  # "2025-03-01-some-article": 85
+  # "2025-03-15-another-article": 45
 
-bulk_update_primary_celebrity:
-  # Fix primary celebrity assignments
-  # 'old_celebrity_name': 'new_celebrity_name'
+# CELEBRITY REASSIGNMENTS
+celebrity_reassignments:
+  # Change primary celebrity for articles
+  # Format: filename: new_primary_celebrity
+  # "2025-03-01-some-article": "taylor_swift"
+  # "2025-03-15-another-article": "kim_kardashian"
+
+# TAG CLEANUP REQUESTS
+tag_cleanup_requests:
+  # Remove specific tags from articles
+  remove_tags:
+    # "2025-03-01-some-article": ["bad_tag", "unwanted_tag"]
+    # "2025-03-15-another-article": ["duplicate_tag"]
+
+  # Add tags to articles
+  add_tags:
+    # "2025-03-01-some-article": ["new_tag", "better_tag"]
+    # "2025-03-15-another-article": ["missing_tag"]
+
+# BULK OPERATIONS
+bulk_operations:
+  # Operations affecting multiple articles
+
+  # Bulk drama score adjustments
+  bulk_drama_adjustments:
+    # - pattern: "2025-01-*"  # Filename pattern
+    #   adjustment: -10       # Reduce all January scores by 10
+    #   reason: "January recalibration"
+
+    # - celebrity: "pete_davidson"  # All articles about this celebrity
+    #   adjustment: -20
+    #   reason: "Celebrity cooling down"
+
+  # Bulk tag operations
+  bulk_tag_operations:
+    # - pattern: "2025-02-*"
+    #   remove_tags: ["old_tag"]
+    #   add_tags: ["new_tag"]
+    #   reason: "February tag cleanup"
+
+  # Bulk celebrity reassignments
+  bulk_celebrity_changes:
+    # - from_celebrity: "old_name"
+    #   to_celebrity: "new_name"
+    #   reason: "Celebrity name change"
+
+# ARCHIVE REQUESTS
+archive_requests:
+  # Move articles to archive (keep but mark as archived)
+  articles_to_archive:
+    # - "2024-01-01-old-article"
+    # - "2024-02-15-outdated-post"
+
+  archive_reasons:
+    # "2024-01-01-old-article": "Outdated information"
+    # "2024-02-15-outdated-post": "No longer relevant"
+
+# TEMPERATURE RECALCULATION REQUESTS
+temperature_recalculation:
+  # Force recalculation for specific articles or celebrities
+  force_recalculate:
+    articles: []
+    # - "2025-03-01-some-article"
+
+    celebrities: []
+    # - "taylor_swift"
+    # - "kim_kardashian"
+
+  # Exclude from temperature calculations
+  exclude_from_temperature:
+    articles: []
+    # - "2025-03-01-promotional-post"  # Don't count promotional content
+
+    celebrities: []
+    # - "memorial_celebrity"  # Don't include memorial celebrities
+
+# CONTENT QUALITY IMPROVEMENTS
+quality_improvements:
+  # Articles needing excerpt updates
+  excerpt_updates:
+    # "2025-03-01-some-article": "New, better excerpt text here"
+
+  # Articles needing title updates
+  title_updates:
+    # "2025-03-01-some-article": "Better, More Clickable Title"
+
+  # Articles needing category updates
+  category_updates:
+    # "2025-03-01-some-article": "new_category"
+
+# PROCESSING AUTOMATION
+automation_settings:
+  # Auto-remove articles older than X days with low drama scores
+  auto_remove_old_low_drama:
+    enabled: true
+    days_threshold: 365  # 1 year
+    drama_threshold: 10  # Below 10° temperature
+
+  # Auto-archive articles older than X days
+  auto_archive_old:
+    enabled: true
+    days_threshold: 180  # 6 months
+
+  # Auto-adjust drama scores based on age
+  auto_age_adjustment:
+    enabled: true
+    daily_decay: 0.1  # Reduce by 0.1° per day
+    minimum_score: 5   # Don't go below 5°
+
+# PROCESSING LOG
+processing_log:
+  last_processed: null
+  processed_removals: []
+  processed_adjustments: []
+  processed_archives: []
+  processing_errors: []
+
+  # Statistics
+  stats:
+    total_articles_processed: 0
+    total_removals: 0
+    total_adjustments: 0
+    total_archives: 0
+    last_cleanup_date: null
+
+# EMERGENCY OPERATIONS
+emergency_operations:
+  # Emergency removal (immediate processing)
+  emergency_removals: []
+  # - "2025-03-01-urgent-removal"
+
+  # Emergency drama score resets
+  emergency_resets: []
+  # - celebrity: "celebrity_name"
+  #   new_score: 0
+  #   reason: "Emergency cooling"
+
+# CONTENT GUIDELINES
+# Use this file to:
+# 1. Remove problematic articles
+# 2. Adjust drama scores for accuracy
+# 3. Clean up tags and categories
+# 4. Archive outdated content
+# 5. Improve content quality
+# 6. Manage bulk operations efficiently
+# 
+# All changes are processed automatically every hour
+# Check processing_log for results and errors
