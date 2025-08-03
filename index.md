@@ -1,281 +1,220 @@
 ---
 layout: default
-title: "The Gossip Room - Real-Time Celebrity Drama"
-description: "Track celebrity drama scores, rising stars, and explosive entertainment news in real-time."
+title: "The Gossip Room - Celebrity Drama Temperature Check"
+description: "Real-time celebrity drama tracking with dynamic temperature scores. Who's hot, who's not, and who's absolutely explosive right now!"
 ---
 
-# 🎭 The Gossip Room
+<div class="homepage-hero">
+  <h1>🔥 The Gossip Room</h1>
+  <p class="hero-subtitle">Real-time celebrity drama temperature tracking</p>
+  <div class="temperature-legend">
+    <span class="temp-explosive">🔥 85-100° EXPLOSIVE</span>
+    <span class="temp-hot">🌶️ 70-84° HOT</span>
+    <span class="temp-rising">📈 50-69° RISING</span>
+    <span class="temp-mild">😐 30-49° MILD</span>
+    <span class="temp-cooling">❄️ 10-29° COOLING</span>
+    <span class="temp-freezing">🧊 0-9° FREEZING</span>
+  </div>
+</div>
 
-## 📊 Drama Index - Live Celebrity Tracking
+<!-- TEMPERATURE DASHBOARD -->
+{% assign temperature_report = site.data.temperature_report %}
+{% if temperature_report %}
+<section class="temperature-dashboard">
+  <h2>🌡️ Current Drama Temperature</h2>
+  <div class="temp-stats">
+    <div class="temp-stat explosive">
+      <span class="number">{{ temperature_report.temperature_distribution.explosive | default: 0 }}</span>
+      <span class="label">Explosive</span>
+    </div>
+    <div class="temp-stat hot">
+      <span class="number">{{ temperature_report.temperature_distribution.hot | default: 0 }}</span>
+      <span class="label">Hot</span>
+    </div>
+    <div class="temp-stat rising">
+      <span class="number">{{ temperature_report.temperature_distribution.rising | default: 0 }}</span>
+      <span class="label">Rising</span>
+    </div>
+    <div class="temp-stat mild">
+      <span class="number">{{ temperature_report.temperature_distribution.mild | default: 0 }}</span>
+      <span class="label">Mild</span>
+    </div>
+  </div>
+</section>
+{% endif %}
 
-<div class="drama-stats">
-  {% assign total_recent_drama = 0 %}
-  {% assign active_celebrities = 0 %}
-  {% assign current_time = site.time | date: '%s' | plus: 0 %}
-  {% assign week_ago = current_time | minus: 604800 %}
+<!-- HOTTEST CELEBRITIES RIGHT NOW -->
+<section class="hottest-now">
+  <h2>🔥 Hottest Drama Right Now</h2>
+  <div class="celebrity-temperature-grid">
+    {% assign sorted_celebrities = site.data.celebrities | sort: 'drama_score' | reverse %}
+    {% assign shown_hot = 0 %}
+    {% for celebrity_data in sorted_celebrities %}
+      {% assign celebrity_name = celebrity_data[0] %}
+      {% assign celebrity_info = celebrity_data[1] %}
+      {% if celebrity_info.drama_score >= 50 and shown_hot < 12 %}
+        {% assign shown_hot = shown_hot | plus: 1 %}
+        {% assign temp_class = 'mild' %}
+        {% if celebrity_info.drama_score >= 85 %}
+          {% assign temp_class = 'explosive' %}
+        {% elsif celebrity_info.drama_score >= 70 %}
+          {% assign temp_class = 'hot' %}
+        {% elsif celebrity_info.drama_score >= 50 %}
+          {% assign temp_class = 'rising' %}
+        {% endif %}
 
-  {% for celebrity_data in site.data.celebrities %}
-    {% assign celebrity_info = celebrity_data[1] %}
-    {% if celebrity_info.status != 'memorial' %}
-      {% assign active_celebrities = active_celebrities | plus: 1 %}
-      {% assign base_score = celebrity_info.drama_score | default: 0 %}
+        <div class="celebrity-temp-card temp-{{ temp_class }}">
+          <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
+            <h3>{{ celebrity_name | replace: '_', ' ' | title }}</h3>
+            <div class="temperature">{{ celebrity_info.drama_score | default: 0 }}°</div>
+            <div class="status">{{ celebrity_info.status | default: 'unknown' | upcase }}</div>
+            {% if celebrity_info.temperature_change %}
+              {% assign change = celebrity_info.temperature_change %}
+              <div class="change {% if change > 0 %}rising{% else %}falling{% endif %}">
+                {% if change > 0 %}↗️ +{{ change }}°{% else %}↘️ {{ change }}°{% endif %}
+              </div>
+            {% endif %}
+            <div class="category">{{ celebrity_info.category | default: 'celebrity' | upcase }}</div>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-      {% assign last_activity = celebrity_info.last_updated | default: '2024-01-01' | date: '%s' | plus: 0 %}
-      {% if last_activity > week_ago %}
-        {% assign time_multiplier = 2 %}
-      {% else %}
-        {% assign time_multiplier = 1 %}
+<!-- RECENT EXPLOSIVE DRAMA -->
+<section class="recent-posts">
+  <h2>🚨 Latest Explosive Drama</h2>
+  <div class="posts-grid">
+    {% assign explosive_posts = site.posts | where_exp: "post", "post.drama_score >= 70" | sort: 'date' | reverse %}
+    {% for post in explosive_posts limit: 8 %}
+      {% assign temp_class = 'mild' %}
+      {% if post.drama_score >= 85 %}
+        {% assign temp_class = 'explosive' %}
+      {% elsif post.drama_score >= 70 %}
+        {% assign temp_class = 'hot' %}
       {% endif %}
 
-      {% assign weighted_score = base_score | times: time_multiplier %}
-      {% assign total_recent_drama = total_recent_drama | plus: weighted_score %}
-    {% endif %}
-  {% endfor %}
-
-  {% assign drama_temperature = total_recent_drama | divided_by: active_celebrities | default: 0 %}
-
-  <h3>🔥 Current Drama Temperature: 
-    <span class="drama-score drama-temp-{{ drama_temperature | divided_by: 100 | plus: 1 }}">
-      {{ drama_temperature | round }}°
-    </span>
-  </h3>
-  <p><em>Updated hourly from {{ active_celebrities }} active celebrities</em></p>
-</div>
-
-## 🏷️ Trending Drama Tags
-
-<div class="tag-cloud-compact">
-{% assign sorted_tags = site.tags | sort %}
-{% for tag in sorted_tags limit: 25 %}
-  {% if tag[1].size > 1 %}
-    <span class="tag-bubble">
-      <a href="/tag/{{ tag[0] | slugify }}/" class="tag-display clickable-tag">
-        #{{ tag[0] | replace: '_', ' ' | replace: '-', ' ' }} 
-        <small>({{ tag[1].size }})</small>
-      </a>
-    </span>
-  {% endif %}
-{% endfor %}
-</div>
-
-## 🚨 Celebrity Categories
-
-<div id="celebrity-categories">
-
-### 💥 Explosive Drama (1500+ Score)
-<div id="explosive">
-{% assign explosive_count = 0 %}
-{% for celebrity_data in site.data.celebrities %}
-  {% assign celebrity_name = celebrity_data[0] %}
-  {% assign celebrity_info = celebrity_data[1] %}
-  {% if celebrity_info.drama_score >= 1500 %}
-    {% assign explosive_count = explosive_count | plus: 1 %}
-    <div class="celebrity-card clickable-celebrity" data-celebrity="{{ celebrity_name | slugify }}">
-      <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
-        <strong>{{ celebrity_name | replace: '_', ' ' | upcase }}</strong> 
-        <span class="drama-score">{{ celebrity_info.drama_score }}</span>
-        <div class="tags">
-          {% for tag in celebrity_info.tags limit: 3 %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      </a>
-    </div>
-  {% endif %}
-  {% if explosive_count >= 10 %}{% break %}{% endif %}
-{% endfor %}
-
-{% if explosive_count == 0 %}
-  <p><em>No explosive drama right now... suspiciously quiet! 🤔</em></p>
-{% endif %}
-</div>
-
-### 🔥 Hot This Week (800-1499 Score)
-<div id="hot-this-week">
-{% assign hot_count = 0 %}
-{% for celebrity_data in site.data.celebrities %}
-  {% assign celebrity_name = celebrity_data[0] %}
-  {% assign celebrity_info = celebrity_data[1] %}
-  {% if celebrity_info.drama_score >= 800 and celebrity_info.drama_score < 1500 %}
-    {% assign hot_count = hot_count | plus: 1 %}
-    <div class="celebrity-card clickable-celebrity" data-celebrity="{{ celebrity_name | slugify }}">
-      <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
-        <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
-        <span class="drama-score">{{ celebrity_info.drama_score }}</span>
-        <div class="tags">
-          {% for tag in celebrity_info.tags limit: 3 %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      </a>
-    </div>
-  {% endif %}
-  {% if hot_count >= 15 %}{% break %}{% endif %}
-{% endfor %}
-
-{% if hot_count == 0 %}
-  <p><em>Building up the heat... 🌡️</em></p>
-{% endif %}
-</div>
-
-### ⭐ Rising Stars (300-799 Score)
-<div id="rising-stars">
-{% assign rising_count = 0 %}
-{% for celebrity_data in site.data.celebrities %}
-  {% assign celebrity_name = celebrity_data[0] %}
-  {% assign celebrity_info = celebrity_data[1] %}
-  {% if celebrity_info.drama_score >= 300 and celebrity_info.drama_score < 800 %}
-    {% assign rising_count = rising_count | plus: 1 %}
-    <div class="celebrity-card clickable-celebrity" data-celebrity="{{ celebrity_name | slugify }}">
-      <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
-        <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
-        <span class="drama-score">{{ celebrity_info.drama_score }}</span>
-        <div class="tags">
-          {% for tag in celebrity_info.tags limit: 2 %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      </a>
-    </div>
-  {% endif %}
-  {% if rising_count >= 20 %}{% break %}{% endif %}
-{% endfor %}
-
-{% if rising_count == 0 %}
-  <p><em>Everyone's heating up! 🌡️</em></p>
-{% endif %}
-</div>
-
-### 🧊 Cooling Down (Under 300 Score)
-<div id="cooling-down">
-{% assign cooling_count = 0 %}
-{% for celebrity_data in site.data.celebrities %}
-  {% assign celebrity_name = celebrity_data[0] %}
-  {% assign celebrity_info = celebrity_data[1] %}
-  {% if celebrity_info.drama_score < 300 and celebrity_info.status != 'memorial' %}
-    {% assign cooling_count = cooling_count | plus: 1 %}
-    <div class="celebrity-card clickable-celebrity" data-celebrity="{{ celebrity_name | slugify }}">
-      <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
-        <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
-        <span class="drama-score">{{ celebrity_info.drama_score }}</span>
-      </a>
-    </div>
-  {% endif %}
-  {% if cooling_count >= 10 %}{% break %}{% endif %}
-{% endfor %}
-
-{% if cooling_count == 0 %}
-  <p><em>Everyone's heating up! 🔥</em></p>
-{% endif %}
-</div>
-
-### 🕊️ Memorial
-<div id="memorial">
-{% assign memorial_count = 0 %}
-{% for celebrity_data in site.data.celebrities %}
-  {% assign celebrity_name = celebrity_data[0] %}
-  {% assign celebrity_info = celebrity_data[1] %}
-  {% if celebrity_info.status == 'memorial' %}
-    {% assign memorial_count = memorial_count | plus: 1 %}
-    <div class="celebrity-card memorial clickable-celebrity" data-celebrity="{{ celebrity_name | slugify }}">
-      <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
-        <strong>{{ celebrity_name | replace: '_', ' ' | title }}</strong> 
-        <span class="memorial-note">{{ celebrity_info.memorial_note | default: "Remembered" }}</span>
-        {% if celebrity_info.death_date %}
-          <small class="death-date">({{ celebrity_info.death_date }})</small>
-        {% endif %}
-      </a>
-    </div>
-  {% endif %}
-{% endfor %}
-
-{% if memorial_count == 0 %}
-  <p><em>No memorials currently tracked</em></p>
-{% endif %}
-</div>
-
-</div>
-
-## 📰 Latest Gossip
-
-<div class="recent-posts">
-{% assign sorted_posts = site.posts | sort: 'drama_score' | reverse %}
-{% assign displayed_posts = 0 %}
-{% for post in sorted_posts %}
-  {% assign drama_score = post.drama_score | default: 0 %}
-  {% if drama_score >= 100 %}
-    {% assign displayed_posts = displayed_posts | plus: 1 %}
-    <div class="post-preview drama-level-{{ drama_score | divided_by: 200 | plus: 1 }}">
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p class="post-meta">
-        <span class="date">{{ post.date | date: "%B %d, %Y" }}</span> | 
-        <span class="drama-level status-{{ drama_score | divided_by: 5 | plus: 1 }}">
-          🔥 Drama Score: {{ drama_score }}
-        </span>
-        {% if post.primary_celebrity %}
-          | <a href="/tag/{{ post.primary_celebrity | slugify }}/" class="primary-celeb clickable-tag">
+      <article class="post-card temp-{{ temp_class }}">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <div class="post-meta">
+          <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="temperature">🌡️ {{ post.drama_score | default: 0 }}°</span>
+          {% if post.primary_celebrity %}
+            <a href="/tag/{{ post.primary_celebrity | slugify }}/" class="primary-celeb">
               {{ post.primary_celebrity | replace: '_', ' ' | title }}
             </a>
-        {% endif %}
-      </p>
-      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      <div class="post-tags">
-        {% for tag in post.tags limit: 5 %}
-          <a href="/tag/{{ tag | slugify }}/" class="tag clickable-tag">{{ tag }}</a>
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
-  {% if displayed_posts >= 10 %}{% break %}{% endif %}
-{% endfor %}
-
-{% if displayed_posts == 0 %}
-  <div class="no-posts">
-    <h3>🚀 Getting Ready for Drama!</h3>
-    <p>RSS feeds are being processed... First gossip posts coming soon!</p>
-    <p><em>Check back in an hour for the latest celebrity drama! 🎭</em></p>
+          {% endif %}
+        </div>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <div class="post-tags">
+          {% for tag in post.tags limit: 4 %}
+            <a href="/tag/{{ tag | slugify }}/" class="tag">{{ tag | replace: '_', ' ' | title }}</a>
+          {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
   </div>
-{% endif %}
-</div>
+</section>
 
-## 🔍 Drama Statistics
+<!-- TRENDING CATEGORIES -->
+<section class="trending-categories">
+  <h2>📊 Drama by Category</h2>
+  <div class="category-grid">
+    {% assign categories = site.data.celebrities | group_by: 'category' %}
+    {% for category_group in categories %}
+      {% assign category = category_group.name %}
+      {% assign celebrities = category_group.items %}
+      {% assign avg_temp = 0 %}
+      {% assign active_count = 0 %}
 
-<div class="drama-stats">
-  <div class="stat-grid">
-    <div class="stat-item">
-      <h4>Total Celebrities Tracked</h4>
-      <span class="big-number">{{ site.data.celebrities | size }}</span>
-    </div>
-    <div class="stat-item">
-      <h4>Total Posts</h4>
-      <span class="big-number">{{ site.posts | size }}</span>
-    </div>
-    <div class="stat-item">
-      <h4>Explosive Drama</h4>
-      {% assign explosive_stat = 0 %}
-      {% for celebrity_data in site.data.celebrities %}
-        {% if celebrity_data[1].drama_score >= 1500 %}
-          {% assign explosive_stat = explosive_stat | plus: 1 %}
+      {% for celeb in celebrities %}
+        {% if celeb.drama_score > 0 %}
+          {% assign avg_temp = avg_temp | plus: celeb.drama_score %}
+          {% assign active_count = active_count | plus: 1 %}
         {% endif %}
       {% endfor %}
-      <span class="big-number">{{ explosive_stat }}</span>
-    </div>
-    <div class="stat-item">
-      <h4>Rising Stars</h4>
-      {% assign rising_stat = 0 %}
-      {% for celebrity_data in site.data.celebrities %}
-        {% if celebrity_data[1].drama_score >= 300 and celebrity_data[1].drama_score < 800 %}
-          {% assign rising_stat = rising_stat | plus: 1 %}
+
+      {% if active_count > 0 %}
+        {% assign avg_temp = avg_temp | divided_by: active_count %}
+        {% assign temp_class = 'mild' %}
+        {% if avg_temp >= 70 %}
+          {% assign temp_class = 'hot' %}
+        {% elsif avg_temp >= 50 %}
+          {% assign temp_class = 'rising' %}
+        {% elsif avg_temp < 30 %}
+          {% assign temp_class = 'cooling' %}
         {% endif %}
-      {% endfor %}
-      <span class="big-number">{{ rising_stat }}</span>
+
+        <div class="category-card temp-{{ temp_class }}">
+          <h3>{{ category | default: 'Other' | title }}</h3>
+          <div class="category-temp">{{ avg_temp }}°</div>
+          <div class="category-count">{{ active_count }} active</div>
+          <div class="category-total">{{ celebrities.size }} total</div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ALL RECENT POSTS -->
+<section class="all-posts">
+  <h2>📰 All Recent Drama</h2>
+  <div class="posts-list">
+    {% for post in site.posts limit: 20 %}
+      {% assign temp_class = 'freezing' %}
+      {% if post.drama_score >= 85 %}
+        {% assign temp_class = 'explosive' %}
+      {% elsif post.drama_score >= 70 %}
+        {% assign temp_class = 'hot' %}
+      {% elsif post.drama_score >= 50 %}
+        {% assign temp_class = 'rising' %}
+      {% elsif post.drama_score >= 30 %}
+        {% assign temp_class = 'mild' %}
+      {% elsif post.drama_score >= 10 %}
+        {% assign temp_class = 'cooling' %}
+      {% endif %}
+
+      <article class="post-item temp-{{ temp_class }}">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <div class="post-meta">
+          <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+          <span class="temperature">{{ post.drama_score | default: 0 }}°</span>
+          {% if post.primary_celebrity %}
+            <a href="/tag/{{ post.primary_celebrity | slugify }}/" class="primary-celeb">
+              {{ post.primary_celebrity | replace: '_', ' ' | title }}
+            </a>
+          {% endif %}
+        </div>
+        <div class="post-tags">
+          {% for tag in post.tags limit: 6 %}
+            <a href="/tag/{{ tag | slugify }}/" class="tag">{{ tag | replace: '_', ' ' | title }}</a>
+          {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div class="view-more">
+    <a href="/archive/" class="btn-view-more">🔥 View All Drama Archive</a>
+  </div>
+</section>
+
+<!-- TEMPERATURE EXPLANATION -->
+<section class="temperature-explanation">
+  <h2>🌡️ How Drama Temperature Works</h2>
+  <div class="explanation-grid">
+    <div class="explanation-item">
+      <h3>🔥 Dynamic Scoring</h3>
+      <p>Drama temperatures are calculated weekly based on recent activity, mentions, and trending velocity. Scores are always relative to current drama levels.</p>
+    </div>
+    <div class="explanation-item">
+      <h3>📈 Real-Time Updates</h3>
+      <p>Temperatures update automatically as new drama unfolds. Rising stars heat up quickly, while inactive celebrities cool down naturally.</p>
+    </div>
+    <div class="explanation-item">
+      <h3>🎯 Always Relevant</h3>
+      <p>Unlike static scores, our temperature system ensures the hottest drama is always at 100°, making comparisons meaningful over time.</p>
     </div>
   </div>
-</div>
-
----
-
-<div class="update-info">
-  <p><em>🤖 Automatically updated every hour from 25+ celebrity news sources</em></p>
-  <p><em>⚡ Real-time drama scoring • 🎯 Auto-discovery of new celebrities • 📊 Historical trend tracking</em></p>
-</div>
+</section>
