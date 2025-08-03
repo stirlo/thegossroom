@@ -48,56 +48,48 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
   <h2>🔥 Hottest Drama Right Now</h2>
   <div class="celebrity-temperature-grid">
     {% if site.data.celebrities %}
-      {% comment %} Convert hash to array and sort by drama_score {% endcomment %}
-      {% assign celebrity_array = '' | split: '' %}
-      {% for celebrity_pair in site.data.celebrities %}
-        {% assign celebrity_name = celebrity_pair[0] %}
-        {% assign celebrity_info = celebrity_pair[1] %}
-        {% assign drama_score = celebrity_info.drama_score | default: 0 %}
-        {% if drama_score >= 50 %}
-          {% assign celebrity_with_score = celebrity_name | append: '|' | append: drama_score %}
-          {% assign celebrity_array = celebrity_array | push: celebrity_with_score %}
-        {% endif %}
-      {% endfor %}
-
-      {% comment %} Sort and display top celebrities {% endcomment %}
-      {% assign sorted_array = celebrity_array | sort | reverse %}
       {% assign shown_hot = 0 %}
-
-      {% for celebrity_entry in sorted_array %}
+      {% for celebrity_pair in site.data.celebrities %}
         {% if shown_hot < 12 %}
-          {% assign parts = celebrity_entry | split: '|' %}
-          {% assign celebrity_name = parts[0] %}
-          {% assign celebrity_info = site.data.celebrities[celebrity_name] %}
+          {% assign celebrity_name = celebrity_pair[0] %}
+          {% assign celebrity_info = celebrity_pair[1] %}
           {% assign drama_score = celebrity_info.drama_score | default: 0 %}
 
-          {% assign temp_class = 'mild' %}
-          {% if drama_score >= 85 %}
-            {% assign temp_class = 'explosive' %}
-          {% elsif drama_score >= 70 %}
-            {% assign temp_class = 'hot' %}
-          {% elsif drama_score >= 50 %}
-            {% assign temp_class = 'rising' %}
+          {% if drama_score >= 50 %}
+            {% assign temp_class = 'mild' %}
+            {% if drama_score >= 85 %}
+              {% assign temp_class = 'explosive' %}
+            {% elsif drama_score >= 70 %}
+              {% assign temp_class = 'hot' %}
+            {% elsif drama_score >= 50 %}
+              {% assign temp_class = 'rising' %}
+            {% endif %}
+
+            <div class="celebrity-temp-card temp-{{ temp_class }}">
+              <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
+                <h3>{{ celebrity_info.display_name | default: celebrity_name | replace: '_', ' ' | title }}</h3>
+                <div class="temperature">{{ drama_score }}°</div>
+                <div class="status">{{ celebrity_info.status | default: 'unknown' | upcase }}</div>
+                {% if celebrity_info.temperature_change %}
+                  {% assign change = celebrity_info.temperature_change %}
+                  <div class="change {% if change > 0 %}rising{% else %}falling{% endif %}">
+                    {% if change > 0 %}↗️ +{{ change }}°{% else %}↘️ {{ change }}°{% endif %}
+                  </div>
+                {% endif %}
+                <div class="category">{{ celebrity_info.category | default: 'celebrity' | upcase }}</div>
+              </a>
+            </div>
+
+            {% assign shown_hot = shown_hot | plus: 1 %}
           {% endif %}
-
-          <div class="celebrity-temp-card temp-{{ temp_class }}">
-            <a href="/tag/{{ celebrity_name | slugify }}/" class="celebrity-link">
-              <h3>{{ celebrity_info.display_name | default: celebrity_name | replace: '_', ' ' | title }}</h3>
-              <div class="temperature">{{ drama_score }}°</div>
-              <div class="status">{{ celebrity_info.status | default: 'unknown' | upcase }}</div>
-              {% if celebrity_info.temperature_change %}
-                {% assign change = celebrity_info.temperature_change %}
-                <div class="change {% if change > 0 %}rising{% else %}falling{% endif %}">
-                  {% if change > 0 %}↗️ +{{ change }}°{% else %}↘️ {{ change }}°{% endif %}
-                </div>
-              {% endif %}
-              <div class="category">{{ celebrity_info.category | default: 'celebrity' | upcase }}</div>
-            </a>
-          </div>
-
-          {% assign shown_hot = shown_hot | plus: 1 %}
         {% endif %}
       {% endfor %}
+
+      {% if shown_hot == 0 %}
+        <div class="no-hot-celebs">
+          <p>🔍 No hot celebrities right now. Check back soon for drama temperatures!</p>
+        </div>
+      {% endif %}
     {% else %}
       <div class="no-celebrities">
         <p>🔍 No celebrity data available yet. Check back soon for drama temperatures!</p>
@@ -150,46 +142,78 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
   </div>
 </section>
 
-<!-- TRENDING CATEGORIES -->
+<!-- SIMPLIFIED CATEGORIES - NO GROUP_BY -->
 <section class="trending-categories">
   <h2>📊 Drama by Category</h2>
   <div class="category-grid">
     {% if site.data.celebrities %}
-      {% assign categories = site.data.celebrities | group_by: 'category' %}
-      {% for category_group in categories %}
-        {% assign category = category_group.name %}
-        {% assign celebrities = category_group.items %}
-        {% assign avg_temp = 0 %}
-        {% assign active_count = 0 %}
-        {% assign total_temp = 0 %}
+      {% comment %} Manual category counting {% endcomment %}
+      {% assign reality_tv_count = 0 %}
+      {% assign reality_tv_temp = 0 %}
+      {% assign music_count = 0 %}
+      {% assign music_temp = 0 %}
+      {% assign acting_count = 0 %}
+      {% assign acting_temp = 0 %}
+      {% assign influencer_count = 0 %}
+      {% assign influencer_temp = 0 %}
 
-        {% for celeb in celebrities %}
-          {% assign celeb_score = celeb.drama_score | default: 0 %}
-          {% if celeb_score > 0 %}
-            {% assign total_temp = total_temp | plus: celeb_score %}
-            {% assign active_count = active_count | plus: 1 %}
+      {% for celebrity_pair in site.data.celebrities %}
+        {% assign celebrity_info = celebrity_pair[1] %}
+        {% assign drama_score = celebrity_info.drama_score | default: 0 %}
+        {% assign category = celebrity_info.category | default: 'other' | downcase %}
+
+        {% if drama_score > 0 %}
+          {% if category contains 'reality' or category contains 'tv' %}
+            {% assign reality_tv_count = reality_tv_count | plus: 1 %}
+            {% assign reality_tv_temp = reality_tv_temp | plus: drama_score %}
+          {% elsif category contains 'music' or category contains 'singer' or category contains 'rapper' %}
+            {% assign music_count = music_count | plus: 1 %}
+            {% assign music_temp = music_temp | plus: drama_score %}
+          {% elsif category contains 'actor' or category contains 'actress' or category contains 'acting' %}
+            {% assign acting_count = acting_count | plus: 1 %}
+            {% assign acting_temp = acting_temp | plus: drama_score %}
+          {% elsif category contains 'influencer' or category contains 'social' %}
+            {% assign influencer_count = influencer_count | plus: 1 %}
+            {% assign influencer_temp = influencer_temp | plus: drama_score %}
           {% endif %}
-        {% endfor %}
-
-        {% if active_count > 0 %}
-          {% assign avg_temp = total_temp | divided_by: active_count %}
-          {% assign temp_class = 'mild' %}
-          {% if avg_temp >= 70 %}
-            {% assign temp_class = 'hot' %}
-          {% elsif avg_temp >= 50 %}
-            {% assign temp_class = 'rising' %}
-          {% elsif avg_temp < 30 %}
-            {% assign temp_class = 'cooling' %}
-          {% endif %}
-
-          <div class="category-card temp-{{ temp_class }}">
-            <h3>{{ category | default: 'Other' | title }}</h3>
-            <div class="category-temp">{{ avg_temp }}°</div>
-            <div class="category-count">{{ active_count }} active</div>
-            <div class="category-total">{{ celebrities.size }} total</div>
-          </div>
         {% endif %}
       {% endfor %}
+
+      {% if reality_tv_count > 0 %}
+        {% assign avg_reality = reality_tv_temp | divided_by: reality_tv_count %}
+        <div class="category-card temp-{% if avg_reality >= 70 %}hot{% elsif avg_reality >= 50 %}rising{% else %}mild{% endif %}">
+          <h3>Reality TV</h3>
+          <div class="category-temp">{{ avg_reality }}°</div>
+          <div class="category-count">{{ reality_tv_count }} active</div>
+        </div>
+      {% endif %}
+
+      {% if music_count > 0 %}
+        {% assign avg_music = music_temp | divided_by: music_count %}
+        <div class="category-card temp-{% if avg_music >= 70 %}hot{% elsif avg_music >= 50 %}rising{% else %}mild{% endif %}">
+          <h3>Music</h3>
+          <div class="category-temp">{{ avg_music }}°</div>
+          <div class="category-count">{{ music_count }} active</div>
+        </div>
+      {% endif %}
+
+      {% if acting_count > 0 %}
+        {% assign avg_acting = acting_temp | divided_by: acting_count %}
+        <div class="category-card temp-{% if avg_acting >= 70 %}hot{% elsif avg_acting >= 50 %}rising{% else %}mild{% endif %}">
+          <h3>Acting</h3>
+          <div class="category-temp">{{ avg_acting }}°</div>
+          <div class="category-count">{{ acting_count }} active</div>
+        </div>
+      {% endif %}
+
+      {% if influencer_count > 0 %}
+        {% assign avg_influencer = influencer_temp | divided_by: influencer_count %}
+        <div class="category-card temp-{% if avg_influencer >= 70 %}hot{% elsif avg_influencer >= 50 %}rising{% else %}mild{% endif %}">
+          <h3>Influencers</h3>
+          <div class="category-temp">{{ avg_influencer }}°</div>
+          <div class="category-count">{{ influencer_count }} active</div>
+        </div>
+      {% endif %}
     {% endif %}
   </div>
 </section>
