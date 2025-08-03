@@ -1,0 +1,26 @@
+# Content Cleanup - Auto-processed hourly, then reset
+# Add cleanup tasks below, they'll run and this file will reset
+
+remove_posts:
+  # Add post filenames to remove (without .md extension)
+  # - '2024-01-01-post-filename-without-extension'
+  # - '2024-01-02-another-post-to-remove'
+
+bulk_remove_tags:
+  # Remove unwanted tags from posts
+  # unwanted_tag:
+  #   older_than_days: 30
+  # tech_tag:
+  #   from_celebrity: 'celebrity_name'
+  #   older_than_days: 7
+
+fix_drama_scores:
+  # Fix posts with incorrect drama scores
+  # post_filename:
+  #   new_drama_score: 150
+  # another_post:
+  #   new_drama_score: 0  # This will hide it from homepage
+
+bulk_update_primary_celebrity:
+  # Fix primary celebrity assignments
+  # 'old_celebrity_name': 'new_celebrity_name'
