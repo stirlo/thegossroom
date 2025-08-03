@@ -1,38 +1,127 @@
-# Celebrity Updates - Auto-processed hourly, then reset
-# Add new celebrities, brands, or update existing ones below
+# Manual Celebrity Updates
+# Add new celebrities here - they'll be auto-processed into main database
 
-add_celebrities:
-  # Add new celebrities here - they'll be auto-added to celebrities.yml
-  # - name: 'New Celebrity Name'
-  #   drama_score: 100
-  #   status: 'active'
-  #   tags: ['tag1', 'tag2']
-  #   category: 'celebrity'
-  #   discovery_source: 'manual'
-
-add_brands:
-  # Add fashion/lifestyle brands here
-  # - name: 'Brand Name'
-  #   drama_score: 50
-  #   status: 'active'
-  #   tags: ['fashion', 'brand']
-  #   category: 'brand'
-  #   discovery_source: 'manual'
-
-update_existing:
-  # Update existing celebrity info
+# PENDING ADDITIONS
+pending_additions:
+  # Add new celebrities in this format:
   # celebrity_name:
-  #   drama_score: 500
-  #   add_tags: ['new_tag1', 'new_tag2']
-  #   remove_tags: ['old_tag']
-  #   status: 'active'
+  #   category: "actor/musician/influencer/comedian/fashion_brand"
+  #   initial_drama_score: 50  # Starting temperature
+  #   reason: "Brief reason for addition"
+  #   added_by: "manual"
+  #   date_added: "2025-08-03"
 
-promote_to_active:
-  # Promote discovered celebrities to active status
-  # - 'discovered_celebrity_name'
+  # Example entries (remove these and add real ones):
+  # ice_spice:
+  #   category: "musician"
+  #   initial_drama_score: 65
+  #   reason: "Rising rap star with frequent drama"
+  #   added_by: "manual"
+  #   date_added: "2025-08-03"
 
-set_memorial:
-  # Move celebrities to memorial status
+# TEMPERATURE OVERRIDES
+# Force specific temperatures for celebrities (use sparingly)
+temperature_overrides:
+  # celebrity_name: temperature_value
+  # Example:
+  # kanye_west: 100  # Force maximum drama temperature
+
+# STATUS OVERRIDES
+# Force specific statuses (explosive, hot, rising, mild, cooling, freezing)
+status_overrides:
+  # celebrity_name: "status"
+  # Example:
+  # taylor_swift: "explosive"
+
+# CATEGORY UPDATES
+# Change celebrity categories
+category_updates:
+  # celebrity_name: "new_category"
+  # Example:
+  # kim_kardashian: "entrepreneur"
+
+# MEMORIAL REQUESTS
+# Request celebrities be moved to memorial status
+memorial_requests:
   # celebrity_name:
-  #   death_date: '2024-01-01'
-  #   memorial_note: 'Remembered for their contributions'
+  #   reason: "Reason for memorialization"
+  #   requested_by: "manual"
+  #   date_requested: "2025-08-03"
+
+# REMOVAL REQUESTS
+# Request celebrities be completely removed
+removal_requests:
+  # celebrity_name:
+  #   reason: "Reason for removal"
+  #   requested_by: "manual"
+  #   date_requested: "2025-08-03"
+
+# BULK OPERATIONS
+bulk_operations:
+  # Operations to perform on multiple celebrities
+
+  # Bulk category changes
+  category_changes:
+    # - celebrities: ["celeb1", "celeb2"]
+    #   new_category: "new_category"
+    #   reason: "Reason for change"
+
+  # Bulk temperature adjustments
+  temperature_adjustments:
+    # - celebrities: ["celeb1", "celeb2"]
+    #   adjustment: +10  # or -10
+    #   reason: "Reason for adjustment"
+
+  # Bulk status changes
+  status_changes:
+    # - celebrities: ["celeb1", "celeb2"]
+    #   new_status: "hot"
+    #   reason: "Reason for change"
+
+# PROCESSING LOG
+# Auto-updated when changes are processed
+processing_log:
+  last_processed: null
+  processed_additions: []
+  processed_overrides: []
+  processed_updates: []
+  processing_errors: []
+
+# QUICK ADD TEMPLATES
+# Common celebrity types for easy addition
+templates:
+  musician:
+    category: "musician"
+    initial_drama_score: 50
+
+  actor:
+    category: "actor"
+    initial_drama_score: 45
+
+  influencer:
+    category: "influencer"
+    initial_drama_score: 55
+
+  comedian:
+    category: "comedian"
+    initial_drama_score: 30
+
+  reality_tv:
+    category: "reality_tv"
+    initial_drama_score: 60
+
+  fashion_brand:
+    category: "fashion_brand"
+    initial_drama_score: 35
+
+  entrepreneur:
+    category: "entrepreneur"
+    initial_drama_score: 40
+
+# USAGE INSTRUCTIONS
+# 1. Add new celebrities to 'pending_additions'
+# 2. Use templates for common types
+# 3. Set temperature_overrides for special cases
+# 4. Request memorials/removals as needed
+# 5. Changes are processed automatically every hour
+# 6. Check processing_log for results
