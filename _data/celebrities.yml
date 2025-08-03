@@ -1,70 +1,30 @@
-_temperature_metadata:
-  average_temperature: 41.2
-  biggest_temperature_changes:
-    falling:
-    - - balenciaga
-      - -35.8
-    - - pete_davidson
-      - -25.8
-    - - jeffree_star
-      - -25.7
-    - - yeezy
-      - -22.5
-    - - josh_richards
-      - -22.1
-    rising:
-    - - sabrina_carpenter
-      - 42.1
-    - - jenna_ortega
-      - 38.2
-    - - taylor_frankie_paul
-      - 35.7
-    - - pedro_pascal
-      - 32.5
-    - - olivia_rodrigo
-      - 28.5
-  calculation_method: relative_percentile
-  hottest_celebrities:
-  - - taylor_swift
-    - 95
-  - - taylor_frankie_paul
-    - 92
-  - - elon_musk
-    - 89
-  - - kanye_west
-    - 88
-  - - jenna_ortega
-    - 87
-  last_calculation: '2025-08-03 12:00:00'
-  lookback_days: 30
-  median_temperature: 38.5
-  temperature_distribution:
-    cooling: 76
-    explosive: 8
-    freezing: 12
-    hot: 18
-    memorial: 33
-    mild: 98
-    rising: 42
-  total_active_celebrities: 287
 adam_carolla:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 28
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: -5.2
-adam_scott:
-  category: actor
-  discovery_date: '2020-01-01'
   drama_score: 36
-  last_temperature_update: '2025-08-03 12:00:00'
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 2.5
+  temperature_change: 8
+adam_lambert:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 30
+adam_scott:
+  category: actor
+  discovery_date: '2020-01-01'
+  drama_score: 44
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: mild
+  temperature_change: 8
 addison_rae:
   category: influencer
   discovery_date: '2020-01-01'
@@ -77,12 +37,12 @@ addison_rae:
 adidas:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 52
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 57
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 8.7
+  temperature_change: 5
 aidy_bryant:
   category: comedian
   discovery_date: '2020-01-01'
@@ -113,21 +73,30 @@ amiri:
 amy_poehler:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 45
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 60
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 8.1
+  status: rising
+  temperature_change: 15
 amy_sedaris:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 29
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 41
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 3.1
+  status: mild
+  temperature_change: 12
+anderson_and:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 30
 anya_taylor_joy:
   category: actor
   discovery_date: '2020-01-01'
@@ -140,12 +109,12 @@ anya_taylor_joy:
 arcade_fire:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 29
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 32
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: -8.7
+  status: mild
+  temperature_change: 3
 ariana_grande:
   category: musician
   discovery_date: '2020-01-01'
@@ -176,12 +145,12 @@ asics:
 austin_butler:
   category: actor
   discovery_date: '2022-06-15'
-  drama_score: 65
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 73
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-08-01'
-  status: rising
-  temperature_change: 28.7
+  status: hot
+  temperature_change: 8
 avani_gregg:
   category: influencer
   discovery_date: '2020-01-01'
@@ -203,12 +172,12 @@ aziz_ansari:
 bad_bunny:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 69
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 83
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 11.7
+  status: hot
+  temperature_change: 14
 balenciaga:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -230,21 +199,21 @@ bape:
 bella_poarch:
   category: influencer
   discovery_date: '2020-01-01'
-  drama_score: 41
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 46
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: -8.9
+  temperature_change: 5
 ben_schwartz:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 35
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 38
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 8.2
+  temperature_change: 3
 bill_murray:
   category: comedian
   discovery_date: '2020-01-01'
@@ -266,12 +235,12 @@ bill_simmons:
 billie_eilish:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 61
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 65
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 15.2
+  temperature_change: 4
 blac_chyna:
   category: influencer
   discovery_date: '2020-01-01'
@@ -284,30 +253,30 @@ blac_chyna:
 bobby_moynihan:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 28
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 2.5
-bottega_veneta:
-  category: fashion_brand
-  discovery_date: '2020-01-01'
-  drama_score: 33
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 30
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 2.8
+  temperature_change: 2
+bottega_veneta:
+  category: fashion_brand
+  discovery_date: '2020-01-01'
+  drama_score: 47
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: mild
+  temperature_change: 14
 brain_dead:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 28
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 3.7
+  status: mild
+  temperature_change: 17
 brayden_rowley:
   category: influencer
   discovery_date: '2022-06-18'
@@ -329,21 +298,21 @@ bruce_mcculloch:
 bryce_hall:
   category: influencer
   discovery_date: '2020-01-01'
-  drama_score: 38
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 42
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: -18.5
+  temperature_change: 4
 caitlyn_jenner:
   category: reality_tv
   discovery_date: '2020-01-01'
-  drama_score: 32
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 33
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: -8.1
+  temperature_change: 1
 caleb_mclaughlin:
   category: actor
   discovery_date: '2020-01-01'
@@ -374,21 +343,21 @@ camille_munday:
 canada_goose:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 31
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 32
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 2.8
+  temperature_change: 1
 cardi_b:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 68
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 121
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 14.2
+  status: explosive
+  temperature_change: 53
 carhartt:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -407,24 +376,33 @@ carl_tart:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 2.1
+carri_richardson:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 30
 carrie_coon:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 45
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 51
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
-  status: mild
-  temperature_change: 18.2
+  status: rising
+  temperature_change: 6
 casey_wilson:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 26
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 27
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 1.9
+  temperature_change: 1
 catherine_ohara:
   category: comedian
   discovery_date: '2020-01-01'
@@ -437,12 +415,12 @@ catherine_ohara:
 cecily_strong:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 39
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 46
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 6.8
+  temperature_change: 7
 celine:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -455,12 +433,12 @@ celine:
 chanel:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 38
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 41
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 3.7
+  temperature_change: 3
 charli_damelio:
   category: influencer
   discovery_date: '2020-01-01'
@@ -473,21 +451,21 @@ charli_damelio:
 charlie_heaton:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 33
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 35
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 4.1
+  temperature_change: 2
 chase_mcwhorter:
   category: influencer
   discovery_date: '2022-06-22'
   drama_score: 22
-  last_temperature_update: '2025-08-03 12:00:00'
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-11-15'
   status: cooling
-  temperature_change: 1.8
+  temperature_change: 0
 chris_farley:
   category: comedian
   discovery_date: '2020-01-01'
@@ -502,12 +480,12 @@ chris_farley:
 christian_friedel:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 29
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 32
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
-  status: cooling
-  temperature_change: 8.4
+  status: mild
+  temperature_change: 3
 chrome_hearts:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -520,12 +498,12 @@ chrome_hearts:
 coldplay:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 35
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 38
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 1.8
+  temperature_change: 3
 comme_des_garcons:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -538,12 +516,12 @@ comme_des_garcons:
 common_projects:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 27
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 31
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 2.1
+  status: mild
+  temperature_change: 4
 conan_obrien:
   category: comedian
   discovery_date: '2020-01-01'
@@ -574,12 +552,12 @@ converse:
 cp_company:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 25
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 32
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 1.3
+  status: mild
+  temperature_change: 7
 dakota_mortensen:
   category: influencer
   discovery_date: '2022-06-20'
@@ -601,30 +579,30 @@ dan_aykroyd:
 daniel_craig:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 36
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 37
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 4.2
+  temperature_change: 1
 dave_chappelle:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 62
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 69
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 25.1
+  temperature_change: 7
 dave_foley:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 23
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 28
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 1.7
+  temperature_change: 5
 demi_engemann:
   category: influencer
   discovery_date: '2022-06-12'
@@ -673,21 +651,21 @@ dixie_damelio:
 doja_cat:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 71
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 72
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
-  temperature_change: 19.4
+  temperature_change: 1
 dolce_gabbana:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 26
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 27
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: -5.8
+  temperature_change: 1
 dom_hetrakul:
   category: actor
   discovery_date: '2024-01-15'
@@ -700,39 +678,39 @@ dom_hetrakul:
 donald_glover:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 56
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 85
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 12.7
+  status: hot
+  temperature_change: 29
 drew_tarver:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 26
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 27
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 4.7
+  temperature_change: 1
 dua_lipa:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 58
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 87
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 11.5
+  status: hot
+  temperature_change: 29
 ed_sheeran:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 44
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 76
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 3.7
+  status: hot
+  temperature_change: 32
 ellie_kemper:
   category: comedian
   discovery_date: '2020-01-01'
@@ -763,12 +741,12 @@ emma_myers:
 essentials:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 41
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 44
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 7.3
+  temperature_change: 3
 eugene_levy:
   category: comedian
   discovery_date: '2020-01-01'
@@ -781,21 +759,21 @@ eugene_levy:
 euphoria_cast:
   category: actor
   discovery_date: '2021-08-15'
-  drama_score: 72
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 107
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2021-10-01'
-  status: hot
-  temperature_change: 28.5
+  status: explosive
+  temperature_change: 35
 fear_of_god:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 43
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 44
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 8.7
+  temperature_change: 1
 fendi:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -826,12 +804,12 @@ florence_pugh:
 fog_essentials:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 39
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 42
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 6.8
+  temperature_change: 3
 foo_fighters:
   category: musician
   discovery_date: '2020-01-01'
@@ -909,21 +887,21 @@ givenchy:
 golden_goose:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 33
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 4.8
+  temperature_change: 12
 golf_wang:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 31
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 35
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 4.1
+  temperature_change: 4
 gucci:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -947,12 +925,12 @@ harris_wittels:
 harry_styles:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 74
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 113
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: hot
-  temperature_change: 18.6
+  status: explosive
+  temperature_change: 39
 hermes:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1001,21 +979,21 @@ howard_stern:
 human_made:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 29
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 69
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 2.5
+  status: rising
+  temperature_change: 40
 hunter_schafer:
   category: actor
   discovery_date: '2021-08-15'
-  drama_score: 57
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 58
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2021-10-01'
   status: rising
-  temperature_change: 15.8
+  temperature_change: 1
 ian_roberts:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1037,21 +1015,21 @@ issey_miyake:
 jack_harlow:
   category: musician
   discovery_date: '2021-03-15'
-  drama_score: 53
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 58
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2021-05-01'
   status: rising
-  temperature_change: 15.7
+  temperature_change: 5
 jack_white:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 33
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 3.5
+  temperature_change: 12
 jacksepticeye:
   category: influencer
   discovery_date: '2020-01-01'
@@ -1064,12 +1042,12 @@ jacksepticeye:
 jacob_elordi:
   category: actor
   discovery_date: '2022-01-15'
-  drama_score: 64
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 63
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-03-01'
   status: rising
-  temperature_change: 22.1
+  temperature_change: -1
 jacquemus:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1082,57 +1060,57 @@ jacquemus:
 jake_paul:
   category: influencer
   discovery_date: '2020-01-01'
-  drama_score: 62
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 69
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 18.3
+  temperature_change: 7
 james_charles:
   category: influencer
   discovery_date: '2020-01-01'
-  drama_score: 41
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 48
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: -18.9
+  temperature_change: 7
 jason_isaacs:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 35
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 42
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
   status: mild
-  temperature_change: 8.7
+  temperature_change: 7
 jason_mantzoukas:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 33
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 39
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 3.8
+  temperature_change: 6
 jason_sudeikis:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 48
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 55
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 12.1
+  status: rising
+  temperature_change: 7
 jeffree_star:
   category: influencer
   discovery_date: '2020-01-01'
-  drama_score: 36
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 104
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: -25.7
+  status: explosive
+  temperature_change: 68
 jen_kirkman:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1145,30 +1123,30 @@ jen_kirkman:
 jenna_bandy:
   category: influencer
   discovery_date: '2022-07-01'
-  drama_score: 33
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 37
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2023-01-01'
   status: mild
-  temperature_change: 7.1
+  temperature_change: 4
 jenna_ortega:
   category: actor
   discovery_date: '2022-11-01'
-  drama_score: 87
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 112
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-12-15'
   status: explosive
-  temperature_change: 38.2
+  temperature_change: 25
 jerry_lorenzo:
   category: fashion_designer
   discovery_date: '2020-01-01'
-  drama_score: 36
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 41
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 5.7
+  temperature_change: 5
 jessi_ngatikaura:
   category: influencer
   discovery_date: '2022-06-05'
@@ -1178,6 +1156,15 @@ jessi_ngatikaura:
   promotion_date: '2022-08-20'
   status: mild
   temperature_change: 2.8
+jesus_christ:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 60
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 40
 jil_sander:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1219,48 +1206,48 @@ john_belushi:
 john_elliott:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 30
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 33
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 3.2
+  temperature_change: 3
 john_mulaney:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 54
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 58
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 18.9
+  temperature_change: 4
 jordan:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 55
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 59
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 12.3
+  temperature_change: 4
 jordan_peele:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 52
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 56
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 15.7
+  temperature_change: 4
 josh_richards:
   category: influencer
   discovery_date: '2020-01-01'
-  drama_score: 32
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 57
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: -22.1
+  status: rising
+  temperature_change: 25
 jun_takahashi:
   category: fashion_designer
   discovery_date: '2020-01-01'
@@ -1273,12 +1260,12 @@ jun_takahashi:
 june_diane_raphael:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 27
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 28
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 2.8
+  temperature_change: 1
 kanye_west:
   category: musician
   discovery_date: '2020-01-01'
@@ -1291,12 +1278,12 @@ kanye_west:
 kate_mckinnon:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 41
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 7.8
+  temperature_change: 4
 keegan_michael_key:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1309,12 +1296,12 @@ keegan_michael_key:
 kendall_jenner:
   category: model
   discovery_date: '2020-01-01'
-  drama_score: 55
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 62
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 12.3
+  temperature_change: 7
 kendrick_lamar:
   category: musician
   discovery_date: '2020-01-01'
@@ -1336,30 +1323,30 @@ kevin_mcdonald:
 khloe_kardashian:
   category: reality_tv
   discovery_date: '2020-01-01'
-  drama_score: 72
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 73
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
-  temperature_change: 8.5
+  temperature_change: 1
 kieran_culkin:
   category: actor
   discovery_date: '2021-08-15'
-  drama_score: 55
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 57
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2021-10-01'
   status: rising
-  temperature_change: 18.9
+  temperature_change: 2
 kim_kardashian:
   category: reality_tv
   discovery_date: '2020-01-01'
-  drama_score: 85
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 94
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
-  temperature_change: 15.2
+  temperature_change: 9
 kith:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1372,21 +1359,21 @@ kith:
 kourtney_kardashian:
   category: reality_tv
   discovery_date: '2020-01-01'
-  drama_score: 68
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 69
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: -2.1
+  temperature_change: 1
 kris_jenner:
   category: reality_tv
   discovery_date: '2020-01-01'
-  drama_score: 65
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 66
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 3.2
+  temperature_change: 1
 ksi:
   category: influencer
   discovery_date: '2020-01-01'
@@ -1399,12 +1386,12 @@ ksi:
 kylie_jenner:
   category: entrepreneur
   discovery_date: '2020-01-01'
-  drama_score: 78
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 82
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
-  temperature_change: 5.7
+  temperature_change: 4
 lamar_odom:
   category: athlete
   discovery_date: '2020-01-01'
@@ -1417,39 +1404,48 @@ lamar_odom:
 lauren_lapkus:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 28
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 32
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 5.3
+  status: mild
+  temperature_change: 4
 layla_taylor:
   category: influencer
   discovery_date: '2022-06-15'
-  drama_score: 29
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 44
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-10-01'
-  status: cooling
-  temperature_change: -8.2
+  status: mild
+  temperature_change: 15
 leslie_bibb:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 32
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 34
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
   status: mild
-  temperature_change: 6.2
+  temperature_change: 2
+liam_neeson:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 105
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 70
 lil_nas_x:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 67
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 70
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 22.1
+  status: hot
+  temperature_change: 3
 lizzo:
   category: musician
   discovery_date: '2020-01-01'
@@ -1462,21 +1458,21 @@ lizzo:
 logan_paul:
   category: influencer
   discovery_date: '2020-01-01'
-  drama_score: 59
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 78
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 15.8
+  status: hot
+  temperature_change: 19
 louis_vuitton:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 42
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 49
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 7.3
+  temperature_change: 7
 lynn_shelton:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1491,12 +1487,12 @@ lynn_shelton:
 machine_gun_kelly:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 56
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 63
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 8.9
+  temperature_change: 7
 mads_lewis:
   category: influencer
   discovery_date: '2020-01-01'
@@ -1524,6 +1520,15 @@ maison_mihara_yasuhiro:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 5.7
+mandy_moore:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 30
 marc_maron:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1545,12 +1550,12 @@ maria_bamford:
 mark_mckinney:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 22
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 24
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 1.5
+  temperature_change: 2
 markiplier:
   category: influencer
   discovery_date: '2020-01-01'
@@ -1563,48 +1568,48 @@ markiplier:
 martin_short:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 42
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 48
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 8.1
+  temperature_change: 6
 mary_holland:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 21
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 29
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 1.9
+  temperature_change: 8
 matt_besser:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 22
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 1.3
-matt_walsh:
-  category: comedian
-  discovery_date: '2020-01-01'
-  drama_score: 21
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 1.8
-maya_hawke:
-  category: actor
-  discovery_date: '2020-01-01'
-  drama_score: 47
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 37
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 11.5
+  temperature_change: 15
+matt_walsh:
+  category: comedian
+  discovery_date: '2020-01-01'
+  drama_score: 37
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: mild
+  temperature_change: 16
+maya_hawke:
+  category: actor
+  discovery_date: '2020-01-01'
+  drama_score: 48
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: mild
+  temperature_change: 1
 mayci_neeley:
   category: influencer
   discovery_date: '2022-06-08'
@@ -1626,21 +1631,21 @@ megan_thee_stallion:
 michael_b_jordan:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 54
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 82
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 8.3
+  status: hot
+  temperature_change: 28
 michelle_monaghan:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 41
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 56
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
-  status: mild
-  temperature_change: 15.3
+  status: rising
+  temperature_change: 15
 mikayla_matthews:
   category: influencer
   discovery_date: '2022-07-05'
@@ -1662,21 +1667,21 @@ mike_myers:
 millie_bobby_brown:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 61
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 63
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 8.7
+  temperature_change: 2
 miranda_mcwhorter:
   category: influencer
   discovery_date: '2022-05-25'
-  drama_score: 48
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 49
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-07-01'
   status: mild
-  temperature_change: 8.2
+  temperature_change: 1
 moncler:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1707,12 +1712,12 @@ natalia_dyer:
 natasha_rothwell:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 44
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 47
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
   status: mild
-  temperature_change: 18.7
+  temperature_change: 3
 neighborhood:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1752,21 +1757,21 @@ nessa_barrett:
 new_balance:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 42
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 216
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 8.5
+  status: explosive
+  temperature_change: 174
 nick_kroll:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 38
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 53
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 5.1
+  status: rising
+  temperature_change: 15
 nigo:
   category: fashion_designer
   discovery_date: '2020-01-01'
@@ -1779,12 +1784,12 @@ nigo:
 nike:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 58
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 84
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 15.2
+  status: hot
+  temperature_change: 26
 nikocado_avocado:
   category: influencer
   discovery_date: '2020-01-01'
@@ -1812,51 +1817,69 @@ noah_schnapp:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 15.2
+of_the:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 60
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 40
 off_white:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 41
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 93
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 12.8
+  status: explosive
+  temperature_change: 52
 olivia_rodrigo:
   category: musician
   discovery_date: '2021-01-15'
-  drama_score: 82
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 90
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2021-03-01'
-  status: hot
-  temperature_change: 28.5
+  status: explosive
+  temperature_change: 8
 on_running:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 26
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 351
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 3.1
+  status: explosive
+  temperature_change: 325
+on_the:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 30
 oscar_isaac:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 41
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 46
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 7.3
+  temperature_change: 5
 owen_wilson:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 34
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 35
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 5.2
+  temperature_change: 1
 palace:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1869,12 +1892,12 @@ palace:
 parker_posey:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 36
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 39
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
   status: mild
-  temperature_change: 11.2
+  temperature_change: 3
 patagonia:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -1887,30 +1910,30 @@ patagonia:
 patrick_schwarzenegger:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 39
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 40
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
   status: mild
-  temperature_change: 14.8
+  temperature_change: 1
 paul_f_tompkins:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 22
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 27
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 1.8
+  temperature_change: 5
 paul_scheer:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 29
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 34
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 3.7
+  status: mild
+  temperature_change: 5
 pedro_pascal:
   category: actor
   discovery_date: '2023-01-15'
@@ -1941,30 +1964,30 @@ pewdiepie:
 pharrell_williams:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 47
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 8.3
-post_malone:
-  category: musician
-  discovery_date: '2020-01-01'
-  drama_score: 52
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 55
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 8.3
+  temperature_change: 8
+post_malone:
+  category: musician
+  discovery_date: '2020-01-01'
+  drama_score: 136
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: explosive
+  temperature_change: 84
 prada:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 35
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 36
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 2.5
+  temperature_change: 1
 puma:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -2004,12 +2027,12 @@ rami_malek:
 ray_j:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 25
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 42
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 3.1
+  status: mild
+  temperature_change: 17
 reebok:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -2040,12 +2063,12 @@ rhude:
 rick_owens:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 32
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 38
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 3.8
+  temperature_change: 6
 rob_huebel:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2058,30 +2081,30 @@ rob_huebel:
 rob_kardashian:
   category: reality_tv
   discovery_date: '2020-01-01'
-  drama_score: 28
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 29
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: -12.5
+  temperature_change: 1
 sabrina_carpenter:
   category: musician
   discovery_date: '2024-06-15'
-  drama_score: 76
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 84
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-08-01'
   status: hot
-  temperature_change: 42.1
+  temperature_change: 8
 sadie_sink:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 45
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 49
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 12.3
+  temperature_change: 4
 saint_laurent:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -2103,21 +2126,21 @@ salomon:
 sarah_catherine_hook:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 52
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 60
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2024-03-01'
   status: rising
-  temperature_change: 25.1
+  temperature_change: 8
 sarah_silverman:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 46
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 53
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 9.3
+  status: rising
+  temperature_change: 7
 saweetie:
   category: musician
   discovery_date: '2020-01-01'
@@ -2194,56 +2217,56 @@ stephanie_allynne:
   category: comedian
   discovery_date: '2020-01-01'
   drama_score: 20
-  last_temperature_update: '2025-08-03 12:00:00'
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 0.7
+  temperature_change: 0
 stephen_colbert:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 43
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 6.2
-steve_carell:
-  category: comedian
-  discovery_date: '2020-01-01'
-  drama_score: 46
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 8.7
-steve_martin:
-  category: comedian
-  discovery_date: '2020-01-01'
-  drama_score: 39
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 5.7
-stone_island:
-  category: fashion_brand
-  discovery_date: '2020-01-01'
-  drama_score: 33
-  last_temperature_update: '2025-08-03 12:00:00'
-  memorial: false
-  promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 3.5
-stranger_things_cast:
-  category: actor
-  discovery_date: '2020-01-01'
-  drama_score: 65
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 53
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
-  temperature_change: 12.3
+  temperature_change: 10
+steve_carell:
+  category: comedian
+  discovery_date: '2020-01-01'
+  drama_score: 58
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: rising
+  temperature_change: 12
+steve_martin:
+  category: comedian
+  discovery_date: '2020-01-01'
+  drama_score: 52
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: rising
+  temperature_change: 13
+stone_island:
+  category: fashion_brand
+  discovery_date: '2020-01-01'
+  drama_score: 70
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: hot
+  temperature_change: 37
+stranger_things_cast:
+  category: actor
+  discovery_date: '2020-01-01'
+  drama_score: 93
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2020-01-01'
+  status: explosive
+  temperature_change: 28
 stussy:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -2265,39 +2288,39 @@ supreme:
 sydney_sweeney:
   category: actor
   discovery_date: '2021-08-15'
-  drama_score: 79
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 87
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2021-10-01'
   status: hot
-  temperature_change: 25.4
+  temperature_change: 8
 tate_paul:
   category: influencer
   discovery_date: '2022-06-25'
-  drama_score: 28
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 33
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-12-01'
-  status: cooling
-  temperature_change: 8.5
+  status: mild
+  temperature_change: 5
 taylor_frankie_paul:
   category: influencer
   discovery_date: '2022-05-20'
-  drama_score: 92
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 124
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-06-15'
   status: explosive
-  temperature_change: 35.7
+  temperature_change: 32
 taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 265
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 410
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: cooling
-  temperature_change: 12.8
+  status: explosive
+  temperature_change: 145
 tayme_thapthimthong:
   category: actor
   discovery_date: '2024-01-15'
@@ -2310,30 +2333,30 @@ tayme_thapthimthong:
 the_row:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 31
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 1608
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 4.2
+  status: explosive
+  temperature_change: 1577
 the_strokes:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 32
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 1611
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 2.1
+  status: explosive
+  temperature_change: 1579
 thomas_middleditch:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 31
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 33
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: -12.7
+  temperature_change: 2
 tig_notaro:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2364,12 +2387,12 @@ tim_meadows:
 timothee_chalamet:
   category: actor
   discovery_date: '2020-01-01'
-  drama_score: 71
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 72
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
-  temperature_change: 12.7
+  temperature_change: 1
 tina_fey:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2382,30 +2405,30 @@ tina_fey:
 tom_ford:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 37
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 85
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 5.2
+  status: hot
+  temperature_change: 48
 travis_barker:
   category: musician
   discovery_date: '2021-05-15'
-  drama_score: 58
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 77
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2021-06-01'
-  status: rising
-  temperature_change: 18.9
+  status: hot
+  temperature_change: 19
 travis_scott:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 35
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 52
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: -15.3
+  status: rising
+  temperature_change: 17
 tristan_thompson:
   category: athlete
   discovery_date: '2020-01-01'
@@ -2454,12 +2477,12 @@ valentino:
 vans:
   category: fashion_brand
   discovery_date: '2020-01-01'
-  drama_score: 35
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 38
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 3.8
+  temperature_change: 3
 versace:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -2501,12 +2524,12 @@ walton_goggins:
 wednesday_addams:
   category: actor
   discovery_date: '2022-11-01'
-  drama_score: 58
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 71
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2022-12-15'
-  status: rising
-  temperature_change: 35.7
+  status: hot
+  temperature_change: 13
 whitney_leavitt:
   category: influencer
   discovery_date: '2022-06-10'
@@ -2516,6 +2539,15 @@ whitney_leavitt:
   promotion_date: '2022-09-01'
   status: rising
   temperature_change: 18.4
+who_plays:
+  category: unknown
+  discovery_date: '2025-08-03'
+  drama_score: 45
+  last_temperature_update: '2025-08-03 14:52:25'
+  memorial: false
+  promotion_date: '2025-08-03'
+  status: rising
+  temperature_change: 30
 yeezy:
   category: fashion_brand
   discovery_date: '2020-01-01'
@@ -2537,12 +2569,12 @@ younes_bendjima:
 zach_woods:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 31
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 33
+  last_temperature_update: '2025-08-03 14:52:25'
   memorial: false
   promotion_date: '2020-01-01'
   status: mild
-  temperature_change: 4.7
+  temperature_change: 2
 zendaya:
   category: actor
   discovery_date: '2020-01-01'
