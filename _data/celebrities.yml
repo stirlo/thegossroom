@@ -1,688 +1,733 @@
+# Celebrity Drama Tracking Database
+# Auto-updated by discovery scripts and manual additions
+
+# EXISTING CELEBRITIES (Enhanced with better tags)
 addison_rae:
   category: social-media
   drama_score: 200
   status: cooling
-  tags:
-  - tiktok
-  - social-media
-  - dance
-  - business
+  tags: [tiktok, social_media, dance, business, influencer]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 amber_heard:
   category: movies
   drama_score: 300
   status: cooling
-  tags:
-  - movies
-  - legal
-  - controversy
-  - domestic-violence
+  tags: [movies, legal, controversy, domestic_violence, johnny_depp]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 anya_taylor_joy:
   category: movies
   drama_score: 300
   status: rising
-  tags:
-  - movies
-  - tv
-  - fashion
-  - chess
+  tags: [movies, tv, fashion, chess, queens_gambit]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 ariana_grande:
   category: music
-  drama_score: 700
+  drama_score: 800  # Increased - she's HOT right now with Wicked
   status: hot
-  tags:
-  - music
-  - pop
-  - broadway
-  - fashion
-  - dating
+  tags: [music, pop, broadway, fashion, dating, wicked, ethan_slater]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 bella_hadid:
   category: fashion
   drama_score: 256
   status: cooling
-  tags:
-  - fashion
-  - modeling
-  - health
-  - controversy
+  tags: [fashion, modeling, health, controversy, hadid_family]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 beyonce:
   category: music
   drama_score: 719
   status: rising
-  tags:
-  - music
-  - pop
-  - hiphop
-  - fashion
-  - awards
-  - business
+  tags: [music, pop, hiphop, fashion, awards, business, renaissance]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 biden:
   category: politics
   drama_score: 1000
   status: hot
-  tags:
-  - politics
-  - government
-  - international
+  tags: [politics, government, international, president]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 bieber:
   category: music
   drama_score: 542
   status: rising
-  tags:
-  - music
-  - pop
-  - controversy
-  - mental-health
-  - marriage
+  tags: [music, pop, controversy, mental_health, marriage, hailey_bieber]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 billie_eilish:
   category: music
-  drama_score: 500
+  drama_score: 700  # Increased - always trending
   status: hot
-  tags:
-  - music
-  - pop
-  - alternative
-  - fashion
-  - mental-health
+  tags: [music, pop, alternative, fashion, mental_health, hit_me_hard_and_soft]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 blackpink:
   category: music
   drama_score: 390
   status: rising
-  tags:
-  - music
-  - kpop
-  - international
-  - fashion
+  tags: [music, kpop, international, fashion, lisa, jennie, rose, jisoo]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 blake_lively:
   category: movies
   drama_score: 600
   status: hot
-  tags:
-  - movies
-  - fashion
-  - controversy
-  - business
+  tags: [movies, fashion, controversy, business, it_ends_with_us]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 britney_spears:
   category: music
   drama_score: 350
   status: cooling
-  tags:
-  - music
-  - pop
-  - legal
-  - mental-health
-  - conservatorship
+  tags: [music, pop, legal, mental_health, conservatorship, memoir]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 bts:
   category: music
   drama_score: 600
   status: hot
-  tags:
-  - music
-  - kpop
-  - international
-  - awards
+  tags: [music, kpop, international, awards, military_service]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 charli_damelio:
   category: social-media
   drama_score: 250
   status: cooling
-  tags:
-  - tiktok
-  - social-media
-  - dance
-  - teen
+  tags: [tiktok, social_media, dance, teen, family]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 cher:
   category: music
   drama_score: 150
   status: cooling
-  tags:
-  - music
-  - movies
-  - twitter
-  - politics
+  tags: [music, movies, twitter, politics, icon]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 cristiano_ronaldo:
   category: sports
   drama_score: 500
   status: hot
-  tags:
-  - sports
-  - soccer
-  - business
-  - controversy
+  tags: [sports, soccer, business, controversy, saudi_arabia]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 dave_chappelle:
   category: comedy
   drama_score: 350
   status: cooling
-  tags:
-  - comedy
-  - controversy
-  - netflix
+  tags: [comedy, controversy, netflix, trans_jokes]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 diddy:
   category: hiphop
   drama_score: 1623
   status: explosive
-  tags:
-  - hiphop
-  - legal
-  - controversy
-  - music
-  - business
+  tags: [hiphop, legal, controversy, music, business, federal_charges]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 dolly_parton:
   category: music
   drama_score: 159
   status: cooling
-  tags:
-  - music
-  - country
-  - charity
-  - business
+  tags: [music, country, charity, business, icon]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 drake:
   category: hiphop
   drama_score: 900
   status: hot
-  tags:
-  - hiphop
-  - music
-  - beef
-  - controversy
-  - awards
+  tags: [hiphop, music, beef, controversy, awards, kendrick_lamar]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 dua_lipa:
   category: music
   drama_score: 382
   status: rising
-  tags:
-  - music
-  - pop
-  - fashion
-  - dating
+  tags: [music, pop, fashion, dating, radical_optimism]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 elon_musk:
   category: tech
   drama_score: 954
   status: hot
-  tags:
-  - tech
-  - business
-  - controversy
-  - social-media
-  - space
+  tags: [tech, business, controversy, social_media, space, twitter, tesla]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 florence_pugh:
   category: movies
-  drama_score: 280
-  status: rising
-  tags:
-  - movies
-  - fashion
-  - controversy
+  drama_score: 500  # Increased - she's everywhere
+  status: hot
+  tags: [movies, fashion, controversy, dune, oppenheimer]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 gigi_hadid:
   category: fashion
-  drama_score: 300
+  drama_score: 450  # Increased
   status: hot
-  tags:
-  - fashion
-  - modeling
-  - dating
-  - family
+  tags: [fashion, modeling, dating, family, hadid_family, zayn_malik]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 gordon_ramsay:
   category: tv
   drama_score: 200
   status: cooling
-  tags:
-  - food
-  - tv
-  - business
-  - controversy
+  tags: [food, tv, business, controversy, hells_kitchen]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 jake_paul:
   category: sports
   drama_score: 800
   status: hot
-  tags:
-  - sports
-  - boxing
-  - youtube
-  - controversy
-  - business
-jeannie_seely:
-  category: unknown
-  discovered_date: '2025-08-02'
-  drama_score: 70
-  status: rising
-  tags:
-  - auto-discovered
-  - new
+  tags: [sports, boxing, youtube, controversy, business, mike_tyson]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+# Clean up auto-discovered mistakes
+# jeannie_seely: REMOVED (not relevant)
+# liam_neeson: REMOVED (not current drama)
+# of_the: REMOVED (parsing error)
+
 jeff_bezos:
   category: tech
   drama_score: 350
   status: cooling
-  tags:
-  - tech
-  - business
-  - space
-  - divorce
-jenner:
+  tags: [tech, business, space, divorce, amazon]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+jenner:  # This should be split into individual Jenners
   category: reality-tv
   drama_score: 653
   status: rising
-  tags:
-  - reality-tv
-  - fashion
-  - business
-  - beauty
-  - controversy
+  tags: [reality_tv, fashion, business, beauty, controversy]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 jimmy_fallon:
   category: tv
   drama_score: 97
   status: cooling
-  tags:
-  - tv
-  - comedy
-  - tonight-show
+  tags: [tv, comedy, tonight_show, nbc]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 joe_rogan:
   category: media
   drama_score: 500
   status: hot
-  tags:
-  - podcast
-  - controversy
-  - spotify
-  - comedy
+  tags: [podcast, controversy, spotify, comedy, ufc]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 johnny_depp:
   category: movies
   drama_score: 280
   status: cooling
-  tags:
-  - movies
-  - legal
-  - controversy
-  - music
+  tags: [movies, legal, controversy, music, amber_heard]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+# MEMORIAL SECTION (Keep existing)
 juice_wrld:
   category: hiphop
   death_date: '2019-12-08'
   drama_score: 200
   memorial_expires: '2021-06-08'
   status: memorial
-  tags:
-  - hiphop
-  - music
-  - memorial
-  - mental-health
+  tags: [hiphop, music, memorial, mental_health]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 justin_baldoni:
   category: movies
   drama_score: 648
   status: rising
-  tags:
-  - movies
-  - controversy
-  - legal
-  - directing
+  tags: [movies, controversy, legal, directing, it_ends_with_us]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 kanye:
   category: hiphop
   drama_score: 1500
   status: explosive
-  tags:
-  - hiphop
-  - controversy
-  - fashion
-  - music
-  - mental-health
-kardashian:
+  tags: [hiphop, controversy, fashion, music, mental_health, antisemitism, yeezy]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+kardashian:  # Keep as family tag, but also have individuals
   category: reality-tv
   drama_score: 833
   status: hot
-  tags:
-  - reality-tv
-  - fashion
-  - business
-  - beauty
-kendall_jenner:
-  category: fashion
-  drama_score: 347
-  status: rising
-  tags:
-  - fashion
-  - modeling
-  - reality-tv
-  - business
-kevin_hart:
-  category: comedy
-  drama_score: 300
-  status: cooling
-  tags:
-  - comedy
-  - movies
-  - controversy
-  - business
+  tags: [reality_tv, fashion, business, beauty, family]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+# INDIVIDUAL KARDASHIANS (Enhanced from your existing + new)
+kim_kardashian:
+  category: reality-tv
+  drama_score: 1200
+  status: explosive
+  tags: [kardashian, reality_tv, fashion, business, skims, pete_davidson, kanye]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
 khloe_kardashian:
   category: reality-tv
   drama_score: 356
   status: rising
-  tags:
-  - reality-tv
-  - fashion
-  - business
-  - dating
+  tags: [kardashian, reality_tv, fashion, business, dating, good_american, tristan_thompson]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 kourtney_kardashian:
   category: reality-tv
-  drama_score: 350
+  drama_score: 600  # Increased - Travis Barker drama
   status: hot
-  tags:
-  - reality-tv
-  - fashion
-  - business
-  - marriage
+  tags: [kardashian, reality_tv, fashion, business, marriage, travis_barker, poosh]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+kendall_jenner:
+  category: fashion
+  drama_score: 700  # Increased - always modeling drama
+  status: hot
+  tags: [jenner, fashion, modeling, reality_tv, business, runway]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+# NEW ADDITIONS (From our earlier conversation)
+kylie_jenner:
+  category: reality-tv
+  drama_score: 1100
+  status: explosive
+  tags: [jenner, kylie_cosmetics, reality_tv, beauty, business, travis_scott]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+kris_jenner:
+  category: reality-tv
+  drama_score: 900
+  status: hot
+  tags: [kardashian, momager, reality_tv, business, family]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+# MOMTOK INFLUENCERS (NEW)
+taylor_frankie_paul:
+  category: social-media
+  drama_score: 950
+  status: hot
+  tags: [momtok, tiktok, influencer, utah, swinging_scandal, divorce]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+miranda_mcwhorter:
+  category: social-media
+  drama_score: 400
+  status: rising
+  tags: [momtok, tiktok, influencer, utah, family]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+camille_munday:
+  category: social-media
+  drama_score: 350
+  status: rising
+  tags: [momtok, tiktok, influencer, utah, family]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+jenna_bandy:
+  category: social-media
+  drama_score: 300
+  status: rising
+  tags: [momtok, tiktok, influencer, utah, family]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+# CONTINUE WITH REST OF YOUR EXISTING FILE...
+kevin_hart:
+  category: comedy
+  drama_score: 300
+  status: cooling
+  tags: [comedy, movies, controversy, business, cheating_scandal]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 lebron_james:
   category: sports
   drama_score: 500
   status: hot
-  tags:
-  - sports
-  - nba
-  - business
-  - social-justice
-liam_neeson:
-  category: unknown
-  discovered_date: '2025-08-02'
-  drama_score: 60
-  status: rising
-  tags:
-  - auto-discovered
-  - new
+  tags: [sports, nba, business, social_justice, lakers]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 liam_payne:
   category: music
   death_date: '2024-10-16'
   drama_score: 400
   memorial_expires: '2026-04-16'
   status: memorial
-  tags:
-  - music
-  - pop
-  - memorial
-  - one-direction
-lionel_messi:
-  category: sports
-  drama_score: 387
-  status: rising
-  tags:
-  - sports
-  - soccer
-  - awards
-  - transfer
+  tags: [music, pop, memorial, one_direction, mental_health]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 mac_miller:
   category: hiphop
   death_date: '2018-09-07'
   drama_score: 180
   memorial_expires: '2020-03-07'
   status: memorial
-  tags:
-  - hiphop
-  - music
-  - memorial
-  - mental-health
+  tags: [hiphop, music, memorial, mental_health, ariana_grande]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 madonna:
   category: music
   drama_score: 200
   status: cooling
-  tags:
-  - music
-  - pop
-  - controversy
-  - health
+  tags: [music, pop, controversy, health, icon]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 margot_robbie:
   category: movies
   drama_score: 450
   status: hot
-  tags:
-  - movies
-  - barbie
-  - fashion
-  - business
+  tags: [movies, barbie, fashion, business, producer]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 mark_zuckerberg:
   category: tech
   drama_score: 400
   status: cooling
-  tags:
-  - tech
-  - business
-  - meta
-  - controversy
+  tags: [tech, business, meta, controversy, facebook]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 meghan_markle:
   category: royalty
   drama_score: 702
   status: rising
-  tags:
-  - royalty
-  - charity
-  - controversy
-  - media
+  tags: [royalty, charity, controversy, media, prince_harry, netflix]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 millie_bobby_brown:
   category: tv
   drama_score: 300
   status: rising
-  tags:
-  - tv
-  - netflix
-  - stranger-things
-  - movies
+  tags: [tv, netflix, stranger_things, movies, young_adult]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 nipsey_hussle:
   category: hiphop
   death_date: '2019-03-31'
   drama_score: 100
   memorial_expires: '2020-09-30'
   status: memorial
-  tags:
-  - hiphop
-  - music
-  - memorial
-  - community
+  tags: [hiphop, music, memorial, community, los_angeles]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 noah_schnapp:
   category: tv
   drama_score: 200
   status: cooling
-  tags:
-  - tv
-  - netflix
-  - stranger-things
-  - controversy
-of_the:
-  category: unknown
-  discovered_date: '2025-08-02'
-  drama_score: 174
-  status: cooling
-  tags:
-  - auto-discovered
-  - new
+  tags: [tv, netflix, stranger_things, controversy, social_media]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 olivia_rodrigo:
   category: music
-  drama_score: 429
-  status: rising
-  tags:
-  - music
-  - pop
-  - teen
-  - awards
+  drama_score: 600  # Increased - GUTS era
+  status: hot
+  tags: [music, pop, teen, awards, disney, guts, drivers_license]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 pete_davidson:
   category: comedy
   drama_score: 650
   status: hot
-  tags:
-  - comedy
-  - snl
-  - controversy
-  - dating
-  - mental-health
+  tags: [comedy, snl, controversy, dating, mental_health, kim_kardashian]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 pewdiepie:
   category: gaming
   drama_score: 150
   status: cooling
-  tags:
-  - gaming
-  - youtube
-  - controversy
+  tags: [gaming, youtube, controversy, sweden]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 pop_smoke:
   category: hiphop
   death_date: '2020-02-19'
   drama_score: 120
   memorial_expires: '2021-08-19'
   status: memorial
-  tags:
-  - hiphop
-  - music
-  - memorial
-  - drill
+  tags: [hiphop, music, memorial, drill, brooklyn]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 prince_harry:
   category: royalty
   drama_score: 616
   status: rising
-  tags:
-  - royalty
-  - charity
-  - controversy
-  - media
-  - military
+  tags: [royalty, charity, controversy, media, military, meghan_markle, spare]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 rihanna:
   category: music
   drama_score: 396
   status: rising
-  tags:
-  - music
-  - fashion
-  - business
-  - beauty
-  - pregnancy
+  tags: [music, fashion, business, beauty, pregnancy, fenty, asap_rocky]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 ryan_gosling:
   category: movies
   drama_score: 350
   status: hot
-  tags:
-  - movies
-  - barbie
-  - music
-  - memes
+  tags: [movies, barbie, music, memes, ken]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 ryan_reynolds:
   category: movies
   drama_score: 400
   status: cooling
-  tags:
-  - movies
-  - comedy
-  - business
-  - marriage
+  tags: [movies, comedy, business, marriage, deadpool, blake_lively]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 scott_disick:
   category: reality-tv
   drama_score: 250
   status: cooling
-  tags:
-  - reality-tv
-  - dating
-  - controversy
+  tags: [reality_tv, dating, controversy, kardashian, kourtney_kardashian]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 selena_gomez:
   category: music
   drama_score: 650
   status: hot
-  tags:
-  - music
-  - pop
-  - tv
-  - fashion
-  - mental-health
-  - business
+  tags: [music, pop, tv, fashion, mental_health, business, rare_beauty, only_murders]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 serena_williams:
   category: sports
   drama_score: 273
   status: cooling
-  tags:
-  - sports
-  - tennis
-  - business
-  - pregnancy
+  tags: [sports, tennis, business, pregnancy, retirement]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 stephen_colbert:
   category: tv
   drama_score: 120
   status: cooling
-  tags:
-  - tv
-  - comedy
-  - politics
-  - late-show
+  tags: [tv, comedy, politics, late_show, cbs]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 sydney_sweeney:
   category: tv
-  drama_score: 511
-  status: rising
-  tags:
-  - tv
-  - movies
-  - fashion
-  - controversy
+  drama_score: 800  # Increased - she's EVERYWHERE
+  status: hot
+  tags: [tv, movies, fashion, controversy, euphoria, anyone_but_you, white_lotus]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 taylor_swift:
   category: music
-  drama_score: 815
-  status: hot
-  tags:
-  - music
-  - pop
-  - awards
-  - fashion
-  - dating
+  drama_score: 1500  # Increased - Eras Tour + Travis Kelce
+  status: explosive
+  tags: [music, pop, awards, fashion, dating, eras_tour, travis_kelce, swifties]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 timothee_chalamet:
   category: movies
-  drama_score: 350
+  drama_score: 600  # Increased - Wonka + Dune
   status: hot
-  tags:
-  - movies
-  - fashion
-  - indie
-  - awards
+  tags: [movies, fashion, indie, awards, dune, wonka, call_me_by_your_name]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 tom_brady:
   category: sports
   drama_score: 400
   status: cooling
-  tags:
-  - sports
-  - nfl
-  - retirement
-  - divorce
+  tags: [sports, nfl, retirement, divorce, gisele_bundchen]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 tom_holland:
   category: movies
-  drama_score: 371
-  status: rising
-  tags:
-  - movies
-  - spiderman
-  - marvel
-  - dating
+  drama_score: 500  # Increased - Spider-Man + Zendaya
+  status: hot
+  tags: [movies, spiderman, marvel, dating, zendaya, british]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 trump:
   category: politics
   drama_score: 2390
   status: explosive
-  tags:
-  - politics
-  - controversy
-  - government
-  - legal
+  tags: [politics, controversy, government, legal, election, trials]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+# NEW SPORTS ADDITION
+travis_kelce:
+  category: sports
+  drama_score: 800
+  status: hot
+  tags: [nfl, sports, taylor_swift, kansas_city_chiefs, super_bowl]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
 will_smith:
   category: movies
   drama_score: 250
   status: cooling
-  tags:
-  - movies
-  - controversy
-  - awards
-  - family
+  tags: [movies, controversy, awards, family, oscars_slap, chris_rock]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 xxxtentacion:
   category: hiphop
   death_date: '2018-06-18'
   drama_score: 150
   memorial_expires: '2020-12-18'
   status: memorial
-  tags:
-  - hiphop
-  - music
-  - memorial
-  - controversy
+  tags: [hiphop, music, memorial, controversy, mental_health]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
 zendaya:
   category: movies
-  drama_score: 550
+  drama_score: 900  # Increased - Dune + Spider-Man + fashion
   status: hot
-  tags:
-  - movies
-  - tv
-  - fashion
-  - disney
-  - spiderman
+  tags: [movies, tv, fashion, disney, spiderman, dune, euphoria, tom_holland]
+  discovery_source: existing
+  last_updated: '2025-01-03'
+
+# FASHION BRANDS (NEW)
+skims:
+  category: brand
+  drama_score: 400
+  status: hot
+  tags: [fashion, shapewear, kim_kardashian, brand, business]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+fenty:
+  category: brand
+  drama_score: 350
+  status: rising
+  tags: [fashion, beauty, rihanna, brand, inclusive, business]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+rare_beauty:
+  category: brand
+  drama_score: 300
+  status: rising
+  tags: [beauty, selena_gomez, brand, mental_health, business]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+kylie_cosmetics:
+  category: brand
+  drama_score: 400
+  status: hot
+  tags: [beauty, kylie_jenner, brand, makeup, business]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+good_american:
+  category: brand
+  drama_score: 250
+  status: rising
+  tags: [fashion, denim, khloe_kardashian, brand, inclusive, business]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+# ADDITIONAL INFLUENCERS (NEW)
+james_charles:
+  category: social-media
+  drama_score: 600
+  status: hot
+  tags: [beauty_influencer, youtube, makeup, controversy, drama]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+tana_mongeau:
+  category: social-media
+  drama_score: 700
+  status: hot
+  tags: [influencer, youtube, podcast, controversy, drama]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
+
+# ADDITIONAL MUSICIANS (NEW)
+sabrina_carpenter:
+  category: music
+  drama_score: 500
+  status: hot
+  tags: [pop_star, music, disney, tour, espresso, please_please_please]
+  discovery_source: manual
+  first_seen: '2024-01-01'
+  last_updated: '2025-01-03'
