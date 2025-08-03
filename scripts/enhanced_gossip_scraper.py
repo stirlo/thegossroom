@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enhanced Gossip Room RSS Scraper - Fixed Version
+Enhanced Gossip Room RSS Scraper - With Advanced Deduplication
 """
 
 import feedparser
@@ -14,6 +14,7 @@ from pathlib import Path
 import time
 import logging
 import hashlib
+from difflib import SequenceMatcher
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -28,15 +29,12 @@ class GossipScraper:
         self.celebrity_mentions = defaultdict(int)
         self.potential_new_celebrities = Counter()
 
-        # Common words to exclude from auto-discovery
         self.excluded_words = {
             'on the', 'of the', 'in the', 'to the', 'for the', 'with the',
             'and the', 'at the', 'by the', 'from the', 'who plays',
-            'jesus christ', 'anderson and', 'new york', 'los angeles',
-            'united states', 'new jersey', 'south korea', 'north korea'
+            'jesus christ', 'anderson and', 'new york', 'los angeles'
         }
 
-        # Working RSS feeds only
         self.rss_feeds = {
             'tmz': {'url': 'https://www.tmz.com/rss.xml', 'weight': 3},
             'perez_hilton': {'url': 'https://perezhilton.com/feed/', 'weight': 3},
@@ -53,11 +51,9 @@ class GossipScraper:
             'elle_alt': {'url': 'https://www.elle.com/rss/all.xml/', 'weight': 2},
             'vogue_alt': {'url': 'https://www.vogue.com/feed/rss', 'weight': 2},
             'pitchfork': {'url': 'https://pitchfork.com/rss/news/', 'weight': 1},
-            'nine_celebrity': {'url': 'http://www.9celebrity.com/feed/', 'weight': 1},
             'highsnobiety': {'url': 'https://www.highsnobiety.com/feed/', 'weight': 1},
             'sneaker_news': {'url': 'https://sneakernews.com/feed/', 'weight': 1},
             'espn': {'url': 'https://www.espn.com/espn/rss/news', 'weight': 1},
-            'cnn_entertainment': {'url': 'http://rss.cnn.com/rss/edition.rss', 'weight': 1},
             'bbc_entertainment': {'url': 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'weight': 1},
         }
 
@@ -74,7 +70,7 @@ class GossipScraper:
                 if '_temperature_metadata' in data:
                     del data['_temperature_metadata']
 
-                # Filter out brands and focus on people
+                # Filter out brands
                 people_only = {}
                 for key, value in data.items():
                     category = value.get('category', '')
@@ -97,7 +93,6 @@ class GossipScraper:
             main_name = celebrity_key.replace('_', ' ')
             names.append(main_name.lower())
 
-            # Add specific variations for key celebrities
             variations = self.get_name_variations(celebrity_key, main_name)
             names.extend([v.lower() for v in variations])
 
@@ -137,7 +132,6 @@ class GossipScraper:
         try:
             with open('data/processed_articles.json', 'r') as f:
                 data = json.load(f)
-                # Clean old entries (older than 7 days)
                 cutoff = (datetime.now() - timedelta(days=7)).isoformat()
                 cleaned = {k: v for k, v in data.items() 
                           if v.get('processed_date', '9999') > cutoff}
@@ -145,6 +139,56 @@ class GossipScraper:
                 return cleaned
         except FileNotFoundError:
             return {}
+
+    def normalize_title(self, title):
+        """Normalize title for similarity comparison"""
+        # Remove common punctuation and extra words
+        title = re.sub(r'[!?.:;,\'""]', '', title.lower())
+        title = re.sub(r'\s+', ' ', title).strip()
+
+        # Remove common filler words that don't affect meaning
+        filler_words = ['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']
+        words = title.split()
+        filtered_words = [w for w in words if w not in filler_words]
+
+        return ' '.join(filtered_words)
+
+    def titles_are_similar(self, title1, title2, threshold=0.8):
+        """Check if two titles are similar enough to be considered duplicates"""
+        norm1 = self.normalize_title(title1)
+        norm2 = self.normalize_title(title2)
+
+        # Calculate similarity ratio
+        similarity = SequenceMatcher(None, norm1, norm2).ratio()
+        return similarity >= threshold
+
+    def advanced_deduplication(self, posts):
+        """Remove duplicate posts based on title similarity"""
+        unique_posts = []
+        seen_titles = []
+        duplicates_removed = 0
+
+        # Sort by drama score (keep highest scoring version)
+        posts_sorted = sorted(posts, key=lambda x: x['drama_score'], reverse=True)
+
+        for post in posts_sorted:
+            current_title = post['title']
+            is_duplicate = False
+
+            # Check against all previously seen titles
+            for seen_title in seen_titles:
+                if self.titles_are_similar(current_title, seen_title):
+                    is_duplicate = True
+                    duplicates_removed += 1
+                    logger.debug(f"Duplicate found: '{current_title[:50]}...' similar to '{seen_title[:50]}...'")
+                    break
+
+            if not is_duplicate:
+                unique_posts.append(post)
+                seen_titles.append(current_title)
+
+        logger.info(f"🔄 Deduplication: {len(posts)} → {len(unique_posts)} posts ({duplicates_removed} duplicates removed)")
+        return unique_posts
 
     def save_processed_articles(self):
         self.ensure_data_directory()
@@ -163,7 +207,7 @@ class GossipScraper:
         found_celebrities = []
 
         for celebrity_name in self.celebrity_names:
-            if len(celebrity_name) < 4:  # Skip very short names
+            if len(celebrity_name) < 4:
                 continue
             pattern = r'\b' + re.escape(celebrity_name) + r'\b'
             if re.search(pattern, full_text):
@@ -184,7 +228,7 @@ class GossipScraper:
 
             total_matches = 0
             for name in name_variations:
-                if len(name) < 4:  # Skip very short names
+                if len(name) < 4:
                     continue
                 pattern = r'\b' + re.escape(name.lower()) + r'\b'
                 matches = len(re.findall(pattern, text))
@@ -200,14 +244,12 @@ class GossipScraper:
     def detect_potential_celebrities(self, title, content):
         text = f"{title} {content}"
 
-        # More restrictive patterns
         patterns = [
             r'\bactor\s+([A-Z][a-z]+ [A-Z][a-z]+)\b',
             r'\bactress\s+([A-Z][a-z]+ [A-Z][a-z]+)\b',
             r'\bsinger\s+([A-Z][a-z]+ [A-Z][a-z]+)\b',
             r'\brapper\s+([A-Z][a-z]+ [A-Z][a-z]+)\b',
             r'\bmusician\s+([A-Z][a-z]+ [A-Z][a-z]+)\b',
-            r'\bcelebrity\s+([A-Z][a-z]+ [A-Z][a-z]+)\b',
         ]
 
         for pattern in patterns:
@@ -215,7 +257,6 @@ class GossipScraper:
             for match in matches:
                 name = match.strip().lower()
 
-                # Skip if in excluded words or already tracked
                 if (name in self.excluded_words or 
                     name.replace(' ', '_') in self.celebrities or
                     len(name) < 6):
@@ -239,8 +280,7 @@ class GossipScraper:
             articles_processed = 0
             articles_rejected = 0
 
-            for entry in feed.entries[:20]:  # Limit entries per feed
-                # Check recency
+            for entry in feed.entries[:20]:
                 if hasattr(entry, 'published_parsed') and entry.published_parsed:
                     pub_date = datetime(*entry.published_parsed[:6])
                     if datetime.now() - pub_date > timedelta(hours=48):
@@ -253,22 +293,20 @@ class GossipScraper:
                 if not title or not link:
                     continue
 
-                # Generate unique ID
-                article_id = hashlib.md5(f"{title}{link}".encode()).hexdigest()
+                # Generate unique ID based on normalized title + source
+                normalized_title = self.normalize_title(title)
+                article_id = hashlib.md5(f"{normalized_title}{feed_name}".encode()).hexdigest()
+
                 if article_id in self.processed_articles:
                     continue
 
-                # Check for celebrity mentions
                 found_celebrities = self.contains_celebrity(title, content)
 
                 if not found_celebrities:
                     articles_rejected += 1
                     continue
 
-                # Extract mentions
                 mentions = self.extract_celebrity_mentions(title, content, feed_info['weight'])
-
-                # Auto-discovery
                 self.detect_potential_celebrities(title, content)
 
                 if mentions:
@@ -281,13 +319,15 @@ class GossipScraper:
                         'source': feed_name,
                         'weight': feed_info['weight'],
                         'mentions': mentions,
-                        'celebrities': found_celebrities[:3],  # Limit to top 3
-                        'drama_score': sum(mentions.values())
+                        'celebrities': found_celebrities[:3],
+                        'drama_score': sum(mentions.values()),
+                        'normalized_title': normalized_title  # For debugging
                     }
 
                     self.new_posts.append(entry_data)
                     self.processed_articles[article_id] = {
                         'title': title,
+                        'normalized_title': normalized_title,
                         'link': link,
                         'processed_date': datetime.now().isoformat()
                     }
@@ -327,7 +367,7 @@ class GossipScraper:
         new_celebrities = {}
 
         for name, count in self.potential_new_celebrities.items():
-            if count >= 3:  # Threshold
+            if count >= 3:
                 celebrity_key = name.replace(' ', '_')
                 new_celebrities[celebrity_key] = {
                     'category': 'unknown',
@@ -346,35 +386,33 @@ class GossipScraper:
     def save_data(self):
         self.ensure_data_directory()
 
-        # Remove duplicates by ID
-        unique_posts = {}
-        for post in self.new_posts:
-            unique_posts[post['id']] = post
+        logger.info(f"📊 Before deduplication: {len(self.new_posts)} posts")
 
-        final_posts = list(unique_posts.values())
-        final_posts.sort(key=lambda x: (x['drama_score'], x.get('published', '')), reverse=True)
+        # Apply advanced deduplication
+        unique_posts = self.advanced_deduplication(self.new_posts)
 
-        # Limit to reasonable number
-        final_posts = final_posts[:100]
+        # Sort by drama score and limit
+        unique_posts.sort(key=lambda x: (x['drama_score'], x.get('published', '')), reverse=True)
+        final_posts = unique_posts[:50]  # Limit to top 50
 
         gossip_data = {
             'entries': final_posts,
             'last_updated': datetime.now().isoformat(),
             'total_entries': len(final_posts),
-            'sources_processed': len([f for f in self.rss_feeds.keys()]),
+            'sources_processed': len(self.rss_feeds),
+            'deduplication_stats': {
+                'raw_posts': len(self.new_posts),
+                'after_dedup': len(unique_posts),
+                'final_count': len(final_posts)
+            },
             'celebrity_mentions': dict(self.celebrity_mentions),
-            'stats': {
-                'total_scraped': len(self.new_posts),
-                'after_dedup': len(final_posts),
-                'top_celebrities': sorted(self.celebrity_mentions.items(), 
-                                        key=lambda x: x[1], reverse=True)[:10]
-            }
+            'top_celebrities': sorted(self.celebrity_mentions.items(), 
+                                    key=lambda x: x[1], reverse=True)[:10]
         }
 
         with open('data/gossip_data.json', 'w') as f:
             json.dump(gossip_data, f, default=str, indent=2)
 
-        # Save updated celebrities
         try:
             with open(self.base_path / '_data' / 'celebrities.yml', 'w') as f:
                 yaml.dump(self.celebrities, f, default_flow_style=False, sort_keys=True)
@@ -383,17 +421,14 @@ class GossipScraper:
             logger.error(f"❌ Error saving celebrities.yml: {e}")
 
         self.save_processed_articles()
-        logger.info(f"💾 Saved {len(final_posts)} unique posts (from {len(self.new_posts)} scraped)")
+        logger.info(f"💾 Final output: {len(final_posts)} unique posts")
 
     def run(self):
         logger.info("🎭 Starting Enhanced Gossip Room scraper...")
         logger.info(f"📋 Loaded {len(self.celebrities)} celebrities")
-        logger.info(f"🔍 Tracking {len(self.celebrity_names)} searchable names")
 
         for feed_name, feed_info in self.rss_feeds.items():
             self.scrape_feed(feed_name, feed_info)
-
-        logger.info(f"📊 Raw posts collected: {len(self.new_posts)}")
 
         self.update_celebrity_scores()
 
