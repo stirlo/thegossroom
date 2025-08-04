@@ -1,0 +1,290 @@
+name: Restore Missing Celebrities
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  restore-celebrities:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+
+    - name: Restore missing celebrities
+      run: |
+        python - << 'EOF'
+        import yaml
+        from datetime import datetime
+        import os
+
+        # Load existing celebrities
+        with open('_data/celebrities.yml', 'r') as f:
+            celebrities = yaml.safe_load(f) or {}
+
+        print(f"📊 Current celebrities: {len(celebrities)}")
+
+        # Missing celebrities with nicknames and alternatives
+        missing_celebrities = {
+            # Musicians - Major missing ones
+            'justin_bieber': {'category': 'musician', 'drama_score': 75},
+            'bieber': {'category': 'musician', 'drama_score': 75},
+            'hailey_bieber': {'category': 'model', 'drama_score': 65},
+            'hailey_baldwin': {'category': 'model', 'drama_score': 65},
+
+            'diddy': {'category': 'musician', 'drama_score': 85},
+            'puff_daddy': {'category': 'musician', 'drama_score': 85},
+            'sean_combs': {'category': 'musician', 'drama_score': 85},
+            'p_diddy': {'category': 'musician', 'drama_score': 85},
+
+            'eminem': {'category': 'musician', 'drama_score': 70},
+            'marshall_mathers': {'category': 'musician', 'drama_score': 70},
+            'slim_shady': {'category': 'musician', 'drama_score': 70},
+
+            'drake': {'category': 'musician', 'drama_score': 80},
+            'aubrey_graham': {'category': 'musician', 'drama_score': 80},
+
+            'jay_z': {'category': 'musician', 'drama_score': 75},
+            'shawn_carter': {'category': 'musician', 'drama_score': 75},
+
+            'beyonce': {'category': 'musician', 'drama_score': 85},
+            'beyonce_knowles': {'category': 'musician', 'drama_score': 85},
+
+            'katy_perry': {'category': 'musician', 'drama_score': 70},
+            'katheryn_hudson': {'category': 'musician', 'drama_score': 70},
+
+            'nicki_minaj': {'category': 'musician', 'drama_score': 75},
+            'onika_maraj': {'category': 'musician', 'drama_score': 75},
+
+            'adele': {'category': 'musician', 'drama_score': 65},
+            'adele_adkins': {'category': 'musician', 'drama_score': 65},
+
+            'j_cole': {'category': 'musician', 'drama_score': 60},
+            'jermaine_cole': {'category': 'musician', 'drama_score': 60},
+
+            'lil_wayne': {'category': 'musician', 'drama_score': 65},
+            'dwayne_carter': {'category': 'musician', 'drama_score': 65},
+            'weezy': {'category': 'musician', 'drama_score': 65},
+
+            'big_sean': {'category': 'musician', 'drama_score': 55},
+            'sean_anderson': {'category': 'musician', 'drama_score': 55},
+
+            'gunna': {'category': 'musician', 'drama_score': 60},
+            'sergio_kitchens': {'category': 'musician', 'drama_score': 60},
+
+            'young_thug': {'category': 'musician', 'drama_score': 70},
+            'jeffery_williams': {'category': 'musician', 'drama_score': 70},
+            'thugger': {'category': 'musician', 'drama_score': 70},
+
+            'dr_dre': {'category': 'musician', 'drama_score': 70},
+            'andre_young': {'category': 'musician', 'drama_score': 70},
+
+            'fifty_cent': {'category': 'musician', 'drama_score': 60},
+            '50_cent': {'category': 'musician', 'drama_score': 60},
+            'curtis_jackson': {'category': 'musician', 'drama_score': 60},
+
+            'twenty_one_savage': {'category': 'musician', 'drama_score': 55},
+            '21_savage': {'category': 'musician', 'drama_score': 55},
+            'shayaa_abraham': {'category': 'musician', 'drama_score': 55},
+
+            'benny_the_butcher': {'category': 'musician', 'drama_score': 45},
+            'conway_the_machine': {'category': 'musician', 'drama_score': 45},
+            'freddie_gibbs': {'category': 'musician', 'drama_score': 50},
+            'gucci_mane': {'category': 'musician', 'drama_score': 55},
+            'halsey': {'category': 'musician', 'drama_score': 60},
+            'kesha': {'category': 'musician', 'drama_score': 55},
+            'key_glock': {'category': 'musician', 'drama_score': 45},
+            'latto': {'category': 'musician', 'drama_score': 50},
+            'lil_pump': {'category': 'musician', 'drama_score': 45},
+            'lil_yachty': {'category': 'musician', 'drama_score': 50},
+            'meek_mill': {'category': 'musician', 'drama_score': 60},
+            'metro_boomin': {'category': 'musician', 'drama_score': 55},
+            'rick_ross': {'category': 'musician', 'drama_score': 55},
+            'sza': {'category': 'musician', 'drama_score': 65},
+            'the_alchemist': {'category': 'musician', 'drama_score': 40},
+            'trent_reznor': {'category': 'musician', 'drama_score': 45},
+            'jessie_j': {'category': 'musician', 'drama_score': 45},
+            'mel_b': {'category': 'musician', 'drama_score': 50},
+            'soulja_boy': {'category': 'musician', 'drama_score': 55},
+            'chappell_roan': {'category': 'musician', 'drama_score': 60},
+            'chloe_bailey': {'category': 'musician', 'drama_score': 50},
+            'city_girls': {'category': 'musician', 'drama_score': 55},
+            'bia': {'category': 'musician', 'drama_score': 45},
+            'blockboy_jb': {'category': 'musician', 'drama_score': 40},
+
+            # Actors - Major missing ones
+            'tom_holland': {'category': 'actor', 'drama_score': 65},
+            'thomas_holland': {'category': 'actor', 'drama_score': 65},
+
+            'angelina_jolie': {'category': 'actor', 'drama_score': 80},
+            'angelina_jolie_pitt': {'category': 'actor', 'drama_score': 80},
+
+            'brad_pitt': {'category': 'actor', 'drama_score': 75},
+            'william_pitt': {'category': 'actor', 'drama_score': 75},
+
+            'jennifer_lawrence': {'category': 'actor', 'drama_score': 70},
+            'jen_lawrence': {'category': 'actor', 'drama_score': 70},
+
+            'bryan_cranston': {'category': 'actor', 'drama_score': 60},
+            'aaron_paul': {'category': 'actor', 'drama_score': 55},
+            'bob_odenkirk': {'category': 'actor', 'drama_score': 50},
+            'giancarlo_esposito': {'category': 'actor', 'drama_score': 55},
+            'ewan_mcgregor': {'category': 'actor', 'drama_score': 50},
+            'john_c_reilly': {'category': 'actor', 'drama_score': 45},
+            'ryan_reynolds': {'category': 'actor', 'drama_score': 65},
+            'blake_lively': {'category': 'actor', 'drama_score': 60},
+            'lindsay_lohan': {'category': 'actor', 'drama_score': 65},
+            'justin_baldoni': {'category': 'actor', 'drama_score': 55},
+            'liam': {'category': 'actor', 'drama_score': 50},
+            'alison_brie': {'category': 'actor', 'drama_score': 45},
+            'avantika': {'category': 'actor', 'drama_score': 40},
+            'denise_richards': {'category': 'actor', 'drama_score': 50},
+            'gabrielle_union': {'category': 'actor', 'drama_score': 55},
+            'jameela_jamil': {'category': 'actor', 'drama_score': 50},
+            'madison_pettis': {'category': 'actor', 'drama_score': 40},
+            'rachel_mcadams': {'category': 'actor', 'drama_score': 50},
+            'sandra_oh': {'category': 'actor', 'drama_score': 50},
+            'sasha_grey': {'category': 'actor', 'drama_score': 45},
+            'selma_hayek': {'category': 'actor', 'drama_score': 55},
+            'salma_hayek': {'category': 'actor', 'drama_score': 55},
+            'steven_yeun': {'category': 'actor', 'drama_score': 50},
+            'zazie_beetz': {'category': 'actor', 'drama_score': 45},
+
+            # Politicians/Public Figures
+            'donald_trump': {'category': 'politician', 'drama_score': 95},
+            'trump': {'category': 'politician', 'drama_score': 95},
+            'donald_j_trump': {'category': 'politician', 'drama_score': 95},
+
+            'joe_biden': {'category': 'politician', 'drama_score': 80},
+            'biden': {'category': 'politician', 'drama_score': 80},
+            'joseph_biden': {'category': 'politician', 'drama_score': 80},
+
+            'kamala_harris': {'category': 'politician', 'drama_score': 75},
+            'bernie_sanders': {'category': 'politician', 'drama_score': 70},
+            'jd_vance': {'category': 'politician', 'drama_score': 65},
+            'tim_walz': {'category': 'politician', 'drama_score': 60},
+            'barack_obama': {'category': 'politician', 'drama_score': 75},
+            'obama': {'category': 'politician', 'drama_score': 75},
+
+            # Comedians
+            'jon_stewart': {'category': 'comedian', 'drama_score': 55},
+            'larry_david': {'category': 'comedian', 'drama_score': 60},
+            'will_ferrell': {'category': 'comedian', 'drama_score': 55},
+            'seth_rogan': {'category': 'comedian', 'drama_score': 50},
+            'seth_rogen': {'category': 'comedian', 'drama_score': 50},
+            'bowen_yang': {'category': 'comedian', 'drama_score': 45},
+            'jb_smoove': {'category': 'comedian', 'drama_score': 40},
+            'jerrod_carmichael': {'category': 'comedian', 'drama_score': 50},
+            'josh_johnson': {'category': 'comedian', 'drama_score': 35},
+            'taylor_tomlinson': {'category': 'comedian', 'drama_score': 45},
+            'ali_wong': {'category': 'comedian', 'drama_score': 50},
+            'desi_lydic': {'category': 'comedian', 'drama_score': 40},
+            'maya_rudolph': {'category': 'comedian', 'drama_score': 50},
+            'michael_ian_black': {'category': 'comedian', 'drama_score': 35},
+            'nathan_fielder': {'category': 'comedian', 'drama_score': 45},
+            'rachel_bloom': {'category': 'comedian', 'drama_score': 40},
+
+            # Models/Influencers
+            'naomi_campbell': {'category': 'model', 'drama_score': 60},
+            'heidi_klum': {'category': 'model', 'drama_score': 55},
+            'irina_shayk': {'category': 'model', 'drama_score': 50},
+            'brooklyn_beckham': {'category': 'model', 'drama_score': 45},
+            'paulina_porizkov': {'category': 'model', 'drama_score': 40},
+            'sommer_ray': {'category': 'influencer', 'drama_score': 50},
+
+            # Reality TV/Royals
+            'paris_hilton': {'category': 'entrepreneur', 'drama_score': 60},
+            'meghan_markle': {'category': 'royal', 'drama_score': 85},
+            'duchess_of_sussex': {'category': 'royal', 'drama_score': 85},
+            'prince_harry': {'category': 'royal', 'drama_score': 80},
+            'duke_of_sussex': {'category': 'royal', 'drama_score': 80},
+            'harry_windsor': {'category': 'royal', 'drama_score': 80},
+            'princess_of_wales': {'category': 'royal', 'drama_score': 75},
+            'kate_middleton': {'category': 'royal', 'drama_score': 75},
+            'catherine_middleton': {'category': 'royal', 'drama_score': 75},
+            'brielle_biermann': {'category': 'reality_tv', 'drama_score': 35},
+
+            # Athletes
+            'lebron_james': {'category': 'athlete', 'drama_score': 70},
+            'king_james': {'category': 'athlete', 'drama_score': 70},
+            'tom_brady': {'category': 'athlete', 'drama_score': 65},
+            'simone_biles': {'category': 'athlete', 'drama_score': 60},
+            'livvy_dunne': {'category': 'athlete', 'drama_score': 55},
+            'olivia_dunne': {'category': 'athlete', 'drama_score': 55},
+
+            # Tech/Business
+            'mark_zuckerberg': {'category': 'entrepreneur', 'drama_score': 75},
+            'zuckerberg': {'category': 'entrepreneur', 'drama_score': 75},
+            'tim_cook': {'category': 'entrepreneur', 'drama_score': 50},
+            'mrbeast': {'category': 'influencer', 'drama_score': 67},
+            'jimmy_donaldson': {'category': 'influencer', 'drama_score': 67},
+
+            # Awards/Events
+            'oscars': {'category': 'event', 'drama_score': 60},
+            'academy_awards': {'category': 'event', 'drama_score': 60},
+            'grammys': {'category': 'event', 'drama_score': 65},
+            'grammy_awards': {'category': 'event', 'drama_score': 65},
+            'golden_globes': {'category': 'event', 'drama_score': 55},
+            'golden': {'category': 'event', 'drama_score': 55},
+            'globes': {'category': 'event', 'drama_score': 55},
+            'met_gala': {'category': 'event', 'drama_score': 70},
+            'met': {'category': 'event', 'drama_score': 70},
+            'gala': {'category': 'event', 'drama_score': 70},
+            'super_bowl': {'category': 'event', 'drama_score': 65},
+            'super': {'category': 'event', 'drama_score': 65},
+            'bowl': {'category': 'event', 'drama_score': 65},
+            'saturday_night_live': {'category': 'show', 'drama_score': 55},
+            'snl': {'category': 'show', 'drama_score': 55},
+            'awards': {'category': 'event', 'drama_score': 50},
+
+            # Fashion Brands
+            'nike': {'category': 'brand', 'drama_score': 45},
+
+            # Generic references
+            'jenner': {'category': 'reality_tv', 'drama_score': 70},
+            'kardashian': {'category': 'reality_tv', 'drama_score': 80},
+            'kanye': {'category': 'musician', 'drama_score': 88},
+            'ye': {'category': 'musician', 'drama_score': 88},
+        }
+
+        # Add missing celebrities
+        added_count = 0
+        current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+        for name, data in missing_celebrities.items():
+            if name not in celebrities:
+                celebrities[name] = {
+                    'category': data['category'],
+                    'discovery_date': '2025-08-04',
+                    'drama_score': data['drama_score'],
+                    'last_temperature_update': current_time,
+                    'memorial': False,
+                    'promotion_date': '2025-08-04',
+                    'status': 'explosive' if data['drama_score'] >= 85 else 'hot' if data['drama_score'] >= 70 else 'rising' if data['drama_score'] >= 60 else 'mild',
+                    'temperature_change': 0
+                }
+                added_count += 1
+
+        # Save updated celebrities
+        with open('_data/celebrities.yml', 'w') as f:
+            yaml.dump(celebrities, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
+
+        print(f"✅ Added {added_count} missing celebrities")
+        print(f"📊 Total celebrities now: {len(celebrities)}")
+        print("🎯 Major additions: Diddy, Tom Holland, Justin Bieber, Drake, Trump, and many more!")
+        EOF
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _data/celebrities.yml
+        git commit -m "🎭 Restore missing celebrities with nicknames and alternatives" || exit 0
+        git push
