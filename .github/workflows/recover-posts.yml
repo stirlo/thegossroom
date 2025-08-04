@@ -1,0 +1,86 @@
+name: 🔄 Recover Lost Posts
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_recovery:
+        description: 'Force recovery even if posts exist'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+        - 'false'
+        - 'true'
+
+jobs:
+  recover-posts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+
+    - name: 🔍 Check JSON Data
+      run: |
+        echo "📊 Checking for recoverable data..."
+        if [ -f "data/gossip_data.json" ]; then
+          echo "✅ Found gossip_data.json"
+          echo "📈 Entries in JSON:"
+          python -c "import json; data=json.load(open('data/gossip_data.json')); print(f'Total entries: {len(data.get(\"entries\", []))}')"
+        else
+          echo "❌ No gossip_data.json found"
+          exit 1
+        fi
+
+    - name: 🚀 Run Post Recovery
+      run: |
+        echo "🔄 Starting post recovery..."
+        python recover_posts.py
+
+    - name: 📊 Recovery Summary
+      run: |
+        echo "📈 Recovery Results:"
+        echo "📁 Posts directory contents:"
+        ls -la _posts/ | grep "recovered" | wc -l | xargs echo "Recovered posts:"
+        echo "📅 Latest recovered posts:"
+        ls -la _posts/*recovered*.md 2>/dev/null | head -5 || echo "No recovered posts found"
+
+    - name: 💾 Commit Recovered Posts
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - Post Recovery"
+
+        if [ -n "$(git status --porcelain)" ]; then
+          git add _posts/
+          git commit -m "🔄 Recover posts from JSON data
+
+          - Converted JSON entries to Jekyll markdown posts
+          - Added recovery metadata and tags
+          - Posts marked with 'recovered: true'
+          - Recovery date: $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
+          echo "✅ Committed and pushed recovered posts"
+        else
+          echo "ℹ️ No new posts to commit"
+        fi
+
+    - name: 🎉 Success Summary
+      run: |
+        echo "🎯 Post Recovery Complete!"
+        echo "✅ Check your _posts/ directory for recovered posts"
+        echo "🌐 Your Jekyll site should now display the recovered content"
+        echo "💡 Tip: Posts are marked with 'recovered: true' in frontmatter"
