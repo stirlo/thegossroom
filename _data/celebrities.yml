@@ -544,12 +544,12 @@ brooke_hogan:
 brooklyn_beckham:
   category: model
   discovery_date: '2025-08-04'
-  drama_score: 59
-  last_temperature_update: '2025-08-04 01:58:50'
+  drama_score: 60
+  last_temperature_update: '2025-08-04 03:53:40'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 14
+  temperature_change: 1
 bruce_mcculloch:
   category: comedian
   discovery_date: '2020-01-01'
@@ -788,8 +788,8 @@ coldplay:
   temperature_change: 3
 colton_underwood:
   category: reality_tv
-  drama_score: 59
-  last_temperature_update: '2025-08-04 02:14:45'
+  drama_score: 63
+  last_temperature_update: '2025-08-04 03:53:40'
   status: rising
   temperature_change: 4
 conan_obrien:
@@ -2181,17 +2181,17 @@ leslie_bibb:
 liam:
   category: actor
   discovery_date: '2025-08-04'
-  drama_score: 50
-  last_temperature_update: '2025-08-04 01:56:22'
+  drama_score: 58
+  last_temperature_update: '2025-08-04 03:53:40'
   memorial: false
   promotion_date: '2025-08-04'
-  status: mild
-  temperature_change: 0
+  status: rising
+  temperature_change: 8
 liam_neeson:
   category: unknown
   discovery_date: '2025-08-03'
   drama_score: 100
-  last_temperature_update: '2025-08-04 01:09:11'
+  last_temperature_update: '2025-08-04 03:53:40'
   memorial: false
   promotion_date: '2025-08-03'
   status: explosive
@@ -2561,12 +2561,12 @@ michelle_yeoh:
 mikayla_matthews:
   category: influencer
   discovery_date: '2022-07-05'
-  drama_score: 27
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 32
+  last_temperature_update: '2025-08-04 03:53:40'
   memorial: false
   promotion_date: '2023-01-15'
-  status: cooling
-  temperature_change: 3.8
+  status: mild
+  temperature_change: 5
 mike_myers:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2616,11 +2616,11 @@ naomi_campbell:
   category: model
   discovery_date: '2025-08-04'
   drama_score: 66
-  last_temperature_update: '2025-08-04 01:58:50'
+  last_temperature_update: '2025-08-04 03:53:40'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 6
+  temperature_change: 0
 natalia_dyer:
   category: actor
   discovery_date: '2020-01-01'
@@ -2821,7 +2821,10 @@ p_diddy:
   temperature_change: 0
 pamela_anderson:
   category: actor
-  drama_score: 70
+  drama_score: 74
+  last_temperature_update: '2025-08-04 03:53:40'
+  status: hot
+  temperature_change: 4
 paris_hilton:
   category: entrepreneur
   discovery_date: '2025-08-04'
