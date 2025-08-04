@@ -10,6 +10,12 @@ import re
 from datetime import datetime
 from pathlib import Path
 import logging
+import os
+
+# Change to repository root if running from scripts directory
+if os.path.basename(os.getcwd()) == 'scripts':
+    os.chdir('..')
+    print("📁 Changed to repository root directory")
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -107,11 +113,16 @@ class PostRecovery:
                 elif mentions:
                     celebrity_display = [k.replace('_', ' ').title() for k in mentions.keys()][:5]
 
-                # Create frontmatter
+                # Create frontmatter - FIXED: No backslashes in f-string
+                escaped_title = title.replace('"', '\\"')
+                recovery_timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                current_time_display = datetime.now().strftime('%Y-%m-%d %H:%M')
+                source_display = source.replace('_', ' ').title()
+
                 frontmatter = f"""---
 layout: post
-title: "{title.replace('"', '\\"')}"
-date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} +0000
+title: "{escaped_title}"
+date: {recovery_timestamp} +0000
 categories: gossip
 tags: {tags}
 drama_score: {drama_score}
@@ -120,7 +131,7 @@ source: {source}
 source_url: "{link}"
 mentions: {mentions if isinstance(mentions, dict) else {}}
 recovered: true
-recovery_date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+recovery_date: {recovery_timestamp}
 original_published: "{published}"
 ---
 
@@ -132,10 +143,10 @@ original_published: "{published}"
 
 **👑 Celebrities Mentioned:** {', '.join(celebrity_display) if celebrity_display else 'Various'}
 
-[📰 Read full article at {source.replace('_', ' ').title()}]({link})
+[📰 Read full article at {source_display}]({link})
 
 ---
-*🔄 This post was recovered from JSON data on {datetime.now().strftime('%Y-%m-%d %H:%M')}. Originally processed from RSS feeds.*
+*🔄 This post was recovered from JSON data on {current_time_display}. Originally processed from RSS feeds.*
 """
 
                 # Write the file
