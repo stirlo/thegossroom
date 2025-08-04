@@ -2,12 +2,17 @@ name: Restore Missing Celebrities
 on:
   workflow_dispatch:  # Manual trigger
 
+permissions:
+  contents: write  # Required for pushing changes
+
 jobs:
   restore-celebrities:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -118,6 +123,10 @@ jobs:
             'city_girls': {'category': 'musician', 'drama_score': 55},
             'bia': {'category': 'musician', 'drama_score': 45},
             'blockboy_jb': {'category': 'musician', 'drama_score': 40},
+            'yung_miami': {'category': 'musician', 'drama_score': 55},
+            'jt': {'category': 'musician', 'drama_score': 55},
+            'skylar_grey': {'category': 'musician', 'drama_score': 40},
+            'renee_rapp': {'category': 'musician', 'drama_score': 55},
 
             # Actors - Major missing ones
             'tom_holland': {'category': 'actor', 'drama_score': 65},
@@ -198,6 +207,7 @@ jobs:
             'brooklyn_beckham': {'category': 'model', 'drama_score': 45},
             'paulina_porizkov': {'category': 'model', 'drama_score': 40},
             'sommer_ray': {'category': 'influencer', 'drama_score': 50},
+            'sam_asghari': {'category': 'model', 'drama_score': 45},
 
             # Reality TV/Royals
             'paris_hilton': {'category': 'entrepreneur', 'drama_score': 60},
@@ -225,6 +235,9 @@ jobs:
             'tim_cook': {'category': 'entrepreneur', 'drama_score': 50},
             'mrbeast': {'category': 'influencer', 'drama_score': 67},
             'jimmy_donaldson': {'category': 'influencer', 'drama_score': 67},
+
+            # TV Hosts
+            'andy_cohen': {'category': 'tv_host', 'drama_score': 55},
 
             # Awards/Events
             'oscars': {'category': 'event', 'drama_score': 60},
@@ -281,12 +294,8 @@ jobs:
         print("🎯 Major additions: Diddy, Tom Holland, Justin Bieber, Drake, Trump, and many more!")
         EOF
 
-    - name: Commit changes
-  run: |
-    git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    git add _data/celebrities.yml
-    git commit -m "🎭 Restore missing celebrities with nicknames and alternatives" || exit 0
-    git push
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "🎭 Restore missing celebrities with nicknames and alternatives"
+        file_pattern: "_data/celebrities.yml"
