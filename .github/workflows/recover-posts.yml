@@ -46,10 +46,19 @@ jobs:
           exit 1
         fi
 
+    - name: 🔍 Check Scripts Directory
+      run: |
+        echo "📁 Scripts directory contents:"
+        ls -la scripts/
+        echo "🔍 Looking for recover_posts.py:"
+        ls -la scripts/recover_posts.py || echo "❌ recover_posts.py not found in scripts/"
+
     - name: 🚀 Run Post Recovery
       run: |
         echo "🔄 Starting post recovery..."
+        cd scripts
         python recover_posts.py
+        cd ..
 
     - name: 📊 Recovery Summary
       run: |
