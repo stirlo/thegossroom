@@ -106,6 +106,9 @@ aimee_lou_wood:
   promotion_date: '2024-03-01'
   status: mild
   temperature_change: 22.3
+alex_cooper:
+  category: podcaster
+  drama_score: 65
 ali_wong:
   category: comedian
   discovery_date: '2025-08-04'
@@ -124,6 +127,9 @@ alison_brie:
   promotion_date: '2025-08-04'
   status: rising
   temperature_change: 9
+alix_earle:
+  category: influencer
+  drama_score: 70
 amy_poehler:
   category: comedian
   discovery_date: '2020-01-01'
@@ -142,6 +148,9 @@ amy_sedaris:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 12
+ana_de_armas:
+  category: actor
+  drama_score: 70
 andre_young:
   category: musician
   discovery_date: '2025-08-04'
@@ -178,6 +187,15 @@ angelina_jolie_pitt:
   promotion_date: '2025-08-04'
   status: hot
   temperature_change: 0
+anna_camp:
+  category: actor
+  drama_score: 50
+anna_kendrick:
+  category: actor
+  drama_score: 65
+anne_hathaway:
+  category: actor
+  drama_score: 65
 anya_taylor_joy:
   category: actor
   discovery_date: '2020-01-01'
@@ -286,6 +304,9 @@ bella_poarch:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 5
+bella_twins:
+  category: wrestler
+  drama_score: 60
 ben_schwartz:
   category: comedian
   discovery_date: '2020-01-01'
@@ -475,6 +496,12 @@ brayden_rowley:
   promotion_date: '2022-10-15'
   status: cooling
   temperature_change: 5.3
+breanna_stewart:
+  category: athlete
+  drama_score: 60
+brie_garcia:
+  category: wrestler
+  drama_score: 60
 brielle_biermann:
   category: reality_tv
   discovery_date: '2025-08-04'
@@ -484,6 +511,9 @@ brielle_biermann:
   promotion_date: '2025-08-04'
   status: mild
   temperature_change: 0
+brooke_hogan:
+  category: reality_tv
+  drama_score: 50
 brooklyn_beckham:
   category: model
   discovery_date: '2025-08-04'
@@ -511,6 +541,9 @@ bryan_cranston:
   promotion_date: '2025-08-04'
   status: rising
   temperature_change: 0
+bryan_kohberger:
+  category: criminal
+  drama_score: 70
 bryce_hall:
   category: influencer
   discovery_date: '2020-01-01'
@@ -520,6 +553,9 @@ bryce_hall:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 4
+caitlin_clark:
+  category: athlete
+  drama_score: 70
 caitlyn_jenner:
   category: reality_tv
   discovery_date: '2020-01-01'
@@ -693,6 +729,9 @@ christian_friedel:
   promotion_date: '2024-03-01'
   status: mild
   temperature_change: 3
+christina_haack:
+  category: tv_host
+  drama_score: 55
 city_girls:
   category: musician
   discovery_date: '2025-08-04'
@@ -711,6 +750,9 @@ coldplay:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 3
+colton_underwood:
+  category: reality_tv
+  drama_score: 55
 conan_obrien:
   category: comedian
   discovery_date: '2020-01-01'
@@ -747,6 +789,12 @@ curtis_jackson:
   promotion_date: '2025-08-04'
   status: rising
   temperature_change: 0
+cynthia_nixon:
+  category: actor
+  drama_score: 55
+dakota_johnson:
+  category: actor
+  drama_score: 65
 dakota_mortensen:
   category: influencer
   discovery_date: '2022-06-20'
@@ -954,6 +1002,9 @@ dwayne_carter:
   promotion_date: '2025-08-04'
   status: rising
   temperature_change: 0
+ed_kelce:
+  category: celebrity_family
+  drama_score: 60
 ed_sheeran:
   category: musician
   discovery_date: '2020-01-01'
@@ -963,6 +1014,12 @@ ed_sheeran:
   promotion_date: '2020-01-01'
   status: hot
   temperature_change: 32
+el_moussa:
+  category: tv_host
+  drama_score: 50
+elizabeth_holmes:
+  category: entrepreneur
+  drama_score: 75
 ellie_kemper:
   category: comedian
   discovery_date: '2020-01-01'
@@ -999,6 +1056,9 @@ emma_myers:
   promotion_date: '2022-12-15'
   status: mild
   temperature_change: 28.1
+erik_menendez:
+  category: criminal
+  drama_score: 75
 eugene_levy:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1098,6 +1158,9 @@ gala:
   promotion_date: '2025-08-04'
   status: hot
   temperature_change: 0
+garcia_twins:
+  category: wrestler
+  drama_score: 60
 gaten_matarazzo:
   category: actor
   discovery_date: '2020-01-01'
@@ -1107,6 +1170,9 @@ gaten_matarazzo:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 4.8
+ghislaine_maxwell:
+  category: criminal
+  drama_score: 80
 giancarlo_esposito:
   category: actor
   discovery_date: '2025-08-04'
@@ -1237,6 +1303,9 @@ harris_wittels:
   promotion_date: '2020-01-01'
   status: memorial
   temperature_change: 0
+harrison_ford:
+  category: actor
+  drama_score: 70
 harry_styles:
   category: musician
   discovery_date: '2020-01-01'
@@ -1255,6 +1324,9 @@ harry_windsor:
   promotion_date: '2025-08-04'
   status: hot
   temperature_change: 0
+heather_rae_el_moussa:
+  category: reality_tv
+  drama_score: 50
 heidi_klum:
   category: model
   discovery_date: '2025-08-04'
@@ -1273,6 +1345,9 @@ hiroshi_fujiwara:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 1.8
+hogan:
+  category: wrestler
+  drama_score: 70
 horatio_sanz:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1291,6 +1366,9 @@ howard_stern:
   promotion_date: '2020-01-01'
   status: rising
   temperature_change: 12.8
+hulk_hogan:
+  category: wrestler
+  drama_score: 70
 hunter_schafer:
   category: actor
   discovery_date: '2021-08-15'
@@ -1399,6 +1477,9 @@ jason_isaacs:
   promotion_date: '2024-03-01'
   status: mild
   temperature_change: 7
+jason_kelce:
+  category: athlete
+  drama_score: 70
 jason_mantzoukas:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1480,6 +1561,9 @@ jen_lawrence:
   promotion_date: '2025-08-04'
   status: hot
   temperature_change: 0
+jen_shah:
+  category: reality_tv
+  drama_score: 65
 jenna_bandy:
   category: influencer
   discovery_date: '2022-07-01'
@@ -1507,6 +1591,9 @@ jenner:
   promotion_date: '2025-08-04'
   status: hot
   temperature_change: 0
+jennifer_garner:
+  category: actor
+  drama_score: 65
 jennifer_lawrence:
   category: actor
   discovery_date: '2025-08-04'
@@ -1761,6 +1848,9 @@ kardashian:
   promotion_date: '2025-08-04'
   status: hot
   temperature_change: 0
+kate_gosselin:
+  category: reality_tv
+  drama_score: 55
 kate_mckinnon:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1806,6 +1896,12 @@ keegan_michael_key:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 5.3
+kelce:
+  category: athlete
+  drama_score: 75
+kelly_dodd:
+  category: reality_tv
+  drama_score: 60
 kendall_jenner:
   category: model
   discovery_date: '2020-01-01'
@@ -1905,6 +2001,9 @@ kris_jenner:
   promotion_date: '2020-01-01'
   status: rising
   temperature_change: 1
+kristin_davis:
+  category: actor
+  drama_score: 55
 ksi:
   category: influencer
   discovery_date: '2020-01-01'
@@ -2076,6 +2175,12 @@ logan_paul:
   promotion_date: '2020-01-01'
   status: hot
   temperature_change: 2
+loni_anderson:
+  category: actor
+  drama_score: 55
+lyle_menendez:
+  category: criminal
+  drama_score: 75
 lynn_shelton:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2177,6 +2282,9 @@ marshall_mathers:
   promotion_date: '2025-08-04'
   status: hot
   temperature_change: 0
+martha_stewart:
+  category: entrepreneur
+  drama_score: 70
 martin_short:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2204,6 +2312,9 @@ matt_besser:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 15
+matt_rife:
+  category: comedian
+  drama_score: 70
 matt_walsh:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2276,6 +2387,9 @@ mel_b:
   promotion_date: '2025-08-04'
   status: rising
   temperature_change: 6
+menendez:
+  category: criminal
+  drama_score: 75
 met:
   category: event
   discovery_date: '2025-08-04'
@@ -2303,6 +2417,9 @@ metro_boomin:
   promotion_date: '2025-08-04'
   status: mild
   temperature_change: 0
+mgk:
+  category: musician
+  drama_score: 65
 michael_b_jordan:
   category: actor
   discovery_date: '2020-01-01'
@@ -2330,6 +2447,9 @@ michelle_monaghan:
   promotion_date: '2024-03-01'
   status: rising
   temperature_change: 15
+michelle_yeoh:
+  category: actor
+  drama_score: 65
 mikayla_matthews:
   category: influencer
   discovery_date: '2022-07-05'
@@ -2402,6 +2522,9 @@ natalia_dyer:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 6.7
+natasha_richardson:
+  category: actor
+  drama_score: 65
 natasha_rothwell:
   category: actor
   discovery_date: '2024-01-15'
@@ -2474,6 +2597,9 @@ nigo:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 4.2
+nikki_garcia:
+  category: wrestler
+  drama_score: 60
 nikocado_avocado:
   category: influencer
   discovery_date: '2020-01-01'
@@ -2528,6 +2654,9 @@ olivia_rodrigo:
   promotion_date: '2021-03-01'
   status: explosive
   temperature_change: 2
+olympian_sha_carri_richardson:
+  category: athlete
+  drama_score: 65
 onika_maraj:
   category: musician
   discovery_date: '2025-08-04'
@@ -2564,6 +2693,9 @@ owen_wilson:
   promotion_date: '2020-01-01'
   status: mild
   temperature_change: 1
+ozzy_osbourne:
+  category: musician
+  drama_score: 75
 p_diddy:
   category: musician
   discovery_date: '2025-08-04'
@@ -2573,6 +2705,9 @@ p_diddy:
   promotion_date: '2025-08-04'
   status: explosive
   temperature_change: 0
+pamela_anderson:
+  category: actor
+  drama_score: 70
 paris_hilton:
   category: entrepreneur
   discovery_date: '2025-08-04'
@@ -2762,6 +2897,9 @@ renee_rapp:
   promotion_date: '2025-08-04'
   status: mild
   temperature_change: 0
+richardson:
+  category: athlete
+  drama_score: 65
 rick_ross:
   category: musician
   discovery_date: '2025-08-04'
@@ -2789,6 +2927,9 @@ rob_kardashian:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 1
+rod_stewart:
+  category: musician
+  drama_score: 65
 ryan_reynolds:
   category: actor
   discovery_date: '2025-08-04'
@@ -2852,6 +2993,9 @@ sarah_catherine_hook:
   promotion_date: '2024-03-01'
   status: rising
   temperature_change: 8
+sarah_michelle_gellar:
+  category: actor
+  drama_score: 60
 sarah_silverman:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2987,6 +3131,12 @@ seth_rogen:
   promotion_date: '2025-08-04'
   status: mild
   temperature_change: 0
+sha_carri_richardson:
+  category: athlete
+  drama_score: 65
+shacarri_richardson:
+  category: athlete
+  drama_score: 65
 shaun_diston:
   category: comedian
   discovery_date: '2020-01-01'
@@ -3167,6 +3317,9 @@ sza:
   promotion_date: '2025-08-04'
   status: rising
   temperature_change: 0
+tarek_el_moussa:
+  category: tv_host
+  drama_score: 50
 tate_paul:
   category: influencer
   discovery_date: '2022-06-25'
@@ -3329,6 +3482,9 @@ tom_brady:
   promotion_date: '2025-08-04'
   status: rising
   temperature_change: 4
+tom_cruise:
+  category: actor
+  drama_score: 80
 tom_holland:
   category: actor
   discovery_date: '2025-08-04'
@@ -3347,6 +3503,9 @@ travis_barker:
   promotion_date: '2021-06-01'
   status: hot
   temperature_change: 19
+travis_kelce:
+  category: athlete
+  drama_score: 80
 travis_scott:
   category: musician
   discovery_date: '2020-01-01'
@@ -3457,6 +3616,9 @@ whitney_leavitt:
   promotion_date: '2022-09-01'
   status: rising
   temperature_change: 18.4
+whitney_port:
+  category: reality_tv
+  drama_score: 50
 will_ferrell:
   category: comedian
   discovery_date: '2025-08-04'
