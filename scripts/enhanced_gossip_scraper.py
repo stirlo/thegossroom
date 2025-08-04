@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enhanced Gossip Room RSS Scraper - With Advanced Deduplication
+Enhanced Gossip Room RSS Scraper - With Advanced Deduplication and Debug Logging
 """
 
 import feedparser
@@ -16,8 +16,17 @@ import logging
 import hashlib
 from difflib import SequenceMatcher
 
+# Setup dual logging - console and debug file
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Create debug logger that overwrites each run
+debug_logger = logging.getLogger('scraper_debug')
+debug_logger.setLevel(logging.DEBUG)
+debug_handler = logging.FileHandler('scraper_debug.log', mode='w')
+debug_formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
+debug_handler.setFormatter(debug_formatter)
+debug_logger.addHandler(debug_handler)
 
 class GossipScraper:
     def __init__(self):
@@ -56,6 +65,43 @@ class GossipScraper:
             'espn': {'url': 'https://www.espn.com/espn/rss/news', 'weight': 1},
             'bbc_entertainment': {'url': 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'weight': 1},
         }
+
+    def get_rejection_reason(self, title, content, link, article_id):
+        """Determine why an article was rejected"""
+        if not title or not link:
+            return "Missing title or link"
+
+        if article_id in self.processed_articles:
+            return "Already processed (duplicate ID)"
+
+        found_celebrities = self.contains_celebrity(title, content)
+        if not found_celebrities:
+            return "No celebrity matches found"
+
+        return "Unknown rejection reason"
+
+    def log_feed_results(self, feed_name, all_articles, accepted_articles, rejected_count):
+        """Log detailed results for each feed"""
+        debug_logger.info(f"\n{'='*60}")
+        debug_logger.info(f"FEED: {feed_name.upper()}")
+        debug_logger.info(f"Total articles fetched: {len(all_articles)}")
+        debug_logger.info(f"Accepted: {len(accepted_articles)}, Rejected: {rejected_count}")
+        debug_logger.info(f"{'='*60}")
+
+        for i, article_info in enumerate(all_articles, 1):
+            title = article_info['title'][:80] + "..." if len(article_info['title']) > 80 else article_info['title']
+            status = "✅ ACCEPTED" if article_info['accepted'] else "❌ REJECTED"
+
+            debug_logger.info(f"{i:2d}. {status} | {title}")
+
+            if not article_info['accepted']:
+                debug_logger.info(f"    └─ Reason: {article_info['rejection_reason']}")
+            else:
+                celebrities = article_info.get('celebrities', [])
+                if celebrities:
+                    debug_logger.info(f"    └─ Celebrities: {', '.join(celebrities[:3])}")
+
+    # [Keep all your existing methods unchanged until scrape_feed]
 
     def ensure_data_directory(self):
         Path('data').mkdir(exist_ok=True)
@@ -279,6 +325,7 @@ class GossipScraper:
 
             articles_processed = 0
             articles_rejected = 0
+            all_articles_info = []  # For detailed logging
 
             for entry in feed.entries[:20]:
                 if hasattr(entry, 'published_parsed') and entry.published_parsed:
@@ -290,26 +337,45 @@ class GossipScraper:
                 content = self.clean_text(entry.get('summary', '') or entry.get('description', ''))
                 link = entry.get('link', '')
 
-                if not title or not link:
-                    continue
-
                 # Generate unique ID based on normalized title + source
                 normalized_title = self.normalize_title(title)
                 article_id = hashlib.md5(f"{normalized_title}{feed_name}".encode()).hexdigest()
 
-                if article_id in self.processed_articles:
+                # Track article for logging
+                article_info = {
+                    'title': title,
+                    'link': link,
+                    'accepted': False,
+                    'rejection_reason': None,
+                    'celebrities': []
+                }
+
+                # Check rejection reasons
+                rejection_reason = self.get_rejection_reason(title, content, link, article_id)
+
+                if rejection_reason != "Unknown rejection reason":
+                    article_info['rejection_reason'] = rejection_reason
+                    articles_rejected += 1
+                    all_articles_info.append(article_info)
                     continue
 
                 found_celebrities = self.contains_celebrity(title, content)
 
                 if not found_celebrities:
+                    article_info['rejection_reason'] = "No celebrity matches found"
                     articles_rejected += 1
+                    all_articles_info.append(article_info)
                     continue
 
                 mentions = self.extract_celebrity_mentions(title, content, feed_info['weight'])
                 self.detect_potential_celebrities(title, content)
 
                 if mentions:
+                    # Article accepted
+                    article_info['accepted'] = True
+                    article_info['celebrities'] = found_celebrities
+                    all_articles_info.append(article_info)
+
                     entry_data = {
                         'id': article_id,
                         'title': title,
@@ -321,7 +387,7 @@ class GossipScraper:
                         'mentions': mentions,
                         'celebrities': found_celebrities[:3],
                         'drama_score': sum(mentions.values()),
-                        'normalized_title': normalized_title  # For debugging
+                        'normalized_title': normalized_title
                     }
 
                     self.new_posts.append(entry_data)
@@ -333,12 +399,19 @@ class GossipScraper:
                     }
                     articles_processed += 1
 
+            # Log detailed results
+            self.log_feed_results(feed_name, all_articles_info, 
+                                [a for a in all_articles_info if a['accepted']], 
+                                articles_rejected)
+
             logger.info(f"✅ {feed_name}: {articles_processed} posts, {articles_rejected} rejected")
             time.sleep(0.5)
 
         except Exception as e:
             logger.error(f"❌ Error scraping {feed_name}: {e}")
+            debug_logger.error(f"❌ Error scraping {feed_name}: {e}")
 
+    # [Keep all remaining methods unchanged]
     def update_celebrity_scores(self):
         for celebrity_key, mentions in self.celebrity_mentions.items():
             if celebrity_key in self.celebrities:
@@ -424,6 +497,10 @@ class GossipScraper:
         logger.info(f"💾 Final output: {len(final_posts)} unique posts")
 
     def run(self):
+        debug_logger.info("🎭 STARTING ENHANCED GOSSIP ROOM SCRAPER")
+        debug_logger.info(f"📋 Loaded {len(self.celebrities)} celebrities")
+        debug_logger.info(f"🔍 Generated {len(self.celebrity_names)} searchable names")
+
         logger.info("🎭 Starting Enhanced Gossip Room scraper...")
         logger.info(f"📋 Loaded {len(self.celebrities)} celebrities")
 
@@ -440,6 +517,7 @@ class GossipScraper:
         self.save_data()
 
         logger.info("✨ Scraping complete!")
+        debug_logger.info("✨ SCRAPING COMPLETE - Check scraper_debug.log for detailed analysis")
 
         if self.celebrity_mentions:
             top_mentions = sorted(self.celebrity_mentions.items(), key=lambda x: x[1], reverse=True)[:5]
