@@ -1,0 +1,28 @@
+# .github/workflows/clear-cache.yml
+name: Clear Jekyll Cache
+
+on:
+  workflow_dispatch:  # Manual trigger button
+
+jobs:
+  clear-cache:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Clear Cache
+      run: |
+        rm -rf _site/ .jekyll-cache/ .sass-cache/ tag/ category/
+        echo "✅ Cache cleared"
+
+    - name: Commit Changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "🧹 Clear Jekyll cache" || echo "No changes"
+        git push
