@@ -1,189 +1,95 @@
-#!/usr/bin/env python3
-"""
-Post Recovery Script - Convert JSON data to Jekyll posts
-Recovers all posts that were saved to JSON but never converted to .md files
-"""
+name: 🔄 Recover Lost Posts
 
-import json
-import yaml
-import re
-from datetime import datetime
-from pathlib import Path
-import logging
-import os
+on:
+  workflow_dispatch:
+    inputs:
+      force_recovery:
+        description: 'Force recovery even if posts exist'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+        - 'false'
+        - 'true'
 
-# Change to repository root if running from scripts directory
-if os.path.basename(os.getcwd()) == 'scripts':
-    os.chdir('..')
-    print("📁 Changed to repository root directory")
+jobs:
+  recover-posts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-# Setup logging
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-logger = logging.getLogger(__name__)
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-class PostRecovery:
-    def __init__(self):
-        self.base_path = Path('.')
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
 
-    def recover_posts_from_json(self):
-        """🚀 RECOVERY: Convert existing JSON data to Jekyll posts"""
-        try:
-            # Load the JSON data
-            json_path = 'data/gossip_data.json'
-            if not Path(json_path).exists():
-                logger.error(f"❌ {json_path} not found!")
-                return 0
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
 
-            with open(json_path, 'r') as f:
-                gossip_data = json.load(f)
+    - name: 🔍 Check JSON Data
+      run: |
+        echo "📊 Checking for recoverable data..."
+        if [ -f "data/gossip_data.json" ]; then
+          echo "✅ Found gossip_data.json"
+          echo "📈 Entries in JSON:"
+          python -c "import json; data=json.load(open('data/gossip_data.json')); print(f'Total entries: {len(data.get(\"entries\", []))}')"
+        else
+          echo "❌ No gossip_data.json found"
+          exit 1
+        fi
 
-            entries = gossip_data.get('entries', [])
-            logger.info(f"🔍 Found {len(entries)} entries in JSON to recover")
+    - name: 🔍 Check Scripts Directory
+      run: |
+        echo "📁 Scripts directory contents:"
+        ls -la scripts/
+        echo "🔍 Looking for recover_posts.py:"
+        ls -la scripts/recover_posts.py || echo "❌ recover_posts.py not found in scripts/"
 
-            if not entries:
-                logger.info("ℹ️ No entries found in JSON file")
-                return 0
+    - name: 🚀 Run Post Recovery
+      run: |
+        echo "🔄 Starting post recovery..."
+        cd scripts
+        python recover_posts.py
+        cd ..
 
-            # Ensure _posts directory exists
-            posts_dir = self.base_path / '_posts'
-            posts_dir.mkdir(exist_ok=True)
+    - name: 📊 Recovery Summary
+      run: |
+        echo "📈 Recovery Results:"
+        echo "📁 Posts directory contents:"
+        ls -la _posts/ | grep "recovered" | wc -l | xargs echo "Recovered posts:"
+        echo "📅 Latest recovered posts:"
+        ls -la _posts/*recovered*.md 2>/dev/null | head -5 || echo "No recovered posts found"
 
-            recovered_count = 0
-            skipped_count = 0
+    - name: 💾 Commit Recovered Posts
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - Post Recovery"
 
-            for i, entry in enumerate(entries, 1):
-                # Extract data from JSON entry
-                title = entry.get('title', 'Untitled')
-                content = entry.get('content', '')
-                link = entry.get('link', '')
-                source = entry.get('source', 'unknown')
-                drama_score = entry.get('drama_score', 1)
-                mentions = entry.get('mentions', {})
-                celebrities = entry.get('celebrities', [])
-                published = entry.get('published', '')
+        if [ -n "$(git status --porcelain)" ]; then
+          git add _posts/
+          git commit -m "🔄 Recover posts from JSON data
 
-                # Generate filename
-                date_str = datetime.now().strftime('%Y-%m-%d')
-                slug = re.sub(r'[^a-zA-Z0-9\s]', '', title).strip()
-                slug = re.sub(r'\s+', '-', slug).lower()[:50]
-                filename = f"{date_str}-{slug}-recovered.md"
+          - Converted JSON entries to Jekyll markdown posts
+          - Added recovery metadata and tags
+          - Posts marked with 'recovered: true'
+          - Recovery date: $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
+          echo "✅ Committed and pushed recovered posts"
+        else
+          echo "ℹ️ No new posts to commit"
+        fi
 
-                filepath = posts_dir / filename
-
-                # Skip if already exists
-                if filepath.exists():
-                    logger.debug(f"⏭️ Skipping existing: {filename}")
-                    skipped_count += 1
-                    continue
-
-                # Determine primary celebrity
-                primary_celebrity = 'unknown'
-                if mentions and isinstance(mentions, dict):
-                    primary_celebrity = max(mentions.keys(), key=mentions.get)
-                elif celebrities and len(celebrities) > 0:
-                    primary_celebrity = str(celebrities[0]).replace(' ', '_')
-
-                # Create tags
-                tags = []
-                if primary_celebrity != 'unknown':
-                    tags.append(primary_celebrity.replace('_', '-'))
-                tags.append(f"source-{source}")
-
-                # Drama level
-                if drama_score >= 10:
-                    drama_level = "explosive"
-                elif drama_score >= 5:
-                    drama_level = "hot"
-                elif drama_score >= 2:
-                    drama_level = "rising"
-                else:
-                    drama_level = "mild"
-
-                tags.append(f"drama-{drama_level}")
-                tags.append("recovered")
-
-                # Clean content
-                if not content:
-                    content = f"Article about {', '.join([str(c) for c in celebrities[:3]])} from {source}."
-
-                # Create celebrity list for display
-                celebrity_display = []
-                if celebrities:
-                    celebrity_display = [str(c).replace('_', ' ').title() for c in celebrities[:5]]
-                elif mentions:
-                    celebrity_display = [k.replace('_', ' ').title() for k in mentions.keys()][:5]
-
-                # Create frontmatter - FIXED: No backslashes in f-string
-                escaped_title = title.replace('"', '\\"')
-                recovery_timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                current_time_display = datetime.now().strftime('%Y-%m-%d %H:%M')
-                source_display = source.replace('_', ' ').title()
-
-                frontmatter = f"""---
-layout: post
-title: "{escaped_title}"
-date: {recovery_timestamp} +0000
-categories: gossip
-tags: {tags}
-drama_score: {drama_score}
-primary_celebrity: {primary_celebrity}
-source: {source}
-source_url: "{link}"
-mentions: {mentions if isinstance(mentions, dict) else {}}
-recovered: true
-recovery_date: {recovery_timestamp}
-original_published: "{published}"
----
-
-{content}
-
----
-
-**🔥 Drama Score:** {drama_score} | **Level:** {drama_level.upper()}
-
-**👑 Celebrities Mentioned:** {', '.join(celebrity_display) if celebrity_display else 'Various'}
-
-[📰 Read full article at {source_display}]({link})
-
----
-*🔄 This post was recovered from JSON data on {current_time_display}. Originally processed from RSS feeds.*
-"""
-
-                # Write the file
-                try:
-                    with open(filepath, 'w', encoding='utf-8') as f:
-                        f.write(frontmatter)
-
-                    recovered_count += 1
-                    logger.info(f"✅ Recovered ({i}/{len(entries)}): {filename}")
-
-                except Exception as e:
-                    logger.error(f"❌ Failed to write {filename}: {e}")
-
-            logger.info(f"🎉 Recovery complete!")
-            logger.info(f"✅ Successfully recovered: {recovered_count} posts")
-            logger.info(f"⏭️ Skipped existing: {skipped_count} posts")
-            logger.info(f"📁 Total entries processed: {len(entries)}")
-
-            return recovered_count
-
-        except FileNotFoundError:
-            logger.error("❌ No data/gossip_data.json found to recover from")
-            return 0
-        except json.JSONDecodeError as e:
-            logger.error(f"❌ Invalid JSON in gossip_data.json: {e}")
-            return 0
-        except Exception as e:
-            logger.error(f"❌ Error during recovery: {e}")
-            return 0
-
-if __name__ == "__main__":
-    logger.info("🚀 Starting Post Recovery...")
-    recovery = PostRecovery()
-    recovered = recovery.recover_posts_from_json()
-
-    if recovered > 0:
-        logger.info(f"🎯 Success! Recovered {recovered} posts to _posts/ directory")
-        logger.info("💡 Run 'bundle exec jekyll serve' to see your recovered posts!")
-    else:
-        logger.info("ℹ️ No posts were recovered. Check if data/gossip_data.json exists and contains entries.")
+    - name: 🎉 Success Summary
+      run: |
+        echo "🎯 Post Recovery Complete!"
+        echo "✅ Check your _posts/ directory for recovered posts"
+        echo "🌐 Your Jekyll site should now display the recovered content"
+        echo "💡 Tip: Posts are marked with 'recovered: true' in frontmatter"
