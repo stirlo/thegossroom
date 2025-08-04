@@ -5,6 +5,9 @@ on:
     - cron: '0 */6 * * *'  # Every 6 hours
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-celebrities:
     runs-on: ubuntu-latest
@@ -14,6 +17,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -104,13 +108,13 @@ jobs:
 
         # Add common variations and nicknames
         variations = {
-            'kelce': {'category': 'athlete', 'drama_score': 75},  # Covers both brothers
-            'menendez': {'category': 'criminal', 'drama_score': 75},  # Covers both brothers
-            'garcia_twins': {'category': 'wrestler', 'drama_score': 60},  # Bella Twins
+            'kelce': {'category': 'athlete', 'drama_score': 75},
+            'menendez': {'category': 'criminal', 'drama_score': 75},
+            'garcia_twins': {'category': 'wrestler', 'drama_score': 60},
             'bella_twins': {'category': 'wrestler', 'drama_score': 60},
-            'el_moussa': {'category': 'tv_host', 'drama_score': 50},  # Covers both
-            'hogan': {'category': 'wrestler', 'drama_score': 70},  # Covers Hulk/Brooke family
-            'richardson': {'category': 'athlete', 'drama_score': 65},  # Sha'Carri variations
+            'el_moussa': {'category': 'tv_host', 'drama_score': 50},
+            'hogan': {'category': 'wrestler', 'drama_score': 70},
+            'richardson': {'category': 'athlete', 'drama_score': 65},
         }
 
         for name, info in variations.items():
