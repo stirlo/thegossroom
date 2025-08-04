@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Enhanced Gossip Room RSS Scraper - With Advanced Deduplication and Debug Logging
+FIXED VERSION - Restores Jekyll post creation functionality
 """
 
 import feedparser
@@ -101,8 +102,6 @@ class GossipScraper:
                 if celebrities:
                     debug_logger.info(f"    └─ Celebrities: {', '.join(celebrities[:3])}")
 
-    # [Keep all your existing methods unchanged until scrape_feed]
-
     def ensure_data_directory(self):
         Path('data').mkdir(exist_ok=True)
 
@@ -188,11 +187,9 @@ class GossipScraper:
 
     def normalize_title(self, title):
         """Normalize title for similarity comparison"""
-        # Remove common punctuation and extra words
         title = re.sub(r'[!?.:;,\'""]', '', title.lower())
         title = re.sub(r'\s+', ' ', title).strip()
 
-        # Remove common filler words that don't affect meaning
         filler_words = ['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']
         words = title.split()
         filtered_words = [w for w in words if w not in filler_words]
@@ -204,7 +201,6 @@ class GossipScraper:
         norm1 = self.normalize_title(title1)
         norm2 = self.normalize_title(title2)
 
-        # Calculate similarity ratio
         similarity = SequenceMatcher(None, norm1, norm2).ratio()
         return similarity >= threshold
 
@@ -214,14 +210,12 @@ class GossipScraper:
         seen_titles = []
         duplicates_removed = 0
 
-        # Sort by drama score (keep highest scoring version)
         posts_sorted = sorted(posts, key=lambda x: x['drama_score'], reverse=True)
 
         for post in posts_sorted:
             current_title = post['title']
             is_duplicate = False
 
-            # Check against all previously seen titles
             for seen_title in seen_titles:
                 if self.titles_are_similar(current_title, seen_title):
                     is_duplicate = True
@@ -310,6 +304,75 @@ class GossipScraper:
 
                 self.potential_new_celebrities[name] += 1
 
+    def create_blog_post(self, title, content, link, mentions, source):
+        """🎯 RESTORED: Create Jekyll blog post with enhanced metadata"""
+        # Generate filename
+        date_str = datetime.now().strftime('%Y-%m-%d')
+        slug = re.sub(r'[^a-zA-Z0-9\s]', '', title).strip()
+        slug = re.sub(r'\s+', '-', slug).lower()[:50]
+        filename = f"{date_str}-{slug}.md"
+
+        # Determine primary celebrity and drama level
+        if not mentions:
+            return None
+
+        primary_celebrity = max(mentions.keys(), key=mentions.get)
+        total_drama_score = sum(mentions.values())
+
+        # Create tags
+        tags = [primary_celebrity.replace('_', '-')]
+        if primary_celebrity in self.celebrities:
+            tags.extend(self.celebrities[primary_celebrity].get('tags', []))
+
+        # Add source tag
+        tags.append(f"source-{source}")
+
+        # Determine drama level
+        if total_drama_score >= 10:
+            drama_level = "explosive"
+        elif total_drama_score >= 5:
+            drama_level = "hot"
+        elif total_drama_score >= 2:
+            drama_level = "rising"
+        else:
+            drama_level = "mild"
+
+        tags.append(f"drama-{drama_level}")
+
+        # Create post content
+        post_content = f"""---
+layout: post
+title: "{title.replace('"', '\\"')}"
+date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} +0000
+categories: gossip
+tags: {tags}
+drama_score: {total_drama_score}
+primary_celebrity: {primary_celebrity}
+source: {source}
+source_url: "{link}"
+mentions: {dict(mentions)}
+---
+
+{content[:500]}{'...' if len(content) > 500 else ''}
+
+**Drama Score:** {total_drama_score} | **Level:** {drama_level.upper()}
+
+**Celebrities Mentioned:** {', '.join([k.replace('_', ' ').title() for k in mentions.keys()])}
+
+[Read full article at {source.replace('_', ' ').title()}]({link})
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+"""
+
+        return {
+            'filename': filename,
+            'content': post_content,
+            'drama_score': total_drama_score,
+            'mentions': mentions,
+            'title': title  # Add for deduplication
+        }
+
     def scrape_feed(self, feed_name, feed_info):
         try:
             logger.info(f"Scraping {feed_name}...")
@@ -325,7 +388,7 @@ class GossipScraper:
 
             articles_processed = 0
             articles_rejected = 0
-            all_articles_info = []  # For detailed logging
+            all_articles_info = []
 
             for entry in feed.entries[:20]:
                 if hasattr(entry, 'published_parsed') and entry.published_parsed:
@@ -337,11 +400,9 @@ class GossipScraper:
                 content = self.clean_text(entry.get('summary', '') or entry.get('description', ''))
                 link = entry.get('link', '')
 
-                # Generate unique ID based on normalized title + source
                 normalized_title = self.normalize_title(title)
                 article_id = hashlib.md5(f"{normalized_title}{feed_name}".encode()).hexdigest()
 
-                # Track article for logging
                 article_info = {
                     'title': title,
                     'link': link,
@@ -350,7 +411,6 @@ class GossipScraper:
                     'celebrities': []
                 }
 
-                # Check rejection reasons
                 rejection_reason = self.get_rejection_reason(title, content, link, article_id)
 
                 if rejection_reason != "Unknown rejection reason":
@@ -371,35 +431,22 @@ class GossipScraper:
                 self.detect_potential_celebrities(title, content)
 
                 if mentions:
-                    # Article accepted
-                    article_info['accepted'] = True
-                    article_info['celebrities'] = found_celebrities
-                    all_articles_info.append(article_info)
+                    # 🎯 RESTORED: Create blog post
+                    post_data = self.create_blog_post(title, content, link, mentions, feed_name)
+                    if post_data:
+                        article_info['accepted'] = True
+                        article_info['celebrities'] = found_celebrities
+                        all_articles_info.append(article_info)
 
-                    entry_data = {
-                        'id': article_id,
-                        'title': title,
-                        'content': content[:300] + ('...' if len(content) > 300 else ''),
-                        'link': link,
-                        'published': entry.get('published', ''),
-                        'source': feed_name,
-                        'weight': feed_info['weight'],
-                        'mentions': mentions,
-                        'celebrities': found_celebrities[:3],
-                        'drama_score': sum(mentions.values()),
-                        'normalized_title': normalized_title
-                    }
+                        self.new_posts.append(post_data)
+                        self.processed_articles[article_id] = {
+                            'title': title,
+                            'normalized_title': normalized_title,
+                            'link': link,
+                            'processed_date': datetime.now().isoformat()
+                        }
+                        articles_processed += 1
 
-                    self.new_posts.append(entry_data)
-                    self.processed_articles[article_id] = {
-                        'title': title,
-                        'normalized_title': normalized_title,
-                        'link': link,
-                        'processed_date': datetime.now().isoformat()
-                    }
-                    articles_processed += 1
-
-            # Log detailed results
             self.log_feed_results(feed_name, all_articles_info, 
                                 [a for a in all_articles_info if a['accepted']], 
                                 articles_rejected)
@@ -411,7 +458,6 @@ class GossipScraper:
             logger.error(f"❌ Error scraping {feed_name}: {e}")
             debug_logger.error(f"❌ Error scraping {feed_name}: {e}")
 
-    # [Keep all remaining methods unchanged]
     def update_celebrity_scores(self):
         for celebrity_key, mentions in self.celebrity_mentions.items():
             if celebrity_key in self.celebrities:
@@ -466,8 +512,25 @@ class GossipScraper:
 
         # Sort by drama score and limit
         unique_posts.sort(key=lambda x: (x['drama_score'], x.get('published', '')), reverse=True)
-        final_posts = unique_posts[:50]  # Limit to top 50
+        final_posts = unique_posts[:50]
 
+        # 🎯 RESTORED: Save Jekyll posts to _posts/ directory
+        posts_dir = self.base_path / '_posts'
+        posts_dir.mkdir(exist_ok=True)
+
+        created_posts = 0
+        for post in final_posts:
+            post_path = posts_dir / post['filename']
+            # Check if file already exists
+            if not post_path.exists():
+                with open(post_path, 'w', encoding='utf-8') as f:
+                    f.write(post['content'])
+                created_posts += 1
+                logger.info(f"✅ Created: {post['filename']}")
+
+        logger.info(f"📝 Created {created_posts} new Jekyll posts")
+
+        # Save JSON data for debugging
         gossip_data = {
             'entries': final_posts,
             'last_updated': datetime.now().isoformat(),
