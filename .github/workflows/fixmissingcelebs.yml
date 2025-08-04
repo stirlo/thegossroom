@@ -282,9 +282,11 @@ jobs:
         EOF
 
     - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add _data/celebrities.yml
-        git commit -m "🎭 Restore missing celebrities with nicknames and alternatives" || exit 0
-        git push
+  run: |
+    git config --local user.email "action@github.com"
+    git config --local user.name "GitHub Action"
+    git add _data/celebrities.yml
+    git commit -m "🎭 Restore missing celebrities with nicknames and alternatives" || exit 0
+    git push
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
