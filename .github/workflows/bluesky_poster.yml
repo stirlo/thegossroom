@@ -2,8 +2,8 @@ name: Post to Bluesky
 
 on:
   schedule:
-    - cron: '15 */1 * * *'  # Every hour at 15 minutes past
-    - cron: '45 */1 * * *'  # Every hour at 45 minutes past
+    - cron: '0,19,38,57 * * * *'
+    - cron: '16,35,54 * * * *'
   workflow_dispatch:
 
 permissions:
