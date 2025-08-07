@@ -361,6 +361,9 @@ body {
   color: var(--text-color);
   min-height: 100vh;
   transition: all 0.3s ease;
+  /* 🎯 FIX: Ensure scrolling works */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .site-header {
@@ -381,6 +384,9 @@ body {
   padding: 30px;
   box-shadow: 0 10px 30px var(--shadow-color);
   transition: all 0.3s ease;
+  /* 🎯 FIX: Prevent content overflow */
+  overflow: visible;
+  position: relative;
 }
 
 /* HOMEPAGE HERO - EXPLOSIVE GRADIENT RESTORED */
@@ -765,15 +771,19 @@ body {
   }
 }
 
-/* POST TAGS - GRADIENT STYLING RESTORED */
+/* 🎯 FIXED POST TAGS - NO MORE OVERLAY ISSUES */
 .post-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 1rem;
+  /* 🎯 FIX: Ensure proper positioning */
+  position: relative;
+  z-index: 1;
 
   .tag {
-    background: linear-gradient(135deg, #e17055, #fdcb6e) !important;
-    color: white !important;
+    background: linear-gradient(135deg, #e17055, #fdcb6e);
+    color: white;
     padding: 0.4rem 1rem;
     border-radius: 25px;
     text-decoration: none;
@@ -781,12 +791,15 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     border: 1px solid transparent;
+    /* 🎯 FIX: Remove problematic positioning */
+    display: inline-block;
+    white-space: nowrap;
 
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(225,112,85,0.4);
-      background: linear-gradient(135deg, #d63031, #e84393) !important;
-      color: white !important;
+      background: linear-gradient(135deg, #d63031, #e84393);
+      color: white;
     }
   }
 }
@@ -1017,8 +1030,8 @@ body {
     margin-top: 0.5rem;
 
     .tag {
-      background: linear-gradient(135deg, #e17055, #fdcb6e) !important;
-      color: white !important;
+      background: linear-gradient(135deg, #e17055, #fdcb6e);
+      color: white;
       padding: 0.2rem 0.6rem;
       border-radius: 15px;
       text-decoration: none;
