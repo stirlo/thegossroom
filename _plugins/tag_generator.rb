@@ -4,6 +4,9 @@ module Jekyll
 
     def generate(site)
       site.tags.each do |tag, posts|
+        # Skip empty or nil tags
+        next if tag.nil? || tag.empty?
+
         site.pages << TagPage.new(site, site.source, tag, posts)
       end
     end
@@ -13,7 +16,7 @@ module Jekyll
     def initialize(site, base, tag, posts)
       @site = site
       @base = base
-      @dir = "tag/#{tag}"
+      @dir = "tag/#{Jekyll::Utils.slugify(tag)}"  # This handles special chars
       @name = 'index.html'
 
       self.process(@name)
