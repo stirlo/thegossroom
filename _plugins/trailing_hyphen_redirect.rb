@@ -7,13 +7,13 @@ module Jekyll
       site.posts.docs.each do |post|
         correct_url = post.url
 
-        # Only handle trailing hyphen before .html pattern
-        if correct_url =~ /\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\.html$/
+        # Handle trailing hyphen before slash (your actual issue)
+        if correct_url =~ /\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\/$/
           date_path = "/#{$1}/#{$2}/#{$3}"
           slug = $4
 
           # Create redirect from trailing hyphen version
-          broken_hyphen_url = "#{date_path}/#{slug}-.html"
+          broken_hyphen_url = "#{date_path}/#{slug}-/"
           site.pages << RedirectPage.new(site, site.source, broken_hyphen_url, correct_url)
         end
       end
@@ -24,10 +24,8 @@ module Jekyll
     def initialize(site, base, broken_url, correct_url)
       @site = site
       @base = base
-
-      url_parts = broken_url.split('/')
-      @dir = url_parts[0..-2].join('/')
-      @name = url_parts[-1]
+      @dir = broken_url.chomp('/')
+      @name = 'index.html'
 
       self.process(@name)
       self.data = { 'layout' => nil, 'sitemap' => false }
