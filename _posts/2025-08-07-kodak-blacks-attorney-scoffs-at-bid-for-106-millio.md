@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Kodak Black's Attorney Scoffs at Bid for $10.6 Million Default Judgment"
+date: 2025-08-07 17:19:19 +0000
+categories: gossip
+tags: ['justin-bieber', 'source-tmz', 'drama-explosive']
+drama_score: 21
+primary_celebrity: justin_bieber
+source: tmz
+source_url: "https://www.tmz.com/2025/08/07/kodak-black-shooting-victims-want-10-million-dollar-judgement/"
+mentions: {'bieber': 3, 'bowl': 3, 'justin_bieber': 9, 'super': 3, 'super_bowl': 3}
+---
+
+The two men suing Kodak Black claiming they were shot alongside him during that ill-fated Justin Bieber-hosted Super Bowl after-party in 2022 are trying to score a $10.6 million default judgment ... but the rapper's attorney says it's just a&hellip;
+
+**Drama Score:** 21 | **Level:** EXPLOSIVE
+
+**Celebrities Mentioned:** Bieber, Bowl, Justin Bieber, Super, Super Bowl
+
+[Read full article at Tmz](https://www.tmz.com/2025/08/07/kodak-black-shooting-victims-want-10-million-dollar-judgement/)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Liam Neeson & Pamela Anderson Kiss In New Naked Gun Promo! Leaning Into It!"
+date: 2025-08-07 17:19:20 +0000
+categories: gossip
+tags: ['liam', 'source-perez_hilton', 'drama-explosive']
+drama_score: 30
+primary_celebrity: liam
+source: perez_hilton
+source_url: "https://perezhilton.com/liam-neeson-kiss-pamela-anderson-in-new-naked-gun-promo/"
+mentions: {'liam': 12, 'liam_neeson': 9, 'pamela_anderson': 9}
+---
+
+Aww!! Pamela Anderson and Liam Neeson aren&#8217;t shying away from their romance! In a new promo for their movie The Naked Gun posted to social media on Wednesday, the couple put their love on full display. In the cute clip, the co-stars sit in a movie theater watching a flick. Liam drops a piece of [...] Read More... The post Liam Neeson &#038; Pamela Anderson Kiss In New &lt;i&gt;Naked Gun&lt;/i&gt; Promo! Leaning Into It! appeared first on Perez Hilton.
+
+**Drama Score:** 30 | **Level:** EXPLOSIVE
+
+**Celebrities Mentioned:** Liam, Liam Neeson, Pamela Anderson
+
+[Read full article at Perez Hilton](https://perezhilton.com/liam-neeson-kiss-pamela-anderson-in-new-naked-gun-promo/)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

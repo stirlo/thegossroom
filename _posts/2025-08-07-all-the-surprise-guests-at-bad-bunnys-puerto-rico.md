@@ -1,0 +1,23 @@
+---
+layout: post
+title: "All the Surprise Guests at Bad Bunny’s Puerto Rico Residency (Updating)"
+date: 2025-08-07 17:19:29 +0000
+categories: gossip
+tags: ['bad-bunny', 'source-billboard', 'drama-hot']
+drama_score: 6
+primary_celebrity: bad_bunny
+source: billboard
+source_url: "https://www.billboard.com/lists/bad-bunny-puerto-rico-residency-surprise-guests/"
+mentions: {'bad_bunny': 4, 'lebron_james': 2}
+---
+
+From Jowell &#38; Randy to LeBron James to Wisin, here's everyone who joined the Puerto Rican star during his 30-day residency in El Choli.
+
+**Drama Score:** 6 | **Level:** HOT
+
+**Celebrities Mentioned:** Bad Bunny, Lebron James
+
+[Read full article at Billboard](https://www.billboard.com/lists/bad-bunny-puerto-rico-residency-surprise-guests/)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Sydney Sweeney's Brother Pokes Fun at American Eagle Ad Controversy"
+date: 2025-08-07 17:19:19 +0000
+categories: gossip
+tags: ['sydney-sweeney', 'source-tmz', 'drama-hot']
+drama_score: 6
+primary_celebrity: sydney_sweeney
+source: tmz
+source_url: "https://www.tmz.com/2025/08/07/sydney-sweeney-brother-good-jeans-american-eagle-ad/"
+mentions: {'sydney_sweeney': 6}
+---
+
+Sydney Sweeney's brother is getting in on the American Eagle ad controversy ... poking fun at the situation by showing off his good genes jeans! Check out Trent Sweeney's post on Instagram -- he shared a snap of a certificate acknowledging he was&hellip;
+
+**Drama Score:** 6 | **Level:** HOT
+
+**Celebrities Mentioned:** Sydney Sweeney
+
+[Read full article at Tmz](https://www.tmz.com/2025/08/07/sydney-sweeney-brother-good-jeans-american-eagle-ad/)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
