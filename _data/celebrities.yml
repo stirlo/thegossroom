@@ -232,7 +232,7 @@ anna_camp:
 anna_kendrick:
   category: actor
   drama_score: 65
-  last_temperature_update: '2025-08-04 02:14:45'
+  last_temperature_update: '2025-08-07 18:28:15'
   status: rising
   temperature_change: 0
 anne_hathaway:
@@ -307,12 +307,12 @@ avantika:
 awards:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 57
-  last_temperature_update: '2025-08-07 15:20:40'
+  drama_score: 59
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 0
+  temperature_change: 2
 aziz_ansari:
   category: comedian
   discovery_date: '2020-01-01'
@@ -598,12 +598,12 @@ brooke_hogan:
 brooklyn_beckham:
   category: model
   discovery_date: '2025-08-04'
-  drama_score: 60
-  last_temperature_update: '2025-08-04 03:53:40'
+  drama_score: 62
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 1
+  temperature_change: 2
 bruce_mcculloch:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1023,12 +1023,12 @@ dobre_twins:
 doja_cat:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 72
-  last_temperature_update: '2025-08-03 14:52:25'
+  drama_score: 71
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
-  temperature_change: 1
+  temperature_change: -1
 dom_brack:
   category: youtuber
   discovery_date: '2025-08-07'
@@ -1642,12 +1642,12 @@ jacksepticeye:
 jacob_elordi:
   category: actor
   discovery_date: '2022-01-15'
-  drama_score: 63
-  last_temperature_update: '2025-08-03 14:52:25'
+  drama_score: 73
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2022-03-01'
-  status: rising
-  temperature_change: -1
+  status: hot
+  temperature_change: 10
 jacob_sartorius:
   category: singer
   discovery_date: '2025-08-07'
@@ -2119,11 +2119,11 @@ katy_perry:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 91
-  last_temperature_update: '2025-08-07 15:20:40'
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 6
+  temperature_change: 0
 keegan_michael_key:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2344,16 +2344,16 @@ liam:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 80
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 10
+  temperature_change: 0
 liam_neeson:
   category: unknown
   discovery_date: '2025-08-03'
   drama_score: 100
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2025-08-03'
   status: explosive
@@ -2471,12 +2471,12 @@ lynn_shelton:
 machine_gun_kelly:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 71
-  last_temperature_update: '2025-08-07 17:19:34'
+  drama_score: 81
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
-  temperature_change: 1
+  temperature_change: 10
 madison_beer:
   category: singer
   discovery_date: '2025-08-07'
@@ -3032,7 +3032,7 @@ owen_wilson:
 ozzy_osbourne:
   category: musician
   drama_score: 83
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   status: hot
   temperature_change: 0
 p_diddy:
@@ -3047,9 +3047,9 @@ p_diddy:
 pamela_anderson:
   category: actor
   drama_score: 91
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   status: explosive
-  temperature_change: 7
+  temperature_change: 0
 paris_hilton:
   category: entrepreneur
   discovery_date: '2025-08-04'
@@ -3446,12 +3446,12 @@ sean_combs:
 selena_gomez:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 93
-  last_temperature_update: '2025-08-07 17:19:34'
+  drama_score: 97
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
-  temperature_change: 9
+  temperature_change: 4
 selma_hayek:
   category: actor
   discovery_date: '2025-08-04'
@@ -3623,12 +3623,12 @@ stephanie_allynne:
 stephen_colbert:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 69
-  last_temperature_update: '2025-08-07 15:20:40'
+  drama_score: 73
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2020-01-01'
-  status: rising
-  temperature_change: 7
+  status: hot
+  temperature_change: 4
 steve_carell:
   category: comedian
   discovery_date: '2020-01-01'
@@ -3678,11 +3678,11 @@ super:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 6
+  temperature_change: 0
 super_bowl:
   category: event
   discovery_date: '2025-08-04'
@@ -3696,11 +3696,11 @@ sydney_sweeney:
   category: actor
   discovery_date: '2021-08-15'
   drama_score: 100
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2021-10-01'
   status: explosive
-  temperature_change: 1
+  temperature_change: 0
 sza:
   category: musician
   discovery_date: '2025-08-04'
@@ -3756,7 +3756,7 @@ taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3957,7 +3957,7 @@ trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-07 17:19:34'
+  last_temperature_update: '2025-08-07 18:28:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive

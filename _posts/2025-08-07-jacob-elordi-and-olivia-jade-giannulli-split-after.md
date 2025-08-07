@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Jacob Elordi and Olivia Jade Giannulli SPLIT after four years together"
+date: 2025-08-07 18:28:08 +0000
+categories: gossip
+tags: ['jacob-elordi', 'source-daily_mail', 'drama-rising']
+drama_score: 2
+primary_celebrity: jacob_elordi
+source: daily_mail
+source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14980697/Jacob-Elordi-Olivia-Jade-Giannulli-SPLIT-four-years-together.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
+mentions: {'jacob_elordi': 2}
+---
+
+Olivia is the first person Jacob started dating after he broke things off with Cindy Crawford 's daughter Kaia Gerber in 2021.
+
+**Drama Score:** 2 | **Level:** RISING
+
+**Celebrities Mentioned:** Jacob Elordi
+
+[Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14980697/Jacob-Elordi-Olivia-Jade-Giannulli-SPLIT-four-years-together.html?ns_mchannel=rss&ito=1490&ns_campaign=1490)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
