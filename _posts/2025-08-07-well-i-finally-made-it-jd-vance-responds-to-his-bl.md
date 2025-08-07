@@ -1,0 +1,23 @@
+---
+layout: post
+title: "“Well, I Finally Made It”: JD Vance Responds To His Blistering ‘South Park’ Debut"
+date: 2025-08-07 15:20:30 +0000
+categories: gossip
+tags: ['jd-vance', 'source-deadline', 'drama-explosive']
+drama_score: 10
+primary_celebrity: jd_vance
+source: deadline
+source_url: "https://deadline.com/2025/08/jd-vance-south-park-debut-1236481177/"
+mentions: {'donald_trump': 2, 'jd_vance': 4, 'trump': 4}
+---
+
+Vice President JD Vance gave a short response to South Park, as the show skewered him and other Trump administration figures in the second episode of the latest season. &#8220;Well, I’ve finally made it,&#8221; Vance wrote on X, linking to the show&#8217;s post featuring a mini version of him standing next to Donald Trump, ala [&#8230;]
+
+**Drama Score:** 10 | **Level:** EXPLOSIVE
+
+**Celebrities Mentioned:** Donald Trump, Jd Vance, Trump
+
+[Read full article at Deadline](https://deadline.com/2025/08/jd-vance-south-park-debut-1236481177/)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
