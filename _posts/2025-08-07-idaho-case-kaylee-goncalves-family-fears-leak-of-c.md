@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Idaho Case: Kaylee Goncalves' Family Fears Leak of Crime Scene Photos"
+date: 2025-08-07 20:19:43 +0000
+categories: gossip
+tags: ['bryan-kohberger', 'source-e_news', 'drama-rising']
+drama_score: 3
+primary_celebrity: bryan_kohberger
+source: e_news
+source_url: "https://www.eonline.com/news/1420899/idaho-murders-kaylee-goncalves-dad-on-crime-scene-photos?cmpid=rss-syndicate-genericrss-us-top_stories"
+mentions: {'bryan_kohberger': 3}
+---
+
+The father of one of Bryan Kohberger’s victims is fighting to protect his child’s memory. Steve Goncalves—whose daughter Kaylee Goncalves was killed by the 30-year-old in November 2022 along with...
+
+**Drama Score:** 3 | **Level:** RISING
+
+**Celebrities Mentioned:** Bryan Kohberger
+
+[Read full article at E News](https://www.eonline.com/news/1420899/idaho-murders-kaylee-goncalves-dad-on-crime-scene-photos?cmpid=rss-syndicate-genericrss-us-top_stories)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
