@@ -1207,7 +1207,11 @@ body {
   .post-card,
   .topic-card,
   .explosive-card {
-    padding: /* ========== GOSSIP ROOM LUXURY EDITION - ADD TO END ========== */
+    padding: 15px;
+  }
+}
+
+/* ========== GOSSIP ROOM LUXURY EDITION - LUXURY EFFECTS ========== */
 
 /* HOLOGRAPHIC SITE TITLE ENHANCEMENT */
 .site-title {
@@ -1274,7 +1278,6 @@ body {
 .temperature-dashboard, .temperature-explanation, .topic-card, .explosive-card {
   backdrop-filter: blur(40px) saturate(200%) contrast(120%) !important;
   -webkit-backdrop-filter: blur(40px) saturate(200%) contrast(120%) !important;
-  position: relative !important;
 
   &::before {
     content: '';
@@ -1585,6 +1588,3 @@ body {
   will-change: transform, opacity;
   transform: translateZ(0);
 }
-
-
-
