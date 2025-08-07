@@ -280,12 +280,12 @@ avantika:
 awards:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 50
-  last_temperature_update: '2025-08-04 01:56:22'
+  drama_score: 51
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2025-08-04'
-  status: mild
-  temperature_change: 0
+  status: rising
+  temperature_change: 1
 aziz_ansari:
   category: comedian
   discovery_date: '2020-01-01'
@@ -391,12 +391,12 @@ biden:
 bieber:
   category: musician
   discovery_date: '2025-08-04'
-  drama_score: 88
-  last_temperature_update: '2025-08-07 05:26:35'
+  drama_score: 92
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2025-08-04'
-  status: hot
-  temperature_change: 7
+  status: explosive
+  temperature_change: 4
 big_sean:
   category: musician
   discovery_date: '2025-08-04'
@@ -445,12 +445,12 @@ blac_chyna:
 blake_lively:
   category: actor
   discovery_date: '2025-08-04'
-  drama_score: 75
-  last_temperature_update: '2025-08-07 05:26:35'
+  drama_score: 79
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 15
+  temperature_change: 4
 blockboy_jb:
   category: musician
   discovery_date: '2025-08-04'
@@ -537,10 +537,10 @@ brielle_biermann:
   temperature_change: 0
 brooke_hogan:
   category: reality_tv
-  drama_score: 68
-  last_temperature_update: '2025-08-07 05:26:35'
+  drama_score: 69
+  last_temperature_update: '2025-08-07 07:23:07'
   status: rising
-  temperature_change: 13
+  temperature_change: 1
 brooklyn_beckham:
   category: model
   discovery_date: '2025-08-04'
@@ -1337,12 +1337,12 @@ hailey_baldwin:
 hailey_bieber:
   category: model
   discovery_date: '2025-08-04'
-  drama_score: 70
-  last_temperature_update: '2025-08-07 05:26:35'
+  drama_score: 74
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 5
+  temperature_change: 4
 halsey:
   category: musician
   discovery_date: '2025-08-04'
@@ -1414,9 +1414,9 @@ hiroshi_fujiwara:
 hogan:
   category: wrestler
   drama_score: 100
-  last_temperature_update: '2025-08-07 05:26:35'
+  last_temperature_update: '2025-08-07 07:23:07'
   status: explosive
-  temperature_change: 21
+  temperature_change: 0
 horatio_sanz:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1437,10 +1437,10 @@ howard_stern:
   temperature_change: 11
 hulk_hogan:
   category: wrestler
-  drama_score: 88
-  last_temperature_update: '2025-08-07 05:26:35'
-  status: hot
-  temperature_change: 17
+  drama_score: 92
+  last_temperature_update: '2025-08-07 07:23:07'
+  status: explosive
+  temperature_change: 4
 hunter_schafer:
   category: actor
   discovery_date: '2021-08-15'
@@ -1878,17 +1878,17 @@ june_diane_raphael:
 justin_baldoni:
   category: actor
   discovery_date: '2025-08-04'
-  drama_score: 65
-  last_temperature_update: '2025-08-07 05:26:35'
+  drama_score: 72
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2025-08-04'
-  status: rising
-  temperature_change: 3
+  status: hot
+  temperature_change: 7
 justin_bieber:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-07 05:26:35'
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -2182,11 +2182,11 @@ liam:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 70
-  last_temperature_update: '2025-08-07 05:26:35'
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 8
+  temperature_change: 0
 liam_neeson:
   category: unknown
   discovery_date: '2025-08-03'
@@ -3213,7 +3213,7 @@ selena_gomez:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 68
-  last_temperature_update: '2025-08-07 06:29:00'
+  last_temperature_update: '2025-08-07 07:23:07'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising

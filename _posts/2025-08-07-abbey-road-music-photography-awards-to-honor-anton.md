@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Abbey Road Music Photography Awards to Honor Anton Corbijn With Icon Award"
+date: 2025-08-07 07:23:01 +0000
+categories: gossip
+tags: ['awards', 'source-rolling_stone', 'drama-rising']
+drama_score: 2
+primary_celebrity: awards
+source: rolling_stone
+source_url: "https://www.rollingstone.com/music/music-news/abbey-road-music-photography-awards-anton-corbijn-1235402613/"
+mentions: {'awards': 2}
+---
+
+The annual ceremony will take place at London's Abbey Road Studios in October
+
+**Drama Score:** 2 | **Level:** RISING
+
+**Celebrities Mentioned:** Awards
+
+[Read full article at Rolling Stone](https://www.rollingstone.com/music/music-news/abbey-road-music-photography-awards-anton-corbijn-1235402613/)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
