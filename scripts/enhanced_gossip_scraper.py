@@ -304,12 +304,30 @@ class GossipScraper:
 
                 self.potential_new_celebrities[name] += 1
 
+    def create_clean_slug(self, title):
+        """🎯 FIX: Create clean slug without trailing hyphens"""
+        # Remove special characters except spaces and hyphens
+        slug = re.sub(r'[^a-zA-Z0-9\s-]', '', title).strip()
+        # Replace multiple spaces with single hyphen
+        slug = re.sub(r'\s+', '-', slug)
+        # Replace multiple hyphens with single hyphen
+        slug = re.sub(r'-+', '-', slug)
+        # Remove leading/trailing hyphens
+        slug = slug.strip('-').lower()
+        # Limit length and ensure no trailing hyphen
+        slug = slug[:50].rstrip('-')
+
+        # Ensure we have a valid slug
+        if not slug:
+            slug = "post"
+
+        return slug
+
     def create_blog_post(self, title, content, link, mentions, source):
-        """🎯 RESTORED: Create Jekyll blog post with enhanced metadata"""
-        # Generate filename
+        """🎯 FIXED: Create Jekyll blog post with clean filenames"""
+        # Generate filename with clean slug
         date_str = datetime.now().strftime('%Y-%m-%d')
-        slug = re.sub(r'[^a-zA-Z0-9\s]', '', title).strip()
-        slug = re.sub(r'\s+', '-', slug).lower()[:50]
+        slug = self.create_clean_slug(title)
         filename = f"{date_str}-{slug}.md"
 
         # Determine primary celebrity and drama level
@@ -437,7 +455,7 @@ mentions: {dict(mentions)}
                 self.detect_potential_celebrities(title, content)
 
                 if mentions:
-                    # 🎯 RESTORED: Create blog post
+                    # 🎯 FIXED: Create blog post with clean filename
                     post_data = self.create_blog_post(title, content, link, mentions, feed_name)
                     if post_data:
                         article_info['accepted'] = True
