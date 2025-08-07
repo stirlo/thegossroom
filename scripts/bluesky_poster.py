@@ -69,25 +69,34 @@ class HighFrequencyGossipPoster:
             yaml.dump(posted_items, f, default_flow_style=False)
 
     def generate_post_url(self, filename):
-        """Generate Jekyll post URL from filename - /YYYY/MM/DD/post-name/ format"""
+    """Generate Jekyll post URL from filename - /YYYY/MM/DD/post-name/ format"""
 
-        if not filename.endswith('.md'):
-            return "https://thegossroom.com"
+    if not filename.endswith('.md'):
+        return "https://thegossroom.com"
 
-        name_without_ext = filename[:-3]  # Remove .md
+    name_without_ext = filename[:-3]  # Remove .md
 
-        if len(name_without_ext) < 10:
-            return "https://thegossroom.com"
+    if len(name_without_ext) < 10:
+        return "https://thegossroom.com"
 
-        date_part = name_without_ext[:10]  # 2025-08-02
-        slug_part = name_without_ext[11:]  # post-name
+    date_part = name_without_ext[:10]  # 2025-08-02
+    slug_part = name_without_ext[11:]  # post-name
 
-        try:
-            year, month, day = date_part.split('-')
-            # Clean structure: /YYYY/MM/DD/post-name/
-            return f"https://thegossroom.com/{year}/{month}/{day}/{slug_part}/"
-        except:
-            return "https://thegossroom.com"
+    try:
+        year, month, day = date_part.split('-')
+
+        # 🎯 FIX: Clean slug properly
+        clean_slug = slug_part.rstrip('-').rstrip('_')
+        clean_slug = re.sub(r'-+', '-', clean_slug)
+        clean_slug = clean_slug.strip('-')
+
+        if not clean_slug:
+            clean_slug = "post"
+
+        return f"https://thegossroom.com/{year}/{month}/{day}/{clean_slug}/"
+    except:
+        return "https://thegossroom.com"
+
 
     def create_facets_for_urls(self, text):
         """Create facets for clickable URLs in Bluesky posts"""
