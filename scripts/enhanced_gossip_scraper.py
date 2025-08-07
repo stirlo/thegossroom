@@ -339,6 +339,10 @@ class GossipScraper:
 
         tags.append(f"drama-{drama_level}")
 
+        # Extract celebrity names and source title outside f-string
+        celebrity_names = ', '.join([k.replace('_', ' ').title() for k in mentions.keys()])
+        source_title = source.replace('_', ' ').title()
+
         # Create post content
         post_content = f"""---
 layout: post
@@ -357,9 +361,9 @@ mentions: {dict(mentions)}
 
 **Drama Score:** {total_drama_score} | **Level:** {drama_level.upper()}
 
-**Celebrities Mentioned:** {', '.join([k.replace('_', ' ').title() for k in mentions.keys()])}
+**Celebrities Mentioned:** {celebrity_names}
 
-[Read full article at {source.replace('_', ' ').title()}]({link})
+[Read full article at {source_title}]({link})
 
 ---
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
