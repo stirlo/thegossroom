@@ -5,12 +5,15 @@ layout: default
 <h1>🏷️ Posts tagged "{{ page.tag }}"</h1>
 
 <div class="tag-info">
-  <p>{{ site.tags[page.tag].size }} posts found</p>
+  {% if page.canonical_tag %}
+    <p><em>Showing results for "{{ page.canonical_tag }}"</em></p>
+  {% endif %}
+  <p>{{ page.posts.size }} posts found</p>
   <p><a href="/">← Back to all posts</a></p>
 </div>
 
 <div class="recent-posts">
-{% for post in site.tags[page.tag] %}
+{% for post in page.posts %}
   <div class="post-preview">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <p class="post-meta">
