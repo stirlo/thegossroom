@@ -339,14 +339,16 @@ class GossipScraper:
 
         tags.append(f"drama-{drama_level}")
 
-        # Extract celebrity names and source title outside f-string
+        # Extract all string processing outside f-string to avoid backslash issues
+        escaped_title = title.replace('"', '\\"')
         celebrity_names = ', '.join([k.replace('_', ' ').title() for k in mentions.keys()])
         source_title = source.replace('_', ' ').title()
+        content_preview = content[:500] + '...' if len(content) > 500 else content
 
         # Create post content
         post_content = f"""---
 layout: post
-title: "{title.replace('"', '\\"')}"
+title: "{escaped_title}"
 date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} +0000
 categories: gossip
 tags: {tags}
@@ -357,7 +359,7 @@ source_url: "{link}"
 mentions: {dict(mentions)}
 ---
 
-{content[:500]}{'...' if len(content) > 500 else ''}
+{content_preview}
 
 **Drama Score:** {total_drama_score} | **Level:** {drama_level.upper()}
 
