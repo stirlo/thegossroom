@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Cassie Ventura Shares First Message Since Testifying in Diddy Trial"
+date: 2025-08-08 03:41:22 +0000
+categories: gossip
+tags: ['diddy', 'source-e_news', 'drama-rising']
+drama_score: 3
+primary_celebrity: diddy
+source: e_news
+source_url: "https://www.eonline.com/news/1420914/cassie-venturas-first-instagram-post-since-diddy-trial-baby-no-3?cmpid=rss-syndicate-genericrss-us-top_stories"
+mentions: {'diddy': 3}
+---
+
+Cassie Ventura is back on social media. The &quot;Me &amp; U&quot; singer returned to Instagram Aug. 7, nearly three months after giving birth to her and husband Alex Fine&#x27;s third baby, as well as testifying in...
+
+**Drama Score:** 3 | **Level:** RISING
+
+**Celebrities Mentioned:** Diddy
+
+[Read full article at E News](https://www.eonline.com/news/1420914/cassie-venturas-first-instagram-post-since-diddy-trial-baby-no-3?cmpid=rss-syndicate-genericrss-us-top_stories)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
