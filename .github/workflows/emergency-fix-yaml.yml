@@ -1,4 +1,4 @@
-name: Emergency YAML Fix
+name: Emergency YAML Fix v2
 on:
   workflow_dispatch:
 
@@ -18,18 +18,15 @@ jobs:
 
       - name: Create backup branch
         run: |
-          git checkout -b backup-yaml-$(date +%Y%m%d-%H%M%S)
-          git push origin backup-yaml-$(date +%Y%m%d-%H%M%S)
+          git checkout -b backup-yaml-v2-$(date +%Y%m%d-%H%M%S)
+          git push origin backup-yaml-v2-$(date +%Y%m%d-%H%M%S)
           git checkout main
 
-      - name: Run YAML fix
+      - name: Run YAML fix v2
         run: python scripts/fix_yaml.py
-
-      - name: Show summary
-        run: cat yaml_fix_summary.txt
 
       - name: Commit fixes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🚨 Emergency fix: Restore proper YAML syntax"
-          file_pattern: "_posts/*.md yaml_fix_summary.txt"
+          commit_message: "🔧 Fix quoted YAML tags in Jekyll posts"
+          file_pattern: "_posts/*.md"
