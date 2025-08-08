@@ -1,0 +1,22 @@
+name: Fix HTML Entities
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  fix-entities:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Fix HTML entities
+        run: python fix_html_entities.py
+      - name: Commit fixes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "🧹 Fix HTML entities in posts" || exit 0
+          git push
