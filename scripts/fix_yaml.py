@@ -1,35 +1,35 @@
 #!/usr/bin/env python3
 """
-MEGA FIX: Restore tag quotes AND fix YAML parsing errors
+Fix ALL post formatting issues to make them perfect
 """
 
 import re
 from pathlib import Path
 
-def mega_fix_yaml(content):
-    """Fix ALL YAML issues in one go"""
+def fix_all_post_issues(content):
+    """Fix every formatting issue we've identified"""
 
-    # Fix 1: Restore quotes to tags
-    def fix_tags_line(match):
-        tags_content = match.group(1)
-        items = [item.strip() for item in tags_content.split(',')]
-        quoted_items = [f"'{item}'" if not (item.startswith("'") or item.startswith('"')) else item for item in items]
-        return f"tags: [{', '.join(quoted_items)}]"
+    # Fix 1: Missing closing quotes in titles
+    content = re.sub(r'title: "([^"]*)\n', r'title: "\1"\n', content)
 
-    content = re.sub(r'tags: \[([^\]]+)\]', fix_tags_line, content)
+    # Fix 2: Extra quotes in source lines
+    content = re.sub(r'source: ([^"]+)"\n', r'source: \1\n', content)
 
-    # Fix 2: Missing closing quotes in source_url
-    content = re.sub(r'source_url: "([^"]*)\n', r'source_url: "\1"\n', content)
-    content = re.sub(r'source_url: "([^"]*)"([^"\n]*)\n', r'source_url: "\1\2"\n', content)
+    # Fix 3: Ensure blank line after front matter closing ---
+    content = re.sub(r'---\n([A-Z])', r'---\n\n\1', content)
+    content = re.sub(r'---\n([a-z])', r'---\n\n\1', content)
 
-    # Fix 3: Broken mentions mapping - add quotes around keys
-    def fix_mentions(match):
-        mentions_content = match.group(1)
-        # Add quotes around unquoted keys
-        fixed = re.sub(r'(\w+):', r"'\1':", mentions_content)
-        return f"mentions: {{{fixed}}}"
+    # Fix 4: Fix broken URLs with spaces
+    content = re.sub(r'=1490 _campaign=1490', r'&ns_campaign=1490', content)
+    content = re.sub(r' =1490', r'&ito=1490', content)
 
-    content = re.sub(r'mentions: \{([^}]+)\}', fix_mentions, content)
+    # Fix 5: Add proper line breaks before Drama Score section
+    # Pattern: text runs into **Drama Score:** without break
+    content = re.sub(r'(\w+[\.\!\?]) (\*\*Drama Score:\*\*)', r'\1\n\n\2', content)
+    content = re.sub(r'(\]) (\*\*Drama Score:\*\*)', r'\1\n\n\2', content)
+
+    # Fix 6: Ensure proper spacing around Drama Score section
+    content = re.sub(r'(\*This post was automatically generated[^*]+\*)', r'\n\n\1', content)
 
     return content
 
@@ -37,13 +37,13 @@ def main():
     posts_dir = Path('_posts')
     fixed_count = 0
 
-    print("🔧 MEGA FIX: Restoring tag quotes AND fixing YAML errors...")
+    print("🔧 ULTIMATE FIX: Making ALL posts perfect...")
 
     for post_file in posts_dir.glob('*.md'):
         with open(post_file, 'r', encoding='utf-8') as f:
             original_content = f.read()
 
-        fixed_content = mega_fix_yaml(original_content)
+        fixed_content = fix_all_post_issues(original_content)
 
         if fixed_content != original_content:
             with open(post_file, 'w', encoding='utf-8') as f:
@@ -51,7 +51,7 @@ def main():
             print(f"✅ Fixed: {post_file.name}")
             fixed_count += 1
 
-    print(f"\n🎯 MEGA FIXED {fixed_count} posts!")
+    print(f"\n🎯 ULTIMATE FIXED {fixed_count} posts!")
 
 if __name__ == "__main__":
     main()
