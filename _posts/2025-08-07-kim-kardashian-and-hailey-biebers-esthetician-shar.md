@@ -1,1 +1,11 @@
---- layout: post title: "Kim Kardashian and Hailey Bieber’s Esthetician Shares Her Surprisingly Simple Skin Care Regimen" date: 2025-08-07 05:26:30 +0000 categories: gossip tags: [kim-kardashian, source-elle_alt, drama-explosive] drama_score: 14 primary_celebrity: kim_kardashian source: elle_alt source_url: "https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/" mentions: {bieber: 2, 'hailey_bieber: 2, 'justin_bieber: 2, 'kardashian: 2, 'kim_kardashian: 6} --- Joanna Czech swears by this less-is-more routine. **Drama Score:** 14 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bieber, Hailey Bieber, Justin Bieber, Kardashian, Kim Kardashian [Read full article at Elle Alt](https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+---
+layout: post
+title: "Kim Kardashian and Hailey Bieber’s Esthetician Shares Her Surprisingly Simple Skin Care Regimen"
+date: 2025-08-07 05:26:30 +0000
+categories: gossip
+tags: [kim-kardashian, source-elle_alt, drama-explosive]
+drama_score: 14
+primary_celebrity: kim_kardashian
+source: elle_alt
+source_url: "https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/"
+mentions: {bieber: 2, 'hailey_bieber: 2, 'justin_bieber: 2, 'kardashian: 2, 'kim_kardashian: 6} --- Joanna Czech swears by this less-is-more routine. **Drama Score:** 14 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bieber, Hailey Bieber, Justin Bieber, Kardashian, Kim Kardashian [Read full article at Elle Alt](https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -6,10 +6,11 @@ categories: gossip
 tags: [gunna, source-billboard, drama-rising]
 drama_score: 2
 primary_celebrity: gunna
-source: billboard
+source: billboard"
 source_url: "https://www.billboard.com/music/rb-hip-hop/gunna-the-last-wun-album-1236038693/"
 mentions: {gunna: 2}
 ---
+
 
 The Atlanta native's sixth studio album is here.
 

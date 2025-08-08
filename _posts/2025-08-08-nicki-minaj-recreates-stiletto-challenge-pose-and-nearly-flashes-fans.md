@@ -6,10 +6,11 @@ categories: gossip
 tags: [nicki-minaj, source-us_weekly, drama-hot]
 drama_score: 6
 primary_celebrity: nicki_minaj
-source: us_weekly
+source: us_weekly"
 source_url: "https://www.usmagazine.com/stylish/news/nicki-minaj-recreates-stiletto-challenge-pose-and-almost-flashes-fans/"
 mentions: {nicki_minaj: 6}
 ---
+
 
 Nicki Minaj got real about how difficult it is to recreate the balancing pose she did in 2013 that has since become the basis for the viral stiletto challenge. Minaj, 42, took to Instagram on Wednesday, August 6, to see if she still can balance in her stiletto heels while squatting down. In the Reel, […]
 

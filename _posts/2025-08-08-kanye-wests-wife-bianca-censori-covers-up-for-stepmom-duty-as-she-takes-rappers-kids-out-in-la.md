@@ -11,6 +11,7 @@ source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14981877/Kanye-West-w
 mentions: {'kanye': 4, 'kanye_west': 8}
 ---
 
+
 On Tuesday, the model, 30, was spotted loading into a Cadillac Escalade with Kanye and Kim's daughter Chicago , seven, and their sons Saint, nine, and Psalm, six.
 
 **Drama Score:** 12 | **Level:** EXPLOSIVE

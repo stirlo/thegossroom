@@ -11,6 +11,7 @@ source_url: "https://www.dailymail.co.uk/news/royals/article-14979265/Meghan-bre
 mentions: {'duchess_of_sussex': 2}
 ---
 
+
 Since abandoning official duties in 2020 and returning to America, the Duchess of Sussex has been at pains to stress what an effort she'd put into becoming a member of the Royal Family.
 
 **Drama Score:** 2 | **Level:** RISING

@@ -11,6 +11,7 @@ source_url: "https://www.dailymail.co.uk/news/royals/article-14940991/Princess-B
 mentions: {'meghan_markle': 2, 'prince_harry': 2}
 ---
 
+
 Before her cousin Prince Harry married American actress Meghan Markle, Princess Beatrice was working hard to pursue her own career on the big screen.
 
 **Drama Score:** 4 | **Level:** RISING

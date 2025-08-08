@@ -1,1 +1,11 @@
---- layout: post title: "Denise Richards Sports Apparent Black Eye Days After Showing Up at Estranged Husband's House" date: 2025-08-07 05:26:20 +0000 categories: gossip tags: [denise-richards, source-tmz, drama-hot] drama_score: 6 primary_celebrity: denise_richards source: tmz source_url: "https://www.tmz.com/2025/08/06/denise-richards-black-eye-aaron-phypers-divorce/" mentions: {denise_richards: 6} --- Denise Richards has a pretty nasty bruise under her eye and a cut on her chin days after she showed up to her estranged husband's place unannounced ... which is interesting, because she used a photo of a black eye to get a restraining order against… **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Denise Richards [Read full article at Tmz](https://www.tmz.com/2025/08/06/denise-richards-black-eye-aaron-phypers-divorce/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+---
+layout: post
+title: "Denise Richards Sports Apparent Black Eye Days After Showing Up at Estranged Husband's House"
+date: 2025-08-07 05:26:20 +0000
+categories: gossip
+tags: [denise-richards, source-tmz, drama-hot]
+drama_score: 6
+primary_celebrity: denise_richards
+source: tmz
+source_url: "https://www.tmz.com/2025/08/06/denise-richards-black-eye-aaron-phypers-divorce/"
+mentions: {denise_richards: 6} --- Denise Richards has a pretty nasty bruise under her eye and a cut on her chin days after she showed up to her estranged husband's place unannounced ... which is interesting, because she used a photo of a black eye to get a restraining order against… **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Denise Richards [Read full article at Tmz](https://www.tmz.com/2025/08/06/denise-richards-black-eye-aaron-phypers-divorce/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

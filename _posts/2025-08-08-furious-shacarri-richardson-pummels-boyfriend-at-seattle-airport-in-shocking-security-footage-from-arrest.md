@@ -11,6 +11,7 @@ source_url: "https://www.dailymail.co.uk/sport/othersports/article-14981667/ShaC
 mentions: {'carri_richardson': 4, 'richardson': 4}
 ---
 
+
 Footage of American Olympic gold medalist sprinter Sha'Carri Richardson allegedly assaulting her boyfriend has been released in a dramatic scene from Washington state.
 
 **Drama Score:** 8 | **Level:** HOT
