@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Orlando Bloom Reacts To Katy Perry's Rumored Rebound Via Meme Of His Own Unlikely Fling"
 date: 2025-08-04 10:43:19 +0000

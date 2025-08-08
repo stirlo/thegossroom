@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "All About Jacob Elordi’s Girlfriend, Olivia Jade, and Their On-Off Relationship History"
 date: 2025-08-07 19:18:26 +0000
@@ -11,4 +12,6 @@ source_url: "https://www.elle.com/culture/celebrities/a44665255/who-is-jacobi-el
 mentions: {'jacob_elordi': 2}
 ---
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a44665255/who-is-jacobi-elordi-girlfriend/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a44665255/who-is-jacobi-elordi-girlfriend/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

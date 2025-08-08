@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Michael Ausiello’s Unproduced Childhood Soap Opera Sets NYC Live Reading With Bowen Yang, Ana Gasteyer, Jim Parsons & More"
 date: 2025-08-07 17:19:25 +0000
@@ -11,4 +12,8 @@ source_url: "https://deadline.com/2025/08/bowen-yang-ana-gasteyer-michael-ausiel
 mentions: {'bowen_yang': 4, ''rachel_dratch': 2}
 ---
 
-Bowen Yang, Ana Gasteyer, Jim Parsons, Rachel Dratch, Renée Elise Goldsberry, Busy Philipps, Mitch Silpa and Michael Urie are set to perform a live, cold reading of Beverly Hills, a soap opera written by TVLine founder and Spoiler Alert author Michael Ausiello when he was 13, in its New York debut. The NYC performance is scheduled for Sept. 8 […] **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Bowen Yang, Rachel Dratch [Read full article at Deadline](https://deadline.com/2025/08/bowen-yang-ana-gasteyer-michael-ausiello-soap-opera-1236481351/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+Bowen Yang, Ana Gasteyer, Jim Parsons, Rachel Dratch, Renée Elise Goldsberry, Busy Philipps, Mitch Silpa and Michael Urie are set to perform a live, cold reading of Beverly Hills, a soap opera written by TVLine founder and Spoiler Alert author Michael Ausiello when he was 13, in its New York debut. The NYC performance is scheduled for Sept. 8 […]
+
+**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Bowen Yang, Rachel Dratch [Read full article at Deadline](https://deadline.com/2025/08/bowen-yang-ana-gasteyer-michael-ausiello-soap-opera-1236481351/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

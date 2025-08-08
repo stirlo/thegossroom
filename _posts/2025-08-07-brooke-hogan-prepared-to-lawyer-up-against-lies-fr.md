@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Brooke Hogan Prepared To Lawyer Up Against 'Lies' From Hulk's Team!"
 date: 2025-08-07 05:26:21 +0000
@@ -11,4 +12,8 @@ source_url: "https://perezhilton.com/brooke-hogan-prepared-to-lawyer-up-against-
 mentions: {'brooke_hogan': 9, ''hogan': 9}
 ---
 
-Brooke Hogan is SO “done” with all the lies following Hulk’s death! The 37-year-old sat down for an interview with TMZ on Wednesday, where she opened up about all the speculation and rumors she’s at the center of. She claimed she’s been trying her hardest to live “quietly and peacefully,” but can’t because she’s had [...] Read More... The post Brooke Hogan Prepared To Lawyer Up Against 'Lies' From Hulk's Team! appeared first on Perez Hilton. **Drama Score:** 18 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Brooke Hogan, Hogan [Read full article at Perez Hilton](https://perezhilton.com/brooke-hogan-prepared-to-lawyer-up-against-hulk-team-for-spreading-lies/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+Brooke Hogan is SO “done” with all the lies following Hulk’s death! The 37-year-old sat down for an interview with TMZ on Wednesday, where she opened up about all the speculation and rumors she’s at the center of. She claimed she’s been trying her hardest to live “quietly and peacefully,” but can’t because she’s had [...] Read More... The post Brooke Hogan Prepared To Lawyer Up Against 'Lies' From Hulk's Team! appeared first on Perez Hilton.
+
+**Drama Score:** 18 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Brooke Hogan, Hogan [Read full article at Perez Hilton](https://perezhilton.com/brooke-hogan-prepared-to-lawyer-up-against-hulk-team-for-spreading-lies/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Saltburn director Emerald Fennell returns with an 'aggressively provocative' interpretation of Emily Brontë classic Wuthering Heights featuring a 'BDSM-inspired SEX scene'"
 date: 2025-08-08 01:27:52 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14981643/Emerald-Fenn
 mentions: {'jacob_elordi': 2}
 ---
 
-The upcoming adaptation of Emily Bronte's classic novel sees Margot Robbie and Jacob Elordi portray doomed lovers Catherine and Heathcliff. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14981643/Emerald-Fennells-Wuthering-Heights-adaptation-aggressively-provacative-features-BDSM-inspired-sex-scene.html?ns_mchannel=rss =1490 _campaign=1490) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+The upcoming adaptation of Emily Bronte's classic novel sees Margot Robbie and Jacob Elordi portray doomed lovers Catherine and Heathcliff.
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14981643/Emerald-Fennells-Wuthering-Heights-adaptation-aggressively-provacative-features-BDSM-inspired-sex-scene.html?ns_mchannel=rss &ns_campaign=1490) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

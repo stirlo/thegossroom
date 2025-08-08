@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Denise Richards Seen With Fresh Bruise After Accusing Ex Of Abuse -- But It's Not What You Think, Says Source!"
 date: 2025-08-07 05:26:21 +0000
@@ -11,4 +12,8 @@ source_url: "https://perezhilton.com/denise-richards-seen-with-fresh-bruise-amid
 mentions: {'denise_richards': 9}
 ---
 
-OMG, what happened to Denise Richards?! The 54-year-old actress sparked concern when she was spotted with what appeared to be a fresh black eye on Tuesday. Given this was just weeks after she accused her estranged husband of domestic violence, fans were concerned, to say the least! Whoa! See the pictures HERE. If you kept [...] Read More... The post Denise Richards Seen With Fresh Bruise After Accusing Ex Of Abuse -- But It's Not What You Think, Says Source! appeared first on Perez Hilton. **Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Denise Richards [Read full article at Perez Hilton](https://perezhilton.com/denise-richards-seen-with-fresh-bruise-amid-ex-aaron-phypers-abuse-allegations/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+OMG, what happened to Denise Richards?! The 54-year-old actress sparked concern when she was spotted with what appeared to be a fresh black eye on Tuesday. Given this was just weeks after she accused her estranged husband of domestic violence, fans were concerned, to say the least! Whoa! See the pictures HERE. If you kept [...] Read More... The post Denise Richards Seen With Fresh Bruise After Accusing Ex Of Abuse -- But It's Not What You Think, Says Source! appeared first on Perez Hilton.
+
+**Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Denise Richards [Read full article at Perez Hilton](https://perezhilton.com/denise-richards-seen-with-fresh-bruise-amid-ex-aaron-phypers-abuse-allegations/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

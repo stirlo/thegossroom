@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Taylor Swift and Travis Kelce Reportedly Took a Major Step in Their Relationship"
 date: 2025-08-07 05:26:30 +0000
@@ -11,4 +12,6 @@ source_url: "https://www.elle.com/culture/celebrities/a65614495/taylor-swift-tra
 mentions: {'kelce': 2, ''taylor_swift': 6, ''travis_kelce': 2}
 ---
 
-**Drama Score:** 10 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Kelce, Taylor Swift, Travis Kelce [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65614495/taylor-swift-travis-kelce-ohio-house-hunting-report/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+**Drama Score:** 10 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Kelce, Taylor Swift, Travis Kelce [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65614495/taylor-swift-travis-kelce-ohio-house-hunting-report/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

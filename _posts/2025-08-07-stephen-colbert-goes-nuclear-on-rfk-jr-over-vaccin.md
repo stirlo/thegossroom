@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Stephen Colbert Goes Nuclear on RFK Jr. Over Vaccine Research Funding Cuts"
 date: 2025-08-07 15:20:22 +0000
@@ -11,4 +12,6 @@ source_url: "https://www.tmz.com/2025/08/07/stephen-colbert-rfk-jr-mrna-vaccine-
 mentions: {'stephen_colbert': 6}
 ---
 
-Stephen Colbert is going scorched earth on Robert F. Kennedy Jr. ... after the U.S. Health and Human Services Secretary announced he's slashing $500 million in vaccine research funding this week. The 'Late Show' host didn't hold back Wednesday… **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Stephen Colbert [Read full article at Tmz](https://www.tmz.com/2025/08/07/stephen-colbert-rfk-jr-mrna-vaccine-research-cuts/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+Stephen Colbert is going scorched earth on Robert F. Kennedy Jr. ... after the U.S. Health and Human Services Secretary announced he's slashing $500 million in vaccine research funding this week. The 'Late Show' host didn't hold back Wednesday… **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Stephen Colbert [Read full article at Tmz](https://www.tmz.com/2025/08/07/stephen-colbert-rfk-jr-mrna-vaccine-research-cuts/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

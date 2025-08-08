@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Furious Sha'Carri Richardson pummels boyfriend at Seattle airport in shocking security footage from arrest"
 date: 2025-08-08 06:28:39 +0000
@@ -21,4 +22,6 @@ Footage of American Olympic gold medalist sprinter Sha'Carri Richardson allegedl
 [Read full article at Daily Mail](https://www.dailymail.co.uk/sport/othersports/article-14981667/ShaCarri-Richardson-boyfriend-Seattle-airport-arrest.html?ns_mchannel=rss&ito=1490&ns_campaign=1490)
 
 ---
+
+
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

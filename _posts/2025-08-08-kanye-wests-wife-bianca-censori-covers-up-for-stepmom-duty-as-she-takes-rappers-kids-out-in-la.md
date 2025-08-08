@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Kanye West's wife Bianca Censori covers up for stepmom duty as she takes rapper's kids out in LA"
 date: 2025-08-08 06:28:39 +0000
@@ -21,4 +22,6 @@ On Tuesday, the model, 30, was spotted loading into a Cadillac Escalade with Kan
 [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14981877/Kanye-West-wife-Bianca-Censori-stepmom-duty-kids-LA.html?ns_mchannel=rss&ito=1490&ns_campaign=1490)
 
 ---
+
+
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

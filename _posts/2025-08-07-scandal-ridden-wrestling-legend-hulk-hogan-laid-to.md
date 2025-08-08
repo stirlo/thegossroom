@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Scandal-Ridden Wrestling Legend Hulk Hogan Laid To Rest In Florida"
 date: 2025-08-07 09:23:59 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d34
 mentions: {'hogan': 2, ''hulk_hogan': 2}
 ---
 
-The famous entertainer died at his Clearwater home late last month from a heart attack. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+The famous entertainer died at his Clearwater home late last month from a heart attack.
+
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

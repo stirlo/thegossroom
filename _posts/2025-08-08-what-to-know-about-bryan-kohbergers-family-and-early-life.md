@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "What to Know About Bryan Kohberger's Family and Early Life"
 date: 2025-08-08 05:25:51 +0000
@@ -21,4 +22,6 @@ Less than three years after his arrest on four counts of first-degree murder and
 [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/bryan-kohbergers-childhood-family-and-life-before-the-idaho-murders/)
 
 ---
+
+
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

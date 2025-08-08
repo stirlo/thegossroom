@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "McDonald's addict visiting ALL 13,544 restaurants in America makes stunning health admission that'll delight Trump"
 date: 2025-08-07 13:38:36 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.dailymail.co.uk/femail/article-14977113/mcdonalds-visit
 mentions: {'trump': 2}
 ---
 
-Donny Boys kicked off the endeavor in July 2024, and has been to around 350 locations in the last year in states like Wisconsin, Illinois, California, Oregon, and Washington. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/femail/article-14977113/mcdonalds-visit-restaurants-fast-food-quest-locations-us.html?ns_mchannel=rss =1490 _campaign=1490) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+Donny Boys kicked off the endeavor in July 2024, and has been to around 350 locations in the last year in states like Wisconsin, Illinois, California, Oregon, and Washington.
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/femail/article-14977113/mcdonalds-visit-restaurants-fast-food-quest-locations-us.html?ns_mchannel=rss &ns_campaign=1490) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

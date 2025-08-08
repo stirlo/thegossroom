@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Alison Brie Says ‘Scream’ Franchise Lets “Too Many People Live” but Calls Dewey’s Death a “Mistake”"
 date: 2025-08-07 22:18:18 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.hollywoodreporter.com/movies/movie-news/alison-brie-scr
 mentions: {'alison_brie': 2}
 ---
 
-The 'Together' actress appeared in the fourth film but her character, Rebecca Walters, was killed. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Alison Brie [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/movies/movie-news/alison-brie-scream-franchise-criticism-1236339528/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+The 'Together' actress appeared in the fourth film but her character, Rebecca Walters, was killed.
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Alison Brie [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/movies/movie-news/alison-brie-scream-franchise-criticism-1236339528/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Bad Bunny Is Causing a Surge in Tinder Use During His Puerto Rico Residency"
 date: 2025-08-07 20:19:55 +0000
@@ -11,4 +12,6 @@ source_url: "https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto
 mentions: {'bad_bunny': 4}
 ---
 
-According to data shared by the popular dating platform, mentions of the Puerto Rican superstar in bios have increased by almost 13%. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Bad Bunny [Read full article at Billboard](https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto-rico-residency-1236038895/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+According to data shared by the popular dating platform, mentions of the Puerto Rican superstar in bios have increased by almost 13%. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Bad Bunny [Read full article at Billboard](https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto-rico-residency-1236038895/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

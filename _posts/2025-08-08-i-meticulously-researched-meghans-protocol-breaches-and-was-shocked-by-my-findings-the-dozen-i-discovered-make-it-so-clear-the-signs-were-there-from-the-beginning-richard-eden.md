@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "I meticulously researched Meghan's protocol breaches and was shocked by my findings. The dozen I discovered make it so clear: The signs were there from the beginning: RICHARD EDEN"
 date: 2025-08-08 06:28:39 +0000
@@ -21,4 +22,6 @@ Since abandoning official duties in 2020 and returning to America, the Duchess o
 [Read full article at Daily Mail](https://www.dailymail.co.uk/news/royals/article-14979265/Meghan-breaches-royal-fashion-protocol-committed-rebellion-RICHARD-EDEN.html?ns_mchannel=rss&ito=1490&ns_campaign=1490)
 
 ---
+
+
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

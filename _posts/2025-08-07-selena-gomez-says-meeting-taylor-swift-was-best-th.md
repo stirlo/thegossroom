@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Selena Gomez Says Meeting Taylor Swift Was Best Thing About Dating Jonas Brothers"
 date: 2025-08-07 13:38:25 +0000
@@ -11,4 +12,6 @@ source_url: "https://www.tmz.com/2025/08/07/selena-gomez-taylor-swift-past-datin
 mentions: {'selena_gomez': 6, ''taylor_swift': 18}
 ---
 
-Taylor Swift and Selena Gomez have plenty of thanks to give to their respective exes, Joe and Nick Jonas ... 'cause Sel says finding a best friend in Tay was the best part about dating the famous bros! The "Calm Down" hitmaker recalled their… **Drama Score:** 24 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Selena Gomez, Taylor Swift [Read full article at Tmz](https://www.tmz.com/2025/08/07/selena-gomez-taylor-swift-past-dating-jonas-brothers/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+Taylor Swift and Selena Gomez have plenty of thanks to give to their respective exes, Joe and Nick Jonas ... 'cause Sel says finding a best friend in Tay was the best part about dating the famous bros! The "Calm Down" hitmaker recalled their… **Drama Score:** 24 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Selena Gomez, Taylor Swift [Read full article at Tmz](https://www.tmz.com/2025/08/07/selena-gomez-taylor-swift-past-dating-jonas-brothers/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

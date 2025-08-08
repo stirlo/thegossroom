@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Blake Lively Slams Perez Hilton in Court for Calling Her 'Ku Klux Khaleesi'"
 date: 2025-08-07 05:26:24 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.usmagazine.com/celebrity-news/news/blake-lively-slams-p
 mentions: {'blake_lively': 6, ''justin_baldoni': 3}
 ---
 
-Blake Lively slammed Perez Hilton for posting more than 500 negative videos about her — and accused him of refusing to answer to the subpoena she issued — amid her legal battle with Justin Baldoni, Us Weekly can report. On July 29, Hilton, 47, filed court documents pleading for a protective order against Lively, 37, […] **Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Blake Lively, Justin Baldoni [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/blake-lively-slams-perez-hilton-in-court-over-ku-klux-khaleesi-comment/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+Blake Lively slammed Perez Hilton for posting more than 500 negative videos about her — and accused him of refusing to answer to the subpoena she issued — amid her legal battle with Justin Baldoni, Us Weekly can report. On July 29, Hilton, 47, filed court documents pleading for a protective order against Lively, 37, […]
+
+**Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Blake Lively, Justin Baldoni [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/blake-lively-slams-perez-hilton-in-court-over-ku-klux-khaleesi-comment/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

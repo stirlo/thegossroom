@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "MGK Details Chat With Taylor Swift Amid Travis Kelce’s Super Bowl Loss"
 date: 2025-08-07 17:19:21 +0000
@@ -11,4 +12,6 @@ source_url: "https://www.eonline.com/news/1420880/machine-gun-kelly-on-taylor-sw
 mentions: {'bowl': 6, ''kelce': 6, ''machine_gun_kelly': 3, ''super': 6, ''super_bowl': 6, ''taylor_swift': 18, ''travis_kelce': 6}
 ---
 
-By the way, Taylor Swift is going out tonight, but she didn’t after the last Super Bowl. As Travis Kelce and the Kansas City Chiefs prepare to kick off the 2025 NFL season, Machine Gun Kelly, who... **Drama Score:** 51 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bowl, Kelce, Machine Gun Kelly, Super, Super Bowl, Taylor Swift, Travis Kelce [Read full article at E News](https://www.eonline.com/news/1420880/machine-gun-kelly-on-taylor-swift-super-bowl-conversation?cmpid=rss-syndicate-genericrss-us-top_stories) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+By the way, Taylor Swift is going out tonight, but she didn’t after the last Super Bowl. As Travis Kelce and the Kansas City Chiefs prepare to kick off the 2025 NFL season, Machine Gun Kelly, who... **Drama Score:** 51 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bowl, Kelce, Machine Gun Kelly, Super, Super Bowl, Taylor Swift, Travis Kelce [Read full article at E News](https://www.eonline.com/news/1420880/machine-gun-kelly-on-taylor-swift-super-bowl-conversation?cmpid=rss-syndicate-genericrss-us-top_stories) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

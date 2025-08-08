@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Kim Kardashian Reacts To Anthony Hopkins Comparing Her Face Shapewear To Hannibal Lecter"
 date: 2025-08-04 10:43:19 +0000

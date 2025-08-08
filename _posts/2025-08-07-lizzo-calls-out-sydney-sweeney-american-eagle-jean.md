@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Lizzo Calls Out Sydney Sweeney American Eagle Jeans Ad in New Song"
 date: 2025-08-07 15:20:28 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.hollywoodreporter.com/news/music-news/lizzo-sydney-swee
 mentions: {'lizzo': 2, ''sydney_sweeney': 2}
 ---
 
-The Grammy winner released a video for "I'm Goin’ In Till October" that pokes fun at the controversy. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Lizzo, Sydney Sweeney [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/news/music-news/lizzo-sydney-sweeney-jeans-american-eagle-ad-new-song-1236339333/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+The Grammy winner released a video for "I'm Goin’ In Till October" that pokes fun at the controversy.
+
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Lizzo, Sydney Sweeney [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/news/music-news/lizzo-sydney-sweeney-jeans-american-eagle-ad-new-song-1236339333/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

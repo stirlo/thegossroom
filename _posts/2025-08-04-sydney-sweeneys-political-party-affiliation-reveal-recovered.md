@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Sydney Sweeney’s Political Party Affiliation Revealed Amid American Eagle Backlash"
 date: 2025-08-04 10:43:19 +0000

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Lauren Sánchez Bezos Swaps One Key Summer Vacation Style Staple for Another"
 date: 2025-08-07 09:24:02 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.vogue.com/article/lauren-sanchez-bezos-ibiza-date-night
 mentions: {'super': 2}
 ---
 
-Lauren Sánchez Bezos and Jeff Bezos are enjoying Ibiza with Vittoria Ceretti and Leonardo DiCaprio—this time, leaving sky-high stilettos on the super yacht. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Super [Read full article at Vogue Alt](https://www.vogue.com/article/lauren-sanchez-bezos-ibiza-date-night-style) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+Lauren Sánchez Bezos and Jeff Bezos are enjoying Ibiza with Vittoria Ceretti and Leonardo DiCaprio—this time, leaving sky-high stilettos on the super yacht.
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Super [Read full article at Vogue Alt](https://www.vogue.com/article/lauren-sanchez-bezos-ibiza-date-night-style) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

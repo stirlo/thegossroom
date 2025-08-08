@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "All About Rich Paul, Adele’s Fiancé and One of the Biggest Sports Agents in the NBA"
 date: 2025-08-07 17:19:29 +0000
@@ -11,4 +12,6 @@ source_url: "https://www.elle.com/culture/celebrities/a37078257/who-is-rich-paul
 mentions: {'adele': 2}
 ---
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Adele [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a37078257/who-is-rich-paul-adele-boyfriend-nba-agent/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Adele [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a37078257/who-is-rich-paul-adele-boyfriend-nba-agent/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Selena Gomez Reflects on Mental Health, Meeting Benny Blanco in ‘Therapuss’ Interview"
 date: 2025-08-07 06:28:54 +0000
@@ -11,4 +12,8 @@ source_url: "https://www.billboard.com/music/music-news/selena-gomez-mental-heal
 mentions: {'selena_gomez': 2}
 ---
 
-"To be honest [we weren't] besties, I just thought he was nice and then we did a few songs together," Gomez recalls of the beginning of her relationship with Blanco. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Selena Gomez [Read full article at Billboard](https://www.billboard.com/music/music-news/selena-gomez-mental-health-benny-blanco-therapuss-1236038414/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+"To be honest [we weren't] besties, I just thought he was nice and then we did a few songs together," Gomez recalls of the beginning of her relationship with Blanco.
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Selena Gomez [Read full article at Billboard](https://www.billboard.com/music/music-news/selena-gomez-mental-health-benny-blanco-therapuss-1236038414/) --- 
+
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
