@@ -1,28 +1,13 @@
 #!/usr/bin/env python3
 """
-Fix YAML tags - remove quotes from array items
+Fix all YAML issues in Jekyll posts
 """
 
 import re
 from pathlib import Path
 
-def remove_quotes_from_tags(match_obj):
-    """Remove quotes from tag items"""
-    tag_content = match_obj.group(1)
-    # Remove single quotes
-    tag_content = re.sub(r"'([^']+)'", r'\1', tag_content)
-    # Remove double quotes
-    tag_content = re.sub(r'"([^"]+)"', r'\1', tag_content)
-    return f"tags: [{tag_content}]"
-
-def remove_quotes_from_mentions(match_obj):
-    """Remove quotes from mentions dictionary"""
-    mentions_content = match_obj.group(1)
-    cleaned = mentions_content.replace('"', '').replace("'", '')
-    return f"mentions: {{{cleaned}}}"
-
-def fix_yaml_tags(content):
-    """Fix quoted tags in YAML front matter"""
+def fix_yaml_comprehensive(content):
+    """Fix all YAML syntax issues"""
     if not content.startswith('---\n'):
         return content
 
@@ -34,19 +19,34 @@ def fix_yaml_tags(content):
     post_content = parts[2]
     original_fm = front_matter
 
-    # Fix tags array - remove quotes from items
-    front_matter = re.sub(
-        r"tags: \[([^\]]+)\]",
-        remove_quotes_from_tags,
-        front_matter
-    )
+    # Fix 1: Remove quotes from tags array items
+    def fix_tags(match):
+        tag_list = match.group(1)
+        # Remove all quotes from individual items
+        clean_tags = re.sub(r"['\"]([^'\"]+)['\"]", r'\1', tag_list)
+        return f"tags: [{clean_tags}]"
 
-    # Fix mentions dictionary - remove quotes
-    front_matter = re.sub(
-        r"mentions: \{([^}]+)\}",
-        remove_quotes_from_mentions,
-        front_matter
-    )
+    front_matter = re.sub(r"tags: \[([^\]]+)\]", fix_tags, front_matter)
+
+    # Fix 2: Remove quotes from mentions dictionary
+    def fix_mentions(match):
+        mentions_content = match.group(1)
+        clean_mentions = mentions_content.replace('"', '').replace("'", '')
+        return f"mentions: {{{clean_mentions}}}"
+
+    front_matter = re.sub(r"mentions: \{([^}]+)\}", fix_mentions, front_matter)
+
+    # Fix 3: Fix broken URLs with spaces
+    def fix_url_spaces(match):
+        url = match.group(1)
+        # Replace spaces in URL parameters with %20
+        if '?' in url:
+            base, params = url.split('?', 1)
+            params = params.replace(' =', '&').replace(' _', '&')
+            url = f"{base}?{params}"
+        return f'source_url: "{url}"'
+
+    front_matter = re.sub(r'source_url: "([^"]+)"', fix_url_spaces, front_matter)
 
     if front_matter != original_fm:
         return f"---\n{front_matter}---\n{post_content}"
@@ -57,13 +57,13 @@ def main():
     posts_dir = Path('_posts')
     fixed_count = 0
 
-    print("🔧 Fixing quoted YAML tags...")
+    print("🔧 Comprehensive YAML fix...")
 
     for post_file in posts_dir.glob('*.md'):
         with open(post_file, 'r', encoding='utf-8') as f:
             original_content = f.read()
 
-        fixed_content = fix_yaml_tags(original_content)
+        fixed_content = fix_yaml_comprehensive(original_content)
 
         if fixed_content != original_content:
             with open(post_file, 'w', encoding='utf-8') as f:
