@@ -237,8 +237,8 @@ anna_kendrick:
   temperature_change: 0
 anne_hathaway:
   category: actor
-  drama_score: 70
-  last_temperature_update: '2025-08-04 04:55:10'
+  drama_score: 74
+  last_temperature_update: '2025-08-08 04:41:41'
   status: hot
   temperature_change: 4
 anya_taylor_joy:
@@ -262,12 +262,12 @@ arcade_fire:
 ariana_grande:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 74
-  last_temperature_update: '2025-08-07 05:26:35'
+  drama_score: 90
+  last_temperature_update: '2025-08-08 04:41:41'
   memorial: false
   promotion_date: '2020-01-01'
-  status: hot
-  temperature_change: 1
+  status: explosive
+  temperature_change: 16
 aubrey_graham:
   category: musician
   discovery_date: '2025-08-04'
@@ -1139,10 +1139,10 @@ dwayne_carter:
   temperature_change: 0
 ed_kelce:
   category: celebrity_family
-  drama_score: 68
-  last_temperature_update: '2025-08-07 23:18:09'
+  drama_score: 69
+  last_temperature_update: '2025-08-08 04:41:41'
   status: rising
-  temperature_change: 4
+  temperature_change: 1
 ed_sheeran:
   category: musician
   discovery_date: '2020-01-01'
@@ -1427,12 +1427,12 @@ gucci_mane:
 gunna:
   category: musician
   discovery_date: '2025-08-04'
-  drama_score: 60
-  last_temperature_update: '2025-08-07 05:26:35'
+  drama_score: 62
+  last_temperature_update: '2025-08-08 04:41:41'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 0
+  temperature_change: 2
 hailey_baldwin:
   category: model
   discovery_date: '2025-08-04'
@@ -1695,10 +1695,10 @@ jason_isaacs:
   temperature_change: 7
 jason_kelce:
   category: athlete
-  drama_score: 90
-  last_temperature_update: '2025-08-08 03:41:34'
+  drama_score: 91
+  last_temperature_update: '2025-08-08 04:41:41'
   status: explosive
-  temperature_change: 4
+  temperature_change: 1
 jason_mantzoukas:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2136,7 +2136,7 @@ keegan_michael_key:
 kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-08 03:41:34'
+  last_temperature_update: '2025-08-08 04:41:41'
   status: explosive
   temperature_change: 0
 kelly_dodd:
@@ -2915,12 +2915,12 @@ nick_kroll:
 nicki_minaj:
   category: musician
   discovery_date: '2025-08-04'
-  drama_score: 79
-  last_temperature_update: '2025-08-07 17:19:34'
+  drama_score: 83
+  last_temperature_update: '2025-08-08 04:41:41'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 0
+  temperature_change: 4
 nigo:
   category: fashion_designer
   discovery_date: '2020-01-01'
@@ -3537,11 +3537,11 @@ simone_biles:
   category: athlete
   discovery_date: '2025-08-04'
   drama_score: 61
-  last_temperature_update: '2025-08-07 05:26:35'
+  last_temperature_update: '2025-08-08 04:41:41'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 1
+  temperature_change: 0
 simu_liu:
   category: actor
   discovery_date: '2021-09-01'
@@ -3681,7 +3681,7 @@ super:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-08 01:28:05'
+  last_temperature_update: '2025-08-08 04:41:41'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
