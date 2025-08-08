@@ -138,7 +138,7 @@ def fix_mentions_field(line):
                 if ':' in item:
                     key_part = item.split(':')[0].strip()
                     # Remove quotes (both single and double, including extra quotes)
-                    key_part = re.sub(r'^["\']*(.*?)["\'']*$', r'\1', key_part)
+                    key_part = re.sub(r'^["\']*(.*?)["\'"]*$', r'\1', key_part)
                     if key_part:
                         keys.append(key_part)
 
@@ -156,7 +156,7 @@ def fix_mentions_field(line):
     # Handle single value
     else:
         # Remove quotes and wrap in array
-        clean_value = re.sub(r'^["\']*(.*?)["\'']*$', r'\1', value)
+        clean_value = re.sub(r'^["\']*(.*?)["\'"]*$', r'\1', value)
         if clean_value:
             return f"{key}: ['{clean_value}']"
         else:
@@ -173,7 +173,7 @@ def fix_tags_field(line):
     # Ensure proper array format with quotes
     if not value.startswith('['):
         # Single tag
-        clean_value = re.sub(r'^["\']*(.*?)["\'']*$', r'\1', value)
+        clean_value = re.sub(r'^["\']*(.*?)["\'"]*$', r'\1', value)
         return f"{key}: ['{clean_value}']"
 
     # Already array format - ensure quotes are correct
@@ -189,7 +189,7 @@ def fix_categories_field(line):
 
     # Simple string value
     if not value.startswith('['):
-        clean_value = re.sub(r'^["\']*(.*?)["\'']*$', r'\1', value)
+        clean_value = re.sub(r'^["\']*(.*?)["\'"]*$', r'\1', value)
         return f"{key}: {clean_value}"
 
     return line
@@ -205,7 +205,7 @@ def fix_title_field(line):
     # If not quoted, add quotes
     if not (value.startswith('"') and value.endswith('"')):
         # Remove existing quotes first
-        clean_value = re.sub(r'^["\']*(.*?)["\'']*$', r'\1', value)
+        clean_value = re.sub(r'^["\']*(.*?)["\'"]*$', r'\1', value)
         return f'{key}: "{clean_value}"'
 
     return line
@@ -219,7 +219,7 @@ def fix_url_field(line):
     value = value.strip()
 
     # Remove quotes to clean URL
-    clean_value = re.sub(r'^["\']*(.*?)["\'']*$', r'\1', value)
+    clean_value = re.sub(r'^["\']*(.*?)["\'"]*$', r'\1', value)
 
     # Fix broken URLs with spaces
     clean_value = re.sub(r'\s+=\s*', '=', clean_value)  # Fix " =1490 _campaign" -> "=1490_campaign"
@@ -237,7 +237,7 @@ def fix_source_field(line):
     value = value.strip()
 
     # Remove extra quotes
-    clean_value = re.sub(r'^["\']*(.*?)["\'']*$', r'\1', value)
+    clean_value = re.sub(r'^["\']*(.*?)["\'"]*$', r'\1', value)
     return f"{key}: {clean_value}"
 
 def is_content_not_yaml(line):
