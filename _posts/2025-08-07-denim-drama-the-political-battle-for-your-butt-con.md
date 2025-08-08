@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: beyonce
 source: rolling_stone
 source_url: "https://www.rollingstone.com/product-recommendations/style/beyonce-levis-sydney-sweeney-american-eagle-controversy-1235403196/"
-mentions: {'beyonce': 4, ''sydney_sweeney': 2}
+mentions: {'beyonce': 4, 'sydney_sweeney': 2}
 ---
 
 How Beyonce x Levi’s and Sydney Sweeney x American Eagle Outfitters sparked political debate — and boosted stock prices for both brands

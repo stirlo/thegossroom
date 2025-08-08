@@ -9,7 +9,7 @@ drama_score: 14
 primary_celebrity: kim_kardashian
 source: elle_alt
 source_url: "https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/"
-mentions: {'bieber': 2, ''hailey_bieber': 2, ''justin_bieber': 2, ''kardashian': 2, ''kim_kardashian': 6}
+mentions: {'bieber': 2, 'hailey_bieber': 2, 'justin_bieber': 2, 'kardashian': 2, 'kim_kardashian': 6}
 ---
 
 Joanna Czech swears by this less-is-more routine.

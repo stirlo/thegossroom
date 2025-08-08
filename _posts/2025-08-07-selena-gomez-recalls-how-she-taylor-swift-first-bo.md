@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: taylor_swift
 source: billboard
 source_url: "https://www.billboard.com/music/music-news/selena-gomez-taylor-swift-bonded-jonas-brothers-breakups-1236038612/"
-mentions: {'selena_gomez': 2, ''taylor_swift': 6}
+mentions: {'selena_gomez': 2, 'taylor_swift': 6}
 ---
 
 The Rare Beauty founder also revealed the first song the pop superstar ever played for her.

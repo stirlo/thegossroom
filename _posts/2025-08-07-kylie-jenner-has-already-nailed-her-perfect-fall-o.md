@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: jenner
 source: vogue_alt
 source_url: "https://www.vogue.com/article/kylie-jenner-has-already-nailed-her-perfect-fall-outfit"
-mentions: {'jenner': 4, ''kylie_jenner': 4}
+mentions: {'jenner': 4, 'kylie_jenner': 4}
 ---
 
 After a summer spent ticking off all of this season’s biggest trends, KHY founder Kylie Jenner is ready to wrap up in leather.

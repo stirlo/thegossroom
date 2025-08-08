@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: jeannie_seely
 source: rolling_stone
 source_url: "https://www.rollingstone.com/music/music-country/jeannie-seely-country-singer-dead-obituary-1235397362/"
-mentions: {'jeannie_seely': 2, ''of_the': 2}
+mentions: {'jeannie_seely': 2, 'of_the': 2}
 ---
 
 With songs like "Don't Touch Me" and an emphasis on female empowerment, the Grand Ole Opry member was a progressive voice in the Nashville of the Sixties and Seventies

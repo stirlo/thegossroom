@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: lebron_james
 source: billboard
 source_url: "https://www.billboard.com/music/rb-hip-hop/lil-wayne-reunion-lebron-james-1236038950/"
-mentions: {'lebron_james': 2, ''lil_wayne': 2, ''weezy': 2}
+mentions: {'lebron_james': 2, 'lil_wayne': 2, 'weezy': 2}
 ---
 
 Weezy even performed at LeBron's 21st birthday party in 2005.

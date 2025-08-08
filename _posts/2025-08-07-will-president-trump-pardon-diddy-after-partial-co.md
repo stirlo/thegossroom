@@ -9,7 +9,7 @@ drama_score: 15
 primary_celebrity: diddy
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-news/news/will-donald-trump-pardon-diddy-after-conviction-what-to-know/"
-mentions: {'diddy': 6, ''donald_trump': 3, ''trump': 6}
+mentions: {'diddy': 6, 'donald_trump': 3, 'trump': 6}
 ---
 
 Before Sean “Diddy” Combs’ trial had even ended, observers began speculating about whether President Donald Trump would pardon him. The chatter increased in the spring after the president pardoned reality stars Todd and Julie Chrisley, who were convicted of bank fraud and tax evasion in 2022. The former Chrisley Knows Best stars, who have maintained […]

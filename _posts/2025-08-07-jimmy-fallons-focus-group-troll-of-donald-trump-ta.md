@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: donald_trump
 source: huffpost_entertainment
 source_url: "https://www.huffpost.com/entry/jimmy-fallon-donald-trump-focus-group_n_6891d891e4b0eacd23de867a"
-mentions: {'donald_trump': 2, ''trump': 2}
+mentions: {'donald_trump': 2, 'trump': 2}
 ---
 
 The president's latest plan for the White House received "The Tonight Show" treatment.

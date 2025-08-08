@@ -9,7 +9,7 @@ drama_score: 18
 primary_celebrity: liam
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-news/pictures/liam-neeson-and-pamela-andersons-cutest-photos-together/"
-mentions: {'liam': 6, ''liam_neeson': 6, ''pamela_anderson': 6}
+mentions: {'liam': 6, 'liam_neeson': 6, 'pamela_anderson': 6}
 ---
 
 Liam Neeson and Pamela Anderson’s romance may be new, but they’re already one of the cutest couples in Hollywood. The pair first met while working together on the 2025 remake The Naked Gun, and their chemistry was hard to ignore. “We met on set,” Neeson said during a July 2025 appearance on Today when host […]

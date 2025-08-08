@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: brad_pitt
 source: daily_mail
 source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14977293/brad-pitt-mom-jane-death-nine-apart-grandchildren-Angelina-Jolie.html?ns_mchannel=rss&1490&campaign=1490"
-mentions: {'angelina_jolie': 2, ''brad_pitt': 4}
+mentions: {'angelina_jolie': 2, 'brad_pitt': 4}
 ---
 
 Brad Pitt's bitter feud with ex Angelina Jolie hasn't only kept his kids away from him, but also from his mother Jane who died without seeing her grandkids for nine years.

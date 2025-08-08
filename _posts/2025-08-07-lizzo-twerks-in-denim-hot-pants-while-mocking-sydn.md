@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: lizzo
 source: page_six
 source_url: "https://pagesix.com/2025/08/07/entertainment/lizzo-mocks-sydney-sweeneys-american-eagle-campaign-again-with-new-song/"
-mentions: {'lizzo': 2, ''sydney_sweeney': 2}
+mentions: {'lizzo': 2, 'sydney_sweeney': 2}
 ---
 
 The singer previously spoofed Sweeney's controversial ad by posting a satirical version of the campaign, captioned, "My jeans are black." **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Lizzo, Sydney Sweeney [Read full article at Page Six](https://pagesix.com/2025/08/07/entertainment/lizzo-mocks-sydney-sweeneys-american-eagle-campaign-again-with-new-song/)

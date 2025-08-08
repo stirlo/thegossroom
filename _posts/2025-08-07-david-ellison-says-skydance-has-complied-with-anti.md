@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: trump
 source: deadline
 source_url: "https://deadline.com/2025/08/skydance-washington-dc-lobby-1236481047/"
-mentions: {'donald_trump': 2, ''trump': 4}
+mentions: {'donald_trump': 2, 'trump': 4}
 ---
 
 New Paramount CEO David Ellison reiterated that Skydance has complied with all laws, including anti-bribery laws, but did not go into any details of Donald Trump’s claim that the company agreed to an additional $16 million in PSAs and advertisements as part of a settlement of his lawsuit. “We’re basically clear that we comply with […]

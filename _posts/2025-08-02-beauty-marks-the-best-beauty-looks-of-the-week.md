@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: dua_lipa
 source: vogue_alt
 source_url: "https://www.vogue.com/slideshow/best-beauty-looks-of-the-week-august-3"
-mentions: {'dua_lipa': 2, ''of_the': 2}
+mentions: {'dua_lipa': 2, 'of_the': 2}
 ---
 
 From Jodie Turner-Smith’s sleek eyeliner to Dua Lipa’s favorite nail artist’s French mani with a twist—celebrity beauty enjoyed fun, feminine details this week.

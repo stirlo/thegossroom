@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: kanye_west
 source: rolling_stone
 source_url: "https://www.rollingstone.com/music/music-news/pusha-t-kanye-west-collaborations-in-the-past-1235403476/"
-mentions: {'kanye': 2, ''kanye_west': 6}
+mentions: {'kanye': 2, 'kanye_west': 6}
 ---
 
 “He knows I don’t think he’s a man. He knows it," Pusha previously said of Ye

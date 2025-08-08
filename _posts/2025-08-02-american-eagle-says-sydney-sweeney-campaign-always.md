@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: sydney_sweeney
 source: rolling_stone
 source_url: "https://www.rollingstone.com/tv-movies/tv-movie-news/american-eagle-responds-sydney-sweeney-controversy-1235398866/"
-mentions: {'of_the': 2, ''sydney_sweeney': 4}
+mentions: {'of_the': 2, 'sydney_sweeney': 4}
 ---
 
 Some have criticized the campaign for dog-whistling eugenics because of the play-on-words tagline, "Sydney Sweeney Has Great Jeans/Genes" **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Of The, Sydney Sweeney [Read full article at Rolling Stone](https://www.rollingstone.com/tv-movies/tv-movie-news/american-eagle-responds-sydney-sweeney-controversy-1235398866/)

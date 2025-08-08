@@ -9,7 +9,7 @@ drama_score: 10
 primary_celebrity: jd_vance
 source: deadline
 source_url: "https://deadline.com/2025/08/jd-vance-south-park-debut-1236481177/"
-mentions: {'donald_trump': 2, ''jd_vance': 4, ''trump': 4}
+mentions: {'donald_trump': 2, 'jd_vance': 4, 'trump': 4}
 ---
 
 Vice President JD Vance gave a short response to South Park, as the show skewered him and other Trump administration figures in the second episode of the latest season. “Well, I’ve finally made it,” Vance wrote on X, linking to the show’s post featuring a mini version of him standing next to Donald Trump, ala […]

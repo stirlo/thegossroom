@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: ariana_grande
 source: bbc_entertainment
 source_url: "https://www.bbc.com/news/articles/c1dxre1nz0eo?at_medium=RSS&campaign=rss"
-mentions: {'ariana_grande': 3, ''kendrick_lamar': 1, ''sabrina_carpenter': 2}
+mentions: {'ariana_grande': 3, 'kendrick_lamar': 1, 'sabrina_carpenter': 2}
 ---
 
 Kendrick Lamar, Sabrina Carpenter and Ariana Grande are also among the artists nominated.

@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: justin_bieber
 source: rolling_stone
 source_url: "https://www.rollingstone.com/music/music-news/kodak-black-justin-bieber-party-shooting-lawsuit-default-1235402354/"
-mentions: {'bieber': 2, ''justin_bieber': 6}
+mentions: {'bieber': 2, 'justin_bieber': 6}
 ---
 
 Two men shot outside a Justin Bieber-hosted party three years ago were set to begin a civil trial this month, but a judge scrapped the date

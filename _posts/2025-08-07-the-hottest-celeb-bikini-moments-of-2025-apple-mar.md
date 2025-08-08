@@ -9,7 +9,7 @@ drama_score: 30
 primary_celebrity: kim_kardashian
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-body/pictures/the-hottest-celeb-bikini-moments-of-2025/"
-mentions: {'bieber': 3, ''golden': 3, ''hailey_bieber': 3, ''justin_bieber': 3, ''kardashian': 3, ''kim_kardashian': 9, ''simone_biles': 3, ''super': 3}
+mentions: {'bieber': 3, 'golden': 3, 'hailey_bieber': 3, 'justin_bieber': 3, 'kardashian': 3, 'kim_kardashian': 9, 'simone_biles': 3, 'super': 3}
 ---
 
 Stars have no shortage of stylish swimsuits. This year, Hollywood’s favorites, including Gisele Bundchen, Simone Biles, Bella Hadid, Kim Kardashian, Brittany Mahomes, Hailey Bieber and more have shown off their bikini style in super sexy looks. Take Mahomes, who slayed in a bubblegum pink suit only one month after giving birth to her daughter Golden, whom […]

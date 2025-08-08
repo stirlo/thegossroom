@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: bowl
 source: rolling_stone
 source_url: "https://www.rollingstone.com/music/music-news/lars-ulrich-metallica-sphere-super-bowl-rumors-howard-stern-1235402630/"
-mentions: {'bowl': 2, ''super': 2, ''super_bowl': 2}
+mentions: {'bowl': 2, 'super': 2, 'super_bowl': 2}
 ---
 
 "I’m not going to confirm anything, because there’s nothing to confirm. But I’m not going to deny it, because we’re all such fans of this venue," drummer said of potential Las Vegas residency

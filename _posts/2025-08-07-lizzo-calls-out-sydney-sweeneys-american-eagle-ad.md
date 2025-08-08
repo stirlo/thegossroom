@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: lizzo
 source: rolling_stone
 source_url: "https://www.rollingstone.com/music/music-news/lizzo-sydney-sweeney-american-eagle-ad-new-song-1235402779/"
-mentions: {'lizzo': 4, ''sydney_sweeney': 2}
+mentions: {'lizzo': 4, 'sydney_sweeney': 2}
 ---
 
 "Bitch, I got good jeans like I’m Sydney," rapper says in snippet of new track, and one of two TikToks Lizzo posted about the controversial ad campaign

@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: awards
 source: hollywood_reporter
 source_url: "https://www.hollywoodreporter.com/business/business-news/paramount-chris-mccarthy-brian-robbins-pay-1236339354/"
-mentions: {'awards': 2, ''golden': 2}
+mentions: {'awards': 2, 'golden': 2}
 ---
 
 Shari Redstone will receive $1.75 billion for her stake while her exiting C-suite executives will get eight-figure termination awards in addition to their annual salaries.

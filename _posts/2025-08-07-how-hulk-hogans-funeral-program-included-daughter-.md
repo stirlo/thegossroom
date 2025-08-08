@@ -9,7 +9,7 @@ drama_score: 18
 primary_celebrity: hogan
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-news/news/how-hulk-hogans-funeral-program-included-daughter-brooke-excl/"
-mentions: {'brooke_hogan': 3, ''hogan': 9, ''hulk_hogan': 6}
+mentions: {'brooke_hogan': 3, 'hogan': 9, 'hulk_hogan': 6}
 ---
 
 Hulk Hogan’s funeral program incorporated all of his children, including daughter Brooke Hogan, who chose not to attend the service. “As a devoted family man, Terry cherished time with his loved ones,” the program viewed by Us Weekly stated during the former wrestler’s Tuesday, August 5, memorial service. “He was a proud father of Brooke […]

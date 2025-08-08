@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: of_the
 source: rolling_stone
 source_url: "https://www.rollingstone.com/music/music-live-reviews/olivia-rodrigo-korn-bleachers-lollapalooza-2025-recap-1235395387/"
-mentions: {'of_the': 2, ''olivia_rodrigo': 2}
+mentions: {'of_the': 2, 'olivia_rodrigo': 2}
 ---
 
 Bleachers, T-Pain, and Djo were among the highlights at the second day of the Chicago festival in Grant Park

@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: hogan
 source: huffpost_entertainment
 source_url: "https://www.huffpost.com/entry/brooke-hogan-skips-dad-hulk-hogan-funeral_n_68936636e4b0d3424bc47638"
-mentions: {'brooke_hogan': 2, ''hogan': 4, ''hulk_hogan': 2}
+mentions: {'brooke_hogan': 2, 'hogan': 4, 'hulk_hogan': 2}
 ---
 
 “People grieve in many ways,” Brooke Hogan said while explaining her absence.

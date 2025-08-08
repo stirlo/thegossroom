@@ -9,7 +9,7 @@ drama_score: 12
 primary_celebrity: meghan_markle
 source: tmz
 source_url: "https://www.tmz.com/2025/08/01/meghan-markle-prince-harry-beach-archie-surf-lesson/"
-mentions: {'meghan_markle': 6, ''prince_harry': 6}
+mentions: {'meghan_markle': 6, 'prince_harry': 6}
 ---
 
 Meghan Markle and Prince Harry are at it again -- riding high on life, grinning through it all, and living their best royal rebellion. TMZ got the pics -- Harry and Megs hit up Santa Claus Beach in Carpinteria, just outside Santa Barbara on Friday,… **Drama Score:** 12 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Meghan Markle, Prince Harry [Read full article at Tmz](https://www.tmz.com/2025/08/01/meghan-markle-prince-harry-beach-archie-surf-lesson/)

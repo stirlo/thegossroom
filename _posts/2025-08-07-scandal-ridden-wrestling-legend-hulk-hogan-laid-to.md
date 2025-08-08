@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: hogan
 source: huffpost_entertainment
 source_url: "https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973"
-mentions: {'hogan': 2, ''hulk_hogan': 2}
+mentions: {'hogan': 2, 'hulk_hogan': 2}
 ---
 
 The famous entertainer died at his Clearwater home late last month from a heart attack.

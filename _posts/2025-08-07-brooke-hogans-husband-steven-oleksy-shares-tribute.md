@@ -9,7 +9,7 @@ drama_score: 18
 primary_celebrity: hogan
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogans-husband-steven-oleksy-shares-tribute-to-hulk-hogan/"
-mentions: {'brooke_hogan': 6, ''hogan': 9, ''hulk_hogan': 3}
+mentions: {'brooke_hogan': 6, 'hogan': 9, 'hulk_hogan': 3}
 ---
 
 Brooke Hogan’s husband, Steven Oleksy, shared a tribute to late father-in-law Hulk Hogan. “It’s with mixed emotions that I write this post,” Oleksy, 39, captioned an Instagram post on Tuesday, August 5. “While I may not have been part of the journey from the very beginning, I was fortunate to witness the kind of love […]

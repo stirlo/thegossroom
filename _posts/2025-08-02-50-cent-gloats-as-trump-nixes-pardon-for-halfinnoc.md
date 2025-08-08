@@ -9,7 +9,7 @@ drama_score: 22
 primary_celebrity: trump
 source: deadline
 source_url: "https://deadline.com/2025/08/trump-no-sean-combs-pardon-diddy-50-cent-1236477155/"
-mentions: {'diddy': 8, ''trump': 14}
+mentions: {'diddy': 8, 'trump': 14}
 ---
 
 Donald Trump believes Sean “Diddy” Combs is “half-innocent” out of his sex-trafficking trial, but there will be no presidential pardon right now for the much-accused Grammy winner. And, just two days after Deadline exclusively reported that Trump was “seriously considering” such a pardon and the White House played its cards close to the chest, Friday’s […]

@@ -9,7 +9,7 @@ drama_score: 12
 primary_celebrity: bieber
 source: elle_alt
 source_url: "https://www.elle.com/fashion/celebrity-style/a65554447/hailey-bieber-intimissimi-boat-neck-ultralight-top/"
-mentions: {'bella_hadid': 2, ''bieber': 4, ''jenner': 2, ''kendall_jenner': 2, ''of_the': 2}
+mentions: {'bella_hadid': 2, 'bieber': 4, 'jenner': 2, 'kendall_jenner': 2, 'of_the': 2}
 ---
 
 Kendall Jenner and Bella Hadid are also fans of the $59 cashmere-blend staple.

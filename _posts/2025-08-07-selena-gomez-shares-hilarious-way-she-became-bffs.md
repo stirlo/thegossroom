@@ -9,7 +9,7 @@ drama_score: 36
 primary_celebrity: taylor_swift
 source: perez_hilton
 source_url: "https://perezhilton.com/selena-gomez-shares-hilarious-way-taylor-swift-friendship-started/"
-mentions: {'selena_gomez': 9, ''taylor_swift': 27}
+mentions: {'selena_gomez': 9, 'taylor_swift': 27}
 ---
 
 The one good thing that came out of dating a Jonas brother for Selena Gomez and Taylor Swift? It was their friendship! During Thursday’s episode of the Therapuss With Jake Shane, the Only Murders in the Building star looked back at the origin of her close relationship with her pop star best friend, and how [...] Read More... The post Selena Gomez Shares Hilarious Way She Became BFFs With Taylor Swift! appeared first on Perez Hilton.

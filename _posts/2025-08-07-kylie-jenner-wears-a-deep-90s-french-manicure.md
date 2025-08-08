@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: jenner
 source: vogue_alt
 source_url: "https://www.vogue.com/article/kylie-jenner-deep-french-manicure"
-mentions: {'jenner': 2, ''kylie_jenner': 2}
+mentions: {'jenner': 2, 'kylie_jenner': 2}
 ---
 
 Celebrity nail artist Zola Ganzorigt wants you to go deep—deep into the French manicure, that is.

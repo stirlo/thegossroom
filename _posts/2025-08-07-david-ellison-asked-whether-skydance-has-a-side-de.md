@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: trump
 source: variety_alt
 source_url: "https://variety.com/2025/tv/news/david-ellison-comments-skydance-side-deal-trump-free-advertising-1236480770/"
-mentions: {'donald_trump': 2, ''trump': 6}
+mentions: {'donald_trump': 2, 'trump': 6}
 ---
 
 Is there a side deal or not? David Ellison, chairman and CEO of the newly merged Paramount Skydance, declined to directly say whether the company’s new owners have an agreement with President Donald Trump to give him millions of dollars worth of free TV advertising airtime (as Trump has claimed). But he reiterated the company’s […]

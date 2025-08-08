@@ -9,7 +9,7 @@ drama_score: 12
 primary_celebrity: eminem
 source: us_weekly
 source_url: "https://www.usmagazine.com/entertainment/news/eminem-shares-addiction-and-stan-culture-struggles-in-new-doc/"
-mentions: {'eminem': 9, ''marshall_mathers': 3}
+mentions: {'eminem': 9, 'marshall_mathers': 3}
 ---
 
 Eminem is getting candid about his life in the spotlight — and his complicated relationship with his fans — in his new documentary, Stans. The film, featuring candid interviews with Eminem (real name Marshall Mathers), Dr. Dre, LL Cool J and a handpicked few of the rapper’s biggest fans, sets out to explore his complicated […]

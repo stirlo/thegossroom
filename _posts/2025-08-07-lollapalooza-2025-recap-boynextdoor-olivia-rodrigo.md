@@ -9,7 +9,7 @@ drama_score: 12
 primary_celebrity: olivia_rodrigo
 source: billboard
 source_url: "https://www.billboard.com/video/lollapalooza-2025-recap-boynextdoor-more-heat-up-chicago/"
-mentions: {'olivia_rodrigo': 8, ''sabrina_carpenter': 4}
+mentions: {'olivia_rodrigo': 8, 'sabrina_carpenter': 4}
 ---
 
 This is partner content. Lollapalooza 2025 brought out the hottest stars to Chicago, and we’re running through the entire weekend. From Doechii’s tour announcement during her performance to Sabrina Carpenter giving TWICE handcuffs to Olivia Rodrigo & Gracie Abrams bringing out iconic surprise guests during their set, keep watching to see everything you missed! What […]

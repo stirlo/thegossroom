@@ -9,7 +9,7 @@ drama_score: 21
 primary_celebrity: taylor_swift
 source: e_news
 source_url: "https://www.eonline.com/news/1420876/andy-reid-on-travis-kelce-taylor-swift-wedding-speech?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'kelce': 6, ''taylor_swift': 9, ''travis_kelce': 6}
+mentions: {'kelce': 6, 'taylor_swift': 9, 'travis_kelce': 6}
 ---
 
 Andy Reid already has his love story in mind. The Kansas City Chiefs coach recently revealed which anecdote about Travis Kelce he’d share at his longtime player’s future—potential—nuptials to... **Drama Score:** 21 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Kelce, Taylor Swift, Travis Kelce [Read full article at E News](https://www.eonline.com/news/1420876/andy-reid-on-travis-kelce-taylor-swift-wedding-speech?cmpid=rss-syndicate-genericrss-us-top_stories)

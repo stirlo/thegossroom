@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: heidi_klum
 source: page_six
 source_url: "https://pagesix.com/2025/08/07/style/heidi-klum-teases-her-extra-ugly-halloween-2025-costume/"
-mentions: {'heidi_klum': 2, ''super': 2}
+mentions: {'heidi_klum': 2, 'super': 2}
 ---
 
 "We have exactly 86 days, okay? But who's counting?" the model joked while chatting with Jimmy Fallon.

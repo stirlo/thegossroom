@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: awards
 source: billboard
 source_url: "https://www.billboard.com/music/awards/latin-recording-academy-2025-special-awards-honorees-1236038013/"
-mentions: {'awards': 4, ''grammys': 2}
+mentions: {'awards': 4, 'grammys': 2}
 ---
 
 The Special Awards private event will take place during Latin Grammys Week in Las Vegas.

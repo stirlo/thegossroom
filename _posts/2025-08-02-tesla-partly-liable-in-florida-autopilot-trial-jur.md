@@ -9,7 +9,7 @@ drama_score: 5
 primary_celebrity: elon_musk
 source: techcrunch
 source_url: "https://techcrunch.com/2025/08/01/tesla-partly-liable-in-florida-autopilot-trial-jury-awards-200m-in-damages/"
-mentions: {'elon_musk': 4, ''of_the': 1}
+mentions: {'elon_musk': 4, 'of_the': 1}
 ---
 
 The jury verdict is one of the first major legal decisions about driver assistance technology that has gone against Tesla. Both Elon Musk and Tesla have spent years making claims about Autopilot's capabilities.

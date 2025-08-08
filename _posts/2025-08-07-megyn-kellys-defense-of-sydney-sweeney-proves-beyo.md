@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: beyonce
 source: huffpost_entertainment
 source_url: "https://www.huffpost.com/entry/megyn-kelly-beyonce-levis-ad_n_68922dd1e4b07e7958a0c959"
-mentions: {'beyonce': 2, ''sydney_sweeney': 2, ''trump': 2}
+mentions: {'beyonce': 2, 'sydney_sweeney': 2, 'trump': 2}
 ---
 
 Republican figures, including President Trump, have rushed to defend Sweeney’s ad.

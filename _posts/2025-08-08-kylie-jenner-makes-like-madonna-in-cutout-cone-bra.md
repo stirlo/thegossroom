@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: jenner
 source: page_six
 source_url: "https://pagesix.com/2025/08/07/style/kylie-jenner-channels-madonna-in-cutout-cone-bra/"
-mentions: {'jenner': 2, ''kylie_jenner': 2}
+mentions: {'jenner': 2, 'kylie_jenner': 2}
 ---
 
 The makeup mogul stunned during the photoshoot for "The Kardashians" in an unexpected look.

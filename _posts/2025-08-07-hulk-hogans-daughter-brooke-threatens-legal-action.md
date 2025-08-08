@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: hogan
 source: page_six
 source_url: "https://pagesix.com/2025/08/06/celebrity-news/hulk-hogans-daughter-brooke-threatens-legal-action-against-his-camp-for-spreading-lies/"
-mentions: {'hogan': 4, ''hulk_hogan': 4}
+mentions: {'hogan': 4, 'hulk_hogan': 4}
 ---
 
 Hulk Hogan's daughter is coming out swinging.

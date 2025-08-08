@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: eminem
 source: billboard
 source_url: "https://www.billboard.com/music/rb-hip-hop/eminem-surprise-appearance-stans-doc-premiere-new-york-1236038438/"
-mentions: {'eminem': 2, ''slim_shady': 2}
+mentions: {'eminem': 2, 'slim_shady': 2}
 ---
 
 The real Slim Shady pulled off an unannounced pop-in at Wednesday night's (Aug. 6) premiere of the doc about his most loyal fans.

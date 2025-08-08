@@ -9,7 +9,7 @@ drama_score: 18
 primary_celebrity: elon_musk
 source: deadline
 source_url: "https://deadline.com/2025/08/elon-musk-ai-deepfakes-scarlett-johansson-taylor-swift-1236480553/"
-mentions: {'elon_musk': 12, ''taylor_swift': 6}
+mentions: {'elon_musk': 12, 'taylor_swift': 6}
 ---
 
 Elon Musk’s journey from AI alarmist to AI evangelist has played out noisily on X/Twitter, but now the mercurial billionaire is touting the latest frontier for the technology: a rapid video generation tool that is being used to create deepfake nudes of celebrities. Grok Imagine was rolled out this week to Apple users and has […]

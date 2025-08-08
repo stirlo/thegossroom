@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: eminem
 source: billboard
 source_url: "https://www.billboard.com/lists/eminem-stans-film-premiere-best-moments-recap/"
-mentions: {'eminem': 2, ''slim_shady': 2}
+mentions: {'eminem': 2, 'slim_shady': 2}
 ---
 
 Slim Shady's new documentary explored the rapper's intense fandom while Billboard sat surrounded by intense fandom.

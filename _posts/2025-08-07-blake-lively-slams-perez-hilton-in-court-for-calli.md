@@ -9,7 +9,7 @@ drama_score: 9
 primary_celebrity: blake_lively
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-news/news/blake-lively-slams-perez-hilton-in-court-over-ku-klux-khaleesi-comment/"
-mentions: {'blake_lively': 6, ''justin_baldoni': 3}
+mentions: {'blake_lively': 6, 'justin_baldoni': 3}
 ---
 
 Blake Lively slammed Perez Hilton for posting more than 500 negative videos about her — and accused him of refusing to answer to the subpoena she issued — amid her legal battle with Justin Baldoni, Us Weekly can report. On July 29, Hilton, 47, filed court documents pleading for a protective order against Lively, 37, […]

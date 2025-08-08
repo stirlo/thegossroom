@@ -9,7 +9,7 @@ drama_score: 24
 primary_celebrity: taylor_swift
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-news/news/selena-gomez-calls-taylor-swift-the-best-thing-from-dating-nick-jonas/"
-mentions: {'selena_gomez': 6, ''taylor_swift': 18}
+mentions: {'selena_gomez': 6, 'taylor_swift': 18}
 ---
 
 Selena Gomez is looking back at the origins of her friendship with BFF Taylor Swift. “Taylor and I dated the Jonas Brothers,” Gomez, 33, reflected on the Thursday, August 7, episode of the “Therapuss With Jake Shane” podcast. “I dated Nick and she dated Joe.” She continued, “It’s cute. We were young. We all know […]

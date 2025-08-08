@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: lizzo
 source: hollywood_reporter
 source_url: "https://www.hollywoodreporter.com/news/music-news/lizzo-sydney-sweeney-jeans-american-eagle-ad-new-song-1236339333/"
-mentions: {'lizzo': 2, ''sydney_sweeney': 2}
+mentions: {'lizzo': 2, 'sydney_sweeney': 2}
 ---
 
 The Grammy winner released a video for "I'm Goin’ In Till October" that pokes fun at the controversy.

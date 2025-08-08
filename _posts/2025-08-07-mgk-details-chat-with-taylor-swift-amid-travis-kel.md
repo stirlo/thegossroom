@@ -9,7 +9,7 @@ drama_score: 51
 primary_celebrity: taylor_swift
 source: e_news
 source_url: "https://www.eonline.com/news/1420880/machine-gun-kelly-on-taylor-swift-super-bowl-conversation?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'bowl': 6, ''kelce': 6, ''machine_gun_kelly': 3, ''super': 6, ''super_bowl': 6, ''taylor_swift': 18, ''travis_kelce': 6}
+mentions: {'bowl': 6, 'kelce': 6, 'machine_gun_kelly': 3, 'super': 6, 'super_bowl': 6, 'taylor_swift': 18, 'travis_kelce': 6}
 ---
 
 By the way, Taylor Swift is going out tonight, but she didn’t after the last Super Bowl. As Travis Kelce and the Kansas City Chiefs prepare to kick off the 2025 NFL season, Machine Gun Kelly, who... **Drama Score:** 51 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bowl, Kelce, Machine Gun Kelly, Super, Super Bowl, Taylor Swift, Travis Kelce [Read full article at E News](https://www.eonline.com/news/1420880/machine-gun-kelly-on-taylor-swift-super-bowl-conversation?cmpid=rss-syndicate-genericrss-us-top_stories)

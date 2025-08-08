@@ -9,7 +9,7 @@ drama_score: 10
 primary_celebrity: jd_vance
 source: deadline
 source_url: "https://deadline.com/2025/08/south-park-trump-kristi-noem-ice-taunting-1236480470/"
-mentions: {'donald_trump': 2, ''jd_vance': 4, ''trump': 4}
+mentions: {'donald_trump': 2, 'jd_vance': 4, 'trump': 4}
 ---
 
 SPOILER ALERT: This article contains details of tonight’s South Park episode ‘Got a Nut’ – like, a lot of details. With a nod — a head butt, really — to Donald Trump and masked ICE abductions of undocumented immigrants and U.S. citizens, South Park was very relevant tonight. Just ask Vice President JD Vance and […]

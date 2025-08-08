@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: trump
 source: deadline
 source_url: "https://deadline.com/2025/08/rosie-odonnell-fears-the-view-canceled-1236481952/"
-mentions: {'donald_trump': 2, ''stephen_colbert': 2, ''trump': 4}
+mentions: {'donald_trump': 2, 'stephen_colbert': 2, 'trump': 4}
 ---
 
 As The Late Show with Stephen Colbert continues its death row march, Rosie O’Donnell predicts her ABC alma mater The View will be given a similar sentence. Following the Donald Trump administration’s recent warning that the roundtable talk show could be “the next to be pulled off air,” the 12x Emmy winner expressed her fears […]

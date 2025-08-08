@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: awards
 source: deadline
 source_url: "https://deadline.com/2025/08/2025-critics-choice-super-awards-winners-list-1236481393/"
-mentions: {'awards': 4, ''super': 4}
+mentions: {'awards': 4, 'super': 4}
 ---
 
 The winners of the 5th Annual Critics Choice Super Awards have been unveiled and The Penguin led with four wins. Honoring the most popular and fan-obsessed genres, the Critics Choice Association announced all the winners in television and film. The HBO series The Penguin won all of the categories in which it was nominated, including […]

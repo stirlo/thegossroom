@@ -9,7 +9,7 @@ drama_score: 8
 primary_celebrity: donald_trump
 source: daily_mail
 source_url: "https://www.dailymail.co.uk/news/article-14981581/Donald-Trump-says-Putin-does-not-meet-Zelensky-US-Russia-summit-ahead.html?ns_mchannel=rss&1490&campaign=1490"
-mentions: {'donald_trump': 4, ''trump': 4}
+mentions: {'donald_trump': 4, 'trump': 4}
 ---
 
 Donald Trump last night dismissed the idea that a US-Russia summit will only happen if Vladimir Putin meets Ukraine's president.

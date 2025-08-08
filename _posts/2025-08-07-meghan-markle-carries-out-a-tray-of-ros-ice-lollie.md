@@ -9,7 +9,7 @@ drama_score: 4
 primary_celebrity: duchess_of_sussex
 source: daily_mail
 source_url: "https://www.dailymail.co.uk/femail/article-14978601/meghan-markle-wine-ice-lollies.html?ns_mchannel=rss&1490&campaign=1490"
-mentions: {'duchess_of_sussex': 2, ''meghan_markle': 2}
+mentions: {'duchess_of_sussex': 2, 'meghan_markle': 2}
 ---
 
 The Duchess of Sussex, 44, was the image of Montecito glam as she carried out a tray of ice lollies made from her brand's rosé in an Instagram Story shared by As Ever on Wednesday.

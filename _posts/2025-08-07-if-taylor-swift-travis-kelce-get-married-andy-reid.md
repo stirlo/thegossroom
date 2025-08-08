@@ -9,7 +9,7 @@ drama_score: 10
 primary_celebrity: taylor_swift
 source: billboard
 source_url: "https://www.billboard.com/music/music-news/andy-reid-taylor-swift-travis-kelce-future-wedding-1236039031/"
-mentions: {'kelce': 2, ''taylor_swift': 6, ''travis_kelce': 2}
+mentions: {'kelce': 2, 'taylor_swift': 6, 'travis_kelce': 2}
 ---
 
 There are also "a few I can't tell," the Kansas City Chiefs coach joked.

@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: liam
 source: daily_mail
 source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14978523/Pamela-Anderson-receives-kiss-new-beau-Liam-Neeson.html?ns_mchannel=rss&1490&campaign=1490"
-mentions: {'liam': 2, ''liam_neeson': 2, ''pamela_anderson': 2}
+mentions: {'liam': 2, 'liam_neeson': 2, 'pamela_anderson': 2}
 ---
 
 The flirty spot came three days after the coy couple intimately shared the same $22 tube of 'Basic' lip balm from her company Sonsie Skin

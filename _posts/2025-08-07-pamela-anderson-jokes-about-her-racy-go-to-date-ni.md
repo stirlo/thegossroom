@@ -9,7 +9,7 @@ drama_score: 6
 primary_celebrity: liam
 source: page_six
 source_url: "https://pagesix.com/2025/08/07/style/pamela-anderson-jokes-about-her-racy-go-to-date-night-outfit-amid-liam-neeson-romance/"
-mentions: {'liam': 2, ''liam_neeson': 2, ''pamela_anderson': 2}
+mentions: {'liam': 2, 'liam_neeson': 2, 'pamela_anderson': 2}
 ---
 
 The new flames, who starred in "The Naked Gun" together, first sparked relationship rumors last month.
