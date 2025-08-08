@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "The Kardashian-Approved Beauty Their MUA Always Packs""
+title: "The Kardashian-Approved Beauty Their MUA Always Packs"""
 date: 2025-08-07 05:26:22 +0000
 categories: gossip
 tags: ['kim-kardashian', 'source-e_news', 'drama-explosive']
 drama_score: 39
 primary_celebrity: kim_kardashian
 source: e_news
-source_url: "https://www.eonline.com/news/1420711/kardashians-makeup-artist-reveals-the-sephora-brand-they-all-love?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420711/kardashians-makeup-artist-reveals-the-sephora-brand-they-all-love?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'jenner': 3, 'kardashian': 12, 'khloe_kardashian': 3, 'kim_kardashian': 18, 'kris_jenner': 3}
 ---
 

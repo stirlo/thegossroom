@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Hulk Hogan Tried To Repair Relationship W/ Daughter Brooke Before Death, She Denies""
+title: "Hulk Hogan Tried To Repair Relationship W/ Daughter Brooke Before Death, She Denies"""
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['hogan', 'source-tmz', 'drama-explosive']
 drama_score: 12
 primary_celebrity: hogan
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/hulk-hogan-tried-to-repair-brooke-relationship-she-denies/""
+source_url: "https://www.tmz.com/2025/08/06/hulk-hogan-tried-to-repair-brooke-relationship-she-denies/"""
 mentions: {'hogan': 6, 'hulk_hogan': 6}
 ---
 

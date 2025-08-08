@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘The Pickup’ Review: Eddie Murphy and Pete Davidson Don’t Give a Truck in a Fitful Action Comedy""
+title: "‘The Pickup’ Review: Eddie Murphy and Pete Davidson Don’t Give a Truck in a Fitful Action Comedy"""
 date: 2025-08-07 05:26:25 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: pete_davidson
 source: variety_alt
-source_url: "https://variety.com/2025/film/reviews/the-pickup-review-eddie-murphy-pete-davidson-1236480878/""
+source_url: "https://variety.com/2025/film/reviews/the-pickup-review-eddie-murphy-pete-davidson-1236480878/"""
 mentions: {'pete_davidson': 4}
 ---
 

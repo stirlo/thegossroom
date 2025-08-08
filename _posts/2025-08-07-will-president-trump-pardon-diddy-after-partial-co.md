@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Will President Trump Pardon Diddy After Partial Conviction? What to Know""
+title: "Will President Trump Pardon Diddy After Partial Conviction? What to Know"""
 date: 2025-08-07 23:17:59 +0000
 categories: gossip
 tags: ['diddy', 'source-us_weekly', 'drama-explosive']
 drama_score: 15
 primary_celebrity: diddy
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/will-donald-trump-pardon-diddy-after-conviction-what-to-know/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/will-donald-trump-pardon-diddy-after-conviction-what-to-know/"""
 mentions: {'diddy': 6, 'donald_trump': 3, 'trump': 6}
 ---
 

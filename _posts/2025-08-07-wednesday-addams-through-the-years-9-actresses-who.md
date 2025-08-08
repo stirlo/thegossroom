@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Wednesday Addams Through the Years: 9 Actresses Who Have Played the Iconic Character""
+title: "Wednesday Addams Through the Years: 9 Actresses Who Have Played the Iconic Character"""
 date: 2025-08-07 13:38:32 +0000
 categories: gossip
 tags: ['jenna-ortega', 'source-hollywood_reporter', 'drama-hot']
 drama_score: 6
 primary_celebrity: jenna_ortega
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/lists/actresses-playing-wednesday-addams-film-tv-shows/""
+source_url: "https://www.hollywoodreporter.com/lists/actresses-playing-wednesday-addams-film-tv-shows/"""
 mentions: {'jenna_ortega': 4, 'wednesday_addams': 2}
 ---
 

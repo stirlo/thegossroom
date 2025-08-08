@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "American Eagle Defends Sydney Sweeney’s Jeans Ads After Intense Backlash""
+title: "American Eagle Defends Sydney Sweeney’s Jeans Ads After Intense Backlash"""
 date: 2025-08-02 10:01:37 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'tv', 'movies', 'fashion', 'controversy', 'source-huffpost_entertainment', 'drama-rising']
 drama_score: 2
 primary_celebrity: sydney_sweeney
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/american-eagle-sydney-sweeney-controversy-response_n_688d1b70e4b022c2fddf088d""
+source_url: "https://www.huffpost.com/entry/american-eagle-sydney-sweeney-controversy-response_n_688d1b70e4b022c2fddf088d"""
 mentions: {'sydney_sweeney': 2}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jacob Elordi & Olivia Jade Giannulli Reportedly Break Up""
+title: "Jacob Elordi & Olivia Jade Giannulli Reportedly Break Up"""
 date: 2025-08-07 18:28:01 +0000
 categories: gossip
 tags: ['jacob-elordi', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: jacob_elordi
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/jacob-elordi-olivia-jade-giannulli-break-up/""
+source_url: "https://www.tmz.com/2025/08/07/jacob-elordi-olivia-jade-giannulli-break-up/"""
 mentions: {'jacob_elordi': 6}
 ---
 

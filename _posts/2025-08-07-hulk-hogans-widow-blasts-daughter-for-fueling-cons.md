@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Hulk Hogan’s Widow BLASTS Daughter For Fueling Conspiracy Theories -- But Brooke Doubles Down With Offer To Pay For Autopsy!""
+title: "Hulk Hogan’s Widow BLASTS Daughter For Fueling Conspiracy Theories -- But Brooke Doubles Down With Offer To Pay For Autopsy!"""
 date: 2025-08-07 19:18:12 +0000
 categories: gossip
 tags: ['hogan', 'source-perez_hilton', 'drama-explosive']
 drama_score: 24
 primary_celebrity: hogan
 source: perez_hilton
-source_url: "https://perezhilton.com/hulk-hogan-widow-sky-daily-blasts-brooke-fueling-death-conspiracy-theories-she-offers-pay-autopsy/""
+source_url: "https://perezhilton.com/hulk-hogan-widow-sky-daily-blasts-brooke-fueling-death-conspiracy-theories-she-offers-pay-autopsy/"""
 mentions: {'brooke_hogan': 3, 'hogan': 12, 'hulk_hogan': 9}
 ---
 

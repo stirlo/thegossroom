@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Lizzo Raps About Sydney Sweeney's Jeans in New Music""
+title: "Lizzo Raps About Sydney Sweeney's Jeans in New Music"""
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['lizzo', 'source-tmz', 'drama-explosive']
 drama_score: 18
 primary_celebrity: lizzo
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/lizzo-raps-about-sydney-sweeney-jeans-new-song/""
+source_url: "https://www.tmz.com/2025/08/06/lizzo-raps-about-sydney-sweeney-jeans-new-song/"""
 mentions: {'lizzo': 12, 'sydney_sweeney': 6}
 ---
 

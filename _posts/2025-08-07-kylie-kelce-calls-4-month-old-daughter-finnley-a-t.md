@@ -8,7 +8,7 @@ tags: ['kelce', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: kelce
 source: e_news
-source_url: "https://www.eonline.com/news/1420890/kylie-kelce-calls-daughter-finnley-a-tough-audience?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420890/kylie-kelce-calls-daughter-finnley-a-tough-audience?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'kelce': 6}
 ---
 

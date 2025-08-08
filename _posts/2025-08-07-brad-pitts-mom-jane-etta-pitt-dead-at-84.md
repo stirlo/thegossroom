@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brad Pitt's Mom Jane Etta Pitt Dead at 84""
+title: "Brad Pitt's Mom Jane Etta Pitt Dead at 84"""
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['brad-pitt', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: brad_pitt
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/brad-pitt-mom-jane-etta-pitt-dead/""
+source_url: "https://www.tmz.com/2025/08/06/brad-pitt-mom-jane-etta-pitt-dead/"""
 mentions: {'brad_pitt': 6}
 ---
 

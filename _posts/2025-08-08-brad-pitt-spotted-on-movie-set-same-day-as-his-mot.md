@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brad Pitt Spotted on Movie Set Same Day as His Mother’s Death""
+title: "Brad Pitt Spotted on Movie Set Same Day as His Mother’s Death"""
 date: 2025-08-08 01:27:48 +0000
 categories: gossip
 tags: ['brad-pitt', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: brad_pitt
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brad-pitt-spotted-on-movie-set-same-day-as-his-mothers-death/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/brad-pitt-spotted-on-movie-set-same-day-as-his-mothers-death/"""
 mentions: {'brad_pitt': 6}
 ---
 

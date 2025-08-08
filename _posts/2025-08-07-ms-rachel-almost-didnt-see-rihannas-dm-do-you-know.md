@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ms. Rachel Almost Didn't See Rihanna's DM: 'Do You Know Who This Is?'""
+title: "Ms. Rachel Almost Didn't See Rihanna's DM: 'Do You Know Who This Is?"""
 date: 2025-08-07 21:15:30 +0000
 categories: gossip
 tags: ['kelce', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: kelce
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/ms-rachel-shares-surprising-dm-from-rihanna/""
+source_url: "https://www.usmagazine.com/celebrity-moms/news/ms-rachel-shares-surprising-dm-from-rihanna/"""
 mentions: {'kelce': 3}
 ---
 

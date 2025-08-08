@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Yes, Liam Neeson Has A HUGE Peen -- New Confirmation Of The Classic Rumor!""
+title: "Yes, Liam Neeson Has A HUGE Peen -- New Confirmation Of The Classic Rumor!"""
 date: 2025-08-02 11:14:50 +0000
 categories: gossip
 tags: ['liam-neeson', 'auto-discovered', 'new', 'source-perez_hilton', 'drama-explosive']
 drama_score: 15
 primary_celebrity: liam_neeson
 source: perez_hilton
-source_url: "https://perezhilton.com/liam-neeson-big-penis-quotes/""
+source_url: "https://perezhilton.com/liam-neeson-big-penis-quotes/"""
 mentions: {'liam_neeson': 9, 'of_the': 6}
 ---
 

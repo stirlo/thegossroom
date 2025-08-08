@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Nicki Minaj Addresses Wardrobe Malfunction in Stiletto Challenge Video""
+title: "Nicki Minaj Addresses Wardrobe Malfunction in Stiletto Challenge Video"""
 date: 2025-08-07 05:26:22 +0000
 categories: gossip
 tags: ['nicki-minaj', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: nicki_minaj
 source: e_news
-source_url: "https://www.eonline.com/news/1420858/nicki-minajs-wardrobe-malfunction-in-stiletto-challenge-video?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420858/nicki-minajs-wardrobe-malfunction-in-stiletto-challenge-video?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'nicki_minaj': 6}
 ---
 

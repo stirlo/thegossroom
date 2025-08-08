@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Alicia Silverstone Shares ‘Clueless’ Series Update: “Baby Stages”""
+title: "Alicia Silverstone Shares ‘Clueless’ Series Update: “Baby Stages”"""
 date: 2025-08-08 03:41:25 +0000
 categories: gossip
 tags: ['golden', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: golden
 source: deadline
-source_url: "https://deadline.com/2025/08/alicia-silverstone-clueless-series-update-1236482023/""
+source_url: "https://deadline.com/2025/08/alicia-silverstone-clueless-series-update-1236482023/"""
 mentions: {'golden': 2}
 ---
 

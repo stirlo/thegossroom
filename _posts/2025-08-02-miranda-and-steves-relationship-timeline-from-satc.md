@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Miranda and Steve's Relationship Timeline: From 'SATC"" to 'And Just Like That'""
+title: "Miranda and Steve's Relationship Timeline: From 'SATC""" to 'And Just Like That"""
 date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: of_the
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/pictures/sex-and-the-city-miranda-and-steves-relationship-timeline/""
+source_url: "https://www.usmagazine.com/entertainment/pictures/sex-and-the-city-miranda-and-steves-relationship-timeline/"""
 mentions: {'of_the': 3}
 ---
 

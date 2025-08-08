@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Selena Gomez's 'Best"" Part of Dating Nick Jonas Was Meeting Taylor Swift""
+title: "Selena Gomez's 'Best""" Part of Dating Nick Jonas Was Meeting Taylor Swift"""
 date: 2025-08-07 18:28:04 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 24
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/selena-gomez-calls-taylor-swift-the-best-thing-from-dating-nick-jonas/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/selena-gomez-calls-taylor-swift-the-best-thing-from-dating-nick-jonas/"""
 mentions: {'selena_gomez': 6, 'taylor_swift': 18}
 ---
 
