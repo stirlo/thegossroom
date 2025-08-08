@@ -315,7 +315,7 @@ class GossipScraper:
         # Remove leading/trailing hyphens
         slug = slug.strip('-').lower()
         # Limit length and ensure no trailing hyphen
-        slug = slug[:50].rstrip('-')
+        slug = slug.rstrip('-')
 
         # Ensure we have a valid slug
         if not slug:
