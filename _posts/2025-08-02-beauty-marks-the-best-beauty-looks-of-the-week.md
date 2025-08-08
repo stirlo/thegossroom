@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Beauty Marks: The Best Beauty Looks of The Week"""
+title: "Beauty Marks: The Best Beauty Looks of The Week"
 date: 2025-08-02 11:15:11 +0000
 categories: gossip
 tags: ['dua-lipa', 'music', 'pop', 'fashion', 'dating', 'source-vogue_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: dua_lipa
 source: vogue_alt
-source_url: "https://www.vogue.com/slideshow/best-beauty-looks-of-the-week-august-3"""
+source_url: "https://www.vogue.com/slideshow/best-beauty-looks-of-the-week-august-3"
 mentions: {'dua_lipa': 2, 'of_the': 2}
 ---
 

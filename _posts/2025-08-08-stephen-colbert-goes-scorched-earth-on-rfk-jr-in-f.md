@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Stephen Colbert Goes Scorched Earth On RFK Jr. In F-Bomb-Filled Tirade"""
+title: "Stephen Colbert Goes Scorched Earth On RFK Jr. In F-Bomb-Filled Tirade"
 date: 2025-08-08 01:27:51 +0000
 categories: gossip
 tags: ['stephen-colbert', 'source-huffpost_entertainment', 'drama-rising']
 drama_score: 2
 primary_celebrity: stephen_colbert
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/stephen-colbert-goes-scorched-earth-on-rfk-jr-in-f-bomb-filled-tirade_n_6894f675e4b0a4e36891b743"""
+source_url: "https://www.huffpost.com/entry/stephen-colbert-goes-scorched-earth-on-rfk-jr-in-f-bomb-filled-tirade_n_6894f675e4b0a4e36891b743"
 mentions: {'stephen_colbert': 2}
 ---
 

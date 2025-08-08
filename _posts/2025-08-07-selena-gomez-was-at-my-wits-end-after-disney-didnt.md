@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Selena Gomez Was “At My Wits’ End” After Disney Didn’t Pick Up ‘Lizzie McGuire’, ‘Suite Life’ Spinoff Pilots"""
+title: "Selena Gomez Was “At My Wits’ End” After Disney Didn’t Pick Up ‘Lizzie McGuire’, ‘Suite Life’ Spinoff Pilots"
 date: 2025-08-07 22:18:19 +0000
 categories: gossip
 tags: ['selena-gomez', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: selena_gomez
 source: deadline
-source_url: "https://deadline.com/2025/08/selena-gomez-disney-lizzie-mcguire-suite-life-spinoff-pilots-1236481835/"""
+source_url: "https://deadline.com/2025/08/selena-gomez-disney-lizzie-mcguire-suite-life-spinoff-pilots-1236481835/"
 mentions: {'golden': 2, 'selena_gomez': 4}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "All the Surprise Guests at Bad Bunny’s Puerto Rico Residency (Updating)"""
+title: "All the Surprise Guests at Bad Bunny’s Puerto Rico Residency (Updating)"
 date: 2025-08-07 17:19:29 +0000
 categories: gossip
 tags: ['bad-bunny', 'source-billboard', 'drama-hot']
 drama_score: 6
 primary_celebrity: bad_bunny
 source: billboard
-source_url: "https://www.billboard.com/lists/bad-bunny-puerto-rico-residency-surprise-guests/"""
+source_url: "https://www.billboard.com/lists/bad-bunny-puerto-rico-residency-surprise-guests/"
 mentions: {'bad_bunny': 4, 'lebron_james': 2}
 ---
 

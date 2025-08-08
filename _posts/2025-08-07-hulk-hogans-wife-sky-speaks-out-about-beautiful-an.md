@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Hulk Hogan’s Wife Sky Speaks Out About ‘Beautiful and Moving’ Funeral"""
+title: "Hulk Hogan’s Wife Sky Speaks Out About ‘Beautiful and Moving’ Funeral"
 date: 2025-08-07 21:15:30 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 12
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/sky-daily-reflects-on-husband-hulk-hogans-beautiful-and-moving-funeral/"""
+source_url: "https://www.usmagazine.com/celebrity-news/news/sky-daily-reflects-on-husband-hulk-hogans-beautiful-and-moving-funeral/"
 mentions: {'hogan': 6, 'hulk_hogan': 6}
 ---
 

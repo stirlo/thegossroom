@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Blake Lively Slams Perez Hilton in Court for Calling Her 'Ku Klux Khaleesi"""
+title: "Blake Lively Slams Perez Hilton in Court for Calling Her 'Ku Klux Khaleesi"
 date: 2025-08-07 05:26:24 +0000
 categories: gossip
 tags: ['blake-lively', 'source-us_weekly', 'drama-hot']
 drama_score: 9
 primary_celebrity: blake_lively
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/blake-lively-slams-perez-hilton-in-court-over-ku-klux-khaleesi-comment/"""
+source_url: "https://www.usmagazine.com/celebrity-news/news/blake-lively-slams-perez-hilton-in-court-over-ku-klux-khaleesi-comment/"
 mentions: {'blake_lively': 6, 'justin_baldoni': 3}
 ---
 

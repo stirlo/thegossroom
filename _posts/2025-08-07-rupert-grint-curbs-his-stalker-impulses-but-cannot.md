@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Rupert Grint Curbs His Stalker Impulses But Cannot Escape Ed Sheeran in ‘A Little More’ Music Video"""
+title: "Rupert Grint Curbs His Stalker Impulses But Cannot Escape Ed Sheeran in ‘A Little More’ Music Video"
 date: 2025-08-07 17:19:29 +0000
 categories: gossip
 tags: ['ed-sheeran', 'source-billboard', 'drama-rising']
 drama_score: 2
 primary_celebrity: ed_sheeran
 source: billboard
-source_url: "https://www.billboard.com/music/music-news/ed-sheeran-rupert-grint-a-little-more-video-1236038686/"""
+source_url: "https://www.billboard.com/music/music-news/ed-sheeran-rupert-grint-a-little-more-video-1236038686/"
 mentions: {'ed_sheeran': 2}
 ---
 

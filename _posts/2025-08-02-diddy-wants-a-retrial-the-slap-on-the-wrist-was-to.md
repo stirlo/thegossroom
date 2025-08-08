@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Diddy Wants A RETRIAL! The Slap On The Wrist Was Too Hard?!?"""
+title: "Diddy Wants A RETRIAL! The Slap On The Wrist Was Too Hard?!?"
 date: 2025-08-02 11:14:50 +0000
 categories: gossip
 tags: ['diddy', 'hiphop', 'legal', 'controversy', 'music', 'business', 'source-perez_hilton', 'drama-explosive']
 drama_score: 21
 primary_celebrity: diddy
 source: perez_hilton
-source_url: "https://perezhilton.com/diddy-wants-retrial-prostitution-conviction-prosecutors-argue-hes-a-danger/"""
+source_url: "https://perezhilton.com/diddy-wants-retrial-prostitution-conviction-prosecutors-argue-hes-a-danger/"
 mentions: {'diddy': 18, 'of_the': 3}
 ---
 

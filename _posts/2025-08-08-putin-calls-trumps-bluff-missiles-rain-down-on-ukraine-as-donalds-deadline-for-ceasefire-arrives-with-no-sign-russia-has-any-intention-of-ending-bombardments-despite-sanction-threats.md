@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Putin calls Trump's bluff: Missiles rain down on Ukraine as Donald's deadline for ceasefire arrives, with no sign Russia has any intention of ending bombardments, despite sanction threats""
+title: "Putin calls Trump's bluff: Missiles rain down on Ukraine as Donald's deadline for ceasefire arrives, with no sign Russia has any intention of ending bombardments, despite sanction threats"
 date: 2025-08-08 09:24:15 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14982329/Putin-calls-Trumps-bluff-Missiles-Ukraine-Donalds-deadline-ceasefire-no-sign-Russia-ending-sanction-threats.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
+source_url: "https://www.dailymail.co.uk/news/article-14982329/Putin-calls-Trumps-bluff-Missiles-Ukraine-Donalds-deadline-ceasefire-no-sign-Russia-ending-sanction-threats.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
 mentions: {'trump': 2}
 ---
 

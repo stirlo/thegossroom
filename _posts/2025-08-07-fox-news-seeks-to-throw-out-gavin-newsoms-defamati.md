@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Fox News Seeks to Throw Out Gavin Newsom’s Defamation Suit"""
+title: "Fox News Seeks to Throw Out Gavin Newsom’s Defamation Suit"
 date: 2025-08-07 18:28:04 +0000
 categories: gossip
 tags: ['trump', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/fox-news-gavin-newsom-dismiss-defamation-suit-1236481693/"""
+source_url: "https://variety.com/2025/tv/news/fox-news-gavin-newsom-dismiss-defamation-suit-1236481693/"
 mentions: {'trump': 2}
 ---
 

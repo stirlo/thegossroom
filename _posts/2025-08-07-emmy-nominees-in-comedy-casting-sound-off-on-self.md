@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Emmy Nominees In Comedy Casting Sound Off On Self Tapes, Future Of Their Jobs & Whether Trump’s Assault On DEI Should Worry Hollywood"""
+title: "Emmy Nominees In Comedy Casting Sound Off On Self Tapes, Future Of Their Jobs & Whether Trump’s Assault On DEI Should Worry Hollywood"
 date: 2025-08-07 17:19:25 +0000
 categories: gossip
 tags: ['trump', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: deadline
-source_url: "https://deadline.com/2025/08/emmy-nominees-comedy-casting-2025-1236480042/"""
+source_url: "https://deadline.com/2025/08/emmy-nominees-comedy-casting-2025-1236480042/"
 mentions: {'trump': 2}
 ---
 

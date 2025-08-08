@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Nike Releases LeBron James ‘Monopoly’ Signature Sneakers for the Board Game’s 90th Anniversary"""
+title: "Nike Releases LeBron James ‘Monopoly’ Signature Sneakers for the Board Game’s 90th Anniversary"
 date: 2025-08-07 20:19:48 +0000
 categories: gossip
 tags: ['lebron-james', 'source-variety_alt', 'drama-hot']
 drama_score: 6
 primary_celebrity: lebron_james
 source: variety_alt
-source_url: "https://variety.com/2025/shopping/news/where-to-buy-nike-x-hasbro-sneakers-online-1236382743/"""
+source_url: "https://variety.com/2025/shopping/news/where-to-buy-nike-x-hasbro-sneakers-online-1236382743/"
 mentions: {'lebron_james': 6}
 ---
 
