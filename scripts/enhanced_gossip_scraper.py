@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Enhanced Gossip Room RSS Scraper - With Advanced Deduplication and Debug Logging
-FIXED VERSION - Restores Jekyll post creation functionality
+FIXED VERSION - Restores Jekyll post creation functionality + HTML Entity Protection
 """
 
 import feedparser
@@ -16,6 +16,7 @@ import time
 import logging
 import hashlib
 from difflib import SequenceMatcher
+import html
 
 # Setup dual logging - console and debug file
 logging.basicConfig(level=logging.INFO)
@@ -236,10 +237,56 @@ class GossipScraper:
             json.dump(self.processed_articles, f, indent=2)
 
     def clean_text(self, text):
+        """🎯 ENHANCED: Comprehensive HTML entity cleaning"""
         if not text:
             return ""
+
+        # Remove HTML tags first
         text = re.sub(r'<[^>]+>', '', text)
+
+        # 🎯 COMPREHENSIVE HTML ENTITY CLEANUP
+
+        # Step 1: Decode standard HTML entities
+        text = html.unescape(text)
+
+        # Step 2: Fix bracketed entities that html.unescape might miss
+        text = re.sub(r'\[&#8230;\]', '...', text)     # [&#8230;] → ...
+        text = re.sub(r'\[&hellip;\]', '...', text)    # [&hellip;] → ...
+
+        # Step 3: Fix remaining numeric entities
+        text = re.sub(r'&#8230;', '...', text)         # &#8230; → ...
+        text = re.sub(r'&#8217;', "'", text)           # &#8217; → ' (right single quote)
+        text = re.sub(r'&#8216;', "'", text)           # &#8216; → ' (left single quote)  
+        text = re.sub(r'&#8220;', '"', text)           # &#8220; → " (left double quote)
+        text = re.sub(r'&#8221;', '"', text)           # &#8221; → " (right double quote)
+        text = re.sub(r'&#8211;', '–', text)           # &#8211; → – (en dash)
+        text = re.sub(r'&#8212;', '—', text)           # &#8212; → — (em dash)
+        text = re.sub(r'&#38;', '&', text)             # &#38; → & (ampersand)
+        text = re.sub(r'&#39;', "'", text)             # &#39; → ' (apostrophe)
+        text = re.sub(r'&#34;', '"', text)             # &#34; → " (quote)
+        text = re.sub(r'&#60;', '<', text)             # &#60; → <
+        text = re.sub(r'&#62;', '>', text)             # &#62; → >
+
+        # Step 4: Fix named entities that might slip through
+        text = re.sub(r'&hellip;', '...', text)        # &hellip; → ...
+        text = re.sub(r'&rsquo;', "'", text)           # &rsquo; → '
+        text = re.sub(r'&lsquo;', "'", text)           # &lsquo; → '
+        text = re.sub(r'&rdquo;', '"', text)           # &rdquo; → "
+        text = re.sub(r'&ldquo;', '"', text)           # &ldquo; → "
+        text = re.sub(r'&ndash;', '–', text)           # &ndash; → –
+        text = re.sub(r'&mdash;', '—', text)           # &mdash; → —
+        text = re.sub(r'&amp;', '&', text)             # &amp; → &
+        text = re.sub(r'&quot;', '"', text)            # &quot; → "
+        text = re.sub(r'&apos;', "'", text)            # &apos; → '
+        text = re.sub(r'&lt;', '<', text)              # &lt; → <
+        text = re.sub(r'&gt;', '>', text)              # &gt; → >
+
+        # Step 5: Clean up any remaining malformed entities
+        text = re.sub(r'&[a-zA-Z0-9#]+;?', ' ', text)  # Remove any remaining entities
+
+        # Step 6: Clean up whitespace
         text = re.sub(r'\s+', ' ', text).strip()
+
         return text
 
     def contains_celebrity(self, title, content):
@@ -305,7 +352,7 @@ class GossipScraper:
                 self.potential_new_celebrities[name] += 1
 
     def create_clean_slug(self, title):
-        """🎯 FIX: Create clean slug without trailing hyphens"""
+        """🎯 FIX: Create clean slug without trailing hyphens and no length limit"""
         # Remove special characters except spaces and hyphens
         slug = re.sub(r'[^a-zA-Z0-9\s-]', '', title).strip()
         # Replace multiple spaces with single hyphen
@@ -314,7 +361,7 @@ class GossipScraper:
         slug = re.sub(r'-+', '-', slug)
         # Remove leading/trailing hyphens
         slug = slug.strip('-').lower()
-        # Limit length and ensure no trailing hyphen
+        # 🎯 REMOVED: No more length limit - let it be full length!
         slug = slug.rstrip('-')
 
         # Ensure we have a valid slug
@@ -324,8 +371,8 @@ class GossipScraper:
         return slug
 
     def create_blog_post(self, title, content, link, mentions, source):
-        """🎯 FIXED: Create Jekyll blog post with clean filenames"""
-        # Generate filename with clean slug
+        """🎯 FIXED: Create Jekyll blog post with clean filenames and entity-free content"""
+        # Generate filename with clean slug (no length limit)
         date_str = datetime.now().strftime('%Y-%m-%d')
         slug = self.create_clean_slug(title)
         filename = f"{date_str}-{slug}.md"
@@ -455,7 +502,7 @@ mentions: {dict(mentions)}
                 self.detect_potential_celebrities(title, content)
 
                 if mentions:
-                    # 🎯 FIXED: Create blog post with clean filename
+                    # 🎯 FIXED: Create blog post with clean filename and entity-free content
                     post_data = self.create_blog_post(title, content, link, mentions, feed_name)
                     if post_data:
                         article_info['accepted'] = True
@@ -584,11 +631,11 @@ mentions: {dict(mentions)}
         logger.info(f"💾 Final output: {len(final_posts)} unique posts")
 
     def run(self):
-        debug_logger.info("🎭 STARTING ENHANCED GOSSIP ROOM SCRAPER")
+        debug_logger.info("🎭 STARTING ENHANCED GOSSIP ROOM SCRAPER WITH HTML ENTITY PROTECTION")
         debug_logger.info(f"📋 Loaded {len(self.celebrities)} celebrities")
         debug_logger.info(f"🔍 Generated {len(self.celebrity_names)} searchable names")
 
-        logger.info("🎭 Starting Enhanced Gossip Room scraper...")
+        logger.info("🎭 Starting Enhanced Gossip Room scraper with HTML entity protection...")
         logger.info(f"📋 Loaded {len(self.celebrities)} celebrities")
 
         for feed_name, feed_info in self.rss_feeds.items():
