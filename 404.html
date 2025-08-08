@@ -1,0 +1,26 @@
+---
+layout: default
+title: "404 – Page Not Found"
+---
+
+<h1>404 – Page Not Found</h1>
+<p id="msg">Checking if we can find what you meant…</p>
+
+<script>
+// Levenshtein distance helper
+function levenshtein(a,b){if(!a.length)return b.length;if(!b.length)return a.length;let prev=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){const cur=[i];for(let j=1;j<=b.length;j++){cur[j]=a[i-1]===b[j-1]?prev[j-1]:1+Math.min(prev[j],cur[j-1],prev[j-1]);}prev=cur;}return prev[b.length];}
+
+(async()=>{
+  const wantedSlug = window.location.pathname.replace(/\/$/,'').toLowerCase().split('/').pop();
+  try{
+    const slugs = await fetch('/slugs.json').then(r=>r.json());
+    let best=null,bestDist=Infinity;
+    slugs.forEach(({url,slug})=>{
+      const d=levenshtein(wantedSlug,slug);
+      if(d<bestDist){bestDist=d;best=url;}
+    });
+    if(best && bestDist<=2){location.replace(best);}
+    else{document.getElementById('msg').innerHTML='Sorry, we couldn’t find that post.<br><a href="/">Go home</a>';}
+  }catch{document.getElementById('msg').innerHTML='Lookup failed.<br><a href="/">Go home</a>';}
+})();
+</script>
