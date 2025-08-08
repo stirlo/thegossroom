@@ -1,0 +1,26 @@
+# Create _layouts/archive.html
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">{{ page.title | default: "Archive" }}</h1>
+
+  {% if page.tag %}
+    <h2>Posts tagged with "{{ page.tag }}"</h2>
+  {% elsif page.category %}
+    <h2>Posts in category "{{ page.category }}"</h2>
+  {% endif %}
+
+  <div class="post-list">
+    {% for post in site.posts %}
+      {% if page.tag and post.tags contains page.tag %}
+        {% include post-preview.html %}
+      {% elsif page.category and post.categories contains page.category %}
+        {% include post-preview.html %}
+      {% elsif page.tag == nil and page.category == nil %}
+        {% include post-preview.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
