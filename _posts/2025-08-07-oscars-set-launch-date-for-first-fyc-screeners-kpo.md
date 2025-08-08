@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Oscars Set Launch Date for First FYC Screeners: ‘KPop Demon Hunters,’ ‘Becoming Led Zeppelin’ and More (EXCLUSIVE)""
+title: "Oscars Set Launch Date for First FYC Screeners: ‘KPop Demon Hunters,’ ‘Becoming Led Zeppelin’ and More (EXCLUSIVE)"
 date: 2025-08-07 19:18:17 +0000
 categories: gossip
 tags: ['awards', 'source-variety_alt', 'drama-explosive']
 drama_score: 10
 primary_celebrity: awards
 source: variety_alt
-source_url: "https://variety.com/2025/film/awards/oscars-first-fyc-screeners-2026-kpop-demon-hunters-1236481108/""
+source_url: "https://variety.com/2025/film/awards/oscars-first-fyc-screeners-2026-kpop-demon-hunters-1236481108/"
 mentions: {'academy_awards': 2, 'awards': 4, 'oscars': 4}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Hulk Hogan Death Certificate Released""
+title: "Hulk Hogan Death Certificate Released"
 date: 2025-08-02 11:14:48 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-tmz', 'drama-rising']
 drama_score: 3
 primary_celebrity: of_the
 source: tmz
-source_url: "https://www.tmz.com/2025/08/01/hulk-hogan-death-certificate/""
+source_url: "https://www.tmz.com/2025/08/01/hulk-hogan-death-certificate/"
 mentions: {'of_the': 3}
 ---
 

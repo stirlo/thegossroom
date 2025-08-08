@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Treasury Secretary Admits Trump’s Tariffs Are Paid by Americans""
+title: "Treasury Secretary Admits Trump’s Tariffs Are Paid by Americans"
 date: 2025-08-07 20:19:54 +0000
 categories: gossip
 tags: ['trump', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: rolling_stone
-source_url: "https://www.rollingstone.com/politics/politics-news/scott-bessent-admits-americans-pay-trump-tariffs-1235403145/""
+source_url: "https://www.rollingstone.com/politics/politics-news/scott-bessent-admits-americans-pay-trump-tariffs-1235403145/"
 mentions: {'trump': 2}
 ---
 

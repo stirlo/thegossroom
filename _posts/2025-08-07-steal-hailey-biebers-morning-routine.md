@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Steal Hailey Bieber's Morning Routine""
+title: "Steal Hailey Bieber's Morning Routine"
 date: 2025-08-07 07:22:54 +0000
 categories: gossip
 tags: ['bieber', 'source-tmz', 'drama-explosive']
 drama_score: 18
 primary_celebrity: bieber
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/hailey-bieber-morning-routine-products/""
+source_url: "https://www.tmz.com/2025/08/07/hailey-bieber-morning-routine-products/"
 mentions: {'bieber': 6, 'hailey_bieber': 6, 'justin_bieber': 6}
 ---
 

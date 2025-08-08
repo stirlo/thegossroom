@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Cassie Posts for First Time Since Giving Birth, Testifying Against Diddy""
+title: "Cassie Posts for First Time Since Giving Birth, Testifying Against Diddy"
 date: 2025-08-08 01:27:43 +0000
 categories: gossip
 tags: ['diddy', 'source-tmz', 'drama-rising']
 drama_score: 3
 primary_celebrity: diddy
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/cassie-ventura-posts-first-time-since-birth-testifying-against-diddy/""
+source_url: "https://www.tmz.com/2025/08/07/cassie-ventura-posts-first-time-since-birth-testifying-against-diddy/"
 mentions: {'diddy': 3}
 ---
 

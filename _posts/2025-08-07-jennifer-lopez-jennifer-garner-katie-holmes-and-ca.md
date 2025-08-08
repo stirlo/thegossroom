@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jennifer Lopez, Jennifer Garner, Katie Holmes and Cameron Diaz all have look-alike sisters... see the comparisons""
+title: "Jennifer Lopez, Jennifer Garner, Katie Holmes and Cameron Diaz all have look-alike sisters... see the comparisons"
 date: 2025-08-07 13:38:36 +0000
 categories: gossip
 tags: ['jennifer-garner', 'source-daily_mail', 'drama-rising']
 drama_score: 4
 primary_celebrity: jennifer_garner
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14973935/Jennifer-Lopez-Jennifer-Garner-look-alike-sisters.html?ns_mchannel=rss&1490&campaign=1490""
+source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14973935/Jennifer-Lopez-Jennifer-Garner-look-alike-sisters.html?ns_mchannel=rss&1490&campaign=1490"
 mentions: {'jennifer_garner': 4}
 ---
 

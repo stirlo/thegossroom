@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Andy Cohen blasts ‘ill-informed and dumb’ Martina Navratilova for controversial surrogacy take""
+title: "Andy Cohen blasts ‘ill-informed and dumb’ Martina Navratilova for controversial surrogacy take"
 date: 2025-08-08 01:27:50 +0000
 categories: gossip
 tags: ['andy-cohen', 'source-page_six', 'drama-rising']
 drama_score: 2
 primary_celebrity: andy_cohen
 source: page_six
-source_url: "https://pagesix.com/2025/08/07/parents/andy-cohen-blasts-dumb-martina-navratilova-for-controversial-surrogacy-take/""
+source_url: "https://pagesix.com/2025/08/07/parents/andy-cohen-blasts-dumb-martina-navratilova-for-controversial-surrogacy-take/"
 mentions: {'andy_cohen': 2}
 ---
 

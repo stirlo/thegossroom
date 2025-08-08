@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘South Park’ Lets Loose With A Trump, Satan & JD Vance Ménage À Trois, ICE Raiding Heaven, & Kristi Noem Shooting Dogs""
+title: "‘South Park’ Lets Loose With A Trump, Satan & JD Vance Ménage À Trois, ICE Raiding Heaven, & Kristi Noem Shooting Dogs"
 date: 2025-08-07 05:26:26 +0000
 categories: gossip
 tags: ['jd-vance', 'source-deadline', 'drama-explosive']
 drama_score: 10
 primary_celebrity: jd_vance
 source: deadline
-source_url: "https://deadline.com/2025/08/south-park-trump-kristi-noem-ice-taunting-1236480470/""
+source_url: "https://deadline.com/2025/08/south-park-trump-kristi-noem-ice-taunting-1236480470/"
 mentions: {'donald_trump': 2, 'jd_vance': 4, 'trump': 4}
 ---
 

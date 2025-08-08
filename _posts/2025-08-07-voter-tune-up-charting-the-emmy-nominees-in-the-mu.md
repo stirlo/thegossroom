@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Voter Tune-Up: Charting the Emmy Nominees in the Music Races""
+title: "Voter Tune-Up: Charting the Emmy Nominees in the Music Races"
 date: 2025-08-07 20:19:48 +0000
 categories: gossip
 tags: ['erik-menendez', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: erik_menendez
 source: variety_alt
-source_url: "https://variety.com/2025/artisans/news/emmy-nominees-music-races-1236481640/""
+source_url: "https://variety.com/2025/artisans/news/emmy-nominees-music-races-1236481640/"
 mentions: {'erik_menendez': 2, 'menendez': 2}
 ---
 

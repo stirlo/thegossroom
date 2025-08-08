@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ozzy Osbourne Documentary ‘Coming Home’ Confirmed For BBC""
+title: "Ozzy Osbourne Documentary ‘Coming Home’ Confirmed For BBC"
 date: 2025-08-07 13:38:33 +0000
 categories: gossip
 tags: ['ozzy-osbourne', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: ozzy_osbourne
 source: deadline
-source_url: "https://deadline.com/2025/08/bbc-ozzy-osbourne-documentary-coming-home-confirmed-1236481103/""
+source_url: "https://deadline.com/2025/08/bbc-ozzy-osbourne-documentary-coming-home-confirmed-1236481103/"
 mentions: {'ozzy_osbourne': 6}
 ---
 

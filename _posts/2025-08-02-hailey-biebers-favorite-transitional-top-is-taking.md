@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Hailey Bieber’s Favorite Transitional Top Is Taking Over Hollywood""
+title: "Hailey Bieber’s Favorite Transitional Top Is Taking Over Hollywood"
 date: 2025-08-02 11:15:10 +0000
 categories: gossip
 tags: ['bieber', 'music', 'pop', 'controversy', 'mental-health', 'marriage', 'source-elle_alt', 'drama-explosive']
 drama_score: 12
 primary_celebrity: bieber
 source: elle_alt
-source_url: "https://www.elle.com/fashion/celebrity-style/a65554447/hailey-bieber-intimissimi-boat-neck-ultralight-top/""
+source_url: "https://www.elle.com/fashion/celebrity-style/a65554447/hailey-bieber-intimissimi-boat-neck-ultralight-top/"
 mentions: {'bella_hadid': 2, 'bieber': 4, 'jenner': 2, 'kendall_jenner': 2, 'of_the': 2}
 ---
 

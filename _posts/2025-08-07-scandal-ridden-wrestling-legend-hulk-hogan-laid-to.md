@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Scandal-Ridden Wrestling Legend Hulk Hogan Laid To Rest In Florida""
+title: "Scandal-Ridden Wrestling Legend Hulk Hogan Laid To Rest In Florida"
 date: 2025-08-07 09:23:59 +0000
 categories: gossip
 tags: ['hogan', 'source-huffpost_entertainment', 'drama-rising']
 drama_score: 4
 primary_celebrity: hogan
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973""
+source_url: "https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973"
 mentions: {'hogan': 2, 'hulk_hogan': 2}
 ---
 

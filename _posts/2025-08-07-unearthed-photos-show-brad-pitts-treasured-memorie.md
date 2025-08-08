@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Unearthed photos show Brad Pitt's treasured memories of his late mom, who was cut off from her six grandchildren by Angelina""
+title: "Unearthed photos show Brad Pitt's treasured memories of his late mom, who was cut off from her six grandchildren by Angelina"
 date: 2025-08-07 17:19:27 +0000
 categories: gossip
 tags: ['brad-pitt', 'source-daily_mail', 'drama-hot']
 drama_score: 6
 primary_celebrity: brad_pitt
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14977293/brad-pitt-mom-jane-death-nine-apart-grandchildren-Angelina-Jolie.html?ns_mchannel=rss&1490&campaign=1490""
+source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14977293/brad-pitt-mom-jane-death-nine-apart-grandchildren-Angelina-Jolie.html?ns_mchannel=rss&1490&campaign=1490"
 mentions: {'angelina_jolie': 2, 'brad_pitt': 4}
 ---
 

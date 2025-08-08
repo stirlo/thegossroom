@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kylie Jenner Wears a “Deep '90s French” Manicure""
+title: "Kylie Jenner Wears a “Deep '90s French” Manicure"
 date: 2025-08-07 05:26:31 +0000
 categories: gossip
 tags: ['jenner', 'source-vogue_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: jenner
 source: vogue_alt
-source_url: "https://www.vogue.com/article/kylie-jenner-deep-french-manicure""
+source_url: "https://www.vogue.com/article/kylie-jenner-deep-french-manicure"
 mentions: {'jenner': 2, 'kylie_jenner': 2}
 ---
 

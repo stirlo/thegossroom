@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ozzy Osbourne's Heartbreaking Final Message for Fans Before Death""
+title: "Ozzy Osbourne's Heartbreaking Final Message for Fans Before Death"
 date: 2025-08-08 01:27:45 +0000
 categories: gossip
 tags: ['ozzy-osbourne', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: ozzy_osbourne
 source: e_news
-source_url: "https://www.eonline.com/news/1420912/ozzy-osbournes-last-message-to-fans-before-death?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420912/ozzy-osbournes-last-message-to-fans-before-death?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'ozzy_osbourne': 6}
 ---
 

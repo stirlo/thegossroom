@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Elon Musk’s Latest AI Frontier: “Spicy” Deepfakes Of Stars Like Scarlett Johansson & Taylor Swift""
+title: "Elon Musk’s Latest AI Frontier: “Spicy” Deepfakes Of Stars Like Scarlett Johansson & Taylor Swift"
 date: 2025-08-07 12:38:46 +0000
 categories: gossip
 tags: ['elon-musk', 'source-deadline', 'drama-explosive']
 drama_score: 18
 primary_celebrity: elon_musk
 source: deadline
-source_url: "https://deadline.com/2025/08/elon-musk-ai-deepfakes-scarlett-johansson-taylor-swift-1236480553/""
+source_url: "https://deadline.com/2025/08/elon-musk-ai-deepfakes-scarlett-johansson-taylor-swift-1236480553/"
 mentions: {'elon_musk': 12, 'taylor_swift': 6}
 ---
 

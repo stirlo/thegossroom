@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "How to Watch NFL Preseason Games Live Online""
+title: "How to Watch NFL Preseason Games Live Online"
 date: 2025-08-07 19:18:17 +0000
 categories: gossip
 tags: ['bowl', 'source-variety_alt', 'drama-hot']
 drama_score: 6
 primary_celebrity: bowl
 source: variety_alt
-source_url: "https://variety.com/2025/shopping/news/how-to-watch-nfl-preseason-games-online-livestream-1236480652/""
+source_url: "https://variety.com/2025/shopping/news/how-to-watch-nfl-preseason-games-online-livestream-1236480652/"
 mentions: {'bowl': 2, 'super': 2, 'super_bowl': 2}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Guess The Catsuit Cuties For Frisky Friday ... Rawrrr!""
+title: "Guess The Catsuit Cuties For Frisky Friday ... Rawrrr!"
 date: 2025-08-02 11:14:48 +0000
 categories: gossip
 tags: ['beyonce', 'music', 'pop', 'hiphop', 'fashion', 'awards', 'business', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: beyonce
 source: tmz
-source_url: "https://www.tmz.com/2025/08/01/guess-the-catsuit-celebrities-photos/""
+source_url: "https://www.tmz.com/2025/08/01/guess-the-catsuit-celebrities-photos/"
 mentions: {'beyonce': 6}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kaylee Goncalves’ Dad Says Public Deserves to Know Idaho Murders Details""
+title: "Kaylee Goncalves’ Dad Says Public Deserves to Know Idaho Murders Details"
 date: 2025-08-08 01:27:48 +0000
 categories: gossip
 tags: ['bryan-kohberger', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: bryan_kohberger
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/kaylee-goncalves-dad-demands-truth-about-idaho-murders-case/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/kaylee-goncalves-dad-demands-truth-about-idaho-murders-case/"
 mentions: {'bryan_kohberger': 3}
 ---
 

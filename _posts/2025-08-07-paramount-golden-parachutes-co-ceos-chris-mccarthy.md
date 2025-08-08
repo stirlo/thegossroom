@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Paramount Golden Parachutes: Co-CEOs Chris McCarthy, Brian Robbins to Get $18 Million Payouts""
+title: "Paramount Golden Parachutes: Co-CEOs Chris McCarthy, Brian Robbins to Get $18 Million Payouts"
 date: 2025-08-07 15:20:28 +0000
 categories: gossip
 tags: ['awards', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 4
 primary_celebrity: awards
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/business/business-news/paramount-chris-mccarthy-brian-robbins-pay-1236339354/""
+source_url: "https://www.hollywoodreporter.com/business/business-news/paramount-chris-mccarthy-brian-robbins-pay-1236339354/"
 mentions: {'awards': 2, 'golden': 2}
 ---
 

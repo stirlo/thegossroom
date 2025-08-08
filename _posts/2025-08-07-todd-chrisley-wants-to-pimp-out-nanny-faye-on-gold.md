@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Todd Chrisley Wants to \"Pimp\"" Out Nanny Faye on Golden Bachelorette""
+title: "Todd Chrisley Wants to \"Pimp\" Out Nanny Faye on Golden Bachelorette"
 date: 2025-08-07 15:20:25 +0000
 categories: gossip
 tags: ['golden', 'source-e_news', 'drama-rising']
 drama_score: 3
 primary_celebrity: golden
 source: e_news
-source_url: "https://www.eonline.com/news/1420872/todd-chrisley-wants-nanny-faye-on-golden-bachelorette?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420872/todd-chrisley-wants-nanny-faye-on-golden-bachelorette?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'golden': 3}
 ---
 

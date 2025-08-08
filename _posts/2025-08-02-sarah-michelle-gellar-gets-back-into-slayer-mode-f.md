@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Sarah Michelle Gellar Gets Back Into Slayer Mode For ‘Buffy’ Reboot Training With Ryan Kiera Armstrong""
+title: "Sarah Michelle Gellar Gets Back Into Slayer Mode For ‘Buffy’ Reboot Training With Ryan Kiera Armstrong"
 date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: deadline
-source_url: "https://deadline.com/2025/08/buffy-slayer-sarah-michelle-gellar-ryan-kiera-armstrong-training-1236477079/""
+source_url: "https://deadline.com/2025/08/buffy-slayer-sarah-michelle-gellar-ryan-kiera-armstrong-training-1236477079/"
 mentions: {'of_the': 2}
 ---
 

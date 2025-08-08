@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brad Pitt's Niece Announces Devastating Family Loss""
+title: "Brad Pitt's Niece Announces Devastating Family Loss"
 date: 2025-08-07 12:38:48 +0000
 categories: gossip
 tags: ['brad-pitt', 'source-huffpost_entertainment', 'drama-rising']
 drama_score: 2
 primary_celebrity: brad_pitt
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/brad-pitt-mother-jane-dead_n_6893853de4b0d711cefb462c""
+source_url: "https://www.huffpost.com/entry/brad-pitt-mother-jane-dead_n_6893853de4b0d711cefb462c"
 mentions: {'brad_pitt': 2}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Get Halsey's Look with Her About Face Makeup Line""
+title: "Get Halsey's Look with Her About Face Makeup Line"
 date: 2025-08-08 07:22:58 +0000
 categories: gossip
 tags: ['halsey', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: halsey
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/halsey-makeup-line-about-face/""
+source_url: "https://www.tmz.com/2025/08/08/halsey-makeup-line-about-face/"
 mentions: {'halsey': 6}
 ---
 

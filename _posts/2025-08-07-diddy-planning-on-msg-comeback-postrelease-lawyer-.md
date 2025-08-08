@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Diddy Planning on MSG Comeback Post-Release, Lawyer Says""
+title: "Diddy Planning on MSG Comeback Post-Release, Lawyer Says"
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['diddy', 'source-tmz', 'drama-hot']
 drama_score: 9
 primary_celebrity: diddy
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/diddy-wants-to-perform-at-madison-square-garden-after-release/""
+source_url: "https://www.tmz.com/2025/08/06/diddy-wants-to-perform-at-madison-square-garden-after-release/"
 mentions: {'diddy': 9}
 ---
 

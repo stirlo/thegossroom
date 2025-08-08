@@ -6,9 +6,9 @@ date: 2025-08-08 04:41:29 +0000
 categories: gossip
 tags: ['ariana-grande', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
-primary_celebrity: ariana_grande""
+primary_celebrity: ariana_grande"
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/ariana-grande-sends-squishmallows-to-brie-bird-amid-cancer-battle/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/ariana-grande-sends-squishmallows-to-brie-bird-amid-cancer-battle/"
 mentions: {'ariana_grande': 18}
 ---
 

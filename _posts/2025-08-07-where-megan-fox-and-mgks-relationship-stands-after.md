@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Where Megan Fox and MGK's Relationship Stands After Costa Rica Trip""
+title: "Where Megan Fox and MGK's Relationship Stands After Costa Rica Trip"
 date: 2025-08-07 19:18:16 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: machine_gun_kelly
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/where-megan-fox-mgk-stand-after-costa-rica-trip-excl/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/where-megan-fox-mgk-stand-after-costa-rica-trip-excl/"
 mentions: {'machine_gun_kelly': 3}
 ---
 

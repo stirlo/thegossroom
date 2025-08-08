@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Swifties Think Travis Kelce Presser Is Sending Secret Message To Taylor Swift""
+title: "Swifties Think Travis Kelce Presser Is Sending Secret Message To Taylor Swift"
 date: 2025-08-07 15:20:24 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-perez_hilton', 'drama-explosive']
 drama_score: 36
 primary_celebrity: taylor_swift
 source: perez_hilton
-source_url: "https://perezhilton.com/swifties-think-travis-kelce-press-conference-secret-taylor-swift-messages/""
+source_url: "https://perezhilton.com/swifties-think-travis-kelce-press-conference-secret-taylor-swift-messages/"
 mentions: {'kelce': 9, 'taylor_swift': 18, 'travis_kelce': 9}
 ---
 

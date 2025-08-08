@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Eminem Has Fans Losing It Over His Surprise Appearance in NYC""
+title: "Eminem Has Fans Losing It Over His Surprise Appearance in NYC"
 date: 2025-08-07 15:20:25 +0000
 categories: gossip
 tags: ['eminem', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: eminem
 source: e_news
-source_url: "https://www.eonline.com/news/1420875/eminems-surprise-appearance-at-documentary-premiere?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420875/eminems-surprise-appearance-at-documentary-premiere?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'eminem': 6}
 ---
 

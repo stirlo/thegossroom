@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "How to Watch Eva Longoria’s ‘Necaxa’ Docuseries Online""
+title: "How to Watch Eva Longoria’s ‘Necaxa’ Docuseries Online"
 date: 2025-08-07 15:20:34 +0000
 categories: gossip
 tags: ['ryan-reynolds', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: ryan_reynolds
 source: rolling_stone
-source_url: "https://www.rollingstone.com/product-recommendations/streaming/how-to-watch-necaxa-docuseries-online-1235401891/""
+source_url: "https://www.rollingstone.com/product-recommendations/streaming/how-to-watch-necaxa-docuseries-online-1235401891/"
 mentions: {'ryan_reynolds': 2}
 ---
 

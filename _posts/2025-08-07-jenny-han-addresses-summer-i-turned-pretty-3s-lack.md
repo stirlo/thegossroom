@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jenny Han Addresses Summer I Turned Pretty 3's Lack of Taylor Swift""
+title: "Jenny Han Addresses Summer I Turned Pretty 3's Lack of Taylor Swift"
 date: 2025-08-07 22:18:14 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-e_news', 'drama-explosive']
 drama_score: 18
 primary_celebrity: taylor_swift
 source: e_news
-source_url: "https://www.eonline.com/news/1420904/jenny-han-on-summer-i-turned-pretty-season-3-taylor-swift-songs?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420904/jenny-han-on-summer-i-turned-pretty-season-3-taylor-swift-songs?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'taylor_swift': 18}
 ---
 

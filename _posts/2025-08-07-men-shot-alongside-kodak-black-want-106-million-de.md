@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Men Shot Alongside Kodak Black Want $10.6 Million Default Judgment Against Rapper""
+title: "Men Shot Alongside Kodak Black Want $10.6 Million Default Judgment Against Rapper"
 date: 2025-08-07 05:26:29 +0000
 categories: gossip
 tags: ['justin-bieber', 'source-rolling_stone', 'drama-hot']
 drama_score: 8
 primary_celebrity: justin_bieber
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-news/kodak-black-justin-bieber-party-shooting-lawsuit-default-1235402354/""
+source_url: "https://www.rollingstone.com/music/music-news/kodak-black-justin-bieber-party-shooting-lawsuit-default-1235402354/"
 mentions: {'bieber': 2, 'justin_bieber': 6}
 ---
 

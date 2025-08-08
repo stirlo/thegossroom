@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "From Metro Boomin to Anycia, Atlanta Rap Revisits Its Greatest Eras""
+title: "From Metro Boomin to Anycia, Atlanta Rap Revisits Its Greatest Eras"
 date: 2025-08-07 17:19:28 +0000
 categories: gossip
 tags: ['metro-boomin', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: metro_boomin
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-features/atlanta-rap-revisits-its-greatest-eras-1235402669/""
+source_url: "https://www.rollingstone.com/music/music-features/atlanta-rap-revisits-its-greatest-eras-1235402669/"
 mentions: {'metro_boomin': 2}
 ---
 

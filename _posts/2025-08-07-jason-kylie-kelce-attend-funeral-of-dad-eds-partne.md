@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jason, Kylie Kelce Attend Funeral Of Dad Ed's Partner""
+title: "Jason, Kylie Kelce Attend Funeral Of Dad Ed's Partner"
 date: 2025-08-07 20:19:41 +0000
 categories: gossip
 tags: ['kelce', 'source-tmz', 'drama-explosive']
 drama_score: 24
 primary_celebrity: kelce
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/jason-kylie-kelce-attend-dad-ed-partner-funeral/""
+source_url: "https://www.tmz.com/2025/08/07/jason-kylie-kelce-attend-dad-ed-partner-funeral/"
 mentions: {'ed_kelce': 3, 'jason_kelce': 3, 'kelce': 15, 'travis_kelce': 3}
 ---
 

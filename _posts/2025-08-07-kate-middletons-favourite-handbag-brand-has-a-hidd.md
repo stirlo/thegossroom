@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kate Middleton's favourite handbag brand has a hidden outlet store with up to 65% off - but stock is selling fast""
+title: "Kate Middleton's favourite handbag brand has a hidden outlet store with up to 65% off - but stock is selling fast"
 date: 2025-08-07 06:28:53 +0000
 categories: gossip
 tags: ['kate-middleton', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: kate_middleton
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/royals/article-14968269/kate-middletons-favourite-handbag-brand-hidden-outlet-store.html?ns_mchannel=rss&1490&campaign=1490""
+source_url: "https://www.dailymail.co.uk/news/royals/article-14968269/kate-middletons-favourite-handbag-brand-hidden-outlet-store.html?ns_mchannel=rss&1490&campaign=1490"
 mentions: {'kate_middleton': 2}
 ---
 

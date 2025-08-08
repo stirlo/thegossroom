@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brooke Hogan’s Husband Steven Oleksy Shares Tribute to Father-in-Law Hulk""
+title: "Brooke Hogan’s Husband Steven Oleksy Shares Tribute to Father-in-Law Hulk"
 date: 2025-08-07 20:19:45 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogans-husband-steven-oleksy-shares-tribute-to-hulk-hogan/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogans-husband-steven-oleksy-shares-tribute-to-hulk-hogan/"
 mentions: {'brooke_hogan': 6, 'hogan': 9, 'hulk_hogan': 3}
 ---
 

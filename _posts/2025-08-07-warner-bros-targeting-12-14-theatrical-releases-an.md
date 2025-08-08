@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Warner Bros. Targeting 12-14 Theatrical Releases Annually Across Key Labels""
+title: "Warner Bros. Targeting 12-14 Theatrical Releases Annually Across Key Labels"
 date: 2025-08-07 13:38:33 +0000
 categories: gossip
 tags: ['super', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: super
 source: deadline
-source_url: "https://deadline.com/2025/08/warner-bros-discovery-theatrical-releases-key-labels-1236481064/""
+source_url: "https://deadline.com/2025/08/warner-bros-discovery-theatrical-releases-key-labels-1236481064/"
 mentions: {'super': 2}
 ---
 

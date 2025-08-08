@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Sydney Sweeney's Brother Pokes Fun at American Eagle Ad Controversy""
+title: "Sydney Sweeney's Brother Pokes Fun at American Eagle Ad Controversy"
 date: 2025-08-07 17:19:19 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: sydney_sweeney
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/sydney-sweeney-brother-good-jeans-american-eagle-ad/""
+source_url: "https://www.tmz.com/2025/08/07/sydney-sweeney-brother-good-jeans-american-eagle-ad/"
 mentions: {'sydney_sweeney': 6}
 ---
 

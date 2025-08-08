@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Taylor Swift and Travis Kelce Reportedly Took a Major Step in Their Relationship""
+title: "Taylor Swift and Travis Kelce Reportedly Took a Major Step in Their Relationship"
 date: 2025-08-07 05:26:30 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-elle_alt', 'drama-explosive']
 drama_score: 10
 primary_celebrity: taylor_swift
 source: elle_alt
-source_url: "https://www.elle.com/culture/celebrities/a65614495/taylor-swift-travis-kelce-ohio-house-hunting-report/""
+source_url: "https://www.elle.com/culture/celebrities/a65614495/taylor-swift-travis-kelce-ohio-house-hunting-report/"
 mentions: {'kelce': 2, 'taylor_swift': 6, 'travis_kelce': 2}
 ---
 

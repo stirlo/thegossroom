@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Mel Gibson Told Joe Rogan This Banned Drug Cured His Friends’ Cancer -- Now A Man Has Died From Taking It""
+title: "Mel Gibson Told Joe Rogan This Banned Drug Cured His Friends’ Cancer -- Now A Man Has Died From Taking It"
 date: 2025-08-08 01:27:44 +0000
 categories: gossip
 tags: ['joe-rogan', 'source-perez_hilton', 'drama-hot']
 drama_score: 9
 primary_celebrity: joe_rogan
 source: perez_hilton
-source_url: "https://perezhilton.com/mel-gibson-told-joe-rogan-banned-drugs-cured-friends-cancer-man-died-from-taking-it/""
+source_url: "https://perezhilton.com/mel-gibson-told-joe-rogan-banned-drugs-cured-friends-cancer-man-died-from-taking-it/"
 mentions: {'joe_rogan': 9}
 ---
 

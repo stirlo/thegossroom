@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Andy Reid Teases Toast He’d Give at Taylor Swift and Travis Kelce's Wedding""
+title: "Andy Reid Teases Toast He’d Give at Taylor Swift and Travis Kelce's Wedding"
 date: 2025-08-07 23:17:59 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 30
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/andy-reid-teases-toast-for-taylor-swift-and-travis-kelces-wedding/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/andy-reid-teases-toast-for-taylor-swift-and-travis-kelces-wedding/"
 mentions: {'kelce': 6, 'taylor_swift': 18, 'travis_kelce': 6}
 ---
 

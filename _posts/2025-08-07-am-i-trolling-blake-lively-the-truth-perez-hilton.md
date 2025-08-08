@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Am I Trolling Blake Lively? THE TRUTH! | Perez Hilton""
+title: "Am I Trolling Blake Lively? THE TRUTH! | Perez Hilton"
 date: 2025-08-07 21:15:27 +0000
 categories: gossip
 tags: ['blake-lively', 'source-perez_hilton', 'drama-hot']
 drama_score: 9
 primary_celebrity: blake_lively
 source: perez_hilton
-source_url: "https://perezhilton.com/am-i-trolling-blake-lively-the-truth-perez-hilton/""
+source_url: "https://perezhilton.com/am-i-trolling-blake-lively-the-truth-perez-hilton/"
 mentions: {'blake_lively': 9}
 ---
 

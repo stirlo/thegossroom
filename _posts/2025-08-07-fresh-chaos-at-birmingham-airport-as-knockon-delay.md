@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Fresh chaos at Birmingham Airport as knock-on delays disrupt 43 flights today - check to see if your holiday is affected""
+title: "Fresh chaos at Birmingham Airport as knock-on delays disrupt 43 flights today - check to see if your holiday is affected"
 date: 2025-08-07 08:25:41 +0000
 categories: gossip
 tags: ['super', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: super
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/travel/article-14978699/Birmingham-Airport-travel-chaos-second-day-emergency-landing.html?ns_mchannel=rss&1490&campaign=1490""
+source_url: "https://www.dailymail.co.uk/travel/article-14978699/Birmingham-Airport-travel-chaos-second-day-emergency-landing.html?ns_mchannel=rss&1490&campaign=1490"
 mentions: {'super': 2}
 ---
 

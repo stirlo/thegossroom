@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Drake Gushed Over Gracie Abrams In A ‘Weird’ Post, And Social Media Users Are Side-Eyeing Him""
+title: "Drake Gushed Over Gracie Abrams In A ‘Weird’ Post, And Social Media Users Are Side-Eyeing Him"
 date: 2025-08-07 05:26:28 +0000
 categories: gossip
 tags: ['drake', 'source-huffpost_entertainment', 'drama-rising']
 drama_score: 4
 primary_celebrity: drake
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/drake-gracie-abrams-internet-backlash_n_689224f4e4b044af87ac5793""
+source_url: "https://www.huffpost.com/entry/drake-gracie-abrams-internet-backlash_n_689224f4e4b044af87ac5793"
 mentions: {'drake': 4}
 ---
 

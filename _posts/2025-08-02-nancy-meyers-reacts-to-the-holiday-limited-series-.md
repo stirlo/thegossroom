@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Nancy Meyers Reacts To ‘The Holiday’ Limited Series: “News To Me”""
+title: "Nancy Meyers Reacts To ‘The Holiday’ Limited Series: “News To Me”"
 date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: deadline
-source_url: "https://deadline.com/2025/08/nancy-meyers-reacts-the-holiday-limited-series-1236477053/""
+source_url: "https://deadline.com/2025/08/nancy-meyers-reacts-the-holiday-limited-series-1236477053/"
 mentions: {'of_the': 2}
 ---
 

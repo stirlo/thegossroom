@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brooke Hogan Wanted 'No Part"" of Family Drama Over Hulk Hogan's Money""
+title: "Brooke Hogan Wanted 'No Part" of Family Drama Over Hulk Hogan's Money"
 date: 2025-08-07 08:25:35 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 24
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-explains-family-drama-over-hulk-hogans-will/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-explains-family-drama-over-hulk-hogans-will/"
 mentions: {'brooke_hogan': 6, 'hogan': 12, 'hulk_hogan': 6}
 ---
 

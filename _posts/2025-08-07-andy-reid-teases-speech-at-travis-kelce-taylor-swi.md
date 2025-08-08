@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Andy Reid Teases Speech at Travis Kelce, Taylor Swift's Future Wedding""
+title: "Andy Reid Teases Speech at Travis Kelce, Taylor Swift's Future Wedding"
 date: 2025-08-07 15:20:25 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-e_news', 'drama-explosive']
 drama_score: 21
 primary_celebrity: taylor_swift
 source: e_news
-source_url: "https://www.eonline.com/news/1420876/andy-reid-on-travis-kelce-taylor-swift-wedding-speech?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420876/andy-reid-on-travis-kelce-taylor-swift-wedding-speech?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'kelce': 6, 'taylor_swift': 9, 'travis_kelce': 6}
 ---
 

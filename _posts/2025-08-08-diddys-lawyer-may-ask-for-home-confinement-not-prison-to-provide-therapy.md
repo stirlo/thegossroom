@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Diddy's Lawyer May Ask for Home Confinement, Not Prison, to Provide Therapy""
+title: "Diddy's Lawyer May Ask for Home Confinement, Not Prison, to Provide Therapy"
 date: 2025-08-08 08:24:57 +0000
 categories: gossip
 tags: ['diddy', 'source-tmz', 'drama-explosive']
 drama_score: 12
 primary_celebrity: diddy
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/marc-agnifilo-diddy-home-confinement/""
+source_url: "https://www.tmz.com/2025/08/08/marc-agnifilo-diddy-home-confinement/"
 mentions: {'diddy': 12}
 ---
 

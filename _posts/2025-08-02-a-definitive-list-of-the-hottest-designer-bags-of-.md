@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "A Definitive List of the Hottest Designer Bags of the Season, According to ELLE Editors""
+title: "A Definitive List of the Hottest Designer Bags of the Season, According to ELLE Editors"
 date: 2025-08-02 11:15:10 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-elle_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: of_the
 source: elle_alt
-source_url: "https://www.elle.com/fashion/shopping/g44592109/best-designer-bags/""
+source_url: "https://www.elle.com/fashion/shopping/g44592109/best-designer-bags/"
 mentions: {'of_the': 4}
 ---
 

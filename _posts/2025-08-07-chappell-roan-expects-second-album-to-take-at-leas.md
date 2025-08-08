@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Chappell Roan Expects Second Album To Take “At Least” Five Years""
+title: "Chappell Roan Expects Second Album To Take “At Least” Five Years"
 date: 2025-08-07 05:26:26 +0000
 categories: gossip
 tags: ['chappell-roan', 'source-deadline', 'drama-rising']
 drama_score: 4
 primary_celebrity: chappell_roan
 source: deadline
-source_url: "https://deadline.com/2025/08/chappell-roan-second-album-at-least-five-years-1236480842/""
+source_url: "https://deadline.com/2025/08/chappell-roan-second-album-at-least-five-years-1236480842/"
 mentions: {'chappell_roan': 4}
 ---
 

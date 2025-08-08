@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Look Back at Jessica Alba and Cash Warren's Complete Relationship Timeline""
+title: "Look Back at Jessica Alba and Cash Warren's Complete Relationship Timeline"
 date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: of_the
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/pictures/jessica-alba-and-cash-warren-a-timeline-of-their-relationship/""
+source_url: "https://www.usmagazine.com/celebrity-news/pictures/jessica-alba-and-cash-warren-a-timeline-of-their-relationship/"
 mentions: {'of_the': 3}
 ---
 

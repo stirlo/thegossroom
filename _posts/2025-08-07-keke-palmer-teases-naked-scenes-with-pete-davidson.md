@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Keke Palmer Teases Naked Scenes With Pete Davidson in New Movie""
+title: "Keke Palmer Teases Naked Scenes With Pete Davidson in New Movie"
 date: 2025-08-07 23:17:59 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-us_weekly', 'drama-explosive']
 drama_score: 12
 primary_celebrity: pete_davidson
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/keke-palmer-talks-pete-davidsons-naked-scenes-in-the-pickup/""
+source_url: "https://www.usmagazine.com/entertainment/news/keke-palmer-talks-pete-davidsons-naked-scenes-in-the-pickup/"
 mentions: {'pete_davidson': 12}
 ---
 

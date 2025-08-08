@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jason Kelce Jokes About Joining Taylor Swift on Stage to Play Saxophone""
+title: "Jason Kelce Jokes About Joining Taylor Swift on Stage to Play Saxophone"
 date: 2025-08-08 01:27:48 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 36
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/jason-kelces-bond-with-taylor-swift-throughout-travis-kelce-romance/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/jason-kelces-bond-with-taylor-swift-throughout-travis-kelce-romance/"
 mentions: {'jason_kelce': 6, 'kelce': 9, 'taylor_swift': 18, 'travis_kelce': 3}
 ---
 

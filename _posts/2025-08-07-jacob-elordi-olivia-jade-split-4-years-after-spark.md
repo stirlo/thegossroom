@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jacob Elordi, Olivia Jade Split 4 Years After Sparking Romance Rumors""
+title: "Jacob Elordi, Olivia Jade Split 4 Years After Sparking Romance Rumors"
 date: 2025-08-07 19:18:14 +0000
 categories: gossip
 tags: ['jacob-elordi', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: jacob_elordi
 source: e_news
-source_url: "https://www.eonline.com/news/1420889/jacob-elordi-olivia-jade-break-up?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420889/jacob-elordi-olivia-jade-break-up?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'jacob_elordi': 6}
 ---
 

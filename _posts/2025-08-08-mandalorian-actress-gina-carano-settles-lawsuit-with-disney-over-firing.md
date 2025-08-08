@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Mandalorian actress Gina Carano settles lawsuit with Disney over firing""
+title: "Mandalorian actress Gina Carano settles lawsuit with Disney over firing"
 date: 2025-08-08 03:41:34 +0000
 categories: gossip
 tags: ['elon-musk', 'source-bbc_entertainment', 'drama-rising']
 drama_score: 3
 primary_celebrity: elon_musk
 source: bbc_entertainment
-source_url: "https://www.bbc.com/news/articles/c5ylqvl4p3yo?at_medium=RSS&campaign=rss""
+source_url: "https://www.bbc.com/news/articles/c5ylqvl4p3yo?at_medium=RSS&campaign=rss"
 mentions: {'elon_musk': 3}
 ---
 

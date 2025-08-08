@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Pete Davidson Is ‘Stoked’ to Become a Dad: ‘Never Been More Excited’""
+title: "Pete Davidson Is ‘Stoked’ to Become a Dad: ‘Never Been More Excited’"
 date: 2025-08-07 12:38:44 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-us_weekly', 'drama-explosive']
 drama_score: 12
 primary_celebrity: pete_davidson
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/pete-davidson-talks-fatherhood-and-baby-with-elsie-hewitt/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/pete-davidson-talks-fatherhood-and-baby-with-elsie-hewitt/"
 mentions: {'pete_davidson': 12}
 ---
 

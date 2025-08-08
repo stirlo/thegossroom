@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "I meticulously researched Meghan's protocol breaches and was shocked by my findings. The dozen I discovered make it so clear: The signs were there from the beginning: RICHARD EDEN""
+title: "I meticulously researched Meghan's protocol breaches and was shocked by my findings. The dozen I discovered make it so clear: The signs were there from the beginning: RICHARD EDEN"
 date: 2025-08-08 06:28:39 +0000
 categories: gossip
 tags: ['duchess-of-sussex', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: duchess_of_sussex
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/royals/article-14979265/Meghan-breaches-royal-fashion-protocol-committed-rebellion-RICHARD-EDEN.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
+source_url: "https://www.dailymail.co.uk/news/royals/article-14979265/Meghan-breaches-royal-fashion-protocol-committed-rebellion-RICHARD-EDEN.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
 mentions: {'duchess_of_sussex': 2}
 ---
 

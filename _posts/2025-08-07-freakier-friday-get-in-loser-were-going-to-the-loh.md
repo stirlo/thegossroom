@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘Freakier Friday’: Get in Loser, We’re Going to the Lohanaissance""
+title: "‘Freakier Friday’: Get in Loser, We’re Going to the Lohanaissance"
 date: 2025-08-07 13:38:37 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: lindsay_lohan
 source: rolling_stone
-source_url: "https://www.rollingstone.com/tv-movies/tv-movie-reviews/freakier-friday-review-lindsay-lohan-1235400453/""
+source_url: "https://www.rollingstone.com/tv-movies/tv-movie-reviews/freakier-friday-review-lindsay-lohan-1235400453/"
 mentions: {'lindsay_lohan': 2}
 ---
 

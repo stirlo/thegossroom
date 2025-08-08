@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Sydney Sweeney's Brother Jokes About 'Good Jeans"" After Controversial Ad""
+title: "Sydney Sweeney's Brother Jokes About 'Good Jeans" After Controversial Ad"
 date: 2025-08-07 19:18:16 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: sydney_sweeney
 source: us_weekly
-source_url: "https://www.usmagazine.com/stylish/news/sydney-sweeneys-brother-jokes-amid-american-eagle-ad-backlash/""
+source_url: "https://www.usmagazine.com/stylish/news/sydney-sweeneys-brother-jokes-amid-american-eagle-ad-backlash/"
 mentions: {'sydney_sweeney': 6}
 ---
 

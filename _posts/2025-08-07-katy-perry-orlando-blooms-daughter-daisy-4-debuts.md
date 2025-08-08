@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Katy Perry & Orlando Bloom’s Daughter Daisy, 4, Debuts Singing Skills""
+title: "Katy Perry & Orlando Bloom’s Daughter Daisy, 4, Debuts Singing Skills"
 date: 2025-08-07 13:38:27 +0000
 categories: gossip
 tags: ['katy-perry', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: katy_perry
 source: e_news
-source_url: "https://www.eonline.com/news/1420871/katy-perry-daughter-daisy-singing-video?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420871/katy-perry-daughter-daisy-singing-video?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'katy_perry': 6}
 ---
 

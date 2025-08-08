@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Celeb Godparents Revealed: Taylor Swift, Macaulay Culkin & More""
+title: "Celeb Godparents Revealed: Taylor Swift, Macaulay Culkin & More"
 date: 2025-08-02 11:14:51 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-e_news', 'drama-explosive']
 drama_score: 12
 primary_celebrity: taylor_swift
 source: e_news
-source_url: "https://www.eonline.com/news/1384926/all-the-celebrity-godparents-you-didnt-know-about?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1384926/all-the-celebrity-godparents-you-didnt-know-about?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'of_the': 3, 'taylor_swift': 9}
 ---
 

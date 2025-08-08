@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "ASC Awards Date Set As American Society Of Cinematographers Reveals 2025-26 Timeline""
+title: "ASC Awards Date Set As American Society Of Cinematographers Reveals 2025-26 Timeline"
 date: 2025-08-08 01:27:50 +0000
 categories: gossip
 tags: ['awards', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: awards
 source: deadline
-source_url: "https://deadline.com/2025/08/asc-awards-2026-date-american-society-of-cinematographers-1236481954/""
+source_url: "https://deadline.com/2025/08/asc-awards-2026-date-american-society-of-cinematographers-1236481954/"
 mentions: {'awards': 4, 'oscars': 2}
 ---
 

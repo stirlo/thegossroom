@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Dead & Company’s Golden Gate Park Celebration Of 60 Years Of The Grateful Dead: Every Song From Night 1""
+title: "Dead & Company’s Golden Gate Park Celebration Of 60 Years Of The Grateful Dead: Every Song From Night 1"
 date: 2025-08-02 11:15:07 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-billboard', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: billboard
-source_url: "https://www.billboard.com/lists/dead-company-setlist-anniversary-san-francisco/""
+source_url: "https://www.billboard.com/lists/dead-company-setlist-anniversary-san-francisco/"
 mentions: {'of_the': 2}
 ---
 

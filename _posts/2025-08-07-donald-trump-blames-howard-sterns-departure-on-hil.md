@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Donald Trump Blames Howard Stern’s Departure On Hillary Clinton Endorsement — Even Though The SiriusXM Radio Host Hasn’t Said He’s Leaving""
+title: "Donald Trump Blames Howard Stern’s Departure On Hillary Clinton Endorsement — Even Though The SiriusXM Radio Host Hasn’t Said He’s Leaving"
 date: 2025-08-07 05:26:26 +0000
 categories: gossip
 tags: ['donald-trump', 'source-deadline', 'drama-explosive']
 drama_score: 12
 primary_celebrity: donald_trump
 source: deadline
-source_url: "https://deadline.com/2025/08/trump-howard-stern-siriusxm-1236480629/""
+source_url: "https://deadline.com/2025/08/trump-howard-stern-siriusxm-1236480629/"
 mentions: {'donald_trump': 4, 'howard_stern': 4, 'trump': 4}
 ---
 

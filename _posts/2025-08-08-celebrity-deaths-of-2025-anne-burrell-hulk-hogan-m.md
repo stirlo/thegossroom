@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Celebrity Deaths of 2025: Anne Burrell, Hulk Hogan, More Stars We’ve Lost""
+title: "Celebrity Deaths of 2025: Anne Burrell, Hulk Hogan, More Stars We’ve Lost"
 date: 2025-08-08 01:27:48 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/pictures/celebrity-deaths-of-2025-stars-weve-lost-this-year/""
+source_url: "https://www.usmagazine.com/celebrity-news/pictures/celebrity-deaths-of-2025-stars-weve-lost-this-year/"
 mentions: {'hogan': 3, 'hulk_hogan': 3}
 ---
 
