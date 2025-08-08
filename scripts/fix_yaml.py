@@ -6,6 +6,14 @@ Fix YAML quotes and formatting in Jekyll posts
 import re
 from pathlib import Path
 
+def remove_quotes_from_tags(tag_content):
+    """Remove quotes from tag items"""
+    return re.sub(r"'([^']+)'", r'\1', tag_content)
+
+def remove_quotes_from_mentions(mentions_content):
+    """Remove quotes from mentions keys"""
+    return re.sub(r"'([^']+)'", r'\1', mentions_content)
+
 def fix_yaml_issues(content):
     """Fix YAML syntax issues"""
     if not content.startswith('---\n'):
@@ -20,18 +28,20 @@ def fix_yaml_issues(content):
     original_content = content
 
     # Fix tags: remove quotes from array items
-    front_matter = re.sub(
-        r"tags: \[([^\]]+)\]",
-        lambda m: f"tags: [{re.sub(r\"'([^']+)'\", r'\\1', m.group(1))}]",
-        front_matter
-    )
+    def fix_tags_match(match):
+        tag_content = match.group(1)
+        clean_tags = remove_quotes_from_tags(tag_content)
+        return f"tags: [{clean_tags}]"
+
+    front_matter = re.sub(r"tags: \[([^\]]+)\]", fix_tags_match, front_matter)
 
     # Fix mentions: remove quotes from dictionary keys
-    front_matter = re.sub(
-        r"mentions: \{([^}]+)\}",
-        lambda m: f"mentions: {{{re.sub(r\"'([^']+)'\", r'\\1', m.group(1))}}}",
-        front_matter
-    )
+    def fix_mentions_match(match):
+        mentions_content = match.group(1)
+        clean_mentions = remove_quotes_from_mentions(mentions_content)
+        return f"mentions: {{{clean_mentions}}}"
+
+    front_matter = re.sub(r"mentions: \{([^}]+)\}", fix_mentions_match, front_matter)
 
     # Reconstruct content
     fixed_content = f"---\n{front_matter}---\n{post_content}"
