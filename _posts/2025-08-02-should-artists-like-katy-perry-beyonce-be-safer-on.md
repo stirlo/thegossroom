@@ -8,4 +8,7 @@ drama_score: 8
 primary_celebrity: beyonce
 source: billboard
 source_url: "https://www.billboard.com/video/beyonce-katy-perry-concert-scares-fans-stage-safety-stars/"
-mentions: {beyonce: 6, 'blackpink: 2} --- After recent on-stage scares for artists like Katy Perry and Beyoncé, fans in Beverly Hills give their opinions on whether they should be more careful about doing stunts on stage. Leah LaRosa: Did you guys see BlackPink and Jenny on stage? Blink Fan: Well, she was always like that for years. I mean, fans maybe […] **Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Beyonce, Blackpink [Read full article at Billboard](https://www.billboard.com/video/beyonce-katy-perry-concert-scares-fans-stage-safety-stars/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {beyonce: 6, 'blackpink: 2}
+---
+
+After recent on-stage scares for artists like Katy Perry and Beyoncé, fans in Beverly Hills give their opinions on whether they should be more careful about doing stunts on stage. Leah LaRosa: Did you guys see BlackPink and Jenny on stage? Blink Fan: Well, she was always like that for years. I mean, fans maybe […] **Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Beyonce, Blackpink [Read full article at Billboard](https://www.billboard.com/video/beyonce-katy-perry-concert-scares-fans-stage-safety-stars/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

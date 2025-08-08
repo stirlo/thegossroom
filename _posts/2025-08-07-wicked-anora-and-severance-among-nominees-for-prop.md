@@ -8,4 +8,7 @@ drama_score: 6
 primary_celebrity: awards
 source: variety_alt
 source_url: "https://variety.com/2025/film/news/film-news-in-brief-aug-4-2025-1236477799/"
-mentions: {awards: 6} --- The Property Masters Guild announced the nominees for their 2nd annual MacGuffin Awards, which honors the creative excellence and impact of Property Masters in film, TV, commercials and more. Theresa Corvino, PMG awards committee chair, said, “The depth of creativity and craftsmanship in this year’s submissions is a powerful reminder of what Property Masters bring […] **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Awards [Read full article at Variety Alt](https://variety.com/2025/film/news/film-news-in-brief-aug-4-2025-1236477799/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {awards: 6}
+---
+
+The Property Masters Guild announced the nominees for their 2nd annual MacGuffin Awards, which honors the creative excellence and impact of Property Masters in film, TV, commercials and more. Theresa Corvino, PMG awards committee chair, said, “The depth of creativity and craftsmanship in this year’s submissions is a powerful reminder of what Property Masters bring […] **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Awards [Read full article at Variety Alt](https://variety.com/2025/film/news/film-news-in-brief-aug-4-2025-1236477799/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

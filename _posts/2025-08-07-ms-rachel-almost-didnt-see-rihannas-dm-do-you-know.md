@@ -8,4 +8,7 @@ drama_score: 3
 primary_celebrity: kelce
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-moms/news/ms-rachel-shares-surprising-dm-from-rihanna/"
-mentions: {kelce: 3} --- Ms. Rachel has a lot of celebrity admirers, apparently, but she almost missed a personal message from one of her biggest A-list fans: Rihanna. Ms. Rachel (real name Rachel Accurso), 42, stopped by Kylie Kelce’s “Not Gonna Lie” podcast for the Thursday, August 7, episode — and she revealed Rihanna, 37, slid into her DMs. […] **Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Kelce [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-moms/news/ms-rachel-shares-surprising-dm-from-rihanna/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {kelce: 3}
+---
+
+Ms. Rachel has a lot of celebrity admirers, apparently, but she almost missed a personal message from one of her biggest A-list fans: Rihanna. Ms. Rachel (real name Rachel Accurso), 42, stopped by Kylie Kelce’s “Not Gonna Lie” podcast for the Thursday, August 7, episode — and she revealed Rihanna, 37, slid into her DMs. […] **Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Kelce [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-moms/news/ms-rachel-shares-surprising-dm-from-rihanna/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -8,4 +8,7 @@ drama_score: 4
 primary_celebrity: bad_bunny
 source: billboard
 source_url: "https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto-rico-residency-1236038895/"
-mentions: {bad_bunny: 4} --- According to data shared by the popular dating platform, mentions of the Puerto Rican superstar in bios have increased by almost 13%. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Bad Bunny [Read full article at Billboard](https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto-rico-residency-1236038895/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {bad_bunny: 4}
+---
+
+According to data shared by the popular dating platform, mentions of the Puerto Rican superstar in bios have increased by almost 13%. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Bad Bunny [Read full article at Billboard](https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto-rico-residency-1236038895/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

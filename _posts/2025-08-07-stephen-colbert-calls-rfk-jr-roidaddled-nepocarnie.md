@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: stephen_colbert
 source: rolling_stone
 source_url: "https://www.rollingstone.com/tv-movies/tv-movie-news/stephen-colbert-rfk-jr-vaccine-funding-1235402617/"
-mentions: {stephen_colbert: 2} --- "Why on Earth is RFK Jr. so anxious to fill our streets with dead bodies?" The Late Show host inquired **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Stephen Colbert [Read full article at Rolling Stone](https://www.rollingstone.com/tv-movies/tv-movie-news/stephen-colbert-rfk-jr-vaccine-funding-1235402617/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {stephen_colbert: 2}
+---
+
+"Why on Earth is RFK Jr. so anxious to fill our streets with dead bodies?" The Late Show host inquired **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Stephen Colbert [Read full article at Rolling Stone](https://www.rollingstone.com/tv-movies/tv-movie-news/stephen-colbert-rfk-jr-vaccine-funding-1235402617/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

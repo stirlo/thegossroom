@@ -8,4 +8,7 @@ drama_score: 4
 primary_celebrity: hogan
 source: huffpost_entertainment
 source_url: "https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973"
-mentions: {hogan: 2, 'hulk_hogan: 2} --- The famous entertainer died at his Clearwater home late last month from a heart attack. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {hogan: 2, 'hulk_hogan: 2}
+---
+
+The famous entertainer died at his Clearwater home late last month from a heart attack. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/hulk-hogan-funeral_n_68936de0e4b0d3424bc47973) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

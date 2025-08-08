@@ -8,4 +8,7 @@ drama_score: 6
 primary_celebrity: gabrielle_union
 source: page_six
 source_url: "https://pagesix.com/2025/08/07/style/kendall-jenner-and-gabrielle-unions-facialist-shares-her-absolute-favorite-skincare-serum/"
-mentions: {gabrielle_union: 2, 'jenner: 2, 'kendall_jenner: 2} --- The celeb glow-maker's used it on plenty of famous faces. **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Gabrielle Union, Jenner, Kendall Jenner [Read full article at Page Six](https://pagesix.com/2025/08/07/style/kendall-jenner-and-gabrielle-unions-facialist-shares-her-absolute-favorite-skincare-serum/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {gabrielle_union: 2, 'jenner: 2, 'kendall_jenner: 2}
+---
+
+The celeb glow-maker's used it on plenty of famous faces. **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Gabrielle Union, Jenner, Kendall Jenner [Read full article at Page Six](https://pagesix.com/2025/08/07/style/kendall-jenner-and-gabrielle-unions-facialist-shares-her-absolute-favorite-skincare-serum/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

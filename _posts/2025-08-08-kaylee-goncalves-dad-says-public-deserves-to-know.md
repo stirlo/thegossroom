@@ -8,4 +8,7 @@ drama_score: 3
 primary_celebrity: bryan_kohberger
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-news/news/kaylee-goncalves-dad-demands-truth-about-idaho-murders-case/"
-mentions: {bryan_kohberger: 3} --- Steve Goncalves, the father of murdered University of Idaho student Kaylee Goncalves, insisted that the public deserves to know the details of Bryan Kohberger’s plea deal. “I think the public should demand [the truth] 100 percent. Sometimes the courtroom doesn’t realize that there is no courtroom without victims, and they need to represent them, people […] **Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Bryan Kohberger [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/kaylee-goncalves-dad-demands-truth-about-idaho-murders-case/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {bryan_kohberger: 3}
+---
+
+Steve Goncalves, the father of murdered University of Idaho student Kaylee Goncalves, insisted that the public deserves to know the details of Bryan Kohberger’s plea deal. “I think the public should demand [the truth] 100 percent. Sometimes the courtroom doesn’t realize that there is no courtroom without victims, and they need to represent them, people […] **Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Bryan Kohberger [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/kaylee-goncalves-dad-demands-truth-about-idaho-murders-case/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

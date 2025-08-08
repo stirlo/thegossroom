@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: adele
 source: elle_alt
 source_url: "https://www.elle.com/culture/celebrities/a37078257/who-is-rich-paul-adele-boyfriend-nba-agent/"
-mentions: {adele: 2} --- **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Adele [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a37078257/who-is-rich-paul-adele-boyfriend-nba-agent/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {adele: 2}
+---
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Adele [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a37078257/who-is-rich-paul-adele-boyfriend-nba-agent/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

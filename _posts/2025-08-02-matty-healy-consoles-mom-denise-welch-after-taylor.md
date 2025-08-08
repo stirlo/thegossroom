@@ -8,4 +8,7 @@ drama_score: 18
 primary_celebrity: taylor_swift
 source: us_weekly
 source_url: "https://www.usmagazine.com/celebrity-moms/news/matty-healy-consoles-mom-denise-welch-after-taylor-swift-comments/"
-mentions: {taylor_swift: 18} --- Matty Healy was spotted in the midst of an emotional conversation with his mom Denise Welch, just one week after she made headlines for slamming his ex, Taylor Swift. In a video filmed on Thursday, July 31 and published via TMZ the following day, the 1975 frontman could be seen appearing to console his mother […] **Drama Score:** 18 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Taylor Swift [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-moms/news/matty-healy-consoles-mom-denise-welch-after-taylor-swift-comments/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {taylor_swift: 18}
+---
+
+Matty Healy was spotted in the midst of an emotional conversation with his mom Denise Welch, just one week after she made headlines for slamming his ex, Taylor Swift. In a video filmed on Thursday, July 31 and published via TMZ the following day, the 1975 frontman could be seen appearing to console his mother […] **Drama Score:** 18 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Taylor Swift [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-moms/news/matty-healy-consoles-mom-denise-welch-after-taylor-swift-comments/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: jennifer_garner
 source: variety_alt
 source_url: "https://variety.com/2025/biz/news/west-duchovny-gersh-1236481949/"
-mentions: {jennifer_garner: 2} --- Actor West Duchovny has signed with Gersh for representation in all areas. Duchovny recently wrapped production on the upcoming indie feature “Pearl” opposite Scott Eastwood, and will soon be seen starring in the Peacock series “Five Star Weekend” opposite Chloë Sevigny, Jennifer Garner and Regina Hall. Duchovny can be seen in the Peter Berg Netflix […] **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jennifer Garner [Read full article at Variety Alt](https://variety.com/2025/biz/news/west-duchovny-gersh-1236481949/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {jennifer_garner: 2}
+---
+
+Actor West Duchovny has signed with Gersh for representation in all areas. Duchovny recently wrapped production on the upcoming indie feature “Pearl” opposite Scott Eastwood, and will soon be seen starring in the Peacock series “Five Star Weekend” opposite Chloë Sevigny, Jennifer Garner and Regina Hall. Duchovny can be seen in the Peter Berg Netflix […] **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jennifer Garner [Read full article at Variety Alt](https://variety.com/2025/biz/news/west-duchovny-gersh-1236481949/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

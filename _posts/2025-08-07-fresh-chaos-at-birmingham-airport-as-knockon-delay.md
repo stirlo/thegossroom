@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: super
 source: daily_mail
 source_url: "https://www.dailymail.co.uk/travel/article-14978699/Birmingham-Airport-travel-chaos-second-day-emergency-landing.html?ns_mchannel=rss&1490&campaign=1490"
-mentions: {super: 2} --- A total of 33 departures and 10 arrivals were cancelled or delayed at Birmingham Airport today after the Beechcraft B200 Super King Air's undercarriage collapsed on landing yesterday. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Super [Read full article at Daily Mail](https://www.dailymail.co.uk/travel/article-14978699/Birmingham-Airport-travel-chaos-second-day-emergency-landing.html?ns_mchannel=rss =1490 _campaign=1490) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {super: 2}
+---
+
+A total of 33 departures and 10 arrivals were cancelled or delayed at Birmingham Airport today after the Beechcraft B200 Super King Air's undercarriage collapsed on landing yesterday. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Super [Read full article at Daily Mail](https://www.dailymail.co.uk/travel/article-14978699/Birmingham-Airport-travel-chaos-second-day-emergency-landing.html?ns_mchannel=rss =1490 _campaign=1490) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

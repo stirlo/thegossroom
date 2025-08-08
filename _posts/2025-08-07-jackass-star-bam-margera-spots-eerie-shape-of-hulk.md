@@ -8,4 +8,7 @@ drama_score: 6
 primary_celebrity: hogan
 source: daily_mail
 source_url: "https://www.dailymail.co.uk/sport/wwe/article-14979717/Hulk-Hogan-funeral-Jackass-Bam-Margera-clouds.html?ns_mchannel=rss&1490&campaign=1490"
-mentions: {hogan: 4, 'hulk_hogan: 2} --- The outline of the clouds resembled Hogan posing with his right bicep curled and his left arm extended, a familiar sight to the millions of wrestling fans who followed his career. **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Daily Mail](https://www.dailymail.co.uk/sport/wwe/article-14979717/Hulk-Hogan-funeral-Jackass-Bam-Margera-clouds.html?ns_mchannel=rss =1490 _campaign=1490) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {hogan: 4, 'hulk_hogan: 2}
+---
+
+The outline of the clouds resembled Hogan posing with his right bicep curled and his left arm extended, a familiar sight to the millions of wrestling fans who followed his career. **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Daily Mail](https://www.dailymail.co.uk/sport/wwe/article-14979717/Hulk-Hogan-funeral-Jackass-Bam-Margera-clouds.html?ns_mchannel=rss =1490 _campaign=1490) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

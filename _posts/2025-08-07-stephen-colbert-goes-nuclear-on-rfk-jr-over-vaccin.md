@@ -8,4 +8,7 @@ drama_score: 6
 primary_celebrity: stephen_colbert
 source: tmz
 source_url: "https://www.tmz.com/2025/08/07/stephen-colbert-rfk-jr-mrna-vaccine-research-cuts/"
-mentions: {stephen_colbert: 6} --- Stephen Colbert is going scorched earth on Robert F. Kennedy Jr. ... after the U.S. Health and Human Services Secretary announced he's slashing $500 million in vaccine research funding this week. The 'Late Show' host didn't hold back Wednesday… **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Stephen Colbert [Read full article at Tmz](https://www.tmz.com/2025/08/07/stephen-colbert-rfk-jr-mrna-vaccine-research-cuts/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {stephen_colbert: 6}
+---
+
+Stephen Colbert is going scorched earth on Robert F. Kennedy Jr. ... after the U.S. Health and Human Services Secretary announced he's slashing $500 million in vaccine research funding this week. The 'Late Show' host didn't hold back Wednesday… **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Stephen Colbert [Read full article at Tmz](https://www.tmz.com/2025/08/07/stephen-colbert-rfk-jr-mrna-vaccine-research-cuts/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

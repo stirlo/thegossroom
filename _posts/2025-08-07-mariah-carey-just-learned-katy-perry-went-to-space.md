@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: katy_perry
 source: billboard
 source_url: "https://www.billboard.com/music/music-news/mariah-carey-learns-katy-perry-went-space-response-1236038804/"
-mentions: {katy_perry: 2} --- "This is true?" a disbelieving Carey said after learning about Blue Origin's all-female flight. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Katy Perry [Read full article at Billboard](https://www.billboard.com/music/music-news/mariah-carey-learns-katy-perry-went-space-response-1236038804/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {katy_perry: 2}
+---
+
+"This is true?" a disbelieving Carey said after learning about Blue Origin's all-female flight. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Katy Perry [Read full article at Billboard](https://www.billboard.com/music/music-news/mariah-carey-learns-katy-perry-went-space-response-1236038804/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

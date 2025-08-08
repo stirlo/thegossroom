@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: ed_sheeran
 source: vogue_alt
 source_url: "https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-little-more"
-mentions: {ed_sheeran: 2} --- “It was fun wearing all the looks,” the singer tells Vogue of his new fashion-filled video. “I found it really freeing!” **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Ed Sheeran [Read full article at Vogue Alt](https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-little-more) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {ed_sheeran: 2}
+---
+
+“It was fun wearing all the looks,” the singer tells Vogue of his new fashion-filled video. “I found it really freeing!” **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Ed Sheeran [Read full article at Vogue Alt](https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-little-more) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: of_the
 source: elle_alt
 source_url: "https://www.elle.com/culture/movies-tv/g65554064/the-hunting-wives-cast-explained/"
-mentions: {of_the: 2} --- Chances are, you’ve seen some of these stars before. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Elle Alt](https://www.elle.com/culture/movies-tv/g65554064/the-hunting-wives-cast-explained/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {of_the: 2}
+---
+
+Chances are, you’ve seen some of these stars before. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Elle Alt](https://www.elle.com/culture/movies-tv/g65554064/the-hunting-wives-cast-explained/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

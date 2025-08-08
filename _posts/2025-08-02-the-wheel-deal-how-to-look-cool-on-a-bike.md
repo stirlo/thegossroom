@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: of_the
 source: vogue_alt
 source_url: "https://www.vogue.com/article/street-style-fashion-week-biking-fashion-copenhagen"
-mentions: {of_the: 2} --- Make a bike your must-have accessory of the season. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Vogue Alt](https://www.vogue.com/article/street-style-fashion-week-biking-fashion-copenhagen) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {of_the: 2}
+---
+
+Make a bike your must-have accessory of the season. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Vogue Alt](https://www.vogue.com/article/street-style-fashion-week-biking-fashion-copenhagen) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

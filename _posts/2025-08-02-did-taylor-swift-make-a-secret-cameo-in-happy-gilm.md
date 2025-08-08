@@ -8,4 +8,7 @@ drama_score: 6
 primary_celebrity: taylor_swift
 source: elle_alt
 source_url: "https://www.elle.com/culture/movies-tv/a65575472/taylor-swift-happy-gilmore-2-secret-cameo-rumor-explained/"
-mentions: {taylor_swift: 6} --- **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Taylor Swift [Read full article at Elle Alt](https://www.elle.com/culture/movies-tv/a65575472/taylor-swift-happy-gilmore-2-secret-cameo-rumor-explained/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {taylor_swift: 6}
+---
+
+**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Taylor Swift [Read full article at Elle Alt](https://www.elle.com/culture/movies-tv/a65575472/taylor-swift-happy-gilmore-2-secret-cameo-rumor-explained/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

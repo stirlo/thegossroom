@@ -8,4 +8,7 @@ drama_score: 2
 primary_celebrity: of_the
 source: billboard
 source_url: "https://www.billboard.com/lists/dead-company-setlist-anniversary-san-francisco/"
-mentions: {of_the: 2} --- The group, led by founding Grateful Dead members Bobby Weir and Mickey Hart, kicked off its three-night run of shows honoring the iconic band on Friday. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Billboard](https://www.billboard.com/lists/dead-company-setlist-anniversary-san-francisco/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
+mentions: {of_the: 2}
+---
+
+The group, led by founding Grateful Dead members Bobby Weir and Mickey Hart, kicked off its three-night run of shows honoring the iconic band on Friday. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Billboard](https://www.billboard.com/lists/dead-company-setlist-anniversary-san-francisco/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
