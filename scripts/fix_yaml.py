@@ -1,29 +1,23 @@
 #!/usr/bin/env python3
 """
-Fix the ACTUAL formatting issues causing Jekyll errors
+Fix double quotes in mentions keys
 """
 
 import re
 from pathlib import Path
 
-def fix_real_issues(content):
-    """Fix the actual problems we can see"""
+def fix_double_quotes_in_mentions(content):
+    """Fix double quotes in mentions field keys"""
 
-    # Fix 1: Ensure proper blank line after front matter
-    # Pattern: ---\n"content or ---\nContent
-    content = re.sub(r'---\n"', r'---\n\n"', content)
-    content = re.sub(r'---\n([A-Z])', r'---\n\n\1', content)
-    content = re.sub(r'---\n([a-z])', r'---\n\n\1', content)
+    # Pattern: mentions: {'key': value, ''key': value}
+    # Fix the double quotes at start of keys
+    def fix_mentions_field(match):
+        mentions_content = match.group(1)
+        # Fix double quotes: ''key' -> 'key'
+        fixed_content = re.sub(r"''([^']+)'", r"'\1'", mentions_content)
+        return f"mentions: {{{fixed_content}}}"
 
-    # Fix 2: Fix malformed ending with space after ---
-    content = re.sub(r'--- \n', r'---\n', content)
-    content = re.sub(r'--- $', r'---', content, flags=re.MULTILINE)
-
-    # Fix 3: Add proper line breaks before Drama Score
-    content = re.sub(r'(\w) (\*\*Drama Score:\*\*)', r'\1\n\n\2', content)
-
-    # Fix 4: Ensure final --- is on its own line
-    content = re.sub(r'(\)) (---)', r'\1\n\n\2', content)
+    content = re.sub(r'mentions: \{([^}]+)\}', fix_mentions_field, content)
 
     return content
 
@@ -31,13 +25,13 @@ def main():
     posts_dir = Path('_posts')
     fixed_count = 0
 
-    print("🔧 Fixing REAL formatting issues...")
+    print("🔧 Fixing double quotes in mentions...")
 
     for post_file in posts_dir.glob('*.md'):
         with open(post_file, 'r', encoding='utf-8') as f:
             original_content = f.read()
 
-        fixed_content = fix_real_issues(original_content)
+        fixed_content = fix_double_quotes_in_mentions(original_content)
 
         if fixed_content != original_content:
             with open(post_file, 'w', encoding='utf-8') as f:
