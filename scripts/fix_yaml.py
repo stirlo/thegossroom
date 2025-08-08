@@ -1,35 +1,34 @@
 #!/usr/bin/env python3
 """
-Fix ALL post formatting issues to make them perfect
+EMERGENCY FIX: Fix broken mentions YAML syntax
 """
 
 import re
 from pathlib import Path
 
-def fix_all_post_issues(content):
-    """Fix every formatting issue we've identified"""
+def fix_mentions_syntax(content):
+    """Fix the mentions field syntax specifically"""
 
-    # Fix 1: Missing closing quotes in titles
-    content = re.sub(r'title: "([^"]*)\n', r'title: "\1"\n', content)
+    # Pattern 1: mentions: {key: value} -> mentions: {'key': value}
+    def fix_mentions_mapping(match):
+        mentions_content = match.group(1)
+        # Split by comma and fix each key-value pair
+        pairs = []
+        for pair in mentions_content.split(','):
+            pair = pair.strip()
+            if ':' in pair:
+                key, value = pair.split(':', 1)
+                key = key.strip()
+                value = value.strip()
+                # Add quotes around key if not already quoted
+                if not (key.startswith("'") or key.startswith('"')):
+                    key = f"'{key}'"
+                pairs.append(f"{key}: {value}")
 
-    # Fix 2: Extra quotes in source lines
-    content = re.sub(r'source: ([^"]+)"\n', r'source: \1\n', content)
+        return f"mentions: {{{', '.join(pairs)}}}"
 
-    # Fix 3: Ensure blank line after front matter closing ---
-    content = re.sub(r'---\n([A-Z])', r'---\n\n\1', content)
-    content = re.sub(r'---\n([a-z])', r'---\n\n\1', content)
-
-    # Fix 4: Fix broken URLs with spaces
-    content = re.sub(r'=1490 _campaign=1490', r'&ns_campaign=1490', content)
-    content = re.sub(r' =1490', r'&ito=1490', content)
-
-    # Fix 5: Add proper line breaks before Drama Score section
-    # Pattern: text runs into **Drama Score:** without break
-    content = re.sub(r'(\w+[\.\!\?]) (\*\*Drama Score:\*\*)', r'\1\n\n\2', content)
-    content = re.sub(r'(\]) (\*\*Drama Score:\*\*)', r'\1\n\n\2', content)
-
-    # Fix 6: Ensure proper spacing around Drama Score section
-    content = re.sub(r'(\*This post was automatically generated[^*]+\*)', r'\n\n\1', content)
+    # Apply the fix
+    content = re.sub(r'mentions: \{([^}]+)\}', fix_mentions_mapping, content)
 
     return content
 
@@ -37,13 +36,13 @@ def main():
     posts_dir = Path('_posts')
     fixed_count = 0
 
-    print("🔧 ULTIMATE FIX: Making ALL posts perfect...")
+    print("🚨 EMERGENCY: Fixing mentions syntax...")
 
     for post_file in posts_dir.glob('*.md'):
         with open(post_file, 'r', encoding='utf-8') as f:
             original_content = f.read()
 
-        fixed_content = fix_all_post_issues(original_content)
+        fixed_content = fix_mentions_syntax(original_content)
 
         if fixed_content != original_content:
             with open(post_file, 'w', encoding='utf-8') as f:
@@ -51,7 +50,7 @@ def main():
             print(f"✅ Fixed: {post_file.name}")
             fixed_count += 1
 
-    print(f"\n🎯 ULTIMATE FIXED {fixed_count} posts!")
+    print(f"\n🎯 EMERGENCY FIXED {fixed_count} posts!")
 
 if __name__ == "__main__":
     main()
