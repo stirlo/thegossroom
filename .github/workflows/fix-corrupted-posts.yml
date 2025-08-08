@@ -1,0 +1,53 @@
+name: fix-corrupted-posts
+
+on:
+  push:                 # run on every push
+  workflow_dispatch:    # allow manual trigger from GH UI
+
+permissions:
+  contents: write      # so the workflow can commit fixes
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Backup originals
+        run: |
+          mkdir -p _posts_backup
+          cp _posts/*.md _posts_backup/
+
+      - name: Run repair script
+        shell: python
+        run: |
+          import os, re, yaml, glob
+
+          for path in glob.glob("_posts/*.md"):
+              with open(path, encoding="utf-8") as f:
+                  raw = f.read()
+
+              # quick clean-ups
+              cleaned = re.sub(r"&\d+;", "", raw)
+              cleaned = re.sub(r'(\w+):\s{2,}', r'\1: ', cleaned)
+              cleaned = re.sub(r'([\'"])(.*?)\2(?=\s|$)', r'"\2"', cleaned)
+
+              # validate YAML
+              try:
+                  front, _, rest = cleaned.partition("---")
+                  yaml.safe_load(front)
+              except Exception as e:
+                  print(f"🚨 {path} – {e}")
+                  continue
+
+              with open(path, "w", encoding="utf-8") as f:
+                  f.write(cleaned)
+
+      - name: Commit fixes (if any)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _posts
+          git diff --cached --quiet || git commit -m "Auto-fix YAML / front-matter issues"
+          git push
