@@ -308,11 +308,11 @@ awards:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 80
-  last_temperature_update: '2025-08-08 01:28:05'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 5
+  temperature_change: 0
 aziz_ansari:
   category: comedian
   discovery_date: '2020-01-01'
@@ -401,11 +401,11 @@ beyonce:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 89
-  last_temperature_update: '2025-08-07 22:18:30'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 2
+  temperature_change: 0
 beyonce_knowles:
   category: musician
   discovery_date: '2025-08-04'
@@ -536,11 +536,11 @@ bowl:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 83
-  last_temperature_update: '2025-08-07 19:18:31'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 1
+  temperature_change: 0
 brad_pitt:
   category: actor
   discovery_date: '2025-08-04'
@@ -591,9 +591,9 @@ brielle_biermann:
   temperature_change: 0
 brooke_hogan:
   category: reality_tv
-  drama_score: 88
-  last_temperature_update: '2025-08-07 20:20:01'
-  status: hot
+  drama_score: 92
+  last_temperature_update: '2025-08-08 13:36:49'
+  status: explosive
   temperature_change: 4
 brooklyn_beckham:
   category: model
@@ -639,10 +639,10 @@ bryce_hall:
   temperature_change: 0
 caitlin_clark:
   category: athlete
-  drama_score: 78
-  last_temperature_update: '2025-08-07 17:19:34'
+  drama_score: 77
+  last_temperature_update: '2025-08-08 13:36:49'
   status: hot
-  temperature_change: 4
+  temperature_change: -1
 caitlyn_jenner:
   category: reality_tv
   discovery_date: '2020-01-01'
@@ -1428,7 +1428,7 @@ gunna:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 62
-  last_temperature_update: '2025-08-08 12:38:15'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
@@ -1531,7 +1531,7 @@ hiroshi_fujiwara:
 hogan:
   category: wrestler
   drama_score: 100
-  last_temperature_update: '2025-08-08 01:28:05'
+  last_temperature_update: '2025-08-08 13:36:49'
   status: explosive
   temperature_change: 0
 horatio_sanz:
@@ -1555,7 +1555,7 @@ howard_stern:
 hulk_hogan:
   category: wrestler
   drama_score: 100
-  last_temperature_update: '2025-08-08 01:28:05'
+  last_temperature_update: '2025-08-08 13:36:49'
   status: explosive
   temperature_change: 0
 hunter_schafer:
@@ -1738,12 +1738,12 @@ jb_smoove:
 jd_vance:
   category: politician
   discovery_date: '2025-08-04'
-  drama_score: 71
-  last_temperature_update: '2025-08-08 07:23:13'
+  drama_score: 73
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 0
+  temperature_change: 2
 jeffery_williams:
   category: musician
   discovery_date: '2025-08-04'
@@ -2077,11 +2077,11 @@ kardashian:
   category: reality_tv
   discovery_date: '2025-08-04'
   drama_score: 99
-  last_temperature_update: '2025-08-08 01:28:05'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 4
+  temperature_change: 0
 kate_gosselin:
   category: reality_tv
   drama_score: 63
@@ -2212,7 +2212,7 @@ kim_kardashian:
   category: reality_tv
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-08 01:28:05'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3031,10 +3031,10 @@ owen_wilson:
   temperature_change: 1
 ozzy_osbourne:
   category: musician
-  drama_score: 90
-  last_temperature_update: '2025-08-08 01:28:05'
+  drama_score: 91
+  last_temperature_update: '2025-08-08 13:36:49'
   status: explosive
-  temperature_change: 7
+  temperature_change: 1
 p_diddy:
   category: musician
   discovery_date: '2025-08-04'
@@ -3117,11 +3117,11 @@ pete_davidson:
   category: comedian
   discovery_date: '2021-10-01'
   drama_score: 100
-  last_temperature_update: '2025-08-07 23:18:09'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2021-11-15'
   status: explosive
-  temperature_change: 7
+  temperature_change: 0
 pewdiepie:
   category: influencer
   discovery_date: '2020-01-01'
@@ -3378,7 +3378,7 @@ saturday_night_live:
   category: show
   discovery_date: '2025-08-04'
   drama_score: 55
-  last_temperature_update: '2025-08-07 05:26:35'
+  last_temperature_update: '2025-08-08 13:36:49'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
