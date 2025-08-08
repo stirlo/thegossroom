@@ -1,125 +1,86 @@
-name: Emergency YAML Fix
-on:
-  workflow_dispatch:
+- name: Create emergency YAML fix script
+  run: |
+    cat > fix_yaml_emergency.py << 'EOF'
+    #!/usr/bin/env python3
+    """
+    Emergency YAML Fix - Fix Jekyll front matter syntax
+    """
 
-jobs:
-  fix-yaml:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    import re
+    from pathlib import Path
 
-    steps:
-      - uses: actions/checkout@v4
+    def clean_yaml_list(match_text):
+        """Clean YAML list items by removing quotes"""
+        items = [item.strip().strip('"\'') for item in match_text.split(',')]
+        return f"tags: [{', '.join(items)}]"
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
+    def clean_yaml_dict(match_text):
+        """Clean YAML dictionary by removing quotes"""
+        cleaned = match_text.replace('"', '').replace("'", '')
+        return f"mentions: {{{cleaned}}}"
 
-      - name: Create backup branch
-        run: |
-          git checkout -b backup-before-yaml-fix-$(date +%Y%m%d-%H%M%S)
-          git push origin backup-before-yaml-fix-$(date +%Y%m%d-%H%M%S)
-          git checkout main
+    def fix_yaml_syntax(content):
+        """Fix YAML syntax issues in front matter only"""
+        if not content.startswith('---\n'):
+            return content
 
-      - name: Create emergency YAML fix script
-        run: |
-          cat > fix_yaml_emergency.py << 'EOF'
-          #!/usr/bin/env python3
-          """
-          Emergency YAML Fix - Fix Jekyll front matter syntax
-          """
+        parts = content.split('---\n', 2)
+        if len(parts) < 3:
+            return content
 
-          import re
-          from pathlib import Path
+        front_matter = parts[1]
+        post_content = parts[2]
 
-          def clean_yaml_list(match_text):
-              """Clean YAML list items by removing quotes"""
-              items = [item.strip().strip('"\'') for item in match_text.split(',')]
-              return f"tags: [{', '.join(items)}]"
+        original_fm = front_matter
 
-          def clean_yaml_dict(match_text):
-              """Clean YAML dictionary by removing quotes"""
-              cleaned = match_text.replace('"', '').replace("'", '')
-              return f"mentions: {{{cleaned}}}"
+        # Fix tags
+        front_matter = re.sub(
+            r"tags: \[([^\]]+)\]",
+            lambda m: clean_yaml_list(m.group(1)),
+            front_matter
+        )
 
-          def fix_yaml_syntax(content):
-              """Fix YAML syntax issues in front matter only"""
-              if not content.startswith('---\n'):
-                  return content
+        # Fix mentions
+        front_matter = re.sub(
+            r"mentions: \{([^}]+)\}",
+            lambda m: clean_yaml_dict(m.group(1)),
+            front_matter
+        )
 
-              parts = content.split('---\n', 2)
-              if len(parts) < 3:
-                  return content
+        # Fix title quotes - simpler approach
+        front_matter = re.sub(r'title: "([^"]*)"([^"]*)"', r'title: "\1\2"', front_matter)
 
-              front_matter = parts[1]
-              post_content = parts[2]
+        if front_matter != original_fm:
+            return f"---\n{front_matter}---\n{post_content}"
 
-              original_fm = front_matter
+        return content
 
-              # Fix tags
-              front_matter = re.sub(
-                  r"tags: \[([^\]]+)\]",
-                  lambda m: clean_yaml_list(m.group(1)),
-                  front_matter
-              )
+    def main():
+        posts_dir = Path('_posts')
+        fixed_count = 0
 
-              # Fix mentions
-              front_matter = re.sub(
-                  r"mentions: \{([^}]+)\}",
-                  lambda m: clean_yaml_dict(m.group(1)),
-                  front_matter
-              )
+        print("🔧 Fixing YAML syntax in Jekyll posts...")
 
-              # Fix title quotes
-              front_matter = re.sub(r'title: "([^"]*)"([^"]*)"', r'title: "\1\2"', front_matter)
-              front_matter = re.sub(r'title: "([^"]*)'([^"]*)"', r'title: "\1\'\2"', front_matter)
+        for post_file in posts_dir.glob('*.md'):
+            with open(post_file, 'r', encoding='utf-8') as f:
+                original_content = f.read()
 
-              if front_matter != original_fm:
-                  return f"---\n{front_matter}---\n{post_content}"
+            fixed_content = fix_yaml_syntax(original_content)
 
-              return content
+            if fixed_content != original_content:
+                with open(post_file, 'w', encoding='utf-8') as f:
+                    f.write(fixed_content)
+                print(f"✅ Fixed: {post_file.name}")
+                fixed_count += 1
 
-          def main():
-              posts_dir = Path('_posts')
-              fixed_count = 0
+        print(f"\n🎯 Fixed YAML syntax in {fixed_count} posts!")
 
-              print("🔧 Fixing YAML syntax in Jekyll posts...")
+        with open('yaml_fix_summary.txt', 'w') as f:
+            f.write(f"YAML Fix Summary\n")
+            f.write(f"================\n")
+            f.write(f"Files fixed: {fixed_count}\n")
+            f.write(f"Backup branch created\n")
 
-              for post_file in posts_dir.glob('*.md'):
-                  with open(post_file, 'r', encoding='utf-8') as f:
-                      original_content = f.read()
-
-                  fixed_content = fix_yaml_syntax(original_content)
-
-                  if fixed_content != original_content:
-                      with open(post_file, 'w', encoding='utf-8') as f:
-                          f.write(fixed_content)
-                      print(f"✅ Fixed: {post_file.name}")
-                      fixed_count += 1
-
-              print(f"\n🎯 Fixed YAML syntax in {fixed_count} posts!")
-
-              with open('yaml_fix_summary.txt', 'w') as f:
-                  f.write(f"YAML Fix Summary\n")
-                  f.write(f"================\n")
-                  f.write(f"Files fixed: {fixed_count}\n")
-                  f.write(f"Backup branch created\n")
-
-          if __name__ == "__main__":
-              main()
-          EOF
-
-      - name: Run YAML fix
-        run: python fix_yaml_emergency.py
-
-      - name: Show summary
-        run: |
-          echo "📊 YAML Fix Results:"
-          cat yaml_fix_summary.txt
-
-      - name: Commit fixes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "🚨 Emergency fix: Restore proper YAML syntax in Jekyll posts"
-          file_pattern: "_posts/*.md yaml_fix_summary.txt"
+    if __name__ == "__main__":
+        main()
+    EOF
