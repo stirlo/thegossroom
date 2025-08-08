@@ -6,6 +6,21 @@ Fix YAML tags - remove quotes from array items
 import re
 from pathlib import Path
 
+def remove_quotes_from_tags(match_obj):
+    """Remove quotes from tag items"""
+    tag_content = match_obj.group(1)
+    # Remove single quotes
+    tag_content = re.sub(r"'([^']+)'", r'\1', tag_content)
+    # Remove double quotes
+    tag_content = re.sub(r'"([^"]+)"', r'\1', tag_content)
+    return f"tags: [{tag_content}]"
+
+def remove_quotes_from_mentions(match_obj):
+    """Remove quotes from mentions dictionary"""
+    mentions_content = match_obj.group(1)
+    cleaned = mentions_content.replace('"', '').replace("'", '')
+    return f"mentions: {{{cleaned}}}"
+
 def fix_yaml_tags(content):
     """Fix quoted tags in YAML front matter"""
     if not content.startswith('---\n'):
@@ -19,24 +34,17 @@ def fix_yaml_tags(content):
     post_content = parts[2]
     original_fm = front_matter
 
-    # Fix tags with single quotes
+    # Fix tags array - remove quotes from items
     front_matter = re.sub(
         r"tags: \[([^\]]+)\]",
-        lambda m: f"tags: [{re.sub(r\"'([^']+)'\", r'\\1', m.group(1))}]",
+        remove_quotes_from_tags,
         front_matter
     )
 
-    # Fix tags with double quotes  
-    front_matter = re.sub(
-        r"tags: \[([^\]]+)\]",
-        lambda m: f"tags: [{re.sub(r'\"([^\"]+)\"', r'\\1', m.group(1))}]",
-        front_matter
-    )
-
-    # Fix mentions dictionary quotes
+    # Fix mentions dictionary - remove quotes
     front_matter = re.sub(
         r"mentions: \{([^}]+)\}",
-        lambda m: f"mentions: {{{m.group(1).replace('\"', '').replace(\"'\", '')}}}",
+        remove_quotes_from_mentions,
         front_matter
     )
 
