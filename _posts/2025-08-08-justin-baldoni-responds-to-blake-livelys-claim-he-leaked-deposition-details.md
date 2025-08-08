@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Justin Baldoni Responds to Blake Lively's Claim He Leaked Deposition Details"
+title: "Justin Baldoni Responds to Blake Lively's Claim He Leaked Deposition Details""
 date: 2025-08-08 03:41:23 +0000
 categories: gossip
 tags: ['blake-lively', 'source-us_weekly', 'drama-explosive']
 drama_score: 12
 primary_celebrity: blake_lively
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/justin-baldoni-responds-to-blake-livelys-claim-he-leaked-deposition-details-excl/"
+source_url: "https://www.usmagazine.com/celebrity-news/news/justin-baldoni-responds-to-blake-livelys-claim-he-leaked-deposition-details-excl/""
 mentions: {'blake_lively': 6, 'justin_baldoni': 6}
 ---
 

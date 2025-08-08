@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Golden Bachelorette's Joan Vassos Explains Chock Chapple's Vacation Absence"
+title: "Golden Bachelorette's Joan Vassos Explains Chock Chapple's Vacation Absence""
 date: 2025-08-08 03:41:23 +0000
 categories: gossip
 tags: ['golden', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: golden
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/golden-bachelorette-joan-vassos-explains-chock-chapples-vacation-absence/"
+source_url: "https://www.usmagazine.com/celebrity-news/news/golden-bachelorette-joan-vassos-explains-chock-chapples-vacation-absence/""
 mentions: {'golden': 6}
 ---
 

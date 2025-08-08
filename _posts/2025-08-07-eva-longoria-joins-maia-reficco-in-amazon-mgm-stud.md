@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Eva Longoria Joins Maia Reficco In Amazon MGM Studios’ ‘The Last Sunrise’"
+title: "Eva Longoria Joins Maia Reficco In Amazon MGM Studios’ ‘The Last Sunrise’""
 date: 2025-08-07 17:19:25 +0000
 categories: gossip
 tags: ['golden', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: golden
 source: deadline
-source_url: "https://deadline.com/2025/08/the-last-sunrise-movie-eva-longoria-amazon-mgm-1236481210/"
+source_url: "https://deadline.com/2025/08/the-last-sunrise-movie-eva-longoria-amazon-mgm-1236481210/""
 mentions: {'golden': 2}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Eminem Opens Up About Addiction and Impact of 'Stan" Culture in New Doc"
+title: "Eminem Opens Up About Addiction and Impact of 'Stan"" Culture in New Doc""
 date: 2025-08-07 22:18:16 +0000
 categories: gossip
 tags: ['eminem', 'source-us_weekly', 'drama-explosive']
 drama_score: 12
 primary_celebrity: eminem
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/eminem-shares-addiction-and-stan-culture-struggles-in-new-doc/"
+source_url: "https://www.usmagazine.com/entertainment/news/eminem-shares-addiction-and-stan-culture-struggles-in-new-doc/""
 mentions: {'eminem': 9, 'marshall_mathers': 3}
 ---
 

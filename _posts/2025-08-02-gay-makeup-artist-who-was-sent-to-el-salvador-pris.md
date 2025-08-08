@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Gay Makeup Artist Who Was Sent To El Salvador Prison -- Despite Entering US Legally! -- Claims He Was Raped By Guards"
+title: "Gay Makeup Artist Who Was Sent To El Salvador Prison -- Despite Entering US Legally! -- Claims He Was Raped By Guards""
 date: 2025-08-02 11:14:50 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-perez_hilton', 'drama-hot']
 drama_score: 9
 primary_celebrity: trump
 source: perez_hilton
-source_url: "https://perezhilton.com/gay-makeup-artist-sent-el-salvador-prison-deportation-raped-by-guards-andry-hernandez-romero/"
+source_url: "https://perezhilton.com/gay-makeup-artist-sent-el-salvador-prison-deportation-raped-by-guards-andry-hernandez-romero/""
 mentions: {'trump': 9}
 ---
 

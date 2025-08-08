@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ed Sheeran’s New Music Video Features Over 250 Outfits—All Thrifted"
+title: "Ed Sheeran’s New Music Video Features Over 250 Outfits—All Thrifted""
 date: 2025-08-07 15:20:36 +0000
 categories: gossip
 tags: ['ed-sheeran', 'source-vogue_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: ed_sheeran
 source: vogue_alt
-source_url: "https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-little-more"
+source_url: "https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-little-more""
 mentions: {'ed_sheeran': 2}
 ---
 

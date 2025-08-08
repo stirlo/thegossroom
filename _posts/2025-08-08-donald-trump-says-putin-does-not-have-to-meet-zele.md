@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Donald Trump says Putin does not have to meet Zelensky for US-Russia summit to go ahead"
+title: "Donald Trump says Putin does not have to meet Zelensky for US-Russia summit to go ahead""
 date: 2025-08-08 01:27:53 +0000
 categories: gossip
 tags: ['donald-trump', 'source-daily_mail', 'drama-hot']
 drama_score: 8
 primary_celebrity: donald_trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14981581/Donald-Trump-says-Putin-does-not-meet-Zelensky-US-Russia-summit-ahead.html?ns_mchannel=rss&1490&campaign=1490"
+source_url: "https://www.dailymail.co.uk/news/article-14981581/Donald-Trump-says-Putin-does-not-meet-Zelensky-US-Russia-summit-ahead.html?ns_mchannel=rss&1490&campaign=1490""
 mentions: {'donald_trump': 4, 'trump': 4}
 ---
 

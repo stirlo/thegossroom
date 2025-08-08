@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Olga Tañón, Producer Eric Schilling and More to Receive Latin Recording Academy Special Awards"
+title: "Olga Tañón, Producer Eric Schilling and More to Receive Latin Recording Academy Special Awards""
 date: 2025-08-07 13:38:31 +0000
 categories: gossip
 tags: ['awards', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: awards
 source: variety_alt
-source_url: "https://variety.com/2025/music/news/olga-tanon-eric-schilling-latin-recording-academy-special-awards-1236481216/"
+source_url: "https://variety.com/2025/music/news/olga-tanon-eric-schilling-latin-recording-academy-special-awards-1236481216/""
 mentions: {'awards': 4}
 ---
 

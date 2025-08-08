@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Rosie O’Donnell Fears ‘The View’ Will Be Canceled for Not ‘Aligning’ With Trump; White House Calls Her an ‘Irrelevant Loser’: ‘Our Country Is Better Off With Rosie Living Abroad’"
+title: "Rosie O’Donnell Fears ‘The View’ Will Be Canceled for Not ‘Aligning’ With Trump; White House Calls Her an ‘Irrelevant Loser’: ‘Our Country Is Better Off With Rosie Living Abroad’""
 date: 2025-08-07 22:18:17 +0000
 categories: gossip
 tags: ['trump', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/rosie-odonnell-white-house-fight-the-view-canceled-1236481951/"
+source_url: "https://variety.com/2025/tv/news/rosie-odonnell-white-house-fight-the-view-canceled-1236481951/""
 mentions: {'trump': 2}
 ---
 

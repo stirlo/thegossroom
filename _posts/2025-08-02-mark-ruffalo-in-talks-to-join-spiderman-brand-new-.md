@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Mark Ruffalo In Talks To Join ‘Spider-Man: Brand New Day’ Reprising Incredible Hulk Role"
+title: "Mark Ruffalo In Talks To Join ‘Spider-Man: Brand New Day’ Reprising Incredible Hulk Role""
 date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['tom-holland', 'movies', 'spiderman', 'marvel', 'dating', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: tom_holland
 source: deadline
-source_url: "https://deadline.com/2025/08/mark-ruffalo-spider-man-brand-new-day-incredible-hulk-1236476885/"
+source_url: "https://deadline.com/2025/08/mark-ruffalo-spider-man-brand-new-day-incredible-hulk-1236476885/""
 mentions: {'tom_holland': 2}
 ---
 

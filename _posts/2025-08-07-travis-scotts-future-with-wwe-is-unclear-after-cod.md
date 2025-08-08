@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Travis Scott’s Future With WWE Is Unclear After Cody Rhodes Beatdown"
+title: "Travis Scott’s Future With WWE Is Unclear After Cody Rhodes Beatdown""
 date: 2025-08-07 23:17:59 +0000
 categories: gossip
 tags: ['travis-scott', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: travis_scott
 source: variety_alt
-source_url: "https://variety.com/2025/music/news/travis-scott-future-with-wwe-unclear-1236482084/"
+source_url: "https://variety.com/2025/music/news/travis-scott-future-with-wwe-unclear-1236482084/""
 mentions: {'travis_scott': 4}
 ---
 

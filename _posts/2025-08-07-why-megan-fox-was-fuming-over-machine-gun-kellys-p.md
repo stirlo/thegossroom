@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Why Megan Fox Was \"Fuming\" Over Machine Gun Kelly's Parenting Praise"
+title: "Why Megan Fox Was \"Fuming\"" Over Machine Gun Kelly's Parenting Praise""
 date: 2025-08-07 18:28:03 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: machine_gun_kelly
 source: e_news
-source_url: "https://www.eonline.com/news/1420887/megan-fox-fuming-over-mgk-parenting-praise?cmpid=rss-syndicate-genericrss-us-top_stories"
+source_url: "https://www.eonline.com/news/1420887/megan-fox-fuming-over-mgk-parenting-praise?cmpid=rss-syndicate-genericrss-us-top_stories""
 mentions: {'machine_gun_kelly': 6}
 ---
 

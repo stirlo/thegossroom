@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Sha'Carri Richardson Seen On Surveillance Video Pushing, Shoving Boyfriend At Airport"
+title: "Sha'Carri Richardson Seen On Surveillance Video Pushing, Shoving Boyfriend At Airport""
 date: 2025-08-07 23:17:57 +0000
 categories: gossip
 tags: ['carri-richardson', 'source-tmz', 'drama-explosive']
 drama_score: 12
 primary_celebrity: carri_richardson
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/shacarri-richardson-domestic-violence-incident-surveillance-video/"
+source_url: "https://www.tmz.com/2025/08/07/shacarri-richardson-domestic-violence-incident-surveillance-video/""
 mentions: {'carri_richardson': 6, 'richardson': 6}
 ---
 

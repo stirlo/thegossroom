@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Trump pleads not guilty to 34 felony counts"
+title: "Trump pleads not guilty to 34 felony counts""
 date: 2025-08-02 11:15:24 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-cnn_entertainment', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: cnn_entertainment
-source_url: "https://edition.cnn.com/webview/politics/live-news/trump-indictment-stormy-daniels-news-04-03-23/index.html"
+source_url: "https://edition.cnn.com/webview/politics/live-news/trump-indictment-stormy-daniels-news-04-03-23/index.html""
 mentions: {'trump': 2}
 ---
 

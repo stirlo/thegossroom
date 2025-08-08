@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Influencer breaks spine doing outrageous Nicki Minaj social media challenge"
+title: "Influencer breaks spine doing outrageous Nicki Minaj social media challenge""
 date: 2025-08-07 17:19:27 +0000
 categories: gossip
 tags: ['nicki-minaj', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: nicki_minaj
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/health/article-14978931/Influencer-breaks-spine-Nicki-Minaj-TikTok-challenge.html?ns_mchannel=rss&1490&campaign=1490"
+source_url: "https://www.dailymail.co.uk/health/article-14978931/Influencer-breaks-spine-Nicki-Minaj-TikTok-challenge.html?ns_mchannel=rss&1490&campaign=1490""
 mentions: {'nicki_minaj': 2}
 ---
 
