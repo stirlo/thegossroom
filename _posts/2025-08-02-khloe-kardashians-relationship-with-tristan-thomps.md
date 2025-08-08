@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Khloe Kardashian’s Relationship With Tristan Thompson’s Brother Amari"
+title: "Khloe Kardashian’s Relationship With Tristan Thompson’s Brother Amari""
 date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['kardashian', 'reality-tv', 'fashion', 'business', 'beauty', 'source-us_weekly', 'drama-explosive']
 drama_score: 21
 primary_celebrity: kardashian
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/inside-khloe-kardashians-relationship-with-tristan-thompsons-brother-amari/"
+source_url: "https://www.usmagazine.com/celebrity-news/news/inside-khloe-kardashians-relationship-with-tristan-thompsons-brother-amari/""
 mentions: {'kardashian': 18, 'khloe_kardashian': 3}
 ---
 

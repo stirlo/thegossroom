@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Selena Gomez’s ‘Lizzie McGuire’ and ‘Suite Life’ Spinoffs Got Axed at Disney Before ‘Wizards of Waverly Place’: ‘I Was Kind of at My Wits’ End’"
+title: "Selena Gomez’s ‘Lizzie McGuire’ and ‘Suite Life’ Spinoffs Got Axed at Disney Before ‘Wizards of Waverly Place’: ‘I Was Kind of at My Wits’ End’""
 date: 2025-08-07 15:20:26 +0000
 categories: gossip
 tags: ['selena-gomez', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: selena_gomez
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/selena-gomez-lizzie-mcguire-suite-life-spinoffs-axed-wizards-1236481287/"
+source_url: "https://variety.com/2025/tv/news/selena-gomez-lizzie-mcguire-suite-life-spinoffs-axed-wizards-1236481287/""
 mentions: {'selena_gomez': 4}
 ---
 

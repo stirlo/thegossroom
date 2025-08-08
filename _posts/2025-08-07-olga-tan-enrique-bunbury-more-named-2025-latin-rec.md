@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Olga Tañón, Enrique Bunbury & More Named 2025 Latin Recording Academy’s Special Awards Honorees"
+title: "Olga Tañón, Enrique Bunbury & More Named 2025 Latin Recording Academy’s Special Awards Honorees""
 date: 2025-08-07 13:38:37 +0000
 categories: gossip
 tags: ['awards', 'source-billboard', 'drama-hot']
 drama_score: 6
 primary_celebrity: awards
 source: billboard
-source_url: "https://www.billboard.com/music/awards/latin-recording-academy-2025-special-awards-honorees-1236038013/"
+source_url: "https://www.billboard.com/music/awards/latin-recording-academy-2025-special-awards-honorees-1236038013/""
 mentions: {'awards': 4, 'grammys': 2}
 ---
 

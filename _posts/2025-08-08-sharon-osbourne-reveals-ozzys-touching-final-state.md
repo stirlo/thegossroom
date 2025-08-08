@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Sharon Osbourne Reveals Ozzy's Touching Final Statement About His Fans! SO Humble!"
+title: "Sharon Osbourne Reveals Ozzy's Touching Final Statement About His Fans! SO Humble!""
 date: 2025-08-08 01:27:44 +0000
 categories: gossip
 tags: ['ozzy-osbourne', 'source-perez_hilton', 'drama-rising']
 drama_score: 3
 primary_celebrity: ozzy_osbourne
 source: perez_hilton
-source_url: "https://perezhilton.com/ozzy-osbourne-final-statement-about-fans-so-humble/"
+source_url: "https://perezhilton.com/ozzy-osbourne-final-statement-about-fans-so-humble/""
 mentions: {'ozzy_osbourne': 3}
 ---
 

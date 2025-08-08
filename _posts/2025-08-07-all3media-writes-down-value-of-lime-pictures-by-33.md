@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "All3Media Writes Down Value Of Lime Pictures By $33M After ‘Hollyoaks’ Cuts"
+title: "All3Media Writes Down Value Of Lime Pictures By $33M After ‘Hollyoaks’ Cuts""
 date: 2025-08-07 13:38:33 +0000
 categories: gossip
 tags: ['super', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: super
 source: deadline
-source_url: "https://deadline.com/2025/08/all3media-writes-down-value-lime-pictures-hollyoaks-cuts-1236479814/"
+source_url: "https://deadline.com/2025/08/all3media-writes-down-value-lime-pictures-hollyoaks-cuts-1236479814/""
 mentions: {'super': 2}
 ---
 

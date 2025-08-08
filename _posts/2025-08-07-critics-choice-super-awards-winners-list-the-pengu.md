@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Critics Choice Super Awards Winners List: ‘The Penguin,’ ‘Deadpool & Wolverine,’ ‘Sinners’ & More"
+title: "Critics Choice Super Awards Winners List: ‘The Penguin,’ ‘Deadpool & Wolverine,’ ‘Sinners’ & More""
 date: 2025-08-07 18:28:06 +0000
 categories: gossip
 tags: ['awards', 'source-deadline', 'drama-hot']
 drama_score: 8
 primary_celebrity: awards
 source: deadline
-source_url: "https://deadline.com/2025/08/2025-critics-choice-super-awards-winners-list-1236481393/"
+source_url: "https://deadline.com/2025/08/2025-critics-choice-super-awards-winners-list-1236481393/""
 mentions: {'awards': 4, 'super': 4}
 ---
 

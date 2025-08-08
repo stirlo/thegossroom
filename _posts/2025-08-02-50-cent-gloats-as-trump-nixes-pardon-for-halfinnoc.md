@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "50 Cent Gloats As Trump Nixes Pardon For “Half-Innocent” Diddy, For Now"
+title: "50 Cent Gloats As Trump Nixes Pardon For “Half-Innocent” Diddy, For Now""
 date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-deadline', 'drama-explosive']
 drama_score: 22
 primary_celebrity: trump
 source: deadline
-source_url: "https://deadline.com/2025/08/trump-no-sean-combs-pardon-diddy-50-cent-1236477155/"
+source_url: "https://deadline.com/2025/08/trump-no-sean-combs-pardon-diddy-50-cent-1236477155/""
 mentions: {'diddy': 8, 'trump': 14}
 ---
 

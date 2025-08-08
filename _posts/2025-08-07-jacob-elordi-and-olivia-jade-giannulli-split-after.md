@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jacob Elordi and Olivia Jade Giannulli SPLIT after four years together"
+title: "Jacob Elordi and Olivia Jade Giannulli SPLIT after four years together""
 date: 2025-08-07 18:28:08 +0000
 categories: gossip
 tags: ['jacob-elordi', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: jacob_elordi
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14980697/Jacob-Elordi-Olivia-Jade-Giannulli-SPLIT-four-years-together.html?ns_mchannel=rss&1490&campaign=1490"
+source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14980697/Jacob-Elordi-Olivia-Jade-Giannulli-SPLIT-four-years-together.html?ns_mchannel=rss&1490&campaign=1490""
 mentions: {'jacob_elordi': 2}
 ---
 

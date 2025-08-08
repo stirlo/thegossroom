@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "ABC Pilot Order: Rachel Bloom Stars In ‘Do You Want Kids?’ Comedy She Co-Wrote With Dan Gregor"
+title: "ABC Pilot Order: Rachel Bloom Stars In ‘Do You Want Kids?’ Comedy She Co-Wrote With Dan Gregor""
 date: 2025-08-07 21:15:33 +0000
 categories: gossip
 tags: ['rachel-bloom', 'source-deadline', 'drama-rising']
 drama_score: 4
 primary_celebrity: rachel_bloom
 source: deadline
-source_url: "https://deadline.com/2025/08/rachel-bloom-do-you-want-kids-abc-pilot-dan-gregor-levitan-1236481513/"
+source_url: "https://deadline.com/2025/08/rachel-bloom-do-you-want-kids-abc-pilot-dan-gregor-levitan-1236481513/""
 mentions: {'rachel_bloom': 4}
 ---
 

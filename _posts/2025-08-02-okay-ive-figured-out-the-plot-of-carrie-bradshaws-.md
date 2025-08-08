@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Okay, I’ve Figured Out the Plot of Carrie Bradshaw’s Novel in ‘And Just Like That’"
+title: "Okay, I’ve Figured Out the Plot of Carrie Bradshaw’s Novel in ‘And Just Like That’""
 date: 2025-08-02 10:18:00 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-vogue_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: vogue_alt
-source_url: "https://www.vogue.com/article/the-plot-of-carrie-bradshaws-novel-in-and-just-like-that-season-3"
+source_url: "https://www.vogue.com/article/the-plot-of-carrie-bradshaws-novel-in-and-just-like-that-season-3""
 mentions: {'of_the': 2}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "James Gunn to Direct Next Movie in the ‘Super-Family’ at DC Studios After ‘Superman’ Success"
+title: "James Gunn to Direct Next Movie in the ‘Super-Family’ at DC Studios After ‘Superman’ Success""
 date: 2025-08-07 12:38:44 +0000
 categories: gossip
 tags: ['super', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: super
 source: variety_alt
-source_url: "https://variety.com/2025/film/news/james-gunn-direct-superman-sequel-super-family-next-movie-1236478012/"
+source_url: "https://variety.com/2025/film/news/james-gunn-direct-superman-sequel-super-family-next-movie-1236478012/""
 mentions: {'super': 4}
 ---
 

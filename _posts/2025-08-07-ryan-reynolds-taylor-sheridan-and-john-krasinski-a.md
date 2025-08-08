@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ryan Reynolds, Taylor Sheridan and John Krasinski Among Hitmakers Paramount Skydance Needs to Keep Happy"
+title: "Ryan Reynolds, Taylor Sheridan and John Krasinski Among Hitmakers Paramount Skydance Needs to Keep Happy""
 date: 2025-08-07 21:15:31 +0000
 categories: gossip
 tags: ['ryan-reynolds', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: ryan_reynolds
 source: variety_alt
-source_url: "https://variety.com/2025/film/news/paramount-skydance-deals-ryan-reynolds-taylor-sheridan-john-krasinski-1236481681/"
+source_url: "https://variety.com/2025/film/news/paramount-skydance-deals-ryan-reynolds-taylor-sheridan-john-krasinski-1236481681/""
 mentions: {'ryan_reynolds': 2}
 ---
 

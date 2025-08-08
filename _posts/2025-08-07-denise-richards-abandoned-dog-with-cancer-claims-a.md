@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Denise Richards ABANDONED Dog With Cancer, Claims Aaron Phypers!"
+title: "Denise Richards ABANDONED Dog With Cancer, Claims Aaron Phypers!""
 date: 2025-08-07 22:18:13 +0000
 categories: gossip
 tags: ['denise-richards', 'source-perez_hilton', 'drama-hot']
 drama_score: 9
 primary_celebrity: denise_richards
 source: perez_hilton
-source_url: "https://perezhilton.com/denise-richards-abandoned-dog-with-cancer-claims-aaron-phypers/"
+source_url: "https://perezhilton.com/denise-richards-abandoned-dog-with-cancer-claims-aaron-phypers/""
 mentions: {'denise_richards': 9}
 ---
 

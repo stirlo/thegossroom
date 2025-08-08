@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ms. Rachel Reveals How She Curses in Front of Her Son"
+title: "Ms. Rachel Reveals How She Curses in Front of Her Son""
 date: 2025-08-07 22:18:16 +0000
 categories: gossip
 tags: ['kelce', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: kelce
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/ms-rachel-reveals-she-curses-in-front-of-her-son-my-new-thing-is-spelling-swears/"
+source_url: "https://www.usmagazine.com/celebrity-moms/news/ms-rachel-reveals-she-curses-in-front-of-her-son-my-new-thing-is-spelling-swears/""
 mentions: {'kelce': 3}
 ---
 

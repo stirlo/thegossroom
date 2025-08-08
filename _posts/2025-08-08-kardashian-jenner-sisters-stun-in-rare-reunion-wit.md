@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kardashian-Jenner Sisters Stun in Rare Reunion With Mom Kris Jenner"
+title: "Kardashian-Jenner Sisters Stun in Rare Reunion With Mom Kris Jenner""
 date: 2025-08-08 01:27:43 +0000
 categories: gossip
 tags: ['jenner', 'source-tmz', 'drama-explosive']
 drama_score: 30
 primary_celebrity: jenner
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/kardashian-jenner-kim-kourtney-khloe-kendall-kylie-kris/"
+source_url: "https://www.tmz.com/2025/08/07/kardashian-jenner-kim-kourtney-khloe-kendall-kylie-kris/""
 mentions: {'jenner': 12, 'kardashian': 6, 'kim_kardashian': 6, 'kris_jenner': 6}
 ---
 

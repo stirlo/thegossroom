@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Megyn Kelly’s Defense of Sydney Sweeney Proves Beyoncé Lives Rent-Free in Her Head"
+title: "Megyn Kelly’s Defense of Sydney Sweeney Proves Beyoncé Lives Rent-Free in Her Head""
 date: 2025-08-07 05:26:28 +0000
 categories: gossip
 tags: ['beyonce', 'source-huffpost_entertainment', 'drama-hot']
 drama_score: 6
 primary_celebrity: beyonce
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/megyn-kelly-beyonce-levis-ad_n_68922dd1e4b07e7958a0c959"
+source_url: "https://www.huffpost.com/entry/megyn-kelly-beyonce-levis-ad_n_68922dd1e4b07e7958a0c959""
 mentions: {'beyonce': 2, 'sydney_sweeney': 2, 'trump': 2}
 ---
 

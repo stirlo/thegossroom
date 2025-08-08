@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Diddy Wants Stage Return at Madison Square Garden After Prison Release"
+title: "Diddy Wants Stage Return at Madison Square Garden After Prison Release""
 date: 2025-08-07 15:20:25 +0000
 categories: gossip
 tags: ['diddy', 'source-us_weekly', 'drama-hot']
 drama_score: 9
 primary_celebrity: diddy
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/diddy-plans-madison-square-garden-return-after-prison-release/"
+source_url: "https://www.usmagazine.com/entertainment/news/diddy-plans-madison-square-garden-return-after-prison-release/""
 mentions: {'diddy': 9}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "A Puppy-Killing Kristi Noem and ‘Dora the Explorer’ Raids: ‘South Park’ Savages Trump Admin’s ICE Policies"
+title: "A Puppy-Killing Kristi Noem and ‘Dora the Explorer’ Raids: ‘South Park’ Savages Trump Admin’s ICE Policies""
 date: 2025-08-07 15:20:34 +0000
 categories: gossip
 tags: ['trump', 'source-rolling_stone', 'drama-rising']
 drama_score: 4
 primary_celebrity: trump
 source: rolling_stone
-source_url: "https://www.rollingstone.com/tv-movies/tv-movie-news/south-park-savages-trump-admins-ice-policies-1235399852/"
+source_url: "https://www.rollingstone.com/tv-movies/tv-movie-news/south-park-savages-trump-admins-ice-policies-1235399852/""
 mentions: {'trump': 4}
 ---
 

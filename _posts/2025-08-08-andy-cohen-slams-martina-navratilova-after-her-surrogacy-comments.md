@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Andy Cohen Slams Martina Navratilova After Her Surrogacy Comments"
+title: "Andy Cohen Slams Martina Navratilova After Her Surrogacy Comments""
 date: 2025-08-08 08:25:01 +0000
 categories: gossip
 tags: ['andy-cohen', 'source-us_weekly', 'drama-hot']
 drama_score: 9
 primary_celebrity: andy_cohen
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/andy-cohen-slams-martina-navratilova-over-surrogacy-comments/"
+source_url: "https://www.usmagazine.com/celebrity-moms/news/andy-cohen-slams-martina-navratilova-over-surrogacy-comments/""
 mentions: {'andy_cohen': 9}
 ---
 
