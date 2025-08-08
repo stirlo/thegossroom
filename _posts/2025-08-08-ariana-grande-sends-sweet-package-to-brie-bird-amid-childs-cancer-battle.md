@@ -3,12 +3,12 @@ layout: post
 title: "Ariana Grande Sends Sweet Package to Brie Bird Amid Child's Cancer Battle
 date: 2025-08-08 04:41:29 +0000
 categories: gossip
-tags: [ariana-grande, source-us_weekly, drama-explosive]
+tags: ['ariana-grande', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: ariana_grande
 source: us_weekly"
 source_url: "https://www.usmagazine.com/celebrity-news/news/ariana-grande-sends-squishmallows-to-brie-bird-amid-cancer-battle/"
-mentions: {ariana_grande: 18}
+mentions: {'ariana_grande': 18}
 ---
 
 

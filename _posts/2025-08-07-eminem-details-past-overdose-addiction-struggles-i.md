@@ -3,12 +3,12 @@ layout: post
 title: "Eminem Details Past Overdose, Addiction Struggles in New Documentary"
 date: 2025-08-07 20:19:43 +0000
 categories: gossip
-tags: [eminem, source-e_news, drama-hot]
+tags: ['eminem', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: eminem
 source: e_news
 source_url: "https://www.eonline.com/news/1420901/eminem-details-sobriety-journey-after-drug-overdose?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {eminem: 6}
+mentions: {'eminem': 6}
 ---
 
 Eminem’s ability to lose himself in his addiction prompted a major change. In his new documentary Stans, the “Mockingbird” rapper reflected on his past habit of abusing prescription... **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Eminem [Read full article at E News](https://www.eonline.com/news/1420901/eminem-details-sobriety-journey-after-drug-overdose?cmpid=rss-syndicate-genericrss-us-top_stories) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -3,12 +3,12 @@ layout: post
 title: "Pete Davidson Has ‘Never Been More Excited’ About Becoming a Father"
 date: 2025-08-07 17:19:29 +0000
 categories: gossip
-tags: [pete-davidson, source-elle_alt, drama-rising]
+tags: ['pete-davidson', 'source-elle_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: pete_davidson
 source: elle_alt
 source_url: "https://www.elle.com/culture/celebrities/a65625877/pete-davidson-becoming-a-father-interview/"
-mentions: {pete_davidson: 4}
+mentions: {'pete_davidson': 4}
 ---
 
 **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Pete Davidson [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65625877/pete-davidson-becoming-a-father-interview/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

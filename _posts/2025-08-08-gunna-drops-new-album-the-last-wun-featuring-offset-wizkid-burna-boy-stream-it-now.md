@@ -3,12 +3,12 @@ layout: post
 title: "Gunna Drops New Album ‘The Last Wun’ Featuring Offset, Wizkid & Burna Boy: Stream It Now
 date: 2025-08-08 04:41:35 +0000
 categories: gossip
-tags: [gunna, source-billboard, drama-rising]
+tags: ['gunna', 'source-billboard', 'drama-rising']
 drama_score: 2
 primary_celebrity: gunna
 source: billboard"
 source_url: "https://www.billboard.com/music/rb-hip-hop/gunna-the-last-wun-album-1236038693/"
-mentions: {gunna: 2}
+mentions: {'gunna': 2}
 ---
 
 

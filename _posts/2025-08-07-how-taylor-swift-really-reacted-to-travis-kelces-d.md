@@ -3,12 +3,12 @@ layout: post
 title: "How Taylor Swift Really Reacted To Travis Kelce's Devastating Super Bowl Loss That Night -- According To MGK!"
 date: 2025-08-07 05:26:21 +0000
 categories: gossip
-tags: [taylor-swift, source-perez_hilton, drama-explosive]
+tags: ['taylor-swift', 'source-perez_hilton', 'drama-explosive']
 drama_score: 75
 primary_celebrity: taylor_swift
 source: perez_hilton
 source_url: "https://perezhilton.com/how-taylor-swift-reacted-travis-kelce-super-bowl-loss-mgk/"
-mentions: {bowl: 12, 'kelce: 6, 'super: 12, 'super_bowl: 12, 'taylor_swift: 27, 'travis_kelce: 6}
+mentions: {'bowl': 12, ''kelce': 6, ''super': 12, ''super_bowl': 12, ''taylor_swift': 27, ''travis_kelce': 6}
 ---
 
 Taylor Swift‘s first year as a football fan she got to watch her boyfriend go to overtime and win the Super Bowl. It must have been utterly euphoric, like the end of a rom com IRL. But that was Super Bowl LVIII. Last year went differently… The Kansas City Chiefs lost BADLY to the Philadelphia Eagles. The [...] Read More... The post How Taylor Swift Really Reacted To Travis Kelce's Devastating Super Bowl Loss That Night -- According To MGK! appeared first on Perez Hilton. **Drama Score:** 75 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bowl, Kelce, Super, Super Bowl, Taylor Swift, Travis Kelce [Read full article at Perez Hilton](https://perezhilton.com/how-taylor-swift-reacted-travis-kelce-super-bowl-loss-mgk/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

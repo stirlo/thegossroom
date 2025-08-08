@@ -3,12 +3,12 @@ layout: post
 title: "Diddy’s Lead Attorney Says He Has ‘Not Spoken to the President’ About a Possible Pardon"
 date: 2025-08-07 15:20:34 +0000
 categories: gossip
-tags: [diddy, source-billboard, drama-rising]
+tags: ['diddy', 'source-billboard', 'drama-rising']
 drama_score: 2
 primary_celebrity: diddy
 source: billboard
 source_url: "https://www.billboard.com/music/music-news/diddy-lead-attorney-hasnt-spoken-trump-possible-pardon-1236038494/"
-mentions: {diddy: 2}
+mentions: {'diddy': 2}
 ---
 
 Marc Agnifilo also told CBS News that he could see his client returning to play Madison Square Garden some day. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Diddy [Read full article at Billboard](https://www.billboard.com/music/music-news/diddy-lead-attorney-hasnt-spoken-trump-possible-pardon-1236038494/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

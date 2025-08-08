@@ -3,12 +3,12 @@ layout: post
 title: "Brooklyn Beckham and Nicola Peltz brush off parents’ icy snub with loved-up walk in NYC"
 date: 2025-08-07 19:18:21 +0000
 categories: gossip
-tags: [brooklyn-beckham, source-page_six, drama-rising]
+tags: ['brooklyn-beckham', 'source-page_six', 'drama-rising']
 drama_score: 2
 primary_celebrity: brooklyn_beckham
 source: page_six
 source_url: "https://pagesix.com/2025/08/07/celebrity-news/brooklyn-beckham-and-nicola-peltz-brush-off-parents-icy-snub-with-loved-up-walk-in-nyc/"
-mentions: {brooklyn_beckham: 2}
+mentions: {'brooklyn_beckham': 2}
 ---
 
 The model and the photographer renewed their wedding vows over the weekend amid their alleged feud with the latter's famous parents. **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Brooklyn Beckham [Read full article at Page Six](https://pagesix.com/2025/08/07/celebrity-news/brooklyn-beckham-and-nicola-peltz-brush-off-parents-icy-snub-with-loved-up-walk-in-nyc/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

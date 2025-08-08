@@ -3,12 +3,12 @@ layout: post
 title: "Lil Wayne Says Reuniting With LeBron James Was a ‘Huge Full-Circle Moment’ After Meeting NBA Legend as Teen"
 date: 2025-08-07 22:18:23 +0000
 categories: gossip
-tags: [lebron-james, source-billboard, drama-hot]
+tags: ['lebron-james', 'source-billboard', 'drama-hot']
 drama_score: 6
 primary_celebrity: lebron_james
 source: billboard
 source_url: "https://www.billboard.com/music/rb-hip-hop/lil-wayne-reunion-lebron-james-1236038950/"
-mentions: {lebron_james: 2, 'lil_wayne: 2, 'weezy: 2}
+mentions: {'lebron_james': 2, ''lil_wayne': 2, ''weezy': 2}
 ---
 
 Weezy even performed at LeBron's 21st birthday party in 2005. **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Lebron James, Lil Wayne, Weezy [Read full article at Billboard](https://www.billboard.com/music/rb-hip-hop/lil-wayne-reunion-lebron-james-1236038950/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

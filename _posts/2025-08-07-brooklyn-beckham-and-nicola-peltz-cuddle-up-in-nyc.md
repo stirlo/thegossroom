@@ -3,12 +3,12 @@ layout: post
 title: "Brooklyn Beckham and Nicola Peltz cuddle up in NYC and more star snaps"
 date: 2025-08-07 18:28:07 +0000
 categories: gossip
-tags: [brooklyn-beckham, source-page_six, drama-rising]
+tags: ['brooklyn-beckham', 'source-page_six', 'drama-rising']
 drama_score: 4
 primary_celebrity: brooklyn_beckham
 source: page_six
 source_url: "https://pagesix.com/2025/08/07/photos/brooklyn-beckham-and-nicola-peltz-cuddle-up-in-nyc-and-more-star-snaps/"
-mentions: {brooklyn_beckham: 4}
+mentions: {'brooklyn_beckham': 4}
 ---
 
 Brooklyn Beckham and Nicola Peltz go for a walk, Brooke Shields gets a sweet treat and more snaps... **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Brooklyn Beckham [Read full article at Page Six](https://pagesix.com/2025/08/07/photos/brooklyn-beckham-and-nicola-peltz-cuddle-up-in-nyc-and-more-star-snaps/) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

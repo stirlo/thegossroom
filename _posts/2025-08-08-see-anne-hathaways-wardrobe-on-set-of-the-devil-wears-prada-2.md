@@ -3,12 +3,12 @@ layout: post
 title: "See Anne Hathaway’s Wardrobe on Set of ‘The Devil Wears Prada 2’
 date: 2025-08-08 04:41:29 +0000
 categories: gossip
-tags: [anne-hathaway, source-us_weekly, drama-hot]
+tags: ['anne-hathaway', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: anne_hathaway
 source: us_weekly"
 source_url: "https://www.usmagazine.com/stylish/pictures/every-outfit-anne-hathaway-wore-while-filming-the-devil-wears-prada-2/"
-mentions: {anne_hathaway: 6}
+mentions: {'anne_hathaway': 6}
 ---
 
 

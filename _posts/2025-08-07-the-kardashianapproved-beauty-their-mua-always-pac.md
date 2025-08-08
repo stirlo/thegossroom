@@ -3,12 +3,12 @@ layout: post
 title: "The Kardashian-Approved Beauty Their MUA Always Packs"
 date: 2025-08-07 05:26:22 +0000
 categories: gossip
-tags: [kim-kardashian, source-e_news, drama-explosive]
+tags: ['kim-kardashian', 'source-e_news', 'drama-explosive']
 drama_score: 39
 primary_celebrity: kim_kardashian
 source: e_news
 source_url: "https://www.eonline.com/news/1420711/kardashians-makeup-artist-reveals-the-sephora-brand-they-all-love?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {jenner: 3, 'kardashian: 12, 'khloe_kardashian: 3, 'kim_kardashian: 18, 'kris_jenner: 3}
+mentions: {'jenner': 3, ''kardashian': 12, ''khloe_kardashian': 3, ''kim_kardashian': 18, ''kris_jenner': 3}
 ---
 
 It’s no secret, Kim Kardashian, Khloe Kardashian, and Kris Jenner always look flawless. E! got a chance to chat with Ash K Holm, the L.A.-based pro makeup artist behind the Kardashian-Jenners’... **Drama Score:** 39 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Jenner, Kardashian, Khloe Kardashian, Kim Kardashian, Kris Jenner [Read full article at E News](https://www.eonline.com/news/1420711/kardashians-makeup-artist-reveals-the-sephora-brand-they-all-love?cmpid=rss-syndicate-genericrss-us-top_stories) --- *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
