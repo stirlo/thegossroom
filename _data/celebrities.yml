@@ -1024,7 +1024,7 @@ doja_cat:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 71
-  last_temperature_update: '2025-08-07 20:20:01'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
@@ -1069,7 +1069,7 @@ donald_trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-08 01:28:05'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -1177,11 +1177,11 @@ elon_musk:
   category: entrepreneur
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-08 03:41:34'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
-  temperature_change: 1
+  temperature_change: 0
 eminem:
   category: musician
   discovery_date: '2025-08-04'
@@ -1383,11 +1383,11 @@ golden:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 70
-  last_temperature_update: '2025-08-08 03:41:34'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 6
+  temperature_change: 0
 golden_globes:
   category: event
   discovery_date: '2025-08-04'
@@ -1428,11 +1428,11 @@ gunna:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 62
-  last_temperature_update: '2025-08-08 04:41:41'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 2
+  temperature_change: 0
 hailey_baldwin:
   category: model
   discovery_date: '2025-08-04'
@@ -1877,11 +1877,11 @@ jessie_j:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 56
-  last_temperature_update: '2025-08-04 05:34:56'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 4
+  temperature_change: 0
 jesus_christ:
   category: unknown
   discovery_date: '2025-08-03'
@@ -2135,10 +2135,10 @@ keegan_michael_key:
   temperature_change: 5.3
 kelce:
   category: athlete
-  drama_score: 100
-  last_temperature_update: '2025-08-08 04:41:41'
+  drama_score: 99
+  last_temperature_update: '2025-08-08 12:38:15'
   status: explosive
-  temperature_change: 0
+  temperature_change: -1
 kelly_dodd:
   category: reality_tv
   drama_score: 64
@@ -3681,7 +3681,7 @@ super:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-08 04:41:41'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -3699,7 +3699,7 @@ sydney_sweeney:
   category: actor
   discovery_date: '2021-08-15'
   drama_score: 100
-  last_temperature_update: '2025-08-07 22:18:30'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2021-10-01'
   status: explosive
@@ -3960,7 +3960,7 @@ trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-08 11:16:10'
+  last_temperature_update: '2025-08-08 12:38:15'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
