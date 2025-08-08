@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "McDonald's addict visiting ALL 13,544 restaurants in America makes stunning health admission that"l"" delight Trump"""
+title: "McDonald's addict visiting ALL 13,544 restaurants in America makes stunning health admission that"l""" delight Trump"""
 date: 2025-08-07 13:38:36 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
