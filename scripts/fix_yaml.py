@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 """
-Fix missing front matter closing tags
+RESTORE quotes to YAML tags - they were needed after all!
 """
 
-import re
 from pathlib import Path
+import re
 
-def fix_front_matter_closing(content):
-    """Fix missing --- closing tags in front matter"""
+def restore_quotes_to_tags(content):
+    """Add quotes back to unquoted tags"""
 
-    # Pattern: finds YAML that ends abruptly without proper closing
-    # Look for } followed by --- and content (missing newline and proper closing)
-    pattern = r'(mentions: \{[^}]+\}) --- ([^-])'
+    # Find tags without quotes and add them back
+    def fix_tags_line(match):
+        tags_content = match.group(1)
+        # Split by comma, strip whitespace, add quotes
+        items = [item.strip() for item in tags_content.split(',')]
+        quoted_items = [f"'{item}'" if not (item.startswith("'") or item.startswith('"')) else item for item in items]
+        return f"tags: [{', '.join(quoted_items)}]"
 
-    if re.search(pattern, content):
-        # Replace with proper closing
-        content = re.sub(pattern, r'\1\n---\n\n\2', content)
-        return content
+    # Pattern: tags: [unquoted, items, here]
+    content = re.sub(r'tags: \[([^\]]+)\]', fix_tags_line, content)
 
     return content
 
@@ -24,13 +26,13 @@ def main():
     posts_dir = Path('_posts')
     fixed_count = 0
 
-    print("🔧 Fixing front matter closing tags...")
+    print("🔧 Restoring quotes to YAML tags...")
 
     for post_file in posts_dir.glob('*.md'):
         with open(post_file, 'r', encoding='utf-8') as f:
             original_content = f.read()
 
-        fixed_content = fix_front_matter_closing(original_content)
+        fixed_content = restore_quotes_to_tags(original_content)
 
         if fixed_content != original_content:
             with open(post_file, 'w', encoding='utf-8') as f:
@@ -38,7 +40,7 @@ def main():
             print(f"✅ Fixed: {post_file.name}")
             fixed_count += 1
 
-    print(f"\n🎯 Fixed {fixed_count} posts!")
+    print(f"\n🎯 Restored quotes to {fixed_count} posts!")
 
 if __name__ == "__main__":
     main()
