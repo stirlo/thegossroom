@@ -12,6 +12,10 @@ source_url: "https://www.rollingstone.com/product-recommendations/tickets/where-
 mentions: {'doja_cat': 2}
 ---
 
-This year’s headliners include Tyler, the Creator, Hozier, and Doja Cat **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Doja Cat [Read full article at Rolling Stone](https://www.rollingstone.com/product-recommendations/tickets/where-to-buy-outside-lands-tickets-online-2025-1235397854/) --- 
+This year’s headliners include Tyler, the Creator, Hozier, and Doja Cat
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Doja Cat [Read full article at Rolling Stone](https://www.rollingstone.com/product-recommendations/tickets/where-to-buy-outside-lands-tickets-online-2025-1235397854/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -12,6 +12,8 @@ source_url: "https://www.eonline.com/news/1420914/cassie-venturas-first-instagra
 mentions: {'diddy': 3}
 ---
 
-Cassie Ventura is back on social media. The "Me & U" singer returned to Instagram Aug. 7, nearly three months after giving birth to her and husband Alex Fine's third baby, as well as testifying in... **Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Diddy [Read full article at E News](https://www.eonline.com/news/1420914/cassie-venturas-first-instagram-post-since-diddy-trial-baby-no-3?cmpid=rss-syndicate-genericrss-us-top_stories) --- 
+Cassie Ventura is back on social media. The "Me & U" singer returned to Instagram Aug. 7, nearly three months after giving birth to her and husband Alex Fine's third baby, as well as testifying in... **Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Diddy [Read full article at E News](https://www.eonline.com/news/1420914/cassie-venturas-first-instagram-post-since-diddy-trial-baby-no-3?cmpid=rss-syndicate-genericrss-us-top_stories)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

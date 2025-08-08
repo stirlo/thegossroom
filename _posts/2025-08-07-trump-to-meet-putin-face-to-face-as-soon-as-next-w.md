@@ -14,6 +14,8 @@ mentions: {'donald_trump': 2, ''trump': 4}
 
 President Donald Trump has said there is a 'good prospect' of an unprecedented three-way summit with the Russian leader and his Ukrainian counterpart Volodymyr Zelensky.
 
-**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Donald Trump, Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14977045/donald-trump-meeting-vladimir-putin-volodymyr-zelensky.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Donald Trump, Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14977045/donald-trump-meeting-vladimir-putin-volodymyr-zelensky.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

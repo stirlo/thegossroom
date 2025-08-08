@@ -12,6 +12,8 @@ source_url: "https://www.rollingstone.com/tv-movies/tv-movie-news/american-eagle
 mentions: {'of_the': 2, ''sydney_sweeney': 4}
 ---
 
-Some have criticized the campaign for dog-whistling eugenics because of the play-on-words tagline, "Sydney Sweeney Has Great Jeans/Genes" **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Of The, Sydney Sweeney [Read full article at Rolling Stone](https://www.rollingstone.com/tv-movies/tv-movie-news/american-eagle-responds-sydney-sweeney-controversy-1235398866/) --- 
+Some have criticized the campaign for dog-whistling eugenics because of the play-on-words tagline, "Sydney Sweeney Has Great Jeans/Genes" **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Of The, Sydney Sweeney [Read full article at Rolling Stone](https://www.rollingstone.com/tv-movies/tv-movie-news/american-eagle-responds-sydney-sweeney-controversy-1235398866/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

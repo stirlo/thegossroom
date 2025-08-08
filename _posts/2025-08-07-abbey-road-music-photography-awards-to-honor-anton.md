@@ -12,6 +12,10 @@ source_url: "https://www.rollingstone.com/music/music-news/abbey-road-music-phot
 mentions: {'awards': 2}
 ---
 
-The annual ceremony will take place at London's Abbey Road Studios in October **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Awards [Read full article at Rolling Stone](https://www.rollingstone.com/music/music-news/abbey-road-music-photography-awards-anton-corbijn-1235402613/) --- 
+The annual ceremony will take place at London's Abbey Road Studios in October
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Awards [Read full article at Rolling Stone](https://www.rollingstone.com/music/music-news/abbey-road-music-photography-awards-anton-corbijn-1235402613/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

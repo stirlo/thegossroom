@@ -12,6 +12,8 @@ source_url: "https://www.elle.com/culture/celebrities/a65625081/selena-gomez-ben
 mentions: {'selena_gomez': 2}
 ---
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Selena Gomez [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65625081/selena-gomez-benny-blanco-relationship-wedding-explained/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Selena Gomez [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65625081/selena-gomez-benny-blanco-relationship-wedding-explained/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

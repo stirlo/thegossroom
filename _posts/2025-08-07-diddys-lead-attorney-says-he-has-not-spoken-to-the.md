@@ -14,6 +14,8 @@ mentions: {'diddy': 2}
 
 Marc Agnifilo also told CBS News that he could see his client returning to play Madison Square Garden some day.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Diddy [Read full article at Billboard](https://www.billboard.com/music/music-news/diddy-lead-attorney-hasnt-spoken-trump-possible-pardon-1236038494/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Diddy [Read full article at Billboard](https://www.billboard.com/music/music-news/diddy-lead-attorney-hasnt-spoken-trump-possible-pardon-1236038494/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

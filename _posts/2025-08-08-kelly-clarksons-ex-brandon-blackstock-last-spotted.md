@@ -14,6 +14,8 @@ mentions: {'awards': 3}
 
 Brandon Blackstock had taken a step back from the spotlight in the years prior to his death. Blackstock, who died in August at the age of 48, was last publicly spotted at the Critics’ Choice Awards in January 2020. He walked the red carpet with then-wife Kelly Clarkson months before she filed for divorce that […]
 
-**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Awards [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/brandon-blackstocks-final-public-appearance-was-5-years-before-death/) --- 
+**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Awards [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/brandon-blackstocks-final-public-appearance-was-5-years-before-death/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

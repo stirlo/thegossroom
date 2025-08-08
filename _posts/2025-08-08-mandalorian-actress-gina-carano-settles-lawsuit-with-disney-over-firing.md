@@ -14,6 +14,8 @@ mentions: {'elon_musk': 3}
 
 Gina Carano sued for wrongful termination with the support and funding of billionaire Elon Musk.
 
-**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Elon Musk [Read full article at Bbc Entertainment](https://www.bbc.com/news/articles/c5ylqvl4p3yo?at_medium=RSS _campaign=rss) --- 
+**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Elon Musk [Read full article at Bbc Entertainment](https://www.bbc.com/news/articles/c5ylqvl4p3yo?at_medium=RSS _campaign=rss)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

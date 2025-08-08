@@ -14,6 +14,8 @@ mentions: {'blake_lively': 2, ''justin_baldoni': 2}
 
 "The majority of the content Mr. Hilton posts about Ms. Lively are disparaging," the "It Ends With Us" actress argued in court docs Page Six obtained.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Blake Lively, Justin Baldoni [Read full article at Page Six](https://pagesix.com/2025/08/06/celebrity-news/blake-lively-rips-blogger-perez-hilton-for-posting-more-than-500-disparaging-stories-about-justin-baldoni-feud/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Blake Lively, Justin Baldoni [Read full article at Page Six](https://pagesix.com/2025/08/06/celebrity-news/blake-lively-rips-blogger-perez-hilton-for-posting-more-than-500-disparaging-stories-about-justin-baldoni-feud/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

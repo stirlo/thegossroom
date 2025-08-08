@@ -14,6 +14,8 @@ mentions: {'trump': 2}
 
 Fox News has filed a motion to throw out Gavin Newsom’s $787 million defamation suit, arguing that the governor is seeking to create a “press spectacle” to advance his presidential ambitions. Newsom sued in June, alleging that Fox host Jesse Watters defamed him by claiming that Newsom lied about a phone call with President Trump. […]
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Variety Alt](https://variety.com/2025/tv/news/fox-news-gavin-newsom-dismiss-defamation-suit-1236481693/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Variety Alt](https://variety.com/2025/tv/news/fox-news-gavin-newsom-dismiss-defamation-suit-1236481693/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

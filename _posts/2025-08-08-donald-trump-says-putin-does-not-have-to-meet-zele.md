@@ -14,6 +14,8 @@ mentions: {'donald_trump': 4, ''trump': 4}
 
 Donald Trump last night dismissed the idea that a US-Russia summit will only happen if Vladimir Putin meets Ukraine's president.
 
-**Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Donald Trump, Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14981581/Donald-Trump-says-Putin-does-not-meet-Zelensky-US-Russia-summit-ahead.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Donald Trump, Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14981581/Donald-Trump-says-Putin-does-not-meet-Zelensky-US-Russia-summit-ahead.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

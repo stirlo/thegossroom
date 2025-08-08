@@ -14,6 +14,8 @@ mentions: {'eminem': 2, ''slim_shady': 2}
 
 Slim Shady's new documentary explored the rapper's intense fandom while Billboard sat surrounded by intense fandom.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Eminem, Slim Shady [Read full article at Billboard](https://www.billboard.com/lists/eminem-stans-film-premiere-best-moments-recap/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Eminem, Slim Shady [Read full article at Billboard](https://www.billboard.com/lists/eminem-stans-film-premiere-best-moments-recap/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

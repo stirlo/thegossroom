@@ -14,6 +14,8 @@ mentions: {'kardashian': 18, ''khloe_kardashian': 3}
 
 Khloé Kardashian split with Tristan Thompson in 2021, but she has remained a part of his brother Amari’s life in the years since. Amari, 19, suffers from Lennox-Gastaut syndrome, a form of epilepsy that prevents him from being able to walk and talk. Kardashian, 41, grew close to him and the rest of Tristan’s family […]
 
-**Drama Score:** 21 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Kardashian, Khloe Kardashian [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/inside-khloe-kardashians-relationship-with-tristan-thompsons-brother-amari/) --- 
+**Drama Score:** 21 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Kardashian, Khloe Kardashian [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/inside-khloe-kardashians-relationship-with-tristan-thompsons-brother-amari/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

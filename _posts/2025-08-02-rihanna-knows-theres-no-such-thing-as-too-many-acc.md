@@ -14,6 +14,8 @@ mentions: {'rihanna': 4}
 
 While Rihanna has always embraced over-the-top dressing, sometimes, there’s nothing better than a classic white button-up and jeans.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Rihanna [Read full article at Vogue Alt](https://www.vogue.com/article/rihanna-no-such-thing-as-too-many-accessories) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Rihanna [Read full article at Vogue Alt](https://www.vogue.com/article/rihanna-no-such-thing-as-too-many-accessories)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'jacob_elordi': 2}
 
 Olivia is the first person Jacob started dating after he broke things off with Cindy Crawford 's daughter Kaia Gerber in 2021.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14980697/Jacob-Elordi-Olivia-Jade-Giannulli-SPLIT-four-years-together.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14980697/Jacob-Elordi-Olivia-Jade-Giannulli-SPLIT-four-years-together.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

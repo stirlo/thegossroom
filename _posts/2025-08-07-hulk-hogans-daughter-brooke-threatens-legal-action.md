@@ -14,6 +14,8 @@ mentions: {'hogan': 4, ''hulk_hogan': 4}
 
 Hulk Hogan's daughter is coming out swinging.
 
-**Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Page Six](https://pagesix.com/2025/08/06/celebrity-news/hulk-hogans-daughter-brooke-threatens-legal-action-against-his-camp-for-spreading-lies/) --- 
+**Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Page Six](https://pagesix.com/2025/08/06/celebrity-news/hulk-hogans-daughter-brooke-threatens-legal-action-against-his-camp-for-spreading-lies/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

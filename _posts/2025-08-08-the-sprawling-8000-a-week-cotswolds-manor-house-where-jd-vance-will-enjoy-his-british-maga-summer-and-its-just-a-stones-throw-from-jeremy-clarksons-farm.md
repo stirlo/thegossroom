@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "The sprawling £8,000-a-week Cotswolds manor house where JD Vance will enjoy his 'British MAGA summer'... and it's just a stone's throw from Jeremy Clarkson's farm"
 date: 2025-08-08 07:23:05 +0000

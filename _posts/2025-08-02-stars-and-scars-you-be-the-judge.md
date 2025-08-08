@@ -12,6 +12,8 @@ source_url: "https://www.tmz.com/2025/08/02/polls-you-be-the-judge/"
 mentions: {'trump': 9}
 ---
 
-Donald Trump's hearing a lot of "pardon me" these days, and Michelle Obama sees striking similarities between ESPN and 'Real Housewives.' So we gotta ask ... **Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Trump [Read full article at Tmz](https://www.tmz.com/2025/08/02/polls-you-be-the-judge/) --- 
+Donald Trump's hearing a lot of "pardon me" these days, and Michelle Obama sees striking similarities between ESPN and 'Real Housewives.' So we gotta ask ... **Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Trump [Read full article at Tmz](https://www.tmz.com/2025/08/02/polls-you-be-the-judge/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

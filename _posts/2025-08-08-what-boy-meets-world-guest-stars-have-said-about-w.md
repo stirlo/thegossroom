@@ -14,6 +14,8 @@ mentions: {'adam_scott': 3}
 
 Boy Meets World had several prominent guest stars throughout the years including Shaun Weiss, Adam Scott, Linda Cardellini and more. Scott, who has since gone on to star in several projects including the critically acclaimed Severance, starred in a four-episode arc as Griff Hawkins on the show in season 2. While on the Boy Meets […]
 
-**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Adam Scott [Read full article at Us Weekly](https://www.usmagazine.com/entertainment/news/what-boy-meets-world-guest-stars-have-said-about-working-on-the-show/) --- 
+**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Adam Scott [Read full article at Us Weekly](https://www.usmagazine.com/entertainment/news/what-boy-meets-world-guest-stars-have-said-about-working-on-the-show/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

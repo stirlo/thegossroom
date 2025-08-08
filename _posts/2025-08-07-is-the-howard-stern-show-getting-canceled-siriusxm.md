@@ -14,6 +14,8 @@ mentions: {'howard_stern': 9}
 
 Howard Stern may reportedly be off the airwaves after the alleged cancellation of the beloved The Howard Stern Show. Multiple outlets reported on Wednesday, August 6, that Stern’s show was canceled after making his debut on Sirius Satellite Radio in 2006. Stern, who began his radio host career in the 1980s, was inducted into the […]
 
-**Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Howard Stern [Read full article at Us Weekly](https://www.usmagazine.com/entertainment/news/is-the-howard-stern-show-getting-canceled-siriusxm-rumors-explained/) --- 
+**Drama Score:** 9 | **Level:** HOT **Celebrities Mentioned:** Howard Stern [Read full article at Us Weekly](https://www.usmagazine.com/entertainment/news/is-the-howard-stern-show-getting-canceled-siriusxm-rumors-explained/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'ed_kelce': 4, ''kelce': 8, ''taylor_swift': 6, ''travis_kelce': 2}
 
 Jason and Kylie Kelce appeared somber at the funeral of Ed Kelce's girlfriend, Maureen Maguire. Here's why Taylor Swift and Travis Kelce couldn't attend.
 
-**Drama Score:** 20 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Ed Kelce, Kelce, Taylor Swift, Travis Kelce [Read full article at Page Six](https://pagesix.com/2025/08/07/celebrity-news/ed-kelces-girlfriend-maureen-maguire-laid-to-rest-in-funeral/) --- 
+**Drama Score:** 20 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Ed Kelce, Kelce, Taylor Swift, Travis Kelce [Read full article at Page Six](https://pagesix.com/2025/08/07/celebrity-news/ed-kelces-girlfriend-maureen-maguire-laid-to-rest-in-funeral/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

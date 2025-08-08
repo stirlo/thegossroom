@@ -14,6 +14,8 @@ mentions: {'trump': 2}
 
 Andrew Lownie has given an extraordinary first broadcast interview about his book : 'Entitled, the Rise and Fall of the House of York' to the Daily Mail's unmissable Palace Confidential show.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/royals/article-14979493/Prince-Andrew-biography-Trump-Epstein-assassination-plot-Palace-Confidential.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/royals/article-14979493/Prince-Andrew-biography-Trump-Epstein-assassination-plot-Palace-Confidential.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

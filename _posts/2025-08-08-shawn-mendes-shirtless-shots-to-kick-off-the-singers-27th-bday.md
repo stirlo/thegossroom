@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Shawn Mendes' Shirtless Shots To Kick Off The Singer's 27th Bday!"
 date: 2025-08-08 07:22:58 +0000

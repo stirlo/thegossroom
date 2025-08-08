@@ -12,6 +12,10 @@ source_url: "https://www.rollingstone.com/politics/politics-news/fema-employees-
 mentions: {'trump': 2}
 ---
 
-Some FEMA employees are being forcibly reassigned to help carry out Trump's brutal immigration crackdown **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Rolling Stone](https://www.rollingstone.com/politics/politics-news/fema-employees-reassigned-ice-deportation-1235402269/) --- 
+Some FEMA employees are being forcibly reassigned to help carry out Trump's brutal immigration crackdown
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Rolling Stone](https://www.rollingstone.com/politics/politics-news/fema-employees-reassigned-ice-deportation-1235402269/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

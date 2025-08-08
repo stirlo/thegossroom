@@ -14,6 +14,8 @@ mentions: {'of_the': 1}
 
 The 2025 trade deadline has passed. Here's who hit it out of the park -- and who swung and missed.
 
-**Drama Score:** 1 | **Level:** MILD **Celebrities Mentioned:** Of The [Read full article at Espn](https://www.espn.com/mlb/story/_/id/45860575/mlb-trade-deadline-2025-reaction-biggest-winners-losers) --- 
+**Drama Score:** 1 | **Level:** MILD **Celebrities Mentioned:** Of The [Read full article at Espn](https://www.espn.com/mlb/story/_/id/45860575/mlb-trade-deadline-2025-reaction-biggest-winners-losers)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

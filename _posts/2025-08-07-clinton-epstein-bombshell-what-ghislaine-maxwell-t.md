@@ -14,6 +14,8 @@ mentions: {'ghislaine_maxwell': 4, ''trump': 2}
 
 Ghislaine Maxwell was grilled about former President Bill Clinton and his family during her two-day interrogation by the Department of Justice last month, a source tells the Daily Mail.
 
-**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Ghislaine Maxwell, Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14977627/Clinton-Epstein-DOJ-Trump-Ghislaine-Maxwell.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Ghislaine Maxwell, Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14977627/Clinton-Epstein-DOJ-Trump-Ghislaine-Maxwell.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

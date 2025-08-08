@@ -14,6 +14,8 @@ mentions: {'bella_hadid': 2, ''bieber': 4, ''jenner': 2, ''kendall_jenner': 2, '
 
 Kendall Jenner and Bella Hadid are also fans of the $59 cashmere-blend staple.
 
-**Drama Score:** 12 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bella Hadid, Bieber, Jenner, Kendall Jenner, Of The [Read full article at Elle Alt](https://www.elle.com/fashion/celebrity-style/a65554447/hailey-bieber-intimissimi-boat-neck-ultralight-top/) --- 
+**Drama Score:** 12 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bella Hadid, Bieber, Jenner, Kendall Jenner, Of The [Read full article at Elle Alt](https://www.elle.com/fashion/celebrity-style/a65554447/hailey-bieber-intimissimi-boat-neck-ultralight-top/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

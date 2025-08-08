@@ -14,6 +14,8 @@ mentions: {'jacob_elordi': 2}
 
 The "Euphoria" star and influencer first began dating in 2021.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Page Six](https://pagesix.com/2025/08/07/celebrity-news/jacob-elordi-and-olivia-jade-giannulli-reportedly-break-up-after-four-year-on-again-off-again-romance/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jacob Elordi [Read full article at Page Six](https://pagesix.com/2025/08/07/celebrity-news/jacob-elordi-and-olivia-jade-giannulli-reportedly-break-up-after-four-year-on-again-off-again-romance/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -12,6 +12,8 @@ source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14978739/Rod-Stewart-
 mentions: {'ozzy_osbourne': 4, ''rod_stewart': 4}
 ---
 
-Rod Stewart's controversial AI tribute of Ozzy Osbourne posing with late stars has sparked backlash from fans who claim the rocker's performance was a 'new low'. **Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Ozzy Osbourne, Rod Stewart [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14978739/Rod-Stewart-AI-tribute-Ozzy-Osbourne-disgusting-backlash.html?ns_mchannel=rss &ns_campaign=1490) --- 
+Rod Stewart's controversial AI tribute of Ozzy Osbourne posing with late stars has sparked backlash from fans who claim the rocker's performance was a 'new low'. **Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Ozzy Osbourne, Rod Stewart [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14978739/Rod-Stewart-AI-tribute-Ozzy-Osbourne-disgusting-backlash.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'brad_pitt': 2}
 
 The actor's family confirmed Wednesday that Jane, a retired school counselor, had died at the age of 84.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Brad Pitt [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14977895/Brad-Pitt-shows-love-mother-Jane-Etta-clip-death.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Brad Pitt [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14977895/Brad-Pitt-shows-love-mother-Jane-Etta-clip-death.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

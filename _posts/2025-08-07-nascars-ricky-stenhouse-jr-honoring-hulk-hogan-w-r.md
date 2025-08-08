@@ -12,6 +12,8 @@ source_url: "https://www.tmz.com/2025/08/07/nascar-ricky-stenhouse-jr-honoring-h
 mentions: {'hogan': 6, ''hulk_hogan': 6}
 ---
 
-Hulk Hogan's gone, but his presence will still be felt at the big NASCAR race this weekend ... as Ricky Stenhouse Jr. is planning to have several tributes to the WWE legend etched onto his ride. TMZ Sports has learned ... the driving star and his… **Drama Score:** 12 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Tmz](https://www.tmz.com/2025/08/07/nascar-ricky-stenhouse-jr-honoring-hulk-hogan-decal-paint-job/) --- 
+Hulk Hogan's gone, but his presence will still be felt at the big NASCAR race this weekend ... as Ricky Stenhouse Jr. is planning to have several tributes to the WWE legend etched onto his ride. TMZ Sports has learned ... the driving star and his… **Drama Score:** 12 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Hogan, Hulk Hogan [Read full article at Tmz](https://www.tmz.com/2025/08/07/nascar-ricky-stenhouse-jr-honoring-hulk-hogan-decal-paint-job/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

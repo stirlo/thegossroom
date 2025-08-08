@@ -12,6 +12,8 @@ source_url: "https://cnn.it/411KYN7"
 mentions: {'trump': 2}
 ---
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Cnn Entertainment](https://cnn.it/411KYN7) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Cnn Entertainment](https://cnn.it/411KYN7)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Get Halsey's Look with Her About Face Makeup Line"
 date: 2025-08-08 07:22:58 +0000

@@ -14,6 +14,8 @@ mentions: {'nicki_minaj': 2}
 
 Oops, she needs to do it again.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Nicki Minaj [Read full article at Billboard](https://www.billboard.com/music/rb-hip-hop/nicki-minaj-do-over-stiletto-challenge-wardrobe-malfunction-1236038431/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Nicki Minaj [Read full article at Billboard](https://www.billboard.com/music/rb-hip-hop/nicki-minaj-do-over-stiletto-challenge-wardrobe-malfunction-1236038431/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

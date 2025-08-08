@@ -14,6 +14,8 @@ mentions: {'jake_paul': 2}
 
 The suit was brought by Ty Fyffe, who produced the song "Murdergram" for Jay-Z's 1998 film Streets Is Watching.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jake Paul [Read full article at Billboard](https://www.billboard.com/pro/mike-tyson-sued-jay-z-dmx-ja-rule-song-jake-paul-fight/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Jake Paul [Read full article at Billboard](https://www.billboard.com/pro/mike-tyson-sued-jay-z-dmx-ja-rule-song-jake-paul-fight/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

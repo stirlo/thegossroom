@@ -12,6 +12,8 @@ source_url: "https://www.eonline.com/news/1420871/katy-perry-daughter-daisy-sing
 mentions: {'katy_perry': 6}
 ---
 
-Katy Perry may have a little artist on her hands. As the “Roar” singer continues the North American leg of her Lifetimes Tour, her 4-year-old daughter Daisy Dove Bloom, whom she shares with ex... **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Katy Perry [Read full article at E News](https://www.eonline.com/news/1420871/katy-perry-daughter-daisy-singing-video?cmpid=rss-syndicate-genericrss-us-top_stories) --- 
+Katy Perry may have a little artist on her hands. As the “Roar” singer continues the North American leg of her Lifetimes Tour, her 4-year-old daughter Daisy Dove Bloom, whom she shares with ex... **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Katy Perry [Read full article at E News](https://www.eonline.com/news/1420871/katy-perry-daughter-daisy-singing-video?cmpid=rss-syndicate-genericrss-us-top_stories)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

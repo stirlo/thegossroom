@@ -12,6 +12,8 @@ source_url: "https://www.dailymail.co.uk/news/royals/article-14978545/Prince-Har
 mentions: {'duke_of_sussex': 2, ''prince_harry': 2}
 ---
 
-The Duke of Sussex is said to have been left 'devastated' by the boardroom battle that saw him leave the organisation after 19 years, which he fears will now go 'down in flames'. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Duke Of Sussex, Prince Harry [Read full article at Daily Mail](https://www.dailymail.co.uk/news/royals/article-14978545/Prince-Harry-Sentebale-charity-boss-Princess-Diana-memory.html?ns_mchannel=rss &ns_campaign=1490) --- 
+The Duke of Sussex is said to have been left 'devastated' by the boardroom battle that saw him leave the organisation after 19 years, which he fears will now go 'down in flames'. **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Duke Of Sussex, Prince Harry [Read full article at Daily Mail](https://www.dailymail.co.uk/news/royals/article-14978545/Prince-Harry-Sentebale-charity-boss-Princess-Diana-memory.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'of_the': 4}
 
 Shop them all now.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Elle Alt](https://www.elle.com/fashion/shopping/g44592109/best-designer-bags/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Elle Alt](https://www.elle.com/fashion/shopping/g44592109/best-designer-bags/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

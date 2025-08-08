@@ -12,6 +12,8 @@ source_url: "https://www.elle.com/culture/celebrities/a65625877/pete-davidson-be
 mentions: {'pete_davidson': 4}
 ---
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Pete Davidson [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65625877/pete-davidson-becoming-a-father-interview/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Pete Davidson [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65625877/pete-davidson-becoming-a-father-interview/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -12,6 +12,8 @@ source_url: "https://pagesix.com/2025/08/07/photos/brooklyn-beckham-and-nicola-p
 mentions: {'brooklyn_beckham': 4}
 ---
 
-Brooklyn Beckham and Nicola Peltz go for a walk, Brooke Shields gets a sweet treat and more snaps... **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Brooklyn Beckham [Read full article at Page Six](https://pagesix.com/2025/08/07/photos/brooklyn-beckham-and-nicola-peltz-cuddle-up-in-nyc-and-more-star-snaps/) --- 
+Brooklyn Beckham and Nicola Peltz go for a walk, Brooke Shields gets a sweet treat and more snaps... **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Brooklyn Beckham [Read full article at Page Six](https://pagesix.com/2025/08/07/photos/brooklyn-beckham-and-nicola-peltz-cuddle-up-in-nyc-and-more-star-snaps/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

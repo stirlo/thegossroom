@@ -14,6 +14,8 @@ mentions: {'zendaya': 2}
 
 The multi-hyphenate star just co-designed her first shoe with On.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Zendaya [Read full article at Elle Alt](https://www.elle.com/fashion/shopping/a65615784/zendaya-on-sneaker-collab/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Zendaya [Read full article at Elle Alt](https://www.elle.com/fashion/shopping/a65615784/zendaya-on-sneaker-collab/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

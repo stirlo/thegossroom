@@ -14,6 +14,8 @@ mentions: {'donald_trump': 2, ''trump': 2}
 
 The president's latest plan for the White House received "The Tonight Show" treatment.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Donald Trump, Trump [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/jimmy-fallon-donald-trump-focus-group_n_6891d891e4b0eacd23de867a) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Donald Trump, Trump [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/jimmy-fallon-donald-trump-focus-group_n_6891d891e4b0eacd23de867a)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

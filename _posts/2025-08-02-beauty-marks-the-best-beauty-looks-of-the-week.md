@@ -14,6 +14,8 @@ mentions: {'dua_lipa': 2, ''of_the': 2}
 
 From Jodie Turner-Smith’s sleek eyeliner to Dua Lipa’s favorite nail artist’s French mani with a twist—celebrity beauty enjoyed fun, feminine details this week.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Dua Lipa, Of The [Read full article at Vogue Alt](https://www.vogue.com/slideshow/best-beauty-looks-of-the-week-august-3) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Dua Lipa, Of The [Read full article at Vogue Alt](https://www.vogue.com/slideshow/best-beauty-looks-of-the-week-august-3)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

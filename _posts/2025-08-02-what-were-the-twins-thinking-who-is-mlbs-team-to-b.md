@@ -14,6 +14,8 @@ mentions: {'of_the': 1}
 
 Not sure what to make of a wild conclusion to trade season? We've got it all covered.
 
-**Drama Score:** 1 | **Level:** MILD **Celebrities Mentioned:** Of The [Read full article at Espn](https://www.espn.com/mlb/story/_/id/45860594/2025-mlb-trade-deadline-real-not-twins-padres-mets-phillies-yankees-cubs-dodgers) --- 
+**Drama Score:** 1 | **Level:** MILD **Celebrities Mentioned:** Of The [Read full article at Espn](https://www.espn.com/mlb/story/_/id/45860594/2025-mlb-trade-deadline-real-not-twins-padres-mets-phillies-yankees-cubs-dodgers)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

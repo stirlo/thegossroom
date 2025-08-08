@@ -12,6 +12,8 @@ source_url: "https://www.eonline.com/news/1420855/kris-jenners-six-toes-in-photo
 mentions: {'jenner': 6, ''kris_jenner': 6}
 ---
 
-Kris Jenner has accidentally stepped into a new internet debacle. After the Kardashians star shared a photo of herself in open-toed shoes to Instagram, eagle-eyed fans raised questions about what... **Drama Score:** 12 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Jenner, Kris Jenner [Read full article at E News](https://www.eonline.com/news/1420855/kris-jenners-six-toes-in-photo-sparks-speculation?cmpid=rss-syndicate-genericrss-us-top_stories) --- 
+Kris Jenner has accidentally stepped into a new internet debacle. After the Kardashians star shared a photo of herself in open-toed shoes to Instagram, eagle-eyed fans raised questions about what... **Drama Score:** 12 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Jenner, Kris Jenner [Read full article at E News](https://www.eonline.com/news/1420855/kris-jenners-six-toes-in-photo-sparks-speculation?cmpid=rss-syndicate-genericrss-us-top_stories)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

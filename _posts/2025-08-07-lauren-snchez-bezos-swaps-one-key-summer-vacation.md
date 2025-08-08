@@ -14,6 +14,8 @@ mentions: {'super': 2}
 
 Lauren Sánchez Bezos and Jeff Bezos are enjoying Ibiza with Vittoria Ceretti and Leonardo DiCaprio—this time, leaving sky-high stilettos on the super yacht.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Super [Read full article at Vogue Alt](https://www.vogue.com/article/lauren-sanchez-bezos-ibiza-date-night-style) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Super [Read full article at Vogue Alt](https://www.vogue.com/article/lauren-sanchez-bezos-ibiza-date-night-style)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

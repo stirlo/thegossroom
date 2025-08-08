@@ -12,6 +12,10 @@ source_url: "https://www.rollingstone.com/music/music-country/jeannie-seely-coun
 mentions: {'jeannie_seely': 2, ''of_the': 2}
 ---
 
-With songs like "Don't Touch Me" and an emphasis on female empowerment, the Grand Ole Opry member was a progressive voice in the Nashville of the Sixties and Seventies **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Jeannie Seely, Of The [Read full article at Rolling Stone](https://www.rollingstone.com/music/music-country/jeannie-seely-country-singer-dead-obituary-1235397362/) --- 
+With songs like "Don't Touch Me" and an emphasis on female empowerment, the Grand Ole Opry member was a progressive voice in the Nashville of the Sixties and Seventies
+
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Jeannie Seely, Of The [Read full article at Rolling Stone](https://www.rollingstone.com/music/music-country/jeannie-seely-country-singer-dead-obituary-1235397362/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

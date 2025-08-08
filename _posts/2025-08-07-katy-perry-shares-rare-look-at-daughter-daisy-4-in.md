@@ -14,6 +14,8 @@ mentions: {'katy_perry': 2}
 
 "we continue to be on tour," the singer captioned Wednesday's Instagram upload, which featured multiple glimpses of her and ex Orlando Bloom's child.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Katy Perry [Read full article at Page Six](https://pagesix.com/2025/08/07/parents/katy-perry-shares-rare-look-at-daughter-daisy-4-in-behind-the-scenes-tour-snaps/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Katy Perry [Read full article at Page Six](https://pagesix.com/2025/08/07/parents/katy-perry-shares-rare-look-at-daughter-daisy-4-in-behind-the-scenes-tour-snaps/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

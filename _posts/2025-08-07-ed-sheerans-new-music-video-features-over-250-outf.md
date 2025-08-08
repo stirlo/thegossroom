@@ -12,6 +12,8 @@ source_url: "https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-litt
 mentions: {'ed_sheeran': 2}
 ---
 
-“It was fun wearing all the looks,” the singer tells Vogue of his new fashion-filled video. “I found it really freeing!” **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Ed Sheeran [Read full article at Vogue Alt](https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-little-more) --- 
+“It was fun wearing all the looks,” the singer tells Vogue of his new fashion-filled video. “I found it really freeing!” **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Ed Sheeran [Read full article at Vogue Alt](https://www.vogue.com/article/ed-sheeran-music-video-fashion-a-little-more)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

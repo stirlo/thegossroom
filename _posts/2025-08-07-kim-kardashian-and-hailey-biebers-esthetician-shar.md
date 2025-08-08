@@ -14,6 +14,8 @@ mentions: {'bieber': 2, ''hailey_bieber': 2, ''justin_bieber': 2, ''kardashian':
 
 Joanna Czech swears by this less-is-more routine.
 
-**Drama Score:** 14 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bieber, Hailey Bieber, Justin Bieber, Kardashian, Kim Kardashian [Read full article at Elle Alt](https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/) --- 
+**Drama Score:** 14 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Bieber, Hailey Bieber, Justin Bieber, Kardashian, Kim Kardashian [Read full article at Elle Alt](https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

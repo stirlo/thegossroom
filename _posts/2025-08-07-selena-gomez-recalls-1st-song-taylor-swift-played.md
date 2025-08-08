@@ -14,6 +14,8 @@ mentions: {'selena_gomez': 6, ''taylor_swift': 24}
 
 Selena Gomez will never forget her first secret session with Taylor Swift (IYKYK). Gomez, 33, opened up about the early days of her friendship with Swift, 35, during the Thursday, August 7, episode of the “Therapuss” podcast with host Jake Shane. Gomez said that finding a friend in Swift was the “best thing” that came […]
 
-**Drama Score:** 30 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Selena Gomez, Taylor Swift [Read full article at Us Weekly](https://www.usmagazine.com/entertainment/news/selena-gomez-recalls-hearing-taylor-swifts-love-story-pre-release/) --- 
+**Drama Score:** 30 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Selena Gomez, Taylor Swift [Read full article at Us Weekly](https://www.usmagazine.com/entertainment/news/selena-gomez-recalls-hearing-taylor-swifts-love-story-pre-release/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

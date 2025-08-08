@@ -12,6 +12,10 @@ source_url: "https://www.rollingstone.com/politics/politics-features/childrens-h
 mentions: {'trump': 4}
 ---
 
-Ayman Soliman is locally renowned for helping the families of dying kids. Now, friends say he’s been "tortured" in isolation as the Trump administration tries to deport him **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Rolling Stone](https://www.rollingstone.com/politics/politics-features/childrens-hosptial-chaplain-isolation-ice-deport-1235403224/) --- 
+Ayman Soliman is locally renowned for helping the families of dying kids. Now, friends say he’s been "tortured" in isolation as the Trump administration tries to deport him
+
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Rolling Stone](https://www.rollingstone.com/politics/politics-features/childrens-hosptial-chaplain-isolation-ice-deport-1235403224/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'prince_harry': 4}
 
 Prince Harry could face further action over claims of bullying and misogyny from the leaders of the African charity he set up.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Prince Harry [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14977771/Prince-Harry-face-action-claims-bullying-misogyny-leaders-African-charity-set-up.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Prince Harry [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14977771/Prince-Harry-face-action-claims-bullying-misogyny-leaders-African-charity-set-up.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

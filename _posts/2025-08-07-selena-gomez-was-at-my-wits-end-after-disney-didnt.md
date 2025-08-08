@@ -14,6 +14,8 @@ mentions: {'golden': 2, ''selena_gomez': 4}
 
 Selena Gomez is returning to Waverly Place for another season on Sept. 12, nearly 20 years after her Disney Channel journey began. The 8x Golden Globe nominee, who stars as Alex Russo on the Disney Channel‘s Wizards of Waverly Place (2007-’12) and the current reboot Wizards Beyond Waverly Place, recently recalled the two pilots of […]
 
-**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Golden, Selena Gomez [Read full article at Deadline](https://deadline.com/2025/08/selena-gomez-disney-lizzie-mcguire-suite-life-spinoff-pilots-1236481835/) --- 
+**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Golden, Selena Gomez [Read full article at Deadline](https://deadline.com/2025/08/selena-gomez-disney-lizzie-mcguire-suite-life-spinoff-pilots-1236481835/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

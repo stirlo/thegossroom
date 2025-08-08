@@ -14,6 +14,8 @@ mentions: {'of_the': 3}
 
 Jessica Alba and Cash Warren’s time together on the Fantastic Four set was just the start of their long-term romance. The pair started dating on the set of the 2004 film, in which Alba starred as Susan Storm and Warren was hired as a production assistant. Four years later, they tied the knot in a […]
 
-**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/pictures/jessica-alba-and-cash-warren-a-timeline-of-their-relationship/) --- 
+**Drama Score:** 3 | **Level:** RISING **Celebrities Mentioned:** Of The [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/pictures/jessica-alba-and-cash-warren-a-timeline-of-their-relationship/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

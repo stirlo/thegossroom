@@ -14,6 +14,8 @@ mentions: {'donald_trump': 2, ''jd_vance': 4, ''trump': 4}
 
 Vice President JD Vance gave a short response to South Park, as the show skewered him and other Trump administration figures in the second episode of the latest season. “Well, I’ve finally made it,” Vance wrote on X, linking to the show’s post featuring a mini version of him standing next to Donald Trump, ala […]
 
-**Drama Score:** 10 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Donald Trump, Jd Vance, Trump [Read full article at Deadline](https://deadline.com/2025/08/jd-vance-south-park-debut-1236481177/) --- 
+**Drama Score:** 10 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Donald Trump, Jd Vance, Trump [Read full article at Deadline](https://deadline.com/2025/08/jd-vance-south-park-debut-1236481177/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

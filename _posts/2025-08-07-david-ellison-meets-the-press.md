@@ -14,6 +14,8 @@ mentions: {'trump': 2}
 
 "We're ready to move past the noise," the CEO said, despite the lobbed questions geared toward Trump, '60 Minutes' independence, artificial intelligence and FCC maneuvering.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/business/business-news/david-ellison-paramount-skydance-1236339514/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/business/business-news/david-ellison-paramount-skydance-1236339514/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

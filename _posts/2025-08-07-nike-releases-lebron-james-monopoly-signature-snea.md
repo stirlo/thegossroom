@@ -14,6 +14,8 @@ mentions: {'lebron_james': 6}
 
 As LeBron James is preparing for another of basketball season in Los Angeles, he likes a relaxing nights with the family at home between workouts. Nike released limited-edition LeBron James “Monopoly”-branded sneakers (his favorite board game). With starting prices of $69 with promo code “SPORT” at checkout (reg. $170) , these Nike LeBron signature shoes […]
 
-**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Lebron James [Read full article at Variety Alt](https://variety.com/2025/shopping/news/where-to-buy-nike-x-hasbro-sneakers-online-1236382743/) --- 
+**Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Lebron James [Read full article at Variety Alt](https://variety.com/2025/shopping/news/where-to-buy-nike-x-hasbro-sneakers-online-1236382743/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'liam': 2}
 
 The stars have applied to trademark their famous white 'Oasis' logo on a black background within a black rectangular border.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Liam [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14976415/Liam-Noel-Gallagher-iconic-fashion-brand-accused-copying-clothes.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Liam [Read full article at Daily Mail](https://www.dailymail.co.uk/tvshowbiz/article-14976415/Liam-Noel-Gallagher-iconic-fashion-brand-accused-copying-clothes.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

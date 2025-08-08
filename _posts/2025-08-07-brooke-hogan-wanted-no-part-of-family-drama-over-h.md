@@ -14,6 +14,8 @@ mentions: {'brooke_hogan': 6, ''hogan': 12, ''hulk_hogan': 6}
 
 Brooke Hogan is explaining her decision to remove herself from the late Hulk Hogan’s will. “I just know how my family is,” Brooke, 37 told TMZ in an interview on Wednesday, August 6. “I’ve seen how certain members of my family go after money. And I see how they fight over money. And how they turn […]
 
-**Drama Score:** 24 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Brooke Hogan, Hogan, Hulk Hogan [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/brooke-hogan-explains-family-drama-over-hulk-hogans-will/) --- 
+**Drama Score:** 24 | **Level:** EXPLOSIVE **Celebrities Mentioned:** Brooke Hogan, Hogan, Hulk Hogan [Read full article at Us Weekly](https://www.usmagazine.com/celebrity-news/news/brooke-hogan-explains-family-drama-over-hulk-hogans-will/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

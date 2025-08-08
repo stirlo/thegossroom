@@ -14,6 +14,8 @@ mentions: {'selena_gomez': 2}
 
 "To be honest [we weren't] besties, I just thought he was nice and then we did a few songs together," Gomez recalls of the beginning of her relationship with Blanco.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Selena Gomez [Read full article at Billboard](https://www.billboard.com/music/music-news/selena-gomez-mental-health-benny-blanco-therapuss-1236038414/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Selena Gomez [Read full article at Billboard](https://www.billboard.com/music/music-news/selena-gomez-mental-health-benny-blanco-therapuss-1236038414/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

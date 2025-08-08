@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Brad Pitt’s Family Guide: What to Know About His Parents, Siblings and More"
 date: 2025-08-08 07:23:01 +0000

@@ -14,6 +14,8 @@ mentions: {'trump': 2}
 
 Donny Boys kicked off the endeavor in July 2024, and has been to around 350 locations in the last year in states like Wisconsin, Illinois, California, Oregon, and Washington.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/femail/article-14977113/mcdonalds-visit-restaurants-fast-food-quest-locations-us.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/femail/article-14977113/mcdonalds-visit-restaurants-fast-food-quest-locations-us.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

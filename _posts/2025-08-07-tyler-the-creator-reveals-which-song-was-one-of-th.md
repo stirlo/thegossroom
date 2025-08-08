@@ -14,6 +14,8 @@ mentions: {'grammys': 2}
 
 "I got Grammys, I got whips, I done did it all," he said.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Grammys [Read full article at Billboard](https://www.billboard.com/music/rb-hip-hop/tyler-the-creator-top-life-moment-clipse-1236038961/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Grammys [Read full article at Billboard](https://www.billboard.com/music/rb-hip-hop/tyler-the-creator-top-life-moment-clipse-1236038961/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

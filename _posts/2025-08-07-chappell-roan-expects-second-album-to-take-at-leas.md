@@ -14,6 +14,8 @@ mentions: {'chappell_roan': 4}
 
 Despite her releasing the singles ‘The Giver’ and ‘The Subway’ this year, Chappell Roan isn’t rushing to churn out her sophomore album. The Grammy winner has said that her “second project doesn’t exist yet” after breaking out with her 2020 single ‘Pink Pony Club’ and her 2023 debut studio album The Rise and Fall of […]
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Chappell Roan [Read full article at Deadline](https://deadline.com/2025/08/chappell-roan-second-album-at-least-five-years-1236480842/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Chappell Roan [Read full article at Deadline](https://deadline.com/2025/08/chappell-roan-second-album-at-least-five-years-1236480842/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

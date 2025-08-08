@@ -12,6 +12,8 @@ source_url: "https://www.eonline.com/news/1420874/mariah-carey-reacts-to-katy-pe
 mentions: {'katy_perry': 6}
 ---
 
-Katy Perry may have gone to space, but Mariah Carey is in her own atmosphere. Nearly four months after the “ET” singer’s Blue Origin space expedition alongside Gayle King and Lauren Sánchez and... **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Katy Perry [Read full article at E News](https://www.eonline.com/news/1420874/mariah-carey-reacts-to-katy-perrys-space-trip?cmpid=rss-syndicate-genericrss-us-top_stories) --- 
+Katy Perry may have gone to space, but Mariah Carey is in her own atmosphere. Nearly four months after the “ET” singer’s Blue Origin space expedition alongside Gayle King and Lauren Sánchez and... **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Katy Perry [Read full article at E News](https://www.eonline.com/news/1420874/mariah-carey-reacts-to-katy-perrys-space-trip?cmpid=rss-syndicate-genericrss-us-top_stories)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'alison_brie': 2}
 
 The 'Together' actress appeared in the fourth film but her character, Rebecca Walters, was killed.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Alison Brie [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/movies/movie-news/alison-brie-scream-franchise-criticism-1236339528/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Alison Brie [Read full article at Hollywood Reporter](https://www.hollywoodreporter.com/movies/movie-news/alison-brie-scream-franchise-criticism-1236339528/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

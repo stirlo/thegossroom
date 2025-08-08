@@ -14,6 +14,8 @@ mentions: {'kate_middleton': 2}
 
 Few shoppers know about the hidden outlet section on the Aspinal of London website.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Kate Middleton [Read full article at Daily Mail](https://www.dailymail.co.uk/news/royals/article-14968269/kate-middletons-favourite-handbag-brand-hidden-outlet-store.html?ns_mchannel=rss &ns_campaign=1490) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Kate Middleton [Read full article at Daily Mail](https://www.dailymail.co.uk/news/royals/article-14968269/kate-middletons-favourite-handbag-brand-hidden-outlet-store.html?ns_mchannel=rss &ns_campaign=1490)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

@@ -14,6 +14,8 @@ mentions: {'brooklyn_beckham': 2}
 
 The model and the photographer renewed their wedding vows over the weekend amid their alleged feud with the latter's famous parents.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Brooklyn Beckham [Read full article at Page Six](https://pagesix.com/2025/08/07/celebrity-news/brooklyn-beckham-and-nicola-peltz-brush-off-parents-icy-snub-with-loved-up-walk-in-nyc/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Brooklyn Beckham [Read full article at Page Six](https://pagesix.com/2025/08/07/celebrity-news/brooklyn-beckham-and-nicola-peltz-brush-off-parents-icy-snub-with-loved-up-walk-in-nyc/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

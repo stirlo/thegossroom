@@ -14,6 +14,8 @@ mentions: {'jenner': 2, ''kylie_jenner': 2}
 
 The makeup mogul stunned during the photoshoot for "The Kardashians" in an unexpected look.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Jenner, Kylie Jenner [Read full article at Page Six](https://pagesix.com/2025/08/07/style/kylie-jenner-channels-madonna-in-cutout-cone-bra/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Jenner, Kylie Jenner [Read full article at Page Six](https://pagesix.com/2025/08/07/style/kylie-jenner-channels-madonna-in-cutout-cone-bra/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

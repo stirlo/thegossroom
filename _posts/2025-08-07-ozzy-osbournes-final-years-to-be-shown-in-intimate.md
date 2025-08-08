@@ -14,6 +14,8 @@ mentions: {'ozzy_osbourne': 2}
 
 The special will show the Prince of Darkness' preparations for his final live performance.
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Ozzy Osbourne [Read full article at Billboard](https://www.billboard.com/culture/tv-film/ozzy-osbourne-documentary-final-years-1236038699/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Ozzy Osbourne [Read full article at Billboard](https://www.billboard.com/culture/tv-film/ozzy-osbourne-documentary-final-years-1236038699/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

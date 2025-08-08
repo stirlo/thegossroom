@@ -14,6 +14,8 @@ mentions: {'erik_menendez': 2, ''menendez': 2}
 
 This year’s Emmy music races are chock-full of first-timers, surprising choices and maddening statistics. For example: Thomas and Julia Newman, who scored “Monsters: The Lyle and Erik Menendez Story,” are father and daughter, an Emmy first for a composing duo. Mick Giacchino, nominated for “The Penguin,” is the son of Emmy-winning “Lost” composer Michael Giacchino. […]
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Erik Menendez, Menendez [Read full article at Variety Alt](https://variety.com/2025/artisans/news/emmy-nominees-music-races-1236481640/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Erik Menendez, Menendez [Read full article at Variety Alt](https://variety.com/2025/artisans/news/emmy-nominees-music-races-1236481640/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

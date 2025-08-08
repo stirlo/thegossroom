@@ -14,6 +14,8 @@ mentions: {'lindsay_lohan': 4}
 
 Ahead of the sequel, Billboard spoke with the women of Pink Slip — Lindsay Lohan, Christina Vidal & Haley Hudson — as well as key producers behind the reunion.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Lindsay Lohan [Read full article at Billboard](https://www.billboard.com/lists/freakier-friday-pink-slip-reunion-oral-history-lindsay-lohan/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Lindsay Lohan [Read full article at Billboard](https://www.billboard.com/lists/freakier-friday-pink-slip-reunion-oral-history-lindsay-lohan/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

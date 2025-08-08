@@ -12,6 +12,8 @@ source_url: "https://www.elle.com/culture/celebrities/a65624621/selena-gomez-tay
 mentions: {'selena_gomez': 2, ''taylor_swift': 6}
 ---
 
-**Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Selena Gomez, Taylor Swift [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65624621/selena-gomez-taylor-swift-friendship-explained/) --- 
+**Drama Score:** 8 | **Level:** HOT **Celebrities Mentioned:** Selena Gomez, Taylor Swift [Read full article at Elle Alt](https://www.elle.com/culture/celebrities/a65624621/selena-gomez-taylor-swift-friendship-explained/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

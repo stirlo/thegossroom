@@ -12,6 +12,10 @@ source_url: "https://www.rollingstone.com/music/music-features/atlanta-rap-revis
 mentions: {'metro_boomin': 2}
 ---
 
-Metro's hometown-centric mixtape is the latest in a growing movement of Atlanta artists revisiting the city's early 2010s heyday **Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Metro Boomin [Read full article at Rolling Stone](https://www.rollingstone.com/music/music-features/atlanta-rap-revisits-its-greatest-eras-1235402669/) --- 
+Metro's hometown-centric mixtape is the latest in a growing movement of Atlanta artists revisiting the city's early 2010s heyday
+
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Metro Boomin [Read full article at Rolling Stone](https://www.rollingstone.com/music/music-features/atlanta-rap-revisits-its-greatest-eras-1235402669/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

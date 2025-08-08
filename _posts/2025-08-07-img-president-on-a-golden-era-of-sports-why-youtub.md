@@ -14,6 +14,8 @@ mentions: {'golden': 4}
 
 EXCLUSIVE: “There is a golden age of sport,” says IMG President Adam Kelly. “Look to the evidence and look to the data, we’ve seen records set time and time again for sport across multiple platforms.” He reels off several records including Sky in the UK registering its highest-ever daily viewing figures for sport earlier this […]
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Golden [Read full article at Deadline](https://deadline.com/2025/08/img-president-sports-golden-era-nfl-youtube-records-netflix-1236478773/) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Golden [Read full article at Deadline](https://deadline.com/2025/08/img-president-sports-golden-era-nfl-youtube-records-netflix-1236478773/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

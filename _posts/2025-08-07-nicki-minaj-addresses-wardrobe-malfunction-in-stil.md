@@ -12,6 +12,8 @@ source_url: "https://www.eonline.com/news/1420858/nicki-minajs-wardrobe-malfunct
 mentions: {'nicki_minaj': 6}
 ---
 
-Nicki Minaj couldn't try this out in high school. The rapper shared that after trying out the viral stiletto challenge, where social media users try to balance in high heels in a unique pose to... **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Nicki Minaj [Read full article at E News](https://www.eonline.com/news/1420858/nicki-minajs-wardrobe-malfunction-in-stiletto-challenge-video?cmpid=rss-syndicate-genericrss-us-top_stories) --- 
+Nicki Minaj couldn't try this out in high school. The rapper shared that after trying out the viral stiletto challenge, where social media users try to balance in high heels in a unique pose to... **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Nicki Minaj [Read full article at E News](https://www.eonline.com/news/1420858/nicki-minajs-wardrobe-malfunction-in-stiletto-challenge-video?cmpid=rss-syndicate-genericrss-us-top_stories)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

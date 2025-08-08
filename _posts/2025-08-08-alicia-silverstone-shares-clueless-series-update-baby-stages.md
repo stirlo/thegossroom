@@ -14,6 +14,8 @@ mentions: {'golden': 2}
 
 After 30 years, Alicia Silverstone wants to give Cher Horowitz the proper comeback treatment. Following the news that a series adaptation of her breakout 1995 teen movie Clueless is in development at Peacock, the Golden Globe nominee recently shared her excitement about the update, although she couldn’t reveal anything. “I’m really excited about it,” she […]
 
-**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Golden [Read full article at Deadline](https://deadline.com/2025/08/alicia-silverstone-clueless-series-update-1236482023/) --- 
+**Drama Score:** 2 | **Level:** RISING **Celebrities Mentioned:** Golden [Read full article at Deadline](https://deadline.com/2025/08/alicia-silverstone-clueless-series-update-1236482023/)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*

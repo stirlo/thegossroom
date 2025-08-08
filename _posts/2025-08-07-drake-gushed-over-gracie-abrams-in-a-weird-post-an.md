@@ -14,6 +14,8 @@ mentions: {'drake': 4}
 
 The rapper’s latest shoutout to Abrams — centered on a shared birthmark — has people talking.
 
-**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Drake [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/drake-gracie-abrams-internet-backlash_n_689224f4e4b044af87ac5793) --- 
+**Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Drake [Read full article at Huffpost Entertainment](https://www.huffpost.com/entry/drake-gracie-abrams-internet-backlash_n_689224f4e4b044af87ac5793)
+
+---
 
 *This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
