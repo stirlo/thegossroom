@@ -1,0 +1,42 @@
+name: normalise-quotes
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix_quotes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix triple+ quotes in _posts
+        shell: python
+        run: |
+          import glob, re, shutil, os
+
+          # backup
+          os.makedirs("_posts_backup", exist_ok=True)
+          for path in glob.glob("_posts/*.md"):
+              shutil.copy2(path, "_posts_backup/")
+
+          # repair
+          for path in glob.glob("_posts/*.md"):
+              with open(path, encoding="utf-8") as f:
+                  text = f.read()
+
+              text = re.sub(r'"{2,}', '"', text)   # replace 2+ quotes with 1
+
+              with open(path, "w", encoding="utf-8") as f:
+                  f.write(text)
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _posts
+          git diff --cached --quiet || git commit -m "Normalise double-quotes in _posts"
+          git push
