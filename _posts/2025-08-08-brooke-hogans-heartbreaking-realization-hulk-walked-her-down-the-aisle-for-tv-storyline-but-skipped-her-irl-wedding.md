@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brooke Hogan's Heartbreaking Realization -- Hulk Walked Her Down The Aisle For TV 'Storyline" But Skipped Her IRL Wedding!"
+title: "Brooke Hogan's Heartbreaking Realization -- Hulk Walked Her Down The Aisle For TV Storyline But Skipped Her IRL Wedding!"
 date: 2025-08-08 22:16:31 +0000
 categories: gossip
 tags: ['hogan', 'source-perez_hilton', 'drama-explosive']
