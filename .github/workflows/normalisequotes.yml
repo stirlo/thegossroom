@@ -28,7 +28,7 @@ jobs:
               with open(path, encoding="utf-8") as f:
                   text = f.read()
 
-              text = re.sub(r'"{2,}', '"', text)   # replace 2+ quotes with 1
+              text = re.sub(r'"{3,}', '"', text)   # replace 3+ quotes with 1 quote
 
               with open(path, "w", encoding="utf-8") as f:
                   f.write(text)
@@ -38,5 +38,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add _posts
-          git diff --cached --quiet || git commit -m "Normalise double-quotes in _posts"
+          git diff --cached --quiet || git commit -m "Normalise triple-quotes in _posts"
           git push
