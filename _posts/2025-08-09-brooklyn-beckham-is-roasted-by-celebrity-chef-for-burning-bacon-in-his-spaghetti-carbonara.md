@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brooklyn Beckham is roasted by celebrity chef for 'burning bacon" in his spaghetti carbonara"
+title: "Brooklyn Beckham is roasted by celebrity chef for burning bacon in his spaghetti carbonara"
 date: 2025-08-09 01:21:02 +0000
 categories: gossip
 tags: ['brooklyn-beckham', 'source-daily_mail', 'drama-rising']
