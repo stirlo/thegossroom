@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Saltburn director Emerald Fennell returns with an 'aggressively provocative" interpretation of Emily Brontë classic Wuthering Heights featuring a 'BDSM-inspired SEX scene"
+title: "Saltburn director Emerald Fennell returns with an aggressively provocative interpretation of Emily Brontë classic Wuthering Heights featuring a 'BDSM-inspired SEX scene"
 date: 2025-08-08 01:27:52 +0000
 categories: gossip
 tags: ['jacob-elordi', 'source-daily_mail', 'drama-rising']
