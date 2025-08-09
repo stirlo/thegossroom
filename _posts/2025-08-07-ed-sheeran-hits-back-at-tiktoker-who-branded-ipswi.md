@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Ed Sheeran hits back at TikToker who branded Ipswich's decision to give singer No 17 shirt as 'embarrassing" - as he explains the real reason why it happened"
+title: "Ed Sheeran hits back at TikToker who branded Ipswich's decision to give singer No 17 shirt as embarrassing - as he explains the real reason why it happened"
 date: 2025-08-07 10:19:35 +0000
 categories: gossip
 tags: ['ed-sheeran', 'source-daily_mail', 'drama-rising']
