@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Sydney Sweeney Spotted on 'Devil Wears Prada 2" Set Amid Ad Controversy"
+title: "Sydney Sweeney Spotted on Devil Wears Prada 2 Set Amid Ad Controversy"
 date: 2025-08-07 19:18:12 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-tmz', 'drama-hot']
