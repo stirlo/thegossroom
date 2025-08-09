@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "'Euphoria" Cast's Dating Histories Through the Years"
+title: "'Euphoria Casts Dating Histories Through the Years"
 date: 2025-08-09 04:26:50 +0000
 categories: gossip
 tags: ['zendaya', 'source-us_weekly', 'drama-rising']
