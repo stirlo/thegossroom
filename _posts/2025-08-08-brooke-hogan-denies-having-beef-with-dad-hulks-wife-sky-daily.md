@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brooke Hogan Denies Having 'Beef" With Dad Hulk's Wife Sky Daily!"
+title: "Brooke Hogan Denies Having Beef With Dad Hulk's Wife Sky Daily!"
 date: 2025-08-08 16:20:27 +0000
 categories: gossip
 tags: ['hogan', 'source-perez_hilton', 'drama-explosive']
