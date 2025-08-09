@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "MGK Says 'Good Dad" Praise Had Megan Fox Fuming, 'She Does All The Work"
+title: "MGK Says Good Dad Praise Had Megan Fox Fuming, 'She Does All The Work"
 date: 2025-08-07 18:28:01 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-tmz', 'drama-rising']
