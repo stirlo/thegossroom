@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brooke Hogan Offers to Pay for Hulk Hogan Autopsy Amid 'Questions" About Death"
+title: "Brooke Hogan Offers to Pay for Hulk Hogan Autopsy Amid Questions About Death"
 date: 2025-08-08 13:36:38 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
