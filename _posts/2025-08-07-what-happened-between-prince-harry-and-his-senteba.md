@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "What Happened Between Prince Harry and His Sentebale Charity?"""
+title: "What Happened Between Prince Harry and His Sentebale Charity?"
 date: 2025-08-07 05:26:24 +0000
 categories: gossip
 tags: ['prince-harry', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: prince_harry
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/what-happened-between-prince-harry-and-his-sentebale-charity/"""
+source_url: "https://www.usmagazine.com/celebrity-news/news/what-happened-between-prince-harry-and-his-sentebale-charity/"
 mentions: {'prince_harry': 6}
 ---
 

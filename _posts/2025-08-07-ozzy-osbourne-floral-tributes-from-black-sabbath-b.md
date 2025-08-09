@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ozzy Osbourne Floral Tributes From Black Sabbath Bridge Mulched For Spreading on Rocker’s Final Resting Place"""
+title: "Ozzy Osbourne Floral Tributes From Black Sabbath Bridge Mulched For Spreading on Rocker’s Final Resting Place"
 date: 2025-08-07 12:38:50 +0000
 categories: gossip
 tags: ['ozzy-osbourne', 'source-billboard', 'drama-rising']
 drama_score: 2
 primary_celebrity: ozzy_osbourne
 source: billboard
-source_url: "https://www.billboard.com/music/music-news/ozzy-osbourne-bridge-floral-tributes-mulched-spreading-grave-1236038423/"""
+source_url: "https://www.billboard.com/music/music-news/ozzy-osbourne-bridge-floral-tributes-mulched-spreading-grave-1236038423/"
 mentions: {'ozzy_osbourne': 2}
 ---
 

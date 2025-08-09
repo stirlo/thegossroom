@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "What ‘Boy Meets World’ Guest Stars Have Said About Working on the Show"""
+title: "What ‘Boy Meets World’ Guest Stars Have Said About Working on the Show"
 date: 2025-08-08 01:27:48 +0000
 categories: gossip
 tags: ['adam-scott', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: adam_scott
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/what-boy-meets-world-guest-stars-have-said-about-working-on-the-show/"""
+source_url: "https://www.usmagazine.com/entertainment/news/what-boy-meets-world-guest-stars-have-said-about-working-on-the-show/"
 mentions: {'adam_scott': 3}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Busy Moms Need Comfy Sneakers — Shop This Pair From Jennifer Garner's Favorite Brand"""
+title: "Busy Moms Need Comfy Sneakers — Shop This Pair From Jennifer Garner's Favorite Brand"
 date: 2025-08-08 03:41:23 +0000
 categories: gossip
 tags: ['jennifer-garner', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: jennifer_garner
 source: us_weekly
-source_url: "https://www.usmagazine.com/shopping/news/jennifer-garner-brooks-ghost-sneakers-deal-amazon/"""
+source_url: "https://www.usmagazine.com/shopping/news/jennifer-garner-brooks-ghost-sneakers-deal-amazon/"
 mentions: {'jennifer_garner': 3}
 ---
 

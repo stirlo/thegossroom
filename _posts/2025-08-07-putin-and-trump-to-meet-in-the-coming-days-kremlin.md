@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Putin and Trump to meet 'in the coming days', Kremlin aide confirms as Zelenskyy calls for face-to-face with Russian tyrant to end the war in Ukraine"""
+title: "Putin and Trump to meet 'in the coming days', Kremlin aide confirms as Zelenskyy calls for face-to-face with Russian tyrant to end the war in Ukraine"
 date: 2025-08-07 09:24:00 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
 drama_score: 4
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14978849/Putin-Trump-meet-coming-days-Kremlin-aide-confirms-Zelenskyy-calls-face-face-Russian-tyrant-end-war-Ukraine.html?ns_mchannel=rss&1490&campaign=1490"""
+source_url: "https://www.dailymail.co.uk/news/article-14978849/Putin-Trump-meet-coming-days-Kremlin-aide-confirms-Zelenskyy-calls-face-face-Russian-tyrant-end-war-Ukraine.html?ns_mchannel=rss&1490&campaign=1490"
 mentions: {'trump': 4}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "‘Elsbeth’ Casts Andy Richter, Amy Sedaris & Lindsay Mendez For Season 3 Premiere"""
+title: "‘Elsbeth’ Casts Andy Richter, Amy Sedaris & Lindsay Mendez For Season 3 Premiere"
 date: 2025-08-08 17:13:45 +0000
 categories: gossip
 tags: ['amy-sedaris', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: amy_sedaris
 source: deadline
-source_url: "https://deadline.com/2025/08/elsbeth-andy-richter-amy-sedaris-lindsay-mendez-season-3-1236482433/"""
+source_url: "https://deadline.com/2025/08/elsbeth-andy-richter-amy-sedaris-lindsay-mendez-season-3-1236482433/"
 mentions: {'amy_sedaris': 6}
 ---
 

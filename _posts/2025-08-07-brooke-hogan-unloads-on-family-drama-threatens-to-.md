@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brooke Hogan Unloads On Family Drama, Threatens To Sue Hulk's Team Over 'Lies"""
+title: "Brooke Hogan Unloads On Family Drama, Threatens To Sue Hulk's Team Over 'Lies"
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['hogan', 'source-tmz', 'drama-explosive']
 drama_score: 18
 primary_celebrity: hogan
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/brooke-hogan-family-drama-threaten-sue-hulk-team-lies/"""
+source_url: "https://www.tmz.com/2025/08/06/brooke-hogan-family-drama-threaten-sue-hulk-team-lies/"
 mentions: {'brooke_hogan': 6, 'hogan': 9, 'hulk_hogan': 3}
 ---
 

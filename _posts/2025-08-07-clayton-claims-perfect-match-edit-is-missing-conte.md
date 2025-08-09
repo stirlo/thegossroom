@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Clayton Claims 'Perfect Match""" Edit Is 'Missing Context""" With Ex Rachel"""
+title: "Clayton Claims 'Perfect Match" Edit Is 'Missing Context" With Ex Rachel"
 date: 2025-08-07 23:17:59 +0000
 categories: gossip
 tags: ['super', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: super
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/clayton-echard-criticizes-perfect-match-edit-with-ex-rachel-recchia/"""
+source_url: "https://www.usmagazine.com/entertainment/news/clayton-echard-criticizes-perfect-match-edit-with-ex-rachel-recchia/"
 mentions: {'super': 3}
 ---
 

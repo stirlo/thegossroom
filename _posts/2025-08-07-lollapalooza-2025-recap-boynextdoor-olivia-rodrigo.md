@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Lollapalooza 2025 Recap: BOYNEXTDOOR, Olivia Rodrigo, Doechii & More Heat Up Chicago | All Access | Billboard News"""
+title: "Lollapalooza 2025 Recap: BOYNEXTDOOR, Olivia Rodrigo, Doechii & More Heat Up Chicago | All Access | Billboard News"
 date: 2025-08-07 13:38:37 +0000
 categories: gossip
 tags: ['olivia-rodrigo', 'source-billboard', 'drama-explosive']
 drama_score: 12
 primary_celebrity: olivia_rodrigo
 source: billboard
-source_url: "https://www.billboard.com/video/lollapalooza-2025-recap-boynextdoor-more-heat-up-chicago/"""
+source_url: "https://www.billboard.com/video/lollapalooza-2025-recap-boynextdoor-more-heat-up-chicago/"
 mentions: {'olivia_rodrigo': 8, 'sabrina_carpenter': 4}
 ---
 

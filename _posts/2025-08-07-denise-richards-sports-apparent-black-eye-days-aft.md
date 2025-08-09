@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Denise Richards Sports Apparent Black Eye Days After Showing Up at Estranged Husband's House"""
+title: "Denise Richards Sports Apparent Black Eye Days After Showing Up at Estranged Husband's House"
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['denise-richards', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: denise_richards
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/denise-richards-black-eye-aaron-phypers-divorce/"""
+source_url: "https://www.tmz.com/2025/08/06/denise-richards-black-eye-aaron-phypers-divorce/"
 mentions: {'denise_richards': 6}
 ---
 

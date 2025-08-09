@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Rachel Bloom and Husband Dan Gregor Set Rom-Com Pilot ‘Do You Want Kids?’ at ABC as Co-Creators and Stars"""
+title: "Rachel Bloom and Husband Dan Gregor Set Rom-Com Pilot ‘Do You Want Kids?’ at ABC as Co-Creators and Stars"
 date: 2025-08-07 21:15:31 +0000
 categories: gossip
 tags: ['rachel-bloom', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: rachel_bloom
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/rachel-bloom-dan-gregor-pilot-do-you-want-kids-abc-1236482023/"""
+source_url: "https://variety.com/2025/tv/news/rachel-bloom-dan-gregor-pilot-do-you-want-kids-abc-1236482023/"
 mentions: {'rachel_bloom': 4}
 ---
 

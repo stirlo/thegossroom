@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Blake Lively Gets Deposition Cut From Court Docket As Judge Thwacks Baldoni Lawyers: Served “Their Own Public-Relations Purposes”"""
+title: "Blake Lively Gets Deposition Cut From Court Docket As Judge Thwacks Baldoni Lawyers: Served “Their Own Public-Relations Purposes”"
 date: 2025-08-08 20:19:23 +0000
 categories: gossip
 tags: ['blake-lively', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: blake_lively
 source: deadline
-source_url: "https://deadline.com/2025/08/blake-lively-justin-baldoni-deposition-sealed-1236482553/"""
+source_url: "https://deadline.com/2025/08/blake-lively-justin-baldoni-deposition-sealed-1236482553/"
 mentions: {'blake_lively': 4, 'justin_baldoni': 2}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Outside Lands 2025: Amazon Music Livestream Schedule & Details"""
+title: "Outside Lands 2025: Amazon Music Livestream Schedule & Details"
 date: 2025-08-07 18:28:12 +0000
 categories: gossip
 tags: ['doja-cat', 'source-pitchfork', 'drama-mild']
 drama_score: 1
 primary_celebrity: doja_cat
 source: pitchfork
-source_url: "https://pitchfork.com/news/outside-lands-2025-amazon-music-livestream-schedule-and-details"""
+source_url: "https://pitchfork.com/news/outside-lands-2025-amazon-music-livestream-schedule-and-details"
 mentions: {'doja_cat': 1}
 ---
 

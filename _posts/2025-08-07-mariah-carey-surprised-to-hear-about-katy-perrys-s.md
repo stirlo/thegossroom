@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Mariah Carey Surprised to Hear About Katy Perry’s Space Trip"""
+title: "Mariah Carey Surprised to Hear About Katy Perry’s Space Trip"
 date: 2025-08-07 15:20:25 +0000
 categories: gossip
 tags: ['katy-perry', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: katy_perry
 source: e_news
-source_url: "https://www.eonline.com/news/1420874/mariah-carey-reacts-to-katy-perrys-space-trip?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420874/mariah-carey-reacts-to-katy-perrys-space-trip?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'katy_perry': 6}
 ---
 

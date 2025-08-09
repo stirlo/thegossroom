@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Zendaya and Law Roach Join Forces on New On Sneaker: Shop Their Co-Designed Release Online"""
+title: "Zendaya and Law Roach Join Forces on New On Sneaker: Shop Their Co-Designed Release Online"
 date: 2025-08-08 18:24:19 +0000
 categories: gossip
 tags: ['zendaya', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: zendaya
 source: variety_alt
-source_url: "https://variety.com/2025/shopping/news/zendaya-law-roach-on-running-sneaker-buy-online-1236482644/"""
+source_url: "https://variety.com/2025/shopping/news/zendaya-law-roach-on-running-sneaker-buy-online-1236482644/"
 mentions: {'zendaya': 4}
 ---
 

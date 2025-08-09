@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Source: Messi bodyguard banned by Leagues Cup"""
+title: "Source: Messi bodyguard banned by Leagues Cup"
 date: 2025-08-02 11:15:22 +0000
 categories: gossip
 tags: ['lionel-messi', 'sports', 'soccer', 'awards', 'transfer', 'source-espn', 'drama-mild']
 drama_score: 1
 primary_celebrity: lionel_messi
 source: espn
-source_url: "https://www.espn.com/soccer/story/_/id/45881805/lionel-messi-bodyguard-suspended-leagues-cup-improper-conduct"""
+source_url: "https://www.espn.com/soccer/story/_/id/45881805/lionel-messi-bodyguard-suspended-leagues-cup-improper-conduct"
 mentions: {'lionel_messi': 1}
 ---
 

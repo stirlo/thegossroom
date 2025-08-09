@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Hollywood Flashback: Brooke Shields’ Jeans Ad Did Not Sit Well"""
+title: "Hollywood Flashback: Brooke Shields’ Jeans Ad Did Not Sit Well"
 date: 2025-08-07 18:28:05 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 2
 primary_celebrity: sydney_sweeney
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/lifestyle/style/brooke-shields-jeans-ad-1236337779/"""
+source_url: "https://www.hollywoodreporter.com/lifestyle/style/brooke-shields-jeans-ad-1236337779/"
 mentions: {'sydney_sweeney': 2}
 ---
 

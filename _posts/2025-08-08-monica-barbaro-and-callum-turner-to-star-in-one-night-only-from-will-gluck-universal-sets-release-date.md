@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Monica Barbaro And Callum Turner To Star in ‘One Night Only’ From Will Gluck; Universal Sets Release Date"""
+title: "Monica Barbaro And Callum Turner To Star in ‘One Night Only’ From Will Gluck; Universal Sets Release Date"
 date: 2025-08-08 17:13:45 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: sydney_sweeney
 source: deadline
-source_url: "https://deadline.com/2025/08/monica-barbaro-callum-turner-one-night-only-will-gluck-1236481748/"""
+source_url: "https://deadline.com/2025/08/monica-barbaro-callum-turner-one-night-only-will-gluck-1236481748/"
 mentions: {'sydney_sweeney': 2}
 ---
 

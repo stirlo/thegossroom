@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Pedro Pascal Circling Tony Gilroy’s Next Film ‘Behemoth!’ As The Project Lands At Searchlight"""
+title: "Pedro Pascal Circling Tony Gilroy’s Next Film ‘Behemoth!’ As The Project Lands At Searchlight"
 date: 2025-08-08 17:13:45 +0000
 categories: gossip
 tags: ['pedro-pascal', 'source-deadline', 'drama-hot']
 drama_score: 8
 primary_celebrity: pedro_pascal
 source: deadline
-source_url: "https://deadline.com/2025/08/pedro-pascal-tony-gilroy-behemoth-1236482461/"""
+source_url: "https://deadline.com/2025/08/pedro-pascal-tony-gilroy-behemoth-1236482461/"
 mentions: {'pedro_pascal': 8}
 ---
 

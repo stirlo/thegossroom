@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Watch Gracie Abrams Cover a Taylor Swift Song She’ll ‘Forever Wish’ She Wrote"""
+title: "Watch Gracie Abrams Cover a Taylor Swift Song She’ll ‘Forever Wish’ She Wrote"
 date: 2025-08-08 16:20:38 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-billboard', 'drama-hot']
 drama_score: 6
 primary_celebrity: taylor_swift
 source: billboard
-source_url: "https://www.billboard.com/music/music-news/gracie-abrams-taylor-swift-all-too-well-cover-la-show-video-1236039580/"""
+source_url: "https://www.billboard.com/music/music-news/gracie-abrams-taylor-swift-all-too-well-cover-la-show-video-1236039580/"
 mentions: {'taylor_swift': 6}
 ---
 

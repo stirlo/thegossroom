@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "The Wheel Deal: How to Look Cool on a Bike"""
+title: "The Wheel Deal: How to Look Cool on a Bike"
 date: 2025-08-02 11:15:11 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-vogue_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: vogue_alt
-source_url: "https://www.vogue.com/article/street-style-fashion-week-biking-fashion-copenhagen"""
+source_url: "https://www.vogue.com/article/street-style-fashion-week-biking-fashion-copenhagen"
 mentions: {'of_the': 2}
 ---
 

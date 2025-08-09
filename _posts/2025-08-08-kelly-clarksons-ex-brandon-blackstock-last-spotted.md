@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kelly Clarkson's Ex Brandon Blackstock Last Spotted 5 Years Before Death"""
+title: "Kelly Clarkson's Ex Brandon Blackstock Last Spotted 5 Years Before Death"
 date: 2025-08-08 01:27:47 +0000
 categories: gossip
 tags: ['awards', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: awards
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brandon-blackstocks-final-public-appearance-was-5-years-before-death/"""
+source_url: "https://www.usmagazine.com/celebrity-news/news/brandon-blackstocks-final-public-appearance-was-5-years-before-death/"
 mentions: {'awards': 3}
 ---
 

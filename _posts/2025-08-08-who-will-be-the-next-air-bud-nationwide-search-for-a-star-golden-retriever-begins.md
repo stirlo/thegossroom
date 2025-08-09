@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Who Will Be the Next Air Bud? Nationwide Search for a Star Golden Retriever Begins"""
+title: "Who Will Be the Next Air Bud? Nationwide Search for a Star Golden Retriever Begins"
 date: 2025-08-08 15:18:51 +0000
 categories: gossip
 tags: ['golden', 'source-variety_alt', 'drama-hot']
 drama_score: 6
 primary_celebrity: golden
 source: variety_alt
-source_url: "https://variety.com/2025/film/news/air-bud-nationwide-talent-search-golden-retriever-1236482445/"""
+source_url: "https://variety.com/2025/film/news/air-bud-nationwide-talent-search-golden-retriever-1236482445/"
 mentions: {'golden': 6}
 ---
 

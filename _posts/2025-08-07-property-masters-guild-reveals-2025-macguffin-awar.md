@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Property Masters Guild Reveals 2025 MacGuffin Awards Nominations"""
+title: "Property Masters Guild Reveals 2025 MacGuffin Awards Nominations"
 date: 2025-08-07 21:15:33 +0000
 categories: gossip
 tags: ['awards', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: awards
 source: deadline
-source_url: "https://deadline.com/2025/08/macguffin-awards-nominations-2025-list-property-masters-guild-1236481678/"""
+source_url: "https://deadline.com/2025/08/macguffin-awards-nominations-2025-list-property-masters-guild-1236481678/"
 mentions: {'awards': 6}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kylie Jenner Has Already Nailed Her Perfect Fall Outfit"""
+title: "Kylie Jenner Has Already Nailed Her Perfect Fall Outfit"
 date: 2025-08-07 09:24:02 +0000
 categories: gossip
 tags: ['jenner', 'source-vogue_alt', 'drama-hot']
 drama_score: 8
 primary_celebrity: jenner
 source: vogue_alt
-source_url: "https://www.vogue.com/article/kylie-jenner-has-already-nailed-her-perfect-fall-outfit"""
+source_url: "https://www.vogue.com/article/kylie-jenner-has-already-nailed-her-perfect-fall-outfit"
 mentions: {'jenner': 4, 'kylie_jenner': 4}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Pamela Anderson & Liam Neeson Had 'Immediate Chemistry'!"""
+title: "Pamela Anderson & Liam Neeson Had 'Immediate Chemistry'!"
 date: 2025-08-09 01:20:54 +0000
 categories: gossip
 tags: ['liam', 'source-perez_hilton', 'drama-explosive']
 drama_score: 27
 primary_celebrity: liam
 source: perez_hilton
-source_url: "https://perezhilton.com/pamela-anderson-liam-neeson-immediate-chemistry-naked-gun/"""
+source_url: "https://perezhilton.com/pamela-anderson-liam-neeson-immediate-chemistry-naked-gun/"
 mentions: {'liam': 9, 'liam_neeson': 9, 'pamela_anderson': 9}
 ---
 

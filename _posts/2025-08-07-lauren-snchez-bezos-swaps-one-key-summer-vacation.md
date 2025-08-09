@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Lauren Sánchez Bezos Swaps One Key Summer Vacation Style Staple for Another"""
+title: "Lauren Sánchez Bezos Swaps One Key Summer Vacation Style Staple for Another"
 date: 2025-08-07 09:24:02 +0000
 categories: gossip
 tags: ['super', 'source-vogue_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: super
 source: vogue_alt
-source_url: "https://www.vogue.com/article/lauren-sanchez-bezos-ibiza-date-night-style"""
+source_url: "https://www.vogue.com/article/lauren-sanchez-bezos-ibiza-date-night-style"
 mentions: {'super': 2}
 ---
 

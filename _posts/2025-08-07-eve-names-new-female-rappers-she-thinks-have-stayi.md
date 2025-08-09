@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Eve Names New Female Rappers She Thinks Have Staying Power, ‘But I Don’t Think It’s Going to Be A Lot’"""
+title: "Eve Names New Female Rappers She Thinks Have Staying Power, ‘But I Don’t Think It’s Going to Be A Lot’"
 date: 2025-08-07 23:18:04 +0000
 categories: gossip
 tags: ['cardi-b', 'source-billboard', 'drama-rising']
 drama_score: 4
 primary_celebrity: cardi_b
 source: billboard
-source_url: "https://www.billboard.com/music/rb-hip-hop/eve-doechii-cardi-b-glorilla-staying-power-1236039143/"""
+source_url: "https://www.billboard.com/music/rb-hip-hop/eve-doechii-cardi-b-glorilla-staying-power-1236039143/"
 mentions: {'cardi_b': 2, 'latto': 2}
 ---
 

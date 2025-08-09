@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Kylie Jenner Shares NSFW Bikini Pics to Kick Off Birthday Celebrations"""
+title: "Kylie Jenner Shares NSFW Bikini Pics to Kick Off Birthday Celebrations"
 date: 2025-08-09 01:20:56 +0000
 categories: gossip
 tags: ['jenner', 'source-e_news', 'drama-explosive']
 drama_score: 12
 primary_celebrity: jenner
 source: e_news
-source_url: "https://www.eonline.com/news/1420968/kylie-jenners-nsfw-bikini-photos-for-birthday?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420968/kylie-jenners-nsfw-bikini-photos-for-birthday?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'jenner': 6, 'kylie_jenner': 6}
 ---
 

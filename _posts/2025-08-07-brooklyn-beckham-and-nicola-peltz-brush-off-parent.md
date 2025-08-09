@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brooklyn Beckham and Nicola Peltz brush off parents’ icy snub with loved-up walk in NYC"""
+title: "Brooklyn Beckham and Nicola Peltz brush off parents’ icy snub with loved-up walk in NYC"
 date: 2025-08-07 19:18:21 +0000
 categories: gossip
 tags: ['brooklyn-beckham', 'source-page_six', 'drama-rising']
 drama_score: 2
 primary_celebrity: brooklyn_beckham
 source: page_six
-source_url: "https://pagesix.com/2025/08/07/celebrity-news/brooklyn-beckham-and-nicola-peltz-brush-off-parents-icy-snub-with-loved-up-walk-in-nyc/"""
+source_url: "https://pagesix.com/2025/08/07/celebrity-news/brooklyn-beckham-and-nicola-peltz-brush-off-parents-icy-snub-with-loved-up-walk-in-nyc/"
 mentions: {'brooklyn_beckham': 2}
 ---
 

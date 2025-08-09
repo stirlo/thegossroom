@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Sources: Colts""" Richardson might return Saturday"""
+title: "Sources: Colts" Richardson might return Saturday"
 date: 2025-08-08 16:20:42 +0000
 categories: gossip
 tags: ['richardson', 'source-espn', 'drama-rising']
 drama_score: 2
 primary_celebrity: richardson
 source: espn
-source_url: "https://www.espn.com/nfl/story/_/id/45926079/sources-colts-anthony-richardson-return-soon-saturday"""
+source_url: "https://www.espn.com/nfl/story/_/id/45926079/sources-colts-anthony-richardson-return-soon-saturday"
 mentions: {'richardson': 2}
 ---
 

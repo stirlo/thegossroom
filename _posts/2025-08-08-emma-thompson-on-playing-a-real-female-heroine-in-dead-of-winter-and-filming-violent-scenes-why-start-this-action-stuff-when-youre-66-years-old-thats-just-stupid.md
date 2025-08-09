@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Emma Thompson on Playing a ‘Real Female Heroine’ in ‘Dead of Winter’ and Filming Violent Scenes: ‘Why Start This Action Stuff When You’re 66 Years Old? That’s Just Stupid’"""
+title: "Emma Thompson on Playing a ‘Real Female Heroine’ in ‘Dead of Winter’ and Filming Violent Scenes: ‘Why Start This Action Stuff When You’re 66 Years Old? That’s Just Stupid’"
 date: 2025-08-08 12:38:03 +0000
 categories: gossip
 tags: ['super', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: super
 source: variety_alt
-source_url: "https://variety.com/2025/film/festivals/emma-thompson-dead-of-winter-filming-action-scenes-1236482256/"""
+source_url: "https://variety.com/2025/film/festivals/emma-thompson-dead-of-winter-filming-action-scenes-1236482256/"
 mentions: {'super': 2}
 ---
 

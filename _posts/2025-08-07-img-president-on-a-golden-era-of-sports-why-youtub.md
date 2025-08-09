@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "IMG President On A Golden Era Of Sports, Why YouTube’s NFL Game Will Be A Record-Breaker & How Netflix Became A Star Player"""
+title: "IMG President On A Golden Era Of Sports, Why YouTube’s NFL Game Will Be A Record-Breaker & How Netflix Became A Star Player"
 date: 2025-08-07 11:16:55 +0000
 categories: gossip
 tags: ['golden', 'source-deadline', 'drama-rising']
 drama_score: 4
 primary_celebrity: golden
 source: deadline
-source_url: "https://deadline.com/2025/08/img-president-sports-golden-era-nfl-youtube-records-netflix-1236478773/"""
+source_url: "https://deadline.com/2025/08/img-president-sports-golden-era-nfl-youtube-records-netflix-1236478773/"
 mentions: {'golden': 4}
 ---
 

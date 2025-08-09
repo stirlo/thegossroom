@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Chargers star LT Slater carted off with leg injury"""
+title: "Chargers star LT Slater carted off with leg injury"
 date: 2025-08-07 19:18:29 +0000
 categories: gossip
 tags: ['bowl', 'source-espn', 'drama-mild']
 drama_score: 1
 primary_celebrity: bowl
 source: espn
-source_url: "https://www.espn.com/nfl/story/_/id/45921277/chargers-pro-bowl-lt-rashawn-slater-carted-leg-injury"""
+source_url: "https://www.espn.com/nfl/story/_/id/45921277/chargers-pro-bowl-lt-rashawn-slater-carted-leg-injury"
 mentions: {'bowl': 1}
 ---
 

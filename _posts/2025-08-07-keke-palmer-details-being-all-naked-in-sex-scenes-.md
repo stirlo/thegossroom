@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Keke Palmer Details \"Being All Naked\""" in Sex Scenes With Pete Davidson"""
+title: "Keke Palmer Details \"Being All Naked\" in Sex Scenes With Pete Davidson"
 date: 2025-08-07 05:26:22 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-e_news', 'drama-explosive']
 drama_score: 12
 primary_celebrity: pete_davidson
 source: e_news
-source_url: "https://www.eonline.com/news/1420859/keke-palmer-on-pete-davidson-sex-scenes-in-the-pickup?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420859/keke-palmer-on-pete-davidson-sex-scenes-in-the-pickup?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'pete_davidson': 12}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Michelle Obama’s Defense of The Real Housewives Fans Is a Slam Dunk"""
+title: "Michelle Obama’s Defense of The Real Housewives Fans Is a Slam Dunk"
 date: 2025-08-02 10:17:40 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-e_news', 'drama-rising']
 drama_score: 3
 primary_celebrity: of_the
 source: e_news
-source_url: "https://www.eonline.com/news/1420659/michelle-obama-says-real-housewives-is-like-sports?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420659/michelle-obama-says-real-housewives-is-like-sports?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'of_the': 3}
 ---
 

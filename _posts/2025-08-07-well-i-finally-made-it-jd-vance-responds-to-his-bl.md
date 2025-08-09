@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "“Well, I Finally Made It”: JD Vance Responds To His Blistering ‘South Park’ Debut"""
+title: "“Well, I Finally Made It”: JD Vance Responds To His Blistering ‘South Park’ Debut"
 date: 2025-08-07 15:20:30 +0000
 categories: gossip
 tags: ['jd-vance', 'source-deadline', 'drama-explosive']
 drama_score: 10
 primary_celebrity: jd_vance
 source: deadline
-source_url: "https://deadline.com/2025/08/jd-vance-south-park-debut-1236481177/"""
+source_url: "https://deadline.com/2025/08/jd-vance-south-park-debut-1236481177/"
 mentions: {'donald_trump': 2, 'jd_vance': 4, 'trump': 4}
 ---
 

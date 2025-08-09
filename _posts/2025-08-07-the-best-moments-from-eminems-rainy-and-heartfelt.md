@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "The Best Moments From Eminem’s Rainy and Heartfelt ‘Stans’ Film Premiere In New York City"""
+title: "The Best Moments From Eminem’s Rainy and Heartfelt ‘Stans’ Film Premiere In New York City"
 date: 2025-08-07 15:20:34 +0000
 categories: gossip
 tags: ['eminem', 'source-billboard', 'drama-rising']
 drama_score: 4
 primary_celebrity: eminem
 source: billboard
-source_url: "https://www.billboard.com/lists/eminem-stans-film-premiere-best-moments-recap/"""
+source_url: "https://www.billboard.com/lists/eminem-stans-film-premiere-best-moments-recap/"
 mentions: {'eminem': 2, 'slim_shady': 2}
 ---
 

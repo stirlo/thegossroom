@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "‘Weapons’ Hits $5.7M, ‘Freakier Friday’ $3M+ In Previews – Box Office"""
+title: "‘Weapons’ Hits $5.7M, ‘Freakier Friday’ $3M+ In Previews – Box Office"
 date: 2025-08-08 15:18:53 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: lindsay_lohan
 source: deadline
-source_url: "https://deadline.com/2025/08/box-office-weapons-freakier-friday-1236482095/"""
+source_url: "https://deadline.com/2025/08/box-office-weapons-freakier-friday-1236482095/"
 mentions: {'lindsay_lohan': 2}
 ---
 

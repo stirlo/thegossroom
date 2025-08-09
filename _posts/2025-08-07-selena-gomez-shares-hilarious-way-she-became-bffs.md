@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Selena Gomez Shares Hilarious Way She Became BFFs With Taylor Swift!"""
+title: "Selena Gomez Shares Hilarious Way She Became BFFs With Taylor Swift!"
 date: 2025-08-07 17:19:20 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-perez_hilton', 'drama-explosive']
 drama_score: 36
 primary_celebrity: taylor_swift
 source: perez_hilton
-source_url: "https://perezhilton.com/selena-gomez-shares-hilarious-way-taylor-swift-friendship-started/"""
+source_url: "https://perezhilton.com/selena-gomez-shares-hilarious-way-taylor-swift-friendship-started/"
 mentions: {'selena_gomez': 9, 'taylor_swift': 27}
 ---
 

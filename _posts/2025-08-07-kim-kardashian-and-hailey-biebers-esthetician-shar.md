@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kim Kardashian and Hailey Bieber’s Esthetician Shares Her Surprisingly Simple Skin Care Regimen"""
+title: "Kim Kardashian and Hailey Bieber’s Esthetician Shares Her Surprisingly Simple Skin Care Regimen"
 date: 2025-08-07 05:26:30 +0000
 categories: gossip
 tags: ['kim-kardashian', 'source-elle_alt', 'drama-explosive']
 drama_score: 14
 primary_celebrity: kim_kardashian
 source: elle_alt
-source_url: "https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/"""
+source_url: "https://www.elle.com/beauty/a65509721/joanna-czech-skin-care-tips-interview/"
 mentions: {'bieber': 2, 'hailey_bieber': 2, 'justin_bieber': 2, 'kardashian': 2, 'kim_kardashian': 6}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "How the Indiana Fever adjust to season-ending injuries to Colson, McDonald"""
+title: "How the Indiana Fever adjust to season-ending injuries to Colson, McDonald"
 date: 2025-08-09 01:21:08 +0000
 categories: gossip
 tags: ['caitlin-clark', 'source-espn', 'drama-mild']
 drama_score: 1
 primary_celebrity: caitlin_clark
 source: espn
-source_url: "https://www.espn.com/wnba/story/_/id/45927938/wnba-2025-indiana-fever-injuries-caitlin-clark-sydney-colson-aari-mcdonald"""
+source_url: "https://www.espn.com/wnba/story/_/id/45927938/wnba-2025-indiana-fever-injuries-caitlin-clark-sydney-colson-aari-mcdonald"
 mentions: {'caitlin_clark': 1}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Box Office: ‘Weapons’ Makes $5.7 Million in Previews, ‘Freakier Friday’ Has $3.1 Million"""
+title: "Box Office: ‘Weapons’ Makes $5.7 Million in Previews, ‘Freakier Friday’ Has $3.1 Million"
 date: 2025-08-08 15:18:51 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: lindsay_lohan
 source: variety_alt
-source_url: "https://variety.com/2025/film/box-office/box-office-weapons-previews-freakier-friday-1236481771/"""
+source_url: "https://variety.com/2025/film/box-office/box-office-weapons-previews-freakier-friday-1236481771/"
 mentions: {'lindsay_lohan': 2}
 ---
 

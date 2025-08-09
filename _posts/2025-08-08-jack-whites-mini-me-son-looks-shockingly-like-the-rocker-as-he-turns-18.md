@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Jack White's mini-me son looks SHOCKINGLY like the rocker as he turns 18"""
+title: "Jack White's mini-me son looks SHOCKINGLY like the rocker as he turns 18"
 date: 2025-08-08 23:16:47 +0000
 categories: gossip
 tags: ['jack-white', 'source-daily_mail', 'drama-rising']
 drama_score: 4
 primary_celebrity: jack_white
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14984483/Jack-Whites-son-looks-like-rocker-turns-18.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"""
+source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14984483/Jack-Whites-son-looks-like-rocker-turns-18.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
 mentions: {'jack_white': 4}
 ---
 

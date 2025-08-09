@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Katy Perry Shares Pic of Bloody Injury After Onstage Mishap"""
+title: "Katy Perry Shares Pic of Bloody Injury After Onstage Mishap"
 date: 2025-08-07 05:26:22 +0000
 categories: gossip
 tags: ['katy-perry', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: katy_perry
 source: e_news
-source_url: "https://www.eonline.com/news/1420864/katy-perrys-bloody-knee-injury-photo?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420864/katy-perrys-bloody-knee-injury-photo?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'katy_perry': 6}
 ---
 
