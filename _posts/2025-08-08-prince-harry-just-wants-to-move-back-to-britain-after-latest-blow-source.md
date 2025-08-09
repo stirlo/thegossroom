@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prince Harry Just Wants To 'Move Back To Britain" After Latest Blow: SOURCE"
+title: "Prince Harry Just Wants To Move Back To Britain After Latest Blow: SOURCE"
 date: 2025-08-08 14:19:49 +0000
 categories: gossip
 tags: ['prince-harry', 'source-perez_hilton', 'drama-hot']
