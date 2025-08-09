@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Miranda and Steve's Relationship Timeline: From 'SATC" to 'And Just Like That"
+title: "Miranda and Steves Relationship Timeline: From SATC to And Just Like That"
 date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-us_weekly', 'drama-rising']
