@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Michael Ausiello’s Unproduced Childhood Soap Opera Sets NYC Live Reading With Bowen Yang, Ana Gasteyer, Jim Parsons & More""
+title: "Michael Ausiello’s Unproduced Childhood Soap Opera Sets NYC Live Reading With Bowen Yang, Ana Gasteyer, Jim Parsons & More"""
 date: 2025-08-07 17:19:25 +0000
 categories: gossip
 tags: ['bowen-yang', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: bowen_yang
 source: deadline
-source_url: "https://deadline.com/2025/08/bowen-yang-ana-gasteyer-michael-ausiello-soap-opera-1236481351/""
+source_url: "https://deadline.com/2025/08/bowen-yang-ana-gasteyer-michael-ausiello-soap-opera-1236481351/"""
 mentions: {'bowen_yang': 4, 'rachel_dratch': 2}
 ---
 

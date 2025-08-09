@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Caitlin Clark and 13 more impact WNBA players for playoff (or future) success""
+title: "Caitlin Clark and 13 more impact WNBA players for playoff (or future) success"""
 date: 2025-08-08 13:36:48 +0000
 categories: gossip
 tags: ['caitlin-clark', 'source-espn', 'drama-mild']
 drama_score: 1
 primary_celebrity: caitlin_clark
 source: espn
-source_url: "https://www.espn.com/wnba/story/_/id/45922277/wnba-2025-impact-players-all-13-teams-end-season-success-caitlin-clark""
+source_url: "https://www.espn.com/wnba/story/_/id/45922277/wnba-2025-impact-players-all-13-teams-end-season-success-caitlin-clark"""
 mentions: {'caitlin_clark': 1}
 ---
 

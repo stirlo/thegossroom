@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Diddy’s Lead Attorney Says He Has ‘Not Spoken to the President’ About a Possible Pardon""
+title: "Diddy’s Lead Attorney Says He Has ‘Not Spoken to the President’ About a Possible Pardon"""
 date: 2025-08-07 15:20:34 +0000
 categories: gossip
 tags: ['diddy', 'source-billboard', 'drama-rising']
 drama_score: 2
 primary_celebrity: diddy
 source: billboard
-source_url: "https://www.billboard.com/music/music-news/diddy-lead-attorney-hasnt-spoken-trump-possible-pardon-1236038494/""
+source_url: "https://www.billboard.com/music/music-news/diddy-lead-attorney-hasnt-spoken-trump-possible-pardon-1236038494/"""
 mentions: {'diddy': 2}
 ---
 

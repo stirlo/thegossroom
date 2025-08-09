@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "'Euphoria"" Cast's Dating Histories Through the Years""
+title: "'Euphoria""" Cast's Dating Histories Through the Years"""
 date: 2025-08-09 04:26:50 +0000
 categories: gossip
 tags: ['zendaya', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: zendaya
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/pictures/euphoria-casts-dating-histories-through-the-years/""
+source_url: "https://www.usmagazine.com/celebrity-news/pictures/euphoria-casts-dating-histories-through-the-years/"""
 mentions: {'zendaya': 3}
 ---
 

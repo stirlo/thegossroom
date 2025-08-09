@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Machine Gun Kelly Details 2024 Rehab Stay in New Song: Read the Lyrics""
+title: "Machine Gun Kelly Details 2024 Rehab Stay in New Song: Read the Lyrics"""
 date: 2025-08-08 20:19:21 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: machine_gun_kelly
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/machine-gun-kelly-details-2024-rehab-stay-in-new-song-lyrics/""
+source_url: "https://www.usmagazine.com/entertainment/news/machine-gun-kelly-details-2024-rehab-stay-in-new-song-lyrics/"""
 mentions: {'machine_gun_kelly': 6}
 ---
 

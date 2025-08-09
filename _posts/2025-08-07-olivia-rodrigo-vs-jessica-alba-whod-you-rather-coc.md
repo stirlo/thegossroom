@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Olivia Rodrigo vs. Jessica Alba Who'd You Rather?! (Coconut Cuties Edition)""
+title: "Olivia Rodrigo vs. Jessica Alba Who'd You Rather?! (Coconut Cuties Edition)"""
 date: 2025-08-07 20:19:41 +0000
 categories: gossip
 tags: ['olivia-rodrigo', 'source-tmz', 'drama-explosive']
 drama_score: 12
 primary_celebrity: olivia_rodrigo
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/olivia-rodrigo-vs-jessica-alba-whod-you-rather-coconut-cuties-edition/""
+source_url: "https://www.tmz.com/2025/08/07/olivia-rodrigo-vs-jessica-alba-whod-you-rather-coconut-cuties-edition/"""
 mentions: {'olivia_rodrigo': 12}
 ---
 

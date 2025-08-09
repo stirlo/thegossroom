@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Lindsay Lohan and Jamie Lee Curtis’ sweetest moments while promoting ‘Freakier Friday’""
+title: "Lindsay Lohan and Jamie Lee Curtis’ sweetest moments while promoting ‘Freakier Friday’"""
 date: 2025-08-08 20:19:23 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-page_six', 'drama-rising']
 drama_score: 4
 primary_celebrity: lindsay_lohan
 source: page_six
-source_url: "https://pagesix.com/video/lindsay-lohan-and-jamie-lee-curtis-sweetest-moments-while-promoting-freakier-friday/""
+source_url: "https://pagesix.com/video/lindsay-lohan-and-jamie-lee-curtis-sweetest-moments-while-promoting-freakier-friday/"""
 mentions: {'lindsay_lohan': 4}
 ---
 

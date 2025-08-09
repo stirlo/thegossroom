@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Diddy May Seek Home Confinement Instead of Prison, Attorney Says""
+title: "Diddy May Seek Home Confinement Instead of Prison, Attorney Says"""
 date: 2025-08-08 16:20:31 +0000
 categories: gossip
 tags: ['diddy', 'source-us_weekly', 'drama-explosive']
 drama_score: 12
 primary_celebrity: diddy
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/diddy-may-seek-home-confinement-instead-of-prison-sentence/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/diddy-may-seek-home-confinement-instead-of-prison-sentence/"""
 mentions: {'diddy': 12}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Matty Healy Consoles Mom Denise Welch After Taylor Swift Comments""
+title: "Matty Healy Consoles Mom Denise Welch After Taylor Swift Comments"""
 date: 2025-08-02 18:24:24 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/matty-healy-consoles-mom-denise-welch-after-taylor-swift-comments/""
+source_url: "https://www.usmagazine.com/celebrity-moms/news/matty-healy-consoles-mom-denise-welch-after-taylor-swift-comments/"""
 mentions: {'taylor_swift': 18}
 ---
 

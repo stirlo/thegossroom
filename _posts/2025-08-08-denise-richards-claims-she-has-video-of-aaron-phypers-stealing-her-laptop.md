@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Denise Richards Claims She Has Video of Aaron Phypers Stealing Her Laptop""
+title: "Denise Richards Claims She Has Video of Aaron Phypers Stealing Her Laptop"""
 date: 2025-08-08 18:24:13 +0000
 categories: gossip
 tags: ['denise-richards', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: denise_richards
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/denise-richards-claims-video-aaron-phypers-stealing-laptop/""
+source_url: "https://www.tmz.com/2025/08/08/denise-richards-claims-video-aaron-phypers-stealing-laptop/"""
 mentions: {'denise_richards': 6}
 ---
 

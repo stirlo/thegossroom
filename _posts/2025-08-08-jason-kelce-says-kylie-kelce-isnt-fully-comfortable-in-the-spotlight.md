@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Jason Kelce Says Kylie Kelce Isn’t ‘Fully’ Comfortable in the Spotlight""
+title: "Jason Kelce Says Kylie Kelce Isn’t ‘Fully’ Comfortable in the Spotlight"""
 date: 2025-08-08 03:41:23 +0000
 categories: gossip
 tags: ['kelce', 'source-us_weekly', 'drama-explosive']
 drama_score: 24
 primary_celebrity: kelce
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/jason-kelce-reveals-kylie-kelce-isnt-fully-comfortable-with-fame/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/jason-kelce-reveals-kylie-kelce-isnt-fully-comfortable-with-fame/"""
 mentions: {'jason_kelce': 6, 'kelce': 15, 'travis_kelce': 3}
 ---
 

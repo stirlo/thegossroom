@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Katy Perry shows off brutally scraped knees she sustained during her ‘Lifetimes’ tour""
+title: "Katy Perry shows off brutally scraped knees she sustained during her ‘Lifetimes’ tour"""
 date: 2025-08-09 01:21:01 +0000
 categories: gossip
 tags: ['katy-perry', 'source-page_six', 'drama-rising']
 drama_score: 2
 primary_celebrity: katy_perry
 source: page_six
-source_url: "https://pagesix.com/2025/08/08/entertainment/katy-perry-shows-off-brutally-scraped-knees-she-sustained-during-lifetimes-tour/""
+source_url: "https://pagesix.com/2025/08/08/entertainment/katy-perry-shows-off-brutally-scraped-knees-she-sustained-during-lifetimes-tour/"""
 mentions: {'katy_perry': 2}
 ---
 

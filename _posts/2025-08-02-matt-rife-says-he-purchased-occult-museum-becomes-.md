@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Matt Rife Says He Purchased Occult Museum, Becomes Guardian of Haunted Annabelle Doll""
+title: "Matt Rife Says He Purchased Occult Museum, Becomes Guardian of Haunted Annabelle Doll"""
 date: 2025-08-02 11:14:48 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-tmz', 'drama-rising']
 drama_score: 3
 primary_celebrity: of_the
 source: tmz
-source_url: "https://www.tmz.com/2025/08/01/matt-rife-says-he-purchased-occult-museum/""
+source_url: "https://www.tmz.com/2025/08/01/matt-rife-says-he-purchased-occult-museum/"""
 mentions: {'of_the': 3}
 ---
 

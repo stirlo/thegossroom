@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Gunna, Lucy Dacus, Ethel Cain, and All the Songs You Need to Know This Week""
+title: "Gunna, Lucy Dacus, Ethel Cain, and All the Songs You Need to Know This Week"""
 date: 2025-08-08 18:24:23 +0000
 categories: gossip
 tags: ['gunna', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: gunna
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-features/gunna-lucy-dacus-ethel-cain-songs-you-need-to-know-1235403736/""
+source_url: "https://www.rollingstone.com/music/music-features/gunna-lucy-dacus-ethel-cain-songs-you-need-to-know-1235403736/"""
 mentions: {'gunna': 2}
 ---
 

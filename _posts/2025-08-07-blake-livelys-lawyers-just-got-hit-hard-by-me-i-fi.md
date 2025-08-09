@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Blake Lively's Lawyers Just Got Hit HARD - By Me!!! I Filed Two New Legal Actions! And I'm Not Backing Down! Let's Get Into It All HERE! | Perez Hilton""
+title: "Blake Lively's Lawyers Just Got Hit HARD - By Me!!! I Filed Two New Legal Actions! And I'm Not Backing Down! Let's Get Into It All HERE! | Perez Hilton"""
 date: 2025-08-07 05:26:21 +0000
 categories: gossip
 tags: ['blake-lively', 'source-perez_hilton', 'drama-hot']
 drama_score: 9
 primary_celebrity: blake_lively
 source: perez_hilton
-source_url: "https://perezhilton.com/blake-livelys-lawyers-just-got-hit-hard-by-me-i-filed-two-new-legal-actions-and-im-not-backing-down-lets-get-into-it-all-here-perez-hilton/""
+source_url: "https://perezhilton.com/blake-livelys-lawyers-just-got-hit-hard-by-me-i-filed-two-new-legal-actions-and-im-not-backing-down-lets-get-into-it-all-here-perez-hilton/"""
 mentions: {'blake_lively': 9}
 ---
 

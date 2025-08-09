@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Pamela Anderson's Makeup-Free Photos Since She Started Going Natural""
+title: "Pamela Anderson's Makeup-Free Photos Since She Started Going Natural"""
 date: 2025-08-08 22:16:33 +0000
 categories: gossip
 tags: ['pamela-anderson', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: pamela_anderson
 source: us_weekly
-source_url: "https://www.usmagazine.com/stylish/pictures/pamela-andersons-makeup-free-photos-since-she-started-going-natural/""
+source_url: "https://www.usmagazine.com/stylish/pictures/pamela-andersons-makeup-free-photos-since-she-started-going-natural/"""
 mentions: {'pamela_anderson': 6}
 ---
 

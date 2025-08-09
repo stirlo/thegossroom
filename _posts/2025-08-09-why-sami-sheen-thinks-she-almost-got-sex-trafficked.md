@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Why Sami Sheen Thinks She “Almost Got Sex-Trafficked”""
+title: "Why Sami Sheen Thinks She “Almost Got Sex-Trafficked”"""
 date: 2025-08-09 01:20:56 +0000
 categories: gossip
 tags: ['denise-richards', 'source-e_news', 'drama-rising']
 drama_score: 3
 primary_celebrity: denise_richards
 source: e_news
-source_url: "https://www.eonline.com/news/1420964/sami-sheen-thinks-she-was-almost-sex-trafficked?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420964/sami-sheen-thinks-she-was-almost-sex-trafficked?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'denise_richards': 3}
 ---
 

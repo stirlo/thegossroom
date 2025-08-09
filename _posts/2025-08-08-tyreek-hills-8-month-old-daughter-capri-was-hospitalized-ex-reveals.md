@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Tyreek Hill's 8-Month-Old Daughter Capri Was Hospitalized, Ex Reveals""
+title: "Tyreek Hill's 8-Month-Old Daughter Capri Was Hospitalized, Ex Reveals"""
 date: 2025-08-08 15:18:50 +0000
 categories: gossip
 tags: ['super', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: super
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/tyreek-hills-daughter-capri-hospitalized-after-scary-incident/""
+source_url: "https://www.usmagazine.com/celebrity-moms/news/tyreek-hills-daughter-capri-hospitalized-after-scary-incident/"""
 mentions: {'super': 3}
 ---
 

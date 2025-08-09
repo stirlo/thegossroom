@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brooke Hogan Recalls Hulk Hogan's ‘Hurtful’ and 'Callous"" Comments""
+title: "Brooke Hogan Recalls Hulk Hogan's ‘Hurtful’ and 'Callous""" Comments"""
 date: 2025-08-07 12:38:44 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 24
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-recalls-hulk-hogans-hurtful-final-words-to-her/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-recalls-hulk-hogans-hurtful-final-words-to-her/"""
 mentions: {'brooke_hogan': 6, 'hogan': 12, 'hulk_hogan': 6}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Pete Davidson Says the ‘SNL50’ Audience Was ‘Terrible’: ‘It’s Just Famous People, and Famous People Only Like Themselves’""
+title: "Pete Davidson Says the ‘SNL50’ Audience Was ‘Terrible’: ‘It’s Just Famous People, and Famous People Only Like Themselves’"""
 date: 2025-08-08 13:36:39 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-variety_alt', 'drama-explosive']
 drama_score: 18
 primary_celebrity: pete_davidson
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/pete-davidson-snl50-audience-terrible-just-famous-people-1236482372/""
+source_url: "https://variety.com/2025/tv/news/pete-davidson-snl50-audience-terrible-just-famous-people-1236482372/"""
 mentions: {'kardashian': 2, 'kim_kardashian': 6, 'pete_davidson': 8, 'saturday_night_live': 2}
 ---
 

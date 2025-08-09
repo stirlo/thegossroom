@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "10 Great New Shows to Watch This Weekend on Netflix, Prime Video, HBO Max, Hulu and More""
+title: "10 Great New Shows to Watch This Weekend on Netflix, Prime Video, HBO Max, Hulu and More"""
 date: 2025-08-08 21:16:07 +0000
 categories: gossip
 tags: ['jenna-ortega', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: jenna_ortega
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/best-new-shows-to-watch-on-netflix-hbo-max-prime-video-hulu-and-more/""
+source_url: "https://www.usmagazine.com/entertainment/news/best-new-shows-to-watch-on-netflix-hbo-max-prime-video-hulu-and-more/"""
 mentions: {'jenna_ortega': 6}
 ---
 

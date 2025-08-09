@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Tom Brady Statue Erected At Gillette Stadium""
+title: "Tom Brady Statue Erected At Gillette Stadium"""
 date: 2025-08-08 23:16:38 +0000
 categories: gossip
 tags: ['tom-brady', 'source-tmz', 'drama-explosive']
 drama_score: 15
 primary_celebrity: tom_brady
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/tom-brady-statue-unveil-gillette-stadium-patriots/""
+source_url: "https://www.tmz.com/2025/08/08/tom-brady-statue-unveil-gillette-stadium-patriots/"""
 mentions: {'bowl': 3, 'super': 3, 'super_bowl': 3, 'tom_brady': 6}
 ---
 

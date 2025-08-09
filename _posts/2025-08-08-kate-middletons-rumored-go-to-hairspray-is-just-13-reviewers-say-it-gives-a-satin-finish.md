@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Kate Middleton’s Rumored Go-To Hairspray Is Just $13 — Reviewers Say It Gives a ‘Satin Finish’""
+title: "Kate Middleton’s Rumored Go-To Hairspray Is Just $13 — Reviewers Say It Gives a ‘Satin Finish’"""
 date: 2025-08-08 22:16:33 +0000
 categories: gossip
 tags: ['kate-middleton', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: kate_middleton
 source: us_weekly
-source_url: "https://www.usmagazine.com/shopping/news/kate-middleton-loreal-elnett-hairspray-amazon/""
+source_url: "https://www.usmagazine.com/shopping/news/kate-middleton-loreal-elnett-hairspray-amazon/"""
 mentions: {'kate_middleton': 6}
 ---
 

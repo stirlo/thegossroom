@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Why Pete Davidson Says SNL50 Audience Was Simply “Terrible”""
+title: "Why Pete Davidson Says SNL50 Audience Was Simply “Terrible”"""
 date: 2025-08-08 16:20:28 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-e_news', 'drama-explosive']
 drama_score: 15
 primary_celebrity: pete_davidson
 source: e_news
-source_url: "https://www.eonline.com/news/1420930/pete-davidson-cals-snl50-audience-terrible?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420930/pete-davidson-cals-snl50-audience-terrible?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'pete_davidson': 12, 'saturday_night_live': 3}
 ---
 

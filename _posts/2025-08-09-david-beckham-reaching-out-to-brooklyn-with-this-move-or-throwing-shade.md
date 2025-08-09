@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "David Beckham Reaching Out To Brooklyn With This Move? Or Throwing Shade??""
+title: "David Beckham Reaching Out To Brooklyn With This Move? Or Throwing Shade??"""
 date: 2025-08-09 01:20:55 +0000
 categories: gossip
 tags: ['brooklyn-beckham', 'source-perez_hilton', 'drama-rising']
 drama_score: 3
 primary_celebrity: brooklyn_beckham
 source: perez_hilton
-source_url: "https://perezhilton.com/david-beckham-reaching-out-brooklyn-instagram-post-family-feud-nicola-peltz-shade/""
+source_url: "https://perezhilton.com/david-beckham-reaching-out-brooklyn-instagram-post-family-feud-nicola-peltz-shade/"""
 mentions: {'brooklyn_beckham': 3}
 ---
 

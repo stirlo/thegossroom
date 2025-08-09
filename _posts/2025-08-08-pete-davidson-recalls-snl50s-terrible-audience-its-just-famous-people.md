@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Pete Davidson Recalls ‘SNL50’s “Terrible Audience”: “It’s Just Famous People”""
+title: "Pete Davidson Recalls ‘SNL50’s “Terrible Audience”: “It’s Just Famous People”"""
 date: 2025-08-08 21:16:09 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-deadline', 'drama-explosive']
 drama_score: 10
 primary_celebrity: pete_davidson
 source: deadline
-source_url: "https://deadline.com/2025/08/pete-davidson-recalls-snl50-terrible-audience-1236482676/""
+source_url: "https://deadline.com/2025/08/pete-davidson-recalls-snl50-terrible-audience-1236482676/"""
 mentions: {'pete_davidson': 8, 'saturday_night_live': 2}
 ---
 

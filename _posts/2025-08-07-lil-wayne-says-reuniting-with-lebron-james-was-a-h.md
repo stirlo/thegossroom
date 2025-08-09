@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Lil Wayne Says Reuniting With LeBron James Was a ‘Huge Full-Circle Moment’ After Meeting NBA Legend as Teen""
+title: "Lil Wayne Says Reuniting With LeBron James Was a ‘Huge Full-Circle Moment’ After Meeting NBA Legend as Teen"""
 date: 2025-08-07 22:18:23 +0000
 categories: gossip
 tags: ['lebron-james', 'source-billboard', 'drama-hot']
 drama_score: 6
 primary_celebrity: lebron_james
 source: billboard
-source_url: "https://www.billboard.com/music/rb-hip-hop/lil-wayne-reunion-lebron-james-1236038950/""
+source_url: "https://www.billboard.com/music/rb-hip-hop/lil-wayne-reunion-lebron-james-1236038950/"""
 mentions: {'lebron_james': 2, 'lil_wayne': 2, 'weezy': 2}
 ---
 

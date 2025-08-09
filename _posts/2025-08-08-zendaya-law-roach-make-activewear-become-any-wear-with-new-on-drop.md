@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Zendaya & Law Roach Make Activewear Become ‘Any-Wear’ With New On Drop""
+title: "Zendaya & Law Roach Make Activewear Become ‘Any-Wear’ With New On Drop"""
 date: 2025-08-08 17:13:48 +0000
 categories: gossip
 tags: ['zendaya', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: zendaya
 source: rolling_stone
-source_url: "https://www.rollingstone.com/product-recommendations/style/zendaya-on-running-sneakers-where-to-buy-online-1235403634/""
+source_url: "https://www.rollingstone.com/product-recommendations/style/zendaya-on-running-sneakers-where-to-buy-online-1235403634/"""
 mentions: {'zendaya': 2}
 ---
 

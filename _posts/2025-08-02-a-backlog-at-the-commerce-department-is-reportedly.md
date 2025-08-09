@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "A backlog at the Commerce Department is reportedly stalling Nvidia’s H20 chip licenses""
+title: "A backlog at the Commerce Department is reportedly stalling Nvidia’s H20 chip licenses"""
 date: 2025-08-02 11:15:23 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-techcrunch', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: techcrunch
-source_url: "https://techcrunch.com/2025/08/01/a-backlog-at-the-commerce-department-is-reportedly-stalling-nvidias-h20-chip-licenses/""
+source_url: "https://techcrunch.com/2025/08/01/a-backlog-at-the-commerce-department-is-reportedly-stalling-nvidias-h20-chip-licenses/"""
 mentions: {'trump': 2}
 ---
 

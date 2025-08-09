@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Machine Gun Kelly Reveals Super Bowl Conversation With Taylor Swift""
+title: "Machine Gun Kelly Reveals Super Bowl Conversation With Taylor Swift"""
 date: 2025-08-09 03:18:00 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 51
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/machine-gun-kelly-details-taylor-swift-super-bowl-chat/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/machine-gun-kelly-details-taylor-swift-super-bowl-chat/"""
 mentions: {'bowl': 6, 'kelce': 6, 'machine_gun_kelly': 6, 'super': 6, 'super_bowl': 6, 'taylor_swift': 18, 'travis_kelce': 3}
 ---
 

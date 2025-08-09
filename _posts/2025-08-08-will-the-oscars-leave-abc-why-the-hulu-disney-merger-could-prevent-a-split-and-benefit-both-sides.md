@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Will the Oscars Leave ABC? Why the Hulu-Disney+ Merger Could Prevent a Split and Benefit Both Sides""
+title: "Will the Oscars Leave ABC? Why the Hulu-Disney+ Merger Could Prevent a Split and Benefit Both Sides"""
 date: 2025-08-08 20:19:21 +0000
 categories: gossip
 tags: ['awards', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: awards
 source: variety_alt
-source_url: "https://variety.com/2025/film/awards/abc-oscars-hulu-integration-rights-deal-1236480917/""
+source_url: "https://variety.com/2025/film/awards/abc-oscars-hulu-integration-rights-deal-1236480917/"""
 mentions: {'awards': 2, 'oscars': 2}
 ---
 

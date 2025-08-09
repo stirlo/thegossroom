@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Sydney Sweeney's Brother Makes \"Good Jeans\"" Joke After Backlash""
+title: "Sydney Sweeney's Brother Makes \"Good Jeans\""" Joke After Backlash"""
 date: 2025-08-07 18:28:03 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: sydney_sweeney
 source: e_news
-source_url: "https://www.eonline.com/news/1420884/sydney-sweeneys-brother-american-eagle-controversy?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420884/sydney-sweeneys-brother-american-eagle-controversy?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'sydney_sweeney': 6}
 ---
 

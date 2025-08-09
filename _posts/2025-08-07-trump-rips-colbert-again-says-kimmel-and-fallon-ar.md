@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Trump Rips Colbert Again, Says Kimmel and Fallon Are Next to Be Canceled""
+title: "Trump Rips Colbert Again, Says Kimmel and Fallon Are Next to Be Canceled"""
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['trump', 'source-tmz', 'drama-explosive']
 drama_score: 12
 primary_celebrity: trump
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/trump-rips-stephen-colbert-again/""
+source_url: "https://www.tmz.com/2025/08/06/trump-rips-stephen-colbert-again/"""
 mentions: {'stephen_colbert': 3, 'trump': 9}
 ---
 

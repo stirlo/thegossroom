@@ -1,18 +1,18 @@
 ---
 
 layout: post
-title: "Blake Lively rips blogger Perez Hilton for posting more than 500 ‘disparaging’ stories about Justin Baldoni feud""
+title: "Blake Lively rips blogger Perez Hilton for posting more than 500 ‘disparaging’ stories about Justin Baldoni feud"""
 date: 2025-08-07 05:26:27 +0000
 categories: gossip
 tags: ['blake-lively', 'source-page_six', 'drama-rising']
 drama_score: 4
 primary_celebrity: blake_lively
 source: page_six
-source_url: "https://pagesix.com/2025/08/06/celebrity-news/blake-lively-rips-blogger-perez-hilton-for-posting-more-than-500-disparaging-stories-about-justin-baldoni-feud/""
+source_url: "https://pagesix.com/2025/08/06/celebrity-news/blake-lively-rips-blogger-perez-hilton-for-posting-more-than-500-disparaging-stories-about-justin-baldoni-feud/"""
 mentions: {'blake_lively': 2, 'justin_baldoni': 2}
 ---
 
-"The majority of the content Mr. Hilton posts about Ms. Lively are disparaging,"" the "It Ends With Us"" actress argued in court docs Page Six obtained.
+"The majority of the content Mr. Hilton posts about Ms. Lively are disparaging,""" the "It Ends With Us""" actress argued in court docs Page Six obtained.
 
 **Drama Score:** 4 | **Level:** RISING **Celebrities Mentioned:** Blake Lively, Justin Baldoni [Read full article at Page Six](https://pagesix.com/2025/08/06/celebrity-news/blake-lively-rips-blogger-perez-hilton-for-posting-more-than-500-disparaging-stories-about-justin-baldoni-feud/)
 

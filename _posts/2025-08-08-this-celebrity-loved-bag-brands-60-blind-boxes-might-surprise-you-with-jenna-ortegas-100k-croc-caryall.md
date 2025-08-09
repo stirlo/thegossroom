@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "This Celebrity-Loved Bag Brand’s $60 Blind Boxes Might Surprise You with Jenna Ortega’s $100K Croc Caryall""
+title: "This Celebrity-Loved Bag Brand’s $60 Blind Boxes Might Surprise You with Jenna Ortega’s $100K Croc Caryall"""
 date: 2025-08-08 22:16:34 +0000
 categories: gossip
 tags: ['jenna-ortega', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 4
 primary_celebrity: jenna_ortega
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/news/general-news/aupen-celebrity-bag-brand-rouxe-blind-boxes-rare-croc-handbag-1236340473/""
+source_url: "https://www.hollywoodreporter.com/news/general-news/aupen-celebrity-bag-brand-rouxe-blind-boxes-rare-croc-handbag-1236340473/"""
 mentions: {'jenna_ortega': 4}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Inside Ana de Armas"" Life in Small Town Vermont: Tom Cruise Visits, More""
+title: "Inside Ana de Armas""" Life in Small Town Vermont: Tom Cruise Visits, More"""
 date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: of_the
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/ana-de-armas-vermont-life-tom-cruise-visits-small-town-living/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/ana-de-armas-vermont-life-tom-cruise-visits-small-town-living/"""
 mentions: {'of_the': 3}
 ---
 

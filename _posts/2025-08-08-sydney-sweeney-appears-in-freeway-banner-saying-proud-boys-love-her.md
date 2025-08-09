@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Sydney Sweeney Appears In Freeway Banner Saying Proud Boys ‘Love’ Her""
+title: "Sydney Sweeney Appears In Freeway Banner Saying Proud Boys ‘Love’ Her"""
 date: 2025-08-08 12:37:58 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: sydney_sweeney
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/sydney-sweeney-proud-boys-freeway-banner-blue-genes-los-angeles/""
+source_url: "https://www.tmz.com/2025/08/08/sydney-sweeney-proud-boys-freeway-banner-blue-genes-los-angeles/"""
 mentions: {'sydney_sweeney': 6}
 ---
 

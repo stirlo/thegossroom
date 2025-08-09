@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Did Megan Fox Cowrite a Song on MGK's New Album?""
+title: "Did Megan Fox Cowrite a Song on MGK's New Album?"""
 date: 2025-08-08 19:14:30 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: machine_gun_kelly
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/did-megan-fox-write-a-song-on-mgks-lost-americana-album/""
+source_url: "https://www.usmagazine.com/entertainment/news/did-megan-fox-write-a-song-on-mgks-lost-americana-album/"""
 mentions: {'machine_gun_kelly': 3}
 ---
 

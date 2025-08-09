@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Olivia Rodrigo Brings Out Weezer, Korn Return After 28 Years at Lollapalooza 2025""
+title: "Olivia Rodrigo Brings Out Weezer, Korn Return After 28 Years at Lollapalooza 2025"""
 date: 2025-08-02 11:15:06 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-rolling_stone', 'drama-rising']
 drama_score: 4
 primary_celebrity: of_the
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-live-reviews/olivia-rodrigo-korn-bleachers-lollapalooza-2025-recap-1235395387/""
+source_url: "https://www.rollingstone.com/music/music-live-reviews/olivia-rodrigo-korn-bleachers-lollapalooza-2025-recap-1235395387/"""
 mentions: {'of_the': 2, 'olivia_rodrigo': 2}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Bruce Ramer on CPB Shutdown: ‘A Good Part of Public Radio and Broadcasting Will Be Out of Business’""
+title: "Bruce Ramer on CPB Shutdown: ‘A Good Part of Public Radio and Broadcasting Will Be Out of Business’"""
 date: 2025-08-02 11:14:57 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/bruce-ramer-cpb-shutdown-sad-day-public-pbs-npr-1236477111/""
+source_url: "https://variety.com/2025/tv/news/bruce-ramer-cpb-shutdown-sad-day-public-pbs-npr-1236477111/"""
 mentions: {'of_the': 2}
 ---
 

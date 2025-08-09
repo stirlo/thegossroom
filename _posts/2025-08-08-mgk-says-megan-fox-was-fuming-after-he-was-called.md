@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "MGK Says Megan Fox Was ‘Fuming’ After He Was Called ‘Such a Good Dad’""
+title: "MGK Says Megan Fox Was ‘Fuming’ After He Was Called ‘Such a Good Dad’"""
 date: 2025-08-08 01:27:48 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: machine_gun_kelly
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/machine-gun-kelly-claims-such-a-good-dad-comment-upset-megan-fox/""
+source_url: "https://www.usmagazine.com/celebrity-moms/news/machine-gun-kelly-claims-such-a-good-dad-comment-upset-megan-fox/"""
 mentions: {'machine_gun_kelly': 3}
 ---
 
