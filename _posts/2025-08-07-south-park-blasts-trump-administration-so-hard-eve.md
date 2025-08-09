@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "'South Park" Blasts Trump Administration So Hard, Even Heaven Gets ICE’d"
+title: "South Park Blasts Trump Administration So Hard, Even Heaven Gets ICEd"
 date: 2025-08-07 18:28:07 +0000
 categories: gossip
 tags: ['trump', 'source-huffpost_entertainment', 'drama-rising']
