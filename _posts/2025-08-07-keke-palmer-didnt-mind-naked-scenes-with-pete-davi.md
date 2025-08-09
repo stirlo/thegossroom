@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Keke Palmer Didn't Mind 'Naked" Scenes With Pete Davidson For New Movie!"
+title: "Keke Palmer Didnt Mind Naked Scenes With Pete Davidson For New Movie!"
 date: 2025-08-07 21:15:27 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-perez_hilton', 'drama-explosive']
