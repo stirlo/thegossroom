@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Denise Welch's 'tears" after Taylor Swift swipe: Loose Women star appears to cry in the street and is hugged by son Matty Healy after TV interview backfired"
+title: "Denise Welchs tears after Taylor Swift swipe: Loose Women star appears to cry in the street and is hugged by son Matty Healy after TV interview backfired"
 date: 2025-08-02 23:18:05 +0000
 categories: gossip
 tags: ['taylor-swift', 'music', 'pop', 'awards', 'fashion', 'dating', 'source-daily_mail', 'drama-explosive']
