@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rosie O'Donnell Spots 'Dangerous" Reason Behind Trump White House Attacking 'The View"
+title: "Rosie O'Donnell Spots Dangerous Reason Behind Trump White House Attacking 'The View"
 date: 2025-08-08 14:19:56 +0000
 categories: gossip
 tags: ['trump', 'source-huffpost_entertainment', 'drama-rising']
