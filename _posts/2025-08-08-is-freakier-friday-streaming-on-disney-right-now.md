@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Is 'Freakier Friday" Streaming on Disney+ Right Now?"
+title: "Is Freakier Friday Streaming on Disney+ Right Now?"
 date: 2025-08-08 22:16:33 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-us_weekly', 'drama-rising']
