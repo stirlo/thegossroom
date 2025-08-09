@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Eminem Opens Up About Addiction and Impact of 'Stan" Culture in New Doc"
+title: "Eminem Opens Up About Addiction and Impact of Stan Culture in New Doc"
 date: 2025-08-07 22:18:16 +0000
 categories: gossip
 tags: ['eminem', 'source-us_weekly', 'drama-explosive']
