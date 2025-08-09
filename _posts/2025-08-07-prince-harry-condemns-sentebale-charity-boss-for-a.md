@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Prince Harry condemns Sentebale charity boss for acting in the 'poorest taste" by referencing Princess Diana after she won control of duke's 'life's work" that royal fears will 'go down in flames"
+title: "Prince Harry condemns Sentebale charity boss for acting in the poorest taste by referencing Princess Diana after she won control of duke's life's work that royal fears will 'go down in flames"
 date: 2025-08-07 10:19:35 +0000
 categories: gossip
 tags: ['duke-of-sussex', 'source-daily_mail', 'drama-rising']
