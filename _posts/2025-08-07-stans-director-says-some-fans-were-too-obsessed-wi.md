@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "'Stans" Director Says Some Fans Were Too 'Obsessed" With Eminem for Project"
+title: "Stans Director Says Some Fans Were Too Obsessed With Eminem for Project"
 date: 2025-08-07 05:26:24 +0000
 categories: gossip
 tags: ['eminem', 'source-us_weekly', 'drama-hot']
