@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Idaho Case: Kaylee Goncalves" Family Fears Leak of Crime Scene Photos"
+title: "Idaho Case: Kaylee Goncalves Family Fears Leak of Crime Scene Photos"
 date: 2025-08-07 20:19:43 +0000
 categories: gossip
 tags: ['bryan-kohberger', 'source-e_news', 'drama-rising']
