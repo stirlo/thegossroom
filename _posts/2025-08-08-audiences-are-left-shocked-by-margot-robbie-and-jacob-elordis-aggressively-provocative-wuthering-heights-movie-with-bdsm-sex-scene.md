@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Audiences are left shocked by Margot Robbie and Jacob Elordi's 'aggressively provocative" Wuthering Heights movie with 'BDSM sex scene"
+title: "Audiences are left shocked by Margot Robbie and Jacob Elordi's aggressively provocative Wuthering Heights movie with BDSM sex scene"
 date: 2025-08-08 11:16:03 +0000
 categories: gossip
 tags: ['jacob-elordi', 'source-daily_mail', 'drama-rising']
