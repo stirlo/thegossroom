@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Will 'TSITP" Season 3 Feature More Taylor Swift? Jenny Han Weighs In"
+title: "Will TSITP Season 3 Feature More Taylor Swift? Jenny Han Weighs In"
 date: 2025-08-08 22:16:33 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
