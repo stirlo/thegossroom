@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Inside Ana de Armas" Life in Small Town Vermont: Tom Cruise Visits, More"
+title: "Inside Ana de Armas Life in Small Town Vermont: Tom Cruise Visits, More"
 date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-us_weekly', 'drama-rising']
