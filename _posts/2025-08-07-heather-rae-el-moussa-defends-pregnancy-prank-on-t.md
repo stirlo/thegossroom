@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Heather Rae El Moussa Defends Pregnancy 'Prank" On Tarek -- But Deletes Video Anyway!"
+title: "Heather Rae El Moussa Defends Pregnancy Prank On Tarek -- But Deletes Video Anyway!"
 date: 2025-08-07 05:26:21 +0000
 categories: gossip
 tags: ['el-moussa', 'source-perez_hilton', 'drama-explosive']
