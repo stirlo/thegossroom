@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Guess The 54 Year Old Rockin" This Hot Pink Bikini!"
+title: "Guess The 54 Year Old Rockin This Hot Pink Bikini!"
 date: 2025-08-02 11:14:48 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-tmz', 'drama-rising']
