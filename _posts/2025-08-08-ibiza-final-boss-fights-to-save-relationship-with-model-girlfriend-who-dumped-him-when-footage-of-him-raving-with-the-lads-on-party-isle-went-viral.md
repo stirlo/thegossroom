@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ibiza Final Boss fights to save relationship with model girlfriend who dumped him when footage of him raving 'with the lads" on party isle went viral"
+title: "Ibiza Final Boss fights to save relationship with model girlfriend who dumped him when footage of him raving with the lads on party isle went viral"
 date: 2025-08-08 17:13:48 +0000
 categories: gossip
 tags: ['bowl', 'source-daily_mail', 'drama-rising']
