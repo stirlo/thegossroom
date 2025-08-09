@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Liam Neeson Gives Pamela Anderson a Forehead Kiss in 'Naked Gun" Promo"
+title: "Liam Neeson Gives Pamela Anderson a Forehead Kiss in Naked Gun Promo"
 date: 2025-08-08 03:41:23 +0000
 categories: gossip
 tags: ['liam', 'source-us_weekly', 'drama-explosive']
