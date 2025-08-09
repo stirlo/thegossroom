@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Machine Gun Kelly Reveals Why Megan Fox Was Fuming When People Called Him A 'Good Dad"
+title: "Machine Gun Kelly Reveals Why Megan Fox Was Fuming When People Called Him A 'Good Dad""
 date: 2025-08-09 01:21:01 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-huffpost_entertainment', 'drama-rising']
 drama_score: 2
 primary_celebrity: machine_gun_kelly
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/megan-fox-machine-gun-kelly-good-dad_n_68960731e4b0182dc1a41556"
+source_url: "https://www.huffpost.com/entry/megan-fox-machine-gun-kelly-good-dad_n_68960731e4b0182dc1a41556""
 mentions: {'machine_gun_kelly': 2}
 ---
 

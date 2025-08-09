@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "How Percy Hynes White’s Xavier Thorpe Was Written Off Netflix’s ‘Wednesday’"
+title: "How Percy Hynes White’s Xavier Thorpe Was Written Off Netflix’s ‘Wednesday’""
 date: 2025-08-08 19:14:32 +0000
 categories: gossip
 tags: ['jenna-ortega', 'source-deadline', 'drama-rising']
 drama_score: 4
 primary_celebrity: jenna_ortega
 source: deadline
-source_url: "https://deadline.com/2025/08/percy-hynes-white-xavier-wednesday-season-2-exit-explained-1236482537/"
+source_url: "https://deadline.com/2025/08/percy-hynes-white-xavier-wednesday-season-2-exit-explained-1236482537/""
 mentions: {'jenna_ortega': 4}
 ---
 

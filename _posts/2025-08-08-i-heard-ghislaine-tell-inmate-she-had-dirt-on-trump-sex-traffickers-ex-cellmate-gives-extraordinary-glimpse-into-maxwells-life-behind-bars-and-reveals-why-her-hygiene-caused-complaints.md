@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "I heard Ghislaine tell inmate she had dirt on Trump: Sex trafficker's ex-cellmate gives extraordinary glimpse into Maxwell's life behind bars... and reveals why her hygiene caused complaints"
+title: "I heard Ghislaine tell inmate she had dirt on Trump: Sex trafficker's ex-cellmate gives extraordinary glimpse into Maxwell's life behind bars... and reveals why her hygiene caused complaints""
 date: 2025-08-08 22:16:39 +0000
 categories: gossip
 tags: ['ghislaine-maxwell', 'source-daily_mail', 'drama-rising']
 drama_score: 4
 primary_celebrity: ghislaine_maxwell
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14984325/Ghislaine-Maxwell-inmate-dirt-Donald-Trump-Sex-traffickers-cellmate-reveals-Epstein.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
+source_url: "https://www.dailymail.co.uk/news/article-14984325/Ghislaine-Maxwell-inmate-dirt-Donald-Trump-Sex-traffickers-cellmate-reveals-Epstein.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
 mentions: {'ghislaine_maxwell': 2, 'trump': 2}
 ---
 

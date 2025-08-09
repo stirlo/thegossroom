@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Lady Gaga and Bruno Mars lead VMA nominations"
+title: "Lady Gaga and Bruno Mars lead VMA nominations""
 date: 2025-08-07 05:26:35 +0000
 categories: gossip
 tags: ['ariana-grande', 'source-bbc_entertainment', 'drama-hot']
 drama_score: 6
 primary_celebrity: ariana_grande
 source: bbc_entertainment
-source_url: "https://www.bbc.com/news/articles/c1dxre1nz0eo?at_medium=RSS&campaign=rss"
+source_url: "https://www.bbc.com/news/articles/c1dxre1nz0eo?at_medium=RSS&campaign=rss""
 mentions: {'ariana_grande': 3, 'kendrick_lamar': 1, 'sabrina_carpenter': 2}
 ---
 

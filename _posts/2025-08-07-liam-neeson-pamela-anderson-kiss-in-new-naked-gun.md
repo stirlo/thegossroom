@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Liam Neeson & Pamela Anderson Kiss In New Naked Gun Promo! Leaning Into It!"
+title: "Liam Neeson & Pamela Anderson Kiss In New Naked Gun Promo! Leaning Into It!""
 date: 2025-08-07 17:19:20 +0000
 categories: gossip
 tags: ['liam', 'source-perez_hilton', 'drama-explosive']
 drama_score: 30
 primary_celebrity: liam
 source: perez_hilton
-source_url: "https://perezhilton.com/liam-neeson-kiss-pamela-anderson-in-new-naked-gun-promo/"
+source_url: "https://perezhilton.com/liam-neeson-kiss-pamela-anderson-in-new-naked-gun-promo/""
 mentions: {'liam': 12, 'liam_neeson': 9, 'pamela_anderson': 9}
 ---
 

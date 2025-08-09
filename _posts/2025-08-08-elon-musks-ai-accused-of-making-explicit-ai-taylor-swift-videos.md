@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Elon Musk's AI accused of making explicit AI Taylor Swift videos"
+title: "Elon Musk's AI accused of making explicit AI Taylor Swift videos""
 date: 2025-08-08 23:16:53 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-bbc_entertainment', 'drama-hot']
 drama_score: 9
 primary_celebrity: taylor_swift
 source: bbc_entertainment
-source_url: "https://www.bbc.com/news/articles/cwye62e1ndjo?at_medium=RSS&at_campaign=rss"
+source_url: "https://www.bbc.com/news/articles/cwye62e1ndjo?at_medium=RSS&at_campaign=rss""
 mentions: {'elon_musk': 3, 'taylor_swift': 6}
 ---
 
-Grok Imagine's "spicy" mode made explicit videos of Taylor Swift, according to The Verge and Gizmodo.
+Grok Imagine's "spicy"" mode made explicit videos of Taylor Swift, according to The Verge and Gizmodo.
 
 **Drama Score:** 9 | **Level:** HOT
 

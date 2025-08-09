@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Bad Bunny Is Causing a Surge in Tinder Use During His Puerto Rico Residency"
+title: "Bad Bunny Is Causing a Surge in Tinder Use During His Puerto Rico Residency""
 date: 2025-08-07 20:19:55 +0000
 categories: gossip
 tags: ['bad-bunny', 'source-billboard', 'drama-rising']
 drama_score: 4
 primary_celebrity: bad_bunny
 source: billboard
-source_url: "https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto-rico-residency-1236038895/"
+source_url: "https://www.billboard.com/music/latin/bad-bunny-tinder-surge-puerto-rico-residency-1236038895/""
 mentions: {'bad_bunny': 4}
 ---
 

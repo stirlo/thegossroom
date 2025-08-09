@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Ben Rivers on the Locarno, Toronto-Selected ‘Mare’s Nest’ and Reinventing a Future Without Conflict, as Film Gets a Trailer (EXCLUSIVE)"
+title: "Ben Rivers on the Locarno, Toronto-Selected ‘Mare’s Nest’ and Reinventing a Future Without Conflict, as Film Gets a Trailer (EXCLUSIVE)""
 date: 2025-08-08 14:19:54 +0000
 categories: gossip
 tags: ['golden', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: golden
 source: variety_alt
-source_url: "https://variety.com/2025/film/global/mares-nest-ben-rivers-interview-trailer-1236482366/"
+source_url: "https://variety.com/2025/film/global/mares-nest-ben-rivers-interview-trailer-1236482366/""
 mentions: {'golden': 2}
 ---
 

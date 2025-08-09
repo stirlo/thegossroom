@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Brooklyn Beckham is roasted by celebrity chef for 'burning bacon" in his spaghetti carbonara"
+title: "Brooklyn Beckham is roasted by celebrity chef for 'burning bacon"" in his spaghetti carbonara""
 date: 2025-08-09 01:21:02 +0000
 categories: gossip
 tags: ['brooklyn-beckham', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: brooklyn_beckham
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14984715/Brooklyn-Beckham-chef-Aldo-Zilli-burning-bacon.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
+source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14984715/Brooklyn-Beckham-chef-Aldo-Zilli-burning-bacon.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
 mentions: {'brooklyn_beckham': 2}
 ---
 

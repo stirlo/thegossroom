@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Outside Lands 2025 Livestream: Watch Tyler, the Creator, Hozier, and Doja Cat Perform Online"
+title: "Outside Lands 2025 Livestream: Watch Tyler, the Creator, Hozier, and Doja Cat Perform Online""
 date: 2025-08-08 12:38:09 +0000
 categories: gossip
 tags: ['doja-cat', 'source-rolling_stone', 'drama-rising']
 drama_score: 4
 primary_celebrity: doja_cat
 source: rolling_stone
-source_url: "https://www.rollingstone.com/product-recommendations/streaming/watch-outside-lands-2025-music-festival-livestream-free-1235402544/"
+source_url: "https://www.rollingstone.com/product-recommendations/streaming/watch-outside-lands-2025-music-festival-livestream-free-1235402544/""
 mentions: {'doja_cat': 2, 'golden': 2}
 ---
 

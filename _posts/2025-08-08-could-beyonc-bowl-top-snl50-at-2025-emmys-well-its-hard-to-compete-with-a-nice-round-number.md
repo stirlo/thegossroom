@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Could ‘Beyoncé Bowl’ Top ‘SNL50’ at 2025 Emmys? Well, It’s Hard to Compete With a Nice, Round Number"
+title: "Could ‘Beyoncé Bowl’ Top ‘SNL50’ at 2025 Emmys? Well, It’s Hard to Compete With a Nice, Round Number""
 date: 2025-08-08 13:36:44 +0000
 categories: gossip
 tags: ['beyonce', 'source-billboard', 'drama-rising']
 drama_score: 4
 primary_celebrity: beyonce
 source: billboard
-source_url: "https://www.billboard.com/lists/beyonce-bowl-vs-snl50-2025-emmys-round-number-history/"
+source_url: "https://www.billboard.com/lists/beyonce-bowl-vs-snl50-2025-emmys-round-number-history/""
 mentions: {'beyonce': 2, 'bowl': 2}
 ---
 

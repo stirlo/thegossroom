@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Bridgerton's Corey Mylchreest Loves Being Your New Favorite Rom-Com Lead"
+title: "Bridgerton's Corey Mylchreest Loves Being Your New Favorite Rom-Com Lead""
 date: 2025-08-02 11:14:54 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: of_the
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/corey-mylchreest-talks-costar-chemistry-and-rom-com-roles/"
+source_url: "https://www.usmagazine.com/entertainment/news/corey-mylchreest-talks-costar-chemistry-and-rom-com-roles/""
 mentions: {'of_the': 3}
 ---
 

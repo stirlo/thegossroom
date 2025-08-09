@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "West Duchovny Signs with Gersh (EXCLUSIVE)"
+title: "West Duchovny Signs with Gersh (EXCLUSIVE)""
 date: 2025-08-07 21:15:31 +0000
 categories: gossip
 tags: ['jennifer-garner', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: jennifer_garner
 source: variety_alt
-source_url: "https://variety.com/2025/biz/news/west-duchovny-gersh-1236481949/"
+source_url: "https://variety.com/2025/biz/news/west-duchovny-gersh-1236481949/""
 mentions: {'jennifer_garner': 2}
 ---
 

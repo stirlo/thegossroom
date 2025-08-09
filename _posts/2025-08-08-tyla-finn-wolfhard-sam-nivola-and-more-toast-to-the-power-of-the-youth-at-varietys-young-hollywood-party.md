@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Tyla, Finn Wolfhard, Sam Nivola and More Toast to the ‘Power of the Youth’ at Variety’s Young Hollywood Party"
+title: "Tyla, Finn Wolfhard, Sam Nivola and More Toast to the ‘Power of the Youth’ at Variety’s Young Hollywood Party""
 date: 2025-08-08 20:19:21 +0000
 categories: gossip
 tags: ['finn-wolfhard', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: finn_wolfhard
 source: variety_alt
-source_url: "https://variety.com/2025/music/news/tyla-finn-wolfhard-sam-nivola-power-young-hollywood-1236482621/"
+source_url: "https://variety.com/2025/music/news/tyla-finn-wolfhard-sam-nivola-power-young-hollywood-1236482621/""
 mentions: {'finn_wolfhard': 2}
 ---
 

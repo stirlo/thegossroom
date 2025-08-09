@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Eminem Details Past Overdose, Addiction Struggles in New Documentary"
+title: "Eminem Details Past Overdose, Addiction Struggles in New Documentary""
 date: 2025-08-07 20:19:43 +0000
 categories: gossip
 tags: ['eminem', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: eminem
 source: e_news
-source_url: "https://www.eonline.com/news/1420901/eminem-details-sobriety-journey-after-drug-overdose?cmpid=rss-syndicate-genericrss-us-top_stories"
+source_url: "https://www.eonline.com/news/1420901/eminem-details-sobriety-journey-after-drug-overdose?cmpid=rss-syndicate-genericrss-us-top_stories""
 mentions: {'eminem': 6}
 ---
 

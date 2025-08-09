@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Eddie Murphy Defends ‘Norbit’ After Rumors It Cost Him Oscar For ‘Dreamgirls’: “Ain’t That Bad”"
+title: "Eddie Murphy Defends ‘Norbit’ After Rumors It Cost Him Oscar For ‘Dreamgirls’: “Ain’t That Bad”""
 date: 2025-08-09 01:21:00 +0000
 categories: gossip
 tags: ['beyonce', 'source-deadline', 'drama-rising']
 drama_score: 4
 primary_celebrity: beyonce
 source: deadline
-source_url: "https://deadline.com/2025/08/eddie-murphy-defends-norbit-cost-oscar-dreamgirls-1236482852/"
+source_url: "https://deadline.com/2025/08/eddie-murphy-defends-norbit-cost-oscar-dreamgirls-1236482852/""
 mentions: {'beyonce': 2, 'golden': 2}
 ---
 

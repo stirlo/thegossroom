@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Brooke Hogan Recalls Hulk Walking Her Down the Aisle for Wrestling Event"
+title: "Brooke Hogan Recalls Hulk Walking Her Down the Aisle for Wrestling Event""
 date: 2025-08-08 15:18:46 +0000
 categories: gossip
 tags: ['hogan', 'source-tmz', 'drama-explosive']
 drama_score: 18
 primary_celebrity: hogan
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/brooke-hogan-dad-hulk-hogan-walk-down-aisle-wrestling-wedding/"
+source_url: "https://www.tmz.com/2025/08/08/brooke-hogan-dad-hulk-hogan-walk-down-aisle-wrestling-wedding/""
 mentions: {'brooke_hogan': 6, 'hogan': 9, 'hulk_hogan': 3}
 ---
 

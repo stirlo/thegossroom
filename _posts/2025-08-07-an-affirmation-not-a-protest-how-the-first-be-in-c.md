@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘An Affirmation, Not a Protest’: How the First Be-In Changed the World"
+title: "‘An Affirmation, Not a Protest’: How the First Be-In Changed the World""
 date: 2025-08-07 15:20:34 +0000
 categories: gossip
 tags: ['golden', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: golden
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-features/great-human-be-in-1967-san-francisco-grateful-dead-1235397860/"
+source_url: "https://www.rollingstone.com/music/music-features/great-human-be-in-1967-san-francisco-grateful-dead-1235397860/""
 mentions: {'golden': 2}
 ---
 

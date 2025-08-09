@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Kendall Jenner and Gabrielle Union’s facialist shares her ‘absolute favorite’ serum to ‘lift and firm’ skin"
+title: "Kendall Jenner and Gabrielle Union’s facialist shares her ‘absolute favorite’ serum to ‘lift and firm’ skin""
 date: 2025-08-07 19:18:21 +0000
 categories: gossip
 tags: ['gabrielle-union', 'source-page_six', 'drama-hot']
 drama_score: 6
 primary_celebrity: gabrielle_union
 source: page_six
-source_url: "https://pagesix.com/2025/08/07/style/kendall-jenner-and-gabrielle-unions-facialist-shares-her-absolute-favorite-skincare-serum/"
+source_url: "https://pagesix.com/2025/08/07/style/kendall-jenner-and-gabrielle-unions-facialist-shares-her-absolute-favorite-skincare-serum/""
 mentions: {'gabrielle_union': 2, 'jenner': 2, 'kendall_jenner': 2}
 ---
 

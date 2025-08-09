@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "US and Russia 'are planning Ukraine truce deal that would cement Putin's territorial gains ahead of summit with Trump"
+title: "US and Russia 'are planning Ukraine truce deal that would cement Putin's territorial gains ahead of summit with Trump""
 date: 2025-08-08 16:20:37 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14983523/US-Russia-Ukraine-truce-deal-Putins-territorial-gains-summit-Trump.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
+source_url: "https://www.dailymail.co.uk/news/article-14983523/US-Russia-Ukraine-truce-deal-Putins-territorial-gains-summit-Trump.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
 mentions: {'trump': 2}
 ---
 

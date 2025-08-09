@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Abbey Road Music Photography Awards to Honor Anton Corbijn With Icon Award"
+title: "Abbey Road Music Photography Awards to Honor Anton Corbijn With Icon Award""
 date: 2025-08-07 07:23:01 +0000
 categories: gossip
 tags: ['awards', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: awards
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-news/abbey-road-music-photography-awards-anton-corbijn-1235402613/"
+source_url: "https://www.rollingstone.com/music/music-news/abbey-road-music-photography-awards-anton-corbijn-1235402613/""
 mentions: {'awards': 2}
 ---
 

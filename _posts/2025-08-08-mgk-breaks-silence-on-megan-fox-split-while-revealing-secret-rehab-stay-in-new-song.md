@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "MGK Breaks Silence On Megan Fox Split While Revealing Secret Rehab Stay In New Song!"
+title: "MGK Breaks Silence On Megan Fox Split While Revealing Secret Rehab Stay In New Song!""
 date: 2025-08-08 17:13:40 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-perez_hilton', 'drama-rising']
 drama_score: 3
 primary_celebrity: machine_gun_kelly
 source: perez_hilton
-source_url: "https://perezhilton.com/mgk-breaks-silence-megan-fox-split-reveals-secret-rehab-stay-new-song-treading-water/"
+source_url: "https://perezhilton.com/mgk-breaks-silence-megan-fox-split-reveals-secret-rehab-stay-new-song-treading-water/""
 mentions: {'machine_gun_kelly': 3}
 ---
 

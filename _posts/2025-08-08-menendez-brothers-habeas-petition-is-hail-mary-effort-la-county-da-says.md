@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Menendez Brothers" Habeas Petition Is 'Hail Mary" Effort, L.A. County D.A. Says"
+title: "Menendez Brothers"" Habeas Petition Is 'Hail Mary"" Effort, L.A. County D.A. Says""
 date: 2025-08-08 15:18:46 +0000
 categories: gossip
 tags: ['menendez', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: menendez
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/menendez-brothers-habeas-corpus-petition-nathan-hochman/"
+source_url: "https://www.tmz.com/2025/08/08/menendez-brothers-habeas-corpus-petition-nathan-hochman/""
 mentions: {'menendez': 6}
 ---
 

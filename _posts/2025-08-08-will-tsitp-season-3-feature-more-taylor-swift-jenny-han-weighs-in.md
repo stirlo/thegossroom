@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Will 'TSITP" Season 3 Feature More Taylor Swift? Jenny Han Weighs In"
+title: "Will 'TSITP"" Season 3 Feature More Taylor Swift? Jenny Han Weighs In""
 date: 2025-08-08 22:16:33 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 21
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/the-summer-i-turned-pretty-season-3-will-taylor-swift-songs-return/"
+source_url: "https://www.usmagazine.com/entertainment/news/the-summer-i-turned-pretty-season-3-will-taylor-swift-songs-return/""
 mentions: {'taylor_swift': 21}
 ---
 

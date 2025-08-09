@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘DAU’ Director-Artist Ilya Khrzhanovskiy to Be Feted at the 31st Sarajevo Film Festival"
+title: "‘DAU’ Director-Artist Ilya Khrzhanovskiy to Be Feted at the 31st Sarajevo Film Festival""
 date: 2025-08-02 11:14:57 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: variety_alt
-source_url: "https://variety.com/2025/film/global/dau-ilya-khrzhanovskiy-sarajevo-1236476967/"
+source_url: "https://variety.com/2025/film/global/dau-ilya-khrzhanovskiy-sarajevo-1236476967/""
 mentions: {'of_the': 2}
 ---
 

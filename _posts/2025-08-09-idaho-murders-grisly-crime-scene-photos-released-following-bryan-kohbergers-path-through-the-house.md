@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Idaho Murders: Grisly Crime Scene Photos Released, Following Bryan Kohberger's Path Through The House"
+title: "Idaho Murders: Grisly Crime Scene Photos Released, Following Bryan Kohberger's Path Through The House""
 date: 2025-08-09 03:17:58 +0000
 categories: gossip
 tags: ['bryan-kohberger', 'source-perez_hilton', 'drama-hot']
 drama_score: 9
 primary_celebrity: bryan_kohberger
 source: perez_hilton
-source_url: "https://perezhilton.com/bryan-kohberger-idaho-murder-scene-photos-moscow-police-department/"
+source_url: "https://perezhilton.com/bryan-kohberger-idaho-murder-scene-photos-moscow-police-department/""
 mentions: {'bryan_kohberger': 9}
 ---
 

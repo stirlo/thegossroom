@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Trump 'shouted at Netanyahu during phone call when Israeli PM claimed there is no widespread starvation in Gaza - and told him he had seen proof"
+title: "Trump 'shouted at Netanyahu during phone call when Israeli PM claimed there is no widespread starvation in Gaza - and told him he had seen proof""
 date: 2025-08-08 11:16:03 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14982571/Trump-shouted-Netanyahu-phone-call-Israeli-PM-claimed-no-widespread-starvation-Gaza-told-seen-proof.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
+source_url: "https://www.dailymail.co.uk/news/article-14982571/Trump-shouted-Netanyahu-phone-call-Israeli-PM-claimed-no-widespread-starvation-Gaza-told-seen-proof.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
 mentions: {'trump': 2}
 ---
 

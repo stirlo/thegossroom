@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Brooke Hogan Cried When Hulk Walked Her Down the Aisle in TV Wedding"
+title: "Brooke Hogan Cried When Hulk Walked Her Down the Aisle in TV Wedding""
 date: 2025-08-08 18:24:18 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-recalls-hulk-hogan-walking-her-down-the-aisle-on-tv/"
+source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-recalls-hulk-hogan-walking-her-down-the-aisle-on-tv/""
 mentions: {'brooke_hogan': 6, 'hogan': 9, 'hulk_hogan': 3}
 ---
 

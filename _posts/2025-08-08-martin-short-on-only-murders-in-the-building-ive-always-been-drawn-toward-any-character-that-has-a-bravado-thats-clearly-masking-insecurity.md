@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Martin Short On ‘Only Murders In The Building’: “I’ve Always Been Drawn Toward Any Character That Has A Bravado That’s Clearly Masking Insecurity”"
+title: "Martin Short On ‘Only Murders In The Building’: “I’ve Always Been Drawn Toward Any Character That Has A Bravado That’s Clearly Masking Insecurity”""
 date: 2025-08-08 19:14:32 +0000
 categories: gossip
 tags: ['martin-short', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: martin_short
 source: deadline
-source_url: "https://deadline.com/2025/08/martin-short-john-hoffmann-only-murders-in-the-building-1236482323/"
+source_url: "https://deadline.com/2025/08/martin-short-john-hoffmann-only-murders-in-the-building-1236482323/""
 mentions: {'martin_short': 2}
 ---
 

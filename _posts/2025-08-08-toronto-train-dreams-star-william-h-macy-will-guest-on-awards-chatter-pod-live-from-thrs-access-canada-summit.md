@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Toronto: ‘Train Dreams’ Star William H. Macy Will Guest on ‘Awards Chatter’ Pod Live From THR’s Access Canada Summit"
+title: "Toronto: ‘Train Dreams’ Star William H. Macy Will Guest on ‘Awards Chatter’ Pod Live From THR’s Access Canada Summit""
 date: 2025-08-08 23:16:44 +0000
 categories: gossip
 tags: ['awards', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 2
 primary_celebrity: awards
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/movies/movie-news/train-dreams-william-h-macy-awards-chatter-pod-live-1236340408/"
+source_url: "https://www.hollywoodreporter.com/movies/movie-news/train-dreams-william-h-macy-awards-chatter-pod-live-1236340408/""
 mentions: {'awards': 2}
 ---
 

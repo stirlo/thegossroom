@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘Attack Of The Killer Tomatoes: Organic Intelligence’ First Teaser: What The World Needs Now Is A “My Tomato”"
+title: "‘Attack Of The Killer Tomatoes: Organic Intelligence’ First Teaser: What The World Needs Now Is A “My Tomato”""
 date: 2025-08-02 11:14:59 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-deadline', 'drama-rising']
 drama_score: 4
 primary_celebrity: of_the
 source: deadline
-source_url: "https://deadline.com/2025/08/attack-of-the-killer-tomatoes-organic-intelligence-teaser-1236477093/"
+source_url: "https://deadline.com/2025/08/attack-of-the-killer-tomatoes-organic-intelligence-teaser-1236477093/""
 mentions: {'of_the': 4}
 ---
 
