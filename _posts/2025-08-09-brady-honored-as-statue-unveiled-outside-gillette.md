@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brady 'honored" as statue unveiled outside Gillette"
+title: "Brady honored as statue unveiled outside Gillette"
 date: 2025-08-09 01:21:08 +0000
 categories: gossip
 tags: ['tom-brady', 'source-espn', 'drama-mild']
