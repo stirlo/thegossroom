@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Secret Lives of Mormon Wives star accused of 'endangering" three-week-old baby after holding newborn while blindfolded for outrageous Nicki Minaj social media challenge"
+title: "Secret Lives of Mormon Wives star accused of endangering three-week-old baby after holding newborn while blindfolded for outrageous Nicki Minaj social media challenge"
 date: 2025-08-08 17:13:48 +0000
 categories: gossip
 tags: ['nicki-minaj', 'source-daily_mail', 'drama-hot']
