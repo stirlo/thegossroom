@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Liam and Noel Gallagher are branded 'free-riders" by iconic fashion brand as they're accused of copying their clothes in dramatic legal battle"
+title: "Liam and Noel Gallagher are branded free-riders by iconic fashion brand as they're accused of copying their clothes in dramatic legal battle"
 date: 2025-08-07 07:23:01 +0000
 categories: gossip
 tags: ['liam', 'source-daily_mail', 'drama-rising']
