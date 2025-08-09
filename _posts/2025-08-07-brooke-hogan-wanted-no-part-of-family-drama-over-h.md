@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Brooke Hogan Wanted 'No Part" of Family Drama Over Hulk Hogan's Money"
+title: "Brooke Hogan Wanted No Part of Family Drama Over Hulk Hogans Money"
 date: 2025-08-07 08:25:35 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
