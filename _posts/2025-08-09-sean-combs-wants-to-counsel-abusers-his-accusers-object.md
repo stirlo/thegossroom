@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Sean Combs Wants to Counsel Abusers. His Accusers Object"
+title: "Sean Combs Wants to Counsel Abusers. His Accusers Object""
 date: 2025-08-09 01:21:03 +0000
 categories: gossip
 tags: ['sean-combs', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: sean_combs
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-news/sean-diddy-combs-domestic-abouse-counselor-1235404421/"
+source_url: "https://www.rollingstone.com/music/music-news/sean-diddy-combs-domestic-abouse-counselor-1235404421/""
 mentions: {'sean_combs': 2}
 ---
 

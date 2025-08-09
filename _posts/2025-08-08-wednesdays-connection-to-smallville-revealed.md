@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Wednesday's Connection to Smallville Revealed"
+title: "Wednesday's Connection to Smallville Revealed""
 date: 2025-08-08 21:16:03 +0000
 categories: gossip
 tags: ['jenna-ortega', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: jenna_ortega
 source: e_news
-source_url: "https://www.eonline.com/news/1420954/wednesday-series-connection-to-smallville?cmpid=rss-syndicate-genericrss-us-top_stories"
+source_url: "https://www.eonline.com/news/1420954/wednesday-series-connection-to-smallville?cmpid=rss-syndicate-genericrss-us-top_stories""
 mentions: {'jenna_ortega': 6}
 ---
 

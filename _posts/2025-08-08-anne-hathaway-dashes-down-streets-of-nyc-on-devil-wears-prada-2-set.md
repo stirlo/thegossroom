@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Anne Hathaway Dashes Down Streets of NYC on ‘Devil Wears Prada 2’ Set"
+title: "Anne Hathaway Dashes Down Streets of NYC on ‘Devil Wears Prada 2’ Set""
 date: 2025-08-08 22:16:33 +0000
 categories: gossip
 tags: ['anne-hathaway', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: anne_hathaway
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/pictures/see-anne-hathaway-and-meryl-streep-filming-devil-wears-prada-2-in-nyc/"
+source_url: "https://www.usmagazine.com/entertainment/pictures/see-anne-hathaway-and-meryl-streep-filming-devil-wears-prada-2-in-nyc/""
 mentions: {'anne_hathaway': 6}
 ---
 

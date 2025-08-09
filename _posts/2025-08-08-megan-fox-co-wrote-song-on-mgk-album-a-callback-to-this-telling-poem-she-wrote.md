@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Megan Fox Co-Wrote Song On MGK Album -- A Callback To THIS Telling Poem She Wrote!"
+title: "Megan Fox Co-Wrote Song On MGK Album -- A Callback To THIS Telling Poem She Wrote!""
 date: 2025-08-08 23:16:39 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-perez_hilton', 'drama-rising']
 drama_score: 3
 primary_celebrity: machine_gun_kelly
 source: perez_hilton
-source_url: "https://perezhilton.com/megan-fox-co-wrote-song-mgk-new-album-orpheus/"
+source_url: "https://perezhilton.com/megan-fox-co-wrote-song-mgk-new-album-orpheus/""
 mentions: {'machine_gun_kelly': 3}
 ---
 

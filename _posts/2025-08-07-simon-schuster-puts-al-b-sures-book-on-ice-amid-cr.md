@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Simon & Schuster puts Al B. Sure!’s book on ice amid ‘creative differences’ over Diddy"
+title: "Simon & Schuster puts Al B. Sure!’s book on ice amid ‘creative differences’ over Diddy""
 date: 2025-08-07 15:20:31 +0000
 categories: gossip
 tags: ['diddy', 'source-page_six', 'drama-rising']
 drama_score: 4
 primary_celebrity: diddy
 source: page_six
-source_url: "https://pagesix.com/2025/08/07/celebrity-news/simon-amp-schuster-puts-al-b-sures-book-on-ice-amid-creative-differences-over-diddy/"
+source_url: "https://pagesix.com/2025/08/07/celebrity-news/simon-amp-schuster-puts-al-b-sures-book-on-ice-amid-creative-differences-over-diddy/""
 mentions: {'diddy': 4}
 ---
 

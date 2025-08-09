@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "'South Park" Blasts Trump Administration So Hard, Even Heaven Gets ICE’d"
+title: "'South Park"" Blasts Trump Administration So Hard, Even Heaven Gets ICE’d""
 date: 2025-08-07 18:28:07 +0000
 categories: gossip
 tags: ['trump', 'source-huffpost_entertainment', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/south-park-trump-noem_n_68944b94e4b0495c6ff530a9"
+source_url: "https://www.huffpost.com/entry/south-park-trump-noem_n_68944b94e4b0495c6ff530a9""
 mentions: {'trump': 2}
 ---
 

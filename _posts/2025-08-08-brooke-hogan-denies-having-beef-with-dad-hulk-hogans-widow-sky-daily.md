@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Brooke Hogan Denies Having 'Beef' With Dad Hulk Hogan's Widow Sky Daily"
+title: "Brooke Hogan Denies Having 'Beef"" With Dad Hulk Hogan's Widow Sky Daily""
 date: 2025-08-08 17:13:43 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 24
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-denies-feud-with-hulk-hogans-widow-sky-daily/"
+source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-denies-feud-with-hulk-hogans-widow-sky-daily/""
 mentions: {'brooke_hogan': 6, 'hogan': 12, 'hulk_hogan': 6}
 ---
 

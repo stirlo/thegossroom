@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Kim Kardashian Thought Her \"Body Was Breaking Down\" Amid Chronic Pain"
+title: "Kim Kardashian Thought Her \"Body Was Breaking Down\"" Amid Chronic Pain""
 date: 2025-08-08 18:24:15 +0000
 categories: gossip
 tags: ['kim-kardashian', 'source-e_news', 'drama-explosive']
 drama_score: 24
 primary_celebrity: kim_kardashian
 source: e_news
-source_url: "https://www.eonline.com/news/1420938/kim-kardashian-details-stem-cell-treatment-after-shoulder-injury?cmpid=rss-syndicate-genericrss-us-top_stories"
+source_url: "https://www.eonline.com/news/1420938/kim-kardashian-details-stem-cell-treatment-after-shoulder-injury?cmpid=rss-syndicate-genericrss-us-top_stories""
 mentions: {'kardashian': 6, 'kim_kardashian': 18}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Hailey Bieber Is Embracing the Summer Goth Aesthetic"
+title: "Hailey Bieber Is Embracing the Summer Goth Aesthetic""
 date: 2025-08-08 08:25:07 +0000
 categories: gossip
 tags: ['bieber', 'source-vogue_alt', 'drama-explosive']
 drama_score: 12
 primary_celebrity: bieber
 source: vogue_alt
-source_url: "https://www.vogue.com/article/hailey-bieber-is-embracing-the-summer-goth-aesthetic"
+source_url: "https://www.vogue.com/article/hailey-bieber-is-embracing-the-summer-goth-aesthetic""
 mentions: {'bieber': 4, 'hailey_bieber': 4, 'justin_bieber': 4}
 ---
 

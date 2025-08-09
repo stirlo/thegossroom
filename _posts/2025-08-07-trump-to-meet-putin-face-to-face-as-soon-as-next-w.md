@@ -1,18 +1,18 @@
 ---
 
 layout: post
-title: "Trump to meet Putin FACE-TO-FACE as soon as next week, with three-way Zelensky summit to follow, report says"
+title: "Trump to meet Putin FACE-TO-FACE as soon as next week, with three-way Zelensky summit to follow, report says""
 date: 2025-08-07 12:38:49 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-hot']
 drama_score: 6
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14977045/donald-trump-meeting-vladimir-putin-volodymyr-zelensky.html?ns_mchannel=rss&1490&campaign=1490"
+source_url: "https://www.dailymail.co.uk/news/article-14977045/donald-trump-meeting-vladimir-putin-volodymyr-zelensky.html?ns_mchannel=rss&1490&campaign=1490""
 mentions: {'donald_trump': 2, 'trump': 4}
 ---
 
-President Donald Trump has said there is a 'good prospect" of an unprecedented three-way summit with the Russian leader and his Ukrainian counterpart Volodymyr Zelensky.
+President Donald Trump has said there is a 'good prospect"" of an unprecedented three-way summit with the Russian leader and his Ukrainian counterpart Volodymyr Zelensky.
 
 **Drama Score:** 6 | **Level:** HOT **Celebrities Mentioned:** Donald Trump, Trump [Read full article at Daily Mail](https://www.dailymail.co.uk/news/article-14977045/donald-trump-meeting-vladimir-putin-volodymyr-zelensky.html?ns_mchannel=rss &ns_campaign=1490)
 

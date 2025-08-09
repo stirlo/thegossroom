@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Is Sydney Sweeney in 'The Devil Wears Prada 2’? All the Clues"
+title: "Is Sydney Sweeney in 'The Devil Wears Prada 2’? All the Clues""
 date: 2025-08-09 01:20:56 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-us_weekly', 'drama-hot']
 drama_score: 9
 primary_celebrity: sydney_sweeney
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/sydney-sweeney-in-the-devil-wears-prada-2-everything-we-know/"
+source_url: "https://www.usmagazine.com/entertainment/news/sydney-sweeney-in-the-devil-wears-prada-2-everything-we-know/""
 mentions: {'anne_hathaway': 3, 'sydney_sweeney': 6}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "New Balance sneakers are up to 40% off — including styles stars like Hailey Bieber wear"
+title: "New Balance sneakers are up to 40% off — including styles stars like Hailey Bieber wear""
 date: 2025-08-07 05:26:27 +0000
 categories: gossip
 tags: ['bieber', 'source-page_six', 'drama-hot']
 drama_score: 6
 primary_celebrity: bieber
 source: page_six
-source_url: "https://pagesix.com/2025/08/06/style/nordstrom-has-great-deals-on-new-balance-sneakers-right-now/"
+source_url: "https://pagesix.com/2025/08/06/style/nordstrom-has-great-deals-on-new-balance-sneakers-right-now/""
 mentions: {'bieber': 2, 'hailey_bieber': 2, 'justin_bieber': 2}
 ---
 

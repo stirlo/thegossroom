@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Brady 'honored' as statue unveiled outside Gillette"
+title: "Brady 'honored"" as statue unveiled outside Gillette""
 date: 2025-08-09 01:21:08 +0000
 categories: gossip
 tags: ['tom-brady', 'source-espn', 'drama-mild']
 drama_score: 1
 primary_celebrity: tom_brady
 source: espn
-source_url: "https://www.espn.com/nfl/story/_/id/45928287/pats-unveil-tom-brady-statue-ceremony-gillette-stadium"
+source_url: "https://www.espn.com/nfl/story/_/id/45928287/pats-unveil-tom-brady-statue-ceremony-gillette-stadium""
 mentions: {'tom_brady': 1}
 ---
 

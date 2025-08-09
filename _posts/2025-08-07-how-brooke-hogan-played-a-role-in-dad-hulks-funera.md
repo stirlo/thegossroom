@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "How Brooke Hogan played a role in dad Hulk’s funeral — despite skipping event"
+title: "How Brooke Hogan played a role in dad Hulk’s funeral — despite skipping event""
 date: 2025-08-07 15:20:31 +0000
 categories: gossip
 tags: ['brooke-hogan', 'source-page_six', 'drama-rising']
 drama_score: 4
 primary_celebrity: brooke_hogan
 source: page_six
-source_url: "https://pagesix.com/2025/08/07/celebrity-news/how-brooke-hogan-played-a-role-in-dad-hulks-funeral-despite-skipping-event/"
+source_url: "https://pagesix.com/2025/08/07/celebrity-news/how-brooke-hogan-played-a-role-in-dad-hulks-funeral-despite-skipping-event/""
 mentions: {'brooke_hogan': 2, 'hogan': 2}
 ---
 

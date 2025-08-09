@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Denise Richards Seen With Fresh Bruise After Accusing Ex Of Abuse -- But It's Not What You Think, Says Source!"
+title: "Denise Richards Seen With Fresh Bruise After Accusing Ex Of Abuse -- But It's Not What You Think, Says Source!""
 date: 2025-08-07 05:26:21 +0000
 categories: gossip
 tags: ['denise-richards', 'source-perez_hilton', 'drama-hot']
 drama_score: 9
 primary_celebrity: denise_richards
 source: perez_hilton
-source_url: "https://perezhilton.com/denise-richards-seen-with-fresh-bruise-amid-ex-aaron-phypers-abuse-allegations/"
+source_url: "https://perezhilton.com/denise-richards-seen-with-fresh-bruise-amid-ex-aaron-phypers-abuse-allegations/""
 mentions: {'denise_richards': 9}
 ---
 

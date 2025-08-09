@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "The INCREDIBLY Sweet Reason Travis Kelce Never Thinks About Taylor Swift's Exes"
+title: "The INCREDIBLY Sweet Reason Travis Kelce Never Thinks About Taylor Swift's Exes""
 date: 2025-08-08 23:16:39 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-perez_hilton', 'drama-explosive']
 drama_score: 45
 primary_celebrity: taylor_swift
 source: perez_hilton
-source_url: "https://perezhilton.com/why-travis-kelce-doesnt-think-about-taylor-swift-exes/"
+source_url: "https://perezhilton.com/why-travis-kelce-doesnt-think-about-taylor-swift-exes/""
 mentions: {'kelce': 9, 'taylor_swift': 27, 'travis_kelce': 9}
 ---
 

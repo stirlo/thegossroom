@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Outside Lands Founders on 17 Years of Festivals: “This Is Like a Never-Ending Art Project for Us”"
+title: "Outside Lands Founders on 17 Years of Festivals: “This Is Like a Never-Ending Art Project for Us”""
 date: 2025-08-08 20:19:22 +0000
 categories: gossip
 tags: ['doja-cat', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 2
 primary_celebrity: doja_cat
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/news/music-news/outside-lands-founders-2025-festival-interview-1236340285/"
+source_url: "https://www.hollywoodreporter.com/news/music-news/outside-lands-founders-2025-festival-interview-1236340285/""
 mentions: {'doja_cat': 2}
 ---
 

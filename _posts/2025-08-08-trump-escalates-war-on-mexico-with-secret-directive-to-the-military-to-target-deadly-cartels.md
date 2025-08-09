@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Trump escalates war on Mexico with secret directive to the military to target deadly cartels"
+title: "Trump escalates war on Mexico with secret directive to the military to target deadly cartels""
 date: 2025-08-08 20:19:25 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
 drama_score: 4
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14983637/Trump-escalates-war-Mexico-secret-directive-military-target-deadly-cartels.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
+source_url: "https://www.dailymail.co.uk/news/article-14983637/Trump-escalates-war-Mexico-secret-directive-military-target-deadly-cartels.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
 mentions: {'trump': 4}
 ---
 

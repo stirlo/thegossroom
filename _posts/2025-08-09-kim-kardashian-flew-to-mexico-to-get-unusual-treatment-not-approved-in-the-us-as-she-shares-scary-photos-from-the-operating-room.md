@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Kim Kardashian flew to Mexico to get unusual treatment not approved in the US as she shares scary photos from the operating room"
+title: "Kim Kardashian flew to Mexico to get unusual treatment not approved in the US as she shares scary photos from the operating room""
 date: 2025-08-09 03:18:04 +0000
 categories: gossip
 tags: ['kim-kardashian', 'source-daily_mail', 'drama-explosive']
 drama_score: 16
 primary_celebrity: kim_kardashian
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14984417/Kim-Kardashian-flew-Mexico-unusual-treatment-not-approved-US-shares-photos-operating-room.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
+source_url: "https://www.dailymail.co.uk/tvshowbiz/article-14984417/Kim-Kardashian-flew-Mexico-unusual-treatment-not-approved-US-shares-photos-operating-room.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
 mentions: {'kardashian': 4, 'kim_kardashian': 12}
 ---
 

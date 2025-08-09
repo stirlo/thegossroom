@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Hulk Hogan Autopsy Up To Wife, Sky, Officials Say"
+title: "Hulk Hogan Autopsy Up To Wife, Sky, Officials Say""
 date: 2025-08-08 17:13:39 +0000
 categories: gossip
 tags: ['hogan', 'source-tmz', 'drama-explosive']
 drama_score: 18
 primary_celebrity: hogan
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/hulk-hogan-sky-brooke-autopsy/"
+source_url: "https://www.tmz.com/2025/08/08/hulk-hogan-sky-brooke-autopsy/""
 mentions: {'brooke_hogan': 3, 'hogan': 9, 'hulk_hogan': 6}
 ---
 

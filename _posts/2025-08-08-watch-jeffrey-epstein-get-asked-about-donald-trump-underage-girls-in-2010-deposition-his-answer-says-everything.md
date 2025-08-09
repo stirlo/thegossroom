@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Watch Jeffrey Epstein Get Asked About Donald Trump & Underage Girls In 2010 Deposition -- His Answer Says EVERYTHING!"
+title: "Watch Jeffrey Epstein Get Asked About Donald Trump & Underage Girls In 2010 Deposition -- His Answer Says EVERYTHING!""
 date: 2025-08-08 15:18:47 +0000
 categories: gossip
 tags: ['donald-trump', 'source-perez_hilton', 'drama-explosive']
 drama_score: 18
 primary_celebrity: donald_trump
 source: perez_hilton
-source_url: "https://perezhilton.com/jeffrey-epstein-pleads-the-fifth-donald-trump-young-girls-question/"
+source_url: "https://perezhilton.com/jeffrey-epstein-pleads-the-fifth-donald-trump-young-girls-question/""
 mentions: {'donald_trump': 9, 'trump': 9}
 ---
 

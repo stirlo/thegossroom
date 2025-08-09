@@ -6,9 +6,9 @@ date: 2025-08-08 04:41:29 +0000
 categories: gossip
 tags: ['kelce', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
-primary_celebrity: kelce"
+primary_celebrity: kelce""
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/jason-kelce-and-kylie-support-ed-kelce-at-girlfriends-funeral/"
+source_url: "https://www.usmagazine.com/celebrity-news/news/jason-kelce-and-kylie-support-ed-kelce-at-girlfriends-funeral/""
 mentions: {'ed_kelce': 3, 'jason_kelce': 3, 'kelce': 12}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "How Do We Grade Chappell Roan’s Rollout for ‘The Subway’?"
+title: "How Do We Grade Chappell Roan’s Rollout for ‘The Subway’?""
 date: 2025-08-07 15:20:34 +0000
 categories: gossip
 tags: ['chappell-roan', 'source-billboard', 'drama-rising']
 drama_score: 2
 primary_celebrity: chappell_roan
 source: billboard
-source_url: "https://www.billboard.com/music/pop/chappell-roan-subway-rollout-report-card-greatest-pop-stars-1236038439/"
+source_url: "https://www.billboard.com/music/pop/chappell-roan-subway-rollout-report-card-greatest-pop-stars-1236038439/""
 mentions: {'chappell_roan': 2}
 ---
 

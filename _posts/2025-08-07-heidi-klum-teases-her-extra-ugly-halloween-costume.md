@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Heidi Klum Teases Her “Extra Ugly” Halloween Costume for 2025"
+title: "Heidi Klum Teases Her “Extra Ugly” Halloween Costume for 2025""
 date: 2025-08-07 17:19:21 +0000
 categories: gossip
 tags: ['heidi-klum', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: heidi_klum
 source: e_news
-source_url: "https://www.eonline.com/news/1420883/heidi-klum-teases-2025-halloween-costume?cmpid=rss-syndicate-genericrss-us-top_stories"
+source_url: "https://www.eonline.com/news/1420883/heidi-klum-teases-2025-halloween-costume?cmpid=rss-syndicate-genericrss-us-top_stories""
 mentions: {'heidi_klum': 6}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Does 'Freakier Friday' Have a Post-Credits Scene? Sequel's Ending Explained"
+title: "Does 'Freakier Friday"" Have a Post-Credits Scene? Sequel's Ending Explained""
 date: 2025-08-08 23:16:43 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: lindsay_lohan
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/does-freakier-friday-have-a-post-credits-scene-sequels-ending-explained/"
+source_url: "https://www.usmagazine.com/entertainment/news/does-freakier-friday-have-a-post-credits-scene-sequels-ending-explained/""
 mentions: {'lindsay_lohan': 3}
 ---
 

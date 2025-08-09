@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brooklyn Beckham and Nicola Peltz cuddle up in NYC and more star snaps"
+title: "Brooklyn Beckham and Nicola Peltz cuddle up in NYC and more star snaps""
 date: 2025-08-07 18:28:07 +0000
 categories: gossip
 tags: ['brooklyn-beckham', 'source-page_six', 'drama-rising']
 drama_score: 4
 primary_celebrity: brooklyn_beckham
 source: page_six
-source_url: "https://pagesix.com/2025/08/07/photos/brooklyn-beckham-and-nicola-peltz-cuddle-up-in-nyc-and-more-star-snaps/"
+source_url: "https://pagesix.com/2025/08/07/photos/brooklyn-beckham-and-nicola-peltz-cuddle-up-in-nyc-and-more-star-snaps/""
 mentions: {'brooklyn_beckham': 4}
 ---
 

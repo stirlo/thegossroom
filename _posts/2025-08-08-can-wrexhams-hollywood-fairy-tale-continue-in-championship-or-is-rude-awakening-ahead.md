@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Can Wrexham's Hollywood fairy tale continue in Championship, or is rude awakening ahead?"
+title: "Can Wrexham's Hollywood fairy tale continue in Championship, or is rude awakening ahead?""
 date: 2025-08-08 16:20:42 +0000
 categories: gossip
 tags: ['ryan-reynolds', 'source-espn', 'drama-mild']
 drama_score: 1
 primary_celebrity: ryan_reynolds
 source: espn
-source_url: "https://www.espn.com/soccer/story/_/id/45921367/wrexham-premier-league-promotion-championship-relegation-ryan-reynolds-rob-mac"
+source_url: "https://www.espn.com/soccer/story/_/id/45921367/wrexham-premier-league-promotion-championship-relegation-ryan-reynolds-rob-mac""
 mentions: {'ryan_reynolds': 1}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Hailey Bieber Can't Live Without This Stretch Mark Cream on Amazon"
+title: "Hailey Bieber Can't Live Without This Stretch Mark Cream on Amazon""
 date: 2025-08-08 21:16:07 +0000
 categories: gossip
 tags: ['bieber', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: bieber
 source: us_weekly
-source_url: "https://www.usmagazine.com/shopping/news/hailey-bieber-stretch-mark-cream/"
+source_url: "https://www.usmagazine.com/shopping/news/hailey-bieber-stretch-mark-cream/""
 mentions: {'bieber': 6, 'hailey_bieber': 6, 'justin_bieber': 6}
 ---
 

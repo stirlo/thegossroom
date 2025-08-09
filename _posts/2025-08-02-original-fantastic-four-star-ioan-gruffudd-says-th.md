@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Original ‘Fantastic Four’ Star Ioan Gruffudd Says the ‘Plan Was to Do Three Movies’ but Studio Cut Franchise Short: ‘Decisions Beyond My Control’"
+title: "Original ‘Fantastic Four’ Star Ioan Gruffudd Says the ‘Plan Was to Do Three Movies’ but Studio Cut Franchise Short: ‘Decisions Beyond My Control’""
 date: 2025-08-02 11:14:57 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: variety_alt
-source_url: "https://variety.com/2025/film/news/ioan-gruffudd-fantasitc-four-franchis-cut-short-1236476454/"
+source_url: "https://variety.com/2025/film/news/ioan-gruffudd-fantasitc-four-franchis-cut-short-1236476454/""
 mentions: {'of_the': 2}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Every Taylor Swift Song Used in 'The Summer I Turned Pretty'"
+title: "Every Taylor Swift Song Used in 'The Summer I Turned Pretty'""
 date: 2025-08-08 23:16:43 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 21
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/pictures/every-taylor-swift-song-used-in-the-summer-i-turned-pretty/"
+source_url: "https://www.usmagazine.com/entertainment/pictures/every-taylor-swift-song-used-in-the-summer-i-turned-pretty/""
 mentions: {'taylor_swift': 21}
 ---
 

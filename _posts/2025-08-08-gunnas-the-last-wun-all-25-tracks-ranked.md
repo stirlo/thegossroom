@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Gunna’s ‘The Last Wun’: All 25 Tracks Ranked"
+title: "Gunna’s ‘The Last Wun’: All 25 Tracks Ranked""
 date: 2025-08-08 22:16:43 +0000
 categories: gossip
 tags: ['gunna', 'source-billboard', 'drama-rising']
 drama_score: 4
 primary_celebrity: gunna
 source: billboard
-source_url: "https://www.billboard.com/lists/gunna-the-last-wun-tracks-ranked/"
+source_url: "https://www.billboard.com/lists/gunna-the-last-wun-tracks-ranked/""
 mentions: {'gunna': 4}
 ---
 
-Gunna returns with his new album 'The Last Wun,' with features from Wizkid, Offset, Burna Boy and more.
+Gunna returns with his new album 'The Last Wun,"" with features from Wizkid, Offset, Burna Boy and more.
 
 **Drama Score:** 4 | **Level:** RISING
 
