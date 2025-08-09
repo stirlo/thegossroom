@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Eminem 'Cried" After Learning He Missed 11-Year-Old Daughter Hailie's Recital Because He Was Overdosing"
+title: "Eminem Cried After Learning He Missed 11-Year-Old Daughter Hailie's Recital Because He Was Overdosing"
 date: 2025-08-08 03:41:21 +0000
 categories: gossip
 tags: ['eminem', 'source-perez_hilton', 'drama-hot']
