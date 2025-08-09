@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Brooke Hogan Offers To Pay For Hulk Autopsy As 'Speculation" Over Death Remains"
+title: "Brooke Hogan Offers To Pay For Hulk Autopsy As Speculation Over Death Remains"
 date: 2025-08-07 17:19:19 +0000
 categories: gossip
 tags: ['brooke-hogan', 'source-tmz', 'drama-explosive']
