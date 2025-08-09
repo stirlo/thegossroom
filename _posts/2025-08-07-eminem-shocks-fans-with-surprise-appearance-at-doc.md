@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Eminem Shocks Fans With Surprise Appearance at Documentary Premiere in NYC""
+title: "Eminem Shocks Fans With Surprise Appearance at Documentary Premiere in NYC"
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['eminem', 'source-tmz', 'drama-hot']
