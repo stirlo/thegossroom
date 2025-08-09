@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Brooke Hogan Recalls Hulk Hogan's ‘Hurtful’ and 'Callous" Comments"
+title: "Brooke Hogan Recalls Hulk Hogan's Hurtful and Callous Comments"
 date: 2025-08-07 12:38:44 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
