@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wide Hips? These 'Holy Grail" Lounge Pants Are Super Flattering — Just $26"
+title: "Wide Hips? These Holy Grail Lounge Pants Are Super Flattering — Just $26"
 date: 2025-08-08 04:41:29 +0000
 categories: gossip
 tags: ['super', 'source-us_weekly', 'drama-rising']
