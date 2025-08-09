@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Hulk Hogan's Funeral: Family and Friends Remember the Wrestling Legend""
+title: "Hulk Hogan's Funeral: Family and Friends Remember the Wrestling Legend"""
 date: 2025-08-07 05:26:24 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 15
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/inside-hulk-hogans-funeral-farewell-to-a-wrestling-icon/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/inside-hulk-hogans-funeral-farewell-to-a-wrestling-icon/"""
 mentions: {'hogan': 9, 'hulk_hogan': 6}
 ---
 

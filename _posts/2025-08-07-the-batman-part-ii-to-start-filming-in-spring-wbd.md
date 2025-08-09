@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘The Batman Part II’ To Start Filming In Spring; WBD CEO David Zaslav Confirms James Gunn Writing Next Movie In “Super Family”""
+title: "‘The Batman Part II’ To Start Filming In Spring; WBD CEO David Zaslav Confirms James Gunn Writing Next Movie In “Super Family”"""
 date: 2025-08-07 12:38:46 +0000
 categories: gossip
 tags: ['super', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: super
 source: deadline
-source_url: "https://deadline.com/2025/08/the-batman-part-ii-start-date-superman-sequel-1236480458/""
+source_url: "https://deadline.com/2025/08/the-batman-part-ii-start-date-superman-sequel-1236480458/"""
 mentions: {'super': 2}
 ---
 

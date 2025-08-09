@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Man is charged with theft of flowers from Ozzy Osbourne's shrine in Birmingham city centre""
+title: "Man is charged with theft of flowers from Ozzy Osbourne's shrine in Birmingham city centre"""
 date: 2025-08-08 16:20:37 +0000
 categories: gossip
 tags: ['ozzy-osbourne', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: ozzy_osbourne
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14983693/Man-charged-theft-flowers-Ozzy-Osbournes-shrine-Birmingham.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
+source_url: "https://www.dailymail.co.uk/news/article-14983693/Man-charged-theft-flowers-Ozzy-Osbournes-shrine-Birmingham.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"""
 mentions: {'ozzy_osbourne': 2}
 ---
 

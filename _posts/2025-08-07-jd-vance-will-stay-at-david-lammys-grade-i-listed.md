@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "JD Vance will stay at David Lammy's Grade I listed mansion during British 'MAGA summer"" holiday as pair bond over 'being family men and faith""
+title: "JD Vance will stay at David Lammy's Grade I listed mansion during British 'MAGA summer""" holiday as pair bond over 'being family men and faith"""
 date: 2025-08-07 09:24:00 +0000
 categories: gossip
 tags: ['jd-vance', 'source-daily_mail', 'drama-rising']
 drama_score: 2
 primary_celebrity: jd_vance
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14978817/jd-vance-david-lammys-mansion-maga-summer.html?ns_mchannel=rss&1490&campaign=1490""
+source_url: "https://www.dailymail.co.uk/news/article-14978817/jd-vance-david-lammys-mansion-maga-summer.html?ns_mchannel=rss&1490&campaign=1490"""
 mentions: {'jd_vance': 2}
 ---
 

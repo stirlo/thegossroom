@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Megan Fox Receives Credit on Machine Gun Kelly's Lost Americana Album""
+title: "Megan Fox Receives Credit on Machine Gun Kelly's Lost Americana Album"""
 date: 2025-08-08 15:18:48 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: machine_gun_kelly
 source: e_news
-source_url: "https://www.eonline.com/news/1420927/megan-fox-is-writer-composer-on-machine-gun-kellys-lost-americana?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420927/megan-fox-is-writer-composer-on-machine-gun-kellys-lost-americana?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'machine_gun_kelly': 6}
 ---
 

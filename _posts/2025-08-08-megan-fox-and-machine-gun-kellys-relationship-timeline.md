@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Megan Fox and Machine Gun Kelly’s Relationship Timeline""
+title: "Megan Fox and Machine Gun Kelly’s Relationship Timeline"""
 date: 2025-08-08 20:19:21 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: machine_gun_kelly
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/pictures/megan-fox-and-machine-gun-kellys-relationship-timeline/""
+source_url: "https://www.usmagazine.com/celebrity-news/pictures/megan-fox-and-machine-gun-kellys-relationship-timeline/"""
 mentions: {'machine_gun_kelly': 6}
 ---
 

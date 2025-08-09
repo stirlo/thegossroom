@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Meghan Markle carries out a tray of rosé ice lollies in glossy new As Ever promo - after launching latest collection of wine on her birthday""
+title: "Meghan Markle carries out a tray of rosé ice lollies in glossy new As Ever promo - after launching latest collection of wine on her birthday"""
 date: 2025-08-07 08:25:41 +0000
 categories: gossip
 tags: ['duchess-of-sussex', 'source-daily_mail', 'drama-rising']
 drama_score: 4
 primary_celebrity: duchess_of_sussex
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/femail/article-14978601/meghan-markle-wine-ice-lollies.html?ns_mchannel=rss&1490&campaign=1490""
+source_url: "https://www.dailymail.co.uk/femail/article-14978601/meghan-markle-wine-ice-lollies.html?ns_mchannel=rss&1490&campaign=1490"""
 mentions: {'duchess_of_sussex': 2, 'meghan_markle': 2}
 ---
 

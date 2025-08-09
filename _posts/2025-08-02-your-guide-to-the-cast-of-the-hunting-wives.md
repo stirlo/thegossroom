@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Your Guide to the Cast of The Hunting Wives""
+title: "Your Guide to the Cast of The Hunting Wives"""
 date: 2025-08-02 11:15:10 +0000
 categories: gossip
 tags: ['of-the', 'auto-discovered', 'new', 'source-elle_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: of_the
 source: elle_alt
-source_url: "https://www.elle.com/culture/movies-tv/g65554064/the-hunting-wives-cast-explained/""
+source_url: "https://www.elle.com/culture/movies-tv/g65554064/the-hunting-wives-cast-explained/"""
 mentions: {'of_the': 2}
 ---
 

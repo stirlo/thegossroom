@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Wednesday Merch to Die For as Netflix Drops Season 2 of Jenna Ortega Hit""
+title: "Wednesday Merch to Die For as Netflix Drops Season 2 of Jenna Ortega Hit"""
 date: 2025-08-07 05:26:20 +0000
 categories: gossip
 tags: ['jenna-ortega', 'source-tmz', 'drama-explosive']
 drama_score: 12
 primary_celebrity: jenna_ortega
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/wednesday-season-2-netflix-merch/""
+source_url: "https://www.tmz.com/2025/08/06/wednesday-season-2-netflix-merch/"""
 mentions: {'jenna_ortega': 12}
 ---
 

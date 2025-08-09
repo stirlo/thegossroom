@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Brad Pitt’s Family Guide: What to Know About His Parents, Siblings and More""
+title: "Brad Pitt’s Family Guide: What to Know About His Parents, Siblings and More"""
 date: 2025-08-08 07:23:01 +0000
 categories: gossip
 tags: ['brad-pitt', 'source-us_weekly', 'drama-hot']
 drama_score: 9
 primary_celebrity: brad_pitt
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brad-pitts-family-guide-meet-actors-parents-siblings-kids-and-more/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/brad-pitts-family-guide-meet-actors-parents-siblings-kids-and-more/"""
 mentions: {'brad_pitt': 6, 'william_pitt': 3}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "3 Underrated HBO Max Movies to Watch This Weekend (August 8-10)""
+title: "3 Underrated HBO Max Movies to Watch This Weekend (August 8-10)"""
 date: 2025-08-09 01:20:56 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: lindsay_lohan
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/3-underrated-hbo-max-movies-to-watch-this-weekend-august-8-10/""
+source_url: "https://www.usmagazine.com/entertainment/news/3-underrated-hbo-max-movies-to-watch-this-weekend-august-8-10/"""
 mentions: {'lindsay_lohan': 3}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Is The Howard Stern Show Getting Canceled? SiriusXM Rumors Explained""
+title: "Is The Howard Stern Show Getting Canceled? SiriusXM Rumors Explained"""
 date: 2025-08-07 05:26:24 +0000
 categories: gossip
 tags: ['howard-stern', 'source-us_weekly', 'drama-hot']
 drama_score: 9
 primary_celebrity: howard_stern
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/is-the-howard-stern-show-getting-canceled-siriusxm-rumors-explained/""
+source_url: "https://www.usmagazine.com/entertainment/news/is-the-howard-stern-show-getting-canceled-siriusxm-rumors-explained/"""
 mentions: {'howard_stern': 9}
 ---
 

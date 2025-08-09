@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘The Pitt’ Season 2 Will Filter Trump’s ‘Big Beautiful Bill’ and Medicaid Changes Into Storylines: ‘We Take Our Platform Seriously’""
+title: "‘The Pitt’ Season 2 Will Filter Trump’s ‘Big Beautiful Bill’ and Medicaid Changes Into Storylines: ‘We Take Our Platform Seriously’"""
 date: 2025-08-07 17:19:22 +0000
 categories: gossip
 tags: ['trump', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: trump
 source: variety_alt
-source_url: "https://variety.com/2025/awards/awards/the-pitt-season-2-trump-big-beautiful-bill-medicaid-1236481221/""
+source_url: "https://variety.com/2025/awards/awards/the-pitt-season-2-trump-big-beautiful-bill-medicaid-1236481221/"""
 mentions: {'trump': 2}
 ---
 

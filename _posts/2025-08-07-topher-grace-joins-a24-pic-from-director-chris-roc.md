@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Topher Grace Joins A24 Pic From Director Chris Rock""
+title: "Topher Grace Joins A24 Pic From Director Chris Rock"""
 date: 2025-08-07 18:28:06 +0000
 categories: gossip
 tags: ['anna-kendrick', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: anna_kendrick
 source: deadline
-source_url: "https://deadline.com/2025/08/topher-grace-a24-chris-rock-1236481381/""
+source_url: "https://deadline.com/2025/08/topher-grace-a24-chris-rock-1236481381/"""
 mentions: {'anna_kendrick': 2}
 ---
 

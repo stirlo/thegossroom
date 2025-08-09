@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Jacob Elordi and Olivia Jade Split After ‘Rocky’ Summer: What Went Wrong""
+title: "Jacob Elordi and Olivia Jade Split After ‘Rocky’ Summer: What Went Wrong"""
 date: 2025-08-09 03:18:00 +0000
 categories: gossip
 tags: ['jacob-elordi', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: jacob_elordi
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/jacob-elordi-and-olivia-jade-split-after-rocky-summer-what-went-wrong/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/jacob-elordi-and-olivia-jade-split-after-rocky-summer-what-went-wrong/"""
 mentions: {'jacob_elordi': 6}
 ---
 

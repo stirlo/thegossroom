@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Sami Sheen Thinks She ‘Almost Got Sex-Trafficked’! Hear Her Scary Story!""
+title: "Sami Sheen Thinks She ‘Almost Got Sex-Trafficked’! Hear Her Scary Story!"""
 date: 2025-08-07 17:19:20 +0000
 categories: gossip
 tags: ['denise-richards', 'source-perez_hilton', 'drama-rising']
 drama_score: 3
 primary_celebrity: denise_richards
 source: perez_hilton
-source_url: "https://perezhilton.com/sami-sheen-thinks-she-and-friend-almost-got-sex-trafficked-tiktok/""
+source_url: "https://perezhilton.com/sami-sheen-thinks-she-and-friend-almost-got-sex-trafficked-tiktok/"""
 mentions: {'denise_richards': 3}
 ---
 

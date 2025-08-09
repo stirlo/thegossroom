@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Selena Gomez Recalls 1st Song Taylor Swift Played Her Before Its Release""
+title: "Selena Gomez Recalls 1st Song Taylor Swift Played Her Before Its Release"""
 date: 2025-08-07 23:17:59 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 30
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/selena-gomez-recalls-hearing-taylor-swifts-love-story-pre-release/""
+source_url: "https://www.usmagazine.com/entertainment/news/selena-gomez-recalls-hearing-taylor-swifts-love-story-pre-release/"""
 mentions: {'selena_gomez': 6, 'taylor_swift': 24}
 ---
 

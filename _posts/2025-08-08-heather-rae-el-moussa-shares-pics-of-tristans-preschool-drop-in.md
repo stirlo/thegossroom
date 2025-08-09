@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Heather Rae El Moussa Shares Pics of Tristan’s Preschool “Drop In”""
+title: "Heather Rae El Moussa Shares Pics of Tristan’s Preschool “Drop In”"""
 date: 2025-08-08 16:20:28 +0000
 categories: gossip
 tags: ['el-moussa', 'source-e_news', 'drama-explosive']
 drama_score: 18
 primary_celebrity: el_moussa
 source: e_news
-source_url: "https://www.eonline.com/news/1420933/heather-rae-el-moussa-tarek-el-moussas-son-at-preschool?cmpid=rss-syndicate-genericrss-us-top_stories""
+source_url: "https://www.eonline.com/news/1420933/heather-rae-el-moussa-tarek-el-moussas-son-at-preschool?cmpid=rss-syndicate-genericrss-us-top_stories"""
 mentions: {'el_moussa': 9, 'heather_rae_el_moussa': 6, 'tarek_el_moussa': 3}
 ---
 

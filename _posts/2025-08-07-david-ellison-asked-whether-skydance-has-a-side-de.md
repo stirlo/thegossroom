@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "David Ellison, Asked Whether Skydance Has a Side Deal With Trump for Free TV Ads, Says ‘We Were Not Involved’ in the Paramount Settlement ‘in Any Way’""
+title: "David Ellison, Asked Whether Skydance Has a Side Deal With Trump for Free TV Ads, Says ‘We Were Not Involved’ in the Paramount Settlement ‘in Any Way’"""
 date: 2025-08-07 17:19:22 +0000
 categories: gossip
 tags: ['trump', 'source-variety_alt', 'drama-hot']
 drama_score: 8
 primary_celebrity: trump
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/david-ellison-comments-skydance-side-deal-trump-free-advertising-1236480770/""
+source_url: "https://variety.com/2025/tv/news/david-ellison-comments-skydance-side-deal-trump-free-advertising-1236480770/"""
 mentions: {'donald_trump': 2, 'trump': 6}
 ---
 

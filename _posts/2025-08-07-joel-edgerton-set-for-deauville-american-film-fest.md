@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Joel Edgerton Set For Deauville American Film Festival Honor""
+title: "Joel Edgerton Set For Deauville American Film Festival Honor"""
 date: 2025-08-07 17:19:25 +0000
 categories: gossip
 tags: ['gala', 'source-deadline', 'drama-rising']
 drama_score: 2
 primary_celebrity: gala
 source: deadline
-source_url: "https://deadline.com/2025/08/joel-edgerton-deauville-american-film-festival-honor-1236481423/""
+source_url: "https://deadline.com/2025/08/joel-edgerton-deauville-american-film-festival-honor-1236481423/"""
 mentions: {'gala': 2}
 ---
 

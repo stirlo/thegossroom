@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Denise Welch backtracks on infamous Taylor Swift interview days after sobbing to son Matty Healy""
+title: "Denise Welch backtracks on infamous Taylor Swift interview days after sobbing to son Matty Healy"""
 date: 2025-08-08 15:18:56 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-daily_mail', 'drama-hot']
 drama_score: 6
 primary_celebrity: taylor_swift
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tv/article-14983319/Denise-Welch-backtracks-infamous-Taylor-Swift-interview.html?ns_mchannel=rss&ito=1490&ns_campaign=1490""
+source_url: "https://www.dailymail.co.uk/tv/article-14983319/Denise-Welch-backtracks-infamous-Taylor-Swift-interview.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"""
 mentions: {'taylor_swift': 6}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Selena Gomez Feels ‘So Sure’ About Her Relationship With Benny Blanco""
+title: "Selena Gomez Feels ‘So Sure’ About Her Relationship With Benny Blanco"""
 date: 2025-08-07 07:23:01 +0000
 categories: gossip
 tags: ['selena-gomez', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: selena_gomez
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-news/selena-gomez-benny-blanco-relationship-therapuss-interview-1235402608/""
+source_url: "https://www.rollingstone.com/music/music-news/selena-gomez-benny-blanco-relationship-therapuss-interview-1235402608/"""
 mentions: {'selena_gomez': 2}
 ---
 

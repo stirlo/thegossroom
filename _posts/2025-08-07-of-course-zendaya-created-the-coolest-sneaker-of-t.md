@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Of Course, Zendaya Created the Coolest Sneaker of the Season""
+title: "Of Course, Zendaya Created the Coolest Sneaker of the Season"""
 date: 2025-08-07 15:20:35 +0000
 categories: gossip
 tags: ['zendaya', 'source-elle_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: zendaya
 source: elle_alt
-source_url: "https://www.elle.com/fashion/shopping/a65615784/zendaya-on-sneaker-collab/""
+source_url: "https://www.elle.com/fashion/shopping/a65615784/zendaya-on-sneaker-collab/"""
 mentions: {'zendaya': 2}
 ---
 

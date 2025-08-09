@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Sydney Sweeney Walks the Carpet For ‘Americana,’ ‘The Terminal List: Dark Wolf’ Premieres and This Week’s Best Events""
+title: "Sydney Sweeney Walks the Carpet For ‘Americana,’ ‘The Terminal List: Dark Wolf’ Premieres and This Week’s Best Events"""
 date: 2025-08-08 19:14:31 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 2
 primary_celebrity: sydney_sweeney
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/gallery/sydney-sweeney-americana-terminal-list-red-carpet-events-1236336909/""
+source_url: "https://www.hollywoodreporter.com/gallery/sydney-sweeney-americana-terminal-list-red-carpet-events-1236336909/"""
 mentions: {'sydney_sweeney': 2}
 ---
 

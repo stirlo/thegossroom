@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "ALEX BRUMMER: Donald Trump's deals are a global blow""
+title: "ALEX BRUMMER: Donald Trump's deals are a global blow"""
 date: 2025-08-02 11:15:03 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-daily_mail', 'drama-explosive']
 drama_score: 10
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/money/comment/article-14963687/ALEX-BRUMMER-Donald-Trumps-deals-global-blow.html?ns_mchannel=rss&1490&campaign=1490""
+source_url: "https://www.dailymail.co.uk/money/comment/article-14963687/ALEX-BRUMMER-Donald-Trumps-deals-global-blow.html?ns_mchannel=rss&1490&campaign=1490"""
 mentions: {'trump': 10}
 ---
 

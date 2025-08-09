@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Adam Scott and Britt Lower Debate Which ‘Severance’ Couple to Root For: Mark and Gemma Scout, or Mark S. and Helly R.""
+title: "Adam Scott and Britt Lower Debate Which ‘Severance’ Couple to Root For: Mark and Gemma Scout, or Mark S. and Helly R."""
 date: 2025-08-08 14:19:54 +0000
 categories: gossip
 tags: ['adam-scott', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: adam_scott
 source: variety_alt
-source_url: "https://variety.com/2025/tv/awards/adam-scott-britt-lower-severance-couple-root-for-1236481770/""
+source_url: "https://variety.com/2025/tv/awards/adam-scott-britt-lower-severance-couple-root-for-1236481770/"""
 mentions: {'adam_scott': 4}
 ---
 

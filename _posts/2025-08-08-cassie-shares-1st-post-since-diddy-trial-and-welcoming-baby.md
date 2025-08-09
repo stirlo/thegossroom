@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Cassie Shares 1st Post Since Diddy Trial and Welcoming Baby""
+title: "Cassie Shares 1st Post Since Diddy Trial and Welcoming Baby"""
 date: 2025-08-08 11:15:57 +0000
 categories: gossip
 tags: ['diddy', 'source-us_weekly', 'drama-hot']
 drama_score: 6
 primary_celebrity: diddy
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/cassie-ventura-resurfaces-after-diddy-trial-and-welcoming-third-baby/""
+source_url: "https://www.usmagazine.com/celebrity-moms/news/cassie-ventura-resurfaces-after-diddy-trial-and-welcoming-third-baby/"""
 mentions: {'diddy': 6}
 ---
 

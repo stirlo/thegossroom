@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Richardson dislocates pinkie on big sack, exits""
+title: "Richardson dislocates pinkie on big sack, exits"""
 date: 2025-08-08 01:28:03 +0000
 categories: gossip
 tags: ['richardson', 'source-espn', 'drama-rising']
 drama_score: 2
 primary_celebrity: richardson
 source: espn
-source_url: "https://www.espn.com/nfl/story/_/id/45922859/colts-anthony-richardson-departs-preseason-tilt-vs-ravens""
+source_url: "https://www.espn.com/nfl/story/_/id/45922859/colts-anthony-richardson-departs-preseason-tilt-vs-ravens"""
 mentions: {'richardson': 2}
 ---
 

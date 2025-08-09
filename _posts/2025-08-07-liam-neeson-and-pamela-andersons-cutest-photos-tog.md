@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Liam Neeson and Pamela Anderson's Cutest Photos Together So Far""
+title: "Liam Neeson and Pamela Anderson's Cutest Photos Together So Far"""
 date: 2025-08-07 05:26:24 +0000
 categories: gossip
 tags: ['liam', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: liam
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/pictures/liam-neeson-and-pamela-andersons-cutest-photos-together/""
+source_url: "https://www.usmagazine.com/celebrity-news/pictures/liam-neeson-and-pamela-andersons-cutest-photos-together/"""
 mentions: {'liam': 6, 'liam_neeson': 6, 'pamela_anderson': 6}
 ---
 

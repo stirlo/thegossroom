@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Bryan Kohberger's Shocking Murder House Photos Released by Police""
+title: "Bryan Kohberger's Shocking Murder House Photos Released by Police"""
 date: 2025-08-08 17:13:39 +0000
 categories: gossip
 tags: ['bryan-kohberger', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: bryan_kohberger
 source: tmz
-source_url: "https://www.tmz.com/2025/08/08/idaho-murder-house-photos-bryan-kohberger-case/""
+source_url: "https://www.tmz.com/2025/08/08/idaho-murder-house-photos-bryan-kohberger-case/"""
 mentions: {'bryan_kohberger': 6}
 ---
 

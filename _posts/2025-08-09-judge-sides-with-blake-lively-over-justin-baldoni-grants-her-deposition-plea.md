@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Judge Sides With Blake Lively Over Justin Baldoni, Grants Her Deposition Plea""
+title: "Judge Sides With Blake Lively Over Justin Baldoni, Grants Her Deposition Plea"""
 date: 2025-08-09 03:18:00 +0000
 categories: gossip
 tags: ['blake-lively', 'source-us_weekly', 'drama-explosive']
 drama_score: 12
 primary_celebrity: blake_lively
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/judge-sides-with-blake-lively-over-justin-baldoni-in-deposition-plea/""
+source_url: "https://www.usmagazine.com/celebrity-news/news/judge-sides-with-blake-lively-over-justin-baldoni-in-deposition-plea/"""
 mentions: {'blake_lively': 6, 'justin_baldoni': 6}
 ---
 

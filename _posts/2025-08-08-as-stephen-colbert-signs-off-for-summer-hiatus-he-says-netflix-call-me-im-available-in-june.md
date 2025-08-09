@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "As Stephen Colbert Signs Off For Summer Hiatus, He Says: “Netflix, Call Me I’m Available In June”""
+title: "As Stephen Colbert Signs Off For Summer Hiatus, He Says: “Netflix, Call Me I’m Available In June”"""
 date: 2025-08-08 16:20:35 +0000
 categories: gossip
 tags: ['stephen-colbert', 'source-deadline', 'drama-hot']
 drama_score: 6
 primary_celebrity: stephen_colbert
 source: deadline
-source_url: "https://deadline.com/2025/08/stephen-colbert-summer-hiatus-netflix-call-me-1236482362/""
+source_url: "https://deadline.com/2025/08/stephen-colbert-summer-hiatus-netflix-call-me-1236482362/"""
 mentions: {'stephen_colbert': 4, 'trump': 2}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Taylor Swift DID Dump Matty Healy Over The Porn Thing! And Could Have Exposed Him WAY Worse, Says Source!""
+title: "Taylor Swift DID Dump Matty Healy Over The Porn Thing! And Could Have Exposed Him WAY Worse, Says Source!"""
 date: 2025-08-08 20:19:17 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-perez_hilton', 'drama-explosive']
 drama_score: 27
 primary_celebrity: taylor_swift
 source: perez_hilton
-source_url: "https://perezhilton.com/taylor-swift-dumped-matty-healy-swifties-porn-controversy/""
+source_url: "https://perezhilton.com/taylor-swift-dumped-matty-healy-swifties-porn-controversy/"""
 mentions: {'taylor_swift': 27}
 ---
 

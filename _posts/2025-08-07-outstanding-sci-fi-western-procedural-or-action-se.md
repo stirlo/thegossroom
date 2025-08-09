@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Outstanding Sci-Fi, Western, Procedural or Action Series? Maybe It’s Time to Bring Back the Genre Emmys""
+title: "Outstanding Sci-Fi, Western, Procedural or Action Series? Maybe It’s Time to Bring Back the Genre Emmys"""
 date: 2025-08-07 19:18:17 +0000
 categories: gossip
 tags: ['awards', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: awards
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/emmys-genre-sci-fi-western-procedural-action-series-1236481614/""
+source_url: "https://variety.com/2025/tv/news/emmys-genre-sci-fi-western-procedural-action-series-1236481614/"""
 mentions: {'awards': 4}
 ---
 

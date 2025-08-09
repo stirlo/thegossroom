@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Cassie Ventura returns to social media after testifying in Sean ‘Diddy’ Combs’ trial, giving birth""
+title: "Cassie Ventura returns to social media after testifying in Sean ‘Diddy’ Combs’ trial, giving birth"""
 date: 2025-08-08 16:20:35 +0000
 categories: gossip
 tags: ['diddy', 'source-page_six', 'drama-rising']
 drama_score: 2
 primary_celebrity: diddy
 source: page_six
-source_url: "https://pagesix.com/2025/08/08/celebrity-news/cassie-ventura-returns-to-social-media-after-testifying-in-sean-diddy-combs-trial-giving-birth/""
+source_url: "https://pagesix.com/2025/08/08/celebrity-news/cassie-ventura-returns-to-social-media-after-testifying-in-sean-diddy-combs-trial-giving-birth/"""
 mentions: {'diddy': 2}
 ---
 
