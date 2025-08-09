@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sources: Colts" Richardson might return Saturday"
+title: "Sources: Colts Richardson might return Saturday"
 date: 2025-08-08 16:20:42 +0000
 categories: gossip
 tags: ['richardson', 'source-espn', 'drama-rising']
