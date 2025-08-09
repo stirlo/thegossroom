@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Is Manny Jacinto Married? 5 Things to Know About the 'Freakier Friday" Star"
+title: "Is Manny Jacinto Married? 5 Things to Know About the Freakier Friday Star"
 date: 2025-08-08 19:14:30 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-us_weekly', 'drama-rising']
