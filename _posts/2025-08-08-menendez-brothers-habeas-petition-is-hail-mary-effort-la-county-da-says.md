@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Menendez Brothers" Habeas Petition Is 'Hail Mary" Effort, L.A. County D.A. Says"
+title: "Menendez Brothers Habeas Petition Is Hail Mary Effort, L.A. County D.A. Says"
 date: 2025-08-08 15:18:46 +0000
 categories: gossip
 tags: ['menendez', 'source-tmz', 'drama-hot']
