@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Why Andrew is 'toast: The man who revealed 'highly sexed" Prince Andrew's multiple affairs, the truth about him Trump and Epstein and an Argentine assassination plot tells all to Palace Confidential"
+title: "Why Andrew is 'toast: The man who revealed highly sexed Prince Andrew's multiple affairs, the truth about him Trump and Epstein and an Argentine assassination plot tells all to Palace Confidential"
 date: 2025-08-07 18:28:08 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
