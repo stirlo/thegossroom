@@ -1,0 +1,24 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+
+<div class="archive">
+  <h1>All Posts</h1>
+
+  {% for post in site.posts %}
+    {% assign currentdate = post.date | date: "%Y" %}
+    {% if currentdate != date %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h2>{{ currentdate }}</h2>
+      <ul class="archive-list">
+      {% assign date = currentdate %}
+    {% endif %}
+    <li>
+      <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% if forloop.last %}</ul>{% endif %}
+  {% endfor %}
+</div>
