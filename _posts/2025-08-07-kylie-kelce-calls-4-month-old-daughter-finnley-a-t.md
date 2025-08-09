@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Kylie Kelce Calls 4-Month-Old Daughter Finnley a “Tough Audience\"
+title: "Kylie Kelce Calls 4-Month-Old Daughter Finnley a Tough Audience"
 date: 2025-08-07 20:19:43 +0000
 categories: gossip
 tags: ['kelce', 'source-e_news', 'drama-hot']
