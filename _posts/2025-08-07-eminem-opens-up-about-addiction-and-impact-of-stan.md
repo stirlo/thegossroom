@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: "Eminem Opens Up About Addiction and Impact of 'Stan" Culture in New Doc"
 date: 2025-08-07 22:18:16 +0000
