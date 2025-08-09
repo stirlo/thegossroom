@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Megan Fox & MGK 'Trying to Work Things Out" -- But She Is Hesitant To Let 'Him Fully Back In'!"
+title: "Megan Fox & MGK 'Trying to Work Things Out -- But She Is Hesitant To Let 'Him Fully Back In'!"
 date: 2025-08-07 18:28:02 +0000
 categories: gossip
 tags: ['machine-gun-kelly', 'source-perez_hilton', 'drama-rising']
