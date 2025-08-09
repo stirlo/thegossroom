@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Armie Hammer reveals he would smoke up to 20 joints a DAY, 'loved" drugging people and was banned from spending time with co-star Johnny Depp after getting him 'super-stoned"
+title: "Armie Hammer reveals he would smoke up to 20 joints a DAY, loved drugging people and was banned from spending time with co-star Johnny Depp after getting him super-stoned"
 date: 2025-08-07 11:16:57 +0000
 categories: gossip
 tags: ['super', 'source-daily_mail', 'drama-rising']
