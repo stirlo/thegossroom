@@ -8,7 +8,7 @@ tags: ['eminem', 'source-tmz', 'drama-hot']
 drama_score: 9
 primary_celebrity: eminem
 source: tmz
-source_url: "https://www.tmz.com/2025/08/06/eminem-surprise-appearance-documentary-premiere/""
+source_url: "https://www.tmz.com/2025/08/06/eminem-surprise-appearance-documentary-premiere/"
 mentions: {'eminem': 6, 'slim_shady': 3}
 ---
 
