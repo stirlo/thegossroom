@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Who Should Play Ozzy Osbourne in Biopic? Us" Top Picks"
+title: "Who Should Play Ozzy Osbourne in Biopic? Us Top Picks"
 date: 2025-08-09 04:26:50 +0000
 categories: gossip
 tags: ['ozzy-osbourne', 'source-us_weekly', 'drama-hot']
