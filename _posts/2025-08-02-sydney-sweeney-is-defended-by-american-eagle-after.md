@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Sydney Sweeney is defended by American Eagle after their ads are called 'Nazi propaganda" by woke mob"
+title: "Sydney Sweeney is defended by American Eagle after their ads are called Nazi propaganda by woke mob"
 date: 2025-08-02 11:15:03 +0000
 categories: gossip
 tags: ['sydney-sweeney', 'tv', 'movies', 'fashion', 'controversy', 'source-daily_mail', 'drama-rising']
