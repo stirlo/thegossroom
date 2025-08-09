@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Trump puts $50 million bounty on Venezuelan president for helping terrorists bring 'deadly violence" to US"
+title: "Trump puts $50 million bounty on Venezuelan president for helping terrorists bring 'deadly violence to US"
 date: 2025-08-08 01:27:52 +0000
 categories: gossip
 tags: ['trump', 'source-daily_mail', 'drama-rising']
