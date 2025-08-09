@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "'And Just Like That" Recap: Will Carrie End Up Back In Her Old Apartment?"
+title: "And Just Like That Recap: Will Carrie End Up Back In Her Old Apartment?"
 date: 2025-08-08 08:25:01 +0000
 categories: gossip
 tags: ['cynthia-nixon', 'source-us_weekly', 'drama-rising']
