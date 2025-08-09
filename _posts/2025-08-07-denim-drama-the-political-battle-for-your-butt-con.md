@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Denim Drama: The Political Battle for Your Butt Continues"""
+title: "Denim Drama: The Political Battle for Your Butt Continues"
 date: 2025-08-07 22:18:23 +0000
 categories: gossip
 tags: ['beyonce', 'source-rolling_stone', 'drama-hot']
 drama_score: 6
 primary_celebrity: beyonce
 source: rolling_stone
-source_url: "https://www.rollingstone.com/product-recommendations/style/beyonce-levis-sydney-sweeney-american-eagle-controversy-1235403196/"""
+source_url: "https://www.rollingstone.com/product-recommendations/style/beyonce-levis-sydney-sweeney-american-eagle-controversy-1235403196/"
 mentions: {'beyonce': 4, 'sydney_sweeney': 2}
 ---
 

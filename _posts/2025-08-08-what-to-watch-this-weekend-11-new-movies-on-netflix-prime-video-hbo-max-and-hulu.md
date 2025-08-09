@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "What to Watch This Weekend: 11 New Movies on Netflix, Prime Video, HBO Max, and Hulu"""
+title: "What to Watch This Weekend: 11 New Movies on Netflix, Prime Video, HBO Max, and Hulu"
 date: 2025-08-08 15:18:50 +0000
 categories: gossip
 tags: ['lindsay-lohan', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: lindsay_lohan
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/best-new-movies-to-watch-on-netflix-hbo-max-amazon-prime-hulu-more/"""
+source_url: "https://www.usmagazine.com/entertainment/news/best-new-movies-to-watch-on-netflix-hbo-max-amazon-prime-hulu-more/"
 mentions: {'lindsay_lohan': 3}
 ---
 

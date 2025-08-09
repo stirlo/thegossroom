@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Selena Gomez Celebrates New Perfume in a Shimmering Mother-of-Pearl Gown"""
+title: "Selena Gomez Celebrates New Perfume in a Shimmering Mother-of-Pearl Gown"
 date: 2025-08-08 16:20:39 +0000
 categories: gossip
 tags: ['selena-gomez', 'source-elle_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: selena_gomez
 source: elle_alt
-source_url: "https://www.elle.com/fashion/celebrity-style/a65636763/selena-gomez-love-island-usa-rare-beauty-event-photos/"""
+source_url: "https://www.elle.com/fashion/celebrity-style/a65636763/selena-gomez-love-island-usa-rare-beauty-event-photos/"
 mentions: {'selena_gomez': 2}
 ---
 

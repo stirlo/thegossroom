@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Mike Tyson Sued Over Jake Paul Fight Promo by Producer of Jay-Z, DMX, Ja Rule Track"""
+title: "Mike Tyson Sued Over Jake Paul Fight Promo by Producer of Jay-Z, DMX, Ja Rule Track"
 date: 2025-08-08 01:27:43 +0000
 categories: gossip
 tags: ['jake-paul', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: jake_paul
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/mike-tyson-sued-over-jake-paul-fight-promo/"""
+source_url: "https://www.tmz.com/2025/08/07/mike-tyson-sued-over-jake-paul-fight-promo/"
 mentions: {'jake_paul': 6}
 ---
 

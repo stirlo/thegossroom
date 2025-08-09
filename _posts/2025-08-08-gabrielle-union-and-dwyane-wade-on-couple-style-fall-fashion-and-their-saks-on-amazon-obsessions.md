@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Gabrielle Union and Dwyane Wade on Couple Style, Fall Fashion, and Their Saks on Amazon Obsessions"""
+title: "Gabrielle Union and Dwyane Wade on Couple Style, Fall Fashion, and Their Saks on Amazon Obsessions"
 date: 2025-08-08 20:19:27 +0000
 categories: gossip
 tags: ['gabrielle-union', 'source-elle_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: gabrielle_union
 source: elle_alt
-source_url: "https://www.elle.com/fashion/shopping/a65636750/saks-on-amazon-gabrielle-union-dwyane-wade-picks/"""
+source_url: "https://www.elle.com/fashion/shopping/a65636750/saks-on-amazon-gabrielle-union-dwyane-wade-picks/"
 mentions: {'gabrielle_union': 2}
 ---
 

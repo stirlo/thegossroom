@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Brooke Hogan Offers to Pay for Hulk Hogan Autopsy Amid 'Questions""" About Death"""
+title: "Brooke Hogan Offers to Pay for Hulk Hogan Autopsy Amid 'Questions" About Death"
 date: 2025-08-08 13:36:38 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 24
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/hulk-hogans-death-brooke-hogan-wants-autopsy-amid-uncertainty/"""
+source_url: "https://www.usmagazine.com/celebrity-news/news/hulk-hogans-death-brooke-hogan-wants-autopsy-amid-uncertainty/"
 mentions: {'brooke_hogan': 6, 'hogan': 12, 'hulk_hogan': 6}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Polka dot skirt channelling the Princess of Wales's signature style hits the high street"""
+title: "Polka dot skirt channelling the Princess of Wales's signature style hits the high street"
 date: 2025-08-08 15:18:56 +0000
 categories: gossip
 tags: ['princess-of-wales', 'source-daily_mail', 'drama-rising']
 drama_score: 4
 primary_celebrity: princess_of_wales
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/femail/article-14980313/kate-middleton-ascot-look-marks-spencer-polka-dot-midi-skirt-style-fashion.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"""
+source_url: "https://www.dailymail.co.uk/femail/article-14980313/kate-middleton-ascot-look-marks-spencer-polka-dot-midi-skirt-style-fashion.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
 mentions: {'princess_of_wales': 4}
 ---
 

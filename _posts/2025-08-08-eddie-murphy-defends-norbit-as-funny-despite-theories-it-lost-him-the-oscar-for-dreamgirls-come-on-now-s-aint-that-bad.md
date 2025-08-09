@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Eddie Murphy Defends ‘Norbit’ as ‘Funny’ Despite Theories It Lost Him the Oscar for ‘Dreamgirls’: ‘Come on Now, S— Ain’t That Bad’"""
+title: "Eddie Murphy Defends ‘Norbit’ as ‘Funny’ Despite Theories It Lost Him the Oscar for ‘Dreamgirls’: ‘Come on Now, S— Ain’t That Bad’"
 date: 2025-08-08 22:16:34 +0000
 categories: gossip
 tags: ['academy-awards', 'source-variety_alt', 'drama-rising']
 drama_score: 4
 primary_celebrity: academy_awards
 source: variety_alt
-source_url: "https://variety.com/2025/film/news/eddie-murphy-defends-norbit-losing-oscar-dreamgirls-1236482686/"""
+source_url: "https://variety.com/2025/film/news/eddie-murphy-defends-norbit-losing-oscar-dreamgirls-1236482686/"
 mentions: {'academy_awards': 2, 'awards': 2}
 ---
 

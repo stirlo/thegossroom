@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "17 Zimmermann-Inspired Blouses That Are Secretly Super Slimming"""
+title: "17 Zimmermann-Inspired Blouses That Are Secretly Super Slimming"
 date: 2025-08-08 18:24:18 +0000
 categories: gossip
 tags: ['super', 'source-us_weekly', 'drama-rising']
 drama_score: 3
 primary_celebrity: super
 source: us_weekly
-source_url: "https://www.usmagazine.com/shopping/news/zimmermann-inspired-blouses-secretly-slimming/"""
+source_url: "https://www.usmagazine.com/shopping/news/zimmermann-inspired-blouses-secretly-slimming/"
 mentions: {'super': 3}
 ---
 

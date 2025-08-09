@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Justin Baldoni Sues ‘It Ends With Us’ Insurers to Cover Legal Fees"""
+title: "Justin Baldoni Sues ‘It Ends With Us’ Insurers to Cover Legal Fees"
 date: 2025-08-02 11:14:58 +0000
 categories: gossip
 tags: ['justin-baldoni', 'movies', 'controversy', 'legal', 'directing', 'source-hollywood_reporter', 'drama-rising']
 drama_score: 2
 primary_celebrity: justin_baldoni
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/business/business-news/justin-baldoni-sues-it-ends-with-us-insurers-1236336154/"""
+source_url: "https://www.hollywoodreporter.com/business/business-news/justin-baldoni-sues-it-ends-with-us-insurers-1236336154/"
 mentions: {'justin_baldoni': 2}
 ---
 

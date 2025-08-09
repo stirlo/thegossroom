@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Who Bryan Kohberger Planned to Accuse of Committing Idaho Murders"""
+title: "Who Bryan Kohberger Planned to Accuse of Committing Idaho Murders"
 date: 2025-08-09 03:17:59 +0000
 categories: gossip
 tags: ['bryan-kohberger', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: bryan_kohberger
 source: e_news
-source_url: "https://www.eonline.com/news/1420970/bryan-kohberger-planned-to-accuse-others-of-idaho-murders?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420970/bryan-kohberger-planned-to-accuse-others-of-idaho-murders?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'bryan_kohberger': 6}
 ---
 

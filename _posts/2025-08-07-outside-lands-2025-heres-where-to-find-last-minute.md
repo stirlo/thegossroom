@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Outside Lands 2025: Here’s Where to Find Last-Minute Festival Tickets Online"""
+title: "Outside Lands 2025: Here’s Where to Find Last-Minute Festival Tickets Online"
 date: 2025-08-07 20:19:54 +0000
 categories: gossip
 tags: ['doja-cat', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
 primary_celebrity: doja_cat
 source: rolling_stone
-source_url: "https://www.rollingstone.com/product-recommendations/tickets/where-to-buy-outside-lands-tickets-online-2025-1235397854/"""
+source_url: "https://www.rollingstone.com/product-recommendations/tickets/where-to-buy-outside-lands-tickets-online-2025-1235397854/"
 mentions: {'doja_cat': 2}
 ---
 

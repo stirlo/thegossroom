@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Eminem Blows Stans Minds With Surprise Drop-In at N.Y. ‘Stans’ Premiere: ‘Thank You From the Bottom of My Heart’"""
+title: "Eminem Blows Stans Minds With Surprise Drop-In at N.Y. ‘Stans’ Premiere: ‘Thank You From the Bottom of My Heart’"
 date: 2025-08-07 13:38:37 +0000
 categories: gossip
 tags: ['eminem', 'source-billboard', 'drama-rising']
 drama_score: 4
 primary_celebrity: eminem
 source: billboard
-source_url: "https://www.billboard.com/music/rb-hip-hop/eminem-surprise-appearance-stans-doc-premiere-new-york-1236038438/"""
+source_url: "https://www.billboard.com/music/rb-hip-hop/eminem-surprise-appearance-stans-doc-premiere-new-york-1236038438/"
 mentions: {'eminem': 2, 'slim_shady': 2}
 ---
 

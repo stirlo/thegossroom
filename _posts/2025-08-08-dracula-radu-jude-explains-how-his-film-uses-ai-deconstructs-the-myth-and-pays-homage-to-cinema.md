@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "‘Dracula’: Radu Jude Explains How His Film Uses AI, Deconstructs the Myth and Pays Homage to Cinema"""
+title: "‘Dracula’: Radu Jude Explains How His Film Uses AI, Deconstructs the Myth and Pays Homage to Cinema"
 date: 2025-08-08 12:38:05 +0000
 categories: gossip
 tags: ['elon-musk', 'source-hollywood_reporter', 'drama-explosive']
 drama_score: 10
 primary_celebrity: elon_musk
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/movies/movie-news/dracula-film-radu-jude-sex-trump-musk-ai-interview-locarno-1236323927/"""
+source_url: "https://www.hollywoodreporter.com/movies/movie-news/dracula-film-radu-jude-sex-trump-musk-ai-interview-locarno-1236323927/"
 mentions: {'donald_trump': 2, 'elon_musk': 6, 'trump': 2}
 ---
 

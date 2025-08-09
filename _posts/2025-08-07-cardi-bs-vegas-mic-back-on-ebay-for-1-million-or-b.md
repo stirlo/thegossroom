@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Cardi B's Vegas Mic Back on eBay for $1 Million or Best Offer"""
+title: "Cardi B's Vegas Mic Back on eBay for $1 Million or Best Offer"
 date: 2025-08-07 21:15:26 +0000
 categories: gossip
 tags: ['cardi-b', 'source-tmz', 'drama-hot']
 drama_score: 6
 primary_celebrity: cardi_b
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/cardi-b-vegas-microphone-ebay/"""
+source_url: "https://www.tmz.com/2025/08/07/cardi-b-vegas-microphone-ebay/"
 mentions: {'cardi_b': 6}
 ---
 

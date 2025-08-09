@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "‘Wicked,’ ‘Anora’ and ‘Severance’ Among Nominees for Property Masters Guild Awards – Film News in Brief"""
+title: "‘Wicked,’ ‘Anora’ and ‘Severance’ Among Nominees for Property Masters Guild Awards – Film News in Brief"
 date: 2025-08-07 19:18:17 +0000
 categories: gossip
 tags: ['awards', 'source-variety_alt', 'drama-hot']
 drama_score: 6
 primary_celebrity: awards
 source: variety_alt
-source_url: "https://variety.com/2025/film/news/film-news-in-brief-aug-4-2025-1236477799/"""
+source_url: "https://variety.com/2025/film/news/film-news-in-brief-aug-4-2025-1236477799/"
 mentions: {'awards': 6}
 ---
 

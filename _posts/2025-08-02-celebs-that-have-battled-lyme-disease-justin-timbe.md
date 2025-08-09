@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Celebs that have battled Lyme disease: Justin Timberlake, Bella Hadid, more"""
+title: "Celebs that have battled Lyme disease: Justin Timberlake, Bella Hadid, more"
 date: 2025-08-02 11:15:00 +0000
 categories: gossip
 tags: ['bieber', 'music', 'pop', 'controversy', 'mental-health', 'marriage', 'source-page_six', 'drama-explosive']
 drama_score: 10
 primary_celebrity: bieber
 source: page_six
-source_url: "https://pagesix.com/video/celebs-that-have-battled-lyme-disease-justin-timberlake-bella-hadid-more/"""
+source_url: "https://pagesix.com/video/celebs-that-have-battled-lyme-disease-justin-timberlake-bella-hadid-more/"
 mentions: {'bella_hadid': 4, 'bieber': 6}
 ---
 

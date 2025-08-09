@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Kristen Wiig to Star With Jonah Hill in Sibling Comedy ‘Cut Off’; Warner Bros. Sets Summer 2026 Release (EXCLUSIVE)"""
+title: "Kristen Wiig to Star With Jonah Hill in Sibling Comedy ‘Cut Off’; Warner Bros. Sets Summer 2026 Release (EXCLUSIVE)"
 date: 2025-08-08 19:14:30 +0000
 categories: gossip
 tags: ['saturday-night-live', 'source-variety_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: saturday_night_live
 source: variety_alt
-source_url: "https://variety.com/2025/film/news/kristen-wiig-cast-jonah-hill-movie-cut-off-1236482617/"""
+source_url: "https://variety.com/2025/film/news/kristen-wiig-cast-jonah-hill-movie-cut-off-1236482617/"
 mentions: {'saturday_night_live': 2}
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Jacob Elordi’s Complete Dating History: Zendaya, Kaia Gerber, More"""
+title: "Jacob Elordi’s Complete Dating History: Zendaya, Kaia Gerber, More"
 date: 2025-08-09 04:26:50 +0000
 categories: gossip
 tags: ['jacob-elordi', 'source-us_weekly', 'drama-hot']
 drama_score: 9
 primary_celebrity: jacob_elordi
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/pictures/jacob-elordis-dating-history-joey-king-zendaya-more/"""
+source_url: "https://www.usmagazine.com/celebrity-news/pictures/jacob-elordis-dating-history-joey-king-zendaya-more/"
 mentions: {'jacob_elordi': 6, 'zendaya': 3}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "How Hulk Hogan's Funeral Program Included Daughter Brooke Amid Her Absence"""
+title: "How Hulk Hogan's Funeral Program Included Daughter Brooke Amid Her Absence"
 date: 2025-08-07 07:22:57 +0000
 categories: gossip
 tags: ['hogan', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/how-hulk-hogans-funeral-program-included-daughter-brooke-excl/"""
+source_url: "https://www.usmagazine.com/celebrity-news/news/how-hulk-hogans-funeral-program-included-daughter-brooke-excl/"
 mentions: {'brooke_hogan': 3, 'hogan': 9, 'hulk_hogan': 6}
 ---
 

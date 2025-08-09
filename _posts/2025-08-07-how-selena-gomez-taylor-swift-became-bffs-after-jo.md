@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "How Selena Gomez, Taylor Swift Became BFFs After Jonas Brothers Splits"""
+title: "How Selena Gomez, Taylor Swift Became BFFs After Jonas Brothers Splits"
 date: 2025-08-07 12:38:41 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-e_news', 'drama-explosive']
 drama_score: 24
 primary_celebrity: taylor_swift
 source: e_news
-source_url: "https://www.eonline.com/news/1420867/selena-gomez-taylor-swift-bonded-over-jonas-brothers-breakups?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420867/selena-gomez-taylor-swift-bonded-over-jonas-brothers-breakups?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'selena_gomez': 6, 'taylor_swift': 18}
 ---
 

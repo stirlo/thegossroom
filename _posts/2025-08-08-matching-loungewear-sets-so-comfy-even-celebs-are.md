@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Matching Loungewear Sets So Comfy, Even Celebs Are Living in Them"""
+title: "Matching Loungewear Sets So Comfy, Even Celebs Are Living in Them"
 date: 2025-08-08 01:27:45 +0000
 categories: gossip
 tags: ['super', 'source-e_news', 'drama-rising']
 drama_score: 3
 primary_celebrity: super
 source: e_news
-source_url: "https://www.eonline.com/news/1420885/paige-desorbo-madison-lecroy-under-s50-matching-loungewear-sets?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420885/paige-desorbo-madison-lecroy-under-s50-matching-loungewear-sets?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'super': 3}
 ---
 

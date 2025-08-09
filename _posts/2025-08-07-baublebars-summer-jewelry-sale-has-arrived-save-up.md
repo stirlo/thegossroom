@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "BaubleBar’s Summer Jewelry Sale Has Arrived: Save Up to Half Off Taylor Swift’s KC Chiefs Necklace, Chic Disney Earrings and More"""
+title: "BaubleBar’s Summer Jewelry Sale Has Arrived: Save Up to Half Off Taylor Swift’s KC Chiefs Necklace, Chic Disney Earrings and More"
 date: 2025-08-07 05:26:26 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-hollywood_reporter', 'drama-hot']
 drama_score: 6
 primary_celebrity: taylor_swift
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/lifestyle/shopping/baublebar-sale-best-jewelry-deals-disney-pixar-nfl-mlb-1236335578/"""
+source_url: "https://www.hollywoodreporter.com/lifestyle/shopping/baublebar-sale-best-jewelry-deals-disney-pixar-nfl-mlb-1236335578/"
 mentions: {'taylor_swift': 6}
 ---
 

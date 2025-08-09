@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "MGK Details Chat With Taylor Swift Amid Travis Kelce’s Super Bowl Loss"""
+title: "MGK Details Chat With Taylor Swift Amid Travis Kelce’s Super Bowl Loss"
 date: 2025-08-07 17:19:21 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-e_news', 'drama-explosive']
 drama_score: 51
 primary_celebrity: taylor_swift
 source: e_news
-source_url: "https://www.eonline.com/news/1420880/machine-gun-kelly-on-taylor-swift-super-bowl-conversation?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420880/machine-gun-kelly-on-taylor-swift-super-bowl-conversation?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'bowl': 6, 'kelce': 6, 'machine_gun_kelly': 3, 'super': 6, 'super_bowl': 6, 'taylor_swift': 18, 'travis_kelce': 6}
 ---
 

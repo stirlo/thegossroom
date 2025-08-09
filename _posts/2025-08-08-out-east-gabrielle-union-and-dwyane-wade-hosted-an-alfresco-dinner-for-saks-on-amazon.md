@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Out East, Gabrielle Union and Dwyane Wade Hosted an Alfresco Dinner for Saks on Amazon"""
+title: "Out East, Gabrielle Union and Dwyane Wade Hosted an Alfresco Dinner for Saks on Amazon"
 date: 2025-08-08 16:20:39 +0000
 categories: gossip
 tags: ['gabrielle-union', 'source-vogue_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: gabrielle_union
 source: vogue_alt
-source_url: "https://www.vogue.com/slideshow/amazon-saks-dinner-east-hampton-2025"""
+source_url: "https://www.vogue.com/slideshow/amazon-saks-dinner-east-hampton-2025"
 mentions: {'gabrielle_union': 2}
 ---
 

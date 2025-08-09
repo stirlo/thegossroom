@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Ed Kelce’s girlfriend, Maureen Maguire, laid to rest in somber funeral"""
+title: "Ed Kelce’s girlfriend, Maureen Maguire, laid to rest in somber funeral"
 date: 2025-08-07 21:15:34 +0000
 categories: gossip
 tags: ['kelce', 'source-page_six', 'drama-explosive']
 drama_score: 20
 primary_celebrity: kelce
 source: page_six
-source_url: "https://pagesix.com/2025/08/07/celebrity-news/ed-kelces-girlfriend-maureen-maguire-laid-to-rest-in-funeral/"""
+source_url: "https://pagesix.com/2025/08/07/celebrity-news/ed-kelces-girlfriend-maureen-maguire-laid-to-rest-in-funeral/"
 mentions: {'ed_kelce': 4, 'kelce': 8, 'taylor_swift': 6, 'travis_kelce': 2}
 ---
 

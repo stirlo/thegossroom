@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Justin Bieber's Sister Allie Shows Off Her Rhode Products From Hailey Bieber"""
+title: "Justin Bieber's Sister Allie Shows Off Her Rhode Products From Hailey Bieber"
 date: 2025-08-09 05:16:54 +0000
 categories: gossip
 tags: ['justin-bieber', 'source-us_weekly', 'drama-explosive']
 drama_score: 39
 primary_celebrity: justin_bieber
 source: us_weekly
-source_url: "https://www.usmagazine.com/stylish/news/justin-biebers-sister-allie-flaunts-rhode-lip-care-from-hailey/"""
+source_url: "https://www.usmagazine.com/stylish/news/justin-biebers-sister-allie-flaunts-rhode-lip-care-from-hailey/"
 mentions: {'bieber': 12, 'hailey_bieber': 3, 'justin_bieber': 24}
 ---
 

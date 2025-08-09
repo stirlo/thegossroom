@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Bryan Kohberger Murders: Crime Scene Photos Released By Police"""
+title: "Bryan Kohberger Murders: Crime Scene Photos Released By Police"
 date: 2025-08-08 21:16:03 +0000
 categories: gossip
 tags: ['bryan-kohberger', 'source-e_news', 'drama-hot']
 drama_score: 6
 primary_celebrity: bryan_kohberger
 source: e_news
-source_url: "https://www.eonline.com/news/1420957/bryan-kohberger-murders-crime-scene-photos?cmpid=rss-syndicate-genericrss-us-top_stories"""
+source_url: "https://www.eonline.com/news/1420957/bryan-kohberger-murders-crime-scene-photos?cmpid=rss-syndicate-genericrss-us-top_stories"
 mentions: {'bryan_kohberger': 6}
 ---
 

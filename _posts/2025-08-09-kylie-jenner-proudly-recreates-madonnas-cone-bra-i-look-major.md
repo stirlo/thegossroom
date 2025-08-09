@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Kylie Jenner Proudly Recreates Madonna’s Cone Bra: ‘I Look Major’"""
+title: "Kylie Jenner Proudly Recreates Madonna’s Cone Bra: ‘I Look Major’"
 date: 2025-08-09 03:18:00 +0000
 categories: gossip
 tags: ['jenner', 'source-us_weekly', 'drama-explosive']
 drama_score: 18
 primary_celebrity: jenner
 source: us_weekly
-source_url: "https://www.usmagazine.com/stylish/news/kylie-jenner-channels-madonnas-iconic-cone-bra-look/"""
+source_url: "https://www.usmagazine.com/stylish/news/kylie-jenner-channels-madonnas-iconic-cone-bra-look/"
 mentions: {'jenner': 12, 'kylie_jenner': 6}
 ---
 

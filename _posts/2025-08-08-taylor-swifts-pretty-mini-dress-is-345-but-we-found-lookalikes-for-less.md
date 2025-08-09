@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Taylor Swift's Pretty Mini Dress Is $345, but We Found Lookalikes for Less"""
+title: "Taylor Swift's Pretty Mini Dress Is $345, but We Found Lookalikes for Less"
 date: 2025-08-08 14:19:53 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
 drama_score: 21
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/shopping/news/taylor-swift-white-eyelet-dresses-lookalikes/"""
+source_url: "https://www.usmagazine.com/shopping/news/taylor-swift-white-eyelet-dresses-lookalikes/"
 mentions: {'taylor_swift': 21}
 ---
 

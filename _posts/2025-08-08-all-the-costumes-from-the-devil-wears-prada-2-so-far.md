@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "All the Costumes From ‘The Devil Wears Prada 2’ (So Far)"""
+title: "All the Costumes From ‘The Devil Wears Prada 2’ (So Far)"
 date: 2025-08-08 14:20:02 +0000
 categories: gossip
 tags: ['gala', 'source-vogue_alt', 'drama-rising']
 drama_score: 2
 primary_celebrity: gala
 source: vogue_alt
-source_url: "https://www.vogue.com/slideshow/all-the-costumes-from-the-devil-wears-prada-2"""
+source_url: "https://www.vogue.com/slideshow/all-the-costumes-from-the-devil-wears-prada-2"
 mentions: {'gala': 2}
 ---
 

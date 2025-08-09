@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Diddy Will Focus on Family After Release, Not MSG Concert, Lawyer Says"""
+title: "Diddy Will Focus on Family After Release, Not MSG Concert, Lawyer Says"
 date: 2025-08-07 23:17:57 +0000
 categories: gossip
 tags: ['diddy', 'source-tmz', 'drama-hot']
 drama_score: 9
 primary_celebrity: diddy
 source: tmz
-source_url: "https://www.tmz.com/2025/08/07/marc-agnifilo-on-diddy-msg-concert/"""
+source_url: "https://www.tmz.com/2025/08/07/marc-agnifilo-on-diddy-msg-concert/"
 mentions: {'diddy': 9}
 ---
 

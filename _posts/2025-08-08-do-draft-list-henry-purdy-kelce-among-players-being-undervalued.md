@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Do Draft list: Henry, Purdy, Kelce among players being undervalued"""
+title: "Do Draft list: Henry, Purdy, Kelce among players being undervalued"
 date: 2025-08-08 12:38:14 +0000
 categories: gossip
 tags: ['kelce', 'source-espn', 'drama-mild']
 drama_score: 1
 primary_celebrity: kelce
 source: espn
-source_url: "https://www.espn.com/fantasy/football/story/_/id/45921194/2025-fantasy-football-sleepers-undervalued"""
+source_url: "https://www.espn.com/fantasy/football/story/_/id/45921194/2025-fantasy-football-sleepers-undervalued"
 mentions: {'kelce': 1}
 ---
 

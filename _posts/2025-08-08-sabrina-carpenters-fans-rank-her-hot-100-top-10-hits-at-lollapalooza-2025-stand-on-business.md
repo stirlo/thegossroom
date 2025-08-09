@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Sabrina Carpenter’s Fans Rank Her Hot 100 Top 10 Hits at Lollapalooza 2025 | Stand on Business"""
+title: "Sabrina Carpenter’s Fans Rank Her Hot 100 Top 10 Hits at Lollapalooza 2025 | Stand on Business"
 date: 2025-08-08 21:16:13 +0000
 categories: gossip
 tags: ['sabrina-carpenter', 'source-billboard', 'drama-explosive']
 drama_score: 12
 primary_celebrity: sabrina_carpenter
 source: billboard
-source_url: "https://www.billboard.com/video/sabrina-carpenter-fans-rank-hot-100-top-10-hits/"""
+source_url: "https://www.billboard.com/video/sabrina-carpenter-fans-rank-hot-100-top-10-hits/"
 mentions: {'sabrina_carpenter': 12}
 ---
 

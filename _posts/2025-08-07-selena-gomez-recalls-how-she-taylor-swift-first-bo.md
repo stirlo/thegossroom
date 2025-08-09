@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Selena Gomez Recalls How She & Taylor Swift First ‘Bonded’ Over Their Jonas Brother Breakups"""
+title: "Selena Gomez Recalls How She & Taylor Swift First ‘Bonded’ Over Their Jonas Brother Breakups"
 date: 2025-08-07 17:19:29 +0000
 categories: gossip
 tags: ['taylor-swift', 'source-billboard', 'drama-hot']
 drama_score: 8
 primary_celebrity: taylor_swift
 source: billboard
-source_url: "https://www.billboard.com/music/music-news/selena-gomez-taylor-swift-bonded-jonas-brothers-breakups-1236038612/"""
+source_url: "https://www.billboard.com/music/music-news/selena-gomez-taylor-swift-bonded-jonas-brothers-breakups-1236038612/"
 mentions: {'selena_gomez': 2, 'taylor_swift': 6}
 ---
 

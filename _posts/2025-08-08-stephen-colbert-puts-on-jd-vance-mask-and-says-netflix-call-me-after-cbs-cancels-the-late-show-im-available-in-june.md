@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Stephen Colbert Puts on JD Vance Mask and Says ‘Netflix, Call Me’ After CBS Cancels ‘The Late Show’: ‘I’m Available in June’"""
+title: "Stephen Colbert Puts on JD Vance Mask and Says ‘Netflix, Call Me’ After CBS Cancels ‘The Late Show’: ‘I’m Available in June’"
 date: 2025-08-08 17:13:44 +0000
 categories: gossip
 tags: ['jd-vance', 'source-variety_alt', 'drama-hot']
 drama_score: 8
 primary_celebrity: jd_vance
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/stephen-colbert-netflix-cbs-cancellation-1236482562/"""
+source_url: "https://variety.com/2025/tv/news/stephen-colbert-netflix-cbs-cancellation-1236482562/"
 mentions: {'jd_vance': 4, 'stephen_colbert': 4}
 ---
 

@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Keke Palmer On Filming Spicy Scenes With Pete Davidson For ‘The Pickup’: “He’s So Sweet, So It Was Comfortable”"""
+title: "Keke Palmer On Filming Spicy Scenes With Pete Davidson For ‘The Pickup’: “He’s So Sweet, So It Was Comfortable”"
 date: 2025-08-07 05:26:26 +0000
 categories: gossip
 tags: ['pete-davidson', 'source-deadline', 'drama-explosive']
 drama_score: 10
 primary_celebrity: pete_davidson
 source: deadline
-source_url: "https://deadline.com/2025/08/keke-palmer-filming-pete-davidson-the-pickup-prime-video-1236480324/"""
+source_url: "https://deadline.com/2025/08/keke-palmer-filming-pete-davidson-the-pickup-prime-video-1236480324/"
 mentions: {'pete_davidson': 8, 'saturday_night_live': 2}
 ---
 

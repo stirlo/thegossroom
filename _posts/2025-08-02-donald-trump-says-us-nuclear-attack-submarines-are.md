@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: "Donald Trump says US nuclear attack submarines are now 'closer to Russia""" after he re-deployed them over Kremlin's 'foolish and inflammatory""" taunts"""
+title: "Donald Trump says US nuclear attack submarines are now 'closer to Russia" after he re-deployed them over Kremlin's 'foolish and inflammatory" taunts"
 date: 2025-08-02 11:15:03 +0000
 categories: gossip
 tags: ['trump', 'politics', 'controversy', 'government', 'legal', 'source-daily_mail', 'drama-explosive']
 drama_score: 12
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-14964761/Donald-Trump-says-US-nuclear-attack-submarines-closer-Russia-deployed-Kremlins-foolish-inflammatory-taunts.html?ns_mchannel=rss&1490&campaign=1490"""
+source_url: "https://www.dailymail.co.uk/news/article-14964761/Donald-Trump-says-US-nuclear-attack-submarines-closer-Russia-deployed-Kremlins-foolish-inflammatory-taunts.html?ns_mchannel=rss&1490&campaign=1490"
 mentions: {'trump': 12}
 ---
 

@@ -6,9 +6,9 @@ date: 2025-08-08 04:41:34 +0000
 categories: gossip
 tags: ['gunna', 'source-rolling_stone', 'drama-rising']
 drama_score: 2
-primary_celebrity: gunna"""
+primary_celebrity: gunna"
 source: rolling_stone
-source_url: "https://www.rollingstone.com/music/music-news/gunna-new-album-the-last-wun-1235403328/"""
+source_url: "https://www.rollingstone.com/music/music-news/gunna-new-album-the-last-wun-1235403328/"
 mentions: {'gunna': 2}
 ---
 
