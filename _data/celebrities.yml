@@ -307,12 +307,12 @@ avantika:
 awards:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 82
-  last_temperature_update: '2025-08-09 16:20:19'
+  drama_score: 81
+  last_temperature_update: '2025-08-10 14:15:26'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 0
+  temperature_change: -1
 aziz_ansari:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1069,7 +1069,7 @@ donald_trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-10 03:41:38'
+  last_temperature_update: '2025-08-10 14:15:26'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -3960,7 +3960,7 @@ trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-10 03:41:38'
+  last_temperature_update: '2025-08-10 14:15:26'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
