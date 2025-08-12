@@ -308,7 +308,7 @@ awards:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-12 18:26:50'
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -400,12 +400,12 @@ bernie_sanders:
 beyonce:
   category: musician
   discovery_date: '2025-08-04'
-  drama_score: 96
-  last_temperature_update: '2025-08-12 18:26:50'
+  drama_score: 100
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 0
+  temperature_change: 4
 beyonce_knowles:
   category: musician
   discovery_date: '2025-08-04'
@@ -536,7 +536,7 @@ bowl:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 92
-  last_temperature_update: '2025-08-12 13:32:13'
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -1086,12 +1086,12 @@ dr_dre:
 drake:
   category: musician
   discovery_date: '2025-08-04'
-  drama_score: 88
-  last_temperature_update: '2025-08-12 16:21:58'
+  drama_score: 90
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
-  status: hot
-  temperature_change: 0
+  status: explosive
+  temperature_change: 2
 drew_tarver:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1105,7 +1105,7 @@ dua_lipa:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-12 04:25:44'
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -1114,11 +1114,11 @@ duchess_of_sussex:
   category: royal
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-12 18:26:50'
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 9
+  temperature_change: 0
 duke_of_sussex:
   category: royal
   discovery_date: '2025-08-04'
@@ -1382,8 +1382,8 @@ globes:
 golden:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 98
-  last_temperature_update: '2025-08-12 16:21:58'
+  drama_score: 100
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -1531,7 +1531,7 @@ hiroshi_fujiwara:
 hogan:
   category: wrestler
   drama_score: 100
-  last_temperature_update: '2025-08-12 17:17:03'
+  last_temperature_update: '2025-08-12 19:14:28'
   status: explosive
   temperature_change: 0
 horatio_sanz:
@@ -1555,7 +1555,7 @@ howard_stern:
 hulk_hogan:
   category: wrestler
   drama_score: 100
-  last_temperature_update: '2025-08-12 17:17:03'
+  last_temperature_update: '2025-08-12 19:14:28'
   status: explosive
   temperature_change: 0
 hunter_schafer:
@@ -1696,7 +1696,7 @@ jason_isaacs:
 jason_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-12 17:17:03'
+  last_temperature_update: '2025-08-12 19:14:28'
   status: explosive
   temperature_change: 0
 jason_mantzoukas:
@@ -2136,7 +2136,7 @@ keegan_michael_key:
 kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-12 18:26:50'
+  last_temperature_update: '2025-08-12 19:14:28'
   status: explosive
   temperature_change: 0
 kelly_dodd:
@@ -2289,12 +2289,12 @@ larry_david:
 latto:
   category: musician
   discovery_date: '2025-08-04'
-  drama_score: 51
-  last_temperature_update: '2025-08-07 23:18:09'
+  drama_score: 53
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 1
+  temperature_change: 2
 lauren_lapkus:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2691,7 +2691,7 @@ meghan_markle:
   category: royal
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-12 18:26:50'
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -3162,7 +3162,7 @@ prince_harry:
   category: royal
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-12 18:26:50'
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -3759,7 +3759,7 @@ taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-12 18:26:50'
+  last_temperature_update: '2025-08-12 19:14:28'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3926,7 +3926,7 @@ travis_barker:
 travis_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-12 18:26:50'
+  last_temperature_update: '2025-08-12 19:14:28'
   status: explosive
   temperature_change: 0
 travis_scott:
