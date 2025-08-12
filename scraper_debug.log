@@ -1,642 +1,640 @@
-2025-08-12 03:15:00,815 | INFO | 🎭 STARTING ENHANCED GOSSIP ROOM SCRAPER WITH HTML ENTITY PROTECTION
-2025-08-12 03:15:00,815 | INFO | 📋 Loaded 479 celebrities
-2025-08-12 03:15:00,815 | INFO | 🔍 Generated 479 searchable names
-2025-08-12 03:15:00,952 | INFO | 
+2025-08-12 04:25:27,427 | INFO | 🎭 STARTING ENHANCED GOSSIP ROOM SCRAPER WITH HTML ENTITY PROTECTION
+2025-08-12 04:25:27,427 | INFO | 📋 Loaded 479 celebrities
+2025-08-12 04:25:27,427 | INFO | 🔍 Generated 479 searchable names
+2025-08-12 04:25:27,619 | INFO | 
 ============================================================
-2025-08-12 03:15:00,952 | INFO | FEED: TMZ
-2025-08-12 03:15:00,952 | INFO | Total articles fetched: 20
-2025-08-12 03:15:00,952 | INFO | Accepted: 0, Rejected: 20
-2025-08-12 03:15:00,952 | INFO | ============================================================
-2025-08-12 03:15:00,952 | INFO |  1. ❌ REJECTED | Lukas Gage Shades Chris Appleton in Exes' Book Battle
-2025-08-12 03:15:00,952 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,953 | INFO |  2. ❌ REJECTED | Brittany Cartwright Shares Life Update After Jax Taylor Steps Away From His Bar
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,953 | INFO |  3. ❌ REJECTED | Elon Musk Calls Out Apple for Allegedly Snubbing X in App Store
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,953 | INFO |  4. ❌ REJECTED | Bianca Censori Wears Leotard and Stilettos Inside Zorb
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,953 | INFO |  5. ❌ REJECTED | Hailey Bieber's Favorite Pregnancy & Post-Baby Must-Haves
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,953 | INFO |  6. ❌ REJECTED | Myles Garrett Busted For Speeding, Allegedly Drove 40 MPH Over Limit
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,953 | INFO |  7. ❌ REJECTED | The Chainsmokers Bring Out 'Love Island USA' Winner Amaya Espinal Onstage
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,953 | INFO |  8. ❌ REJECTED | 'Vanderpump Rules' Poolside Hot Shot Guess Who!
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,953 | INFO |  9. ❌ REJECTED | Rep. Jasmine Crockett Fires Back at Trump Over Cognitive Exam Challenge
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,953 | INFO | 10. ❌ REJECTED | Sebastian Telfair Pleads For Donald Trump Pardon Hours Before Reporting To Priso...
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,953 | INFO | 11. ❌ REJECTED | Brad Pitt House Burglary Suspects Reportedly Arrested
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,953 | INFO | 12. ❌ REJECTED | 'Feel Free' Drink Is a Drug, Former Addict Claims, But Company Disputes Allegati...
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,953 | INFO | 13. ❌ REJECTED | Kelly Clarkson Cries Onstage Days Before Ex-Husband's Death, on Video
-2025-08-12 03:15:00,953 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,954 | INFO | 14. ❌ REJECTED | Terry & Heather Dubrow Sell Beverly Hills Home for $16.5M
-2025-08-12 03:15:00,954 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,954 | INFO | 15. ❌ REJECTED | Cristiano Ronaldo Proposes To Georgina Rodriguez With Enormous Diamond Ring
-2025-08-12 03:15:00,954 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,954 | INFO | 16. ❌ REJECTED | Chris Hemsworth Rings in Birthday in Ibiza With Bro Liam, Matt Damon, Rita Ora
-2025-08-12 03:15:00,954 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,954 | INFO | 17. ❌ REJECTED | Linda Hogan Posts Heartfelt Tribute For Hulk's Birthday, 'Love and Miss You So M...
-2025-08-12 03:15:00,954 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:00,954 | INFO | 18. ❌ REJECTED | Jim Carrey Sells Los Angeles Mansion for $17 Million
-2025-08-12 03:15:00,954 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,954 | INFO | 19. ❌ REJECTED | Savannah Chrisley Hot Shots To Celebrate Her 28th Birthday!
-2025-08-12 03:15:00,954 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:00,954 | INFO | 20. ❌ REJECTED | Barack Obama's White House Portrait Location Revealed After Trump Moves Painting
-2025-08-12 03:15:00,954 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:01,960 | INFO | 
+2025-08-12 04:25:27,619 | INFO | FEED: TMZ
+2025-08-12 04:25:27,619 | INFO | Total articles fetched: 20
+2025-08-12 04:25:27,620 | INFO | Accepted: 1, Rejected: 19
+2025-08-12 04:25:27,620 | INFO | ============================================================
+2025-08-12 04:25:27,620 | INFO |  1. ✅ ACCEPTED | Taylor Swift Will Appear on Travis Kelce's Podcast, See The Teaser
+2025-08-12 04:25:27,620 | INFO |     └─ Celebrities: kelce, swift, taylor swift
+2025-08-12 04:25:27,620 | INFO |  2. ❌ REJECTED | Lukas Gage Shades Chris Appleton in Exes' Book Battle
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,620 | INFO |  3. ❌ REJECTED | Brittany Cartwright Shares Life Update After Jax Taylor Steps Away From His Bar
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,620 | INFO |  4. ❌ REJECTED | Elon Musk Calls Out Apple for Allegedly Snubbing X in App Store
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,620 | INFO |  5. ❌ REJECTED | Hailey Bieber's Favorite Pregnancy & Post-Baby Must-Haves
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,620 | INFO |  6. ❌ REJECTED | Bianca Censori Wears Leotard and Stilettos Inside Zorb
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,620 | INFO |  7. ❌ REJECTED | Myles Garrett Busted For Speeding, Allegedly Drove 40 MPH Over Limit
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,620 | INFO |  8. ❌ REJECTED | 'Vanderpump Rules' Poolside Hot Shot Guess Who!
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,620 | INFO |  9. ❌ REJECTED | The Chainsmokers Bring Out 'Love Island USA' Winner Amaya Espinal Onstage
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,620 | INFO | 10. ❌ REJECTED | Rep. Jasmine Crockett Fires Back at Trump Over Cognitive Exam Challenge
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,620 | INFO | 11. ❌ REJECTED | Sebastian Telfair Pleads For Donald Trump Pardon Hours Before Reporting To Priso...
+2025-08-12 04:25:27,620 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,620 | INFO | 12. ❌ REJECTED | Brad Pitt House Burglary Suspects Reportedly Arrested
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,621 | INFO | 13. ❌ REJECTED | 'Feel Free' Drink Is a Drug, Former Addict Claims, But Company Disputes Allegati...
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,621 | INFO | 14. ❌ REJECTED | Kelly Clarkson Cries Onstage Days Before Ex-Husband's Death, on Video
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,621 | INFO | 15. ❌ REJECTED | Terry & Heather Dubrow Sell Beverly Hills Home for $16.5M
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,621 | INFO | 16. ❌ REJECTED | Cristiano Ronaldo Proposes To Georgina Rodriguez With Enormous Diamond Ring
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,621 | INFO | 17. ❌ REJECTED | Chris Hemsworth Rings in Birthday in Ibiza With Bro Liam, Matt Damon, Rita Ora
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,621 | INFO | 18. ❌ REJECTED | Linda Hogan Posts Heartfelt Tribute For Hulk's Birthday, 'Love and Miss You So M...
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:27,621 | INFO | 19. ❌ REJECTED | Jim Carrey Sells Los Angeles Mansion for $17 Million
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:27,621 | INFO | 20. ❌ REJECTED | Savannah Chrisley Hot Shots To Celebrate Her 28th Birthday!
+2025-08-12 04:25:27,621 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:28,425 | INFO | 
 ============================================================
-2025-08-12 03:15:01,960 | INFO | FEED: PEREZ_HILTON
-2025-08-12 03:15:01,960 | INFO | Total articles fetched: 10
-2025-08-12 03:15:01,960 | INFO | Accepted: 2, Rejected: 8
-2025-08-12 03:15:01,960 | INFO | ============================================================
-2025-08-12 03:15:01,960 | INFO |  1. ✅ ACCEPTED | Taylor Swift EXCLUSIVE! Timothee & Kylie Are Over? And More HOT TOPICS!
-2025-08-12 03:15:01,960 | INFO |     └─ Celebrities: swift, taylor swift
-2025-08-12 03:15:01,960 | INFO |  2. ✅ ACCEPTED | Huge Loss For Freedom Of Speech! Justin Baldoni’s Former Publicist Scores Big Le...
-2025-08-12 03:15:01,961 | INFO |     └─ Celebrities: justin baldoni
-2025-08-12 03:15:01,961 | INFO |  3. ❌ REJECTED | Why Kelly Clarkson Is 'Looking Forward' To Talk Show Coming Back After Ex Brando...
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:01,961 | INFO |  4. ❌ REJECTED | WTF?! Lil Tay Says She's Been Planning OnlyFans Launch Since She Was 9 Years Old...
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:01,961 | INFO |  5. ❌ REJECTED | Donald Trump Epstein Evidence?? Ghislaine Maxwell Told Fellow Inmates She Had It...
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:01,961 | INFO |  6. ❌ REJECTED | Pregnant Woman's Body Found In Plastic Bin -- The Truly Horrifying Details…
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:01,961 | INFO |  7. ❌ REJECTED | Two Japanese Boxers Dead From Injuries In Fights -- On Same Card!
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:01,961 | INFO |  8. ❌ REJECTED | Kelly Clarkson 'Devastated' For Her Kids After Ex's Death -- Because Of How She ...
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:01,961 | INFO |  9. ❌ REJECTED | Anna Delvey Accused Of Using Bunnies In Photoshoot -- Then Just LEAVING Them In ...
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:01,961 | INFO | 10. ❌ REJECTED | Jennifer Aniston Says Friends Cast Was 'Mourning' Matthew Perry 'Long' Before He...
-2025-08-12 03:15:01,961 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,993 | INFO | 
+2025-08-12 04:25:28,425 | INFO | FEED: PEREZ_HILTON
+2025-08-12 04:25:28,425 | INFO | Total articles fetched: 10
+2025-08-12 04:25:28,425 | INFO | Accepted: 1, Rejected: 9
+2025-08-12 04:25:28,425 | INFO | ============================================================
+2025-08-12 04:25:28,425 | INFO |  1. ✅ ACCEPTED | More Of Blake Lively’s Deposition UNSEALED!!! Justin Baldoni’s Nemesis Said Unde...
+2025-08-12 04:25:28,425 | INFO |     └─ Celebrities: blake lively, justin baldoni
+2025-08-12 04:25:28,425 | INFO |  2. ❌ REJECTED | Taylor Swift EXCLUSIVE! Timothee & Kylie Are Over? And More HOT TOPICS!
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:28,425 | INFO |  3. ❌ REJECTED | Huge Loss For Freedom Of Speech! Justin Baldoni’s Former Publicist Scores Big Le...
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:28,425 | INFO |  4. ❌ REJECTED | Why Kelly Clarkson Is 'Looking Forward' To Talk Show Coming Back After Ex Brando...
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:28,425 | INFO |  5. ❌ REJECTED | WTF?! Lil Tay Says She's Been Planning OnlyFans Launch Since She Was 9 Years Old...
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:28,425 | INFO |  6. ❌ REJECTED | Donald Trump Epstein Evidence?? Ghislaine Maxwell Told Fellow Inmates She Had It...
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:28,425 | INFO |  7. ❌ REJECTED | Pregnant Woman's Body Found In Plastic Bin -- The Truly Horrifying Details…
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:28,425 | INFO |  8. ❌ REJECTED | Two Japanese Boxers Dead From Injuries In Fights -- On Same Card!
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:28,425 | INFO |  9. ❌ REJECTED | Kelly Clarkson 'Devastated' For Her Kids After Ex's Death -- Because Of How She ...
+2025-08-12 04:25:28,425 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:28,426 | INFO | 10. ❌ REJECTED | Anna Delvey Accused Of Using Bunnies In Photoshoot -- Then Just LEAVING Them In ...
+2025-08-12 04:25:28,426 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,161 | INFO | 
 ============================================================
-2025-08-12 03:15:02,993 | INFO | FEED: E_NEWS
-2025-08-12 03:15:02,993 | INFO | Total articles fetched: 20
-2025-08-12 03:15:02,993 | INFO | Accepted: 1, Rejected: 19
-2025-08-12 03:15:02,993 | INFO | ============================================================
-2025-08-12 03:15:02,993 | INFO |  1. ❌ REJECTED | Liz Lin Ruoyu, Beauty Influencer, Dead at 36
-2025-08-12 03:15:02,993 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,993 | INFO |  2. ❌ REJECTED | Alan Tudyk Says He Was Cut From I, Robot Promo With Will Smith
-2025-08-12 03:15:02,993 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,993 | INFO |  3. ✅ ACCEPTED | See Taylor Swift Make Debut on Travis Kelce’s New Heights Podcast
-2025-08-12 03:15:02,993 | INFO |     └─ Celebrities: jason kelce, kelce, swift
-2025-08-12 03:15:02,993 | INFO |  4. ❌ REJECTED | Country Singer Ella Langley Cancels Shows to Heal “Mind, Body & Heart”
-2025-08-12 03:15:02,993 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,993 | INFO |  5. ❌ REJECTED | Get an XXL EltaMD UV Clear Sunscreen on Super Sale at Amazon Today
-2025-08-12 03:15:02,993 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:02,993 | INFO |  6. ❌ REJECTED | Below Deck: Kyle Stillie's Fate Revealed After Guest Sex Scandal
-2025-08-12 03:15:02,993 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,993 | INFO |  7. ❌ REJECTED | Kathy Griffin Debuts “New Face” After 3rd Facelift
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO |  8. ❌ REJECTED | Lauren Sánchez Bezos "Heartbroken" After Taking Son Evan to College
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO |  9. ❌ REJECTED | Emma Stone Shares She Secretly Went Bald
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:02,994 | INFO | 10. ❌ REJECTED | Jessa Duggar Reveals Name of Baby No. 6 With Husband Ben Seewald
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 11. ❌ REJECTED | Emma Stone Makes Rare Comments on Daughter Louise
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 12. ❌ REJECTED | Madison LeCroy’s Amazon Beauty Fave: $10 Hair Mask for Luscious Locks
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 13. ❌ REJECTED | Carly Pearce Hospitalized Over Cut From Ranch Dressing Bottle
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 14. ❌ REJECTED | Halle Berry's Ex David Justice Reveals Why He Wanted Divorce
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 15. ❌ REJECTED | Rebecca Black's NSFW Nipple Dress Will Make You Do a Double Take
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 16. ❌ REJECTED | Good Hair, No Scare: Best Benzene-Free Dry Shampoo for Refreshed Roots
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 17. ❌ REJECTED | Brandon Blackstock's Ex Honors "Best Daddy" Who Loved, Fought Hard
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,994 | INFO | 18. ❌ REJECTED | Inside Kylie Jenner’s Lavish Birthday Party With Hailey Bieber & More
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:02,994 | INFO | 19. ❌ REJECTED | Brandon Blackstock's Son Seth Shares Heartbreaking Tribute to His Hero
-2025-08-12 03:15:02,994 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:02,995 | INFO | 20. ❌ REJECTED | Did an Orca Kill Trainer Jessica Radcliffe? Viral Clip Explained
-2025-08-12 03:15:02,995 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,803 | INFO | 
+2025-08-12 04:25:29,161 | INFO | FEED: E_NEWS
+2025-08-12 04:25:29,161 | INFO | Total articles fetched: 20
+2025-08-12 04:25:29,161 | INFO | Accepted: 1, Rejected: 19
+2025-08-12 04:25:29,161 | INFO | ============================================================
+2025-08-12 04:25:29,161 | INFO |  1. ✅ ACCEPTED | Taylor Swift Announces New Album on Travis Kelce's Podcast
+2025-08-12 04:25:29,161 | INFO |     └─ Celebrities: jason kelce, kelce, swift
+2025-08-12 04:25:29,161 | INFO |  2. ❌ REJECTED | Anna Delvey Responds After Her Photoshoot Rabbits Were Dumped in Park
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,162 | INFO |  3. ❌ REJECTED | Liz Lin Ruoyu, Beauty Influencer, Dead at 36
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,162 | INFO |  4. ❌ REJECTED | Alan Tudyk Says He Was Cut From I, Robot Promo With Will Smith
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,162 | INFO |  5. ❌ REJECTED | See Taylor Swift Make Debut on Travis Kelce’s New Heights Podcast
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:29,162 | INFO |  6. ❌ REJECTED | Country Singer Ella Langley Cancels Shows to Heal “Mind, Body & Heart”
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,162 | INFO |  7. ❌ REJECTED | Get an XXL EltaMD UV Clear Sunscreen on Super Sale at Amazon Today
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:29,162 | INFO |  8. ❌ REJECTED | Below Deck: Kyle Stillie's Fate Revealed After Guest Sex Scandal
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,162 | INFO |  9. ❌ REJECTED | Kathy Griffin Debuts “New Face” After 3rd Facelift
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,162 | INFO | 10. ❌ REJECTED | Lauren Sánchez Bezos "Heartbroken" After Taking Son Evan to College
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,162 | INFO | 11. ❌ REJECTED | Emma Stone Shares She Secretly Went Bald
+2025-08-12 04:25:29,162 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:29,162 | INFO | 12. ❌ REJECTED | Jessa Duggar Reveals Name of Baby No. 6 With Husband Ben Seewald
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 13. ❌ REJECTED | Emma Stone Makes Rare Comments on Daughter Louise
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 14. ❌ REJECTED | Madison LeCroy’s Amazon Beauty Fave: $10 Hair Mask for Luscious Locks
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 15. ❌ REJECTED | Carly Pearce Hospitalized Over Cut From Ranch Dressing Bottle
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 16. ❌ REJECTED | Halle Berry's Ex David Justice Reveals Why He Wanted Divorce
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 17. ❌ REJECTED | Rebecca Black's NSFW Nipple Dress Will Make You Do a Double Take
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 18. ❌ REJECTED | Good Hair, No Scare: Best Benzene-Free Dry Shampoo for Refreshed Roots
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 19. ❌ REJECTED | Brandon Blackstock's Ex Honors "Best Daddy" Who Loved, Fought Hard
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:29,163 | INFO | 20. ❌ REJECTED | Inside Kylie Jenner’s Lavish Birthday Party With Hailey Bieber & More
+2025-08-12 04:25:29,163 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:31,682 | INFO | 
 ============================================================
-2025-08-12 03:15:03,803 | INFO | FEED: US_WEEKLY
-2025-08-12 03:15:03,803 | INFO | Total articles fetched: 20
-2025-08-12 03:15:03,803 | INFO | Accepted: 3, Rejected: 17
-2025-08-12 03:15:03,803 | INFO | ============================================================
-2025-08-12 03:15:03,803 | INFO |  1. ❌ REJECTED | Siesta Key’s Juliette Porter Reveals She Made $120,000 for Narration on Show
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO |  2. ❌ REJECTED | Carly Pearce Rushed to Hospital After Ranch Dressing Bottle Cuts Her Thumb
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO |  3. ✅ ACCEPTED | Anna Kendrick's Dating History: Bill Hader, More Famous Exes
-2025-08-12 03:15:03,804 | INFO |     └─ Celebrities: anna kendrick
-2025-08-12 03:15:03,804 | INFO |  4. ❌ REJECTED | Porsha Williams’ $7 Million Home Hit With Lien Due to Ex-Husband’s Debt
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO |  5. ❌ REJECTED | Niall Horan Says He Wishes He Didn’t Take a Year Off ‘The Voice’
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO |  6. ❌ REJECTED | Celebs Who Have Gone Near-Naked While Posing Topless: Lily James, More
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO |  7. ✅ ACCEPTED | What Has Happened With Hulk Hogan’s Family and Legacy After His Death
-2025-08-12 03:15:03,804 | INFO |     └─ Celebrities: hogan, hulk hogan
-2025-08-12 03:15:03,804 | INFO |  8. ❌ REJECTED | Celebrity Engagements of 2025: Stars Who Got Engaged
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:03,804 | INFO |  9. ✅ ACCEPTED | Cristiano Ronaldo and Georgina Rodriguez's Relationship Timeline
-2025-08-12 03:15:03,804 | INFO |     └─ Celebrities: irina shayk
-2025-08-12 03:15:03,804 | INFO | 10. ❌ REJECTED | RHOM's Julia Lemigova Defends Larsa Pippen After Plastic Surgery Rumors
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO | 11. ❌ REJECTED | Influencer Deaths of 2025: Camila Trevisol and More Stars We’ve Lost So Far
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO | 12. ❌ REJECTED | Beauty Influencer Liz Lin Ruoyu Dead at Age 36
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,804 | INFO | 13. ❌ REJECTED | ‘NCIS,’ ‘JAG’ and ‘Quantum Leap’ Stars Celebrate Creator’s 90th B-Day: Photos
-2025-08-12 03:15:03,804 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,805 | INFO | 14. ❌ REJECTED | Which TV Shows Are Canceled in 2025-2026?
-2025-08-12 03:15:03,805 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,805 | INFO | 15. ❌ REJECTED | Bethenny Frankel Admits She ‘Can’t Bring’ Herself to Try Dating Again
-2025-08-12 03:15:03,805 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,805 | INFO | 16. ❌ REJECTED | Cher’s Son Elijah Ordered to Pay Ex Support Weeks After Alleged Overdose
-2025-08-12 03:15:03,805 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,805 | INFO | 17. ❌ REJECTED | Emily Ratajkowski Leaves Very Little to the Imagination in a Tiny Bikini
-2025-08-12 03:15:03,805 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,805 | INFO | 18. ❌ REJECTED | Scott Porter Reveals Whether He Receives Residuals for 'Hart of Dixie'
-2025-08-12 03:15:03,805 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,805 | INFO | 19. ❌ REJECTED | Cristiano Ronaldo's Fiancee Shows Off Giant Ring While Announcing Engagement
-2025-08-12 03:15:03,805 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:03,805 | INFO | 20. ❌ REJECTED | Family of 4! Rafael Nadal Welcomes Baby No. 2 With Wife Mery Perello
-2025-08-12 03:15:03,805 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,431 | INFO | 
+2025-08-12 04:25:31,682 | INFO | FEED: US_WEEKLY
+2025-08-12 04:25:31,682 | INFO | Total articles fetched: 20
+2025-08-12 04:25:31,682 | INFO | Accepted: 4, Rejected: 16
+2025-08-12 04:25:31,682 | INFO | ============================================================
+2025-08-12 04:25:31,682 | INFO |  1. ❌ REJECTED | Jana Kramer and Friends Have Tense Debate About Spanking Kids on Podcast
+2025-08-12 04:25:31,682 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,682 | INFO |  2. ❌ REJECTED | Brandon Blackstock's Son and Ex-Wife Break Silence on His Death
+2025-08-12 04:25:31,682 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,682 | INFO |  3. ❌ REJECTED | How to Watch All of the ‘Conjuring’ Movies in Order: Where to Stream Films
+2025-08-12 04:25:31,682 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,682 | INFO |  4. ✅ ACCEPTED | Kristin Davis Says Sarah Jessica Parker Told Her ‘You Have Body Dysmorphia’
+2025-08-12 04:25:31,682 | INFO |     └─ Celebrities: kristin davis
+2025-08-12 04:25:31,682 | INFO |  5. ✅ ACCEPTED | Stars Who Have Mastered and Failed the Nicki Minaj Stiletto Heel Challenge
+2025-08-12 04:25:31,682 | INFO |     └─ Celebrities: nicki minaj
+2025-08-12 04:25:31,682 | INFO |  6. ❌ REJECTED | Amazon Is Packed With Comfy Athleisure Made for Jet Setting — Under $50
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO |  7. ❌ REJECTED | Ghost Adventures’ Aaron Goodwin’s Ex Hopes to Reconcile After Murder Plot
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO |  8. ✅ ACCEPTED | Dua Lipa’s Sexy Swimwear Collection: Gucci Tops, Thong Bottoms, More
+2025-08-12 04:25:31,683 | INFO |     └─ Celebrities: dua lipa
+2025-08-12 04:25:31,683 | INFO |  9. ❌ REJECTED | Netflix Finally Added a New Season of One of Its Most Popular Summer Shows
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO | 10. ❌ REJECTED | Ella Langley Cancels Shows After 'Tough' Few Weeks to 'Focus on My Health'
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO | 11. ❌ REJECTED | Elsa Pataky Celebrates Chris Hemsworth’s 42nd Birthday With Goofy Clip
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO | 12. ❌ REJECTED | Recreate Katie Holmes’ Comfy Flannel Top Look for $20 on Amazon
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO | 13. ✅ ACCEPTED | Hulk Hogan Served as Son Nick's Best Man at Wedding Months Before His Death
+2025-08-12 04:25:31,683 | INFO |     └─ Celebrities: hogan, hulk hogan
+2025-08-12 04:25:31,683 | INFO | 14. ❌ REJECTED | Influencer Becca Murray Defends Setting Up a Divorce Registry Post Split
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO | 15. ❌ REJECTED | Oliver Hudson Details Traumatic Events of His Own Birth: ‘Almost Died’
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO | 16. ❌ REJECTED | Siesta Key’s Juliette Porter Reveals She Made $120,000 for Narration on Show
+2025-08-12 04:25:31,683 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,683 | INFO | 17. ❌ REJECTED | Carly Pearce Rushed to Hospital After Ranch Dressing Bottle Cuts Her Thumb
+2025-08-12 04:25:31,684 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,684 | INFO | 18. ❌ REJECTED | Anna Kendrick's Dating History: Bill Hader, More Famous Exes
+2025-08-12 04:25:31,684 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:31,684 | INFO | 19. ❌ REJECTED | Porsha Williams’ $7 Million Home Hit With Lien Due to Ex-Husband’s Debt
+2025-08-12 04:25:31,684 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:31,684 | INFO | 20. ❌ REJECTED | Niall Horan Says He Wishes He Didn’t Take a Year Off ‘The Voice’
+2025-08-12 04:25:31,684 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,293 | INFO | 
 ============================================================
-2025-08-12 03:15:04,432 | INFO | FEED: VARIETY_ALT
-2025-08-12 03:15:04,432 | INFO | Total articles fetched: 10
-2025-08-12 03:15:04,432 | INFO | Accepted: 0, Rejected: 10
-2025-08-12 03:15:04,432 | INFO | ============================================================
-2025-08-12 03:15:04,432 | INFO |  1. ❌ REJECTED | ‘South Park’ Doubles Down on Kristi Noem With Paramount+ End Credits Scene Featu...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO |  2. ❌ REJECTED | Michael Chiklis Says Original ‘Fantastic Four’ Movies ‘Got a Lot Right’ and Ther...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO |  3. ❌ REJECTED | ‘Saiyaara’ Stars Ahaan Panday and Aneet Padda Claim IMDb Breakout Star Awards (E...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:04,432 | INFO |  4. ❌ REJECTED | Park Chan-wook Can Keep Writing Despite WGA Expulsion: ‘No Impact on Employabili...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO |  5. ❌ REJECTED | Sandra Bullock Was Told She Couldn’t ‘Like and Respect’ Jennifer Aniston and Oth...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO |  6. ❌ REJECTED | LISTEN: ‘Weapons,’ ‘Freakier Friday’ Impress as Superhero Alternatives; Why Loca...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO |  7. ❌ REJECTED | Every Marvel Studios Movie and Disney+ Project in 2025 and Beyond
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO |  8. ❌ REJECTED | Simon Pegg Says Quentin Tarantino’s Unmade ‘Star Trek’ Movie Was ‘Batsh– Crazy’:...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO |  9. ❌ REJECTED | Martha’s Vineyard African American Film Festival Founders on Thriving Despite DE...
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:04,432 | INFO | 10. ❌ REJECTED | Sinclair to Explore M Possibilities for Broadcast TV Business
-2025-08-12 03:15:04,432 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,212 | INFO | 
+2025-08-12 04:25:32,293 | INFO | FEED: VARIETY_ALT
+2025-08-12 04:25:32,293 | INFO | Total articles fetched: 10
+2025-08-12 04:25:32,293 | INFO | Accepted: 1, Rejected: 9
+2025-08-12 04:25:32,293 | INFO | ============================================================
+2025-08-12 04:25:32,293 | INFO |  1. ✅ ACCEPTED | Taylor Swift Announces New Album ‘The Life of a Showgirl’
+2025-08-12 04:25:32,294 | INFO |     └─ Celebrities: swift, taylor swift
+2025-08-12 04:25:32,294 | INFO |  2. ❌ REJECTED | ‘South Park’ Doubles Down on Kristi Noem With Paramount+ End Credits Scene Featu...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,294 | INFO |  3. ❌ REJECTED | Michael Chiklis Says Original ‘Fantastic Four’ Movies ‘Got a Lot Right’ and Ther...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,294 | INFO |  4. ❌ REJECTED | ‘Saiyaara’ Stars Ahaan Panday and Aneet Padda Claim IMDb Breakout Star Awards (E...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:32,294 | INFO |  5. ❌ REJECTED | Park Chan-wook Can Keep Writing Despite WGA Expulsion: ‘No Impact on Employabili...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,294 | INFO |  6. ❌ REJECTED | Sandra Bullock Was Told She Couldn’t ‘Like and Respect’ Jennifer Aniston and Oth...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,294 | INFO |  7. ❌ REJECTED | LISTEN: ‘Weapons,’ ‘Freakier Friday’ Impress as Superhero Alternatives; Why Loca...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,294 | INFO |  8. ❌ REJECTED | Every Marvel Studios Movie and Disney+ Project in 2025 and Beyond
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,294 | INFO |  9. ❌ REJECTED | Simon Pegg Says Quentin Tarantino’s Unmade ‘Star Trek’ Movie Was ‘Batsh– Crazy’:...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,294 | INFO | 10. ❌ REJECTED | Martha’s Vineyard African American Film Festival Founders on Thriving Despite DE...
+2025-08-12 04:25:32,294 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,877 | INFO | 
 ============================================================
-2025-08-12 03:15:05,212 | INFO | FEED: HOLLYWOOD_REPORTER
-2025-08-12 03:15:05,212 | INFO | Total articles fetched: 10
-2025-08-12 03:15:05,212 | INFO | Accepted: 2, Rejected: 8
-2025-08-12 03:15:05,212 | INFO | ============================================================
-2025-08-12 03:15:05,212 | INFO |  1. ❌ REJECTED | Josh Brolin Says ‘Weapons’ Is the Opposite of “All the Same S***” on Streamers
-2025-08-12 03:15:05,212 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,212 | INFO |  2. ✅ ACCEPTED | Taylor Swift Confirmed to Make Guest Appearance on Travis Kelce’s ‘New Heights’ ...
-2025-08-12 03:15:05,212 | INFO |     └─ Celebrities: jason kelce, kelce, swift
-2025-08-12 03:15:05,212 | INFO |  3. ✅ ACCEPTED | The L.A. Brand Behind Taylor Swift’s Affordable Diamond Necklace Is Treating Jew...
-2025-08-12 03:15:05,212 | INFO |     └─ Celebrities: swift, taylor swift
-2025-08-12 03:15:05,212 | INFO |  4. ❌ REJECTED | Jonas Brothers and Demi Lovato Have ‘Camp Rock’ Reunion on Jonas20 Tour’s Openin...
-2025-08-12 03:15:05,212 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,212 | INFO |  5. ❌ REJECTED | Jennifer Aniston Says She Was “Mourning” Matthew Perry Before His Death Due to A...
-2025-08-12 03:15:05,212 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,212 | INFO |  6. ❌ REJECTED | AMC Theatres Cutting Some Pre-Show “Marketing Material” Even As It Keeps Ad Deal...
-2025-08-12 03:15:05,212 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,212 | INFO |  7. ❌ REJECTED | Boardroom Plans Print Magazine Launch as Kevin Durant-Backed Start Up Branches O...
-2025-08-12 03:15:05,212 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,212 | INFO |  8. ❌ REJECTED | Zendaya Models Her First Shoe Design Created with Stylist Law Roach in Swiss Lab...
-2025-08-12 03:15:05,212 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:05,212 | INFO |  9. ❌ REJECTED | Emmy Predictions via Feinberg Forecast: Scott’s First Post-Nominations Read of t...
-2025-08-12 03:15:05,213 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:05,213 | INFO | 10. ❌ REJECTED | Millie Bobby Brown Is Giving Cozy-Chic in Crocs’ New Furry Clogs
-2025-08-12 03:15:05,213 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:05,846 | INFO | 
+2025-08-12 04:25:32,877 | INFO | FEED: HOLLYWOOD_REPORTER
+2025-08-12 04:25:32,877 | INFO | Total articles fetched: 10
+2025-08-12 04:25:32,877 | INFO | Accepted: 1, Rejected: 9
+2025-08-12 04:25:32,877 | INFO | ============================================================
+2025-08-12 04:25:32,877 | INFO |  1. ✅ ACCEPTED | Taylor Swift Reveals New Album ‘The Life of a Showgirl’ in Teaser for Travis Kel...
+2025-08-12 04:25:32,877 | INFO |     └─ Celebrities: kelce, swift, taylor swift
+2025-08-12 04:25:32,877 | INFO |  2. ❌ REJECTED | Josh Brolin Says ‘Weapons’ Is the Opposite of “All the Same S***” on Streamers
+2025-08-12 04:25:32,877 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,877 | INFO |  3. ❌ REJECTED | Taylor Swift Confirmed to Make Guest Appearance on Travis Kelce’s ‘New Heights’ ...
+2025-08-12 04:25:32,877 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:32,877 | INFO |  4. ❌ REJECTED | The L.A. Brand Behind Taylor Swift’s Affordable Diamond Necklace Is Treating Jew...
+2025-08-12 04:25:32,878 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:32,878 | INFO |  5. ❌ REJECTED | Jonas Brothers and Demi Lovato Have ‘Camp Rock’ Reunion on Jonas20 Tour’s Openin...
+2025-08-12 04:25:32,878 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,878 | INFO |  6. ❌ REJECTED | Jennifer Aniston Says She Was “Mourning” Matthew Perry Before His Death Due to A...
+2025-08-12 04:25:32,878 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,878 | INFO |  7. ❌ REJECTED | AMC Theatres Cutting Some Pre-Show “Marketing Material” Even As It Keeps Ad Deal...
+2025-08-12 04:25:32,878 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,878 | INFO |  8. ❌ REJECTED | Boardroom Plans Print Magazine Launch as Kevin Durant-Backed Start Up Branches O...
+2025-08-12 04:25:32,878 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:32,878 | INFO |  9. ❌ REJECTED | Zendaya Models Her First Shoe Design Created with Stylist Law Roach in Swiss Lab...
+2025-08-12 04:25:32,878 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:32,878 | INFO | 10. ❌ REJECTED | Emmy Predictions via Feinberg Forecast: Scott’s First Post-Nominations Read of t...
+2025-08-12 04:25:32,878 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:34,499 | INFO | 
 ============================================================
-2025-08-12 03:15:05,846 | INFO | FEED: DEADLINE
-2025-08-12 03:15:05,846 | INFO | Total articles fetched: 12
-2025-08-12 03:15:05,846 | INFO | Accepted: 0, Rejected: 12
-2025-08-12 03:15:05,846 | INFO | ============================================================
-2025-08-12 03:15:05,846 | INFO |  1. ❌ REJECTED | Ambika Mod Says She Still Gets Auditions For Roles Like “The Rookie Cop” Who Sup...
-2025-08-12 03:15:05,846 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,846 | INFO |  2. ❌ REJECTED | Jennifer Aniston On ‘Friends’ Cast “Mourning” Matthew Perry Before His Death Due...
-2025-08-12 03:15:05,846 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,846 | INFO |  3. ❌ REJECTED | Harper Steele, Star Of Emmy-Nominated Documentary ‘Will & Harper,’ To Be Honored...
-2025-08-12 03:15:05,846 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:05,846 | INFO |  4. ❌ REJECTED | The Best 7 New Movies On Netflix In August
-2025-08-12 03:15:05,846 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,846 | INFO |  5. ❌ REJECTED | ‘Wednesday’ Creators Alfred Gough & Miles Millar On New ‘Addams Family’ Animated...
-2025-08-12 03:15:05,846 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:05,846 | INFO |  6. ❌ REJECTED | How CBS Studios & Paramount TV Studios Are Divvying Up Streaming Series Slate: F...
-2025-08-12 03:15:05,846 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,847 | INFO |  7. ❌ REJECTED | Alan Tudyk Says He Was Removed From ‘I, Robot’s Press Materials After Testing Hi...
-2025-08-12 03:15:05,847 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,847 | INFO |  8. ❌ REJECTED | AMC Entertainment CEO Sees Paramount Ramping Up Theatrical Releases Under Skydan...
-2025-08-12 03:15:05,847 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,847 | INFO |  9. ❌ REJECTED | ‘Swiped’ Trailer: Lily James Plays Billionaire Bumble Founder Whitney Wolfe Herd
-2025-08-12 03:15:05,847 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,847 | INFO | 10. ❌ REJECTED | AMC Boss Adam Aron Expounds On Plan To Cut Down Preshow: “We Can Shave Four Or F...
-2025-08-12 03:15:05,847 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,847 | INFO | 11. ❌ REJECTED | ‘Buffy’ Reboot: Merrin Dungey, Audrey Hsieh & Audrey Grace Marshall Join Hulu Pi...
-2025-08-12 03:15:05,847 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:05,847 | INFO | 12. ❌ REJECTED | Sony Buys Shipley Brothers’ Comedy Screenplay ‘This Could Be Our Night’
-2025-08-12 03:15:05,847 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,452 | INFO | 
+2025-08-12 04:25:34,499 | INFO | FEED: DEADLINE
+2025-08-12 04:25:34,499 | INFO | Total articles fetched: 12
+2025-08-12 04:25:34,499 | INFO | Accepted: 1, Rejected: 11
+2025-08-12 04:25:34,499 | INFO | ============================================================
+2025-08-12 04:25:34,499 | INFO |  1. ✅ ACCEPTED | Taylor Swift Reveals Twelfth Album Title: “The Life Of A Showgirl”
+2025-08-12 04:25:34,499 | INFO |     └─ Celebrities: swift, taylor swift
+2025-08-12 04:25:34,499 | INFO |  2. ❌ REJECTED | Ambika Mod Says She Still Gets Auditions For Roles Like “The Rookie Cop” Who Sup...
+2025-08-12 04:25:34,499 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,499 | INFO |  3. ❌ REJECTED | Jennifer Aniston On ‘Friends’ Cast “Mourning” Matthew Perry Before His Death Due...
+2025-08-12 04:25:34,499 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,499 | INFO |  4. ❌ REJECTED | Harper Steele, Star Of Emmy-Nominated Documentary ‘Will & Harper,’ To Be Honored...
+2025-08-12 04:25:34,499 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:34,499 | INFO |  5. ❌ REJECTED | The Best 7 New Movies On Netflix In August
+2025-08-12 04:25:34,499 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,499 | INFO |  6. ❌ REJECTED | ‘Wednesday’ Creators Alfred Gough & Miles Millar On New ‘Addams Family’ Animated...
+2025-08-12 04:25:34,499 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:34,499 | INFO |  7. ❌ REJECTED | How CBS Studios & Paramount TV Studios Are Divvying Up Streaming Series Slate: F...
+2025-08-12 04:25:34,499 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,499 | INFO |  8. ❌ REJECTED | Alan Tudyk Says He Was Removed From ‘I, Robot’s Press Materials After Testing Hi...
+2025-08-12 04:25:34,499 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,499 | INFO |  9. ❌ REJECTED | AMC Entertainment CEO Sees Paramount Ramping Up Theatrical Releases Under Skydan...
+2025-08-12 04:25:34,500 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,500 | INFO | 10. ❌ REJECTED | ‘Swiped’ Trailer: Lily James Plays Billionaire Bumble Founder Whitney Wolfe Herd
+2025-08-12 04:25:34,500 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,500 | INFO | 11. ❌ REJECTED | AMC Boss Adam Aron Expounds On Plan To Cut Down Preshow: “We Can Shave Four Or F...
+2025-08-12 04:25:34,500 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:34,500 | INFO | 12. ❌ REJECTED | ‘Buffy’ Reboot: Merrin Dungey, Audrey Hsieh & Audrey Grace Marshall Join Hulu Pi...
+2025-08-12 04:25:34,500 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,146 | INFO | 
 ============================================================
-2025-08-12 03:15:06,452 | INFO | FEED: PAGE_SIX
-2025-08-12 03:15:06,452 | INFO | Total articles fetched: 10
-2025-08-12 03:15:06,452 | INFO | Accepted: 1, Rejected: 9
-2025-08-12 03:15:06,452 | INFO | ============================================================
-2025-08-12 03:15:06,452 | INFO |  1. ❌ REJECTED | Joshua Jackson and ‘Bridgerton’ actress Simone Ashley spotted on cozy NYC stroll
-2025-08-12 03:15:06,452 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,452 | INFO |  2. ✅ ACCEPTED | Taylor Swift confirmed as Travis Kelce podcast guest in flirty ‘New Heights’ pre...
-2025-08-12 03:15:06,452 | INFO |     └─ Celebrities: jason kelce, kelce, swift
-2025-08-12 03:15:06,453 | INFO |  3. ❌ REJECTED | Alexis Gosselin makes rare appearance after brother Collin’s heartbreaking messa...
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,453 | INFO |  4. ❌ REJECTED | ‘Highest 2 Lowest’ NYC premiere red carpet: Denzel Washington, A$AP Rocky and mo...
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,453 | INFO |  5. ❌ REJECTED | Jessica Alba is all business in blue as she basks in a post-vacation glow
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,453 | INFO |  6. ❌ REJECTED | Brandon Blackstock’s first wife, Melissa Ashworth, breaks silence on his death
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,453 | INFO |  7. ❌ REJECTED | Lauren Sánchez marks a major parenting milestone that left her ‘heartbroken’
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,453 | INFO |  8. ❌ REJECTED | Watch Page Six Radio try Brooklyn Beckham’s Cloud 23 hot sauce
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:06,453 | INFO |  9. ❌ REJECTED | Georgina Rodriguez’s ‘extraordinary’ engagement ring from Cristiano Ronaldo coul...
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:06,453 | INFO | 10. ❌ REJECTED | Jennifer Aniston makes rare comment about ‘vulnerable’ Brad Pitt divorce
-2025-08-12 03:15:06,453 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:07,217 | INFO | 
+2025-08-12 04:25:35,146 | INFO | FEED: PAGE_SIX
+2025-08-12 04:25:35,146 | INFO | Total articles fetched: 10
+2025-08-12 04:25:35,146 | INFO | Accepted: 0, Rejected: 10
+2025-08-12 04:25:35,147 | INFO | ============================================================
+2025-08-12 04:25:35,147 | INFO |  1. ❌ REJECTED | Joshua Jackson and ‘Bridgerton’ actress Simone Ashley spotted on cozy NYC stroll
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,147 | INFO |  2. ❌ REJECTED | Taylor Swift confirmed as Travis Kelce podcast guest in flirty ‘New Heights’ pre...
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:35,147 | INFO |  3. ❌ REJECTED | Alexis Gosselin makes rare appearance after brother Collin’s heartbreaking messa...
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,147 | INFO |  4. ❌ REJECTED | ‘Highest 2 Lowest’ NYC premiere red carpet: Denzel Washington, A$AP Rocky and mo...
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,147 | INFO |  5. ❌ REJECTED | Jessica Alba is all business in blue as she basks in a post-vacation glow
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,147 | INFO |  6. ❌ REJECTED | Brandon Blackstock’s first wife, Melissa Ashworth, breaks silence on his death
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,147 | INFO |  7. ❌ REJECTED | Lauren Sánchez marks a major parenting milestone that left her ‘heartbroken’
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,147 | INFO |  8. ❌ REJECTED | Watch Page Six Radio try Brooklyn Beckham’s Cloud 23 hot sauce
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:35,147 | INFO |  9. ❌ REJECTED | Georgina Rodriguez’s ‘extraordinary’ engagement ring from Cristiano Ronaldo coul...
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,147 | INFO | 10. ❌ REJECTED | Jennifer Aniston makes rare comment about ‘vulnerable’ Brad Pitt divorce
+2025-08-12 04:25:35,147 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:35,925 | INFO | 
 ============================================================
-2025-08-12 03:15:07,217 | INFO | FEED: HUFFPOST_ENTERTAINMENT
-2025-08-12 03:15:07,217 | INFO | Total articles fetched: 9
-2025-08-12 03:15:07,217 | INFO | Accepted: 0, Rejected: 9
-2025-08-12 03:15:07,217 | INFO | ============================================================
-2025-08-12 03:15:07,217 | INFO |  1. ❌ REJECTED | Jon Batiste Predicts What Will Happen To Stephen Colbert 'Where He Goes Next'
-2025-08-12 03:15:07,217 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:07,217 | INFO |  2. ❌ REJECTED | Sophie Turner Slams Commenter Who Says She's 'Forgotten' Her 2 Children
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:07,218 | INFO |  3. ❌ REJECTED | Lisa Kudrow's Spoof Of A Republican Spokesperson Resurfaces With Viral Force
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:07,218 | INFO |  4. ❌ REJECTED | Watch Jennifer Lopez Have Onstage Insect Encounter That Might Make Your Skin Cra...
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:07,218 | INFO |  5. ❌ REJECTED | John Oliver Super Savagely Burns Dean Cain For Joining ICE
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:07,218 | INFO |  6. ❌ REJECTED | Halle Berry's Ex Reveals Reason For Not Wanting To Start A Family With Her
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:07,218 | INFO |  7. ❌ REJECTED | Thieves Pillage $25,000 Worth Of Trendy Labubu Dolls From LA-Area Shop
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:07,218 | INFO |  8. ❌ REJECTED | Jamie Lee Curtis Is Freakin' Annoyed By 'Freakier Friday' Review
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:07,218 | INFO |  9. ❌ REJECTED | Big-Name Actor Says Donald Trump Asked Her Out On Day Her Divorce Was Finalized
-2025-08-12 03:15:07,218 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:08,115 | INFO | 
+2025-08-12 04:25:35,925 | INFO | FEED: HUFFPOST_ENTERTAINMENT
+2025-08-12 04:25:35,925 | INFO | Total articles fetched: 6
+2025-08-12 04:25:35,925 | INFO | Accepted: 0, Rejected: 6
+2025-08-12 04:25:35,925 | INFO | ============================================================
+2025-08-12 04:25:35,925 | INFO |  1. ❌ REJECTED | Watch Jennifer Lopez Have Onstage Insect Encounter That Might Make Your Skin Cra...
+2025-08-12 04:25:35,925 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,925 | INFO |  2. ❌ REJECTED | John Oliver Super Savagely Burns Dean Cain For Joining ICE
+2025-08-12 04:25:35,925 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:35,926 | INFO |  3. ❌ REJECTED | Halle Berry's Ex Reveals Reason For Not Wanting To Start A Family With Her
+2025-08-12 04:25:35,926 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,926 | INFO |  4. ❌ REJECTED | Thieves Pillage $25,000 Worth Of Trendy Labubu Dolls From LA-Area Shop
+2025-08-12 04:25:35,926 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,926 | INFO |  5. ❌ REJECTED | Jamie Lee Curtis Is Freakin' Annoyed By 'Freakier Friday' Review
+2025-08-12 04:25:35,926 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:35,926 | INFO |  6. ❌ REJECTED | Big-Name Actor Says Donald Trump Asked Her Out On Day Her Divorce Was Finalized
+2025-08-12 04:25:35,926 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:36,649 | INFO | 
 ============================================================
-2025-08-12 03:15:08,115 | INFO | FEED: DAILY_MAIL
-2025-08-12 03:15:08,115 | INFO | Total articles fetched: 20
-2025-08-12 03:15:08,115 | INFO | Accepted: 0, Rejected: 20
-2025-08-12 03:15:08,115 | INFO | ============================================================
-2025-08-12 03:15:08,115 | INFO |  1. ❌ REJECTED | S Club 7's Jon Lee, 43, reveals he hasn't had sex in SIX years on Celebs Go Dati...
-2025-08-12 03:15:08,115 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,115 | INFO |  2. ❌ REJECTED | Furious customers condemn Fatboy Slim's beachfront cafe for 'crazy' prices, 'sho...
-2025-08-12 03:15:08,115 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,115 | INFO |  3. ❌ REJECTED | Death of Prince William's businessman pal who 'collapsed after swallowing a bee'...
-2025-08-12 03:15:08,115 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,115 | INFO |  4. ❌ REJECTED | 'A wonderful grandfather and my best friend': British woman, 33, whose 'father-i...
-2025-08-12 03:15:08,115 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO |  5. ❌ REJECTED | David and Victoria Beckham fear Brooklyn has 'quit the family' after failing to ...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO |  6. ❌ REJECTED | Ex-Crystal Palace defender and podcast host who trained English footballer star ...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO |  7. ❌ REJECTED | Britain's new 'Wild West': This seaside resort was loved by families...but now t...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO |  8. ❌ REJECTED | Hundreds of pupils left 'with nowhere to study' after historic £23k-a-year priva...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO |  9. ❌ REJECTED | Hoax caller, 61, who told police he had planted bombs at Heathrow and Birmingham...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO | 10. ❌ REJECTED | NADINE DORRIES: My daughters were publicly humiliated after I kept a huge secret...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO | 11. ❌ REJECTED | PETER HITCHENS: I'm pleased public sentiment on Lucy Letby has shifted - but the...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO | 12. ❌ REJECTED | The animated film set to become Netflix's biggest ever hit - to the fury of Disn...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,116 | INFO | 13. ❌ REJECTED | Meghan Markle and Prince Harry's new Netflix deal 'IS a downgrade' and more like...
-2025-08-12 03:15:08,116 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:08,117 | INFO | 14. ❌ REJECTED | Inside Paris's latest migrant camp: Families sleep on the floor beneath tarpauli...
-2025-08-12 03:15:08,117 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,117 | INFO | 15. ❌ REJECTED | Sir Keir Starmer would not call shoplifters 'scumbags', No 10 says in the wake o...
-2025-08-12 03:15:08,117 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,117 | INFO | 16. ❌ REJECTED | Moment staff on London's 'lawless' Tube appear to ignore two fare dodgers who sh...
-2025-08-12 03:15:08,117 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,117 | INFO | 17. ❌ REJECTED | The secret to living to 100: Lifestyle habits from the world's 'Blue Zones' - wh...
-2025-08-12 03:15:08,117 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,117 | INFO | 18. ❌ REJECTED | Kemi Badenoch suggests housing asylum seekers in 'camps' instead of hotels - as ...
-2025-08-12 03:15:08,117 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,117 | INFO | 19. ❌ REJECTED | Myleene Klass' revenge wardrobe: Expert reveals how star is sending secret fashi...
-2025-08-12 03:15:08,117 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,117 | INFO | 20. ❌ REJECTED | How to add three years to your life with 20-minute daily habit anyone can do
-2025-08-12 03:15:08,117 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,763 | INFO | 
+2025-08-12 04:25:36,649 | INFO | FEED: DAILY_MAIL
+2025-08-12 04:25:36,649 | INFO | Total articles fetched: 20
+2025-08-12 04:25:36,649 | INFO | Accepted: 0, Rejected: 20
+2025-08-12 04:25:36,649 | INFO | ============================================================
+2025-08-12 04:25:36,649 | INFO |  1. ❌ REJECTED | She was married to a Hollywood icon before becoming a silver screen siren in her...
+2025-08-12 04:25:36,649 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,649 | INFO |  2. ❌ REJECTED | I had to wait FOUR years for a breast reconstruction after my mastectomy, due to...
+2025-08-12 04:25:36,649 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,649 | INFO |  3. ❌ REJECTED | S Club 7's Jon Lee, 43, reveals he hasn't had sex in SIX years on Celebs Go Dati...
+2025-08-12 04:25:36,649 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,649 | INFO |  4. ❌ REJECTED | Furious customers condemn Fatboy Slim's beachfront cafe for 'crazy' prices, 'sho...
+2025-08-12 04:25:36,649 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,649 | INFO |  5. ❌ REJECTED | Death of Prince William's businessman pal who 'collapsed after swallowing a bee'...
+2025-08-12 04:25:36,649 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO |  6. ❌ REJECTED | 'A wonderful grandfather and my best friend': British woman, 33, whose 'father-i...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO |  7. ❌ REJECTED | David and Victoria Beckham fear Brooklyn has 'quit the family' after failing to ...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO |  8. ❌ REJECTED | Ex-Crystal Palace defender and podcast host who trained English footballer star ...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO |  9. ❌ REJECTED | Britain's new 'Wild West': This seaside resort was loved by families...but now t...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO | 10. ❌ REJECTED | Hundreds of pupils left 'with nowhere to study' after historic £23k-a-year priva...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO | 11. ❌ REJECTED | Hoax caller, 61, who told police he had planted bombs at Heathrow and Birmingham...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO | 12. ❌ REJECTED | NADINE DORRIES: My daughters were publicly humiliated after I kept a huge secret...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO | 13. ❌ REJECTED | PETER HITCHENS: I'm pleased public sentiment on Lucy Letby has shifted - but the...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO | 14. ❌ REJECTED | The animated film set to become Netflix's biggest ever hit - to the fury of Disn...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO | 15. ❌ REJECTED | Meghan Markle and Prince Harry's new Netflix deal 'IS a downgrade' and more like...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:36,650 | INFO | 16. ❌ REJECTED | Inside Paris's latest migrant camp: Families sleep on the floor beneath tarpauli...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,650 | INFO | 17. ❌ REJECTED | Sir Keir Starmer would not call shoplifters 'scumbags', No 10 says in the wake o...
+2025-08-12 04:25:36,650 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,651 | INFO | 18. ❌ REJECTED | Moment staff on London's 'lawless' Tube appear to ignore two fare dodgers who sh...
+2025-08-12 04:25:36,651 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,651 | INFO | 19. ❌ REJECTED | The secret to living to 100: Lifestyle habits from the world's 'Blue Zones' - wh...
+2025-08-12 04:25:36,651 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:36,651 | INFO | 20. ❌ REJECTED | Kemi Badenoch suggests housing asylum seekers in 'camps' instead of hotels - as ...
+2025-08-12 04:25:36,651 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,116 | INFO | 
 ============================================================
-2025-08-12 03:15:08,763 | INFO | FEED: ROLLING_STONE
-2025-08-12 03:15:08,763 | INFO | Total articles fetched: 10
-2025-08-12 03:15:08,763 | INFO | Accepted: 2, Rejected: 8
-2025-08-12 03:15:08,763 | INFO | ============================================================
-2025-08-12 03:15:08,763 | INFO |  1. ✅ ACCEPTED | Taylor Swift Announced as Special Guest on Travis Kelce’s ‘New Heights’ Podcast ...
-2025-08-12 03:15:08,763 | INFO |     └─ Celebrities: kelce, swift, taylor swift
-2025-08-12 03:15:08,763 | INFO |  2. ✅ ACCEPTED | Metro Boomin Sexual Assault Lawsuit Moves to Trial After ‘Unsuccessful’ Settleme...
-2025-08-12 03:15:08,763 | INFO |     └─ Celebrities: metro boomin
-2025-08-12 03:15:08,763 | INFO |  3. ❌ REJECTED | Jonas Brothers’ 20th Anniversary Tour: Here’s Where to Find Tickets for the ‘Gre...
-2025-08-12 03:15:08,763 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,763 | INFO |  4. ❌ REJECTED | Madonna Urges Pope Leo to Visit Gaza: ‘There Is No More Time’
-2025-08-12 03:15:08,763 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,763 | INFO |  5. ❌ REJECTED | Joel McHale’s Biggest Achievement Is Partnering with Seattle’s Best Coffee, Acco...
-2025-08-12 03:15:08,763 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,763 | INFO |  6. ❌ REJECTED | Jennifer Aniston Says ‘We’d Been Mourning’ Matthew Perry Long Before His Death
-2025-08-12 03:15:08,763 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,763 | INFO |  7. ❌ REJECTED | Inside Lollapalooza 2025: What We Saw On the Ground At One of the Summer’s Best ...
-2025-08-12 03:15:08,763 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,764 | INFO |  8. ❌ REJECTED | Natanael Cano Destroys DJ’s Laptop, Hurls Racial Slur During Festival Set
-2025-08-12 03:15:08,764 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,764 | INFO |  9. ❌ REJECTED | Colleen Hoover’s ‘Regretting You’ Novel Returns to Amazon’s Bestsellers Chart Ah...
-2025-08-12 03:15:08,764 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:08,764 | INFO | 10. ❌ REJECTED | Classic Lil Wayne and Rick Ross Mixtapes Are Showing up on Streaming Without Per...
-2025-08-12 03:15:08,764 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:09,418 | INFO | 
+2025-08-12 04:25:38,116 | INFO | FEED: ROLLING_STONE
+2025-08-12 04:25:38,116 | INFO | Total articles fetched: 10
+2025-08-12 04:25:38,116 | INFO | Accepted: 1, Rejected: 9
+2025-08-12 04:25:38,116 | INFO | ============================================================
+2025-08-12 04:25:38,116 | INFO |  1. ✅ ACCEPTED | Taylor Swift Announces New Album ‘The Life of a Showgirl’
+2025-08-12 04:25:38,116 | INFO |     └─ Celebrities: swift, taylor swift
+2025-08-12 04:25:38,116 | INFO |  2. ❌ REJECTED | Mayday Parade Is Ready for a ‘Sad’ Fall
+2025-08-12 04:25:38,116 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,116 | INFO |  3. ❌ REJECTED | Taylor Swift Announced as Special Guest on Travis Kelce’s ‘New Heights’ Podcast ...
+2025-08-12 04:25:38,116 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:38,116 | INFO |  4. ❌ REJECTED | Metro Boomin Sexual Assault Lawsuit Moves to Trial After ‘Unsuccessful’ Settleme...
+2025-08-12 04:25:38,116 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:38,116 | INFO |  5. ❌ REJECTED | Jonas Brothers’ 20th Anniversary Tour: Here’s Where to Find Tickets for the ‘Gre...
+2025-08-12 04:25:38,117 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,117 | INFO |  6. ❌ REJECTED | Madonna Urges Pope Leo to Visit Gaza: ‘There Is No More Time’
+2025-08-12 04:25:38,117 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,117 | INFO |  7. ❌ REJECTED | Joel McHale’s Biggest Achievement Is Partnering with Seattle’s Best Coffee, Acco...
+2025-08-12 04:25:38,117 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,117 | INFO |  8. ❌ REJECTED | Jennifer Aniston Says ‘We’d Been Mourning’ Matthew Perry Long Before His Death
+2025-08-12 04:25:38,117 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,117 | INFO |  9. ❌ REJECTED | Inside Lollapalooza 2025: What We Saw On the Ground At One of the Summer’s Best ...
+2025-08-12 04:25:38,117 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,117 | INFO | 10. ❌ REJECTED | Natanael Cano Destroys DJ’s Laptop, Hurls Racial Slur During Festival Set
+2025-08-12 04:25:38,117 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,749 | INFO | 
 ============================================================
-2025-08-12 03:15:09,419 | INFO | FEED: BILLBOARD
-2025-08-12 03:15:09,419 | INFO | Total articles fetched: 10
-2025-08-12 03:15:09,419 | INFO | Accepted: 2, Rejected: 8
-2025-08-12 03:15:09,419 | INFO | ============================================================
-2025-08-12 03:15:09,419 | INFO |  1. ✅ ACCEPTED | ‘We’re About to Do a F—ing Podcast’: Taylor Swift to Appear on Travis Kelce’s ‘N...
-2025-08-12 03:15:09,419 | INFO |     └─ Celebrities: kelce, swift, taylor swift
-2025-08-12 03:15:09,419 | INFO |  2. ✅ ACCEPTED | Taylor Swift’s Website Gets a Mysterious Countdown Clock — Is ‘TS12’ Upon Us?
-2025-08-12 03:15:09,419 | INFO |     └─ Celebrities: swift, taylor swift
-2025-08-12 03:15:09,419 | INFO |  3. ❌ REJECTED | MF Doom Estate Sues Temu for Selling Knock-Off Merch: ‘One of the Most Unethical...
-2025-08-12 03:15:09,419 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:09,419 | INFO |  4. ❌ REJECTED | MGK Takes Over Cleveland for Raucous 3-Day MGK Day Celebration: Exclusive Photos
-2025-08-12 03:15:09,419 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:09,419 | INFO |  5. ❌ REJECTED | Grand Ole Opry & Hallmark Channel Join to Celebrate Opry’s 100th Anniversary Wit...
-2025-08-12 03:15:09,419 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:09,419 | INFO |  6. ❌ REJECTED | 18 Best Moments From Norway’s Øya Festival: Girl In Red Goes Punk, Chappell Roan...
-2025-08-12 03:15:09,419 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:09,419 | INFO |  7. ❌ REJECTED | The Musician-Loved Dyson Airwrap Is on Sale for $100 Off: Score the Deal Here
-2025-08-12 03:15:09,419 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:09,419 | INFO |  8. ❌ REJECTED | TikTok Calls This Amazon Device a Mini ‘Frame TV’ Dupe: Get It for Back to Schoo...
-2025-08-12 03:15:09,420 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:09,420 | INFO |  9. ❌ REJECTED | ‘Glee’ Stars Explain How Rewatching Show Has Been ‘Healing’ After Cory Monteith ...
-2025-08-12 03:15:09,420 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:09,420 | INFO | 10. ❌ REJECTED | Drake Says He’s Working on ‘Iceman’ as a Party Rages Outside: ‘I’ll Turn Up, Do ...
-2025-08-12 03:15:09,420 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,124 | INFO | 
+2025-08-12 04:25:38,749 | INFO | FEED: BILLBOARD
+2025-08-12 04:25:38,749 | INFO | Total articles fetched: 10
+2025-08-12 04:25:38,749 | INFO | Accepted: 0, Rejected: 10
+2025-08-12 04:25:38,749 | INFO | ============================================================
+2025-08-12 04:25:38,749 | INFO |  1. ❌ REJECTED | Snoop Dogg Confirmed to Perform at 2025 AFL Grand Final
+2025-08-12 04:25:38,749 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,750 | INFO |  2. ❌ REJECTED | Ethel Cain Expands Willoughby Tucker Forever Tour to Australia & New Zealand
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,750 | INFO |  3. ❌ REJECTED | ‘We’re About to Do a F—ing Podcast’: Taylor Swift to Appear on Travis Kelce’s ‘N...
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:38,750 | INFO |  4. ❌ REJECTED | Taylor Swift’s Website Gets a Mysterious Countdown Clock — Is ‘TS12’ Upon Us?
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:38,750 | INFO |  5. ❌ REJECTED | MF Doom Estate Sues Temu for Selling Knock-Off Merch: ‘One of the Most Unethical...
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,750 | INFO |  6. ❌ REJECTED | MGK Takes Over Cleveland for Raucous 3-Day MGK Day Celebration: Exclusive Photos
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,750 | INFO |  7. ❌ REJECTED | Grand Ole Opry & Hallmark Channel Join to Celebrate Opry’s 100th Anniversary Wit...
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,750 | INFO |  8. ❌ REJECTED | 18 Best Moments From Norway’s Øya Festival: Girl In Red Goes Punk, Chappell Roan...
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:38,750 | INFO |  9. ❌ REJECTED | The Musician-Loved Dyson Airwrap Is on Sale for $100 Off: Score the Deal Here
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:38,750 | INFO | 10. ❌ REJECTED | TikTok Calls This Amazon Device a Mini ‘Frame TV’ Dupe: Get It for Back to Schoo...
+2025-08-12 04:25:38,750 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,571 | INFO | 
 ============================================================
-2025-08-12 03:15:10,124 | INFO | FEED: ELLE_ALT
-2025-08-12 03:15:10,124 | INFO | Total articles fetched: 20
-2025-08-12 03:15:10,124 | INFO | Accepted: 0, Rejected: 20
-2025-08-12 03:15:10,125 | INFO | ============================================================
-2025-08-12 03:15:10,125 | INFO |  1. ❌ REJECTED | Undeniably Chic Fall Fashion Finds on Amazon
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,125 | INFO |  2. ❌ REJECTED | Sydney Sweeney's Complete Dating History
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,125 | INFO |  3. ❌ REJECTED | Joe Jonas’s Complete Dating History
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,125 | INFO |  4. ❌ REJECTED | Gucci’s Viral New Handbag Is Declaring the End of Quiet Luxury
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,125 | INFO |  5. ❌ REJECTED | These Wrinkle Filler Serums Instantly Improve the Look of Fine Lines
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,125 | INFO |  6. ❌ REJECTED | The Gilded Age Season 4: Everything We Know
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,125 | INFO |  7. ❌ REJECTED | Christina Ricci’s Style Evolution Through the Years
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,125 | INFO |  8. ❌ REJECTED | Elsie Hewitt Gives a Rare Glimpse at Her Relationship With Pete Davidson in a Ne...
-2025-08-12 03:15:10,125 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,126 | INFO |  9. ❌ REJECTED | Gracie Abrams Just Wore the Perfect Shade of Blush Pink
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,126 | INFO | 10. ❌ REJECTED | The Season-Defining Trends From Copenhagen Fashion Week
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,126 | INFO | 11. ❌ REJECTED | The Launch: Fashion News to Know This August
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,126 | INFO | 12. ❌ REJECTED | Beyoncé’s Levi’s Collab Features Denim, Cowboy Carter Style
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,126 | INFO | 13. ❌ REJECTED | Demi Lovato and Joe Jonas Reunite for a Surprise Camp Rock Performance
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,126 | INFO | 14. ❌ REJECTED | The 10 Best Fashion History Books for Beginners
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,126 | INFO | 15. ❌ REJECTED | Pink Slip Rocks On
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,126 | INFO | 16. ❌ REJECTED | Why Fans Think Taylor Swift and Travis Kelce’s Podcast Announcement Hints at Her...
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,126 | INFO | 17. ❌ REJECTED | Millie Bobby Brown Is Firmly in Her Cozy Era
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,126 | INFO | 18. ❌ REJECTED | A Guide to All the Outlander Novels, Short Stories, and Novellas
-2025-08-12 03:15:10,126 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,126 | INFO | 19. ❌ REJECTED | The Armani Legacy
-2025-08-12 03:15:10,127 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,127 | INFO | 20. ❌ REJECTED | Mercury Retrograde ﻿Is Over, and Things Can Finally Go Back to Normal﻿
-2025-08-12 03:15:10,127 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,806 | INFO | 
+2025-08-12 04:25:39,571 | INFO | FEED: ELLE_ALT
+2025-08-12 04:25:39,571 | INFO | Total articles fetched: 20
+2025-08-12 04:25:39,571 | INFO | Accepted: 1, Rejected: 19
+2025-08-12 04:25:39,571 | INFO | ============================================================
+2025-08-12 04:25:39,571 | INFO |  1. ✅ ACCEPTED | Everything to Know About Taylor Swift’s New Album The Life of a Showgirl
+2025-08-12 04:25:39,571 | INFO |     └─ Celebrities: swift, taylor swift
+2025-08-12 04:25:39,571 | INFO |  2. ❌ REJECTED | Why Fans Think Taylor Swift and Travis Kelce’s Podcast Announcement Hints at Her...
+2025-08-12 04:25:39,571 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:39,571 | INFO |  3. ❌ REJECTED | Undeniably Chic Fall Fashion Finds on Amazon
+2025-08-12 04:25:39,571 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO |  4. ❌ REJECTED | Sydney Sweeney's Complete Dating History
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:39,572 | INFO |  5. ❌ REJECTED | Joe Jonas’s Complete Dating History
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO |  6. ❌ REJECTED | Gucci’s Viral New Handbag Is Declaring the End of Quiet Luxury
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:39,572 | INFO |  7. ❌ REJECTED | These Wrinkle Filler Serums Instantly Improve the Look of Fine Lines
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO |  8. ❌ REJECTED | The Gilded Age Season 4: Everything We Know
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO |  9. ❌ REJECTED | Christina Ricci’s Style Evolution Through the Years
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO | 10. ❌ REJECTED | Elsie Hewitt Gives a Rare Glimpse at Her Relationship With Pete Davidson in a Ne...
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:39,572 | INFO | 11. ❌ REJECTED | Gracie Abrams Just Wore the Perfect Shade of Blush Pink
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO | 12. ❌ REJECTED | The Season-Defining Trends From Copenhagen Fashion Week
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO | 13. ❌ REJECTED | The Launch: Fashion News to Know This August
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,572 | INFO | 14. ❌ REJECTED | Beyoncé’s Levi’s Collab Features Denim, Cowboy Carter Style
+2025-08-12 04:25:39,572 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:39,573 | INFO | 15. ❌ REJECTED | Demi Lovato and Joe Jonas Reunite for a Surprise Camp Rock Performance
+2025-08-12 04:25:39,573 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,573 | INFO | 16. ❌ REJECTED | The 10 Best Fashion History Books for Beginners
+2025-08-12 04:25:39,573 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,573 | INFO | 17. ❌ REJECTED | Pink Slip Rocks On
+2025-08-12 04:25:39,573 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:39,573 | INFO | 18. ❌ REJECTED | Millie Bobby Brown Is Firmly in Her Cozy Era
+2025-08-12 04:25:39,573 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:39,573 | INFO | 19. ❌ REJECTED | A Guide to All the Outlander Novels, Short Stories, and Novellas
+2025-08-12 04:25:39,573 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:39,573 | INFO | 20. ❌ REJECTED | The Armani Legacy
+2025-08-12 04:25:39,573 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,258 | INFO | 
 ============================================================
-2025-08-12 03:15:10,807 | INFO | FEED: VOGUE_ALT
-2025-08-12 03:15:10,807 | INFO | Total articles fetched: 20
-2025-08-12 03:15:10,807 | INFO | Accepted: 1, Rejected: 19
-2025-08-12 03:15:10,807 | INFO | ============================================================
-2025-08-12 03:15:10,807 | INFO |  1. ✅ ACCEPTED | Taylor Swift Enters Her Podcasting Era, With a Hint at TS12
-2025-08-12 03:15:10,807 | INFO |     └─ Celebrities: kelce, swift, taylor swift
-2025-08-12 03:15:10,807 | INFO |  2. ❌ REJECTED | TikTok’s Age Filter Is Trending: Why Are We Obsessed With Asking the Internet Ho...
-2025-08-12 03:15:10,807 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,807 | INFO |  3. ❌ REJECTED | 5 Best Tweezers, According to Brow Experts
-2025-08-12 03:15:10,807 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,807 | INFO |  4. ❌ REJECTED | 51 Thoughts I Had While Watching ‘The Gilded Age’ Season 3 Finale
-2025-08-12 03:15:10,807 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,807 | INFO |  5. ❌ REJECTED | 19 Fall Nail Colors You Should Try Now, According to the Pros
-2025-08-12 03:15:10,807 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,807 | INFO |  6. ❌ REJECTED | Do Modern Rom-Coms Simply Need…More Emma Stone?
-2025-08-12 03:15:10,807 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,807 | INFO |  7. ❌ REJECTED | Emma Stone on Creativity, Motherhood, and Shaving Her Head for ‘Bugonia’ | Vogue...
-2025-08-12 03:15:10,807 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,807 | INFO |  8. ❌ REJECTED | Emma Stone’s 11 Most Memorable Performances So Far
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO |  9. ❌ REJECTED | Emma Stone’s Best Red Carpet Moments
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 10. ❌ REJECTED | Why One Vogue Editor Only Has Eyes for Tubing Mascaras
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 11. ❌ REJECTED | The Hair Kerchief Is Summer 2025’s Must-Have Accessory
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:10,808 | INFO | 12. ❌ REJECTED | 16 Dress and Boots Outfits to Test Out This Fall
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 13. ❌ REJECTED | Being Pregnant at the Same Time as Rihanna (Twice) Is the Ultimate Pregnancy Sty...
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 14. ❌ REJECTED | Rosé Is Nailing the Art of High-Low Dressing
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 15. ❌ REJECTED | Bella Hadid’s Latest Look Is Baywatch Meets Tomato Girl Summer
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 16. ❌ REJECTED | 9 Spike Lee Films to Watch (or Revisit) Now
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 17. ❌ REJECTED | A Day in the Life With Enhypen on Tour
-2025-08-12 03:15:10,808 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,808 | INFO | 18. ❌ REJECTED | The Best Fall Wedding Bouquets and Flowers in Vogue
-2025-08-12 03:15:10,809 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,809 | INFO | 19. ❌ REJECTED | This Sleek, Serene Resort in Santorini Offers Respite From the Crowds
-2025-08-12 03:15:10,809 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:10,809 | INFO | 20. ❌ REJECTED | Victoria Beckham Says That Princess Nails Are Here To Stay
-2025-08-12 03:15:10,809 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:11,424 | INFO | 
+2025-08-12 04:25:40,258 | INFO | FEED: VOGUE_ALT
+2025-08-12 04:25:40,258 | INFO | Total articles fetched: 20
+2025-08-12 04:25:40,258 | INFO | Accepted: 1, Rejected: 19
+2025-08-12 04:25:40,258 | INFO | ============================================================
+2025-08-12 04:25:40,258 | INFO |  1. ✅ ACCEPTED | TS12 Is Coming! Taylor Swift Just Announced Her Next Album on New Heights
+2025-08-12 04:25:40,258 | INFO |     └─ Celebrities: kelce, swift, taylor swift
+2025-08-12 04:25:40,258 | INFO |  2. ❌ REJECTED | TikTok’s Age Filter Is Trending: Why Are We Obsessed With Asking the Internet Ho...
+2025-08-12 04:25:40,258 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,258 | INFO |  3. ❌ REJECTED | 5 Best Tweezers, According to Brow Experts
+2025-08-12 04:25:40,258 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,258 | INFO |  4. ❌ REJECTED | 51 Thoughts I Had While Watching ‘The Gilded Age’ Season 3 Finale
+2025-08-12 04:25:40,258 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:40,259 | INFO |  5. ❌ REJECTED | 19 Fall Nail Colors You Should Try Now, According to the Pros
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO |  6. ❌ REJECTED | Do Modern Rom-Coms Simply Need…More Emma Stone?
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO |  7. ❌ REJECTED | Emma Stone on Creativity, Motherhood, and Shaving Her Head for ‘Bugonia’ | Vogue...
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO |  8. ❌ REJECTED | Emma Stone’s Best Red Carpet Moments
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO |  9. ❌ REJECTED | Emma Stone’s 11 Most Memorable Performances So Far
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO | 10. ❌ REJECTED | Why One Vogue Editor Only Has Eyes for Tubing Mascaras
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO | 11. ❌ REJECTED | The Hair Kerchief Is Summer 2025’s Must-Have Accessory
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:40,259 | INFO | 12. ❌ REJECTED | 16 Dress and Boots Outfits to Test Out This Fall
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO | 13. ❌ REJECTED | Being Pregnant at the Same Time as Rihanna (Twice) Is the Ultimate Pregnancy Sty...
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO | 14. ❌ REJECTED | Rosé Is Nailing the Art of High-Low Dressing
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,259 | INFO | 15. ❌ REJECTED | Bella Hadid’s Latest Look Is Baywatch Meets Tomato Girl Summer
+2025-08-12 04:25:40,259 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,260 | INFO | 16. ❌ REJECTED | 9 Spike Lee Films to Watch (or Revisit) Now
+2025-08-12 04:25:40,260 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,260 | INFO | 17. ❌ REJECTED | A Day in the Life With Enhypen on Tour
+2025-08-12 04:25:40,260 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,260 | INFO | 18. ❌ REJECTED | The Best Fall Wedding Bouquets and Flowers in Vogue
+2025-08-12 04:25:40,260 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,260 | INFO | 19. ❌ REJECTED | This Sleek, Serene Resort in Santorini Offers Respite From the Crowds
+2025-08-12 04:25:40,260 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,260 | INFO | 20. ❌ REJECTED | Victoria Beckham Says That Princess Nails Are Here To Stay
+2025-08-12 04:25:40,260 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,936 | INFO | 
 ============================================================
-2025-08-12 03:15:11,424 | INFO | FEED: PITCHFORK
-2025-08-12 03:15:11,424 | INFO | Total articles fetched: 6
-2025-08-12 03:15:11,424 | INFO | Accepted: 0, Rejected: 6
-2025-08-12 03:15:11,424 | INFO | ============================================================
-2025-08-12 03:15:11,424 | INFO |  1. ❌ REJECTED | Naeem Revives Spank Rock for New Song “Bankroll Peelers”: Listen
-2025-08-12 03:15:11,424 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:11,424 | INFO |  2. ❌ REJECTED | Chance the Rapper Announces Fall 2025 Tour
-2025-08-12 03:15:11,424 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:11,424 | INFO |  3. ❌ REJECTED | Amaarae, No Joy, and More: This Week’s Pitchfork Selects Playlist
-2025-08-12 03:15:11,424 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:11,424 | INFO |  4. ❌ REJECTED | Bobby Whitlock, Derek & the Dominos Co-Founder and Storied Session Musician, Die...
-2025-08-12 03:15:11,425 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:11,425 | INFO |  5. ❌ REJECTED | U2 Release Statements on Israel and Gaza
-2025-08-12 03:15:11,425 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:11,425 | INFO |  6. ❌ REJECTED | Outside Lands 2025: Amazon Music Livestream Schedule & Details
-2025-08-12 03:15:11,425 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:12,219 | INFO | 
+2025-08-12 04:25:40,936 | INFO | FEED: PITCHFORK
+2025-08-12 04:25:40,937 | INFO | Total articles fetched: 8
+2025-08-12 04:25:40,937 | INFO | Accepted: 1, Rejected: 7
+2025-08-12 04:25:40,937 | INFO | ============================================================
+2025-08-12 04:25:40,937 | INFO |  1. ✅ ACCEPTED | Taylor Swift Announces New Album The Life of a Showgirl
+2025-08-12 04:25:40,937 | INFO |     └─ Celebrities: swift, taylor swift
+2025-08-12 04:25:40,937 | INFO |  2. ❌ REJECTED | Kaytranada Shares Song From Very Imminent New Album: Listen
+2025-08-12 04:25:40,937 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,937 | INFO |  3. ❌ REJECTED | Naeem Revives Spank Rock for New Song “Bankroll Peelers”: Listen
+2025-08-12 04:25:40,937 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,937 | INFO |  4. ❌ REJECTED | Chance the Rapper Announces Fall 2025 Tour
+2025-08-12 04:25:40,937 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,937 | INFO |  5. ❌ REJECTED | Amaarae, No Joy, and More: This Week’s Pitchfork Selects Playlist
+2025-08-12 04:25:40,937 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,937 | INFO |  6. ❌ REJECTED | Bobby Whitlock, Derek & the Dominos Co-Founder and Storied Session Musician, Die...
+2025-08-12 04:25:40,937 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,937 | INFO |  7. ❌ REJECTED | U2 Release Statements on Israel and Gaza
+2025-08-12 04:25:40,937 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:40,937 | INFO |  8. ❌ REJECTED | Outside Lands 2025: Amazon Music Livestream Schedule & Details
+2025-08-12 04:25:40,937 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:41,762 | INFO | 
 ============================================================
-2025-08-12 03:15:12,219 | INFO | FEED: HIGHSNOBIETY
-2025-08-12 03:15:12,219 | INFO | Total articles fetched: 17
-2025-08-12 03:15:12,219 | INFO | Accepted: 0, Rejected: 17
-2025-08-12 03:15:12,219 | INFO | ============================================================
-2025-08-12 03:15:12,219 | INFO |  1. ❌ REJECTED | Nike Literally Leveled up Its Comfiest Air Max Sneaker
-2025-08-12 03:15:12,219 | INFO |     └─ Reason: Already processed (duplicate ID)
-2025-08-12 03:15:12,219 | INFO |  2. ❌ REJECTED | Clothing Designed Not To Be Seen, but Inhabited (EXCLUSIVE)
-2025-08-12 03:15:12,219 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,219 | INFO |  3. ❌ REJECTED | Y-3 Military-Grade Boot Is Too Luxe for Combat
-2025-08-12 03:15:12,219 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,219 | INFO |  4. ❌ REJECTED | DIALLO's Sportswear Comes From the Heart (EXCLUSIVE)
-2025-08-12 03:15:12,219 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,219 | INFO |  5. ❌ REJECTED | Kith & adidas' Past, Present & Future, Explained By Ronnie Fieg (EXCLUSIVE)
-2025-08-12 03:15:12,219 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,219 | INFO |  6. ❌ REJECTED | Converse's Japan-Made Sneaker Is a Quietly Luxurious Leather Stepper
-2025-08-12 03:15:12,219 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO |  7. ❌ REJECTED | This Gorgeous Hybrid Moccasin Sneaker Is Drowning in Texture
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO |  8. ❌ REJECTED | Nike's Rainy Day Version of Its Insanely-Advanced Runner Is Surprisingly Stylish
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO |  9. ❌ REJECTED | The Inventor of Japanese Jeans Meets the Originator of Serious Style
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 10. ❌ REJECTED | Meet Us at The Corner
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 11. ❌ REJECTED | A Strapping New Birkenstock Clog, in Every Sense of the Word
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 12. ❌ REJECTED | Nike's Groovy High-Tech Runner Is From Another Planet
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 13. ❌ REJECTED | Nike’s Runner-ish Skate Shoe Has Never Looked Better
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 14. ❌ REJECTED | The Grand Return of adidas’ Stunningly Colorful Caribbean Sneaker
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 15. ❌ REJECTED | Join a Biker Gang (or at Least Dress Like It)
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 16. ❌ REJECTED | A Decade of Cecilie Bahnsen, From Balletcore Revisionism to Futureproof ASICS
-2025-08-12 03:15:12,220 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,220 | INFO | 17. ❌ REJECTED | Levi's Is Cooking (Literally)
-2025-08-12 03:15:12,221 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,847 | INFO | 
+2025-08-12 04:25:41,762 | INFO | FEED: HIGHSNOBIETY
+2025-08-12 04:25:41,762 | INFO | Total articles fetched: 17
+2025-08-12 04:25:41,762 | INFO | Accepted: 0, Rejected: 17
+2025-08-12 04:25:41,762 | INFO | ============================================================
+2025-08-12 04:25:41,762 | INFO |  1. ❌ REJECTED | Nike Literally Leveled up Its Comfiest Air Max Sneaker
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: Already processed (duplicate ID)
+2025-08-12 04:25:41,762 | INFO |  2. ❌ REJECTED | Clothing Designed Not To Be Seen, but Inhabited (EXCLUSIVE)
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,762 | INFO |  3. ❌ REJECTED | Y-3 Military-Grade Boot Is Too Luxe for Combat
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,762 | INFO |  4. ❌ REJECTED | DIALLO's Sportswear Comes From the Heart (EXCLUSIVE)
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,762 | INFO |  5. ❌ REJECTED | Kith & adidas' Past, Present & Future, Explained By Ronnie Fieg (EXCLUSIVE)
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,762 | INFO |  6. ❌ REJECTED | Converse's Japan-Made Sneaker Is a Quietly Luxurious Leather Stepper
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,762 | INFO |  7. ❌ REJECTED | This Gorgeous Hybrid Moccasin Sneaker Is Drowning in Texture
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,762 | INFO |  8. ❌ REJECTED | Nike's Rainy Day Version of Its Insanely-Advanced Runner Is Surprisingly Stylish
+2025-08-12 04:25:41,762 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO |  9. ❌ REJECTED | The Inventor of Japanese Jeans Meets the Originator of Serious Style
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 10. ❌ REJECTED | Meet Us at The Corner
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 11. ❌ REJECTED | A Strapping New Birkenstock Clog, in Every Sense of the Word
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 12. ❌ REJECTED | Nike's Groovy High-Tech Runner Is From Another Planet
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 13. ❌ REJECTED | Nike’s Runner-ish Skate Shoe Has Never Looked Better
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 14. ❌ REJECTED | The Grand Return of adidas’ Stunningly Colorful Caribbean Sneaker
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 15. ❌ REJECTED | Join a Biker Gang (or at Least Dress Like It)
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 16. ❌ REJECTED | A Decade of Cecilie Bahnsen, From Balletcore Revisionism to Futureproof ASICS
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:41,763 | INFO | 17. ❌ REJECTED | Levi's Is Cooking (Literally)
+2025-08-12 04:25:41,763 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:42,450 | INFO | 
 ============================================================
-2025-08-12 03:15:12,847 | INFO | FEED: SNEAKER_NEWS
-2025-08-12 03:15:12,847 | INFO | Total articles fetched: 7
-2025-08-12 03:15:12,847 | INFO | Accepted: 0, Rejected: 7
-2025-08-12 03:15:12,847 | INFO | ============================================================
-2025-08-12 03:15:12,847 | INFO |  1. ❌ REJECTED | The Nike Air Max Plus “Iron Grey” Features A Reflective Swoosh
-2025-08-12 03:15:12,847 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,848 | INFO |  2. ❌ REJECTED | Nike’s Gore-Tex Treated Air Max Sunder Is Ready For Fall Climates
-2025-08-12 03:15:12,848 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,848 | INFO |  3. ❌ REJECTED | Refreshing “Chlorophyll” Accents Hop On The Nike Vomero 5
-2025-08-12 03:15:12,848 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,848 | INFO |  4. ❌ REJECTED | First Look At The Lucha Libre Inspired Air Jordan 3 “Mexico”
-2025-08-12 03:15:12,848 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,848 | INFO |  5. ❌ REJECTED | Tobe Nwigwe’s Minty Reebok CHUKWU ABUO Is For The Full Family
-2025-08-12 03:15:12,848 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,848 | INFO |  6. ❌ REJECTED | First Look At The Nike SB Dunk Low “Mineral Slate”
-2025-08-12 03:15:12,848 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:12,848 | INFO |  7. ❌ REJECTED | Nike Channels A CO.JP Classic With The Dunk Low “Wheat”
-2025-08-12 03:15:12,848 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,525 | INFO | 
+2025-08-12 04:25:42,450 | INFO | FEED: SNEAKER_NEWS
+2025-08-12 04:25:42,450 | INFO | Total articles fetched: 7
+2025-08-12 04:25:42,450 | INFO | Accepted: 0, Rejected: 7
+2025-08-12 04:25:42,450 | INFO | ============================================================
+2025-08-12 04:25:42,450 | INFO |  1. ❌ REJECTED | The Nike Air Max Plus “Iron Grey” Features A Reflective Swoosh
+2025-08-12 04:25:42,450 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:42,450 | INFO |  2. ❌ REJECTED | Nike’s Gore-Tex Treated Air Max Sunder Is Ready For Fall Climates
+2025-08-12 04:25:42,451 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:42,451 | INFO |  3. ❌ REJECTED | Refreshing “Chlorophyll” Accents Hop On The Nike Vomero 5
+2025-08-12 04:25:42,451 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:42,451 | INFO |  4. ❌ REJECTED | First Look At The Lucha Libre Inspired Air Jordan 3 “Mexico”
+2025-08-12 04:25:42,451 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:42,451 | INFO |  5. ❌ REJECTED | Tobe Nwigwe’s Minty Reebok CHUKWU ABUO Is For The Full Family
+2025-08-12 04:25:42,451 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:42,451 | INFO |  6. ❌ REJECTED | First Look At The Nike SB Dunk Low “Mineral Slate”
+2025-08-12 04:25:42,451 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:42,451 | INFO |  7. ❌ REJECTED | Nike Channels A CO.JP Classic With The Dunk Low “Wheat”
+2025-08-12 04:25:42,451 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,089 | INFO | 
 ============================================================
-2025-08-12 03:15:13,525 | INFO | FEED: ESPN
-2025-08-12 03:15:13,525 | INFO | Total articles fetched: 20
-2025-08-12 03:15:13,525 | INFO | Accepted: 0, Rejected: 20
-2025-08-12 03:15:13,525 | INFO | ============================================================
-2025-08-12 03:15:13,525 | INFO |  1. ❌ REJECTED | NFL Future Power Rankings: We stacked all 32 teams' long-term expectations
-2025-08-12 03:15:13,525 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,525 | INFO |  2. ❌ REJECTED | Sources: Alabama names Simpson starting QB
-2025-08-12 03:15:13,525 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,525 | INFO |  3. ❌ REJECTED | Gruden wins key Nevada ruling in NFL emails suit
-2025-08-12 03:15:13,525 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,525 | INFO |  4. ❌ REJECTED | Spaun, Schauffele nail down U.S. Ryder Cup spots
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO |  5. ❌ REJECTED | Texas first No. 1 team to be underdog in Week 1
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO |  6. ❌ REJECTED | Steelers' Heyward hints at sitting out into season
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO |  7. ❌ REJECTED | Browns' Garrett cited for driving 40 mph over limit
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO |  8. ❌ REJECTED | Driver dies after medical emergency during race
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO |  9. ❌ REJECTED | 49ers' Shanahan eyeing Week 6 return for Aiyuk
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO | 10. ❌ REJECTED | 💍 Cristiano Ronaldo, fiancée share dazzling ring
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO | 11. ❌ REJECTED | 2025 Fantasy Football Draft Guide: Rankings, mock drafts and analysis
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO | 12. ❌ REJECTED | Ultimate Fantasy Football Cheat Sheet: Print. Draft. Win.
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO | 13. ❌ REJECTED | Online predators prey on young athletes using sextortion
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,526 | INFO | 14. ❌ REJECTED | Orlovsky ranks the best NFL QBs in seven different traits: Who makes each top-10...
-2025-08-12 03:15:13,526 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,527 | INFO | 15. ❌ REJECTED | ESPN's preseason All-America team: The best at every position
-2025-08-12 03:15:13,527 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,527 | INFO | 16. ❌ REJECTED | Projecting the top 10 freshmen for the 2025 season
-2025-08-12 03:15:13,527 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,527 | INFO | 17. ❌ REJECTED | AP preseason poll reaction: One big number for every team
-2025-08-12 03:15:13,527 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,527 | INFO | 18. ❌ REJECTED | MLB playoff contender tiers: The locks, teams with work to do and the long shots
-2025-08-12 03:15:13,527 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,527 | INFO | 19. ❌ REJECTED | NFL preseason Week 1 takeaways: Tyler Shough's debut a mixed bag for Saints
-2025-08-12 03:15:13,527 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:13,527 | INFO | 20. ❌ REJECTED | Where the NBA's biggest remaining free agents stand this offseason
-2025-08-12 03:15:13,527 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,533 | INFO | 
+2025-08-12 04:25:43,089 | INFO | FEED: ESPN
+2025-08-12 04:25:43,090 | INFO | Total articles fetched: 20
+2025-08-12 04:25:43,090 | INFO | Accepted: 0, Rejected: 20
+2025-08-12 04:25:43,090 | INFO | ============================================================
+2025-08-12 04:25:43,090 | INFO |  1. ❌ REJECTED | NFL Future Power Rankings: We stacked all 32 teams' long-term expectations
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  2. ❌ REJECTED | Sources: Alabama names Simpson starting QB
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  3. ❌ REJECTED | Gruden wins key Nevada ruling in NFL emails suit
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  4. ❌ REJECTED | Spaun, Schauffele nail down U.S. Ryder Cup spots
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  5. ❌ REJECTED | Texas first No. 1 team to be underdog in Week 1
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  6. ❌ REJECTED | Steelers' Heyward hints at sitting out into season
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  7. ❌ REJECTED | Browns' Garrett cited for driving 40 mph over limit
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  8. ❌ REJECTED | Driver dies after medical emergency during race
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO |  9. ❌ REJECTED | 49ers' Shanahan eyeing Week 6 return for Aiyuk
+2025-08-12 04:25:43,090 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,090 | INFO | 10. ❌ REJECTED | 💍 Cristiano Ronaldo, fiancée share dazzling ring
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 11. ❌ REJECTED | 2025 Fantasy Football Draft Guide: Rankings, mock drafts and analysis
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 12. ❌ REJECTED | Ultimate Fantasy Football Cheat Sheet: Print. Draft. Win.
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 13. ❌ REJECTED | Online predators prey on young athletes using sextortion
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 14. ❌ REJECTED | Orlovsky ranks the best NFL QBs in seven different traits: Who makes each top-10...
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 15. ❌ REJECTED | ESPN's preseason All-America team: The best at every position
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 16. ❌ REJECTED | Projecting the top 10 freshmen for the 2025 season
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 17. ❌ REJECTED | AP preseason poll reaction: One big number for every team
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 18. ❌ REJECTED | MLB playoff contender tiers: The locks, teams with work to do and the long shots
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 19. ❌ REJECTED | NFL preseason Week 1 takeaways: Tyler Shough's debut a mixed bag for Saints
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,091 | INFO | 20. ❌ REJECTED | Where the NBA's biggest remaining free agents stand this offseason
+2025-08-12 04:25:43,091 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,908 | INFO | 
 ============================================================
-2025-08-12 03:15:14,533 | INFO | FEED: BBC_ENTERTAINMENT
-2025-08-12 03:15:14,533 | INFO | Total articles fetched: 11
-2025-08-12 03:15:14,533 | INFO | Accepted: 0, Rejected: 11
-2025-08-12 03:15:14,533 | INFO | ============================================================
-2025-08-12 03:15:14,533 | INFO |  1. ❌ REJECTED | More celebrities unveiled for Strictly Come Dancing
-2025-08-12 03:15:14,533 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,533 | INFO |  2. ❌ REJECTED | What we learnt from Nicola Sturgeon's memoir
-2025-08-12 03:15:14,533 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,533 | INFO |  3. ❌ REJECTED | 'Fabulous, formidable' Blue Peter boss Biddy Baxter dies
-2025-08-12 03:15:14,533 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,533 | INFO |  4. ❌ REJECTED | Harry and Meghan sign new multi-year Netflix deal
-2025-08-12 03:15:14,533 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,533 | INFO |  5. ❌ REJECTED | My Chemical Romance confirm UK shows after cryptic posts
-2025-08-12 03:15:14,533 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,533 | INFO |  6. ❌ REJECTED | Netflix star on GCSE advice from Steve Buscemi
-2025-08-12 03:15:14,534 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,534 | INFO |  7. ❌ REJECTED | Actor Brian Cox postpones his one-man tour
-2025-08-12 03:15:14,534 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,534 | INFO |  8. ❌ REJECTED | Adidas designer sorry for shoes 'appropriated' from Mexico
-2025-08-12 03:15:14,534 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,534 | INFO |  9. ❌ REJECTED | Oldest Countdown contestant, 96, left school at 14
-2025-08-12 03:15:14,534 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,534 | INFO | 10. ❌ REJECTED | Actor Ray Brooks, voice of Mr Benn, dies aged 86
-2025-08-12 03:15:14,534 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:14,534 | INFO | 11. ❌ REJECTED | Deaf drag queens' bid to keep gay sign language alive
-2025-08-12 03:15:14,534 | INFO |     └─ Reason: No celebrity matches found
-2025-08-12 03:15:15,215 | INFO | ✨ SCRAPING COMPLETE - Check scraper_debug.log for detailed analysis
+2025-08-12 04:25:43,908 | INFO | FEED: BBC_ENTERTAINMENT
+2025-08-12 04:25:43,908 | INFO | Total articles fetched: 11
+2025-08-12 04:25:43,909 | INFO | Accepted: 0, Rejected: 11
+2025-08-12 04:25:43,909 | INFO | ============================================================
+2025-08-12 04:25:43,909 | INFO |  1. ❌ REJECTED | More celebrities unveiled for Strictly Come Dancing
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  2. ❌ REJECTED | What we learnt from Nicola Sturgeon's memoir
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  3. ❌ REJECTED | 'Fabulous, formidable' Blue Peter boss Biddy Baxter dies
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  4. ❌ REJECTED | Harry and Meghan sign new multi-year Netflix deal
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  5. ❌ REJECTED | My Chemical Romance confirm UK shows after cryptic posts
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  6. ❌ REJECTED | Netflix star on GCSE advice from Steve Buscemi
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  7. ❌ REJECTED | Actor Brian Cox postpones his one-man tour
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  8. ❌ REJECTED | Adidas designer sorry for shoes 'appropriated' from Mexico
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO |  9. ❌ REJECTED | Oldest Countdown contestant, 96, left school at 14
+2025-08-12 04:25:43,909 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,909 | INFO | 10. ❌ REJECTED | Actor Ray Brooks, voice of Mr Benn, dies aged 86
+2025-08-12 04:25:43,910 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:43,910 | INFO | 11. ❌ REJECTED | Deaf drag queens' bid to keep gay sign language alive
+2025-08-12 04:25:43,910 | INFO |     └─ Reason: No celebrity matches found
+2025-08-12 04:25:44,571 | INFO | ✨ SCRAPING COMPLETE - Check scraper_debug.log for detailed analysis
