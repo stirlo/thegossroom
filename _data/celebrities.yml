@@ -491,7 +491,7 @@ blake_lively:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-12 07:18:11'
+  last_temperature_update: '2025-08-12 08:23:40'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -1382,12 +1382,12 @@ globes:
 golden:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 92
-  last_temperature_update: '2025-08-12 07:18:11'
+  drama_score: 94
+  last_temperature_update: '2025-08-12 08:23:40'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 0
+  temperature_change: 2
 golden_globes:
   category: event
   discovery_date: '2025-08-04'
@@ -1531,7 +1531,7 @@ hiroshi_fujiwara:
 hogan:
   category: wrestler
   drama_score: 100
-  last_temperature_update: '2025-08-12 04:25:44'
+  last_temperature_update: '2025-08-12 08:23:40'
   status: explosive
   temperature_change: 0
 horatio_sanz:
@@ -1555,7 +1555,7 @@ howard_stern:
 hulk_hogan:
   category: wrestler
   drama_score: 100
-  last_temperature_update: '2025-08-12 04:25:44'
+  last_temperature_update: '2025-08-12 08:23:40'
   status: explosive
   temperature_change: 0
 hunter_schafer:
@@ -2032,7 +2032,7 @@ justin_baldoni:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-12 07:18:11'
+  last_temperature_update: '2025-08-12 08:23:40'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -2135,10 +2135,10 @@ keegan_michael_key:
   temperature_change: 5.3
 kelce:
   category: athlete
-  drama_score: 100
-  last_temperature_update: '2025-08-12 06:27:07'
+  drama_score: 99
+  last_temperature_update: '2025-08-12 08:23:40'
   status: explosive
-  temperature_change: 0
+  temperature_change: -1
 kelly_dodd:
   category: reality_tv
   drama_score: 64
@@ -3291,11 +3291,11 @@ ryan_reynolds:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 63
-  last_temperature_update: '2025-08-10 05:21:05'
+  last_temperature_update: '2025-08-12 08:23:40'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: -1
+  temperature_change: 0
 sabrina_carpenter:
   category: musician
   discovery_date: '2024-06-15'
@@ -3759,7 +3759,7 @@ taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-12 07:18:11'
+  last_temperature_update: '2025-08-12 08:23:40'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3925,10 +3925,10 @@ travis_barker:
   temperature_change: 0
 travis_kelce:
   category: athlete
-  drama_score: 100
-  last_temperature_update: '2025-08-12 06:27:07'
+  drama_score: 99
+  last_temperature_update: '2025-08-12 08:23:40'
   status: explosive
-  temperature_change: 0
+  temperature_change: -1
 travis_scott:
   category: musician
   discovery_date: '2020-01-01'
