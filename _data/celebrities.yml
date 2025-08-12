@@ -427,12 +427,12 @@ bia:
 biden:
   category: politician
   discovery_date: '2025-08-04'
-  drama_score: 80
-  last_temperature_update: '2025-08-04 01:56:22'
+  drama_score: 82
+  last_temperature_update: '2025-08-12 12:36:05'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 0
+  temperature_change: 2
 bieber:
   category: musician
   discovery_date: '2025-08-04'
@@ -544,12 +544,12 @@ bowl:
 brad_pitt:
   category: actor
   discovery_date: '2025-08-04'
-  drama_score: 100
-  last_temperature_update: '2025-08-11 23:16:22'
+  drama_score: 99
+  last_temperature_update: '2025-08-12 12:36:05'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 0
+  temperature_change: -1
 brayden_rowley:
   category: influencer
   discovery_date: '2022-06-18'
@@ -598,12 +598,12 @@ brooke_hogan:
 brooklyn_beckham:
   category: model
   discovery_date: '2025-08-04'
-  drama_score: 89
-  last_temperature_update: '2025-08-12 07:18:11'
+  drama_score: 95
+  last_temperature_update: '2025-08-12 12:36:05'
   memorial: false
   promotion_date: '2025-08-04'
-  status: hot
-  temperature_change: 2
+  status: explosive
+  temperature_change: 6
 bruce_mcculloch:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1123,11 +1123,11 @@ duke_of_sussex:
   category: royal
   discovery_date: '2025-08-04'
   drama_score: 81
-  last_temperature_update: '2025-08-12 01:20:16'
+  last_temperature_update: '2025-08-12 12:36:05'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 1
+  temperature_change: 0
 dwayne_carter:
   category: musician
   discovery_date: '2025-08-04'
@@ -2136,7 +2136,7 @@ keegan_michael_key:
 kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-12 10:19:19'
+  last_temperature_update: '2025-08-12 12:36:05'
   status: explosive
   temperature_change: 0
 kelly_dodd:
@@ -3032,7 +3032,7 @@ owen_wilson:
 ozzy_osbourne:
   category: musician
   drama_score: 100
-  last_temperature_update: '2025-08-11 15:19:25'
+  last_temperature_update: '2025-08-12 12:36:05'
   status: explosive
   temperature_change: 0
 p_diddy:
@@ -3054,7 +3054,7 @@ paris_hilton:
   category: entrepreneur
   discovery_date: '2025-08-04'
   drama_score: 60
-  last_temperature_update: '2025-08-04 01:56:22'
+  last_temperature_update: '2025-08-12 12:36:05'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
@@ -3759,7 +3759,7 @@ taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-12 11:15:41'
+  last_temperature_update: '2025-08-12 12:36:05'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3926,7 +3926,7 @@ travis_barker:
 travis_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-12 10:19:19'
+  last_temperature_update: '2025-08-12 12:36:05'
   status: explosive
   temperature_change: 0
 travis_scott:
