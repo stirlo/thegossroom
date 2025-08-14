@@ -308,7 +308,7 @@ awards:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -491,7 +491,7 @@ blake_lively:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -625,7 +625,7 @@ bryan_cranston:
 bryan_kohberger:
   category: criminal
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   status: explosive
   temperature_change: 0
 bryce_hall:
@@ -710,11 +710,11 @@ carri_richardson:
   category: unknown
   discovery_date: '2025-08-03'
   drama_score: 80
-  last_temperature_update: '2025-08-13 16:18:19'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-03'
   status: hot
-  temperature_change: 4
+  temperature_change: 0
 carrie_coon:
   category: actor
   discovery_date: '2024-01-15'
@@ -1308,12 +1308,12 @@ gabrielle_union:
 gala:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 80
-  last_temperature_update: '2025-08-13 18:24:07'
+  drama_score: 81
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 0
+  temperature_change: 1
 garcia_twins:
   category: wrestler
   drama_score: 60
@@ -1373,17 +1373,17 @@ gisele_bundchen:
 globes:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 56
-  last_temperature_update: '2025-08-12 16:21:58'
+  drama_score: 57
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 0
+  temperature_change: 1
 golden:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 19:14:13'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -1391,12 +1391,12 @@ golden:
 golden_globes:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 56
-  last_temperature_update: '2025-08-12 16:21:58'
+  drama_score: 57
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
-  temperature_change: 0
+  temperature_change: 1
 grammy_awards:
   category: event
   discovery_date: '2025-08-04'
@@ -1696,7 +1696,7 @@ jason_isaacs:
 jason_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   status: explosive
   temperature_change: 0
 jason_mantzoukas:
@@ -2032,7 +2032,7 @@ justin_baldoni:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -2136,7 +2136,7 @@ keegan_michael_key:
 kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   status: explosive
   temperature_change: 0
 kelly_dodd:
@@ -2415,8 +2415,8 @@ livvy_dunne:
 lizzo:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 74
-  last_temperature_update: '2025-08-14 01:22:09'
+  drama_score: 75
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
@@ -2723,12 +2723,12 @@ met:
 met_gala:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 70
-  last_temperature_update: '2025-08-04 01:56:22'
+  drama_score: 71
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: hot
-  temperature_change: 0
+  temperature_change: 1
 metro_boomin:
   category: musician
   discovery_date: '2025-08-04'
@@ -3251,9 +3251,9 @@ renee_rapp:
 richardson:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-13 16:18:19'
+  last_temperature_update: '2025-08-14 03:24:00'
   status: explosive
-  temperature_change: 2
+  temperature_change: 0
 rick_ross:
   category: musician
   discovery_date: '2025-08-04'
@@ -3627,7 +3627,7 @@ stephen_colbert:
   category: comedian
   discovery_date: '2020-01-01'
   drama_score: 79
-  last_temperature_update: '2025-08-12 17:17:03'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
@@ -3681,7 +3681,7 @@ super:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -3759,7 +3759,7 @@ taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3926,7 +3926,7 @@ travis_barker:
 travis_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-14 01:22:09'
+  last_temperature_update: '2025-08-14 03:24:00'
   status: explosive
   temperature_change: 0
 travis_scott:
