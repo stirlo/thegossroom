@@ -38,7 +38,7 @@ academy_awards:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 60
-  last_temperature_update: '2025-08-12 16:21:58'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
@@ -308,7 +308,7 @@ awards:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 19:14:13'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -335,7 +335,7 @@ bad_bunny:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-13 23:16:35'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -437,7 +437,7 @@ bieber:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 20:19:07'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -491,7 +491,7 @@ blake_lively:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 21:16:18'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -544,12 +544,12 @@ bowl:
 brad_pitt:
   category: actor
   discovery_date: '2025-08-04'
-  drama_score: 96
-  last_temperature_update: '2025-08-13 06:27:26'
+  drama_score: 100
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: -1
+  temperature_change: 4
 brayden_rowley:
   category: influencer
   discovery_date: '2022-06-18'
@@ -625,7 +625,7 @@ bryan_cranston:
 bryan_kohberger:
   category: criminal
   drama_score: 100
-  last_temperature_update: '2025-08-12 21:16:31'
+  last_temperature_update: '2025-08-14 01:22:09'
   status: explosive
   temperature_change: 0
 bryce_hall:
@@ -692,7 +692,7 @@ cardi_b:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-13 22:17:09'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -909,7 +909,7 @@ cynthia_nixon:
 dakota_johnson:
   category: actor
   drama_score: 65
-  last_temperature_update: '2025-08-11 21:16:30'
+  last_temperature_update: '2025-08-14 01:22:09'
   status: rising
   temperature_change: 0
 dakota_mortensen:
@@ -1696,7 +1696,7 @@ jason_isaacs:
 jason_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-13 21:16:18'
+  last_temperature_update: '2025-08-14 01:22:09'
   status: explosive
   temperature_change: 0
 jason_mantzoukas:
@@ -2032,7 +2032,7 @@ justin_baldoni:
   category: actor
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 20:19:07'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -2041,7 +2041,7 @@ justin_bieber:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 20:19:07'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -2084,10 +2084,10 @@ kardashian:
   temperature_change: 0
 kate_gosselin:
   category: reality_tv
-  drama_score: 72
-  last_temperature_update: '2025-08-13 03:17:50'
+  drama_score: 79
+  last_temperature_update: '2025-08-14 01:22:09'
   status: hot
-  temperature_change: 1
+  temperature_change: 7
 kate_mckinnon:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2136,7 +2136,7 @@ keegan_michael_key:
 kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-13 23:16:35'
+  last_temperature_update: '2025-08-14 01:22:09'
   status: explosive
   temperature_change: 0
 kelly_dodd:
@@ -2343,17 +2343,17 @@ lexi_rivera:
 liam:
   category: actor
   discovery_date: '2025-08-04'
-  drama_score: 99
-  last_temperature_update: '2025-08-13 18:24:07'
+  drama_score: 100
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 2
+  temperature_change: 1
 liam_neeson:
   category: unknown
   discovery_date: '2025-08-03'
   drama_score: 100
-  last_temperature_update: '2025-08-10 18:22:43'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-03'
   status: explosive
@@ -2415,12 +2415,12 @@ livvy_dunne:
 lizzo:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 73
-  last_temperature_update: '2025-08-07 17:19:34'
+  drama_score: 74
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
-  temperature_change: 2
+  temperature_change: 1
 logan_paul:
   category: influencer
   discovery_date: '2020-01-01'
@@ -3015,7 +3015,7 @@ oscars:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 62
-  last_temperature_update: '2025-08-13 22:17:09'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: rising
@@ -3047,7 +3047,7 @@ p_diddy:
 pamela_anderson:
   category: actor
   drama_score: 100
-  last_temperature_update: '2025-08-12 05:17:17'
+  last_temperature_update: '2025-08-14 01:22:09'
   status: explosive
   temperature_change: 0
 paris_hilton:
@@ -3062,12 +3062,12 @@ paris_hilton:
 parker_posey:
   category: actor
   discovery_date: '2024-01-15'
-  drama_score: 39
-  last_temperature_update: '2025-08-03 14:52:25'
+  drama_score: 40
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2024-03-01'
   status: mild
-  temperature_change: 3
+  temperature_change: 1
 patrick_schwarzenegger:
   category: actor
   discovery_date: '2024-01-15'
@@ -3300,7 +3300,7 @@ sabrina_carpenter:
   category: musician
   discovery_date: '2024-06-15'
   drama_score: 100
-  last_temperature_update: '2025-08-13 23:16:35'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2024-08-01'
   status: explosive
@@ -3681,11 +3681,11 @@ super:
   category: event
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 23:16:35'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
-  temperature_change: 1
+  temperature_change: 0
 super_bowl:
   category: event
   discovery_date: '2025-08-04'
@@ -3759,7 +3759,7 @@ taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-13 23:16:35'
+  last_temperature_update: '2025-08-14 01:22:09'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3926,7 +3926,7 @@ travis_barker:
 travis_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-13 23:16:35'
+  last_temperature_update: '2025-08-14 01:22:09'
   status: explosive
   temperature_change: 0
 travis_scott:
