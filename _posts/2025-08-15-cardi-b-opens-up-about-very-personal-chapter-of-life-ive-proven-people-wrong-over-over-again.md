@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Cardi B Opens Up About ‘Very Personal’ Chapter of Life: ‘I’ve Proven People Wrong Over & Over Again’"
+date: 2025-08-15 21:13:58 +0000
+categories: gossip
+tags: ['cardi-b', 'source-billboard', 'drama-rising']
+drama_score: 2
+primary_celebrity: cardi_b
+source: billboard
+source_url: "https://www.billboard.com/music/rb-hip-hop/cardi-b-chapter-life-2025-1236045616/"
+mentions: {'cardi_b': 2}
+---
+
+Cardi released her "Imaginary Playerz" single on Friday (Aug. 15).
+
+**Drama Score:** 2 | **Level:** RISING
+
+**Celebrities Mentioned:** Cardi B
+
+[Read full article at Billboard](https://www.billboard.com/music/rb-hip-hop/cardi-b-chapter-life-2025-1236045616/)
+
+---
+*This post was automatically generated from RSS feeds. Drama scores are calculated based on mention frequency and source reliability.*
