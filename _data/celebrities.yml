@@ -263,7 +263,7 @@ ariana_grande:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-14 22:16:38'
+  last_temperature_update: '2025-08-15 05:18:29'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -691,12 +691,12 @@ camille_munday:
 cardi_b:
   category: musician
   discovery_date: '2020-01-01'
-  drama_score: 100
-  last_temperature_update: '2025-08-15 04:28:16'
+  drama_score: 99
+  last_temperature_update: '2025-08-15 05:18:29'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
-  temperature_change: 0
+  temperature_change: -1
 carl_tart:
   category: comedian
   discovery_date: '2020-01-01'
@@ -1186,7 +1186,7 @@ eminem:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-13 19:14:13'
+  last_temperature_update: '2025-08-15 05:18:29'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -2136,7 +2136,7 @@ keegan_michael_key:
 kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-15 03:19:30'
+  last_temperature_update: '2025-08-15 05:18:29'
   status: explosive
   temperature_change: 0
 kelly_dodd:
@@ -3153,11 +3153,11 @@ post_malone:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-14 15:18:57'
+  last_temperature_update: '2025-08-15 05:18:29'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
-  temperature_change: -36
+  temperature_change: 0
 prince_harry:
   category: royal
   discovery_date: '2025-08-04'
@@ -3759,7 +3759,7 @@ taylor_swift:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-15 04:28:16'
+  last_temperature_update: '2025-08-15 05:18:29'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3926,7 +3926,7 @@ travis_barker:
 travis_kelce:
   category: athlete
   drama_score: 100
-  last_temperature_update: '2025-08-15 03:19:30'
+  last_temperature_update: '2025-08-15 05:18:29'
   status: explosive
   temperature_change: 0
 travis_scott:
