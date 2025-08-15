@@ -454,12 +454,12 @@ big_sean:
 bill_murray:
   category: comedian
   discovery_date: '2020-01-01'
-  drama_score: 48
-  last_temperature_update: '2025-08-03 12:00:00'
+  drama_score: 53
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2020-01-01'
-  status: mild
-  temperature_change: 11.5
+  status: rising
+  temperature_change: 5
 bill_simmons:
   category: comedian
   discovery_date: '2020-01-01'
@@ -902,8 +902,8 @@ curtis_jackson:
   temperature_change: 0
 cynthia_nixon:
   category: actor
-  drama_score: 59
-  last_temperature_update: '2025-08-08 08:25:11'
+  drama_score: 60
+  last_temperature_update: '2025-08-15 13:28:35'
   status: rising
   temperature_change: 1
 dakota_johnson:
@@ -1087,7 +1087,7 @@ drake:
   category: musician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-15 12:34:19'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -1105,7 +1105,7 @@ dua_lipa:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-15 03:19:30'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -1177,7 +1177,7 @@ elon_musk:
   category: entrepreneur
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-14 15:18:57'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -2077,7 +2077,7 @@ kardashian:
   category: reality_tv
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-14 22:16:38'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
@@ -2158,7 +2158,7 @@ kendrick_lamar:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 70
-  last_temperature_update: '2025-08-15 12:34:19'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2020-01-01'
   status: hot
@@ -2212,7 +2212,7 @@ kim_kardashian:
   category: reality_tv
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-14 22:16:38'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -2230,7 +2230,7 @@ kourtney_kardashian:
   category: reality_tv
   discovery_date: '2020-01-01'
   drama_score: 100
-  last_temperature_update: '2025-08-13 19:14:13'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2020-01-01'
   status: explosive
@@ -3387,7 +3387,7 @@ saweetie:
   category: musician
   discovery_date: '2020-01-01'
   drama_score: 56
-  last_temperature_update: '2025-08-15 12:34:19'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2020-01-01'
   status: rising
@@ -3917,12 +3917,12 @@ tom_holland:
 travis_barker:
   category: musician
   discovery_date: '2021-05-15'
-  drama_score: 82
-  last_temperature_update: '2025-08-10 16:20:20'
+  drama_score: 86
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2021-06-01'
   status: hot
-  temperature_change: 0
+  temperature_change: 4
 travis_kelce:
   category: athlete
   drama_score: 100
@@ -3960,7 +3960,7 @@ trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-15 12:34:19'
+  last_temperature_update: '2025-08-15 13:28:35'
   memorial: false
   promotion_date: '2025-08-04'
   status: explosive
