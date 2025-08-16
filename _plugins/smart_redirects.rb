@@ -1,13 +1,13 @@
 module Jekyll
   class SmartRedirects < Generator
     def generate(site)
-      puts "🔍 DEBUG: Starting Smart Redirects Generator"
+      puts "🔍 DEBUG: Starting FAST Smart Redirects Generator"
 
-      # Create celebrity redirects
+      # Only create celebrity redirects + a few strategic date patterns
       create_celebrity_redirects(site)
+      create_strategic_date_redirects(site)
 
-      # Create universal date-based catch-all redirects
-      create_universal_date_redirects(site)
+      puts "✅ Fast redirects complete!"
     end
 
     private
@@ -18,8 +18,10 @@ module Jekyll
 
       url_aliases = create_url_aliases(all_celebrities)
 
-      # Process ALL celebrities
-      all_celebrities.each do |celeb_key|
+      # Process top 50 celebrities only (fast!)
+      top_celebrities = all_celebrities.first(50)
+
+      top_celebrities.each do |celeb_key|
         latest_post = find_latest_celebrity_post(site, celeb_key)
 
         if latest_post
@@ -39,90 +41,37 @@ module Jekyll
       end
     end
 
-    def create_universal_date_redirects(site)
-      puts "🔍 Creating universal date-based redirects..."
+    def create_strategic_date_redirects(site)
+      puts "🔍 Creating strategic date redirects..."
 
-      # Get all celebrities with posts
-      celebrities_with_posts = get_celebrities_with_posts(site)
+      # Only create for TOP 10 celebrities to keep it fast
+      priority_celebrities = {
+        'travis_kelce' => ['travis-kelce', 'kelce', 'travis'],
+        'taylor_swift' => ['taylor-swift', 'taylor', 'swift'],
+        'kim_kardashian' => ['kim-kardashian', 'kim-k', 'kim'],
+        'kanye_west' => ['kanye-west', 'kanye', 'ye'],
+        'donald_trump' => ['trump', 'donald-trump'],
+        'justin_bieber' => ['justin-bieber', 'bieber'],
+        'selena_gomez' => ['selena-gomez', 'selena'],
+        'ariana_grande' => ['ariana-grande', 'ariana'],
+        'beyonce' => ['beyonce'],
+        'drake' => ['drake']
+      }
 
-      # Create date patterns for each celebrity
-      celebrities_with_posts.each do |celeb_key, latest_post|
-        celeb_variations = get_celebrity_url_variations(celeb_key)
-
-        # Create redirects for multiple date patterns
-        (2020..2025).each do |year|
-          (1..12).each do |month|
-            (1..31).each do |day|
-              month_str = month.to_s.rjust(2, '0')
-              day_str = day.to_s.rjust(2, '0')
-
-              celeb_variations.each do |variation|
-                # Create pattern: /YYYY/MM/DD/celebrity-name-anything/
-                date_path = "#{year}/#{month_str}/#{day_str}/#{variation}"
-                create_date_wildcard_redirect(site, date_path, latest_post.url, celeb_key)
-              end
-            end
-          end
-        end
-      end
-    end
-
-    def get_celebrities_with_posts(site)
-      celebrities_with_posts = {}
-
-      get_all_celebrities(site).each do |celeb_key|
+      priority_celebrities.each do |celeb_key, variations|
         latest_post = find_latest_celebrity_post(site, celeb_key)
-        if latest_post
-          celebrities_with_posts[celeb_key] = latest_post
+        next unless latest_post
+
+        variations.each do |variation|
+          # Create a catch-all redirect that matches any date + celebrity pattern
+          create_regex_redirect(site, variation, latest_post.url)
         end
       end
-
-      celebrities_with_posts
     end
 
-    def get_celebrity_url_variations(celeb_key)
-      variations = []
-
-      # Main variation
-      main_slug = celeb_key.gsub('_', '-')
-      variations << main_slug
-
-      # Add common patterns
-      case celeb_key
-      when 'travis_kelce'
-        variations += ['travis-kelce', 'travis-kelces', 'kelce', 'kelces']
-      when 'taylor_swift'
-        variations += ['taylor-swift', 'taylor-swifts', 'taylor', 'swift']
-      when 'kim_kardashian'
-        variations += ['kim-kardashian', 'kim-kardashians', 'kim-k', 'kardashian']
-      when 'kanye_west'
-        variations += ['kanye-west', 'kanye', 'ye', 'west']
-      when 'justin_bieber'
-        variations += ['justin-bieber', 'justin-biebers', 'bieber', 'justin']
-      else
-        # Auto-generate variations
-        name_parts = celeb_key.split('_')
-        if name_parts.length == 2
-          first, last = name_parts
-          variations += [
-            "#{first}-#{last}",
-            "#{first}-#{last}s",
-            first,
-            last
-          ]
-        end
-      end
-
-      variations.uniq
-    end
-
-    def create_date_wildcard_redirect(site, date_path, target_url, celeb_key)
-      # Only create for high-priority celebrities to avoid too many redirects
-      priority_celebrities = ['travis_kelce', 'taylor_swift', 'kim_kardashian', 'kanye_west', 'justin_bieber']
-
-      return unless priority_celebrities.include?(celeb_key)
-
-      redirect_page = DateWildcardRedirectPage.new(site, date_path, target_url)
+    def create_regex_redirect(site, celebrity_slug, target_url)
+      # This creates a single redirect that catches ALL date patterns for this celebrity
+      redirect_page = RegexRedirectPage.new(site, celebrity_slug, target_url)
       site.pages << redirect_page
     end
 
@@ -174,23 +123,18 @@ module Jekyll
         case celeb_key
         when 'kim_kardashian'
           aliases['kim-k'] = celeb_key
-          aliases['kim'] = celeb_key
         when 'kanye_west'
           aliases['kanye'] = celeb_key
           aliases['ye'] = celeb_key
         when 'justin_bieber'
           aliases['bieber'] = celeb_key
-          aliases['justin'] = celeb_key
         when 'taylor_swift'
           aliases['taylor'] = celeb_key
           aliases['tswift'] = celeb_key
         when 'travis_kelce'
           aliases['travis'] = celeb_key
-        end
-
-        if celeb_key.include?('_')
-          first_name = celeb_key.split('_').first
-          aliases[first_name] = celeb_key unless aliases[first_name]
+        when 'donald_trump'
+          aliases['trump'] = celeb_key
         end
       end
 
@@ -219,7 +163,7 @@ module Jekyll
       self.data = {
         'layout' => nil,
         'permalink' => "/#{@dir}/",
-        'sitemap' => false  # Keeps redirect pages out of sitemap
+        'sitemap' => false
       }
 
       celeb_name = slug.gsub('-', ' ').split.map(&:capitalize).join(' ')
@@ -252,17 +196,17 @@ module Jekyll
     end
   end
 
-  class DateWildcardRedirectPage < Page
-    def initialize(site, date_path, target_url)
+  class RegexRedirectPage < Page
+    def initialize(site, celebrity_slug, target_url)
       @site = site
       @base = site.source
-      @dir = date_path
+      @dir = "regex-#{celebrity_slug}"
       @name = 'index.html'
 
       self.process(@name)
       self.data = {
         'layout' => nil,
-        'permalink' => "/#{@dir}/",
+        'permalink' => "/regex-#{celebrity_slug}/",
         'sitemap' => false
       }
 
@@ -277,9 +221,17 @@ module Jekyll
           <meta name="robots" content="noindex,follow">
         </head>
         <body>
+          <script>
+            // Smart regex redirect for date patterns
+            const path = window.location.pathname;
+            const datePattern = /\/(\d{4})\/(\d{2})\/(\d{2})\/.*#{celebrity_slug}.*/i;
+
+            if (datePattern.test(path)) {
+              window.location.replace("#{target_url}");
+            }
+          </script>
           <h1>🔥 Updated Story</h1>
-          <p>This story has been updated. Redirecting to latest news...</p>
-          <script>window.location.replace("#{target_url}");</script>
+          <p>Redirecting to latest news...</p>
         </body>
         </html>
       HTML
