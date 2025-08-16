@@ -19,7 +19,8 @@ module Jekyll
       latest_date = nil
 
       site.posts.docs.each do |post|
-        if post.data['mentions'] && post.data['mentions'][celeb_key]
+        # Check if celebrity is mentioned in the post
+        if celebrity_mentioned_in_post?(post, celeb_key)
           post_date = post.date
           if latest_date.nil? || post_date > latest_date
             latest_date = post_date
@@ -29,6 +30,30 @@ module Jekyll
       end
 
       latest_post
+    end
+
+    def celebrity_mentioned_in_post?(post, celeb_key)
+      # Check mentions data
+      if post.data['mentions'] && post.data['mentions'][celeb_key]
+        return true
+      end
+
+      # Check title and content for celebrity name variations
+      celeb_name = celeb_key.gsub('_', ' ')
+      search_terms = [
+        celeb_name,
+        celeb_name.split.map(&:capitalize).join(' '),
+        celeb_name.downcase,
+        celeb_name.upcase
+      ]
+
+      content_to_search = [
+        post.data['title'] || '',
+        post.content || '',
+        post.data['excerpt'] || ''
+      ].join(' ').downcase
+
+      search_terms.any? { |term| content_to_search.include?(term.downcase) }
     end
   end
 
