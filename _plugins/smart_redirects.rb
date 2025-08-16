@@ -1,15 +1,39 @@
 module Jekyll
   class SmartRedirects < Generator
     def generate(site)
-      # Create redirect pages for GitHub Pages
-      site.data['celebrities'].each do |celeb_key, celeb_data|
-        latest_post = find_latest_celebrity_post(site, celeb_key)
-        if latest_post
-          # Create redirect page
-          redirect_page = SmartRedirectPage.new(site, celeb_key, latest_post.url)
-          site.pages << redirect_page
+      puts "\n🔍 DEBUG: Starting Smart Redirects Generator"
+      puts "📊 Total celebrities in data: #{site.data['celebrities']&.keys&.count || 0}"
+      puts "📊 Total posts: #{site.posts.docs.count}"
+
+      # Test specific celebrities
+      test_celebs = ['travis_kelce', 'taylor_swift']
+
+      test_celebs.each do |celeb_key|
+        puts "\n🎯 TESTING: #{celeb_key}"
+
+        if site.data['celebrities'][celeb_key]
+          puts "  ✅ Found in celebrities data"
+
+          latest_post = find_latest_celebrity_post(site, celeb_key)
+          if latest_post
+            puts "  ✅ Found latest post: #{latest_post.url}"
+            puts "  📅 Post date: #{latest_post.date}"
+            puts "  📝 Post title: #{latest_post.data['title']}"
+
+            # Create redirect page
+            redirect_page = SmartRedirectPage.new(site, celeb_key, latest_post.url)
+            site.pages << redirect_page
+
+            puts "  📄 Created redirect: /#{celeb_key.gsub('_', '-')}/ → #{latest_post.url}"
+          else
+            puts "  ❌ No posts found for #{celeb_key}"
+          end
+        else
+          puts "  ❌ Not found in celebrities data"
         end
       end
+
+      puts "\n🎉 Debug completed"
     end
 
     private
@@ -17,24 +41,37 @@ module Jekyll
     def find_latest_celebrity_post(site, celeb_key)
       latest_post = nil
       latest_date = nil
+      found_posts = []
 
       site.posts.docs.each do |post|
-        # Check if celebrity is mentioned in the post
         if celebrity_mentioned_in_post?(post, celeb_key)
-          post_date = post.date
-          if latest_date.nil? || post_date > latest_date
-            latest_date = post_date
+          found_posts << {
+            title: post.data['title'],
+            date: post.date,
+            url: post.url,
+            mentions: post.data['mentions']
+          }
+
+          if latest_date.nil? || post.date > latest_date
+            latest_date = post.date
             latest_post = post
           end
         end
+      end
+
+      puts "  📝 Posts found for #{celeb_key}: #{found_posts.count}"
+      found_posts.each do |post|
+        puts "    - #{post[:title]} (#{post[:date]}) - #{post[:url]}"
+        puts "      Mentions: #{post[:mentions]}"
       end
 
       latest_post
     end
 
     def celebrity_mentioned_in_post?(post, celeb_key)
-      # Check mentions data
+      # Check mentions data first
       if post.data['mentions'] && post.data['mentions'][celeb_key]
+        puts "    ✅ Found #{celeb_key} in mentions data"
         return true
       end
 
@@ -44,7 +81,9 @@ module Jekyll
         celeb_name,
         celeb_name.split.map(&:capitalize).join(' '),
         celeb_name.downcase,
-        celeb_name.upcase
+        celeb_name.upcase,
+        'Travis Kelce',
+        'Taylor Swift'
       ]
 
       content_to_search = [
@@ -53,7 +92,14 @@ module Jekyll
         post.data['excerpt'] || ''
       ].join(' ').downcase
 
-      search_terms.any? { |term| content_to_search.include?(term.downcase) }
+      found_term = search_terms.find { |term| content_to_search.include?(term.downcase) }
+      if found_term
+        puts "    ✅ Found term '#{found_term}' in content for #{celeb_key}"
+        return true
+      end
+
+      puts "    ❌ No mention of #{celeb_key} found"
+      false
     end
   end
 
@@ -71,7 +117,6 @@ module Jekyll
         'redirect_to' => target_url
       }
 
-      # Simple, bulletproof HTML
       celeb_name = celeb_key.gsub('_', ' ').split.map(&:capitalize).join(' ')
 
       self.content = "<!DOCTYPE html>
