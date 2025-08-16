@@ -1,6 +1,6 @@
 # Site settings
 title: "The Gossip Room"
-email: s@oursquadis.top
+email: <mailto:s@oursquadis.top>
 description: >-
   Real-time celebrity gossip aggregation with drama scoring and trending analysis.
   Track the hottest entertainment news and rising stars with The Gossip Room.
@@ -9,36 +9,28 @@ url: "https://thegossroom.com"
 github_username: stirlo
 theme: minima
 
-
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 timezone: UTC
 
-# Plugins (full power!)
+# 🎯 PERFORMANCE OPTIMIZATIONS
+limit_posts: 100          # Only process 100 most recent posts
+future: false            # Don't process future-dated posts
+incremental: true        # Enable incremental builds
+
+# Plugins (optimized)
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
-#  - jekyll-archives
   - jekyll-redirect-from
   - jekyll-compose
+  # Removed jekyll-feed - using custom solution
 
-# Archives configuration
-#jekyll-archives:
-#  enabled:
-#    - categories
-#    - tags
-#  layout: archive
-#  permalinks:
-#    category: '/category/:name/'
-#    tag: '/tag/:name/'
-
-
-# Pagination
-paginate: 10
+# Pagination (increased for daily top stories)
+paginate: 33              # Show top 33 daily stories
 paginate_path: "/page:num/"
 
 # Collections
@@ -46,6 +38,9 @@ collections:
   celebrities:
     output: true
     permalink: /celebrities/:name/
+  hot_stories:             # New collection for temperature-filtered posts
+    output: true
+    permalink: /hot/:year/:month/:day/:title/
 
 # SEO and Social
 author: "The Gossip Room"
@@ -54,42 +49,58 @@ social:
   links:
     - "https://github.com/stirlo/thegossroom"
 
-# Footer links for SEO network (your actual links)
+# Footer links
 footer_links:
   license: "https://github.com/stirlo/thegossroom/blob/main/LICENSE"
   tfp: "https://tfp.la/"
   laboratory: "https://thelaboratory.cc"
   thank_you: "https://thelaboratory.cc/thankyou.html"
 
+# 🎯 TEMPERATURE SYSTEM SETTINGS
+temperature_system:
+  daily_post_limit: 33
+  minimum_temperature: 25    # Don't publish below this temperature
+  aging_cutoff_days: 30     # Archive posts older than 30 days
+  celebrity_boost_multiplier: 1.5
+  time_decay_hours: 24      # Start decay after 24 hours
+
 # Drama Index settings
 drama_index:
   update_frequency: "hourly"
   score_decay: 0.9
-  rising_star_threshold: 5
-  explosive_threshold: 50
+  rising_star_threshold: 25  # Increased threshold
+  explosive_threshold: 75    # Increased threshold
 
-# RSS Processing
+# RSS Processing (optimized)
 rss_processing:
-  max_articles_per_feed: 20
-  processing_frequency: "0 * * * *"  # Every hour
-  deduplication_window: 30  # days
+  max_articles_per_feed: 15  # Reduced from 20
+  processing_frequency: "0 * * * *"
+  deduplication_window: 7    # Reduced from 30 days
+  temperature_threshold: 20  # Don't save posts below this
 
-# Bluesky integration
+# Bluesky integration (optimized)
 bluesky:
-  max_posts_per_hour: 2
-  drama_threshold: 100
+  max_posts_per_hour: 1     # Reduced frequency
+  temperature_threshold: 50  # Only post hottest stories
   rising_star_alerts: true
+  lookback_hours: 6         # Only consider last 6 hours
 
-# Exclude from processing
+# Performance excludes
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - scripts/
   - requirements.txt
   - README.md
   - "*.py"
+  - "_posts/202[0-3]-*"     # Exclude posts older than 2024
+  - data/
+  - scraper_debug.log
+
+# 🎯 CUSTOM FEED SETTINGS
+feed:
+  posts_limit: 50
+  excerpt_only: true
+  path: /feed.xml
