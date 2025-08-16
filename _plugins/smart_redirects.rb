@@ -1,240 +1,428 @@
+# _plugins/smart_redirects.rb
 module Jekyll
-  class SmartRedirects < Generator
+  class SmartRedirectGenerator < Generator
+    safe true
+    priority :high
+
     def generate(site)
-      puts "🔍 DEBUG: Starting FAST Smart Redirects Generator"
+      puts "🚀 Generating smart redirects..."
 
-      # Only create celebrity redirects + a few strategic date patterns
-      create_celebrity_redirects(site)
-      create_strategic_date_redirects(site)
+      posts_data = extract_posts_data(site)
+      puts "📊 Found #{posts_data.length} posts to analyze"
 
-      puts "✅ Fast redirects complete!"
+      generate_celebrity_redirects(site, posts_data)
+      generate_date_celebrity_redirects_with_fallback(site, posts_data)
+      generate_fuzzy_fallback(site, posts_data)
+
+      puts "✅ Smart redirects generated!"
     end
 
     private
 
-    def create_celebrity_redirects(site)
-      all_celebrities = get_all_celebrities(site)
-      puts "📊 Total celebrities available: #{all_celebrities.length}"
-
-      url_aliases = create_url_aliases(all_celebrities)
-
-      # Process top 50 celebrities only (fast!)
-      top_celebrities = all_celebrities.first(50)
-
-      top_celebrities.each do |celeb_key|
-        latest_post = find_latest_celebrity_post(site, celeb_key)
-
-        if latest_post
-          create_redirect(site, celeb_key, latest_post.url)
-          puts "📄 Created redirects for #{celeb_key}: #{latest_post.url}"
-        end
-      end
-
-      # Process URL aliases
-      url_aliases.each do |alias_slug, actual_key|
-        latest_post = find_latest_celebrity_post(site, actual_key)
-
-        if latest_post
-          create_redirect_with_custom_slug(site, alias_slug, latest_post.url)
-          puts "📄 Created alias redirect: #{alias_slug} → #{latest_post.url}"
-        end
+    def extract_posts_data(site)
+      site.posts.docs.map do |post|
+        celebrities = extract_celebrities(post)
+        {
+          url: post.url,
+          date: post.date,
+          title: post.data['title'] || '',
+          celebrities: celebrities,
+          slug: post.data['slug'] || post.basename_without_ext,
+          keywords: extract_keywords(post.data['title'] || '')
+        }
       end
     end
 
-    def create_strategic_date_redirects(site)
-      puts "🔍 Creating strategic date redirects..."
+    def extract_celebrities(post)
+      celebrities = []
+      title = post.data['title'] || ''
 
-      # Only create for TOP 10 celebrities to keep it fast
-      priority_celebrities = {
-        'travis_kelce' => ['travis-kelce', 'kelce', 'travis'],
-        'taylor_swift' => ['taylor-swift', 'taylor', 'swift'],
-        'kim_kardashian' => ['kim-kardashian', 'kim-k', 'kim'],
-        'kanye_west' => ['kanye-west', 'kanye', 'ye'],
-        'donald_trump' => ['trump', 'donald-trump'],
-        'justin_bieber' => ['justin-bieber', 'bieber'],
-        'selena_gomez' => ['selena-gomez', 'selena'],
-        'ariana_grande' => ['ariana-grande', 'ariana'],
-        'beyonce' => ['beyonce'],
-        'drake' => ['drake']
+      # Extract from title - based on your RSS patterns
+      celebrity_patterns = {
+        'Taylor Swift' => /taylor\s*swift/i,
+        'Travis Kelce' => /travis\s*kelce/i,
+        'Justin Bieber' => /justin\s*bieber/i,
+        'Ariana Grande' => /ariana\s*grande/i,
+        'Selena Gomez' => /selena\s*gomez/i,
+        'Dua Lipa' => /dua\s*lipa/i,
+        'Billie Eilish' => /billie\s*eilish/i,
+        'Harry Styles' => /harry\s*styles/i,
+        'Olivia Rodrigo' => /olivia\s*rodrigo/i,
+        'Bad Bunny' => /bad\s*bunny/i,
+        'Kanye West' => /kanye\s*west|ye\s/i,
+        'Kim Kardashian' => /kim\s*kardashian/i,
+        'Beyoncé' => /beyonc[eé]/i,
+        'Rihanna' => /rihanna/i,
+        'Drake' => /drake/i
       }
 
-      priority_celebrities.each do |celeb_key, variations|
-        latest_post = find_latest_celebrity_post(site, celeb_key)
-        next unless latest_post
-
-        variations.each do |variation|
-          # Create a catch-all redirect that matches any date + celebrity pattern
-          create_regex_redirect(site, variation, latest_post.url)
-        end
-      end
-    end
-
-    def create_regex_redirect(site, celebrity_slug, target_url)
-      # This creates a single redirect that catches ALL date patterns for this celebrity
-      redirect_page = RegexRedirectPage.new(site, celebrity_slug, target_url)
-      site.pages << redirect_page
-    end
-
-    def get_all_celebrities(site)
-      return [] unless site.data['celebrities']
-
-      site.data['celebrities']
-        .sort_by { |_, data| -(data['drama_score'] || 0) }
-        .map { |key, _| key }
-    end
-
-    def find_latest_celebrity_post(site, celeb_key)
-      matching_posts = []
-
-      site.posts.docs.each do |post|
-        if celebrity_mentioned_in_post?(post, celeb_key)
-          matching_posts << post
+      celebrity_patterns.each do |name, pattern|
+        if title.match(pattern)
+          celebrities << name
         end
       end
 
-      matching_posts.max_by(&:date)
-    end
-
-    def celebrity_mentioned_in_post?(post, celeb_key)
-      return true if post.data['mentions'] && post.data['mentions'][celeb_key]
-
-      celeb_name = celeb_key.gsub('_', ' ')
-      search_terms = [
-        celeb_name,
-        celeb_name.split.map(&:capitalize).join(' '),
-        celeb_key.gsub('_', '-'),
-        celeb_name.split.first,
-        celeb_name.split.last
-      ].compact.uniq
-
-      content_to_search = [
-        post.data['title'] || '',
-        post.content || '',
-        post.data['excerpt'] || ''
-      ].join(' ').downcase
-
-      search_terms.any? { |term| content_to_search.include?(term.downcase) }
-    end
-
-    def create_url_aliases(celebrities)
-      aliases = {}
-
-      celebrities.each do |celeb_key|
-        case celeb_key
-        when 'kim_kardashian'
-          aliases['kim-k'] = celeb_key
-        when 'kanye_west'
-          aliases['kanye'] = celeb_key
-          aliases['ye'] = celeb_key
-        when 'justin_bieber'
-          aliases['bieber'] = celeb_key
-        when 'taylor_swift'
-          aliases['taylor'] = celeb_key
-          aliases['tswift'] = celeb_key
-        when 'travis_kelce'
-          aliases['travis'] = celeb_key
-        when 'donald_trump'
-          aliases['trump'] = celeb_key
+      # Extract from tags if available
+      if post.data['tags']
+        post.data['tags'].each do |tag|
+          normalized = normalize_tag_to_celebrity(tag)
+          celebrities << normalized if normalized
         end
       end
 
-      aliases
+      celebrities.uniq
     end
 
-    def create_redirect(site, celeb_key, target_url)
-      redirect_page = SmartRedirectPage.new(site, celeb_key.gsub('_', '-'), target_url)
-      site.pages << redirect_page
-    end
-
-    def create_redirect_with_custom_slug(site, slug, target_url)
-      redirect_page = SmartRedirectPage.new(site, slug, target_url)
-      site.pages << redirect_page
-    end
-  end
-
-  class SmartRedirectPage < Page
-    def initialize(site, slug, target_url)
-      @site = site
-      @base = site.source
-      @dir = slug
-      @name = 'index.html'
-
-      self.process(@name)
-      self.data = {
-        'layout' => nil,
-        'permalink' => "/#{@dir}/",
-        'sitemap' => false
+    def normalize_tag_to_celebrity(tag)
+      tag_map = {
+        'taylorswift' => 'Taylor Swift',
+        'traviskelce' => 'Travis Kelce',
+        'justinbieber' => 'Justin Bieber',
+        'arianagrande' => 'Ariana Grande',
+        'selenagomez' => 'Selena Gomez',
+        'dualipa' => 'Dua Lipa',
+        'billieeilish' => 'Billie Eilish',
+        'harrystyles' => 'Harry Styles',
+        'oliviarodrigo' => 'Olivia Rodrigo',
+        'badbunny' => 'Bad Bunny',
+        'kanyewest' => 'Kanye West',
+        'kimkardashian' => 'Kim Kardashian',
+        'beyonce' => 'Beyoncé',
+        'rihanna' => 'Rihanna',
+        'drake' => 'Drake'
       }
 
-      celeb_name = slug.gsub('-', ' ').split.map(&:capitalize).join(' ')
-
-      self.content = create_redirect_html(celeb_name, target_url)
+      clean_tag = tag.downcase.gsub(/[^a-z]/, '')
+      tag_map[clean_tag]
     end
 
-    private
+    def extract_keywords(title)
+      # Extract meaningful keywords from title
+      stop_words = %w[the and or but in on at to for of with by]
+      title.downcase
+           .gsub(/[^\w\s]/, ' ')
+           .split
+           .reject { |word| stop_words.include?(word) || word.length < 3 }
+           .uniq
+    end
 
-    def create_redirect_html(celeb_name, target_url)
-      <<~HTML
+    def generate_celebrity_redirects(site, posts_data)
+      celebrity_posts = {}
+
+      posts_data.each do |post|
+        post[:celebrities].each do |celebrity|
+          celebrity_slug = slugify(celebrity)
+          celebrity_posts[celebrity_slug] ||= []
+          celebrity_posts[celebrity_slug] << post
+        end
+      end
+
+      celebrity_posts.each do |celebrity_slug, posts|
+        sorted_posts = posts.sort_by { |p| p[:date] }.reverse
+        latest_post = sorted_posts.first
+
+        # /celebrity-name/ -> latest post
+        create_redirect_page(site, "/#{celebrity_slug}/", latest_post[:url])
+
+        puts "📍 Created redirect: /#{celebrity_slug}/ -> #{latest_post[:url]}"
+      end
+    end
+
+    def generate_date_celebrity_redirects_with_fallback(site, posts_data)
+      date_celebrity_posts = {}
+      celebrity_latest = {}
+
+      # Build celebrity latest posts map for fallback
+      posts_data.each do |post|
+        post[:celebrities].each do |celebrity|
+          celebrity_slug = slugify(celebrity)
+          if !celebrity_latest[celebrity_slug] || post[:date] > celebrity_latest[celebrity_slug][:date]
+            celebrity_latest[celebrity_slug] = post
+          end
+        end
+      end
+
+      # Build date-specific redirects
+      posts_data.each do |post|
+        date_path = post[:date].strftime('%Y/%m/%d')
+
+        post[:celebrities].each do |celebrity|
+          celebrity_slug = slugify(celebrity)
+          key = "#{date_path}/#{celebrity_slug}"
+
+          date_celebrity_posts[key] ||= []
+          date_celebrity_posts[key] << post
+        end
+      end
+
+      # Create date-specific redirects
+      date_celebrity_posts.each do |key, posts|
+        if posts.length > 1
+          # Multiple posts - redirect to most recent
+          latest_post = posts.sort_by { |p| p[:date] }.reverse.first
+          create_redirect_page(site, "/#{key}/", latest_post[:url])
+          puts "📍 Created date redirect: /#{key}/ -> #{latest_post[:url]}"
+        else
+          # Single post - create redirect
+          create_redirect_page(site, "/#{key}/", posts.first[:url])
+          puts "📍 Created date redirect: /#{key}/ -> #{posts.first[:url]}"
+        end
+      end
+
+      # CREATE FALLBACK HANDLER for old dates (30+ days)
+      create_fallback_handler(site, celebrity_latest)
+    end
+
+    def create_fallback_handler(site, celebrity_latest)
+      # Create JavaScript handler for old date patterns
+      fallback_content = <<~HTML
+        ---
+        layout: null
+        permalink: /404.html
+        ---
         <!DOCTYPE html>
-        <html lang="en">
+        <html>
         <head>
           <meta charset="utf-8">
-          <title>Latest #{celeb_name} Gossip - The Goss Room</title>
-          <meta name="description" content="Get the latest #{celeb_name} gossip and drama from The Goss Room">
-          <meta http-equiv="refresh" content="0; url=#{target_url}">
-          <link rel="canonical" href="https://thegossroom.com#{target_url}">
-          <meta name="robots" content="noindex,follow">
-        </head>
-        <body>
-          <h1>🔥 Latest #{celeb_name} Gossip</h1>
-          <p>Redirecting you to the hottest #{celeb_name} tea...</p>
-          <p>If you're not redirected, <a href="#{target_url}">click here</a>.</p>
-          <script>window.location.replace("#{target_url}");</script>
-        </body>
-        </html>
-      HTML
-    end
-  end
-
-  class RegexRedirectPage < Page
-    def initialize(site, celebrity_slug, target_url)
-      @site = site
-      @base = site.source
-      @dir = "regex-#{celebrity_slug}"
-      @name = 'index.html'
-
-      self.process(@name)
-      self.data = {
-        'layout' => nil,
-        'permalink' => "/regex-#{celebrity_slug}/",
-        'sitemap' => false
-      }
-
-      self.content = <<~HTML
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <title>The Goss Room - Latest Celebrity News</title>
-          <meta http-equiv="refresh" content="0; url=#{target_url}">
-          <link rel="canonical" href="https://thegossroom.com#{target_url}">
-          <meta name="robots" content="noindex,follow">
-        </head>
-        <body>
-          <script>
-            // Smart regex redirect for date patterns
-            const path = window.location.pathname;
-            const datePattern = /\/(\d{4})\/(\d{2})\/(\d{2})\/.*#{celebrity_slug}.*/i;
-
-            if (datePattern.test(path)) {
-              window.location.replace("#{target_url}");
+          <title>Smart Redirect - The Gossip Room</title>
+          <style>
+            body { 
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              color: white;
+              text-align: center;
+              padding: 2rem;
+              min-height: 100vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
+            .container {
+              background: rgba(255,255,255,0.1);
+              backdrop-filter: blur(20px);
+              border-radius: 20px;
+              padding: 3rem;
+              max-width: 600px;
+            }
+            h1 { color: #ff69b4; margin-bottom: 1rem; }
+            .redirect-info { margin: 2rem 0; }
+            .btn {
+              background: linear-gradient(135deg, #ff69b4, #ff1493);
+              color: white;
+              padding: 1rem 2rem;
+              border-radius: 25px;
+              text-decoration: none;
+              font-weight: bold;
+              display: inline-block;
+              margin: 0.5rem;
+            }
+          </style>
+          <script>
+            // Smart redirect logic for old dates
+            (function() {
+              const path = window.location.pathname;
+              const datePattern = /^\/(\d{4})\/(\d{2})\/(\d{2})\/([^\/]+)\/?$/;
+              const match = path.match(datePattern);
+
+              if (match) {
+                const [, year, month, day, celebrity] = match;
+                const requestDate = new Date(year, month - 1, day);
+                const now = new Date();
+                const daysDiff = (now - requestDate) / (1000 * 60 * 60 * 24);
+
+                // If older than 30 days, redirect to latest
+                if (daysDiff > 30) {
+                  const celebrityMap = {
+                    #{celebrity_latest.map { |slug, post| "'#{slug}': '#{post[:url]}'" }.join(",\n                    ")}
+                  };
+
+                  const redirectUrl = celebrityMap[celebrity];
+                  if (redirectUrl) {
+                    document.getElementById('redirect-info').innerHTML = 
+                      `<p>That article is from ${daysDiff.toFixed(0)} days ago!</p>
+                       <p>Redirecting you to the latest <strong>${celebrity.replace('-', ' ')}</strong> news...</p>`;
+
+                    setTimeout(() => {
+                      window.location.href = redirectUrl;
+                    }, 3000);
+                    return;
+                  }
+                }
+              }
+
+              // Show 404 for other cases
+              document.getElementById('redirect-info').innerHTML = 
+                '<p>That page could not be found, but here are some options:</p>';
+            })();
           </script>
-          <h1>🔥 Updated Story</h1>
-          <p>Redirecting to latest news...</p>
+        </head>
+        <body>
+          <div class="container">
+            <h1>🔍 The Gossip Room</h1>
+            <div id="redirect-info" class="redirect-info">
+              <p>Looking for that article...</p>
+            </div>
+            <div>
+              <a href="/" class="btn">🏠 Home</a>
+              <a href="/archive/" class="btn">📚 Archive</a>
+            </div>
+          </div>
         </body>
         </html>
       HTML
+
+      fallback_page = Jekyll::Page.new(site, site.source, '', '404.html')
+      fallback_page.content = fallback_content
+      fallback_page.data['layout'] = nil
+
+      site.pages << fallback_page
+      puts "📍 Created smart 404 handler with 30+ day fallback"
+    end
+
+    def generate_fuzzy_fallback(site, posts_data)
+      # Create smart search page for unmatched URLs
+      fuzzy_data = posts_data.map do |post|
+        {
+          url: post[:url],
+          title: post[:title],
+          celebrities: post[:celebrities],
+          keywords: post[:keywords],
+          date: post[:date].strftime('%Y-%m-%d')
+        }
+      end
+
+      create_smart_search_page(site, fuzzy_data)
+    end
+
+    def create_redirect_page(site, from_path, to_path)
+      # Create HTML redirect page
+      redirect_content = <<~HTML
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <title>Redirecting...</title>
+          <meta http-equiv="refresh" content="0; url=#{to_path}">
+          <link rel="canonical" href="#{to_path}">
+          <script>window.location.href = "#{to_path}";</script>
+          <style>
+            body { 
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              color: white;
+              text-align: center;
+              padding: 2rem;
+              min-height: 100vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .container {
+              background: rgba(255,255,255,0.1);
+              backdrop-filter: blur(20px);
+              border-radius: 20px;
+              padding: 2rem;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <h1>🚀 Redirecting...</h1>
+            <p>Taking you to <a href="#{to_path}" style="color: #ff69b4;">#{to_path}</a></p>
+          </div>
+        </body>
+        </html>
+      HTML
+
+      redirect_page = Jekyll::Page.new(site, site.source, '', 'index.html')
+      redirect_page.content = redirect_content
+      redirect_page.data['permalink'] = from_path
+      redirect_page.data['layout'] = nil
+
+      site.pages << redirect_page
+    end
+
+    def create_smart_search_page(site, posts_data)
+      search_content = <<~HTML
+        ---
+        layout: default
+        title: "Smart Search - The Gossip Room"
+        permalink: /search/
+        ---
+
+        <div class="smart-search">
+          <h1>🔍 Smart Search</h1>
+          <p>Find any article by celebrity, topic, or keywords!</p>
+
+          <div class="search-container">
+            <input type="text" id="smart-search" placeholder="Search for celebrity, topic, or keywords..." />
+            <div id="search-results"></div>
+          </div>
+
+          <script>
+            const postsData = #{posts_data.to_json};
+
+            document.getElementById('smart-search').addEventListener('input', function(e) {
+              const query = e.target.value.toLowerCase();
+              if (query.length < 2) {
+                document.getElementById('search-results').innerHTML = '';
+                return;
+              }
+
+              const results = postsData.filter(post => {
+                return post.title.toLowerCase().includes(query) ||
+                       post.celebrities.some(c => c.toLowerCase().includes(query)) ||
+                       post.keywords.some(k => k.toLowerCase().includes(query));
+              }).slice(0, 10);
+
+              const resultsHtml = results.map(post => 
+                `<div class="search-result">
+                  <a href="${post.url}">
+                    <h3>${post.title}</h3>
+                    <p>📅 ${post.date} | 👤 ${post.celebrities.join(', ')}</p>
+                  </a>
+                </div>`
+              ).join('');
+
+              document.getElementById('search-results').innerHTML = resultsHtml;
+            });
+          </script>
+
+          <style>
+            .smart-search { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+            .search-container { margin: 2rem 0; }
+            #smart-search { 
+              width: 100%; 
+              padding: 1rem; 
+              font-size: 1.1rem; 
+              border: 2px solid #ddd; 
+              border-radius: 8px; 
+            }
+            .search-result { 
+              margin: 1rem 0; 
+              padding: 1rem; 
+              border: 1px solid #eee; 
+              border-radius: 6px; 
+            }
+            .search-result a { text-decoration: none; color: inherit; }
+            .search-result:hover { background: #f9f9f9; }
+          </style>
+        </div>
+      HTML
+
+      search_page = Jekyll::Page.new(site, site.source, '', 'search.html')
+      search_page.content = search_content
+      search_page.data['layout'] = nil
+
+      site.pages << search_page
+      puts "📍 Created smart search page"
+    end
+
+    def slugify(text)
+      text.downcase
+          .gsub(/[^\w\s]/, '')
+          .gsub(/\s+/, '-')
+          .gsub(/^-|-$/, '')
     end
   end
 end
