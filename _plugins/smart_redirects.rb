@@ -6,7 +6,7 @@ module Jekyll
         latest_post = find_latest_celebrity_post(site, celeb_key)
         if latest_post
           # Create redirect page
-          redirect_page = RedirectPage.new(site, celeb_key, latest_post.url)
+          redirect_page = SmartRedirectPage.new(site, celeb_key, latest_post.url)
           site.pages << redirect_page
         end
       end
@@ -32,7 +32,7 @@ module Jekyll
     end
   end
 
-  class RedirectPage < Page
+  class SmartRedirectPage < Page
     def initialize(site, celeb_key, target_url)
       @site = site
       @base = site.source
@@ -46,21 +46,22 @@ module Jekyll
         'redirect_to' => target_url
       }
 
-      self.content = <<~HTML
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <meta http-equiv="refresh" content="0; url=#{target_url}">
-          <link rel="canonical" href="#{target_url}">
-          <title>Redirecting to Latest #{celeb_key.gsub('_', ' ').split.map(&:capitalize).join(' ')} Gossip</title>
-        </head>
-        <body>
-          <h1>🔥 Redirecting...</h1>
-          <p>Taking you to the latest <strong>#{celeb_key.gsub('_', ' ').split.map(&:capitalize).join(' ')}</strong> gossip!</p>
-          <p>If you're not redirected automatically, <a href="#{target_url}">click here</a>.</p>
-        </body>
-        </html>
-      HTML  
+      # Simple, bulletproof HTML
+      celeb_name = celeb_key.gsub('_', ' ').split.map(&:capitalize).join(' ')
+
+      self.content = "<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv=\"refresh\" content=\"0; url=#{target_url}\">
+  <link rel=\"canonical\" href=\"#{target_url}\">
+  <title>Redirecting to Latest #{celeb_name} Gossip</title>
+</head>
+<body>
+  <h1>🔥 Redirecting...</h1>
+  <p>Taking you to the latest <strong>#{celeb_name}</strong> gossip!</p>
+  <p>If you're not redirected automatically, <a href=\"#{target_url}\">click here</a>.</p>
+</body>
+</html>"
     end
   end
 end
