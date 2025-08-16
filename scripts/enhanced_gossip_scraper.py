@@ -40,9 +40,9 @@ class AdaptiveGossipScraper:
         self.FALLBACK_MIN_TEMP = 15
         self.IDEAL_MIN_TEMP = 35
         self.ARCHIVE_DAYS = 30
-
-        # RSS feeds
-         self.rss_feeds = {
+        
+        # RSS feeds - 12 optimized sources
+        self.rss_feeds = {
             # PURE GOSSIP GOLD 🔥
             'tmz': {'url': 'https://www.tmz.com/rss.xml', 'weight': 3},
             'page_six': {'url': 'https://pagesix.com/feed/', 'weight': 3},
@@ -61,8 +61,9 @@ class AdaptiveGossipScraper:
         
             # FASHION/LIFESTYLE (Celebrity focused) 💅
             'elle': {'url': 'https://www.elle.com/rss/all.xml/', 'weight': 1},
-            'vogue': {'url': 'https://www.vogue.com/feed/rss', 'weight': 1},
-    }
+            'vogue': {'url': 'https://www.vogue.com/feed/rss', 'weight': 1}
+        }
+
 
     def load_celebrities(self):
         """Load celebrity database"""
