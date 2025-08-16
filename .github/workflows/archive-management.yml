@@ -1,0 +1,61 @@
+name: Archive Management
+
+on:
+  schedule:
+    # Weekly cleanup - Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+    # Monthly deep clean - 1st of month at 3 AM UTC
+    - cron: '0 3 1 * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Cleanup mode'
+        required: true
+        default: 'weekly'
+        type: choice
+        options:
+        - weekly
+        - monthly
+        - emergency
+
+jobs:
+  archive-management:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+
+    - name: Determine cleanup mode
+      id: mode
+      run: |
+        if [ "${{ github.event_name }}" = "schedule" ]; then
+          if [ "${{ github.event.schedule }}" = "0 3 1 * *" ]; then
+            echo "mode=monthly" >> $GITHUB_OUTPUT
+          else
+            echo "mode=weekly" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "mode=${{ github.event.inputs.mode }}" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Run Archive Management
+      run: |
+        python scripts/manage_archive.py --mode ${{ steps.mode.outputs.mode }}
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Archive Manager"
+        git add -A
+        git diff --staged --quiet || git commit -m "🗂️ Archive management: ${{ steps.mode.outputs.mode }} cleanup"
+        git push
