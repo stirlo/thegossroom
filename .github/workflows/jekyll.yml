@@ -1,5 +1,5 @@
 name: Build and deploy Jekyll site to GitHub Pages
-
+timeout-minutes: 15
 on:
   push:
     branches: [ "main" ]
