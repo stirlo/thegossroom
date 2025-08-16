@@ -1,0 +1,272 @@
+name: Gossip Room - Optimized Pipeline
+
+on:
+  schedule:
+    # Scraper + Drama Update: Every hour at :05
+    - cron: '5 * * * *'
+    # Bluesky posting: Every hour at :19  
+    - cron: '19 * * * *'
+    # Archive management: Weekly Sunday 2 AM
+    - cron: '0 2 * * 0'
+    # Archive management: Monthly 1st at 3 AM
+    - cron: '0 3 1 * *'
+
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action to run'
+        required: true
+        default: 'scrape'
+        type: choice
+        options:
+        - scrape
+        - bluesky
+        - archive-weekly
+        - archive-monthly
+        - full-pipeline
+        - emergency-cleanup
+
+jobs:
+  determine-action:
+    runs-on: ubuntu-latest
+    outputs:
+      action: ${{ steps.determine.outputs.action }}
+      should_scrape: ${{ steps.determine.outputs.should_scrape }}
+      should_bluesky: ${{ steps.determine.outputs.should_bluesky }}
+      should_archive: ${{ steps.determine.outputs.should_archive }}
+      archive_mode: ${{ steps.determine.outputs.archive_mode }}
+    steps:
+    - id: determine
+      run: |
+        if [ "${{ github.event_name }}" = "schedule" ]; then
+          case "${{ github.event.schedule }}" in
+            "5 * * * *") 
+              echo "action=scrape" >> $GITHUB_OUTPUT
+              echo "should_scrape=true" >> $GITHUB_OUTPUT
+              echo "should_bluesky=false" >> $GITHUB_OUTPUT
+              echo "should_archive=false" >> $GITHUB_OUTPUT
+              ;;
+            "19 * * * *") 
+              echo "action=bluesky" >> $GITHUB_OUTPUT
+              echo "should_scrape=false" >> $GITHUB_OUTPUT
+              echo "should_bluesky=true" >> $GITHUB_OUTPUT
+              echo "should_archive=false" >> $GITHUB_OUTPUT
+              ;;
+            "0 2 * * 0") 
+              echo "action=archive-weekly" >> $GITHUB_OUTPUT
+              echo "should_scrape=false" >> $GITHUB_OUTPUT
+              echo "should_bluesky=false" >> $GITHUB_OUTPUT
+              echo "should_archive=true" >> $GITHUB_OUTPUT
+              echo "archive_mode=weekly" >> $GITHUB_OUTPUT
+              ;;
+            "0 3 1 * *") 
+              echo "action=archive-monthly" >> $GITHUB_OUTPUT
+              echo "should_scrape=false" >> $GITHUB_OUTPUT
+              echo "should_bluesky=false" >> $GITHUB_OUTPUT
+              echo "should_archive=true" >> $GITHUB_OUTPUT
+              echo "archive_mode=monthly" >> $GITHUB_OUTPUT
+              ;;
+          esac
+        else
+          echo "action=${{ github.event.inputs.action }}" >> $GITHUB_OUTPUT
+          case "${{ github.event.inputs.action }}" in
+            "scrape")
+              echo "should_scrape=true" >> $GITHUB_OUTPUT
+              echo "should_bluesky=false" >> $GITHUB_OUTPUT
+              echo "should_archive=false" >> $GITHUB_OUTPUT
+              ;;
+            "bluesky")
+              echo "should_scrape=false" >> $GITHUB_OUTPUT
+              echo "should_bluesky=true" >> $GITHUB_OUTPUT
+              echo "should_archive=false" >> $GITHUB_OUTPUT
+              ;;
+            "archive-weekly")
+              echo "should_scrape=false" >> $GITHUB_OUTPUT
+              echo "should_bluesky=false" >> $GITHUB_OUTPUT
+              echo "should_archive=true" >> $GITHUB_OUTPUT
+              echo "archive_mode=weekly" >> $GITHUB_OUTPUT
+              ;;
+            "archive-monthly")
+              echo "should_scrape=false" >> $GITHUB_OUTPUT
+              echo "should_bluesky=false" >> $GITHUB_OUTPUT
+              echo "should_archive=true" >> $GITHUB_OUTPUT
+              echo "archive_mode=monthly" >> $GITHUB_OUTPUT
+              ;;
+            "full-pipeline")
+              echo "should_scrape=true" >> $GITHUB_OUTPUT
+              echo "should_bluesky=true" >> $GITHUB_OUTPUT
+              echo "should_archive=false" >> $GITHUB_OUTPUT
+              ;;
+            "emergency-cleanup")
+              echo "should_scrape=false" >> $GITHUB_OUTPUT
+              echo "should_bluesky=false" >> $GITHUB_OUTPUT
+              echo "should_archive=false" >> $GITHUB_OUTPUT
+              ;;
+          esac
+        fi
+
+  scrape-and-update:
+    needs: determine-action
+    if: needs.determine-action.outputs.should_scrape == 'true'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install feedparser requests pyyaml
+
+    - name: Run Adaptive Scraper
+      run: |
+        python scripts/enhanced_gossip_scraper.py
+
+    - name: Commit new posts
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Gossip Scraper"
+        git add -A
+        if ! git diff --staged --quiet; then
+          git commit -m "🎭 Hourly gossip update with adaptive temperature filtering"
+          git push
+        else
+          echo "No changes to commit"
+        fi
+
+  bluesky-post:
+    needs: determine-action
+    if: needs.determine-action.outputs.should_bluesky == 'true'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install requests pyyaml
+
+    - name: Post to Bluesky
+      env:
+        BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+        BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+      run: |
+        python scripts/bluesky_poster.py
+
+  archive-management:
+    needs: determine-action
+    if: needs.determine-action.outputs.should_archive == 'true'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+
+    - name: Run Archive Management
+      run: |
+        python scripts/manage_archive.py --mode ${{ needs.determine-action.outputs.archive_mode }}
+
+    - name: Commit archive changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Archive Manager"
+        git add -A
+        if ! git diff --staged --quiet; then
+          git commit -m "🗂️ Archive management: ${{ needs.determine-action.outputs.archive_mode }} cleanup"
+          git push
+        else
+          echo "No archive changes needed"
+        fi
+
+  emergency-cleanup:
+    needs: determine-action
+    if: needs.determine-action.outputs.action == 'emergency-cleanup'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+
+    - name: Run Emergency Cleanup
+      run: |
+        # Create and run emergency cleanup inline
+        python -c "
+        import yaml, shutil, json
+        from pathlib import Path
+        from datetime import datetime, timedelta
+
+        posts_dir = Path('_posts')
+        cold_dir = Path('_cold_storage')
+        cold_dir.mkdir(exist_ok=True)
+
+        posts = list(posts_dir.glob('*.md'))
+        print(f'Found {len(posts)} posts')
+
+        # Keep only last 30 days OR posts with high drama scores
+        kept = 0
+        moved = 0
+        cutoff = datetime.now() - timedelta(days=30)
+
+        for post in posts:
+            try:
+                if post.name.startswith('20'):
+                    post_date = datetime.strptime(post.name[:10], '%Y-%m-%d')
+                    if post_date >= cutoff:
+                        kept += 1
+                        continue
+
+                # Check drama score
+                with open(post, 'r') as f:
+                    content = f.read()
+                if content.startswith('---'):
+                    parts = content.split('---', 2)
+                    if len(parts) >= 2:
+                        fm = yaml.safe_load(parts[1])
+                        if fm.get('drama_score', 0) >= 40:
+                            kept += 1
+                            continue
+
+                # Move to cold storage
+                shutil.move(str(post), str(cold_dir / post.name))
+                moved += 1
+
+            except Exception as e:
+                print(f'Error with {post}: {e}')
+
+        print(f'Emergency cleanup: kept {kept}, moved {moved}')
+        "
+
+    - name: Commit emergency cleanup
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Emergency Cleanup"
+        git add -A
+        git commit -m "🚨 Emergency cleanup - moved old posts to cold storage"
+        git push
