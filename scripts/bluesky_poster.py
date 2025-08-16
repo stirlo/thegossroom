@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-High-Frequency Bluesky Gossip Poster - Posts twice per hour
-Prioritizes: 1) Hottest drama score, 2) Newest posts
+Temperature-Based Bluesky Gossip Poster
+Only posts the HOTTEST stories with live temperature calculation
 """
 
 import requests
@@ -12,13 +12,62 @@ import re
 from datetime import datetime, timedelta
 from pathlib import Path
 
-class HighFrequencyGossipPoster:
+class TemperatureBasedPoster:
     def __init__(self):
         self.base_url = "https://bsky.social/xrpc"
         self.handle = os.getenv('BLUESKY_HANDLE')
         self.password = os.getenv('BLUESKY_PASSWORD')
         self.session = None
         self.base_path = Path.cwd()
+        self.celebrities = self.load_celebrities()
+
+    def load_celebrities(self):
+        """Load current celebrity temperatures"""
+        try:
+            with open(self.base_path / '_data' / 'celebrities.yml', 'r') as f:
+                return yaml.safe_load(f) or {}
+        except FileNotFoundError:
+            return {}
+
+    def calculate_live_temperature(self, post_data):
+        """Calculate real-time temperature based on current celebrity scores"""
+        base_score = post_data.get('drama_score', 0)
+
+        # Get celebrity boost
+        celebrity_boost = 0
+        mentions = post_data.get('mentions', {})
+
+        if mentions:
+            for celeb_key, mention_count in mentions.items():
+                celeb_temp = self.celebrities.get(celeb_key, {}).get('drama_score', 0)
+                celebrity_boost += celeb_temp * mention_count
+
+            # Average the celebrity boost
+            celebrity_boost = celebrity_boost / len(mentions)
+
+        # Time decay factor
+        post_date = post_data.get('date')
+        if isinstance(post_date, str):
+            try:
+                post_datetime = datetime.fromisoformat(post_date.replace('Z', '+00:00'))
+                hours_old = (datetime.now() - post_datetime.replace(tzinfo=None)).total_seconds() / 3600
+
+                if hours_old < 6:
+                    time_factor = 1.0
+                elif hours_old < 24:
+                    time_factor = 0.8
+                elif hours_old < 72:
+                    time_factor = 0.5
+                else:
+                    time_factor = 0.2
+            except:
+                time_factor = 1.0
+        else:
+            time_factor = 1.0
+
+        # Calculate final temperature
+        temperature = (base_score + (celebrity_boost * 0.5)) * time_factor
+        return min(100, int(temperature))
 
     def authenticate(self):
         """Authenticate with Bluesky API"""
@@ -47,48 +96,119 @@ class HighFrequencyGossipPoster:
             return False
 
     def load_posted_tracking(self):
-        """Load list of already posted items"""
+        """Load posted tracking with temperature history"""
         posted_file = self.base_path / '_data' / 'bluesky_posted.yml'
         if posted_file.exists():
             try:
                 with open(posted_file, 'r') as f:
-                    return yaml.safe_load(f) or []
+                    data = yaml.safe_load(f) or {}
+                    return data.get('posted_files', []), data.get('posting_history', [])
             except:
-                return []
-        return []
+                return [], []
+        return [], []
 
-    def save_posted_tracking(self, posted_items):
-        """Save updated posted tracking"""
+    def save_posted_tracking(self, posted_files, posting_history):
+        """Save posted tracking with temperature data"""
         posted_file = self.base_path / '_data' / 'bluesky_posted.yml'
         posted_file.parent.mkdir(exist_ok=True)
 
-        # Keep only last 300 items for high-frequency posting
-        posted_items = posted_items[-300:]
+        # Keep last 500 posted files and 100 history entries
+        data = {
+            'posted_files': posted_files[-500:],
+            'posting_history': posting_history[-100:],
+            'last_updated': datetime.now().isoformat()
+        }
 
         with open(posted_file, 'w') as f:
-            yaml.dump(posted_items, f, default_flow_style=False)
+            yaml.dump(data, f, default_flow_style=False)
+
+    def find_hottest_gossip(self):
+        """Find the hottest unposted gossip using live temperature calculation"""
+        posted_files, posting_history = self.load_posted_tracking()
+        posts_dir = self.base_path / '_posts'
+
+        if not posts_dir.exists():
+            print("📁 No _posts directory found")
+            return None
+
+        candidates = []
+
+        # Only consider posts from last 6 hours for peak freshness
+        cutoff_time = datetime.now() - timedelta(hours=6)
+
+        for post_file in posts_dir.glob('*.md'):
+            if post_file.name in posted_files:
+                continue
+
+            try:
+                with open(post_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+
+                if content.startswith('---'):
+                    parts = content.split('---', 2)
+                    if len(parts) >= 2:
+                        front_matter = yaml.safe_load(parts[1])
+
+                        # Calculate live temperature
+                        temperature = self.calculate_live_temperature(front_matter)
+
+                        # Only consider posts with temperature >= 50
+                        if temperature >= 50:
+                            post_date = front_matter.get('date')
+                            try:
+                                if isinstance(post_date, str):
+                                    post_datetime = datetime.fromisoformat(post_date.replace('Z', '+00:00'))
+                                else:
+                                    post_datetime = post_date or datetime.now()
+                            except:
+                                post_datetime = datetime.now()
+
+                            candidates.append({
+                                'file': post_file.name,
+                                'title': front_matter.get('title', ''),
+                                'temperature': temperature,
+                                'drama_score': front_matter.get('drama_score', 0),
+                                'post_date': post_datetime,
+                                'primary_celebrity': front_matter.get('primary_celebrity', ''),
+                                'mentions': front_matter.get('mentions', {}),
+                                'tags': front_matter.get('tags', []),
+                                'post_url': self.generate_post_url(post_file.name)
+                            })
+
+            except Exception as e:
+                print(f"⚠️ Error parsing {post_file.name}: {e}")
+                continue
+
+        if not candidates:
+            print("🌡️ No hot gossip found (temperature < 50°)")
+            return None
+
+        # Sort by temperature first, then by recency
+        candidates.sort(key=lambda x: (-x['temperature'], -x['post_date'].timestamp()))
+
+        hottest = candidates[0]
+        print(f"🔥 HOTTEST: {hottest['title'][:50]}...")
+        print(f"🌡️ Temperature: {hottest['temperature']}° (Drama: {hottest['drama_score']})")
+        print(f"📅 Posted: {hottest['post_date'].strftime('%Y-%m-%d %H:%M')}")
+
+        return hottest
 
     def generate_post_url(self, filename):
-        """Generate Jekyll post URL from filename - /YYYY/MM/DD/post-name/ format"""
-
+        """Generate Jekyll post URL from filename"""
         if not filename.endswith('.md'):
             return "https://thegossroom.com"
 
-        name_without_ext = filename[:-3]  # Remove .md
-
+        name_without_ext = filename[:-3]
         if len(name_without_ext) < 10:
             return "https://thegossroom.com"
 
-        date_part = name_without_ext[:10]  # 2025-08-02
-        slug_part = name_without_ext[11:]  # post-name
+        date_part = name_without_ext[:10]
+        slug_part = name_without_ext[11:]
 
         try:
             year, month, day = date_part.split('-')
-
-            # 🎯 FIX: Clean slug properly
             clean_slug = slug_part.rstrip('-').rstrip('_')
-            clean_slug = re.sub(r'-+', '-', clean_slug)
-            clean_slug = clean_slug.strip('-')
+            clean_slug = re.sub(r'-+', '-', clean_slug).strip('-')
 
             if not clean_slug:
                 clean_slug = "post"
@@ -97,8 +217,47 @@ class HighFrequencyGossipPoster:
         except:
             return "https://thegossroom.com"
 
+    def create_temperature_post(self, gossip):
+        """Create Bluesky post with temperature emphasis"""
+        celebrity = gossip['primary_celebrity'].replace('_', ' ').title() if gossip['primary_celebrity'] else "Celebrity"
+        temp = gossip['temperature']
+
+        # Temperature-based emoji
+        if temp >= 90:
+            temp_emoji = "🔥🔥🔥 NUCLEAR"
+        elif temp >= 75:
+            temp_emoji = "🔥🔥 EXPLOSIVE"
+        elif temp >= 60:
+            temp_emoji = "🔥 BLAZING"
+        else:
+            temp_emoji = "🌡️ HEATING UP"
+
+        post_text = f"{temp_emoji}\n\n"
+
+        if celebrity != "Celebrity":
+            post_text += f"🎯 {celebrity}\n"
+
+        post_text += f"🌡️ Temperature: {temp}°\n\n"
+
+        # Truncate title to fit
+        title = gossip['title'][:80] + "..." if len(gossip['title']) > 80 else gossip['title']
+        post_text += f"📰 {title}\n\n"
+        post_text += f"{gossip['post_url']}\n\n"
+
+        # Add relevant hashtags
+        hashtags = ["#GossipRoom", "#CelebDrama"]
+        if celebrity != "Celebrity":
+            celeb_tag = f"#{celebrity.replace(' ', '')}"
+            hashtags.append(celeb_tag)
+
+        hashtag_text = " ".join(hashtags)
+        if len(post_text + hashtag_text) <= 300:
+            post_text += hashtag_text
+
+        return post_text[:300]
+
     def create_facets_for_urls(self, text):
-        """Create facets for clickable URLs in Bluesky posts"""
+        """Create facets for clickable URLs"""
         url_pattern = r'https?://[^\s]+'
         urls = list(re.finditer(url_pattern, text))
 
@@ -117,149 +276,11 @@ class HighFrequencyGossipPoster:
 
         return facets
 
-    def find_best_gossip(self):
-        """Find best unposted gossip: HOTTEST first, then NEWEST"""
-        posted_items = self.load_posted_tracking()
-        posts_dir = self.base_path / '_posts'
-
-        if not posts_dir.exists():
-            print("📁 No _posts directory found")
-            return None
-
-        candidates = []
-
-        # Check posts from last 72 hours for high-frequency posting
-        cutoff_time = datetime.now() - timedelta(hours=72)
-
-        for post_file in posts_dir.glob('*.md'):
-            if post_file.name in posted_items:
-                continue
-
-            try:
-                with open(post_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-
-                if content.startswith('---'):
-                    # Parse front matter
-                    parts = content.split('---', 2)
-                    if len(parts) >= 2:
-                        front_matter = yaml.safe_load(parts[1])
-
-                        drama_score = front_matter.get('drama_score', 0)
-                        post_date = front_matter.get('date')
-
-                        # Lower threshold for high-frequency posting
-                        if drama_score >= 5:  # Accept lower drama scores
-                            # Parse date for sorting
-                            try:
-                                if isinstance(post_date, str):
-                                    post_datetime = datetime.fromisoformat(post_date.replace('Z', '+00:00'))
-                                else:
-                                    post_datetime = post_date or datetime.now()
-                            except:
-                                post_datetime = datetime.now()
-
-                            candidates.append({
-                                'file': post_file.name,
-                                'title': front_matter.get('title', ''),
-                                'drama_score': drama_score,
-                                'post_date': post_datetime,
-                                'primary_celebrity': front_matter.get('primary_celebrity', ''),
-                                'source_url': front_matter.get('source_url', ''),
-                                'tags': front_matter.get('tags', []),
-                                'excerpt': front_matter.get('excerpt', ''),
-                                'post_url': self.generate_post_url(post_file.name)
-                            })
-
-            except Exception as e:
-                print(f"⚠️ Error parsing {post_file.name}: {e}")
-                continue
-
-        if not candidates:
-            print("📭 No eligible gossip found")
-            return None
-
-        # SORT BY: 1) Drama Score (DESC), 2) Date (DESC - newest first)
-        candidates.sort(key=lambda x: (-x['drama_score'], -x['post_date'].timestamp()))
-
-        best_gossip = candidates[0]
-        print(f"🎯 Selected: Score {best_gossip['drama_score']}, Date {best_gossip['post_date'].strftime('%Y-%m-%d %H:%M')}")
-        print(f"🔗 Direct link: {best_gossip['post_url']}")
-
-        return best_gossip
-
-    def create_bluesky_post(self, gossip):
-        """Create engaging Bluesky post text with dynamic tags from the article"""
-        celebrity = gossip['primary_celebrity'].replace('_', ' ').title() if gossip['primary_celebrity'] else "Celebrity"
-
-        # Drama level indicators
-        if gossip['drama_score'] >= 40:
-            drama_emoji = "🔥🔥🔥 EXPLOSIVE"
-        elif gossip['drama_score'] >= 25:
-            drama_emoji = "🔥🔥 HOT DRAMA"
-        elif gossip['drama_score'] >= 15:
-            drama_emoji = "🔥 HEATING UP"
-        elif gossip['drama_score'] >= 10:
-            drama_emoji = "🎭 DRAMA ALERT"
-        else:
-            drama_emoji = "📰 BREAKING"
-
-        # Build post text
-        post_text = f"{drama_emoji}\n\n"
-
-        if celebrity != "Celebrity":
-            post_text += f"🎯 {celebrity}\n"
-
-        post_text += f"📊 Drama Score: {gossip['drama_score']}\n\n"
-
-        # Add title (truncated if needed)
-        title = gossip['title'][:100] + "..." if len(gossip['title']) > 100 else gossip['title']
-        post_text += f"📰 {title}\n\n"
-
-        # Add direct post URL
-        post_text += f"{gossip['post_url']}\n\n"
-
-        # DYNAMIC TAGS: Use article's actual tags
-        if gossip.get('tags') and len(gossip['tags']) > 0:
-            hashtags = []
-            for tag in gossip['tags']:
-                # Clean up tag: remove spaces, special chars, make hashtag-friendly
-                clean_tag = tag.replace(' ', '').replace('-', '').replace('_', '')
-                clean_tag = ''.join(c for c in clean_tag if c.isalnum())
-                if clean_tag and len(clean_tag) > 2:  # Only use meaningful tags
-                    hashtags.append(f"#{clean_tag}")
-
-            # Add hashtags if we have any, respecting 300 char limit
-            if hashtags:
-                hashtag_text = " ".join(hashtags)
-                # Check if adding hashtags would exceed 300 chars
-                if len(post_text + hashtag_text) <= 300:
-                    post_text += hashtag_text
-                else:
-                    # Add as many hashtags as fit
-                    remaining_chars = 300 - len(post_text)
-                    current_length = 0
-                    used_hashtags = []
-
-                    for hashtag in hashtags:
-                        if current_length + len(hashtag) + 1 <= remaining_chars:  # +1 for space
-                            used_hashtags.append(hashtag)
-                            current_length += len(hashtag) + 1
-                        else:
-                            break
-
-                    if used_hashtags:
-                        post_text += " ".join(used_hashtags)
-
-        # Ensure we're under 300 characters
-        return post_text[:300]
-
     def post_to_bluesky(self, text):
-        """Post content to Bluesky with clickable links using facets"""
+        """Post to Bluesky with facets"""
         if not self.session:
             return False
 
-        # Create facets for clickable URLs
         facets = self.create_facets_for_urls(text)
 
         post_data = {
@@ -272,7 +293,6 @@ class HighFrequencyGossipPoster:
             }
         }
 
-        # Add facets if URLs found
         if facets:
             post_data["record"]["facets"] = facets
 
@@ -286,41 +306,49 @@ class HighFrequencyGossipPoster:
                                    json=post_data, headers=headers, timeout=30)
 
             if response.status_code == 200:
-                print("✅ Successfully posted to Bluesky with clickable links")
+                print("✅ Successfully posted to Bluesky")
                 return True
             else:
                 print(f"❌ Bluesky post failed: {response.status_code}")
-                print(f"Response: {response.text}")
                 return False
         except Exception as e:
             print(f"❌ Bluesky post error: {e}")
             return False
 
     def run(self):
-        """Main high-frequency posting process"""
-        print("🎭 Starting High-Frequency Bluesky Gossip Poster...")
+        """Main temperature-based posting process"""
+        print("🌡️ Starting Temperature-Based Bluesky Poster...")
 
         if not self.authenticate():
             return
 
-        best_gossip = self.find_best_gossip()
-        if not best_gossip:
-            print("📭 No gossip to post (all recent posts already shared)")
+        hottest_gossip = self.find_hottest_gossip()
+        if not hottest_gossip:
+            print("❄️ No hot gossip to post (all stories below 50° temperature)")
             return
 
-        print(f"🎯 Found gossip: {best_gossip['title'][:50]}... (Score: {best_gossip['drama_score']})")
-
-        post_text = self.create_bluesky_post(best_gossip)
+        post_text = self.create_temperature_post(hottest_gossip)
 
         if self.post_to_bluesky(post_text):
-            # Mark as posted
-            posted_items = self.load_posted_tracking()
-            posted_items.append(best_gossip['file'])
-            self.save_posted_tracking(posted_items)
-            print(f"🎉 Posted to Bluesky: {best_gossip['title'][:50]}...")
+            posted_files, posting_history = self.load_posted_tracking()
+
+            # Add to posted files
+            posted_files.append(hottest_gossip['file'])
+
+            # Add to posting history
+            posting_history.append({
+                'file': hottest_gossip['file'],
+                'title': hottest_gossip['title'],
+                'temperature': hottest_gossip['temperature'],
+                'celebrity': hottest_gossip['primary_celebrity'],
+                'posted_at': datetime.now().isoformat()
+            })
+
+            self.save_posted_tracking(posted_files, posting_history)
+            print(f"🎉 Posted: {hottest_gossip['title'][:50]}... (🌡️{hottest_gossip['temperature']}°)")
         else:
             print("❌ Failed to post to Bluesky")
 
 if __name__ == "__main__":
-    poster = HighFrequencyGossipPoster()
+    poster = TemperatureBasedPoster()
     poster.run()
