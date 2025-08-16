@@ -1,0 +1,295 @@
+name: Emergency Site Cleanup
+
+on:
+  workflow_dispatch:
+    inputs:
+      cleanup_type:
+        description: 'Type of cleanup to run'
+        required: true
+        default: 'emergency'
+        type: choice
+        options:
+        - emergency
+        - stats-only
+        - nuclear
+
+jobs:
+  emergency-cleanup:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+
+    - name: Create emergency cleanup script
+      run: |
+        cat > scripts/emergency_cleanup.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        EMERGENCY: GitHub Actions compatible cleanup
+        """
+        import yaml
+        from pathlib import Path
+        from datetime import datetime, timedelta
+        import shutil
+        import json
+        import sys
+
+        class GitHubEmergencyCleanup:
+            def __init__(self):
+                self.base_path = Path('.')
+                self.posts_dir = self.base_path / '_posts'
+                self.archive_dir = self.base_path / '_archive'
+                self.cold_storage_dir = self.base_path / '_cold_storage'
+
+                self.archive_dir.mkdir(exist_ok=True)
+                self.cold_storage_dir.mkdir(exist_ok=True)
+                Path('data').mkdir(exist_ok=True)
+
+                self.celebrities = self.load_celebrities()
+
+            def load_celebrities(self):
+                try:
+                    with open(self.base_path / '_data' / 'celebrities.yml', 'r') as f:
+                        return yaml.safe_load(f) or {}
+                except FileNotFoundError:
+                    return {}
+
+            def calculate_temperature(self, front_matter):
+                drama_score = front_matter.get('drama_score', 0)
+                mentions = front_matter.get('mentions', {})
+
+                celebrity_boost = 0
+                if mentions:
+                    for celeb_key, mention_count in mentions.items():
+                        celeb_temp = self.celebrities.get(celeb_key, {}).get('drama_score', 50)
+                        celebrity_boost += celeb_temp * mention_count
+                    celebrity_boost = celebrity_boost / len(mentions) if mentions else 0
+
+                post_date = front_matter.get('date')
+                age_penalty = 0
+
+                if isinstance(post_date, str):
+                    try:
+                        post_datetime = datetime.fromisoformat(post_date.replace('Z', '+00:00'))
+                        days_old = (datetime.now() - post_datetime.replace(tzinfo=None)).days
+
+                        if days_old > 30:
+                            age_penalty = 20
+                        elif days_old > 14:
+                            age_penalty = 10
+                        elif days_old > 7:
+                            age_penalty = 5
+                    except:
+                        age_penalty = 15
+
+                temperature = drama_score + (celebrity_boost * 0.4) - age_penalty
+                return max(0, min(100, int(temperature)))
+
+            def emergency_cleanup(self):
+                print("🚨 EMERGENCY CLEANUP - GitHub Actions Mode")
+
+                all_posts = []
+                total_files = len(list(self.posts_dir.glob('*.md')))
+                print(f"📊 Found {total_files} posts to analyze")
+
+                for post_file in self.posts_dir.glob('*.md'):
+                    try:
+                        with open(post_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        if not content.startswith('---'):
+                            continue
+
+                        parts = content.split('---', 2)
+                        if len(parts) < 2:
+                            continue
+
+                        front_matter = yaml.safe_load(parts[1])
+
+                        try:
+                            if post_file.name.startswith('20'):
+                                file_date = datetime.strptime(post_file.name[:10], '%Y-%m-%d')
+                            else:
+                                file_date = datetime.now() - timedelta(days=365)
+                        except:
+                            file_date = datetime.now() - timedelta(days=365)
+
+                        temperature = self.calculate_temperature(front_matter)
+                        days_old = (datetime.now() - file_date).days
+
+                        all_posts.append({
+                            'file': post_file,
+                            'filename': post_file.name,
+                            'title': front_matter.get('title', 'Untitled')[:50],
+                            'temperature': temperature,
+                            'drama_score': front_matter.get('drama_score', 0),
+                            'days_old': days_old,
+                            'primary_celebrity': front_matter.get('primary_celebrity', '')
+                        })
+
+                    except Exception as e:
+                        print(f"⚠️ Error analyzing {post_file}: {e}")
+                        continue
+
+                print(f"✅ Analyzed {len(all_posts)} posts")
+
+                # Sort by temperature
+                all_posts.sort(key=lambda x: (-x['temperature'], -x['drama_score'], x['days_old']))
+
+                # AGGRESSIVE FILTERING for GitHub Actions
+                keep_active = []
+                keep_archive = []
+                cold_storage = []
+
+                for post in all_posts:
+                    # Keep active: temp >= 50 OR top 75 posts
+                    if post['temperature'] >= 50 or len(keep_active) < 75:
+                        keep_active.append(post)
+                    # Keep archive: temp >= 30 OR top 200 total
+                    elif post['temperature'] >= 30 or len(keep_active) + len(keep_archive) < 200:
+                        keep_archive.append(post)
+                    else:
+                        cold_storage.append(post)
+
+                print(f"🎯 CLEANUP PLAN:")
+                print(f"   🔥 Keep ACTIVE: {len(keep_active)} posts")
+                print(f"   📦 Keep ARCHIVED: {len(keep_archive)} posts") 
+                print(f"   🧊 COLD STORAGE: {len(cold_storage)} posts")
+
+                # Execute moves
+                moved_to_archive = 0
+                moved_to_cold = 0
+
+                for post in keep_archive:
+                    archive_path = self.archive_dir / post['filename']
+                    if not archive_path.exists():
+                        shutil.move(str(post['file']), str(archive_path))
+                        moved_to_archive += 1
+
+                for post in cold_storage:
+                    cold_path = self.cold_storage_dir / post['filename']
+                    if not cold_path.exists():
+                        shutil.move(str(post['file']), str(cold_path))
+                        moved_to_cold += 1
+
+                print(f"✅ CLEANUP COMPLETE!")
+                print(f"   🔥 Active posts: {len(keep_active)}")
+                print(f"   📦 Moved to archive: {moved_to_archive}")
+                print(f"   🧊 Moved to cold storage: {moved_to_cold}")
+
+                # Show hottest kept posts
+                print(f"🔥 TOP 10 HOTTEST POSTS KEPT:")
+                for i, post in enumerate(keep_active[:10], 1):
+                    print(f"   {i:2d}. {post['title']} (🌡️{post['temperature']}°)")
+
+                # Save report
+                summary = {
+                    'cleanup_date': datetime.now().isoformat(),
+                    'original_count': total_files,
+                    'kept_active': len(keep_active),
+                    'moved_to_archive': moved_to_archive,
+                    'moved_to_cold_storage': moved_to_cold,
+                    'hottest_active_posts': [
+                        {'title': p['title'], 'temperature': p['temperature']} 
+                        for p in keep_active[:20]
+                    ]
+                }
+
+                with open('data/emergency_cleanup_report.json', 'w') as f:
+                    json.dump(summary, f, indent=2)
+
+                return summary
+
+            def nuclear_cleanup(self):
+                """NUCLEAR: Keep only top 25 posts"""
+                print("☢️ NUCLEAR CLEANUP - Keep only top 25 posts")
+
+                all_posts = []
+                for post_file in self.posts_dir.glob('*.md'):
+                    try:
+                        with open(post_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        if content.startswith('---'):
+                            parts = content.split('---', 2)
+                            if len(parts) >= 2:
+                                front_matter = yaml.safe_load(parts[1])
+                                temp = self.calculate_temperature(front_matter)
+                                all_posts.append({
+                                    'file': post_file,
+                                    'filename': post_file.name,
+                                    'temperature': temp,
+                                    'title': front_matter.get('title', '')[:50]
+                                })
+                    except:
+                        continue
+
+                # Keep only top 25
+                all_posts.sort(key=lambda x: x['temperature'], reverse=True)
+                keep_posts = all_posts[:25]
+                move_posts = all_posts[25:]
+
+                moved = 0
+                for post in move_posts:
+                    cold_path = self.cold_storage_dir / post['filename']
+                    if not cold_path.exists():
+                        shutil.move(str(post['file']), str(cold_path))
+                        moved += 1
+
+                print(f"☢️ NUCLEAR COMPLETE: Kept 25 posts, moved {moved} to cold storage")
+                return {'kept': 25, 'moved': moved}
+
+            def stats_only(self):
+                posts = list(self.posts_dir.glob('*.md'))
+                archive = list(self.archive_dir.glob('*.md'))
+                cold = list(self.cold_storage_dir.glob('*.md'))
+
+                print(f"📊 CURRENT STATS:")
+                print(f"   Posts in _posts/: {len(posts)}")
+                print(f"   Posts in _archive/: {len(archive)}")
+                print(f"   Posts in _cold_storage/: {len(cold)}")
+                print(f"   Total: {len(posts) + len(archive) + len(cold)}")
+
+                return {
+                    'active': len(posts),
+                    'archive': len(archive), 
+                    'cold': len(cold),
+                    'total': len(posts) + len(archive) + len(cold)
+                }
+
+        if __name__ == "__main__":
+            cleanup = GitHubEmergencyCleanup()
+
+            cleanup_type = sys.argv[1] if len(sys.argv) > 1 else 'emergency'
+
+            if cleanup_type == 'emergency':
+                result = cleanup.emergency_cleanup()
+            elif cleanup_type == 'nuclear':
+                result = cleanup.nuclear_cleanup()
+            else:
+                result = cleanup.stats_only()
+
+            print(f"🎯 Cleanup complete: {result}")
+        EOF
+
+    - name: Run Emergency Cleanup
+      run: |
+        python scripts/emergency_cleanup.py ${{ github.event.inputs.cleanup_type }}
+
+    - name: Commit cleanup results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Emergency Cleanup Bot"
+        git add -A
+        git diff --staged --quiet || git commit -m "🚨 Emergency cleanup: ${{ github.event.inputs.cleanup_type }} mode"
+        git push
