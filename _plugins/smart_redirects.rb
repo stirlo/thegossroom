@@ -52,12 +52,15 @@ module Jekyll
         <head>
           <meta http-equiv="refresh" content="0; url=#{target_url}">
           <link rel="canonical" href="#{target_url}">
+          <title>Redirecting to Latest #{celeb_key.gsub('_', ' ').split.map(&:capitalize).join(' ')} Gossip</title>
         </head>
         <body>
-          <p>Redirecting to <a href="#{target_url}">latest #{celeb_key.humanize} gossip</a>...</p>
+          <h1>🔥 Redirecting...</h1>
+          <p>Taking you to the latest <strong>#{celeb_key.gsub('_', ' ').split.map(&:capitalize).join(' ')}</strong> gossip!</p>
+          <p>If you're not redirected automatically, <a href="#{target_url}">click here</a>.</p>
         </body>
         </html>
-      HTML
+      HTML  
     end
   end
 end
