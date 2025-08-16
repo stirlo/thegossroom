@@ -3,38 +3,80 @@ module Jekyll
     def generate(site)
       puts "🔍 DEBUG: Starting Smart Redirects Generator"
 
-      # Get ALL celebrities (remove drama score filter)
       all_celebrities = get_all_celebrities(site)
       puts "📊 Total celebrities available: #{all_celebrities.length}"
 
-      # Process top celebrities first, then expand
-      celebrities_to_process = all_celebrities.first(100) # Increased from 50
+      # Create URL aliases for common variations
+      url_aliases = create_url_aliases(all_celebrities)
+
+      # Process main celebrities
+      celebrities_to_process = all_celebrities.first(100)
 
       celebrities_to_process.each do |celeb_key|
         latest_post = find_latest_celebrity_post(site, celeb_key)
 
         if latest_post
-          # Create main redirect (e.g., /kanye-west/)
           create_redirect(site, celeb_key, latest_post.url)
-
-          # Create date-based redirects for old Bluesky links
-          create_date_redirects(site, celeb_key, latest_post)
-
           puts "📄 Created redirects for #{celeb_key}: #{latest_post.url}"
-        else
-          puts "❌ No posts found for #{celeb_key}"
+        end
+      end
+
+      # Process URL aliases
+      url_aliases.each do |alias_slug, actual_key|
+        latest_post = find_latest_celebrity_post(site, actual_key)
+
+        if latest_post
+          create_redirect_with_custom_slug(site, alias_slug, latest_post.url)
+          puts "📄 Created alias redirect: #{alias_slug} → #{latest_post.url}"
         end
       end
     end
 
     private
 
+    def create_url_aliases(celebrities)
+      aliases = {}
+
+      celebrities.each do |celeb_key|
+        # Create common short versions
+        case celeb_key
+        when 'kim_kardashian'
+          aliases['kim-k'] = celeb_key
+          aliases['kim'] = celeb_key
+        when 'kanye_west'
+          aliases['kanye'] = celeb_key
+          aliases['ye'] = celeb_key
+        when 'justin_bieber'
+          aliases['bieber'] = celeb_key
+          aliases['justin'] = celeb_key
+        when 'taylor_swift'
+          aliases['taylor'] = celeb_key
+          aliases['tswift'] = celeb_key
+        when 'travis_kelce'
+          aliases['travis'] = celeb_key
+        when 'kylie_jenner'
+          aliases['kylie'] = celeb_key
+        when 'ariana_grande'
+          aliases['ariana'] = celeb_key
+        when 'selena_gomez'
+          aliases['selena'] = celeb_key
+        end
+
+        # Auto-create first name aliases for two-word names
+        if celeb_key.include?('_')
+          first_name = celeb_key.split('_').first
+          aliases[first_name] = celeb_key unless aliases[first_name]
+        end
+      end
+
+      aliases
+    end
+
     def get_all_celebrities(site)
       return [] unless site.data['celebrities']
 
-      # Get ALL celebrities, sorted by drama score (no minimum threshold)
       site.data['celebrities']
-        .select { |_, data| data['drama_score'] } # Just needs a drama score
+        .select { |_, data| data['drama_score'] }
         .sort_by { |_, data| -(data['drama_score'] || 0) }
         .map { |key, _| key }
     end
@@ -48,23 +90,19 @@ module Jekyll
         end
       end
 
-      # Return the most recent post
       matching_posts.max_by(&:date)
     end
 
     def celebrity_mentioned_in_post?(post, celeb_key)
-      # Check mentions data first (most reliable)
       return true if post.data['mentions'] && post.data['mentions'][celeb_key]
 
-      # Enhanced name variations
       celeb_name = celeb_key.gsub('_', ' ')
       search_terms = [
         celeb_name,
         celeb_name.split.map(&:capitalize).join(' '),
         celeb_key.gsub('_', '-'),
-        # Add common variations
-        celeb_name.split.first, # First name only
-        celeb_name.split.last   # Last name only
+        celeb_name.split.first,
+        celeb_name.split.last
       ].compact.uniq
 
       content_to_search = [
@@ -77,34 +115,21 @@ module Jekyll
     end
 
     def create_redirect(site, celeb_key, target_url)
-      redirect_page = SmartRedirectPage.new(site, celeb_key, target_url)
+      redirect_page = SmartRedirectPage.new(site, celeb_key.gsub('_', '-'), target_url)
       site.pages << redirect_page
     end
 
-    def create_date_redirects(site, celeb_key, latest_post)
-      # Extract date from latest post URL
-      if latest_post.url =~ %r{/(\d{4})/(\d{2})/(\d{2})/}
-        year, month, day = $1, $2, $3
-
-        # Create redirects for common date patterns
-        date_patterns = [
-          "#{year}/#{month}/#{day}/#{celeb_key.gsub('_', '-')}",
-          "#{year}/#{month}/#{day}/#{celeb_key.gsub('_', '-')}-*", # Wildcard pattern
-        ]
-
-        date_patterns.each do |pattern|
-          date_redirect = DateRedirectPage.new(site, pattern, latest_post.url)
-          site.pages << date_redirect
-        end
-      end
+    def create_redirect_with_custom_slug(site, slug, target_url)
+      redirect_page = SmartRedirectPage.new(site, slug, target_url)
+      site.pages << redirect_page
     end
   end
 
   class SmartRedirectPage < Page
-    def initialize(site, celeb_key, target_url)
+    def initialize(site, slug, target_url)
       @site = site
       @base = site.source
-      @dir = celeb_key.gsub('_', '-')
+      @dir = slug
       @name = 'index.html'
 
       self.process(@name)
@@ -114,15 +139,9 @@ module Jekyll
         'sitemap' => false
       }
 
-      celeb_name = celeb_key.gsub('_', ' ').split.map(&:capitalize).join(' ')
+      celeb_name = slug.gsub('-', ' ').split.map(&:capitalize).join(' ')
 
-      self.content = create_redirect_html(celeb_name, target_url)
-    end
-
-    private
-
-    def create_redirect_html(celeb_name, target_url)
-      <<~HTML
+      self.content = <<~HTML
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -137,40 +156,6 @@ module Jekyll
           <h1>🔥 Latest #{celeb_name} Gossip</h1>
           <p>Redirecting you to the hottest #{celeb_name} tea...</p>
           <p>If you're not redirected, <a href="#{target_url}">click here</a>.</p>
-          <script>
-            // Immediate redirect
-            window.location.replace("#{target_url}");
-          </script>
-        </body>
-        </html>
-      HTML
-    end
-  end
-
-  class DateRedirectPage < Page
-    def initialize(site, date_pattern, target_url)
-      @site = site
-      @base = site.source
-      @dir = date_pattern
-      @name = 'index.html'
-
-      self.process(@name)
-      self.data = {
-        'layout' => nil,
-        'permalink' => "/#{@dir}/",
-        'sitemap' => false
-      }
-
-      self.content = <<~HTML
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta http-equiv="refresh" content="0; url=#{target_url}">
-          <link rel="canonical" href="https://thegossroom.com#{target_url}">
-          <meta name="robots" content="noindex,follow">
-        </head>
-        <body>
           <script>window.location.replace("#{target_url}");</script>
         </body>
         </html>
