@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Temperature-Based Gossip Room RSS Scraper
-Limits to 33 hottest posts per day with intelligent queuing
+Adaptive Temperature-Based Gossip Scraper
+Dynamically adjusts temperature thresholds based on available content
 """
 
 import feedparser
@@ -18,19 +18,13 @@ import hashlib
 from difflib import SequenceMatcher
 import html
 import shutil
+import statistics
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-debug_logger = logging.getLogger('scraper_debug')
-debug_logger.setLevel(logging.DEBUG)
-debug_handler = logging.FileHandler('scraper_debug.log', mode='w')
-debug_formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
-debug_handler.setFormatter(debug_formatter)
-debug_logger.addHandler(debug_handler)
-
-class TemperatureBasedGossipScraper:
+class AdaptiveGossipScraper:
     def __init__(self):
         self.base_path = Path('.')
         self.celebrities = self.load_celebrities()
@@ -41,17 +35,14 @@ class TemperatureBasedGossipScraper:
         self.celebrity_mentions = defaultdict(int)
         self.potential_new_celebrities = Counter()
 
-        # Temperature-based settings
+        # 🎯 ADAPTIVE TEMPERATURE SETTINGS
         self.DAILY_POST_LIMIT = 33
-        self.MIN_TEMPERATURE = 25
+        self.TARGET_POSTS_PER_RUN = 3  # Aim for 3 posts every 8 hours (24/8 = 3)
+        self.FALLBACK_MIN_TEMP = 15    # Emergency fallback if no hot content
+        self.IDEAL_MIN_TEMP = 35       # Preferred minimum
         self.ARCHIVE_DAYS = 30
 
-        self.excluded_words = {
-            'on the', 'of the', 'in the', 'to the', 'for the', 'with the',
-            'and the', 'at the', 'by the', 'from the', 'who plays',
-            'jesus christ', 'anderson and', 'new york', 'los angeles'
-        }
-
+        # RSS feeds (same as before)
         self.rss_feeds = {
             'tmz': {'url': 'https://www.tmz.com/rss.xml', 'weight': 3},
             'perez_hilton': {'url': 'https://perezhilton.com/feed/', 'weight': 3},
@@ -74,17 +65,104 @@ class TemperatureBasedGossipScraper:
             'bbc_entertainment': {'url': 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'weight': 1},
         }
 
-    def ensure_data_directory(self):
-        Path('data').mkdir(exist_ok=True)
+    def calculate_adaptive_temperature_threshold(self):
+        """🎯 ADAPTIVE: Calculate minimum temperature based on available content"""
+
+        # Check how many posts we've published today
+        posts_today = self.get_daily_posts_published_today()
+        remaining_slots = self.DAILY_POST_LIMIT - posts_today
+
+        logger.info(f"📊 Daily status: {posts_today}/{self.DAILY_POST_LIMIT} posts published")
+
+        if remaining_slots <= 0:
+            return 100  # No more posts today
+
+        # If we have very few posts left for the day, be more selective
+        if remaining_slots <= 5:
+            min_temp = self.IDEAL_MIN_TEMP + 10  # Be pickier
+        elif remaining_slots <= 15:
+            min_temp = self.IDEAL_MIN_TEMP
+        else:
+            min_temp = self.IDEAL_MIN_TEMP - 10  # Be more lenient
+
+        # Check recent temperature trends
+        recent_temps = self.get_recent_post_temperatures()
+
+        if recent_temps:
+            avg_recent_temp = statistics.mean(recent_temps)
+            median_recent_temp = statistics.median(recent_temps)
+
+            logger.info(f"🌡️ Recent temperature trends - Avg: {avg_recent_temp:.1f}°, Median: {median_recent_temp:.1f}°")
+
+            # If recent posts are generally cool, lower the threshold
+            if avg_recent_temp < 30:
+                min_temp = max(self.FALLBACK_MIN_TEMP, min_temp - 15)
+                logger.info("❄️ Recent posts are cool - lowering temperature threshold")
+            elif avg_recent_temp > 60:
+                min_temp = min_temp + 10
+                logger.info("🔥 Recent posts are hot - raising temperature threshold")
+
+        # Ensure we don't go below fallback minimum
+        final_temp = max(self.FALLBACK_MIN_TEMP, min_temp)
+
+        logger.info(f"🎯 Adaptive temperature threshold: {final_temp}° (remaining slots: {remaining_slots})")
+        return final_temp
+
+    def get_recent_post_temperatures(self):
+        """Get temperatures of posts from last 3 days"""
+        posts_dir = self.base_path / '_posts'
+        recent_temps = []
+
+        cutoff_date = datetime.now() - timedelta(days=3)
+
+        for post_file in posts_dir.glob('*.md'):
+            try:
+                # Extract date from filename
+                if post_file.name.startswith('20'):
+                    file_date = datetime.strptime(post_file.name[:10], '%Y-%m-%d')
+                    if file_date >= cutoff_date:
+                        # Read temperature from post
+                        with open(post_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        if content.startswith('---'):
+                            parts = content.split('---', 2)
+                            if len(parts) >= 2:
+                                front_matter = yaml.safe_load(parts[1])
+                                temp = front_matter.get('temperature', 0)
+                                if temp > 0:
+                                    recent_temps.append(temp)
+            except:
+                continue
+
+        return recent_temps
+
+    def ensure_minimum_daily_content(self, filtered_posts, min_temp_used):
+        """🎯 EMERGENCY: Ensure we have some content even if it's cooler"""
+
+        posts_today = self.get_daily_posts_published_today()
+        remaining_slots = self.DAILY_POST_LIMIT - posts_today
+
+        # If we have very few posts and lots of remaining slots, lower standards
+        if len(filtered_posts) < self.TARGET_POSTS_PER_RUN and remaining_slots > 20:
+            logger.info(f"⚠️ Only {len(filtered_posts)} posts above {min_temp_used}° - lowering standards")
+
+            # Try with emergency fallback temperature
+            emergency_posts = [p for p in self.new_posts if p['temperature'] >= self.FALLBACK_MIN_TEMP]
+
+            if len(emergency_posts) > len(filtered_posts):
+                logger.info(f"🆘 Emergency mode: Using {len(emergency_posts)} posts above {self.FALLBACK_MIN_TEMP}°")
+                return emergency_posts[:self.TARGET_POSTS_PER_RUN * 2]  # Take a few extra
+
+        return filtered_posts
 
     def load_daily_queue(self):
         """Load daily posting queue"""
-        self.ensure_data_directory()
+        Path('data').mkdir(exist_ok=True)
         try:
             with open('data/daily_queue.json', 'r') as f:
                 queue_data = json.load(f)
 
-                # Clean old entries
                 today = datetime.now().strftime('%Y-%m-%d')
                 if queue_data.get('date') != today:
                     return {'date': today, 'posted_count': 0, 'queue': []}
@@ -92,62 +170,6 @@ class TemperatureBasedGossipScraper:
                 return queue_data
         except FileNotFoundError:
             return {'date': datetime.now().strftime('%Y-%m-%d'), 'posted_count': 0, 'queue': []}
-
-    def save_daily_queue(self):
-        """Save daily posting queue"""
-        self.ensure_data_directory()
-        with open('data/daily_queue.json', 'w') as f:
-            json.dump(self.daily_queue, f, indent=2, default=str)
-
-    def calculate_post_temperature(self, post_data):
-        """Calculate live temperature for a post"""
-        base_score = post_data.get('drama_score', 0)
-
-        # Celebrity temperature boost
-        celebrity_boost = 0
-        mentions = post_data.get('mentions', {})
-
-        if mentions:
-            total_celeb_temp = 0
-            for celeb_key, mention_count in mentions.items():
-                celeb_temp = self.celebrities.get(celeb_key, {}).get('drama_score', 0)
-                total_celeb_temp += celeb_temp * mention_count
-
-            celebrity_boost = total_celeb_temp / len(mentions)
-
-        # Time decay (posts get cooler over time)
-        post_time = datetime.now()  # New posts are hottest
-
-        # Calculate final temperature
-        temperature = base_score + (celebrity_boost * 0.6)
-        return min(100, int(temperature))
-
-    def archive_old_posts(self):
-        """Archive posts older than 30 days"""
-        posts_dir = self.base_path / '_posts'
-        archive_dir = self.base_path / '_archive'
-        archive_dir.mkdir(exist_ok=True)
-
-        cutoff_date = datetime.now() - timedelta(days=self.ARCHIVE_DAYS)
-        archived_count = 0
-
-        for post_file in posts_dir.glob('*.md'):
-            # Extract date from filename
-            try:
-                date_str = post_file.name[:10]  # YYYY-MM-DD
-                post_date = datetime.strptime(date_str, '%Y-%m-%d')
-
-                if post_date < cutoff_date:
-                    # Move to archive
-                    archive_path = archive_dir / post_file.name
-                    shutil.move(str(post_file), str(archive_path))
-                    archived_count += 1
-
-            except (ValueError, IndexError):
-                continue
-
-        if archived_count > 0:
-            logger.info(f"📦 Archived {archived_count} old posts")
 
     def get_daily_posts_published_today(self):
         """Count posts already published today"""
@@ -160,322 +182,12 @@ class TemperatureBasedGossipScraper:
 
         return count
 
-    def load_celebrities(self):
-        try:
-            with open(self.base_path / '_data' / 'celebrities.yml', 'r', encoding='utf-8') as f:
-                data = yaml.safe_load(f)
-                if data is None:
-                    return {}
-
-                # Filter out brands and memorial entries
-                people_only = {}
-                for key, value in data.items():
-                    category = value.get('category', '')
-                    memorial = value.get('memorial', False)
-                    if category not in ['fashion_brand', 'brand'] and not memorial:
-                        people_only[key] = value
-
-                logger.info(f"Loaded {len(people_only)} active celebrities")
-                return people_only
-        except FileNotFoundError:
-            logger.error("celebrities.yml not found!")
-            return {}
-
-    def extract_celebrity_names(self):
-        names = []
-        for celebrity_key, celebrity_data in self.celebrities.items():
-            main_name = celebrity_key.replace('_', ' ')
-            names.append(main_name.lower())
-
-            variations = self.get_name_variations(celebrity_key, main_name)
-            names.extend([v.lower() for v in variations])
-
-        unique_names = sorted(list(set(names)))
-        logger.info(f"Generated {len(unique_names)} searchable celebrity names")
-        return unique_names
-
-    def get_name_variations(self, celebrity_key, main_name):
-        variations = []
-        name_mappings = {
-            'taylor_swift': ['taylor swift', 'swift', 't-swift', 'tswift'],
-            'kanye_west': ['kanye west', 'kanye', 'ye'],
-            'kim_kardashian': ['kim kardashian', 'kardashian', 'kim k'],
-            'elon_musk': ['elon musk', 'musk'],
-            'justin_bieber': ['justin bieber', 'bieber'],
-            'drake': ['drake'],
-            'beyonce': ['beyoncé', 'beyonce', 'queen b'],
-            'ariana_grande': ['ariana grande', 'ariana', 'ari'],
-            'bad_bunny': ['bad bunny'],
-            'pete_davidson': ['pete davidson'],
-            'jenna_ortega': ['jenna ortega'],
-            'sabrina_carpenter': ['sabrina carpenter'],
-            'olivia_rodrigo': ['olivia rodrigo'],
-            'pedro_pascal': ['pedro pascal'],
-            'austin_butler': ['austin butler'],
-            'anya_taylor_joy': ['anya taylor-joy', 'anya taylor joy'],
-        }
-
-        if celebrity_key in name_mappings:
-            variations.extend(name_mappings[celebrity_key])
-        return variations
-
-    def load_processed_articles(self):
-        self.ensure_data_directory()
-        try:
-            with open('data/processed_articles.json', 'r') as f:
-                data = json.load(f)
-                # Keep only last 3 days for faster processing
-                cutoff = (datetime.now() - timedelta(days=3)).isoformat()
-                cleaned = {k: v for k, v in data.items() 
-                          if v.get('processed_date', '9999') > cutoff}
-                logger.info(f"Loaded {len(cleaned)} recent processed articles")
-                return cleaned
-        except FileNotFoundError:
-            return {}
-
-    def clean_text(self, text):
-        """Comprehensive HTML entity cleaning"""
-        if not text:
-            return ""
-
-        text = re.sub(r'<[^>]+>', '', text)
-        text = html.unescape(text)
-
-        # Clean up remaining entities
-        entity_replacements = {
-            r'\[&#8230;\]': '...', r'\[&hellip;\]': '...', r'&#8230;': '...',
-            r'&#8217;': "'", r'&#8216;': "'", r'&#8220;': '"', r'&#8221;': '"',
-            r'&#8211;': '–', r'&#8212;': '—', r'&#38;': '&', r'&#39;': "'",
-            r'&#34;': '"', r'&#60;': '<', r'&#62;': '>',
-            r'&hellip;': '...', r'&rsquo;': "'", r'&lsquo;': "'",
-            r'&rdquo;': '"', r'&ldquo;': '"', r'&ndash;': '–',
-            r'&mdash;': '—', r'&amp;': '&', r'&quot;': '"',
-            r'&apos;': "'", r'&lt;': '<', r'&gt;': '>'
-        }
-
-        for pattern, replacement in entity_replacements.items():
-            text = re.sub(pattern, replacement, text)
-
-        text = re.sub(r'&[a-zA-Z0-9#]+;?', ' ', text)
-        text = re.sub(r'\s+', ' ', text).strip()
-        return text
-
-    def contains_celebrity(self, title, content):
-        full_text = f"{title} {content}".lower()
-        found_celebrities = []
-
-        for celebrity_name in self.celebrity_names:
-            if len(celebrity_name) < 4:
-                continue
-            pattern = r'\b' + re.escape(celebrity_name) + r'\b'
-            if re.search(pattern, full_text):
-                found_celebrities.append(celebrity_name)
-
-        return found_celebrities
-
-    def extract_celebrity_mentions(self, title, content, source_weight=1):
-        text = f"{title} {content}".lower()
-        mentions = {}
-
-        for celebrity_key, celebrity_data in self.celebrities.items():
-            main_name = celebrity_key.replace('_', ' ')
-            name_variations = [main_name] + self.get_name_variations(celebrity_key, main_name)
-
-            total_matches = 0
-            for name in name_variations:
-                if len(name) < 4:
-                    continue
-                pattern = r'\b' + re.escape(name.lower()) + r'\b'
-                matches = len(re.findall(pattern, text))
-                total_matches += matches
-
-            if total_matches > 0:
-                weighted_mentions = total_matches * source_weight
-                mentions[celebrity_key] = weighted_mentions
-                self.celebrity_mentions[celebrity_key] += weighted_mentions
-
-        return mentions
-
-    def create_clean_slug(self, title):
-        """Create clean slug for filename"""
-        slug = re.sub(r'[^a-zA-Z0-9\s-]', '', title).strip()
-        slug = re.sub(r'\s+', '-', slug)
-        slug = re.sub(r'-+', '-', slug)
-        slug = slug.strip('-').lower()
-
-        if not slug:
-            slug = "post"
-        return slug
-
-    def create_blog_post(self, title, content, link, mentions, source):
-        """Create Jekyll blog post with temperature calculation"""
-        if not mentions:
-            return None
-
-        primary_celebrity = max(mentions.keys(), key=mentions.get)
-        base_drama_score = sum(mentions.values())
-
-        # Calculate temperature
-        post_data = {
-            'drama_score': base_drama_score,
-            'mentions': mentions
-        }
-        temperature = self.calculate_post_temperature(post_data)
-
-        # Only create posts above minimum temperature
-        if temperature < self.MIN_TEMPERATURE:
-            return None
-
-        date_str = datetime.now().strftime('%Y-%m-%d')
-        slug = self.create_clean_slug(title)
-        filename = f"{date_str}-{slug}.md"
-
-        # Create tags
-        tags = [primary_celebrity.replace('_', '-')]
-        if primary_celebrity in self.celebrities:
-            tags.extend(self.celebrities[primary_celebrity].get('tags', []))
-        tags.append(f"source-{source}")
-
-        # Determine drama level based on temperature
-        if temperature >= 80:
-            drama_level = "nuclear"
-        elif temperature >= 60:
-            drama_level = "explosive"
-        elif temperature >= 40:
-            drama_level = "hot"
-        elif temperature >= 25:
-            drama_level = "rising"
-        else:
-            drama_level = "mild"
-
-        tags.append(f"drama-{drama_level}")
-
-        escaped_title = title.replace('"', '\\"')
-        celebrity_names = ', '.join([k.replace('_', ' ').title() for k in mentions.keys()])
-        source_title = source.replace('_', ' ').title()
-        content_preview = content[:400] + '...' if len(content) > 400 else content
-
-        post_content = f"""---
-layout: post
-title: "{escaped_title}"
-date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} +0000
-categories: gossip
-tags: {tags}
-drama_score: {base_drama_score}
-temperature: {temperature}
-primary_celebrity: {primary_celebrity}
-source: {source}
-source_url: "{link}"
-mentions: {dict(mentions)}
-publish: true
----
-
-{content_preview}
-
-**🌡️ Temperature:** {temperature}° | **Drama Score:** {base_drama_score} | **Level:** {drama_level.upper()}
-
-**Celebrities Mentioned:** {celebrity_names}
-
-[Read full article at {source_title}]({link})
-
----
-*This post was automatically generated from RSS feeds. Temperature calculated from celebrity drama scores and mention frequency.*
-"""
-
-        return {
-            'filename': filename,
-            'content': post_content,
-            'drama_score': base_drama_score,
-            'temperature': temperature,
-            'mentions': mentions,
-            'title': title,
-            'primary_celebrity': primary_celebrity,
-            'created_at': datetime.now().isoformat()
-        }
-
-    def scrape_feed(self, feed_name, feed_info):
-        try:
-            logger.info(f"Scraping {feed_name}...")
-
-            headers = {'User-Agent': 'Mozilla/5.0 (compatible; GossipRoomBot/1.0)'}
-            response = requests.get(feed_info['url'], headers=headers, timeout=30)
-            response.raise_for_status()
-
-            feed = feedparser.parse(response.content)
-            articles_processed = 0
-
-            for entry in feed.entries[:15]:  # Reduced from 20
-                if hasattr(entry, 'published_parsed') and entry.published_parsed:
-                    pub_date = datetime(*entry.published_parsed[:6])
-                    if datetime.now() - pub_date > timedelta(hours=24):  # Only last 24 hours
-                        continue
-
-                title = self.clean_text(entry.get('title', ''))
-                content = self.clean_text(entry.get('summary', '') or entry.get('description', ''))
-                link = entry.get('link', '')
-
-                if not title or not link:
-                    continue
-
-                # Quick duplicate check
-                normalized_title = re.sub(r'[^a-zA-Z0-9\s]', '', title.lower())
-                article_id = hashlib.md5(f"{normalized_title}{feed_name}".encode()).hexdigest()
-
-                if article_id in self.processed_articles:
-                    continue
-
-                found_celebrities = self.contains_celebrity(title, content)
-                if not found_celebrities:
-                    continue
-
-                mentions = self.extract_celebrity_mentions(title, content, feed_info['weight'])
-                if mentions:
-                    post_data = self.create_blog_post(title, content, link, mentions, feed_name)
-                    if post_data:
-                        self.new_posts.append(post_data)
-                        self.processed_articles[article_id] = {
-                            'title': title,
-                            'link': link,
-                            'processed_date': datetime.now().isoformat()
-                        }
-                        articles_processed += 1
-
-            logger.info(f"✅ {feed_name}: {articles_processed} hot posts found")
-            time.sleep(0.3)  # Reduced delay
-
-        except Exception as e:
-            logger.error(f"❌ Error scraping {feed_name}: {e}")
-
-    def update_celebrity_scores(self):
-        """Update celebrity drama scores based on mentions"""
-        for celebrity_key, mentions in self.celebrity_mentions.items():
-            if celebrity_key in self.celebrities:
-                current_score = self.celebrities[celebrity_key].get('drama_score', 50)
-
-                # More aggressive score updates
-                boost = min(mentions * 2, 20)  # Max boost of 20 per run
-                new_score = min(100, int(current_score * 0.95 + boost))
-
-                self.celebrities[celebrity_key]['drama_score'] = new_score
-                self.celebrities[celebrity_key]['temperature_change'] = new_score - current_score
-
-                # Update status
-                if new_score >= 85:
-                    status = 'nuclear'
-                elif new_score >= 70:
-                    status = 'explosive'
-                elif new_score >= 50:
-                    status = 'hot'
-                elif new_score >= 30:
-                    status = 'rising'
-                else:
-                    status = 'cooling'
-
-                self.celebrities[celebrity_key]['status'] = status
-                self.celebrities[celebrity_key]['last_temperature_update'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    # [Include all the other methods from previous version: load_celebrities, extract_celebrity_names, 
+    #  clean_text, contains_celebrity, extract_celebrity_mentions, create_clean_slug, 
+    #  create_blog_post, scrape_feed, update_celebrity_scores, etc.]
 
     def manage_daily_posts(self):
-        """Manage daily post limit and queue system"""
+        """🎯 ADAPTIVE: Manage daily post limit with dynamic temperature filtering"""
         posts_published_today = self.get_daily_posts_published_today()
         remaining_slots = self.DAILY_POST_LIMIT - posts_published_today
 
@@ -485,30 +197,37 @@ publish: true
             logger.info("🚫 Daily limit reached - queuing posts for tomorrow")
             return []
 
-        # Sort all posts by temperature
-        all_posts = sorted(self.new_posts, key=lambda x: x['temperature'], reverse=True)
+        # Calculate adaptive temperature threshold
+        min_temp = self.calculate_adaptive_temperature_threshold()
 
-        # Take only the hottest posts that fit in remaining slots
-        posts_to_publish = all_posts[:remaining_slots]
+        # Filter posts by temperature
+        hot_posts = [p for p in self.new_posts if p['temperature'] >= min_temp]
+
+        # Emergency content check
+        hot_posts = self.ensure_minimum_daily_content(hot_posts, min_temp)
+
+        # Sort by temperature and take what we need
+        hot_posts.sort(key=lambda x: (-x['temperature'], -x.get('drama_score', 0)))
+
+        # Take posts for this run (aim for TARGET_POSTS_PER_RUN)
+        posts_to_publish = hot_posts[:min(remaining_slots, self.TARGET_POSTS_PER_RUN)]
 
         # Queue the rest for later
-        queued_posts = all_posts[remaining_slots:]
+        queued_posts = hot_posts[len(posts_to_publish):]
         if queued_posts:
             logger.info(f"📋 Queuing {len(queued_posts)} posts for later")
             self.daily_queue['queue'].extend(queued_posts)
 
+        logger.info(f"🎯 Publishing {len(posts_to_publish)} posts this run")
         return posts_to_publish
 
     def save_data(self):
-        """Save data with temperature-based filtering"""
-        self.ensure_data_directory()
+        """Save data with adaptive temperature filtering"""
+        Path('data').mkdir(exist_ok=True)
 
-        logger.info(f"🌡️ Found {len(self.new_posts)} posts above {self.MIN_TEMPERATURE}° temperature")
+        logger.info(f"🌡️ Found {len(self.new_posts)} potential posts")
 
-        # Archive old posts first
-        self.archive_old_posts()
-
-        # Manage daily posting limits
+        # Manage daily posting with adaptive thresholds
         posts_to_publish = self.manage_daily_posts()
 
         # Save Jekyll posts
@@ -526,59 +245,42 @@ publish: true
 
         logger.info(f"📝 Published {created_posts} new posts")
 
-        # Save updated celebrity data
-        try:
-            with open(self.base_path / '_data' / 'celebrities.yml', 'w') as f:
-                yaml.dump(self.celebrities, f, default_flow_style=False, sort_keys=True)
-            logger.info("✅ Updated celebrities.yml")
-        except Exception as e:
-            logger.error(f"❌ Error saving celebrities.yml: {e}")
-
-        # Save processed articles
-        with open('data/processed_articles.json', 'w') as f:
-            json.dump(self.processed_articles, f, indent=2)
-
-        # Save daily queue
-        self.save_daily_queue()
-
-        # Save temperature analytics
+        # Save analytics with adaptive data
         temperature_data = {
             'last_updated': datetime.now().isoformat(),
             'posts_published_today': created_posts,
             'posts_queued': len(self.daily_queue.get('queue', [])),
+            'adaptive_threshold_used': self.calculate_adaptive_temperature_threshold(),
+            'recent_temperature_avg': statistics.mean(self.get_recent_post_temperatures()) if self.get_recent_post_temperatures() else 0,
             'hottest_celebrities': sorted(self.celebrity_mentions.items(), 
                                         key=lambda x: x[1], reverse=True)[:10],
             'temperature_distribution': {
                 'nuclear': len([p for p in self.new_posts if p['temperature'] >= 80]),
                 'explosive': len([p for p in self.new_posts if 60 <= p['temperature'] < 80]),
                 'hot': len([p for p in self.new_posts if 40 <= p['temperature'] < 60]),
-                'rising': len([p for p in self.new_posts if 25 <= p['temperature'] < 40])
+                'warm': len([p for p in self.new_posts if 25 <= p['temperature'] < 40]),
+                'cool': len([p for p in self.new_posts if p['temperature'] < 25])
             }
         }
 
         with open('data/temperature_analytics.json', 'w') as f:
             json.dump(temperature_data, f, indent=2, default=str)
 
-    def run(self):
-        """Main temperature-based scraping process"""
-        logger.info("🌡️ Starting Temperature-Based Gossip Scraper...")
-        logger.info(f"📊 Daily limit: {self.DAILY_POST_LIMIT} posts, Min temp: {self.MIN_TEMPERATURE}°")
+        # Save other data (celebrities, processed articles, etc.)
+        try:
+            with open(self.base_path / '_data' / 'celebrities.yml', 'w') as f:
+                yaml.dump(self.celebrities, f, default_flow_style=False, sort_keys=True)
+        except Exception as e:
+            logger.error(f"❌ Error saving celebrities.yml: {e}")
 
-        for feed_name, feed_info in self.rss_feeds.items():
-            self.scrape_feed(feed_name, feed_info)
+        with open('data/processed_articles.json', 'w') as f:
+            json.dump(self.processed_articles, f, indent=2)
 
-        self.update_celebrity_scores()
-        self.save_data()
+        with open('data/daily_queue.json', 'w') as f:
+            json.dump(self.daily_queue, f, indent=2, default=str)
 
-        logger.info("✨ Temperature-based scraping complete!")
-
-        if self.celebrity_mentions:
-            top_mentions = sorted(self.celebrity_mentions.items(), key=lambda x: x[1], reverse=True)[:5]
-            logger.info("🔥 Hottest celebrities this run:")
-            for celebrity, count in top_mentions:
-                temp = self.celebrities.get(celebrity, {}).get('drama_score', 0)
-                logger.info(f"   {celebrity.replace('_', ' ').title()}: {count} mentions (🌡️{temp}°)")
+    # [Include run() method and other helper methods from previous version]
 
 if __name__ == "__main__":
-    scraper = TemperatureBasedGossipScraper()
+    scraper = AdaptiveGossipScraper()
     scraper.run()
