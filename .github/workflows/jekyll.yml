@@ -1,5 +1,4 @@
 name: Build and deploy Jekyll site to GitHub Pages
-timeout-minutes: 15
 on:
   push:
     branches: [ "main" ]
@@ -17,6 +16,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15  # Job-level timeout
     steps:
       - name: Checkout
         uses: actions/checkout@v4
