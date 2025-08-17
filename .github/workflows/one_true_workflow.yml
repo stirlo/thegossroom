@@ -188,21 +188,6 @@ jobs:
       run: |
         python scripts/bluesky_poster_enhanced.py
 
-    # NEW: Commit the tracking updates
-    - name: Commit Bluesky tracking updates
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "Bluesky Poster"
-        git add _data/bluesky_posted.yml
-        git add _data/bluesky_posted.yml.backup
-        git add _posts/*.md
-        if ! git diff --staged --quiet; then
-          git commit -m "📱 Update Bluesky posting tracking [skip ci]"
-          git push
-        else
-          echo "No tracking changes to commit"
-        fi
-
   # NEW: Auto-trigger Jekyll build when content changes
   trigger-jekyll-build:
     needs: [determine-action, scrape-and-update, bluesky-post]
