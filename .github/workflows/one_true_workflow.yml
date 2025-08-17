@@ -109,6 +109,9 @@ jobs:
     needs: determine-action
     if: needs.determine-action.outputs.should_scrape == 'true'
     runs-on: ubuntu-latest
+    outputs:
+      new_posts: ${{ steps.scrape.outputs.new_posts }}
+      posts_added: ${{ steps.scrape.outputs.posts_added }}
     steps:
     - uses: actions/checkout@v4
       with:
@@ -124,8 +127,26 @@ jobs:
         pip install feedparser requests pyyaml
 
     - name: Run Adaptive Scraper
+      id: scrape
       run: |
+        # Count posts before
+        BEFORE=$(find _posts -name "*.md" | wc -l)
+
         python scripts/enhanced_gossip_scraper.py
+
+        # Count posts after
+        AFTER=$(find _posts -name "*.md" | wc -l)
+        NEW_COUNT=$((AFTER - BEFORE))
+
+        if [ $NEW_COUNT -gt 0 ]; then
+          echo "new_posts=true" >> $GITHUB_OUTPUT
+          echo "posts_added=$NEW_COUNT" >> $GITHUB_OUTPUT
+          echo "✅ Added $NEW_COUNT new posts"
+        else
+          echo "new_posts=false" >> $GITHUB_OUTPUT
+          echo "posts_added=0" >> $GITHUB_OUTPUT
+          echo "ℹ️ No new posts added"
+        fi
 
     - name: Commit new posts
       run: |
@@ -143,6 +164,8 @@ jobs:
     needs: determine-action
     if: needs.determine-action.outputs.should_bluesky == 'true'
     runs-on: ubuntu-latest
+    outputs:
+      posts_made: ${{ steps.bluesky.outputs.posts_made }}
     steps:
     - uses: actions/checkout@v4
 
@@ -156,11 +179,40 @@ jobs:
         pip install requests pyyaml
 
     - name: Post to Bluesky
+      id: bluesky
       env:
         BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
         BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
       run: |
-        python scripts/bluesky_poster.py
+        python scripts/bluesky_poster_enhanced.py
+
+  # NEW: Auto-trigger Jekyll build when content changes
+  trigger-jekyll-build:
+    needs: [determine-action, scrape-and-update, bluesky-post]
+    if: |
+      always() && 
+      (needs.scrape-and-update.outputs.new_posts == 'true' || 
+       needs.bluesky-post.outputs.posts_made == 'true' ||
+       needs.determine-action.outputs.should_archive == 'true')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger Jekyll Build and Deploy
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          try {
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'jekyll.yml',
+              ref: 'main'
+            });
+            console.log('✅ Jekyll build triggered successfully');
+          } catch (error) {
+            console.log('❌ Failed to trigger Jekyll build:', error.message);
+            // Don't fail the workflow if this fails
+          }
 
   archive-management:
     needs: determine-action
@@ -216,7 +268,6 @@ jobs:
 
     - name: Run Emergency Cleanup
       run: |
-        # Create and run emergency cleanup inline
         python -c "
         import yaml, shutil, json
         from pathlib import Path
@@ -229,7 +280,6 @@ jobs:
         posts = list(posts_dir.glob('*.md'))
         print(f'Found {len(posts)} posts')
 
-        # Keep only last 30 days OR posts with high drama scores
         kept = 0
         moved = 0
         cutoff = datetime.now() - timedelta(days=30)
@@ -242,7 +292,6 @@ jobs:
                         kept += 1
                         continue
 
-                # Check drama score
                 with open(post, 'r') as f:
                     content = f.read()
                 if content.startswith('---'):
@@ -253,7 +302,6 @@ jobs:
                             kept += 1
                             continue
 
-                # Move to cold storage
                 shutil.move(str(post), str(cold_dir / post.name))
                 moved += 1
 
