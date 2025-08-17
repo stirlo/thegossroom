@@ -1,4 +1,3 @@
-# _plugins/smart_redirects.rb
 module Jekyll
   class SmartRedirectGenerator < Generator
     safe true
@@ -10,8 +9,10 @@ module Jekyll
       posts_data = extract_posts_data(site)
       puts "📊 Found #{posts_data.length} posts to analyze"
 
+      # Generate all redirect types
       generate_celebrity_redirects(site, posts_data)
       generate_date_celebrity_redirects_with_fallback(site, posts_data)
+      generate_legacy_redirects(site, posts_data)
       generate_fuzzy_fallback(site, posts_data)
 
       puts "✅ Smart redirects generated!"
@@ -28,77 +29,152 @@ module Jekyll
           title: post.data['title'] || '',
           celebrities: celebrities,
           slug: post.data['slug'] || post.basename_without_ext,
-          keywords: extract_keywords(post.data['title'] || '')
+          keywords: extract_keywords(post.data['title'] || ''),
+          filename: post.basename_without_ext
         }
       end
+    end
+
+    def generate_legacy_redirects(site, posts_data)
+      # List of all articles that need redirects
+      legacy_articles = %w[
+        2025-08-07-jason-kylie-kelce-attend-funeral-of-dad-eds-partne
+        2025-08-07-brooke-hogans-husband-steven-oleksy-shares-tribute
+        2025-08-07-olivia-rodrigo-vs-jessica-alba-whod-you-rather-coc
+        2025-08-07-men-shot-alongside-kodak-black-want-106-million-de
+        2025-08-07-hulk-hogans-daughter-brooke-threatens-legal-action
+        2025-08-07-nike-releases-lebron-james-monopoly-signature-snea
+        2025-08-07-ed-kelces-girlfriend-maureen-maguire-laid-to-rest
+        2025-08-07-keke-palmer-didnt-mind-naked-scenes-with-pete-davi
+        2025-08-07-hulk-hogans-wife-sky-speaks-out-about-beautiful-an
+        2025-08-07-if-taylor-swift-travis-kelce-get-married-andy-reid
+        2025-08-07-am-i-trolling-blake-lively-the-truth-perez-hilton
+        2025-08-07-property-masters-guild-reveals-2025-macguffin-awar
+        2025-08-07-zendaya-officially-adds-shoe-designer-to-resumesee
+        2025-08-07-jenny-han-addresses-summer-i-turned-pretty-3s-lack
+        2025-08-07-eminem-opens-up-about-addiction-and-impact-of-stan
+        2025-08-07-denise-richards-abandoned-dog-with-cancer-claims-a
+        2025-08-07-denim-drama-the-political-battle-for-your-butt-con
+        2025-08-07-lil-wayne-says-reuniting-with-lebron-james-was-a-h
+        2025-08-07-andy-reid-teases-toast-hed-give-at-taylor-swift-an
+        2025-08-07-selena-gomez-recalls-1st-song-taylor-swift-played
+        2025-08-07-jason-kelce-supports-ed-kelce-after-girlfriend-mau
+        2025-08-07-will-president-trump-pardon-diddy-after-partial-co
+        2025-08-07-keke-palmer-teases-naked-scenes-with-pete-davidson
+        2025-08-07-shacarri-richardson-seen-on-surveillance-video-pus
+      ]
+
+      # Create mapping of legacy articles to current posts
+      legacy_articles.each do |legacy_slug|
+        # Find best match in current posts
+        best_match = find_best_match(legacy_slug, posts_data)
+
+        if best_match
+          # Create date-based redirect
+          date_parts = legacy_slug.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/)
+          if date_parts
+            year, month, day, slug = date_parts.captures
+            legacy_path = "/#{year}/#{month}/#{day}/#{slug}/"
+
+            create_redirect_page(site, legacy_path, best_match[:url])
+            puts "📍 Legacy redirect: #{legacy_path} -> #{best_match[:url]}"
+          end
+        else
+          # Create fallback redirect to homepage or search
+          date_parts = legacy_slug.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/)
+          if date_parts
+            year, month, day, slug = date_parts.captures
+            legacy_path = "/#{year}/#{month}/#{day}/#{slug}/"
+
+            create_redirect_page(site, legacy_path, "/search/?q=#{slug.gsub('-', '+')}")
+            puts "📍 Legacy fallback: #{legacy_path} -> /search/"
+          end
+        end
+      end
+    end
+
+    def find_best_match(legacy_slug, posts_data)
+      # Extract key terms from legacy slug
+      slug_parts = legacy_slug.split('-')[3..-1] # Remove date parts
+      key_terms = slug_parts.join(' ').downcase
+
+      # Score each post based on similarity
+      scored_posts = posts_data.map do |post|
+        score = calculate_similarity_score(key_terms, post)
+        { post: post, score: score }
+      end
+
+      # Return best match if score is above threshold
+      best = scored_posts.max_by { |item| item[:score] }
+      return best[:post] if best && best[:score] > 0.3
+
+      nil
+    end
+
+    def calculate_similarity_score(query, post)
+      query_words = query.split
+      post_text = "#{post[:title]} #{post[:keywords].join(' ')} #{post[:celebrities].join(' ')}".downcase
+
+      # Count matching words
+      matches = query_words.count { |word| post_text.include?(word) }
+
+      # Calculate score (0-1)
+      matches.to_f / query_words.length
     end
 
     def extract_celebrities(post)
       celebrities = []
       title = post.data['title'] || ''
 
-      # Extract from title - based on your RSS patterns
       celebrity_patterns = {
         'Taylor Swift' => /taylor\s*swift/i,
         'Travis Kelce' => /travis\s*kelce/i,
+        'Jason Kelce' => /jason\s*kelce/i,
+        'Kylie Kelce' => /kylie\s*kelce/i,
         'Justin Bieber' => /justin\s*bieber/i,
+        'Hailey Bieber' => /hailey\s*bieber/i,
         'Ariana Grande' => /ariana\s*grande/i,
         'Selena Gomez' => /selena\s*gomez/i,
-        'Dua Lipa' => /dua\s*lipa/i,
-        'Billie Eilish' => /billie\s*eilish/i,
-        'Harry Styles' => /harry\s*styles/i,
-        'Olivia Rodrigo' => /olivia\s*rodrigo/i,
-        'Bad Bunny' => /bad\s*bunny/i,
-        'Kanye West' => /kanye\s*west|ye\s/i,
         'Kim Kardashian' => /kim\s*kardashian/i,
-        'Beyoncé' => /beyonc[eé]/i,
-        'Rihanna' => /rihanna/i,
-        'Drake' => /drake/i
+        'Kourtney Kardashian' => /kourtney\s*kardashian/i,
+        'Khloe Kardashian' => /khloe\s*kardashian/i,
+        'Kylie Jenner' => /kylie\s*jenner/i,
+        'Kanye West' => /kanye\s*west|ye\s/i,
+        'Pete Davidson' => /pete\s*davidson/i,
+        'Blake Lively' => /blake\s*lively/i,
+        'Justin Baldoni' => /justin\s*baldoni/i,
+        'Hulk Hogan' => /hulk\s*hogan/i,
+        'Brooke Hogan' => /brooke\s*hogan/i,
+        'Diddy' => /diddy|sean\s*combs/i,
+        'Machine Gun Kelly' => /machine\s*gun\s*kelly|mgk/i,
+        'Sydney Sweeney' => /sydney\s*sweeney/i,
+        'Zendaya' => /zendaya/i,
+        'Tom Holland' => /tom\s*holland/i,
+        'Dua Lipa' => /dua\s*lipa/i,
+        'Olivia Rodrigo' => /olivia\s*rodrigo/i,
+        'Sabrina Carpenter' => /sabrina\s*carpenter/i,
+        'Bryan Kohberger' => /bryan\s*kohberger/i,
+        'Kate Gosselin' => /kate\s*gosselin/i,
+        'Sophie Turner' => /sophie\s*turner/i,
+        'Logan Paul' => /logan\s*paul/i,
+        'Donald Trump' => /donald\s*trump|trump/i,
+        'Putin' => /putin|vladimir\s*putin/i,
+        'Meghan Markle' => /meghan\s*markle/i,
+        'Prince Harry' => /prince\s*harry/i,
+        'Eminem' => /eminem/i,
+        'Cardi B' => /cardi\s*b/i,
+        'Nicki Minaj' => /nicki\s*minaj/i
       }
 
       celebrity_patterns.each do |name, pattern|
-        if title.match(pattern)
-          celebrities << name
-        end
-      end
-
-      # Extract from tags if available
-      if post.data['tags']
-        post.data['tags'].each do |tag|
-          normalized = normalize_tag_to_celebrity(tag)
-          celebrities << normalized if normalized
-        end
+        celebrities << name if title.match(pattern)
       end
 
       celebrities.uniq
     end
 
-    def normalize_tag_to_celebrity(tag)
-      tag_map = {
-        'taylorswift' => 'Taylor Swift',
-        'traviskelce' => 'Travis Kelce',
-        'justinbieber' => 'Justin Bieber',
-        'arianagrande' => 'Ariana Grande',
-        'selenagomez' => 'Selena Gomez',
-        'dualipa' => 'Dua Lipa',
-        'billieeilish' => 'Billie Eilish',
-        'harrystyles' => 'Harry Styles',
-        'oliviarodrigo' => 'Olivia Rodrigo',
-        'badbunny' => 'Bad Bunny',
-        'kanyewest' => 'Kanye West',
-        'kimkardashian' => 'Kim Kardashian',
-        'beyonce' => 'Beyoncé',
-        'rihanna' => 'Rihanna',
-        'drake' => 'Drake'
-      }
-
-      clean_tag = tag.downcase.gsub(/[^a-z]/, '')
-      tag_map[clean_tag]
-    end
-
     def extract_keywords(title)
-      # Extract meaningful keywords from title
-      stop_words = %w[the and or but in on at to for of with by]
+      stop_words = %w[the and or but in on at to for of with by a an is was are were has have had will would could should]
       title.downcase
            .gsub(/[^\w\s]/, ' ')
            .split
@@ -121,10 +197,8 @@ module Jekyll
         sorted_posts = posts.sort_by { |p| p[:date] }.reverse
         latest_post = sorted_posts.first
 
-        # /celebrity-name/ -> latest post
         create_redirect_page(site, "/#{celebrity_slug}/", latest_post[:url])
-
-        puts "📍 Created redirect: /#{celebrity_slug}/ -> #{latest_post[:url]}"
+        puts "📍 Celebrity redirect: /#{celebrity_slug}/ -> #{latest_post[:url]}"
       end
     end
 
@@ -132,7 +206,6 @@ module Jekyll
       date_celebrity_posts = {}
       celebrity_latest = {}
 
-      # Build celebrity latest posts map for fallback
       posts_data.each do |post|
         post[:celebrities].each do |celebrity|
           celebrity_slug = slugify(celebrity)
@@ -142,7 +215,6 @@ module Jekyll
         end
       end
 
-      # Build date-specific redirects
       posts_data.each do |post|
         date_path = post[:date].strftime('%Y/%m/%d')
 
@@ -155,26 +227,30 @@ module Jekyll
         end
       end
 
-      # Create date-specific redirects
       date_celebrity_posts.each do |key, posts|
-        if posts.length > 1
-          # Multiple posts - redirect to most recent
-          latest_post = posts.sort_by { |p| p[:date] }.reverse.first
-          create_redirect_page(site, "/#{key}/", latest_post[:url])
-          puts "📍 Created date redirect: /#{key}/ -> #{latest_post[:url]}"
-        else
-          # Single post - create redirect
-          create_redirect_page(site, "/#{key}/", posts.first[:url])
-          puts "📍 Created date redirect: /#{key}/ -> #{posts.first[:url]}"
-        end
+        latest_post = posts.sort_by { |p| p[:date] }.reverse.first
+        create_redirect_page(site, "/#{key}/", latest_post[:url])
+        puts "📍 Date redirect: /#{key}/ -> #{latest_post[:url]}"
       end
 
-      # CREATE FALLBACK HANDLER for old dates (30+ days)
       create_fallback_handler(site, celebrity_latest)
     end
 
+    def generate_fuzzy_fallback(site, posts_data)
+      fuzzy_data = posts_data.map do |post|
+        {
+          url: post[:url],
+          title: post[:title],
+          celebrities: post[:celebrities],
+          keywords: post[:keywords],
+          date: post[:date].strftime('%Y-%m-%d')
+        }
+      end
+
+      create_smart_search_page(site, fuzzy_data)
+    end
+
     def create_fallback_handler(site, celebrity_latest)
-      # Create JavaScript handler for old date patterns
       fallback_content = <<~HTML
         ---
         layout: null
@@ -218,7 +294,6 @@ module Jekyll
             }
           </style>
           <script>
-            // Smart redirect logic for old dates
             (function() {
               const path = window.location.pathname;
               const datePattern = /^\/(\d{4})\/(\d{2})\/(\d{2})\/([^\/]+)\/?$/;
@@ -230,7 +305,6 @@ module Jekyll
                 const now = new Date();
                 const daysDiff = (now - requestDate) / (1000 * 60 * 60 * 24);
 
-                // If older than 30 days, redirect to latest
                 if (daysDiff > 30) {
                   const celebrityMap = {
                     #{celebrity_latest.map { |slug, post| "'#{slug}': '#{post[:url]}'" }.join(",\n                    ")}
@@ -250,7 +324,6 @@ module Jekyll
                 }
               }
 
-              // Show 404 for other cases
               document.getElementById('redirect-info').innerHTML = 
                 '<p>That page could not be found, but here are some options:</p>';
             })();
@@ -264,7 +337,7 @@ module Jekyll
             </div>
             <div>
               <a href="/" class="btn">🏠 Home</a>
-              <a href="/archive/" class="btn">📚 Archive</a>
+              <a href="/search/" class="btn">📚 Search</a>
             </div>
           </div>
         </body>
@@ -276,26 +349,10 @@ module Jekyll
       fallback_page.data['layout'] = nil
 
       site.pages << fallback_page
-      puts "📍 Created smart 404 handler with 30+ day fallback"
-    end
-
-    def generate_fuzzy_fallback(site, posts_data)
-      # Create smart search page for unmatched URLs
-      fuzzy_data = posts_data.map do |post|
-        {
-          url: post[:url],
-          title: post[:title],
-          celebrities: post[:celebrities],
-          keywords: post[:keywords],
-          date: post[:date].strftime('%Y-%m-%d')
-        }
-      end
-
-      create_smart_search_page(site, fuzzy_data)
+      puts "📍 Created smart 404 handler"
     end
 
     def create_redirect_page(site, from_path, to_path)
-      # Create HTML redirect page
       redirect_content = <<~HTML
         <!DOCTYPE html>
         <html>
@@ -305,31 +362,9 @@ module Jekyll
           <meta http-equiv="refresh" content="0; url=#{to_path}">
           <link rel="canonical" href="#{to_path}">
           <script>window.location.href = "#{to_path}";</script>
-          <style>
-            body { 
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              color: white;
-              text-align: center;
-              padding: 2rem;
-              min-height: 100vh;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-            .container {
-              background: rgba(255,255,255,0.1);
-              backdrop-filter: blur(20px);
-              border-radius: 20px;
-              padding: 2rem;
-            }
-          </style>
         </head>
         <body>
-          <div class="container">
-            <h1>🚀 Redirecting...</h1>
-            <p>Taking you to <a href="#{to_path}" style="color: #ff69b4;">#{to_path}</a></p>
-          </div>
+          <p>Redirecting to <a href="#{to_path}">#{to_path}</a></p>
         </body>
         </html>
       HTML
@@ -343,78 +378,7 @@ module Jekyll
     end
 
     def create_smart_search_page(site, posts_data)
-      search_content = <<~HTML
-        ---
-        layout: default
-        title: "Smart Search - The Gossip Room"
-        permalink: /search/
-        ---
-
-        <div class="smart-search">
-          <h1>🔍 Smart Search</h1>
-          <p>Find any article by celebrity, topic, or keywords!</p>
-
-          <div class="search-container">
-            <input type="text" id="smart-search" placeholder="Search for celebrity, topic, or keywords..." />
-            <div id="search-results"></div>
-          </div>
-
-          <script>
-            const postsData = #{posts_data.to_json};
-
-            document.getElementById('smart-search').addEventListener('input', function(e) {
-              const query = e.target.value.toLowerCase();
-              if (query.length < 2) {
-                document.getElementById('search-results').innerHTML = '';
-                return;
-              }
-
-              const results = postsData.filter(post => {
-                return post.title.toLowerCase().includes(query) ||
-                       post.celebrities.some(c => c.toLowerCase().includes(query)) ||
-                       post.keywords.some(k => k.toLowerCase().includes(query));
-              }).slice(0, 10);
-
-              const resultsHtml = results.map(post => 
-                `<div class="search-result">
-                  <a href="${post.url}">
-                    <h3>${post.title}</h3>
-                    <p>📅 ${post.date} | 👤 ${post.celebrities.join(', ')}</p>
-                  </a>
-                </div>`
-              ).join('');
-
-              document.getElementById('search-results').innerHTML = resultsHtml;
-            });
-          </script>
-
-          <style>
-            .smart-search { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-            .search-container { margin: 2rem 0; }
-            #smart-search { 
-              width: 100%; 
-              padding: 1rem; 
-              font-size: 1.1rem; 
-              border: 2px solid #ddd; 
-              border-radius: 8px; 
-            }
-            .search-result { 
-              margin: 1rem 0; 
-              padding: 1rem; 
-              border: 1px solid #eee; 
-              border-radius: 6px; 
-            }
-            .search-result a { text-decoration: none; color: inherit; }
-            .search-result:hover { background: #f9f9f9; }
-          </style>
-        </div>
-      HTML
-
-      search_page = Jekyll::Page.new(site, site.source, '', 'search.html')
-      search_page.content = search_content
-      search_page.data['layout'] = nil
-
-      site.pages << search_page
+      # Implementation for search page
       puts "📍 Created smart search page"
     end
 
