@@ -1,0 +1,83 @@
+{
+  "timestamp": "2025-08-17T03:36:08.933294",
+  "total_posts": 2132,
+  "temperature_distribution": {
+    "Nuclear (80-100\u00b0)": 1901,
+    "Explosive (60-79\u00b0)": 123,
+    "Hot (40-59\u00b0)": 74,
+    "Warm (25-39\u00b0)": 4,
+    "Cool (<25\u00b0)": 30
+  },
+  "location_distribution": {
+    "Active": 200,
+    "Archived": 1932
+  },
+  "age_distribution": {
+    "Today": 19,
+    "This week": 1539,
+    "This month": 574,
+    "Older": 0
+  },
+  "hottest_posts": [
+    {
+      "title": "Taylor Swift May Have Dropped Super Bowl 2026 Half...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Taylor Swift TOTALLY BUSTED Travis Kelce On The Po...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Sydney Sweeney Just Had the Biggest Controversy of...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "\u2018The Daily Show\u2019s Jordan Klepper Finds Hope In Air...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Dua Lipa showcases her impressive yoga moves on a ...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Royal Expert Offers Bleak Insight Into Harry and M...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Trump and Putin admit there's still work to be don...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Taylor Swift\u2019s Podcast Debut Climbs to \u2018New Height...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Cardi B Shades Nicki Minaj With Jay-Z 'Imaginary P...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Logan Paul marries Sports Illustrated model Nina A...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    }
+  ]
+}
