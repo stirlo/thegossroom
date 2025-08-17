@@ -168,6 +168,8 @@ jobs:
       posts_made: ${{ steps.bluesky.outputs.posts_made }}
     steps:
     - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # CRITICAL: Need write access
 
     - name: Setup Python
       uses: actions/setup-python@v4
@@ -185,6 +187,21 @@ jobs:
         BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
       run: |
         python scripts/bluesky_poster_enhanced.py
+
+    # NEW: Commit the tracking updates
+    - name: Commit Bluesky tracking updates
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Bluesky Poster"
+        git add _data/bluesky_posted.yml
+        git add _data/bluesky_posted.yml.backup
+        git add _posts/*.md
+        if ! git diff --staged --quiet; then
+          git commit -m "📱 Update Bluesky posting tracking [skip ci]"
+          git push
+        else
+          echo "No tracking changes to commit"
+        fi
 
   # NEW: Auto-trigger Jekyll build when content changes
   trigger-jekyll-build:
