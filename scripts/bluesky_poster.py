@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enhanced Bluesky Gossip Poster with Smart Recovery & Temperature System
+Enhanced Bluesky Gossip Poster with Smart Recovery, Temperature System & URL Validation
 """
 
 import requests
@@ -9,8 +9,10 @@ import json
 import os
 import re
 import logging
+import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from urllib.parse import urljoin
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s:%(name)s:%(message)s')
@@ -23,6 +25,11 @@ class SmartBlueskyPoster:
         self.password = os.getenv('BLUESKY_PASSWORD')
         self.session = None
         self.base_path = Path.cwd()
+        self.site_base_url = "https://thegossroom.com"
+
+        # Queue management
+        self.queue_file = self.base_path / '_data' / 'bluesky_queue.yml'
+        self.posted_file = self.base_path / '_data' / 'bluesky_posted.yml'
 
     def authenticate(self):
         """Authenticate with Bluesky API"""
@@ -50,6 +57,30 @@ class SmartBlueskyPoster:
             logger.error(f"❌ Bluesky auth error: {e}")
             return False
 
+    def validate_url(self, url, timeout=10):
+        """Validate that a URL is accessible before posting"""
+        try:
+            # Quick HEAD request to check if URL exists
+            response = requests.head(url, timeout=timeout, allow_redirects=True)
+
+            # Accept 2xx and 3xx status codes
+            if 200 <= response.status_code < 400:
+                logger.info(f"✅ URL validated: {url}")
+                return True
+            else:
+                logger.warning(f"⚠️ URL returned {response.status_code}: {url}")
+                return False
+
+        except requests.exceptions.Timeout:
+            logger.warning(f"⏰ URL validation timeout: {url}")
+            return False
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"❌ URL validation failed: {url} - {e}")
+            return False
+        except Exception as e:
+            logger.error(f"❌ Unexpected error validating URL: {url} - {e}")
+            return False
+
     def clean_yaml_frontmatter(self, content):
         """Clean and fix common YAML frontmatter issues"""
         lines = content.split('\n')
@@ -57,7 +88,6 @@ class SmartBlueskyPoster:
         if not (lines[0].strip() == '---' and '---' in lines[1:]):
             return content
 
-        # Find frontmatter boundaries
         try:
             end_idx = lines[1:].index('---') + 1
             frontmatter_lines = lines[1:end_idx]
@@ -65,22 +95,18 @@ class SmartBlueskyPoster:
         except ValueError:
             return content
 
-        # Clean frontmatter lines
         cleaned_lines = []
         for line in frontmatter_lines:
-            # Fix title quotes
             if line.strip().startswith('title:'):
                 title_content = line.split('title:', 1)[1].strip()
                 title_content = title_content.strip('\'"')
                 title_content = title_content.replace('"', '\\"')
                 cleaned_lines.append(f'title: "{title_content}"')
-            # Skip recovery data mixed in frontmatter
             elif 'recovered:' in line or 'recovery_date:' in line:
                 continue
             else:
                 cleaned_lines.append(line)
 
-        # Reconstruct content
         return '---\n' + '\n'.join(cleaned_lines) + '\n---\n' + '\n'.join(body_lines)
 
     def parse_post_safely(self, file_path):
@@ -89,10 +115,8 @@ class SmartBlueskyPoster:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
 
-            # Clean the content first
             content = self.clean_yaml_frontmatter(content)
 
-            # Split frontmatter and body
             if not content.startswith('---'):
                 logger.warning(f"No frontmatter found in {file_path}")
                 return None
@@ -105,7 +129,6 @@ class SmartBlueskyPoster:
             frontmatter_text = parts[1]
             body = parts[2].strip()
 
-            # Parse YAML with safe loader
             try:
                 frontmatter = yaml.safe_load(frontmatter_text)
                 if not frontmatter:
@@ -125,36 +148,97 @@ class SmartBlueskyPoster:
             return None
 
     def load_posted_tracking(self):
-        """Load list of already posted items"""
-        posted_file = self.base_path / '_data' / 'bluesky_posted.yml'
-        if posted_file.exists():
+        """Load comprehensive posted tracking with timestamps"""
+        if self.posted_file.exists():
             try:
-                with open(posted_file, 'r') as f:
-                    return yaml.safe_load(f) or []
+                with open(self.posted_file, 'r') as f:
+                    data = yaml.safe_load(f) or {}
+
+                # Handle both old format (list) and new format (dict)
+                if isinstance(data, list):
+                    # Convert old format to new format
+                    return {item: datetime.now(timezone.utc).isoformat() for item in data}
+                elif isinstance(data, dict):
+                    return data.get('posted_items', {})
+                else:
+                    return {}
+            except Exception as e:
+                logger.error(f"Error loading posted tracking: {e}")
+                return {}
+        return {}
+
+    def save_posted_tracking(self, posted_items):
+        """Save comprehensive posted tracking"""
+        self.posted_file.parent.mkdir(exist_ok=True)
+
+        # Clean old entries (keep last 30 days)
+        cutoff_date = datetime.now(timezone.utc) - timedelta(days=30)
+        cleaned_items = {}
+
+        for filename, posted_date in posted_items.items():
+            try:
+                post_datetime = datetime.fromisoformat(posted_date.replace('Z', '+00:00'))
+                if post_datetime >= cutoff_date:
+                    cleaned_items[filename] = posted_date
             except:
+                # Keep items with invalid dates for safety
+                cleaned_items[filename] = posted_date
+
+        data = {
+            'posted_items': cleaned_items,
+            'last_updated': datetime.now(timezone.utc).isoformat(),
+            'total_posted': len(cleaned_items)
+        }
+
+        with open(self.posted_file, 'w') as f:
+            yaml.dump(data, f, default_flow_style=False)
+
+    def load_queue(self):
+        """Load posting queue"""
+        if self.queue_file.exists():
+            try:
+                with open(self.queue_file, 'r') as f:
+                    return yaml.safe_load(f) or []
+            except Exception as e:
+                logger.error(f"Error loading queue: {e}")
                 return []
         return []
 
-    def save_posted_tracking(self, posted_items):
-        """Save updated posted tracking"""
-        posted_file = self.base_path / '_data' / 'bluesky_posted.yml'
-        posted_file.parent.mkdir(exist_ok=True)
+    def save_queue(self, queue):
+        """Save posting queue"""
+        self.queue_file.parent.mkdir(exist_ok=True)
 
-        # Keep only last 300 items for high-frequency posting
-        posted_items = posted_items[-300:]
+        # Clean queue - remove old entries (older than 48 hours)
+        cutoff_time = datetime.now(timezone.utc) - timedelta(hours=48)
+        cleaned_queue = []
 
-        with open(posted_file, 'w') as f:
-            yaml.dump(posted_items, f, default_flow_style=False)
+        for item in queue:
+            try:
+                queue_time = datetime.fromisoformat(item['queued_at'].replace('Z', '+00:00'))
+                if queue_time >= cutoff_time:
+                    cleaned_queue.append(item)
+            except:
+                # Keep items with invalid dates for safety
+                cleaned_queue.append(item)
+
+        # Sort by priority (temperature desc, then date desc)
+        cleaned_queue.sort(key=lambda x: (x['temperature'], x['file_date']), reverse=True)
+
+        # Keep only top 50 items to prevent queue bloat
+        cleaned_queue = cleaned_queue[:50]
+
+        with open(self.queue_file, 'w') as f:
+            yaml.dump(cleaned_queue, f, default_flow_style=False)
 
     def generate_post_url(self, filename):
         """Generate Jekyll post URL from filename"""
         if not filename.endswith('.md'):
-            return "https://thegossroom.com"
+            return self.site_base_url
 
         name_without_ext = filename[:-3]
 
         if len(name_without_ext) < 10:
-            return "https://thegossroom.com"
+            return self.site_base_url
 
         date_part = name_without_ext[:10]
         slug_part = name_without_ext[11:]
@@ -168,28 +252,40 @@ class SmartBlueskyPoster:
             if not clean_slug:
                 clean_slug = "post"
 
-            return f"https://thegossroom.com/{year}/{month}/{day}/{clean_slug}/"
+            return f"{self.site_base_url}/{year}/{month}/{day}/{clean_slug}/"
         except:
-            return "https://thegossroom.com"
+            return self.site_base_url
 
-    def get_unposted_articles(self):
-        """Get articles that haven't been posted to Bluesky yet"""
+    def get_file_creation_time(self, file_path):
+        """Get file creation/modification time"""
+        try:
+            stat = file_path.stat()
+            return datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc)
+        except:
+            return datetime.now(timezone.utc)
+
+    def build_posting_queue(self):
+        """Build and update the posting queue with all eligible articles"""
         posted_items = self.load_posted_tracking()
+        current_queue = self.load_queue()
         posts_dir = self.base_path / '_posts'
-        unposted = []
+
+        # Get currently queued filenames
+        queued_files = {item['file_name'] for item in current_queue}
+
+        new_queue_items = []
 
         if not posts_dir.exists():
             logger.warning("_posts directory not found")
-            return unposted
+            return current_queue
 
         for post_file in posts_dir.glob('*.md'):
-            # Skip recovered files that might be corrupted
-            if 'recovered' in post_file.name:
-                logger.info(f"⚠️ Skipping recovered file: {post_file.name}")
+            # Skip if already processed
+            if post_file.name in posted_items or post_file.name in queued_files:
                 continue
 
-            # Skip if already posted
-            if post_file.name in posted_items:
+            # Skip recovered files
+            if 'recovered' in post_file.name:
                 continue
 
             post_data = self.parse_post_safely(post_file)
@@ -198,36 +294,73 @@ class SmartBlueskyPoster:
 
             frontmatter = post_data['frontmatter']
 
-            # Skip if already marked as posted in frontmatter
+            # Skip if already marked as posted
             if frontmatter.get('bluesky_posted'):
                 continue
 
             # Skip if no title
             if not frontmatter.get('title'):
-                logger.warning(f"No title found in {post_file}")
                 continue
 
-            # Calculate temperature (prefer temperature over drama_score)
+            # Calculate temperature
             temperature = frontmatter.get('temperature', frontmatter.get('drama_score', 0))
 
-            # Only post hot content (temperature >= 25)
+            # Only queue hot content (temperature >= 25)
             if temperature < 25:
                 continue
 
-            unposted.append({
-                'file_path': post_file,
+            # Generate and validate URL
+            url = self.generate_post_url(post_file.name)
+
+            # Skip if URL validation fails (but don't block queue building)
+            url_valid = self.validate_url(url, timeout=5)
+            if not url_valid:
+                logger.warning(f"⚠️ Skipping {post_file.name} - URL validation failed")
+                continue
+
+            file_date = self.get_file_creation_time(post_file)
+
+            queue_item = {
+                'file_path': str(post_file),
                 'file_name': post_file.name,
                 'title': frontmatter['title'],
                 'temperature': temperature,
-                'date': frontmatter.get('date'),
+                'file_date': file_date.isoformat(),
                 'primary_celebrity': frontmatter.get('primary_celebrity', ''),
                 'tags': frontmatter.get('tags', []),
-                'url': self.generate_post_url(post_file.name)
-            })
+                'url': url,
+                'queued_at': datetime.now(timezone.utc).isoformat(),
+                'url_validated': url_valid
+            }
 
-        # Sort by temperature (hottest first)
-        unposted.sort(key=lambda x: x['temperature'], reverse=True)
-        return unposted
+            new_queue_items.append(queue_item)
+
+        # Combine with existing queue
+        updated_queue = current_queue + new_queue_items
+
+        # Save updated queue
+        self.save_queue(updated_queue)
+
+        logger.info(f"📋 Queue updated: {len(new_queue_items)} new items, {len(updated_queue)} total")
+        return updated_queue
+
+    def get_next_post_from_queue(self):
+        """Get the next highest priority post from queue"""
+        queue = self.load_queue()
+
+        if not queue:
+            logger.info("📭 Queue is empty")
+            return None
+
+        # Queue is already sorted by priority
+        next_post = queue[0]
+
+        # Remove from queue
+        remaining_queue = queue[1:]
+        self.save_queue(remaining_queue)
+
+        logger.info(f"📤 Next post from queue: {next_post['title'][:50]}... (Temp: {next_post['temperature']}°)")
+        return next_post
 
     def create_facets_for_urls(self, text):
         """Create facets for clickable URLs in Bluesky posts"""
@@ -290,18 +423,15 @@ class SmartBlueskyPoster:
                 if clean_tag and len(clean_tag) > 2:
                     hashtags.append(f"#{clean_tag}")
 
-            # Add hashtags if they fit
             if hashtags:
                 hashtag_text = " ".join(hashtags)
                 if len(post_text + hashtag_text) <= 300:
                     post_text += hashtag_text
                 else:
-                    # Add default tags
                     post_text += "#GossipRoom #CelebrityNews"
         else:
             post_text += "#GossipRoom #CelebrityNews"
 
-        # Ensure we're under 300 characters
         return post_text[:300]
 
     def post_to_bluesky(self, text):
@@ -309,7 +439,6 @@ class SmartBlueskyPoster:
         if not self.session:
             return False
 
-        # Create facets for clickable URLs
         facets = self.create_facets_for_urls(text)
 
         post_data = {
@@ -322,7 +451,6 @@ class SmartBlueskyPoster:
             }
         }
 
-        # Add facets if URLs found
         if facets:
             post_data["record"]["facets"] = facets
 
@@ -346,68 +474,77 @@ class SmartBlueskyPoster:
             logger.error(f"❌ Bluesky post error: {e}")
             return False
 
-    def mark_as_posted(self, file_path):
+    def mark_as_posted(self, article):
         """Mark an article as posted to Bluesky"""
         try:
+            # Update posted tracking
+            posted_items = self.load_posted_tracking()
+            posted_items[article['file_name']] = datetime.now(timezone.utc).isoformat()
+            self.save_posted_tracking(posted_items)
+
+            # Update frontmatter
+            file_path = Path(article['file_path'])
             post_data = self.parse_post_safely(file_path)
             if not post_data:
                 return False
 
-            # Add bluesky_posted flag
             post_data['frontmatter']['bluesky_posted'] = True
             post_data['frontmatter']['bluesky_posted_date'] = datetime.now(timezone.utc).isoformat()
 
-            # Reconstruct file content
             frontmatter_text = yaml.dump(post_data['frontmatter'], default_flow_style=False)
             new_content = f"---\n{frontmatter_text}---\n{post_data['body']}"
 
-            # Write back to file
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(new_content)
 
             return True
 
         except Exception as e:
-            logger.error(f"Error marking {file_path} as posted: {e}")
+            logger.error(f"Error marking {article['file_name']} as posted: {e}")
             return False
 
     def run(self):
-        """Main posting process"""
-        logger.info("🐦 Starting Smart Bluesky Poster...")
+        """Main posting process with queue management"""
+        logger.info("🐦 Starting Smart Bluesky Poster with Queue System...")
 
         if not self.authenticate():
             return
 
-        # Get unposted articles
-        unposted = self.get_unposted_articles()
+        # Build/update the posting queue
+        logger.info("📋 Building posting queue...")
+        self.build_posting_queue()
 
-        if not unposted:
-            logger.info("❄️ No unposted hot articles found")
+        # Get next post from queue
+        article = self.get_next_post_from_queue()
+
+        if not article:
+            logger.info("❄️ No posts in queue")
             return
 
-        # Post the hottest article
-        article = unposted[0]
+        # Double-check URL before posting
+        if not self.validate_url(article['url']):
+            logger.error(f"❌ URL validation failed for {article['title']}, skipping")
+            return
+
+        # Create and send post
         post_text = self.create_bluesky_post(article)
 
-        logger.info(f"🔥 Posting: {article['title']} (Temp: {article['temperature']}°)")
+        logger.info(f"🔥 Posting: {article['title'][:50]}... (Temp: {article['temperature']}°)")
         logger.info(f"📝 Post text: {post_text}")
 
-        # Send to Bluesky
         if self.post_to_bluesky(post_text):
-            # Mark as posted in tracking file
-            posted_items = self.load_posted_tracking()
-            posted_items.append(article['file_name'])
-            self.save_posted_tracking(posted_items)
-
-            # Mark as posted in frontmatter
-            if self.mark_as_posted(article['file_path']):
+            if self.mark_as_posted(article):
                 logger.info("✅ Marked article as posted")
             else:
                 logger.warning("⚠️ Failed to mark article as posted")
 
             logger.info(f"🎉 Successfully posted: {article['title'][:50]}...")
+
+            # Set GitHub Actions output
+            print(f"::set-output name=posts_made::true")
         else:
             logger.error("❌ Failed to post to Bluesky")
+            print(f"::set-output name=posts_made::false")
 
 if __name__ == "__main__":
     poster = SmartBlueskyPoster()
