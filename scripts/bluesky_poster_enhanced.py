@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Ultra-Simple Bluesky Poster - Tracking File Only
+RSS-Based Bluesky Poster - Zero File Dependencies
 """
 
 import requests
@@ -10,11 +10,13 @@ import re
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
+import xml.etree.ElementTree as ET
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s:%(name)s:%(message)s')
 logger = logging.getLogger(__name__)
 
-class SimpleBlueskyPoster:
+class RSSBlueskyPoster:
     def __init__(self):
         self.base_url = "https://bsky.social/xrpc"
         self.handle = os.getenv('BLUESKY_HANDLE')
@@ -22,8 +24,8 @@ class SimpleBlueskyPoster:
         self.session = None
         self.site_base_url = "https://thegossroom.com"
 
-        # ONLY tracking file - no frontmatter complexity
-        self.posted_file = Path('_data/bluesky_posted.yml')
+        # RSS feed for duplicate checking
+        self.rss_url = "https://bsky.app/profile/did:plc:gx7eych32oavyzd2sydcjqki/rss"
 
     def authenticate(self):
         """Authenticate with Bluesky"""
@@ -43,30 +45,31 @@ class SimpleBlueskyPoster:
             logger.error(f"❌ Auth error: {e}")
             return False
 
-    def load_posted_items(self):
-        """Load simple tracking list"""
-        if self.posted_file.exists():
-            try:
-                with open(self.posted_file, 'r') as f:
-                    data = yaml.safe_load(f) or []
-                return set(data) if isinstance(data, list) else set()
-            except:
-                return set()
-        return set()
-
-    def save_posted_items(self, posted_set):
-        """Save simple tracking list"""
-        self.posted_file.parent.mkdir(exist_ok=True)
-        posted_list = sorted(list(posted_set))[-400:]  # Keep last 400
-
+    def get_posted_urls_from_rss(self):
+        """Get already posted URLs from RSS feed"""
         try:
-            with open(self.posted_file, 'w') as f:
-                yaml.dump(posted_list, f, default_flow_style=False)
-            logger.info(f"💾 Saved {len(posted_list)} tracked items")
-            return True
+            response = requests.get(self.rss_url, timeout=15)
+            if response.status_code != 200:
+                logger.warning("⚠️ RSS feed unavailable, proceeding without duplicate check")
+                return set()
+
+            root = ET.fromstring(response.content)
+            posted_urls = set()
+
+            # Extract URLs from RSS descriptions
+            for item in root.findall('.//item'):
+                description = item.find('description')
+                if description is not None and description.text:
+                    # Look for thegossroom.com URLs in the description
+                    urls = re.findall(r'https://thegossroom\.com/[^\s]+', description.text)
+                    posted_urls.update(urls)
+
+            logger.info(f"📡 Found {len(posted_urls)} already posted URLs from RSS")
+            return posted_urls
+
         except Exception as e:
-            logger.error(f"❌ Save failed: {e}")
-            return False
+            logger.warning(f"⚠️ RSS check failed: {e}, proceeding without duplicate check")
+            return set()
 
     def validate_url(self, url):
         """Quick URL check"""
@@ -112,8 +115,8 @@ class SimpleBlueskyPoster:
             return None
 
     def get_best_unposted(self):
-        """Get the hottest unposted article"""
-        posted = self.load_posted_items()
+        """Get the hottest unposted article using RSS check"""
+        posted_urls = self.get_posted_urls_from_rss()
         posts_dir = Path('_posts')
 
         if not posts_dir.exists():
@@ -122,12 +125,18 @@ class SimpleBlueskyPoster:
         candidates = []
 
         for post_file in posts_dir.glob('*.md'):
-            # Skip if already posted
-            if post_file.name in posted:
-                continue
-
             # Skip recovered files
             if 'recovered' in post_file.name:
+                continue
+
+            # Generate URL first
+            url = self.generate_url(post_file.name)
+            if not url:
+                continue
+
+            # RSS DUPLICATE CHECK - This is the magic!
+            if url in posted_urls:
+                logger.debug(f"🛡️ RSS BLOCKED: {post_file.name}")
                 continue
 
             # Parse frontmatter
@@ -140,9 +149,8 @@ class SimpleBlueskyPoster:
             if temp < 25:
                 continue
 
-            # Generate and validate URL
-            url = self.generate_url(post_file.name)
-            if not url or not self.validate_url(url):
+            # Validate URL
+            if not self.validate_url(url):
                 logger.warning(f"⚠️ Bad URL: {post_file.name}")
                 continue
 
@@ -159,7 +167,9 @@ class SimpleBlueskyPoster:
             return None
 
         # Return hottest
-        return max(candidates, key=lambda x: x['temperature'])
+        best = max(candidates, key=lambda x: x['temperature'])
+        logger.info(f"🔥 Selected: {best['title'][:50]}... (Temp: {best['temperature']}°)")
+        return best
 
     def create_post_text(self, article):
         """Create Bluesky post"""
@@ -238,7 +248,7 @@ class SimpleBlueskyPoster:
 
     def run(self):
         """Main process"""
-        logger.info("🚀 Simple Bluesky Poster starting...")
+        logger.info("📡 RSS-Based Bluesky Poster starting...")
 
         if not self.authenticate():
             print("posts_made=false")
@@ -246,30 +256,21 @@ class SimpleBlueskyPoster:
 
         article = self.get_best_unposted()
         if not article:
-            logger.info("❄️ No unposted articles")
+            logger.info("❄️ No unposted articles (RSS filtered)")
             print("posts_made=false")
             return
 
-        # Create post
+        # Create and post
         post_text = self.create_post_text(article)
-        logger.info(f"🔥 Posting: {article['title'][:50]}... (Temp: {article['temperature']}°)")
+        logger.info(f"🚀 Posting: {article['title'][:50]}...")
 
-        # Post to Bluesky
         if self.post_to_bluesky(post_text):
-            # Mark as posted
-            posted = self.load_posted_items()
-            posted.add(article['filename'])
-
-            if self.save_posted_items(posted):
-                logger.info(f"✅ SUCCESS: {article['filename']}")
-                print("posts_made=true")
-            else:
-                logger.error("🚨 Posted but tracking failed!")
-                print("posts_made=false")
+            logger.info(f"✅ SUCCESS: Posted {article['filename']}")
+            print("posts_made=true")
         else:
             logger.error("❌ Post failed")
             print("posts_made=false")
 
 if __name__ == "__main__":
-    poster = SimpleBlueskyPoster()
+    poster = RSSBlueskyPoster()
     poster.run()
