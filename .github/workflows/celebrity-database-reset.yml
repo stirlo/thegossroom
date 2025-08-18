@@ -1,0 +1,465 @@
+name: Celebrity Database Reset & Reprocessing
+
+on:
+  workflow_dispatch:
+    inputs:
+      reset_score:
+        description: 'Starting drama score for all celebrities'
+        required: false
+        default: '25'
+        type: string
+      days_to_process:
+        description: 'Days of posts to reprocess'
+        required: false
+        default: '60'
+        type: string
+      create_backup:
+        description: 'Create backup before reset'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  reset-celebrity-database:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml requests feedparser python-dateutil
+
+    - name: 🎭 Create Celebrity Reset Script
+      run: |
+        cat > celebrity_reset.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        Celebrity Database Reset & Reprocessing Tool
+        Resets all celebrity scores and reprocesses existing posts for accurate temperatures
+        """
+
+        import yaml
+        import json
+        import re
+        import os
+        import sys
+        from datetime import datetime, timedelta
+        from pathlib import Path
+        from collections import defaultdict, Counter
+        import logging
+
+        logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+        logger = logging.getLogger(__name__)
+
+        class CelebrityDatabaseReset:
+            def __init__(self, reset_score=25, days_to_process=60):
+                self.base_path = Path('.')
+                self.celebrities = {}
+                self.celebrity_mentions = defaultdict(int)
+                self.celebrity_article_mentions = defaultdict(set)
+
+                # Configuration from inputs
+                self.RESET_DRAMA_SCORE = int(reset_score)
+                self.DAYS_TO_PROCESS = int(days_to_process)
+                self.COLD_RANGE_MAX = 30
+
+                # Scoring system
+                self.SCORING_CONFIG = {
+                    'base_article_points': 1.0,
+                    'headline_bonus': 0.5,
+                    'explosive_keywords_bonus': 2.0,
+                    'starting_drama_score': self.RESET_DRAMA_SCORE
+                }
+
+            def load_current_celebrities(self):
+                """Load current celebrity database"""
+                try:
+                    celebrities_file = self.base_path / '_data' / 'celebrities.yml'
+                    if celebrities_file.exists():
+                        with open(celebrities_file, 'r', encoding='utf-8') as f:
+                            return yaml.safe_load(f) or {}
+                    return {}
+                except Exception as e:
+                    logger.error(f"Error loading celebrities: {e}")
+                    return {}
+
+            def clean_corrupted_entries(self, celebrities):
+                """Remove corrupted entries like the zuckerberg/bella_hadid issue"""
+                cleaned = {}
+                corrupted_count = 0
+
+                for celeb_key, celeb_data in celebrities.items():
+                    if isinstance(celeb_data, dict):
+                        # Check for corrupted data
+                        has_null_values = any(v is None for k, v in celeb_data.items() if k not in ['memorial', 'memorial_date', 'memorial_expiry'])
+                        has_weird_keys = any(k for k in celeb_data.keys() if k in ['bella_hadid', 'kim_kardashian', 'taylor_swift'] and k != celeb_key)
+
+                        if has_null_values or has_weird_keys:
+                            logger.warning(f"🗑️ Removing corrupted entry: {celeb_key}")
+                            corrupted_count += 1
+                            continue
+
+                        cleaned[celeb_key] = celeb_data
+                    else:
+                        logger.warning(f"🗑️ Removing invalid entry: {celeb_key}")
+                        corrupted_count += 1
+
+                if corrupted_count > 0:
+                    logger.info(f"🧹 Cleaned {corrupted_count} corrupted entries")
+
+                return cleaned
+
+            def reset_celebrity_scores(self, celebrities):
+                """Reset all celebrity drama scores to starting value"""
+                reset_count = 0
+                now = datetime.now()
+
+                for celeb_key, celeb_data in celebrities.items():
+                    if isinstance(celeb_data, dict):
+                        old_score = celeb_data.get('drama_score', 50)
+
+                        # Reset to starting score
+                        celeb_data['drama_score'] = self.RESET_DRAMA_SCORE
+                        celeb_data['last_temperature_update'] = now.strftime('%Y-%m-%d %H:%M:%S')
+                        celeb_data['status'] = self.calculate_celebrity_status(self.RESET_DRAMA_SCORE)
+                        celeb_data['temperature_change'] = 0
+
+                        # Preserve important fields
+                        if 'memorial' not in celeb_data:
+                            celeb_data['memorial'] = False
+                        if 'discovery_date' not in celeb_data:
+                            celeb_data['discovery_date'] = '2025-08-04'
+                        if 'promotion_date' not in celeb_data:
+                            celeb_data['promotion_date'] = '2025-08-04'
+                        if 'category' not in celeb_data:
+                            celeb_data['category'] = 'unknown'
+
+                        reset_count += 1
+                        logger.debug(f"Reset {celeb_key}: {old_score} -> {self.RESET_DRAMA_SCORE}")
+
+                logger.info(f"🔄 Reset {reset_count} celebrity scores to {self.RESET_DRAMA_SCORE}")
+                return celebrities
+
+            def extract_celebrity_mentions_from_post(self, post_content, celebrities):
+                """Extract celebrity mentions from a single post"""
+                try:
+                    if not post_content.startswith('---'):
+                        return {}
+
+                    parts = post_content.split('---', 2)
+                    if len(parts) < 3:
+                        return {}
+
+                    frontmatter = yaml.safe_load(parts[1])
+                    if not frontmatter:
+                        return {}
+
+                    # Get title and content
+                    title = frontmatter.get('title', '')
+                    content = parts[2] if len(parts) > 2 else ''
+                    full_text = f"{title} {content}".lower()
+
+                    mentions = {}
+
+                    # Check each celebrity
+                    for celeb_key, celeb_data in celebrities.items():
+                        if not isinstance(celeb_data, dict):
+                            continue
+
+                        # Create search terms from celebrity key
+                        name_parts = celeb_key.replace('_', ' ').split()
+                        search_terms = [celeb_key.replace('_', ' ')]
+
+                        # Add individual name parts for better matching
+                        if len(name_parts) > 1:
+                            search_terms.extend(name_parts)
+
+                        for term in search_terms:
+                            term_lower = term.lower()
+
+                            # Count mentions (whole word matching)
+                            import re
+                            pattern = r'\b' + re.escape(term_lower) + r'\b'
+                            text_matches = len(re.findall(pattern, full_text))
+                            title_matches = len(re.findall(pattern, title.lower()))
+
+                            if text_matches > 0 or title_matches > 0:
+                                mentions[celeb_key] = {
+                                    'text_mentions': text_matches,
+                                    'title_mentions': title_matches,
+                                    'total_mentions': text_matches + title_matches,
+                                    'in_headline': title_matches > 0
+                                }
+                                break
+
+                    return mentions
+
+                except Exception as e:
+                    logger.debug(f"Error parsing post: {e}")
+                    return {}
+
+            def calculate_drama_boost(self, mentions, title, content):
+                """Calculate drama boost for this article"""
+                full_text = f"{title} {content}".lower()
+
+                total_boost = 0
+
+                for celeb_key, mention_data in mentions.items():
+                    boost = self.SCORING_CONFIG['base_article_points']
+
+                    # Headline bonus
+                    if mention_data.get('in_headline', False):
+                        boost += self.SCORING_CONFIG['headline_bonus']
+
+                    # Explosive keywords bonus
+                    explosive_keywords = [
+                        'scandal', 'affair', 'cheating', 'divorce', 'breakup', 'fight', 
+                        'feud', 'drama', 'controversy', 'arrest', 'lawsuit', 'explosive',
+                        'bombshell', 'shocking', 'secret', 'reveals', 'caught', 'exposed'
+                    ]
+
+                    if any(keyword in full_text for keyword in explosive_keywords):
+                        boost += self.SCORING_CONFIG['explosive_keywords_bonus']
+
+                    total_boost += boost
+
+                return total_boost / len(mentions) if mentions else 0
+
+            def reprocess_existing_posts(self, celebrities):
+                """Reprocess all existing posts to calculate accurate celebrity scores"""
+                posts_dir = self.base_path / '_posts'
+                if not posts_dir.exists():
+                    logger.warning("No _posts directory found")
+                    return celebrities
+
+                processed_count = 0
+                cutoff_date = datetime.now() - timedelta(days=self.DAYS_TO_PROCESS)
+
+                for post_file in sorted(posts_dir.glob('*.md'), reverse=True):
+                    try:
+                        # Check if post is recent enough
+                        if post_file.name.startswith('20'):
+                            file_date = datetime.strptime(post_file.name[:10], '%Y-%m-%d')
+                            if file_date < cutoff_date:
+                                continue
+
+                        # Read post content
+                        with open(post_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        # Extract mentions
+                        mentions = self.extract_celebrity_mentions_from_post(content, celebrities)
+
+                        if mentions:
+                            # Parse frontmatter for title
+                            parts = content.split('---', 2)
+                            frontmatter = yaml.safe_load(parts[1])
+                            title = frontmatter.get('title', '')
+                            post_content = parts[2] if len(parts) > 2 else ''
+
+                            # Calculate boost
+                            boost = self.calculate_drama_boost(mentions, title, post_content)
+
+                            # Apply boost to each mentioned celebrity
+                            for celeb_key in mentions.keys():
+                                if celeb_key in celebrities:
+                                    current_score = celebrities[celeb_key].get('drama_score', self.RESET_DRAMA_SCORE)
+                                    new_score = min(100, current_score + boost)
+                                    celebrities[celeb_key]['drama_score'] = round(new_score, 1)
+
+                                    # Update status
+                                    celebrities[celeb_key]['status'] = self.calculate_celebrity_status(new_score)
+
+                            processed_count += 1
+                            if processed_count % 25 == 0:
+                                logger.info(f"📊 Processed {processed_count} posts...")
+
+                    except Exception as e:
+                        logger.debug(f"Error processing {post_file.name}: {e}")
+                        continue
+
+                logger.info(f"📈 Reprocessed {processed_count} posts to calculate celebrity scores")
+                return celebrities
+
+            def calculate_celebrity_status(self, drama_score):
+                """Calculate celebrity status based on drama score"""
+                if drama_score >= 80:
+                    return 'explosive'
+                elif drama_score >= 60:
+                    return 'hot'
+                elif drama_score >= 40:
+                    return 'warm'
+                elif drama_score >= 20:
+                    return 'mild'
+                else:
+                    return 'cooling'
+
+            def save_reset_celebrities(self, celebrities):
+                """Save the reset and reprocessed celebrities"""
+                try:
+                    celebrities_dir = self.base_path / '_data'
+                    celebrities_dir.mkdir(exist_ok=True)
+
+                    # Create backup first
+                    celebrities_file = celebrities_dir / 'celebrities.yml'
+                    if celebrities_file.exists() and os.getenv('CREATE_BACKUP', 'true').lower() == 'true':
+                        backup_file = celebrities_dir / f'celebrities_backup_reset_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yml'
+                        import shutil
+                        shutil.copy2(celebrities_file, backup_file)
+                        logger.info(f"📋 Created backup: {backup_file.name}")
+
+                    # Save reset celebrities
+                    with open(celebrities_file, 'w', encoding='utf-8') as f:
+                        yaml.dump(celebrities, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
+
+                    logger.info(f"💾 Saved reset celebrities database with {len(celebrities)} entries")
+
+                except Exception as e:
+                    logger.error(f"❌ Error saving celebrities: {e}")
+
+            def generate_report(self, celebrities):
+                """Generate a report of the reset results"""
+                total_celebs = len(celebrities)
+
+                # Count by status
+                status_counts = Counter()
+                score_ranges = {'0-20': 0, '21-40': 0, '41-60': 0, '61-80': 0, '81-100': 0}
+
+                for celeb_data in celebrities.values():
+                    if isinstance(celeb_data, dict):
+                        status = celeb_data.get('status', 'unknown')
+                        score = celeb_data.get('drama_score', 0)
+
+                        status_counts[status] += 1
+
+                        if score <= 20:
+                            score_ranges['0-20'] += 1
+                        elif score <= 40:
+                            score_ranges['21-40'] += 1
+                        elif score <= 60:
+                            score_ranges['41-60'] += 1
+                        elif score <= 80:
+                            score_ranges['61-80'] += 1
+                        else:
+                            score_ranges['81-100'] += 1
+
+                # Top 20 hottest celebrities
+                top_celebs = sorted(
+                    [(k, v.get('drama_score', 0)) for k, v in celebrities.items() if isinstance(v, dict)],
+                    key=lambda x: x[1], reverse=True
+                )[:20]
+
+                print("\n" + "="*60)
+                print("🎭 CELEBRITY DATABASE RESET REPORT")
+                print("="*60)
+                print(f"📊 Total Celebrities: {total_celebs}")
+                print(f"📈 Status Distribution: {dict(status_counts)}")
+                print(f"🌡️ Score Ranges: {score_ranges}")
+                print(f"🔄 Reset Score: {self.RESET_DRAMA_SCORE}")
+                print(f"📅 Days Processed: {self.DAYS_TO_PROCESS}")
+                print("\n🔥 TOP 20 HOTTEST CELEBRITIES:")
+                for i, (celeb, score) in enumerate(top_celebs, 1):
+                    status = celebrities[celeb].get('status', 'unknown')
+                    print(f"  {i:2d}. {celeb.replace('_', ' ').title()}: {score:.1f}° ({status})")
+                print("="*60)
+
+            def run(self):
+                """Execute the reset and reprocessing"""
+                print("🔄 Starting Celebrity Database Reset & Reprocessing...")
+
+                # 1. Load current celebrities
+                print("📂 Loading current celebrity database...")
+                celebrities = self.load_current_celebrities()
+                print(f"📊 Loaded {len(celebrities)} celebrities")
+
+                # 2. Clean corrupted entries
+                print("🧹 Cleaning corrupted entries...")
+                celebrities = self.clean_corrupted_entries(celebrities)
+
+                # 3. Reset all scores
+                print("🔄 Resetting all celebrity scores...")
+                celebrities = self.reset_celebrity_scores(celebrities)
+
+                # 4. Reprocess existing posts
+                print("📈 Reprocessing existing posts...")
+                celebrities = self.reprocess_existing_posts(celebrities)
+
+                # 5. Save reset database
+                print("💾 Saving reset celebrity database...")
+                self.save_reset_celebrities(celebrities)
+
+                # 6. Generate report
+                self.generate_report(celebrities)
+
+                print("✅ Celebrity Database Reset Complete!")
+                print("🎯 Now run the gossip scraper to continue building accurate scores!")
+
+        if __name__ == "__main__":
+            reset_score = os.getenv('RESET_SCORE', '25')
+            days_to_process = os.getenv('DAYS_TO_PROCESS', '60')
+
+            reset_tool = CelebrityDatabaseReset(reset_score, days_to_process)
+            reset_tool.run()
+        EOF
+
+    - name: 🎭 Run Celebrity Database Reset
+      env:
+        RESET_SCORE: ${{ inputs.reset_score }}
+        DAYS_TO_PROCESS: ${{ inputs.days_to_process }}
+        CREATE_BACKUP: ${{ inputs.create_backup }}
+      run: |
+        python celebrity_reset.py
+
+    - name: 📊 Show Git Status
+      run: |
+        echo "📋 Files changed:"
+        git status --porcelain
+
+        echo -e "\n📈 Celebrity database changes:"
+        if [ -f "_data/celebrities.yml" ]; then
+          echo "✅ celebrities.yml updated"
+          wc -l _data/celebrities.yml
+        fi
+
+        if ls _data/celebrities_backup_reset_*.yml 1> /dev/null 2>&1; then
+          echo "📋 Backup files created:"
+          ls -la _data/celebrities_backup_reset_*.yml
+        fi
+
+    - name: 🚀 Commit Changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Celebrity Reset Action"
+
+        git add _data/celebrities.yml
+
+        if ls _data/celebrities_backup_reset_*.yml 1> /dev/null 2>&1; then
+          git add _data/celebrities_backup_reset_*.yml
+        fi
+
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🎭 Celebrity Database Reset & Reprocessing
+
+          - Reset all celebrity scores to ${{ inputs.reset_score }}°
+          - Reprocessed last ${{ inputs.days_to_process }} days of posts
+          - Cleaned corrupted entries
+          - Updated celebrity statuses based on actual mentions
+
+          Automated by Celebrity Reset Action"
+
+          git push
+          echo "✅ Changes committed and pushed!"
+        fi
