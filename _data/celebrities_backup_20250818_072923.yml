@@ -1,23 +1,9 @@
-and_encourages:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:29:23'
-  memorial: false
-  monthly_rank: 0
-  name: And Encourages
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 don_jr:
   category: entertainment
   discovery_date: '2025-08-18'
   drama_score: 6.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: cooling
   temperature_change: 6.0
@@ -27,7 +13,6 @@ donald_trump:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 4222.0
@@ -37,7 +22,6 @@ ed_kelce:
   drama_score: 46.7
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: warm
   temperature_change: 46.7
@@ -47,30 +31,15 @@ elon_musk:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 217.0
-if_you_still_work:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:29:23'
-  memorial: false
-  monthly_rank: 0
-  name: If You Still Work
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 ivanka_trump:
   category: entertainment
   discovery_date: '2025-08-18'
   drama_score: 24.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: mild
   temperature_change: 24.0
@@ -80,7 +49,6 @@ jason_kelce:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 444.0
@@ -90,7 +58,6 @@ jeff_bezos:
   drama_score: 41.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: warm
   temperature_change: 41.0
@@ -100,7 +67,6 @@ joe_biden:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 391.0
@@ -110,7 +76,6 @@ kamala_harris:
   drama_score: 62.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: hot
   temperature_change: 62.0
@@ -120,7 +85,6 @@ kanye_west:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 607.3
@@ -130,7 +94,6 @@ kim_kardashian:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 449.0
@@ -140,30 +103,15 @@ lil_tay:
   drama_score: 17.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: cooling
   temperature_change: 17.0
-lil_tay_claims:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:29:23'
-  memorial: false
-  monthly_rank: 0
-  name: Lil Tay Claims
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 mark_zuckerberg:
   category: entertainment
   discovery_date: '2025-08-18'
   drama_score: 23.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: mild
   temperature_change: 23.0
@@ -173,35 +121,15 @@ melania_trump:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 131.0
-prince_william:
-  aliases:
-  - prince william
-  - william prince of wales
-  category: royal
-  disambiguation: husband of Kate Middleton
-  discovery_date: '2025-08-18'
-  drama_score: 50
-  last_temperature_update: '2025-08-18 07:28:54'
-  memorial: false
-  monthly_rank: 0.0
-  name: Prince William
-  promotion_date: '2025-08-18'
-  search_terms:
-  - prince william
-  - william prince
-  status: mild
-  temperature_change: 0
 saturday_night_live:
   category: entertainment
   discovery_date: '2025-08-18'
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 164.0
@@ -211,30 +139,15 @@ taylor_swift:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 11123.0
-terence_stamp:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:29:23'
-  memorial: false
-  monthly_rank: 0
-  name: Terence Stamp
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 travis_barker:
   category: entertainment
   discovery_date: '2025-08-18'
   drama_score: 55.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: warm
   temperature_change: 55.0
@@ -244,7 +157,6 @@ travis_kelce:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 4438.0
@@ -254,7 +166,6 @@ travis_scott:
   drama_score: 13.0
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: cooling
   temperature_change: 13.0
@@ -264,33 +175,6 @@ vladimir_putin:
   drama_score: 100
   last_temperature_update: '2025-08-18 07:26:23'
   memorial: false
-  monthly_rank: 0.0
   promotion_date: '2025-08-18'
   status: explosive
   temperature_change: 914.0
-women_to_make_an:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:29:23'
-  memorial: false
-  monthly_rank: 0
-  name: Women To Make An
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
-you_are:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:29:23'
-  memorial: false
-  monthly_rank: 0
-  name: You Are
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
