@@ -43,18 +43,24 @@ class AdaptiveGossipScraper:
         self.IDEAL_MIN_TEMP = 35
         self.ARCHIVE_DAYS = 30
 
-        # CELEBRITY SCORING SYSTEM 🎯
-        self.SCORING_CONFIG = {
-            'base_article_points': 1.0,      # Base points per article mention
-            'headline_bonus': 0.5,           # Extra if in headline
-            'explosive_keywords_bonus': 2.0, # Bonus for drama keywords
-            'daily_decay_rate': 0.003,       # 0.3% daily decay
-            'weekly_decay_rate': 0.02,       # 2% weekly decay  
-            'monthly_decay_rate': 0.08,      # 8% monthly decay
-            'monthly_max_articles': 1000,    # ~33 articles/day × 30 days
-            'rank_scale': 100,               # Scale to 0-100 ranking
-            'new_celebrity_threshold': 2,    # Mentions needed to add new celebrity
-            'starting_drama_score': 25       # Starting score for new celebrities
+        # 🌡️ ENHANCED CELEBRITY TEMPERATURE SYSTEM
+        self.TEMPERATURE_CONFIG = {
+            # Decay rates (per hour)
+            'hourly_decay_rate': 1.0/24.0,      # Loses ~1 degree per day (24 hours)
+            'max_temperature': 100.0,
+            'min_temperature': 0.0,
+            'new_celebrity_base_temp': 5.0,     # New celebrities start very low
+
+            # Story boost system
+            'story_boost_base': 2.0,            # Base points per story
+            'headline_bonus': 1.0,              # Extra if in headline
+            'explosive_keywords_bonus': 3.0,    # Bonus for drama keywords
+            'recency_multiplier': 1.5,          # Recent stories worth more
+
+            # Thresholds
+            'top_chart_threshold': 10.0,        # Must be above 10° to appear in charts
+            'new_celebrity_threshold': 2,       # Mentions needed to add new celebrity
+            'monthly_max_articles': 1000,       # ~33 articles/day × 30 days
         }
 
         # CELEBRITY AUTO-DISCOVERY PATTERNS 🔍
@@ -178,13 +184,12 @@ class AdaptiveGossipScraper:
                 'disambiguation': 'husband of Kate Middleton',
                 'search_terms': ['prince william', 'william prince'],
                 'category': 'royal',
-                'drama_score': william_data.get('drama_score', 50),
+                'temperature': william_data.get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp']),
+                'last_temp_update': william_data.get('last_temp_update', datetime.now().isoformat()),
+                'recent_story_count': william_data.get('recent_story_count', 0),
                 'discovery_date': william_data.get('discovery_date', datetime.now().strftime('%Y-%m-%d')),
-                'last_temperature_update': william_data.get('last_temperature_update', datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
                 'status': william_data.get('status', 'mild'),
-                'temperature_change': william_data.get('temperature_change', 0),
                 'memorial': False,
-                'promotion_date': william_data.get('promotion_date', datetime.now().strftime('%Y-%m-%d'))
             }
             if william_data:
                 fixes_applied.append("william -> prince_william")
@@ -219,6 +224,117 @@ class AdaptiveGossipScraper:
                             search_terms.append(f"{name_parts[0].lower()} {name_parts[-1].lower()}")
 
         return list(set(search_terms))
+
+    # 🌡️ ENHANCED TEMPERATURE MANAGEMENT SYSTEM
+    def apply_celebrity_temperature_decay(self):
+        """Apply hourly temperature decay to all celebrities"""
+        current_time = datetime.now()
+
+        for celeb_key, celeb_data in self.celebrities.items():
+            if not isinstance(celeb_data, dict):
+                continue
+
+            # Get last update time (default to 30 days ago if new)
+            last_update_str = celeb_data.get('last_temp_update')
+            if last_update_str:
+                try:
+                    if 'T' in last_update_str:
+                        last_update = datetime.fromisoformat(last_update_str.replace('Z', ''))
+                    else:
+                        last_update = datetime.strptime(last_update_str, '%Y-%m-%d %H:%M:%S')
+                except:
+                    last_update = current_time - timedelta(days=30)
+            else:
+                last_update = current_time - timedelta(days=30)
+
+            hours_passed = (current_time - last_update).total_seconds() / 3600.0
+
+            # Apply decay
+            current_temp = celeb_data.get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp'])
+            decay_amount = hours_passed * self.TEMPERATURE_CONFIG['hourly_decay_rate']
+            decayed_temp = max(current_temp - decay_amount, self.TEMPERATURE_CONFIG['min_temperature'])
+
+            # Update temperature
+            celeb_data['temperature'] = round(decayed_temp, 1)
+            celeb_data['last_temp_update'] = current_time.isoformat()
+
+            # Update status based on temperature
+            celeb_data['status'] = self.calculate_celebrity_status_from_temp(decayed_temp)
+
+            if decay_amount > 0.1:  # Only log significant decay
+                logger.info(f"⏰ {celeb_key}: {current_temp:.1f}° -> {decayed_temp:.1f}° (-{decay_amount:.1f} decay)")
+
+    def apply_celebrity_temperature_boost(self, article_id, mentions, title, description):
+        """Apply temperature boosts to celebrities mentioned in this article"""
+        current_time = datetime.now()
+
+        for celeb_key, mention_data in mentions.items():
+            if celeb_key not in self.celebrities:
+                continue
+
+            # Track unique articles (not mention count per article)
+            self.celebrity_article_mentions[celeb_key].add(article_id)
+
+            # Calculate boost for this article
+            boost = self.TEMPERATURE_CONFIG['story_boost_base']
+
+            # Headline bonus
+            if mention_data.get('in_headline', False):
+                boost += self.TEMPERATURE_CONFIG['headline_bonus']
+
+            # Explosive keywords bonus
+            full_text = f"{title} {description}".lower()
+            explosive_keywords = [
+                'scandal', 'affair', 'cheating', 'divorce', 'breakup', 'fight', 
+                'feud', 'drama', 'controversy', 'arrest', 'lawsuit', 'explosive',
+                'bombshell', 'shocking', 'secret', 'reveals', 'pregnant', 'baby',
+                'wedding', 'engaged', 'rehab', 'addiction', 'death'
+            ]
+
+            if any(keyword in full_text for keyword in explosive_keywords):
+                boost += self.TEMPERATURE_CONFIG['explosive_keywords_bonus']
+
+            # Apply boost to celebrity temperature
+            current_temp = self.celebrities[celeb_key].get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp'])
+            new_temp = min(self.TEMPERATURE_CONFIG['max_temperature'], current_temp + boost)
+
+            # Update celebrity data
+            self.celebrities[celeb_key]['temperature'] = round(new_temp, 1)
+            self.celebrities[celeb_key]['last_temp_update'] = current_time.isoformat()
+            self.celebrities[celeb_key]['recent_story_count'] = self.celebrities[celeb_key].get('recent_story_count', 0) + 1
+
+            # Update status based on temperature
+            self.celebrities[celeb_key]['status'] = self.calculate_celebrity_status_from_temp(new_temp)
+
+            logger.info(f"🔥 {celeb_key}: {current_temp:.1f}° -> {new_temp:.1f}° (+{boost:.1f})")
+
+    def calculate_celebrity_status_from_temp(self, temperature):
+        """Calculate celebrity status based on temperature"""
+        if temperature >= 80:
+            return 'explosive'
+        elif temperature >= 60:
+            return 'hot'
+        elif temperature >= 40:
+            return 'warm'
+        elif temperature >= 20:
+            return 'mild'
+        else:
+            return 'cooling'
+
+    def calculate_article_drama_score_from_celebrities(self, mentions):
+        """Calculate article drama score based on celebrity temperatures"""
+        if not mentions:
+            return 0
+
+        celebrity_temps = []
+        for celeb_key, mention_data in mentions.items():
+            celeb_data = self.celebrities.get(celeb_key, {})
+            celeb_temp = celeb_data.get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp'])
+            celebrity_temps.append(celeb_temp)
+
+        # Article score = average of celebrity temperatures (max 100)
+        avg_temp = sum(celebrity_temps) / len(celebrity_temps)
+        return min(self.TEMPERATURE_CONFIG['max_temperature'], avg_temp)
 
     def discover_new_celebrities(self, title, description):
         """Auto-discover new celebrities using pattern matching with STRICT filtering"""
@@ -365,7 +481,7 @@ class AdaptiveGossipScraper:
         return discovered
 
     def add_new_celebrity(self, name, category='unknown', context_score=0):
-        """Add a new celebrity to the database"""
+        """Add a new celebrity to the database with temperature system"""
         # Create celebrity key (lowercase, underscores)
         celeb_key = re.sub(r'[^\w\s]', '', name.lower()).replace(' ', '_')
 
@@ -375,20 +491,24 @@ class AdaptiveGossipScraper:
 
         now = datetime.now()
 
-        # Create new celebrity entry
+        # Create new celebrity entry with temperature system
         self.celebrities[celeb_key] = {
             'name': name,
             'category': category,
-            'drama_score': self.SCORING_CONFIG['starting_drama_score'],
+            'temperature': self.TEMPERATURE_CONFIG['new_celebrity_base_temp'],
+            'last_temp_update': now.isoformat(),
+            'recent_story_count': 0,
             'discovery_date': now.strftime('%Y-%m-%d'),
-            'last_temperature_update': now.strftime('%Y-%m-%d %H:%M:%S'),
-            'status': 'mild',
-            'temperature_change': 0,
+            'status': 'cooling',  # New celebrities start cooling
             'memorial': False,
-            'promotion_date': now.strftime('%Y-%m-%d'),
-            'monthly_rank': 0,
             'context_score': context_score,
-            'auto_discovered': True
+            'auto_discovered': True,
+            # Legacy compatibility
+            'drama_score': self.TEMPERATURE_CONFIG['new_celebrity_base_temp'],
+            'last_temperature_update': now.strftime('%Y-%m-%d %H:%M:%S'),
+            'temperature_change': 0,
+            'promotion_date': now.strftime('%Y-%m-%d'),
+            'monthly_rank': 0
         }
 
         # Add to search terms
@@ -399,13 +519,13 @@ class AdaptiveGossipScraper:
                 self.celebrity_names.append(f"{name_parts[0].lower()} {name_parts[-1].lower()}")
 
         self.new_celebrities_discovered.append(name)
-        logger.info(f"🌟 NEW CELEBRITY DISCOVERED: {name} ({category}) - Starting at {self.SCORING_CONFIG['starting_drama_score']}°")
+        logger.info(f"🌟 NEW CELEBRITY DISCOVERED: {name} ({category}) - Starting at {self.TEMPERATURE_CONFIG['new_celebrity_base_temp']}°")
 
         return True
 
     def process_potential_new_celebrities(self):
         """Process potential new celebrities and add qualifying ones"""
-        threshold = self.SCORING_CONFIG['new_celebrity_threshold']
+        threshold = self.TEMPERATURE_CONFIG['new_celebrity_threshold']
 
         for name, mention_count in self.potential_new_celebrities.items():
             if mention_count >= threshold:
@@ -484,117 +604,6 @@ class AdaptiveGossipScraper:
 
         return True
 
-    def apply_celebrity_scoring_boost(self, article_id, mentions, title, description):
-        """Apply scoring boosts to celebrities mentioned in this article"""
-        now = datetime.now()
-
-        for celeb_key, mention_data in mentions.items():
-            if celeb_key not in self.celebrities:
-                continue
-
-            # Track unique articles (not mention count per article)
-            self.celebrity_article_mentions[celeb_key].add(article_id)
-
-            # Calculate boost for this article
-            boost = self.SCORING_CONFIG['base_article_points']
-
-            # Headline bonus
-            if mention_data.get('in_headline', False):
-                boost += self.SCORING_CONFIG['headline_bonus']
-
-            # Explosive keywords bonus
-            full_text = f"{title} {description}".lower()
-            explosive_keywords = [
-                'scandal', 'affair', 'cheating', 'divorce', 'breakup', 'fight', 
-                'feud', 'drama', 'controversy', 'arrest', 'lawsuit', 'explosive',
-                'bombshell', 'shocking', 'secret', 'reveals'
-            ]
-
-            if any(keyword in full_text for keyword in explosive_keywords):
-                boost += self.SCORING_CONFIG['explosive_keywords_bonus']
-
-            # Apply boost to celebrity
-            current_score = self.celebrities[celeb_key].get('drama_score', 50)
-            new_score = min(100, current_score + boost)
-
-            # Calculate temperature change
-            temp_change = new_score - current_score
-
-            self.celebrities[celeb_key]['drama_score'] = round(new_score, 1)
-            self.celebrities[celeb_key]['last_temperature_update'] = now.strftime('%Y-%m-%d %H:%M:%S')
-            self.celebrities[celeb_key]['temperature_change'] = round(temp_change, 1)
-
-            # Update status based on score
-            self.celebrities[celeb_key]['status'] = self.calculate_celebrity_status(new_score)
-
-            logger.info(f"🎯 {celeb_key}: {current_score:.1f} -> {new_score:.1f} (+{boost:.1f})")
-
-    def apply_celebrity_decay(self):
-        """Apply time-based decay to all celebrities"""
-        now = datetime.now()
-
-        for celeb_key, celeb_data in self.celebrities.items():
-            if not isinstance(celeb_data, dict):
-                continue
-
-            last_update_str = celeb_data.get('last_temperature_update')
-            if not last_update_str:
-                continue
-
-            try:
-                last_update = datetime.strptime(last_update_str, '%Y-%m-%d %H:%M:%S')
-                hours_since_update = (now - last_update).total_seconds() / 3600
-
-                # Calculate decay
-                decay = 0
-                if hours_since_update >= 24 * 30:  # 30+ days
-                    decay = self.SCORING_CONFIG['monthly_decay_rate']
-                elif hours_since_update >= 24 * 7:  # 7+ days
-                    decay = self.SCORING_CONFIG['weekly_decay_rate']
-                elif hours_since_update >= 24:  # 1+ day
-                    decay = self.SCORING_CONFIG['daily_decay_rate']
-
-                if decay > 0:
-                    current_score = celeb_data.get('drama_score', 50)
-                    decay_amount = current_score * decay
-                    new_score = max(0, current_score - decay_amount)
-
-                    # Calculate temperature change (negative for decay)
-                    temp_change = -(decay_amount)
-
-                    self.celebrities[celeb_key]['drama_score'] = round(new_score, 1)
-                    self.celebrities[celeb_key]['status'] = self.calculate_celebrity_status(new_score)
-                    self.celebrities[celeb_key]['temperature_change'] = round(temp_change, 1)
-
-                    if decay_amount > 0.1:  # Only log significant decay
-                        logger.info(f"⏰ {celeb_key}: {current_score:.1f} -> {new_score:.1f} (-{decay_amount:.1f} decay)")
-
-            except ValueError:
-                continue
-
-    def calculate_celebrity_status(self, drama_score):
-        """Calculate celebrity status based on drama score"""
-        if drama_score >= 80:
-            return 'explosive'
-        elif drama_score >= 60:
-            return 'hot'
-        elif drama_score >= 40:
-            return 'warm'
-        elif drama_score >= 20:
-            return 'mild'
-        else:
-            return 'cooling'
-
-    def calculate_celebrity_monthly_rank(self, celeb_key):
-        """Calculate celebrity's rank out of 100 based on monthly activity"""
-        # Get articles mentioning this celebrity in the last 30 days
-        monthly_articles = len(self.celebrity_article_mentions.get(celeb_key, set()))
-
-        # Calculate rank (0-100 scale)
-        rank = min(100, (monthly_articles / self.SCORING_CONFIG['monthly_max_articles']) * 100)
-
-        return round(rank, 1)
-
     def load_processed_articles(self):
         """Load processed articles to avoid duplicates"""
         try:
@@ -643,50 +652,42 @@ class AdaptiveGossipScraper:
         return mentions
 
     def calculate_drama_score(self, title, description, mentions):
-        """Calculate drama score based on content and celebrity temperatures"""
-        full_text = f"{title} {description}".lower()
+        """Calculate drama score based on celebrity temperatures (NEW SYSTEM)"""
+        # Primary score comes from celebrity temperatures
+        celebrity_score = self.calculate_article_drama_score_from_celebrities(mentions)
 
-        # Drama keywords with weights
+        # Secondary boost from drama keywords
+        full_text = f"{title} {description}".lower()
         drama_keywords = {
-            'scandal': 15, 'affair': 12, 'cheating': 12, 'divorce': 10,
-            'breakup': 8, 'fight': 8, 'feud': 10, 'drama': 8,
-            'controversy': 10, 'arrest': 15, 'lawsuit': 12, 'sued': 12,
-            'rehab': 10, 'addiction': 10, 'overdose': 15, 'death': 20,
-            'pregnant': 8, 'baby': 6, 'wedding': 6, 'engaged': 6,
-            'secret': 8, 'reveals': 6, 'confession': 8, 'admits': 6,
-            'shocking': 8, 'explosive': 10, 'bombshell': 12, 'exclusive': 6
+            'scandal': 5, 'affair': 4, 'cheating': 4, 'divorce': 3,
+            'breakup': 2, 'fight': 2, 'feud': 3, 'drama': 2,
+            'controversy': 3, 'arrest': 5, 'lawsuit': 4, 'sued': 4,
+            'rehab': 3, 'addiction': 3, 'overdose': 5, 'death': 6,
+            'pregnant': 2, 'baby': 1, 'wedding': 1, 'engaged': 1,
+            'secret': 2, 'reveals': 1, 'confession': 2, 'admits': 1,
+            'shocking': 2, 'explosive': 3, 'bombshell': 4, 'exclusive': 1
         }
 
-        score = 0
+        keyword_boost = 0
         for keyword, weight in drama_keywords.items():
             count = full_text.count(keyword)
-            score += count * weight
+            keyword_boost += count * weight
 
-        # Celebrity boost based on their current drama scores
-        celebrity_boost = 0
-        if mentions:
-            for celeb_key, mention_data in mentions.items():
-                celeb_data = self.celebrities.get(celeb_key, {})
-                celeb_drama_score = celeb_data.get('drama_score', 50)
-                celebrity_boost += celeb_drama_score * mention_data['total_mentions']
-
-            celebrity_boost = celebrity_boost / len(mentions)
-
-        # Combine scores - now articles inherit celebrity temperatures!
-        total_score = score + (celebrity_boost * 0.6)
-
+        # Combine scores (celebrity temperature is primary)
+        total_score = celebrity_score + (keyword_boost * 0.3)
         return min(100, max(0, int(total_score)))
 
     def calculate_temperature(self, drama_score, mentions, pub_date):
-        """Calculate temperature using celebrity-driven scoring"""
+        """Calculate temperature using celebrity-driven scoring (ENHANCED)"""
+        # Base temperature from drama score
         base_temp = drama_score
 
-        # Celebrity temperature boost (now more accurate)
+        # Celebrity temperature boost (primary factor)
         celebrity_boost = 0
         if mentions:
             for celeb_key, mention_data in mentions.items():
                 celeb_data = self.celebrities.get(celeb_key, {})
-                celeb_temp = celeb_data.get('drama_score', 50)
+                celeb_temp = celeb_data.get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp'])
                 celebrity_boost += celeb_temp * mention_data['total_mentions']
             celebrity_boost = celebrity_boost / len(mentions) if mentions else 0
 
@@ -710,7 +711,8 @@ class AdaptiveGossipScraper:
             except:
                 time_penalty = 5
 
-        temperature = base_temp + (celebrity_boost * 0.4) - time_penalty
+        # Final temperature calculation (celebrity temperature is primary)
+        temperature = (celebrity_boost * 0.7) + (base_temp * 0.3) - time_penalty
         return max(0, min(100, int(temperature)))
 
     def create_clean_slug(self, title):
@@ -721,7 +723,7 @@ class AdaptiveGossipScraper:
         return slug[:50].strip('-')
 
     def create_blog_post(self, article, source_name, drama_score, temperature, mentions):
-        """Create Jekyll blog post"""
+        """Create Jekyll blog post with enhanced celebrity data"""
         title = self.clean_text(article.get('title', 'Untitled'))
         description = self.clean_text(article.get('summary', article.get('description', '')))
         link = article.get('link', '')
@@ -740,10 +742,12 @@ class AdaptiveGossipScraper:
         # Determine primary celebrity
         primary_celebrity = ""
         if mentions:
-            primary_celeb_key = max(mentions.items(), key=lambda x: x[1]['total_mentions'])[0]
+            # Primary celebrity is the one with highest temperature
+            primary_celeb_key = max(mentions.items(), 
+                key=lambda x: self.celebrities.get(x[0], {}).get('temperature', 0))[0]
             primary_celebrity = self.celebrities.get(primary_celeb_key, {}).get('name', primary_celeb_key)
 
-        # Create front matter
+        # Create front matter with enhanced celebrity data
         front_matter = {
             'layout': 'post',
             'title': title,
@@ -754,6 +758,7 @@ class AdaptiveGossipScraper:
             'temperature': temperature,
             'primary_celebrity': primary_celebrity,
             'mentions': {k: v['total_mentions'] for k, v in mentions.items()},
+            'celebrity_temps': {k: self.celebrities.get(k, {}).get('temperature', 0) for k in mentions.keys()},
             'categories': ['gossip', 'entertainment'],
             'tags': list(mentions.keys()) if mentions else []
         }
@@ -778,7 +783,7 @@ class AdaptiveGossipScraper:
         }
 
     def scrape_feed(self, feed_name, feed_config):
-        """Scrape individual RSS feed with celebrity scoring and auto-discovery"""
+        """Scrape individual RSS feed with celebrity temperature system"""
         try:
             logger.info(f"Scraping {feed_name}...")
 
@@ -815,10 +820,10 @@ class AdaptiveGossipScraper:
                 if not mentions:
                     continue
 
-                # 🎯 APPLY CELEBRITY SCORING BOOSTS
-                self.apply_celebrity_scoring_boost(article_id, mentions, title, description)
+                # 🌡️ APPLY CELEBRITY TEMPERATURE BOOSTS
+                self.apply_celebrity_temperature_boost(article_id, mentions, title, description)
 
-                # Calculate scores (now celebrity-driven)
+                # Calculate scores (now celebrity temperature-driven)
                 drama_score = self.calculate_drama_score(title, description, mentions)
                 pub_date = entry.get('published_parsed')
                 temperature = self.calculate_temperature(drama_score, mentions, pub_date)
@@ -915,7 +920,7 @@ class AdaptiveGossipScraper:
         return posts_to_publish
 
     def save_celebrities_yml(self):
-        """Save celebrities.yml with proper formatting"""
+        """Save celebrities.yml with proper formatting and temperature data"""
         try:
             celebrities_dir = self.base_path / '_data'
             celebrities_dir.mkdir(exist_ok=True)
@@ -927,7 +932,7 @@ class AdaptiveGossipScraper:
                 shutil.copy2(celebrities_file, backup_file)
                 logger.info(f"📋 Created backup: {backup_file.name}")
 
-            # Save updated celebrities
+            # Save updated celebrities with temperature data
             with open(celebrities_file, 'w', encoding='utf-8') as f:
                 yaml.dump(self.celebrities, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
 
@@ -937,7 +942,7 @@ class AdaptiveGossipScraper:
             logger.error(f"❌ Error saving celebrities.yml: {e}")
 
     def save_data(self):
-        """Save all data including updated celebrities"""
+        """Save all data including updated celebrities with temperature system"""
         Path('data').mkdir(exist_ok=True)
 
         logger.info(f"🌡️ Found {len(self.new_posts)} potential posts")
@@ -966,44 +971,40 @@ class AdaptiveGossipScraper:
         with open('data/processed_articles.json', 'w') as f:
             json.dump(list(self.processed_articles), f, indent=2)
 
-        # 💾 SAVE UPDATED CELEBRITIES.YML
+        # 💾 SAVE UPDATED CELEBRITIES.YML WITH TEMPERATURE DATA
         self.save_celebrities_yml()
 
     def run(self):
-        """Main execution with celebrity scoring and auto-discovery"""
-        logger.info("🎭 Starting Adaptive Gossip Scraper with Celebrity Scoring & Auto-Discovery...")
+        """Main execution with celebrity temperature system"""
+        logger.info("🌡️ Starting Adaptive Gossip Scraper with Celebrity Temperature System...")
 
-        # 1. Apply decay to all celebrities first
-        logger.info("⏰ Applying celebrity score decay...")
-        self.apply_celebrity_decay()
+        # 1. Apply temperature decay to all celebrities first
+        logger.info("⏰ Applying celebrity temperature decay...")
+        self.apply_celebrity_temperature_decay()
 
-        # 2. Scrape all feeds (this will boost celebrity scores and discover new ones)
+        # 2. Scrape all feeds (this will boost celebrity temperatures and discover new ones)
         for feed_name, feed_config in self.rss_feeds.items():
             self.scrape_feed(feed_name, feed_config)
             time.sleep(2)
 
-        # 3. Calculate monthly ranks for all celebrities
-        logger.info("📊 Calculating celebrity monthly ranks...")
-        for celeb_key in self.celebrities:
-            monthly_rank = self.calculate_celebrity_monthly_rank(celeb_key)
-            self.celebrities[celeb_key]['monthly_rank'] = monthly_rank
-
-        # 4. Save data (including updated celebrities.yml)
+        # 3. Save data (including updated celebrities.yml with temperature data)
         self.save_data()
 
-        # 5. Log results
+        # 4. Log results
         if self.new_celebrities_discovered:
             logger.info(f"🌟 NEW CELEBRITIES DISCOVERED: {', '.join(self.new_celebrities_discovered)}")
 
+        # Show top celebrities by temperature
         top_celebs = sorted(
-            [(k, v.get('drama_score', 0)) for k, v in self.celebrities.items() if isinstance(v, dict)],
+            [(k, v.get('temperature', 0)) for k, v in self.celebrities.items() if isinstance(v, dict)],
             key=lambda x: x[1], reverse=True
         )[:10]
 
-        logger.info("🏆 Top 10 Hottest Celebrities:")
-        for i, (celeb, score) in enumerate(top_celebs, 1):
+        logger.info("🔥 Top 10 Hottest Celebrities by Temperature:")
+        for i, (celeb, temp) in enumerate(top_celebs, 1):
             status = self.celebrities[celeb].get('status', 'unknown')
-            logger.info(f"  {i}. {celeb}: {score:.1f}° ({status})")
+            recent_stories = self.celebrities[celeb].get('recent_story_count', 0)
+            logger.info(f"  {i}. {celeb}: {temp:.1f}° ({status}) - {recent_stories} recent stories")
 
         logger.info("✅ Scraping complete!")
 
