@@ -581,19 +581,6 @@ blac_chyna:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 0
-black_swan:
-  auto_discovered: true
-  category: unknown
-  context_score: 3
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 09:28:06'
-  memorial: false
-  monthly_rank: 0
-  name: Black Swan
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 blake_lively:
   category: actor
   discovery_date: '2025-08-04'
@@ -2231,16 +2218,6 @@ jessie_j:
   memorial: false
   monthly_rank: 0.0
   promotion_date: '2025-08-04'
-  status: cooling
-  temperature_change: 0
-jesus_christ:
-  category: unknown
-  discovery_date: '2025-08-03'
-  drama_score: 0
-  last_temperature_update: '2025-08-18 06:11:16'
-  memorial: false
-  monthly_rank: 0.0
-  promotion_date: '2025-08-03'
   status: cooling
   temperature_change: 0
 jimmy_donaldson:
@@ -4094,7 +4071,7 @@ sean_anderson:
   status: cooling
   temperature_change: 0
 sean_combs:
-  category: musician
+  category: abuser
   discovery_date: '2025-08-04'
   drama_score: 3.2
   last_temperature_update: '2025-08-18 06:11:16'
