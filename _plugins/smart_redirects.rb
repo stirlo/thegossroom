@@ -6,10 +6,13 @@ module Jekyll
     def generate(site)
       puts "🚀 Generating smart redirects..."
 
+      # Load celebrities.yml data
+      celebrities_data = load_celebrities_data(site)
       posts_data = extract_posts_data(site)
-      puts "📊 Found #{posts_data.length} posts to analyze"
+      puts "📊 Found #{posts_data.length} posts and #{celebrities_data.length} celebrities"
 
       # Generate all redirect types
+      generate_celebrity_redirects_from_yml(site, celebrities_data, posts_data)
       generate_celebrity_redirects(site, posts_data)
       generate_date_celebrity_redirects_with_fallback(site, posts_data)
       generate_legacy_redirects(site, posts_data)
@@ -20,19 +23,203 @@ module Jekyll
 
     private
 
+    def load_celebrities_data(site)
+      celebrities = {}
+      celebrities_file = File.join(site.source, '_data', 'celebrities.yml')
+
+      if File.exist?(celebrities_file)
+        begin
+          celebrities_yaml = YAML.load_file(celebrities_file)
+          celebrities_yaml.each do |key, data|
+            next unless data.is_a?(Hash)
+
+            celebrities[key] = {
+              name: data['name'] || key.gsub('_', ' ').titleize,
+              aliases: data['aliases'] || [],
+              search_terms: data['search_terms'] || [],
+              category: data['category'] || 'unknown',
+              drama_score: data['drama_score'] || 25
+            }
+          end
+          puts "📋 Loaded #{celebrities.length} celebrities from celebrities.yml"
+        rescue => e
+          puts "⚠️ Error loading celebrities.yml: #{e.message}"
+        end
+      end
+
+      celebrities
+    end
+
+    def generate_celebrity_redirects_from_yml(site, celebrities_data, posts_data)
+      """Generate redirects for all celebrities in celebrities.yml"""
+
+      celebrities_data.each do |celeb_key, celeb_info|
+        # Find posts mentioning this celebrity
+        matching_posts = posts_data.select do |post|
+          post_mentions_celebrity?(post, celeb_key, celeb_info)
+        end
+
+        if matching_posts.any?
+          # Sort by date and drama score
+          latest_post = matching_posts.sort_by { |p| [p[:date], p[:drama_score] || 0] }.reverse.first
+
+          # Create redirect for celebrity key
+          create_redirect_page(site, "/#{celeb_key}/", latest_post[:url])
+          puts "📍 Celebrity YML redirect: /#{celeb_key}/ -> #{latest_post[:url]}"
+
+          # Create redirects for aliases
+          celeb_info[:aliases].each do |alias_name|
+            alias_slug = slugify(alias_name)
+            create_redirect_page(site, "/#{alias_slug}/", latest_post[:url])
+            puts "📍 Alias redirect: /#{alias_slug}/ -> #{latest_post[:url]}"
+          end
+
+          # Create redirect for display name
+          name_slug = slugify(celeb_info[:name])
+          if name_slug != celeb_key
+            create_redirect_page(site, "/#{name_slug}/", latest_post[:url])
+            puts "📍 Name redirect: /#{name_slug}/ -> #{latest_post[:url]}"
+          end
+        else
+          # No recent posts - redirect to search
+          search_query = celeb_info[:name].gsub(' ', '+')
+          create_redirect_page(site, "/#{celeb_key}/", "/search/?q=#{search_query}")
+          puts "📍 Celebrity search fallback: /#{celeb_key}/ -> /search/?q=#{search_query}"
+        end
+      end
+    end
+
+    def post_mentions_celebrity?(post, celeb_key, celeb_info)
+      # Check post tags
+      return true if post[:tags] && post[:tags].include?(celeb_key)
+
+      # Check post mentions
+      return true if post[:mentions] && post[:mentions].key?(celeb_key)
+
+      # Check primary celebrity
+      return true if post[:primary_celebrity] == celeb_key
+
+      # Check title/content for celebrity name or aliases
+      search_text = "#{post[:title]} #{post[:excerpt] || ''}".downcase
+
+      # Check main name
+      return true if search_text.include?(celeb_info[:name].downcase)
+
+      # Check aliases
+      celeb_info[:aliases].each do |alias_name|
+        return true if search_text.include?(alias_name.downcase)
+      end
+
+      # Check search terms
+      celeb_info[:search_terms].each do |search_term|
+        return true if search_text.include?(search_term.downcase)
+      end
+
+      false
+    end
+
     def extract_posts_data(site)
       site.posts.docs.map do |post|
-        celebrities = extract_celebrities(post)
         {
           url: post.url,
           date: post.date,
           title: post.data['title'] || '',
-          celebrities: celebrities,
+          excerpt: post.data['excerpt'] || '',
+          celebrities: extract_celebrities(post),
+          tags: post.data['tags'] || [],
+          mentions: post.data['mentions'] || {},
+          primary_celebrity: post.data['primary_celebrity'],
+          drama_score: post.data['drama_score'] || 0,
           slug: post.data['slug'] || post.basename_without_ext,
           keywords: extract_keywords(post.data['title'] || ''),
           filename: post.basename_without_ext
         }
       end
+    end
+
+    def generate_celebrity_redirects(site, posts_data)
+      celebrity_posts = {}
+
+      posts_data.each do |post|
+        # Add from tags
+        post[:tags].each do |tag|
+          celebrity_posts[tag] ||= []
+          celebrity_posts[tag] << post
+        end
+
+        # Add from mentions
+        post[:mentions].keys.each do |celeb_key|
+          celebrity_posts[celeb_key] ||= []
+          celebrity_posts[celeb_key] << post
+        end
+
+        # Add from primary celebrity
+        if post[:primary_celebrity]
+          celeb_slug = slugify(post[:primary_celebrity])
+          celebrity_posts[celeb_slug] ||= []
+          celebrity_posts[celeb_slug] << post
+        end
+
+        # Add from extracted celebrities
+        post[:celebrities].each do |celebrity|
+          celebrity_slug = slugify(celebrity)
+          celebrity_posts[celebrity_slug] ||= []
+          celebrity_posts[celebrity_slug] << post
+        end
+      end
+
+      celebrity_posts.each do |celebrity_slug, posts|
+        sorted_posts = posts.uniq.sort_by { |p| [p[:date], p[:drama_score]] }.reverse
+        latest_post = sorted_posts.first
+
+        create_redirect_page(site, "/#{celebrity_slug}/", latest_post[:url])
+        puts "📍 Celebrity redirect: /#{celebrity_slug}/ -> #{latest_post[:url]}"
+      end
+    end
+
+    def generate_date_celebrity_redirects_with_fallback(site, posts_data)
+      date_celebrity_posts = {}
+      celebrity_latest = {}
+
+      posts_data.each do |post|
+        all_celebrity_keys = []
+        all_celebrity_keys.concat(post[:tags])
+        all_celebrity_keys.concat(post[:mentions].keys)
+        all_celebrity_keys << slugify(post[:primary_celebrity]) if post[:primary_celebrity]
+        all_celebrity_keys.concat(post[:celebrities].map { |c| slugify(c) })
+        all_celebrity_keys.uniq!
+
+        all_celebrity_keys.each do |celebrity_slug|
+          if !celebrity_latest[celebrity_slug] || post[:date] > celebrity_latest[celebrity_slug][:date]
+            celebrity_latest[celebrity_slug] = post
+          end
+        end
+      end
+
+      posts_data.each do |post|
+        date_path = post[:date].strftime('%Y/%m/%d')
+
+        all_celebrity_keys = []
+        all_celebrity_keys.concat(post[:tags])
+        all_celebrity_keys.concat(post[:mentions].keys)
+        all_celebrity_keys << slugify(post[:primary_celebrity]) if post[:primary_celebrity]
+        all_celebrity_keys.concat(post[:celebrities].map { |c| slugify(c) })
+        all_celebrity_keys.uniq!
+
+        all_celebrity_keys.each do |celebrity_slug|
+          key = "#{date_path}/#{celebrity_slug}"
+          date_celebrity_posts[key] ||= []
+          date_celebrity_posts[key] << post
+        end
+      end
+
+      date_celebrity_posts.each do |key, posts|
+        latest_post = posts.sort_by { |p| [p[:date], p[:drama_score]] }.reverse.first
+        create_redirect_page(site, "/#{key}/", latest_post[:url])
+        puts "📍 Date redirect: /#{key}/ -> #{latest_post[:url]}"
+      end
+
+      create_fallback_handler(site, celebrity_latest)
     end
 
     def generate_legacy_redirects(site, posts_data)
@@ -163,7 +350,9 @@ module Jekyll
         'Prince Harry' => /prince\s*harry/i,
         'Eminem' => /eminem/i,
         'Cardi B' => /cardi\s*b/i,
-        'Nicki Minaj' => /nicki\s*minaj/i
+        'Nicki Minaj' => /nicki\s*minaj/i,
+        'Lil Tay' => /lil\s*tay/i,
+        'Terence Stamp' => /terence\s*stamp/i
       }
 
       celebrity_patterns.each do |name, pattern|
@@ -180,74 +369,6 @@ module Jekyll
            .split
            .reject { |word| stop_words.include?(word) || word.length < 3 }
            .uniq
-    end
-
-    def generate_celebrity_redirects(site, posts_data)
-      celebrity_posts = {}
-
-      posts_data.each do |post|
-        post[:celebrities].each do |celebrity|
-          celebrity_slug = slugify(celebrity)
-          celebrity_posts[celebrity_slug] ||= []
-          celebrity_posts[celebrity_slug] << post
-        end
-      end
-
-      celebrity_posts.each do |celebrity_slug, posts|
-        sorted_posts = posts.sort_by { |p| p[:date] }.reverse
-        latest_post = sorted_posts.first
-
-        create_redirect_page(site, "/#{celebrity_slug}/", latest_post[:url])
-        puts "📍 Celebrity redirect: /#{celebrity_slug}/ -> #{latest_post[:url]}"
-      end
-    end
-
-    def generate_date_celebrity_redirects_with_fallback(site, posts_data)
-      date_celebrity_posts = {}
-      celebrity_latest = {}
-
-      posts_data.each do |post|
-        post[:celebrities].each do |celebrity|
-          celebrity_slug = slugify(celebrity)
-          if !celebrity_latest[celebrity_slug] || post[:date] > celebrity_latest[celebrity_slug][:date]
-            celebrity_latest[celebrity_slug] = post
-          end
-        end
-      end
-
-      posts_data.each do |post|
-        date_path = post[:date].strftime('%Y/%m/%d')
-
-        post[:celebrities].each do |celebrity|
-          celebrity_slug = slugify(celebrity)
-          key = "#{date_path}/#{celebrity_slug}"
-
-          date_celebrity_posts[key] ||= []
-          date_celebrity_posts[key] << post
-        end
-      end
-
-      date_celebrity_posts.each do |key, posts|
-        latest_post = posts.sort_by { |p| p[:date] }.reverse.first
-        create_redirect_page(site, "/#{key}/", latest_post[:url])
-        puts "📍 Date redirect: /#{key}/ -> #{latest_post[:url]}"
-      end
-
-      create_fallback_handler(site, celebrity_latest)
-    end
-
-    def generate_fuzzy_fallback(site, posts_data)
-      fuzzy_data = posts_data.map do |post|
-        {
-          url: post[:url],
-          title: post[:title],
-          celebrities: post[:celebrities],
-          keywords: post[:keywords],
-          date: post[:date].strftime('%Y-%m-%d')
-        }
-      end
-
-      create_smart_search_page(site, fuzzy_data)
     end
 
     def create_fallback_handler(site, celebrity_latest)
@@ -377,13 +498,28 @@ module Jekyll
       site.pages << redirect_page
     end
 
+    def generate_fuzzy_fallback(site, posts_data)
+      fuzzy_data = posts_data.map do |post|
+        {
+          url: post[:url],
+          title: post[:title],
+          celebrities: post[:celebrities],
+          keywords: post[:keywords],
+          date: post[:date].strftime('%Y-%m-%d')
+        }
+      end
+
+      create_smart_search_page(site, fuzzy_data)
+    end
+
     def create_smart_search_page(site, posts_data)
       # Implementation for search page
       puts "📍 Created smart search page"
     end
 
     def slugify(text)
-      text.downcase
+      return '' if text.nil? || text.empty?
+      text.to_s.downcase
           .gsub(/[^\w\s]/, '')
           .gsub(/\s+/, '-')
           .gsub(/^-|-$/, '')
