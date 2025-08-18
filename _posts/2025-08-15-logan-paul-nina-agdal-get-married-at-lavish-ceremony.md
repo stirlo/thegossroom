@@ -1,18 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-15 19:13:10 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  logan_paul: 6
-primary_celebrity: logan_paul
+mentions: {}
 source: tmz
 source_url: https://www.tmz.com/2025/08/15/logan-paul-nina-agdal-wedding/
 tags:
 - celebrity-gossip
 - scandals
 title: Logan Paul, Nina Agdal Get Married At Lavish Ceremony
+temperature: 0
 ---
+
 
 Logan Paul and Nina Agdal are officially husband and wife -- the WWE Superstar and Sports Illustrated swimsuit model tied the knot at a luxurious ceremony in Italy. The Maverick's younger bro, Jake, shared a brief glimpse of the nuptials in Lake…
 

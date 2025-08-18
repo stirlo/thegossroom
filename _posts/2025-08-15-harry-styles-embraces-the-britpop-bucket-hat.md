@@ -1,12 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:45 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  harry_styles: 4
-  liam: 2
-primary_celebrity: harry_styles
+mentions: {}
 source: vogue_alt
 source_url: https://www.vogue.com/article/harry-styles-embraces-the-britpop-bucket-hat
 tags:
@@ -14,7 +11,9 @@ tags:
 - scandals
 - fashion
 title: Harry Styles Embraces the Britpop Bucket Hat
+temperature: 0
 ---
+
 
 While he eschewed Liam Gallagher’s Kangol for something a bit earthier, perhaps this is Harry Styles’s take on Britpop summer.
 

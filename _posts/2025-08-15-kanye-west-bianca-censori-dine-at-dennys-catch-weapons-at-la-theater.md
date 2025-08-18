@@ -18,6 +18,7 @@ title: Kanye West & Bianca Censori Dine at Denny's, Catch 'Weapons' at L.A. Thea
 ---
 
 
+
 Kanye West and Bianca Censori hit up an L.A. theater for a movie date -- and we're just gonna point out the obvious ... they didn’t exactly blend in with the rest of the popcorn crowd! Peep the pics -- Kanye left the IPIC in Westwood with his…
 
 **Drama Score:** 30 | **Level:** EXPLOSIVE

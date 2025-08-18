@@ -14,9 +14,9 @@ tags:
 - fashion
 - taylor-swift
 temperature: 100
-title: "Taylor Swift\u2019s $50 Mazin Jewels ring is sold out, but these similar styles\
-  \ are just as showgirl-worthy"
+title: Taylor Swift’s $50 Mazin Jewels ring is sold out, but these similar styles are just as showgirl-worthy
 ---
+
 
 
 “I sent Taylor a bunch of stuff through her stylist’s team, and it’s just so amazing that she keeps wearing it,” designer Lily Nizam told us in 2023.

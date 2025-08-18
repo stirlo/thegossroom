@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: "Trump Says He and Putin \u2018Didn\u2019t Get There\u2019 on Deal Talks at\
-  \ Alaska Summit"
+title: Trump Says He and Putin ‘Didn’t Get There’ on Deal Talks at Alaska Summit
 ---
+
 
 
 "I won't be happy if I walk away without some form of a ceasefire," Trump said prior to the summit meeting

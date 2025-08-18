@@ -17,6 +17,7 @@ title: Trump Greets Putin in Alaska for Historic Summit
 ---
 
 
+
 President Trump and Russian strongman Vladimir Putin are both on the ground in Alaska for a high-stakes summit -- the powerful world leaders just greeted each other on the tarmac ... and it's all on video. Trump and Putin shook hands Friday after…
 
 **Drama Score:** 9 | **Level:** HOT

@@ -14,9 +14,9 @@ source_url: https://www.dailymail.co.uk/news/article-15009351/trump-zelensky-ukr
 tags:
 - celebrity-gossip
 temperature: 200
-title: Zelensky immediately defies Trump just moments after president lays out terms
-  of peace plan with Putin setting up round two of combative White House clash
+title: Zelensky immediately defies Trump just moments after president lays out terms of peace plan with Putin setting up round two of combative White House clash
 ---
+
 
 
 Trump categorically ruled out Zelensky's hope to see Ukraine join NATO and indicated he has no desire to see Crimea returned to Ukrainian rule.

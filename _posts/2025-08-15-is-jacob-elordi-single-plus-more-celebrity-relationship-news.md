@@ -21,6 +21,7 @@ title: Is Jacob Elordi single? Plus, more celebrity relationship news
 ---
 
 
+
 Hollywood heartthrob Jacob Elordi may be back on the market — much to the delight of single women everywhere. Get all the details on the 6-foot-5 Australian actor’s reported split from Olivia Jade Giannulli. Plus, we’ve got updates on Tayor Swift and Travis Kelce’s internet-breaking team-up, exes Demi Lovato and Joe Jonas’ on-stage reunion —...
 
 **Drama Score:** 10 | **Level:** EXPLOSIVE

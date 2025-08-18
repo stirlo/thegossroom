@@ -17,6 +17,7 @@ title: Kim Kardashian Swaps Out Dark Hair for Sultry Blonde Transformation
 ---
 
 
+
 Kim Kardashian is keeping fans updated on her new ‘do. The SKIMS founder—known for her signature dark locks—debuted her latest hair transformation on August 15, revealing that she's returned to...
 
 **Drama Score:** 24 | **Level:** EXPLOSIVE

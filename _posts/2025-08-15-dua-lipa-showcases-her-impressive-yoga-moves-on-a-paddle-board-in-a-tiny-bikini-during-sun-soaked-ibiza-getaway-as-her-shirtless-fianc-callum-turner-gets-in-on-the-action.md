@@ -1,20 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:42 +0000
-drama_score: 4
+drama_score: 0
 layout: post
-mentions:
-  dua_lipa: 4
-primary_celebrity: dua_lipa
+mentions: {}
 source: daily_mail
 source_url: https://www.dailymail.co.uk/tvshowbiz/article-15004575/Dua-Lipa-yoga-paddle-board-bikini-Ibiza-Callum-Turner.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
 - celebrity-gossip
 - scandals
-title: Dua Lipa showcases her impressive yoga moves on a paddle board in a TINY bikini
-  during sun-soaked Ibiza getaway... as her shirtless fiancé Callum Turner gets in
-  on the action!
+title: Dua Lipa showcases her impressive yoga moves on a paddle board in a TINY bikini during sun-soaked Ibiza getaway... as her shirtless fiancé Callum Turner gets in on the action!
+temperature: 0
 ---
+
 
 Bikini-clad Dua Lipa showcased her impressive yoga moves while balancing on a paddle board in Ibiza on Thursday.
 

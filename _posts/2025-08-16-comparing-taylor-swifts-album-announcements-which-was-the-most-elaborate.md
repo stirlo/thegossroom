@@ -14,8 +14,9 @@ tags:
 - music
 - taylor-swift
 temperature: 100
-title: "Comparing Taylor Swift\u2019s Album Announcements: Which Was the Most Elaborate?"
+title: 'Comparing Taylor Swift’s Album Announcements: Which Was the Most Elaborate?'
 ---
+
 
 
 Taylor Swift is known for dropping Easter eggs in her songs and leading up to new album releases — but which of her album announcements has been the most elaborate? Swift made her music debut in 2006 with her self-titled record, but as an unknown there wasn’t much fanfare for the occasion. However, over the […]

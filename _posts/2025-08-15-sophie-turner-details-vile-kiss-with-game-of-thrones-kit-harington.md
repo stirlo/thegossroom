@@ -1,18 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-15 21:13:49 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  sophie_turner: 6
-primary_celebrity: sophie_turner
+mentions: {}
 source: e_news
 source_url: https://www.eonline.com/news/1421249/game-of-thrones-sophie-turner-kit-harington-kiss-was-vile?cmpid=rss-syndicate-genericrss-us-top_stories
 tags:
 - celebrity-gossip
 - scandals
 title: Sophie Turner Details "Vile" Kiss With Game of Thrones' Kit Harington
+temperature: 0
 ---
+
 
 Sophie Turner might have found something even worse than winter. In fact, the Game of Thrones alum shared how absolutely awful it was when Kit Harington—who played her adopted brother on the...
 

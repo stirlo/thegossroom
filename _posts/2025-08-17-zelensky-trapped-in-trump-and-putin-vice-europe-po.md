@@ -14,10 +14,9 @@ source_url: https://www.dailymail.co.uk/news/article-15007069/Zelensky-trapped-T
 tags:
 - celebrity-gossip
 temperature: 200
-title: 'Zelensky ''trapped in Trump and Putin vice'': Europe powerlessly looks on
-  as Ukraine''s President is summoned to White House amid fears he''ll be forced to
-  surrender land for fragile peace deal'
+title: 'Zelensky ''trapped in Trump and Putin vice'': Europe powerlessly looks on as Ukraine''s President is summoned to White House amid fears he''ll be forced to surrender land for fragile peace deal'
 ---
+
 
 
 Critics warned that other world leaders were powerless to stop Volodymyr Zelensky being caught 'with his head in a vice' by the American and Russian leaders when he visits Mr Trump.

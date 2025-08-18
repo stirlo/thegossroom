@@ -14,9 +14,9 @@ source_url: https://www.dailymail.co.uk/news/article-15008067/European-leaders-m
 tags:
 - celebrity-gossip
 temperature: 200
-title: European leaders including Keir Starmer and Emmanuel Macron to join Zelensky
-  in Washington for Trump summit after US President's Alaska showdown
+title: European leaders including Keir Starmer and Emmanuel Macron to join Zelensky in Washington for Trump summit after US President's Alaska showdown
 ---
+
 
 
 European leaders will join Ukraine's president Volodymyr Zelensky for his crucial meeting with Donald Trump , European Commission chief Ursula von der Leyen said today.

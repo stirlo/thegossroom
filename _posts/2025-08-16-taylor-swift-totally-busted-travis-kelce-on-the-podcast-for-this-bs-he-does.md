@@ -20,6 +20,7 @@ title: Taylor Swift TOTALLY BUSTED Travis Kelce On The Podcast For This BS He Do
 ---
 
 
+
 We love a couple who can see through each other’s BS! And Taylor Swift isn’t letting Travis Kelce get away with something we’ve noticed him doing before… The centerpiece of her appearance on New Heights was the reveal and discussion of her new album The Life of a Showgirl. To contrast how much more energetic this record [...] Read More... The post Taylor Swift TOTALLY BUSTED Travis Kelce On The Podcast For This BS He Does! appeared first on Perez Hilton.
 
 **Drama Score:** 45 | **Level:** EXPLOSIVE

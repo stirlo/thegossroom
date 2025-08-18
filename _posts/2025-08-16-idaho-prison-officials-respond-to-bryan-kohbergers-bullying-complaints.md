@@ -1,18 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-16 01:18:24 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  bryan_kohberger: 6
-primary_celebrity: bryan_kohberger
+mentions: {}
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-news/news/idaho-prison-officials-respond-to-bryan-kohberger-complaints/
 tags:
 - celebrity-gossip
 - scandals
 title: Idaho Prison Officials Respond to Bryan Kohberger's Bullying Complaints
+temperature: 0
 ---
+
 
 Idaho prison officials responded to convicted murderer Bryan Kohberger‘s complaints of being bullied in prison. “We are aware of Kohberger’s complaints about what he considers taunting,” an Idaho Department of Corrections (IDOC) spokesperson told People on Friday, August 15. “Incarcerated individuals commonly communicate with each other in prison.” The Idaho Department of Corrections clarified that […]
 

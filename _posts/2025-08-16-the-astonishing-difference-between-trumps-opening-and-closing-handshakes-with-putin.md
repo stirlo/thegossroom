@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: The astonishing difference between Trump's opening and closing handshakes with
-  Putin
+title: The astonishing difference between Trump's opening and closing handshakes with Putin
 ---
+
 
 
 Presidents Donald Trump and Vladimir Putin were all smiles as they came face-to-face for the first time since 2018. But the same couldn't be said at the conclusion of their summit in Alaska.

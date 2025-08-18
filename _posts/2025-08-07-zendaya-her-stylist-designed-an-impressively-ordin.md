@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-07 22:18:26 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-- zendaya
-primary_celebrity: zendaya
+mentions: {}
 source: highsnobiety
 source_url: https://www.highsnobiety.com/p/zendaya-law-roach-on-sneaker/
 tags:
@@ -14,7 +12,9 @@ tags:
 - zendaya
 - fashion
 title: Zendaya & Her Stylist Designed an Impressively Ordinary On Sneaker (Complimentary)
+temperature: 0
 ---
+
 
 Zendaya & stylist Law Roach designed a new On running sneaker. The result? On's Cloudzone Moon, a lifestyle shoe that is satisfyingly ordinary.
 

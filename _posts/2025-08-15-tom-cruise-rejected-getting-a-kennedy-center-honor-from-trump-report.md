@@ -18,6 +18,7 @@ title: Tom Cruise Rejected Getting a Kennedy Center Honor From Trump (Report)
 ---
 
 
+
 The 'Top Gun: Maverick' star has turned down the prestigious arts award, as the president says he plans to personally host this year's ceremony.
 
 **Drama Score:** 4 | **Level:** RISING

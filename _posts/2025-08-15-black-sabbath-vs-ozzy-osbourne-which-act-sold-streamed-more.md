@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 17:15:24 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  ozzy_osbourne: 2
-primary_celebrity: ozzy_osbourne
+mentions: {}
 source: billboard
 source_url: https://www.billboard.com/pro/black-sabbath-ozzy-osbourne-sales-streaming-comparison/
 tags:
@@ -13,7 +11,9 @@ tags:
 - scandals
 - music
 title: 'Black Sabbath vs. Ozzy Osbourne: Which Act Sold & Streamed More?'
+temperature: 0
 ---
+
 
 Ozzy’s solo catalog dominates U.S. album consumption, while Sabbath’s global streaming strength drives higher international revenue.
 

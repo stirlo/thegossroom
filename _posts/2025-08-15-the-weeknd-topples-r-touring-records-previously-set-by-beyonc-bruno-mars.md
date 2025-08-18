@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 15:17:42 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  beyonce: 2
-primary_celebrity: beyonce
+mentions: {}
 source: billboard
 source_url: https://www.billboard.com/pro/the-weeknd-breaks-beyonce-bruno-mars-rb-touring-records/
 tags:
@@ -13,7 +11,9 @@ tags:
 - scandals
 - celebrity-gossip
 title: The Weeknd Topples R Touring Records Previously Set by Beyoncé & Bruno Mars
+temperature: 0
 ---
+
 
 The After Hours til Dawn Tour has grossed over $600 million and sold more than five million tickets so far.
 

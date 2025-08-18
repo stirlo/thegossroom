@@ -1,18 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-15 22:16:18 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  bryan_kohberger: 6
-primary_celebrity: bryan_kohberger
+mentions: {}
 source: tmz
 source_url: https://www.tmz.com/2025/08/15/bryan-kohberger-leaked-prison-videos-investigation/
 tags:
 - celebrity-gossip
 - scandals
 title: Bryan Kohberger Prison Videos Apparently Leaked, Under Investigation
+temperature: 0
 ---
+
 
 There's an investigation underway in Idaho after videos purporting to show Bryan Kohberger pacing around his prison cell ended up on the internet. The footage popped up on social media Thursday and they appear to show Kohberger in prison attire…
 

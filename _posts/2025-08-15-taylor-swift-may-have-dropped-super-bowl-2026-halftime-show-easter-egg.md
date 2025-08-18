@@ -17,6 +17,7 @@ title: Taylor Swift May Have Dropped Super Bowl 2026 Halftime Show Easter Egg
 ---
 
 
+
 Taylor Swift may be masterminding her very first Super Bowl halftime show performance. At least, that's what Swifties believe after picking up on several seemingly cryptic comments from the...
 
 **Drama Score:** 36 | **Level:** EXPLOSIVE

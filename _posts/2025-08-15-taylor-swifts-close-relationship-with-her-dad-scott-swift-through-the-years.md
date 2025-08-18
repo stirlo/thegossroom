@@ -15,9 +15,9 @@ tags:
 - relationships
 - music
 temperature: 100
-title: "Taylor Swift\u2019s Close Relationship With Her Dad Scott Swift Through the\
-  \ Years"
+title: Taylor Swift’s Close Relationship With Her Dad Scott Swift Through the Years
 ---
+
 
 
 Taylor Swift and her dad, Scott Swift, have had a very special bond with each other throughout her life. Scott and Andrea Swift tied the knot in February 1988 and welcomed Taylor in 1989 and son Austin in 1992. When Taylor wanted to pursue a career in music, Scott relocated his financial advisory company to […]

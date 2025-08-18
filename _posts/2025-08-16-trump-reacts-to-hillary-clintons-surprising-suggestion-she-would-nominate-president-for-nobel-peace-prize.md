@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: Trump reacts to Hillary Clinton's surprising suggestion she would nominate
-  president for Nobel Peace Prize
+title: Trump reacts to Hillary Clinton's surprising suggestion she would nominate president for Nobel Peace Prize
 ---
+
 
 
 The Former Secretary of State made the statement in a podcast appearance ahead of Trump's meeting with Russian President Vladimir Putin in Alaska.

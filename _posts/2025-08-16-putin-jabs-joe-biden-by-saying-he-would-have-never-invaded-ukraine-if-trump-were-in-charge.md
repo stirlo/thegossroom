@@ -14,9 +14,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 300
-title: Putin jabs Joe Biden by saying he would have never invaded Ukraine if Trump
-  were in charge
+title: Putin jabs Joe Biden by saying he would have never invaded Ukraine if Trump were in charge
 ---
+
 
 
 Vladimir Putin said that former President Joe Biden is to blame for allowing the war with Ukraine to materialize.

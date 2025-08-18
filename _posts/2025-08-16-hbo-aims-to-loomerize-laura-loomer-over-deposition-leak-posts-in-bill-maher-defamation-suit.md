@@ -12,9 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: HBO Aims To Loomerize Laura Loomer Over Deposition Leak & Posts In Bill Maher
-  Defamation Suit
+title: HBO Aims To Loomerize Laura Loomer Over Deposition Leak & Posts In Bill Maher Defamation Suit
 ---
+
 
 
 Gavin Newsom wants to fight “fire with fire” when it comes to Donald Trump and attacks on American democracy, but HBO and Bill Maher just want Laura Loomer to stop talking and posting. Good luck. “It has come to Defendants’ attention that after Plaintiff needlessly filed her deposition on the public docket as part of […]

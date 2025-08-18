@@ -1,19 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:33 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  bryan_kohberger: 6
-primary_celebrity: bryan_kohberger
+mentions: {}
 source: tmz
 source_url: https://www.tmz.com/2025/08/15/bryan-kohberger-steve-goncalves-idaho-prison-problems/
 tags:
 - celebrity-gossip
 - scandals
-title: Bryan Kohberger Is 'Marked,' Victim's Dad Says, Snitching on Inmates Just Adds
-  to It
+title: Bryan Kohberger Is 'Marked,' Victim's Dad Says, Snitching on Inmates Just Adds to It
+temperature: 0
 ---
+
 
 Quadruple murderer Bryan Kohberger is already bitching about his life in prison and how he's being taunted by fellow inmates ... and the father of one of his victims says that should be the least of his concerns in the joint. Steve Goncalves,…
 

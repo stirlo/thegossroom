@@ -14,8 +14,9 @@ tags:
 - kim-kardashian
 - fashion
 temperature: 100
-title: "Kim Kardashian shows off blond hair transformation: \u2018About that time\u2019"
+title: 'Kim Kardashian shows off blond hair transformation: ‘About that time’'
 ---
+
 
 
 The Skims founder debuted her switched-up look with a sultry snap shared on her Instagram Friday.

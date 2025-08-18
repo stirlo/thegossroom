@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: Putin's face says it all as Trump shocks him with roaring power move as they
-  meet in Alaska
+title: Putin's face says it all as Trump shocks him with roaring power move as they meet in Alaska
 ---
+
 
 
 The reaction came just moments after Putin shook Donald Trump 's hand in their first face-to-face meeting since 2018.

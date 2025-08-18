@@ -13,9 +13,9 @@ tags:
 - scandals
 - taylor-swift
 temperature: 100
-title: Do These Texts Make Justin Baldoni Look Bad? Taylor Swift Has Another Big Surprise!
-  And MORE Hot Topics!
+title: Do These Texts Make Justin Baldoni Look Bad? Taylor Swift Has Another Big Surprise! And MORE Hot Topics!
 ---
+
 
 
 What a rollercoaster! Watch above! Enjoy! SHARE! [...] Read More... The post Do These Texts Make Justin Baldoni Look Bad? Taylor Swift Has Another Big Surprise! And MORE Hot Topics! appeared first on Perez Hilton.

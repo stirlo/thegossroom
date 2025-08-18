@@ -3,18 +3,17 @@ categories:
 - gossip
 - entertainment
 date: '2025-08-17T13:56:00'
-drama_score: 100
+drama_score: 0
 layout: post
-mentions:
-  bieber: 2
-primary_celebrity: bieber
+mentions: {}
 source: elle
 source_url: https://www.elle.com/culture/celebrities/a65799854/hailey-bieber-feet-pic-jack-blues-bieber/
 tags:
 - celebrity-gossip
-temperature: 100
+temperature: 0
 title: Hailey Bieber Shares Adorable Photo of Playing With Son Jack Blues Bieber
 ---
+
 
 
 

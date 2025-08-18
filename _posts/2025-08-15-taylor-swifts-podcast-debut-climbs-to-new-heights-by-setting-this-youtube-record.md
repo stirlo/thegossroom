@@ -14,9 +14,9 @@ tags:
 - music
 - taylor-swift
 temperature: 100
-title: "Taylor Swift\u2019s Podcast Debut Climbs to \u2018New Heights\u2019 by Setting\
-  \ This YouTube Record"
+title: Taylor Swift’s Podcast Debut Climbs to ‘New Heights’ by Setting This YouTube Record
 ---
+
 
 
 The show peaked at 1.3 million concurrent livestream viewers -- a new podcast high on the platform.

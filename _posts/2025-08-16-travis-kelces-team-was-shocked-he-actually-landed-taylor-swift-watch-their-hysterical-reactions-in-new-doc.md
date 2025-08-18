@@ -15,9 +15,9 @@ tags:
 - relationships
 - taylor-swift
 temperature: 200
-title: Travis Kelce's Team Was SHOCKED He Actually Landed Taylor Swift -- Watch Their
-  Hysterical Reactions In New Doc!
+title: Travis Kelce's Team Was SHOCKED He Actually Landed Taylor Swift -- Watch Their Hysterical Reactions In New Doc!
 ---
+
 
 
 The Kansas City Chiefs could not be more shocked that Travis Kelce actually stole Taylor Swift‘s heart! As you know, back in September 2023 Tayvis broke the internet — and pretty much the rest of the world — when the pop star showed up at Arrowhead Stadium to watch her beau play. Hilariously, we now [...] Read More... The post Travis Kelce's Team Was SHOCKED He Actually Landed Taylor Swift -- Watch Their Hysterical Reactions In New Doc! appeared first on Perez Hilton.

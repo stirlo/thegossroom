@@ -1,21 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-16 07:15:15 +0000
-drama_score: 8
+drama_score: 0
 layout: post
-mentions:
-  meghan_markle: 4
-  prince_harry: 4
-primary_celebrity: meghan_markle
+mentions: {}
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/royals/article-14971765/body-language-meghan-markle-control-harry-anxious.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
 - celebrity-gossip
 - scandals
-title: 'Revealed: The eye-opening moment royal fans missed when Meghan Markle showcased
-  her ''dynamic'' with Prince Harry who ''felt anxious'' as she ''took control'',
-  according to body language expert'
+title: 'Revealed: The eye-opening moment royal fans missed when Meghan Markle showcased her ''dynamic'' with Prince Harry who ''felt anxious'' as she ''took control'', according to body language expert'
+temperature: 0
 ---
+
 
 In July 2018, Prince Harry and Meghan Markle undertook a two-day visit to Dublin, shortly after their wedding at St George's Chapel.
 

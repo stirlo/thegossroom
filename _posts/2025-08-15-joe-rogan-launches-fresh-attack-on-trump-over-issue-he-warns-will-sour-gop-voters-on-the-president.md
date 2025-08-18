@@ -12,9 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: Joe Rogan launches fresh attack on Trump over issue he warns will sour GOP
-  voters on the president
+title: Joe Rogan launches fresh attack on Trump over issue he warns will sour GOP voters on the president
 ---
+
 
 
 Rogan, 58, claimed the conservative was alienating his base Wednesday.

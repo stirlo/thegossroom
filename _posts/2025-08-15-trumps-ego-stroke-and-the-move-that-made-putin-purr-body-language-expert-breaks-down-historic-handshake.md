@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: 'Trump''s ''ego-stroke'' and the move that made Putin ''purr'': Body language
-  expert breaks down historic handshake'
+title: 'Trump''s ''ego-stroke'' and the move that made Putin ''purr'': Body language expert breaks down historic handshake'
 ---
+
 
 
 Presidents Donald Trump and Vladimir Putin were all smiles as they came face-to-face for the first time since 2018.

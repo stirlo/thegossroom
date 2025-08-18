@@ -12,9 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: 'Tesla Model Y review: FREDA LEWIS-STEMPEL on whether it can help boost sales
-  for the Musk owned car firm in Britain'
+title: 'Tesla Model Y review: FREDA LEWIS-STEMPEL on whether it can help boost sales for the Musk owned car firm in Britain'
 ---
+
 
 
 Tesla has given its best-selling Model Y electric SUV a facelift for 2025. But amongst Tesla's crashing stock and Musk's plunging popularity can it save its sales slump?

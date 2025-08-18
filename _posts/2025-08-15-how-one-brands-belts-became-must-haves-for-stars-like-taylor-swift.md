@@ -14,8 +14,9 @@ tags:
 - fashion
 - taylor-swift
 temperature: 100
-title: "How one brand\u2019s belts became must-haves for stars like Taylor Swift"
+title: How one brand’s belts became must-haves for stars like Taylor Swift
 ---
+
 
 
 Right now, only Page Six Style readers can take 20% off with our exclusive promo code.

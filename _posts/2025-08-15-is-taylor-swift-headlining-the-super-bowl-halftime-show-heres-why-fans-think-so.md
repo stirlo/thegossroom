@@ -14,9 +14,9 @@ tags:
 - music
 - taylor-swift
 temperature: 100
-title: "Is Taylor Swift Headlining the Super Bowl Halftime Show? Here\u2019s Why Fans\
-  \ Think So"
+title: Is Taylor Swift Headlining the Super Bowl Halftime Show? Here’s Why Fans Think So
 ---
+
 
 
 Fans are convinced these Easter eggs mean the pop superstar is finally taking the famed stage in 2026

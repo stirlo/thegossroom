@@ -13,8 +13,9 @@ tags:
 - scandals
 - kanye-west
 temperature: 100
-title: "Kanye West and Bianca Censori Dine at Denny\u2019s on Rare Lunch Date"
+title: Kanye West and Bianca Censori Dine at Denny’s on Rare Lunch Date
 ---
+
 
 
 Kanye “Ye” West and Bianca Censori’s latest date was a grand slam. The Grammy winner and his wife of three years had a rare outing at breakfast staple Denny’s in California on Aug. 14. For the...

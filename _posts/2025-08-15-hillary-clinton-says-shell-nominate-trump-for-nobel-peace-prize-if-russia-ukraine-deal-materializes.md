@@ -12,9 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: Hillary Clinton says she'll nominate Trump for Nobel Peace Prize if Russia-Ukraine
-  deal materializes
+title: Hillary Clinton says she'll nominate Trump for Nobel Peace Prize if Russia-Ukraine deal materializes
 ---
+
 
 
 Former Secretary of State Hillary Clinton has suggested that if Donald Trump brokers a successful Ukraine-Russia peace deal that he should win the Nobel Prize.

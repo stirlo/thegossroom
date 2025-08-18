@@ -1,20 +1,19 @@
 ---
 categories: gossip
 date: 2025-08-15 16:21:03 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  ozzy_osbourne: 2
-primary_celebrity: ozzy_osbourne
+mentions: {}
 source: billboard
 source_url: https://www.billboard.com/lists/fall-music-books-dolly-parton-ozzy-osbourne-mark-ronson/
 tags:
 - celebrity-gossip
 - scandals
 - music
-title: Dolly Parton, Mark Ronson, Ozzy Osbourne & More Must-Read Music Books Arriving
-  This Fall
+title: Dolly Parton, Mark Ronson, Ozzy Osbourne & More Must-Read Music Books Arriving This Fall
+temperature: 0
 ---
+
 
 In the coming months, several page-turners from music superstars across genres will hit the shelves.
 

@@ -19,6 +19,7 @@ title: Kourtney Kardashian Rocks Plunging Leopard Swimsuit in Family Photos
 ---
 
 
+
 Kourtney Kardashian has been soaking up life on the Italian coast while making core memories with husband Travis Barker and baby Rocky. The Poosh founder, 46, turned her family trip into a full-on fashion moment in photos shared from their visit to the San Fruttuoso cove beach in Liguria on Thursday, August 14, in which […]
 
 **Drama Score:** 21 | **Level:** EXPLOSIVE

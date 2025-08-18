@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 23:16:24 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  cardi_b: 6
-primary_celebrity: cardi_b
+mentions: {}
 source: us_weekly
 source_url: https://www.usmagazine.com/entertainment/news/cardi-bs-new-album-everything-we-know-so-far/
 tags:
@@ -13,7 +11,9 @@ tags:
 - scandals
 - music
 title: Cardi B Samples Jay-Z in New 'Drama' Single 'Imaginary Playerz'
+temperature: 0
 ---
+
 
 It’s been more than years since Cardi B took over the rap world with Invasion of Privacy, and her fans are ready for the follow-up. One such supporter is Cardi’s estranged husband, Offset, who took to Instagram in February 2024 to encourage her to take the plunge. “Stop being [scared] and drop the album,” Offset […]
 

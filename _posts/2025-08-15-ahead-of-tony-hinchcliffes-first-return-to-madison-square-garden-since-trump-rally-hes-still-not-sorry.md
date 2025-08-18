@@ -12,9 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: "Ahead of Tony Hinchcliffe\u2019s First Return to Madison Square Garden Since\
-  \ Trump Rally, He\u2019s Still Not Sorry"
+title: Ahead of Tony Hinchcliffe’s First Return to Madison Square Garden Since Trump Rally, He’s Still Not Sorry
 ---
+
 
 
 The comedian referenced his controversial Trump rally appearance during a set at The Stand comedy club, on the eve of his two-night stint at MSG.

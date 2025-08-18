@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: Putin stuns Trump as he breaks into English to make surprise Moscow offer after
-  leaders announced 'no deal' on ending Ukraine war
+title: Putin stuns Trump as he breaks into English to make surprise Moscow offer after leaders announced 'no deal' on ending Ukraine war
 ---
+
 
 
 Trump didn't appeared to have been caught off guard by his Russian counterpart, but winged an answer that was both encouraging and non-committal.

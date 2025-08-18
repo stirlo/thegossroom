@@ -15,9 +15,9 @@ tags:
 - relationships
 - music
 temperature: 100
-title: "Watch Jared Goff React to Taylor Swift Name-Dropping Him on \u2018New Heights\u2019\
-  : \u2018That Was a Crazy Couple of Hours\u2019"
+title: 'Watch Jared Goff React to Taylor Swift Name-Dropping Him on ‘New Heights’: ‘That Was a Crazy Couple of Hours’'
 ---
+
 
 
 The pop star gave him a shout-out while explaining her newfound obsession with football.

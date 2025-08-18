@@ -17,6 +17,7 @@ title: Trump and Putin Have Constative Historic Summit in Alaska, But No Deals M
 ---
 
 
+
 4:08 PM PT -- President Trump and Vladimir Putin had a brief joint presser following their roughly 2 1/2 hour meeting ... revealing not much about what was discussed saying "there's no deal until there's a deal" and that they didn't "get there" --…
 
 **Drama Score:** 6 | **Level:** HOT

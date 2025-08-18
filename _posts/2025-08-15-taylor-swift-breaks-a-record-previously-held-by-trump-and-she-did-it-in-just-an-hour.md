@@ -14,9 +14,9 @@ tags:
 - scandals
 - taylor-swift
 temperature: 200
-title: Taylor Swift Breaks A Record Previously Held By Trump, And She Did It In Just
-  An Hour
+title: Taylor Swift Breaks A Record Previously Held By Trump, And She Did It In Just An Hour
 ---
+
 
 
 Considering the president’s fragile ego, he likely won’t shake it off.

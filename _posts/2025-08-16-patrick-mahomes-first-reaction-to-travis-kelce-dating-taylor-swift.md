@@ -15,8 +15,9 @@ tags:
 - relationships
 - taylor-swift
 temperature: 200
-title: "Patrick Mahomes\u2019 First Reaction to Travis Kelce Dating Taylor Swift"
+title: Patrick Mahomes’ First Reaction to Travis Kelce Dating Taylor Swift
 ---
+
 
 
 Patrick Mahomes needed a video review before making the final call. The Kansas City Chiefs quarterback revealed he was hesitant to believe his teammate Travis Kelce was dating Taylor Swift until...

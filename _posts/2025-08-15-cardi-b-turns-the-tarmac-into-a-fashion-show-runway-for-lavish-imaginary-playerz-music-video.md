@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 16:21:03 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  cardi_b: 2
-primary_celebrity: cardi_b
+mentions: {}
 source: billboard
 source_url: https://www.billboard.com/music/rb-hip-hop/cardi-b-imaginary-playerz-video-1236045152/
 tags:
@@ -13,9 +11,10 @@ tags:
 - scandals
 - music
 - fashion
-title: Cardi B Turns the Tarmac Into a Fashion Show Runway for Lavish ‘Imaginary Playerz’
-  Music Video
+title: Cardi B Turns the Tarmac Into a Fashion Show Runway for Lavish ‘Imaginary Playerz’ Music Video
+temperature: 0
 ---
+
 
 The track is her second single from upcoming album Am I the Drama?
 

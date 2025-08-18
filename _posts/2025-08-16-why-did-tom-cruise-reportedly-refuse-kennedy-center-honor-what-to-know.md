@@ -16,6 +16,7 @@ title: Why Did Tom Cruise Reportedly Refuse Kennedy Center Honor? What to Know
 ---
 
 
+
 Getting Tom Cruise to accept a 2025 Kennedy Center Honor is proving to be mission impossible. The Top Gun actor was offered the 2025 prestigious award but declined, according to multiple Kennedy Center employees who spoke to The Washington Post. President Donald Trump, who now serves as the chairman of the Kennedy Center, is hoping […]
 
 **Drama Score:** 12 | **Level:** EXPLOSIVE

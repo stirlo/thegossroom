@@ -14,9 +14,9 @@ source_url: https://www.dailymail.co.uk/news/article-15009351/trump-zelenskyy-uk
 tags:
 - celebrity-gossip
 temperature: 200
-title: Trump tells Zelensky he can end Ukraine-Russia war 'immediately' as he lays
-  out terms for peace with Putin ahead of White House summit
+title: Trump tells Zelensky he can end Ukraine-Russia war 'immediately' as he lays out terms for peace with Putin ahead of White House summit
 ---
+
 
 
 Trump categorically ruled out Zelensky's hope to see Ukraine join NATO and indicated he has no desire to see Crimea returned to Ukrainian rule.

@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 15:17:38 +0000
-drama_score: 4
+drama_score: 0
 layout: post
-mentions:
-  sophie_turner: 4
-primary_celebrity: sophie_turner
+mentions: {}
 source: daily_mail
 source_url: https://www.dailymail.co.uk/tvshowbiz/article-15003899/Sophie-Turner-split-celebrity-couple-afterparty.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
@@ -14,9 +12,10 @@ tags:
 - breakups
 - scandals
 - relationships
-title: Sophie Turner claims she broke up A-list couple with simple gesture at Hollywood
-  afterparty
+title: Sophie Turner claims she broke up A-list couple with simple gesture at Hollywood afterparty
+temperature: 0
 ---
+
 
 Sophie Turner sent fans into overdrive with a wild confession - claiming she was to blame for a celebrity couple calling off their engagement after a single run-in at a Hollywood soiree.
 

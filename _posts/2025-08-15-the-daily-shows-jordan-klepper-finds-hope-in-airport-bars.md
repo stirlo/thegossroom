@@ -12,8 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: "\u2018The Daily Show\u2019s Jordan Klepper Finds Hope In Airport Bars"
+title: ‘The Daily Show’s Jordan Klepper Finds Hope In Airport Bars
 ---
+
 
 
 During the last Presidential election, Jordan Klepper, one of the hosts of The Daily Show, was snowed in in at Straubel International Airport in Green Bay, Wisconsin after a Trump rally. His flight was delayed three and a half hours so he decamped to the airport bar. Who happened to be sitting next to him? […]

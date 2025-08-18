@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: 'Trump and Putin admit there''s still work to be done before a deal to end
-  the Ukraine war and issue warning to the rest of the world: Live updates'
+title: 'Trump and Putin admit there''s still work to be done before a deal to end the Ukraine war and issue warning to the rest of the world: Live updates'
 ---
+
 
 
 LIVE UPDATES: Follow the latest updates as Donald Trump and Vladimir Putin meet one another in an historic summit in Alaska to discuss how to end the war in Ukraine.

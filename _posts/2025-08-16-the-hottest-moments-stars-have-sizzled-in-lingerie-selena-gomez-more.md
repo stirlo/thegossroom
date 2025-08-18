@@ -18,6 +18,7 @@ title: 'The Hottest Moments Stars Have Sizzled in Lingerie: Selena Gomez, More'
 ---
 
 
+
 You know what they say: if you got it, flaunt it! Tons of the hottest celebs live by this motto, showing off their assets in some seriously steamy lingerie looks. Kim Kardashian is no stranger to a sexy snap. In one of our favorite shots, she showed off her Calvin Klein undies in a black […]
 
 **Drama Score:** 15 | **Level:** EXPLOSIVE

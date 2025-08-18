@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: 'Trump threatens Putin he''ll ''walk'' if their high-stakes Alaska meeting
-  on Ukraine peace goes spectacularly off the rails: Live updates'
+title: 'Trump threatens Putin he''ll ''walk'' if their high-stakes Alaska meeting on Ukraine peace goes spectacularly off the rails: Live updates'
 ---
+
 
 
 LIVE UPDATES: Follow the latest updates as Donald Trump and Vladimir Putin meet one another in an historic summit in Alaska to discuss how to end the war in Ukraine.

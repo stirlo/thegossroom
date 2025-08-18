@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 20:18:38 +0000
-drama_score: 9
+drama_score: 0
 layout: post
-mentions:
-  lil_yachty: 9
-primary_celebrity: lil_yachty
+mentions: {}
 source: tmz
 source_url: https://www.tmz.com/2025/08/15/george-floyd-brother-terrence-responds-lil-yachty-lyrics/
 tags:
@@ -13,7 +11,9 @@ tags:
 - scandals
 - music
 title: George Floyd's Brother Terrence Blasts Lil Yachty Over New Song Lyrics
+temperature: 0
 ---
+
 
 George Floyd's brother Terrence is going in on Lil Yachty for referencing George's death in a new song ... and Terrence says Yachty needs a history lesson. Terrence joined us on "TMZ Live" Friday, and we asked how he felt about Lil Yachty's new…
 

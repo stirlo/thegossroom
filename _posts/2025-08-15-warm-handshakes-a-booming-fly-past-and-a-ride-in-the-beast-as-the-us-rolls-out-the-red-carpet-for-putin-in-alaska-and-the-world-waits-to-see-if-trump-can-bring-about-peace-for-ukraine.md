@@ -13,10 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: Warm handshakes, a booming fly-past and a ride in the Beast as the US rolls
-  out the red carpet for Putin in Alaska... and the world waits to see if Trump can
-  bring about peace for Ukraine
+title: Warm handshakes, a booming fly-past and a ride in the Beast as the US rolls out the red carpet for Putin in Alaska... and the world waits to see if Trump can bring about peace for Ukraine
 ---
+
 
 
 History was made in Alaska last night as Donald Trump and Vladimir Putin flew in to discuss the future of Ukraine.

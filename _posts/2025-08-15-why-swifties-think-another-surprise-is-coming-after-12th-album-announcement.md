@@ -19,6 +19,7 @@ title: Why Swifties Think Another Surprise Is Coming After 12th Album Announceme
 ---
 
 
+
 Taylor Swift nearly broke the internet when she revealed her 12th album, The Life of a Showgirl, on boyfriend Travis Kelce’s podcast — but are there more surprises in store? Less than one day after Swift’s announcement, her official Taylor Nation X account sparked curiosity while replying to a fan who wanted to hear the […]
 
 **Drama Score:** 18 | **Level:** EXPLOSIVE

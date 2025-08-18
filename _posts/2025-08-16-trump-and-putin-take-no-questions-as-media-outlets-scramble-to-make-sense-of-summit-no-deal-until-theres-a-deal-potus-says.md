@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: "Trump And Putin Take No Questions As Media Outlets Scramble To Make Sense\
-  \ Of Summit: \u201CNo Deal Until There\u2019s A Deal,\u201D POTUS Says"
+title: 'Trump And Putin Take No Questions As Media Outlets Scramble To Make Sense Of Summit: “No Deal Until There’s A Deal,” POTUS Says'
 ---
+
 
 
 UPDATED: President Donald Trump and Russian President Vladimir Putin ended their summit with a press conference in which both leaders made statements but took no questions. Media outlets scrambled to try to figure out if there was any kind of agreement, with Putin talking about improved relations with the United States, yet calling the meeting […]

@@ -14,9 +14,9 @@ tags:
 - scandals
 - taylor-swift
 temperature: 200
-title: "How Taylor Swift and Travis Kelce Subtly Revealed They\u2019re Living Together\
-  \ on New Heights"
+title: How Taylor Swift and Travis Kelce Subtly Revealed They’re Living Together on New Heights
 ---
+
 
 
 

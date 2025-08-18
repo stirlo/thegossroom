@@ -18,6 +18,7 @@ title: Kylie Minogue Reacts to Taylor Swift Life of a Showgirl Comparisons
 ---
 
 
+
 Kylie Minogue knows a thing or two about the life of a showgirl. No, Taylor Swift hasn’t leaked her 12th album, but the “Please Stay,” singer was living such a life when she embarked on her...
 
 **Drama Score:** 18 | **Level:** EXPLOSIVE

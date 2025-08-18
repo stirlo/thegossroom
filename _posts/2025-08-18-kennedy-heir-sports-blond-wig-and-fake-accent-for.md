@@ -15,9 +15,9 @@ source_url: https://www.dailymail.co.uk/news/article-15009385/Jack-Schlossberg-m
 tags:
 - celebrity-gossip
 temperature: 300
-title: Kennedy heir sports blond wig and fake accent for Melania Trump impression
-  during unhinged video
+title: Kennedy heir sports blond wig and fake accent for Melania Trump impression during unhinged video
 ---
+
 
 
 John F. Kennedy heir Jack Schlossberg brutally mocked First Lady Melania Trump over her letter to Russian President Vladimir Putin in an unhinged video on Sunday.

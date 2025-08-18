@@ -16,6 +16,7 @@ title: Ana Navarro Urges Gloria Gaynor To Reject Kennedy Center Honor From Trump
 ---
 
 
+
 Navarro isn’t holding back.
 
 **Drama Score:** 2 | **Level:** RISING

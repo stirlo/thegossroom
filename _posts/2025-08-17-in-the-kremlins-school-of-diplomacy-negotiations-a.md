@@ -13,9 +13,9 @@ source_url: https://www.dailymail.co.uk/debate/article-15007351/Kremlins-school-
 tags:
 - celebrity-gossip
 temperature: 100
-title: In the Kremlin's school of diplomacy, negotiations are there to divide and
-  weaken the enemy, writes military expert BOB SEELY
+title: In the Kremlin's school of diplomacy, negotiations are there to divide and weaken the enemy, writes military expert BOB SEELY
 ---
+
 
 
 Trump wore a broad smile as if he was hosting an old friend, not a tyrant whose supporters regularly threaten nuclear armageddon against the West.

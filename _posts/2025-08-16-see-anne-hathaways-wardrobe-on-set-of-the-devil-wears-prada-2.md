@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-16 01:18:24 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  anne_hathaway: 6
-primary_celebrity: anne_hathaway
+mentions: {}
 source: us_weekly
 source_url: https://www.usmagazine.com/stylish/pictures/every-outfit-anne-hathaway-wore-while-filming-the-devil-wears-prada-2/
 tags:
@@ -14,7 +12,9 @@ tags:
 - movies
 - fashion
 title: See Anne Hathaway’s Wardrobe on Set of ‘The Devil Wears Prada 2’
+temperature: 0
 ---
+
 
 So far, Anne Hathaway’s Devil Wears Prada 2 costumes do not disappoint. Hathaway, who reprises her role as Andrea “Andy” Sachs in the sequel, has rocked everything from colorful dresses to sleek suits while filming the movie, which is set to be released in May 2026. The original film, which also starred Meryl Streep and […]
 

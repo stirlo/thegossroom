@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: Networks Plan Special Reports And Dispatch Anchors To Donald Trump-Vladimir
-  Putin Summit
+title: Networks Plan Special Reports And Dispatch Anchors To Donald Trump-Vladimir Putin Summit
 ---
+
 
 
 Networks will provide special coverage on Friday to President Donald Trump’s summit in Alaska with Russian President Vladimir Putin to discuss the ongoing war in Ukraine. All the major news networks were at Joint Base Elmendorf-Richardson to capture Trump’s arrival, at 10:20 a.m. local time in Anchorage. Fox News anchor Bret Baier interviewed Trump on […]

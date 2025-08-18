@@ -1,20 +1,19 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:40 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  meghan_markle: 2
-primary_celebrity: meghan_markle
+mentions: {}
 source: page_six
 source_url: https://pagesix.com/2025/08/15/style/meghan-markle-anthropologie-home-products-with-love-meghan/
 tags:
 - celebrity-gossip
 - scandals
 - fashion
-title: 'With love, Anthropologie: Meghan Markle’s favorite home products are surprisingly
-  affordable'
+title: 'With love, Anthropologie: Meghan Markle’s favorite home products are surprisingly affordable'
+temperature: 0
 ---
+
 
 Shop kitchenware fit for a queen (or duchess).
 

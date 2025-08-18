@@ -13,10 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: 'Warm smiles, a ride in the Beast and a united front - but no deal: Trump and
-  Putin make ''great progress'' but fail to seal Ukraine peace pact in Alaska as Russian
-  president mulls Moscow talks'
+title: 'Warm smiles, a ride in the Beast and a united front - but no deal: Trump and Putin make ''great progress'' but fail to seal Ukraine peace pact in Alaska as Russian president mulls Moscow talks'
 ---
+
 
 
 Donald Trump declared 'there's no deal until there's a deal' tonight as his historic summit with Vladimir Putin failed to yield any immediate result.

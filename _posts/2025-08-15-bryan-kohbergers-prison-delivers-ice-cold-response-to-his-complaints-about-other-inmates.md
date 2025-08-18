@@ -1,19 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-15 23:16:22 +0000
-drama_score: 9
+drama_score: 0
 layout: post
-mentions:
-  bryan_kohberger: 9
-primary_celebrity: bryan_kohberger
+mentions: {}
 source: perez_hilton
 source_url: https://perezhilton.com/bryan-kohberger-complains-inmates-prison-responds/
 tags:
 - celebrity-gossip
 - scandals
-title: Bryan Kohberger's Prison Delivers ICE COLD Response To His Complaints About
-  Other Inmates!
+title: Bryan Kohberger's Prison Delivers ICE COLD Response To His Complaints About Other Inmates!
+temperature: 0
 ---
+
 
 Oh, is Bryan Kohberger having a tough time in prison? Yeah, no one cares. The quadruple murderer was recently sentenced to four life terms for the murders of those University of Idaho students. And it turns out, being incarcerated? Not working out too well for the criminology student! Retired homicide detective Chris McDonough, who works for the Cold [...] Read More... The post Bryan Kohberger's Prison Delivers ICE COLD Response To His Complaints About Other Inmates! appeared first on Perez Hilt...
 

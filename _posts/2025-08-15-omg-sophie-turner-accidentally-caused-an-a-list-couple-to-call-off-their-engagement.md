@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:34 +0000
-drama_score: 9
+drama_score: 0
 layout: post
-mentions:
-  sophie_turner: 9
-primary_celebrity: sophie_turner
+mentions: {}
 source: perez_hilton
 source_url: https://perezhilton.com/sophie-turner-accidentally-cause-a-list-couple-breakup-engagement/
 tags:
@@ -14,7 +12,9 @@ tags:
 - relationships
 - breakups
 title: OMG! Sophie Turner Accidentally Caused An A-List Couple To Call Off Their Engagement!
+temperature: 0
 ---
+
 
 Oh no, Sophie Turner! While chatting with Seth Meyers on Thursday’s episode of Late Night, the newly single actress revealed she’s got some pretty awesome flirting skills. But one time she used them was a total accident — and did NOT end well! Back in 2014, Seth explained, he and Sophie were at a Comic-Con [...] Read More... The post OMG! Sophie Turner Accidentally Caused An A-List Couple To Call Off Their Engagement! appeared first on Perez Hilton.
 

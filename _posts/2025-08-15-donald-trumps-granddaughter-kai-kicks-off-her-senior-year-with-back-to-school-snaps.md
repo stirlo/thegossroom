@@ -12,9 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: "Donald Trump\u2019s granddaughter Kai kicks off her senior year with back-to-school\
-  \ snaps"
+title: Donald Trump’s granddaughter Kai kicks off her senior year with back-to-school snaps
 ---
+
 
 
 While the 18-year-old golfer is still a high school student, she has already committed to attending the University of Miami next year.

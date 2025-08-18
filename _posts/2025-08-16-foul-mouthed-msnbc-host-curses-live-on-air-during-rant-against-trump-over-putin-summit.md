@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: Foul-mouthed MSNBC host curses live on air during rant against Trump over Putin
-  summit
+title: Foul-mouthed MSNBC host curses live on air during rant against Trump over Putin summit
 ---
+
 
 
 MSNBC host Nicolle Wallace went on a tirade against the president for meeting with the Russian leader on Friday.

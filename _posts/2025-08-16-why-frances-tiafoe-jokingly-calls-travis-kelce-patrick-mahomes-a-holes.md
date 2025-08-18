@@ -17,6 +17,7 @@ title: Why Frances Tiafoe Jokingly Calls Travis Kelce, Patrick Mahomes 'A--holes
 ---
 
 
+
 Tennis star Frances Tiafoe was one win away from a legendary U.S. Open moment — and Travis Kelce and Patrick Mahomes weren’t going to let him forget about it. Tiafoe, 27, lost to fellow American Taylor Fritz in the semifinals of last year’s tournament. Two days later, Kelce, 35, and Mahomes, 29, attended the men’s […]
 
 **Drama Score:** 15 | **Level:** EXPLOSIVE

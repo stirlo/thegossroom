@@ -18,6 +18,7 @@ title: Gordon Ramsay's Sourdough Shout-Out to Taylor Swift Has Travis Kelce Reel
 ---
 
 
+
 Gordon Ramsay being a subtle Swiftie was not on the 2025 bingo card — but Taylor Swift’s love of sourdough has brought them together. “I know a thing or two about a sourdough,” Ramsay, 58, wrote via Instagram on Thursday, August 14. “Just saying @taylorswift and @killatrav 😉.” In the video, the celebrity chef cuts […]
 
 **Drama Score:** 24 | **Level:** EXPLOSIVE

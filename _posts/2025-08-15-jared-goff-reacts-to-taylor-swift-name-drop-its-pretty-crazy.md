@@ -17,6 +17,7 @@ title: Jared Goff Reacts To Taylor Swift Name-Drop, 'It's Pretty Crazy'
 ---
 
 
+
 Jared Goff said Taylor Swift made his Wednesday night one he'll remember all too well going forward ... explaining to reporters that after she name-dropped him on "New Heights" -- his phone blew up. The pop superstar briefly mentioned the Detroit…
 
 **Drama Score:** 18 | **Level:** EXPLOSIVE

@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 21:13:54 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  sydney_sweeney: 2
-primary_celebrity: sydney_sweeney
+mentions: {}
 source: daily_mail
 source_url: https://www.dailymail.co.uk/tvshowbiz/article-15004785/Inside-Sydney-Sweeneys-wild-boozy-night-continues-blow-American-Eagle-controversy.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
@@ -13,9 +11,10 @@ tags:
 - scandals
 - movies
 - fashion
-title: Inside Sydney Sweeney's wild boozy night out as she continues to blow off American
-  Eagle controversy
+title: Inside Sydney Sweeney's wild boozy night out as she continues to blow off American Eagle controversy
+temperature: 0
 ---
+
 
 Hollywood's latest 'it' girl wore a farm-girl style white cotton crop top that flashed her toned tummy as she added oversized blue denim jeans and white sneakers. She was surrounded by pals.
 

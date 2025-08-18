@@ -14,10 +14,9 @@ source_url: https://www.dailymail.co.uk/news/article-15008089/Russia-stages-fake
 tags:
 - celebrity-gossip
 temperature: 200
-title: Russia stages fake videos of troops overtaking Ukraine territory in bid to
-  fool Trump at the negotiating table - as European leaders dash to Washington with
-  Zelensky after Putin showdown
+title: Russia stages fake videos of troops overtaking Ukraine territory in bid to fool Trump at the negotiating table - as European leaders dash to Washington with Zelensky after Putin showdown
 ---
+
 
 
 Russian commanders are reportedly forcing troops to risk their lives in suicidal flag-painting missions, sending small groups to the frontline villages to raise the Russian flag.

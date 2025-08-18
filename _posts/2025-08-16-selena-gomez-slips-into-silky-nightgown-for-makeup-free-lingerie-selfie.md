@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-16 06:23:23 +0000
-drama_score: 6
+drama_score: 0
 layout: post
-mentions:
-  selena_gomez: 6
-primary_celebrity: selena_gomez
+mentions: {}
 source: us_weekly
 source_url: https://www.usmagazine.com/stylish/news/selena-gomez-wears-nightgown-in-makeup-free-lingerie-photo/
 tags:
@@ -13,7 +11,9 @@ tags:
 - scandals
 - celebrity-gossip
 title: Selena Gomez Slips Into Silky Nightgown for Makeup-Free Lingerie Selfie
+temperature: 0
 ---
+
 
 Selena Gomez gave fans a glimpse of her cozy evening with a new mirror selfie that radiates soft glam, slipping into a silky nightgown while rocking glasses with hot pink frames. The “Rare” singer, 33, showed off her natural beauty as she sported a fresh-faced look and tousled hair, wearing a delicate blush slip with […]
 

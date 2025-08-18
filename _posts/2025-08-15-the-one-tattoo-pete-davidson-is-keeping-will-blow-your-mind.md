@@ -16,6 +16,7 @@ title: The ONE Tattoo Pete Davidson Is Keeping Will Blow Your Mind!
 ---
 
 
+
 Pete Davidson is in the process of removing all almost all of his tattoos — but while he may want a clean slate, some of his ink is too good to go! On Wednesday’s episode of The Breakfast Club, the Saturday Night Live star revealed there’s one very special piece of body art he won’t [...] Read More... The post The ONE Tattoo Pete Davidson Is Keeping Will Blow Your Mind! appeared first on Perez Hilton.
 
 **Drama Score:** 21 | **Level:** EXPLOSIVE

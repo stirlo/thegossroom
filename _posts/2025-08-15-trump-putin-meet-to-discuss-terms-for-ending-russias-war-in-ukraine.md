@@ -13,8 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: "Trump, Putin Meet to Discuss Terms for Ending Russia\u2019s War in Ukraine"
+title: Trump, Putin Meet to Discuss Terms for Ending Russia’s War in Ukraine
 ---
+
 
 
 The Ukrainians were not invited, and Trump said he’s not planning to “negotiate for Ukraine”

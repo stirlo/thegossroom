@@ -19,6 +19,7 @@ title: Travis Kelce Supports Taylor Swift by Wearing Her Merch in 'The Kingdom'
 ---
 
 
+
 Travis Kelce is in his Swiftie era — and his wardrobe confirms it. Eagle-eyed fans spotted the NFL star, 35, wearing merchandise from girlfriend Taylor Swift’s 11th studio album, ​​The Tortured Poets Department, while appearing in ESPN’s new Kansas City Chiefs documentary, The Kingdom, during training camp. Kelce was sporting a TTPD Gray Embossed Hoodie, […]
 
 **Drama Score:** 33 | **Level:** EXPLOSIVE

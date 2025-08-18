@@ -18,6 +18,7 @@ title: Sydney Sweeney Just Had the Biggest Controversy of Her Career. Now What?
 ---
 
 
+
 Experts weigh in on where the 27-year-old actress goes after being at the center of the storm involving an American Eagle jeans campaign that had everyone from Donald Trump to Lizzo sharing hot takes.
 
 **Drama Score:** 8 | **Level:** HOT

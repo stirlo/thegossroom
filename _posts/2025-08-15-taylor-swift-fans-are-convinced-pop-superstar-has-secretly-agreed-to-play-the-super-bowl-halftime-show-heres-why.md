@@ -14,9 +14,9 @@ tags:
 - scandals
 - taylor-swift
 temperature: 200
-title: Taylor Swift fans are convinced pop superstar has secretly agreed to play the
-  Super Bowl halftime show... here's why
+title: Taylor Swift fans are convinced pop superstar has secretly agreed to play the Super Bowl halftime show... here's why
 ---
+
 
 
 One of the many topics Taylor Swift discussed in her appearance on boyfriend Travis Kelce's podcast, New Heights, may have been an Easter Egg to her long-standing fans.

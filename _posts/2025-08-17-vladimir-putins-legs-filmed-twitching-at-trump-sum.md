@@ -15,9 +15,9 @@ tags:
 - celebrity-gossip
 - movies
 temperature: 200
-title: Vladimir Putin's Legs Filmed Twitching at Trump Summit Amid Rumors of Health
-  Issues
+title: Vladimir Putin's Legs Filmed Twitching at Trump Summit Amid Rumors of Health Issues
 ---
+
 
 
 Rumors about Vladimir Putin's declining health have been around for years ... and there might be some truth to the speculation if you caught the subtle clues during his high-stakes summit with President Donald Trump in Alaska. Video has surfaced…

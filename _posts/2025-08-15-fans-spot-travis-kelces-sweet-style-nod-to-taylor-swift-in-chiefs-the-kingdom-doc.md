@@ -15,9 +15,9 @@ tags:
 - fashion
 - taylor-swift
 temperature: 200
-title: "Fans spot Travis Kelce\u2019s sweet style nod to Taylor Swift in Chiefs \u2018\
-  The Kingdom\u2019 doc"
+title: Fans spot Travis Kelce’s sweet style nod to Taylor Swift in Chiefs ‘The Kingdom’ doc
 ---
+
 
 
 The athlete appears to have worn her merchandise during the first few days of the team's 2024 training camp.

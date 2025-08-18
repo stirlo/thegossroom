@@ -1,20 +1,19 @@
 ---
 categories: gossip
 date: 2025-08-15 21:13:58 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  cardi_b: 2
-primary_celebrity: cardi_b
+mentions: {}
 source: billboard
 source_url: https://www.billboard.com/music/rb-hip-hop/cardi-b-chapter-life-2025-1236045616/
 tags:
 - celebrity-gossip
 - scandals
 - music
-title: 'Cardi B Opens Up About ‘Very Personal’ Chapter of Life: ‘I’ve Proven People
-  Wrong Over & Over Again’'
+title: 'Cardi B Opens Up About ‘Very Personal’ Chapter of Life: ‘I’ve Proven People Wrong Over & Over Again’'
+temperature: 0
 ---
+
 
 Cardi released her "Imaginary Playerz" single on Friday (Aug. 15).
 

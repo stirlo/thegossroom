@@ -14,8 +14,9 @@ tags:
 - music
 - taylor-swift
 temperature: 100
-title: "Taylor Swift and Sabrina Carpenter\u2019s Friendship Timeline"
+title: Taylor Swift and Sabrina Carpenter’s Friendship Timeline
 ---
+
 
 
 Taylor Swift and Sabrina Carpenter’s friendship has come a long way over the years. Before the pair became the besties they are today, Carpenter was a longtime fan of Swift. Prior to dropping tracks like “Nonsense” and “Espresso,” Carpenter posted covers of Swift’s songs on her YouTube page, including “Picture to Burn” and “White Horse.” […]

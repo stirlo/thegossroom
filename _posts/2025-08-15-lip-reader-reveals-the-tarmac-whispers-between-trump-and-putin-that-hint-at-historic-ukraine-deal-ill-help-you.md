@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: 'Lip reader reveals the tarmac whispers between Trump and Putin that hint at
-  historic Ukraine deal: ''I''ll help you'''
+title: 'Lip reader reveals the tarmac whispers between Trump and Putin that hint at historic Ukraine deal: ''I''ll help you'''
 ---
+
 
 
 Donald Trump and Vladimir Putin appeared to agree to 'help' each other strike a deal as they met in person for the first time in six years.

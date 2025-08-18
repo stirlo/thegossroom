@@ -1,19 +1,18 @@
 ---
 categories: gossip
 date: 2025-08-15 16:21:03 +0000
-drama_score: 4
+drama_score: 0
 layout: post
-mentions:
-  diddy: 4
-primary_celebrity: diddy
+mentions: {}
 source: billboard
 source_url: https://www.billboard.com/pro/diddy-wins-ruling-sexual-assault-lawsuit-sara-rivers/
 tags:
 - celebrity-gossip
 - scandals
-title: Diddy Wins Ruling Mostly Tossing Sexual Assault Lawsuit From ‘Making the Band’
-  Singer Sara Rivers
+title: Diddy Wins Ruling Mostly Tossing Sexual Assault Lawsuit From ‘Making the Band’ Singer Sara Rivers
+temperature: 0
 ---
+
 
 The contestant on the 2000s MTV reality show claimed Diddy groped her breast and committed a wide range of other legal wrongdoing.
 

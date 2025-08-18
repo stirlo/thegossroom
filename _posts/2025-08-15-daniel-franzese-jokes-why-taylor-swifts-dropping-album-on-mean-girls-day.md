@@ -19,6 +19,7 @@ title: Daniel Franzese Jokes Why Taylor Swift's Dropping Album on 'Mean Girls' D
 ---
 
 
+
 Taylor Swift lives for Easter eggs ... so it’s no accident her new album’s dropping October 3, AKA "Mean Girls" Day -- and now, one of the movie’s stars is spilling to us what he thinks she’s really up to. We bumped into Daniel Franzese in…
 
 **Drama Score:** 18 | **Level:** EXPLOSIVE

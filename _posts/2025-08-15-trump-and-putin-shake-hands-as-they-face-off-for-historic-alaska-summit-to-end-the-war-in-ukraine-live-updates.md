@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: 'Trump and Putin shake hands as they face off for historic Alaska summit to
-  end the war in Ukraine: Live updates'
+title: 'Trump and Putin shake hands as they face off for historic Alaska summit to end the war in Ukraine: Live updates'
 ---
+
 
 
 LIVE UPDATES: Follow the latest updates as Donald Trump and Vladimir Putin meet one another in an historic summit in Alaska to discuss how to end the war in Ukraine.

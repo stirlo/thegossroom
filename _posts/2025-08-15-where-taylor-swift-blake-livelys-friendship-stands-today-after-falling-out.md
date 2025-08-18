@@ -17,6 +17,7 @@ title: Where Taylor Swift & Blake Lively's Friendship Stands Today After Falling
 ---
 
 
+
 So… what does Taylor Swift and Blake Lively‘s friendship look like these days?? As you know, the pair of former besties had a pretty heavy falling out amid the actress’ It Ends With Us legal drama with Justin Baldoni. If you’re not caught up on the Fortnight singer and Blake’s personal beef, get all the [...] Read More... The post Where Taylor Swift & Blake Lively's Friendship Stands Today After Falling Out! appeared first on Perez Hilton.
 
 **Drama Score:** 39 | **Level:** EXPLOSIVE

@@ -13,9 +13,9 @@ tags:
 - scandals
 - kanye-west
 temperature: 100
-title: Kanye West's wife Bianca Censori goes without a bra at family dining chain
-  after seeing Weapons
+title: Kanye West's wife Bianca Censori goes without a bra at family dining chain after seeing Weapons
 ---
+
 
 
 In a shocking display, the 30-year-old model turned heads in a very low-cut, blue camisole with skinny spaghetti straps and a pair of ultra-tight micro shorts for their outing.

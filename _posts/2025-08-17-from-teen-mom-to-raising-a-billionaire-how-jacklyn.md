@@ -13,9 +13,9 @@ source_url: https://www.dailymail.co.uk/news/article-15007619/jeff-bezos-mom-jac
 tags:
 - celebrity-gossip
 temperature: 41.0
-title: 'From teen mom to raising a billionaire: How Jacklyn Bezos'' selfless sacrifices
-  over the years secured son Jeff''s Amazon success'
+title: 'From teen mom to raising a billionaire: How Jacklyn Bezos'' selfless sacrifices over the years secured son Jeff''s Amazon success'
 ---
+
 
 
 Jacklyn Bezos gave birth to the billionaire Amazon founder at 17 years old and made countless sacrifices over the years to catapult her son's success.

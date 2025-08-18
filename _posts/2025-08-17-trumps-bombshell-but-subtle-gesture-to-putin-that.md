@@ -14,9 +14,9 @@ source_url: https://www.dailymail.co.uk/news/article-15006511/Trump-subtle-gestu
 tags:
 - celebrity-gossip
 temperature: 200
-title: 'Trump''s bombshell but subtle gesture to Putin that everyone missed... it
-  could be his most ingenious move yet: MARK HALPERIN'
+title: 'Trump''s bombshell but subtle gesture to Putin that everyone missed... it could be his most ingenious move yet: MARK HALPERIN'
 ---
+
 
 
 The Anchorage summit between Donald Trump and Vladimir Putin, which opened with so much expectation, pomp and ceremony, ended in uncertainty.

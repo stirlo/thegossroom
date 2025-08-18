@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: '''I can''t hear you!'' Putin points to his ear when reporter asks if he''ll
-  ''stop killing civilians'''
+title: '''I can''t hear you!'' Putin points to his ear when reporter asks if he''ll ''stop killing civilians'''
 ---
+
 
 
 The moment occurred after Putin and Donald Trump greeted each other in Alaska .

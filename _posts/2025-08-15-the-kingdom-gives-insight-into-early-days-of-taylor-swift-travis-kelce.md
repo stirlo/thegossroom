@@ -15,9 +15,9 @@ tags:
 - relationships
 - taylor-swift
 temperature: 200
-title: "\u2018The Kingdom\u2019 Gives Insight Into Early Days of Taylor Swift, Travis\
-  \ Kelce"
+title: ‘The Kingdom’ Gives Insight Into Early Days of Taylor Swift, Travis Kelce
 ---
+
 
 
 Taylor Swift’s relationship with Travis Kelce caused a seismic shift within the Kansas City Chiefs organization. ESPN’s six-part docuseries The Kingdom, which premiered its first two episodes on Thursday, August 14, detailed the early days of the pop star’s romance with the Chiefs tight end. Swift, 35, made her first appearance at Kansas City’s Arrowhead […]

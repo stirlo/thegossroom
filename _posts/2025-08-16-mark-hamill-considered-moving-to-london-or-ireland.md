@@ -17,6 +17,7 @@ title: Mark Hamill Considered Moving to London or Ireland After Trump's Reelecti
 ---
 
 
+
 Mark Hamill considered an international move after the 2024 presidential election. “I still believe there are more honest, decent people than there are the MAGA crowd,” the Star Wars star, 73, told The Times in an interview published on Saturday, August 16, referring to the political movement made popular by current President Donald Trump. Hamill, […]
 
 [Read more at us_weekly](https://www.usmagazine.com/celebrity-news/news/mark-hamill-considered-leaving-u-s-after-trumps-2024-reelection/)

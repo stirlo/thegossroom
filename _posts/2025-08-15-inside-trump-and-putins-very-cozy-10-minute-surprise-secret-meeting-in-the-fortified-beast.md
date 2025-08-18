@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: Inside Trump and Putin's very cozy 10-minute surprise secret meeting in the
-  fortified Beast
+title: Inside Trump and Putin's very cozy 10-minute surprise secret meeting in the fortified Beast
 ---
+
 
 
 President Donald Trump made an unusual gesture by inviting Russian President Vladimir Putin to ride along with him in the Beast, the presidential limo.

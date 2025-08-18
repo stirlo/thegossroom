@@ -16,6 +16,7 @@ title: Feds Stake Out Gavin Newsom Press Conference as Gov. Trolls Trump
 ---
 
 
+
 The California governor's office has been mocking the president on X all week
 
 **Drama Score:** 2 | **Level:** RISING

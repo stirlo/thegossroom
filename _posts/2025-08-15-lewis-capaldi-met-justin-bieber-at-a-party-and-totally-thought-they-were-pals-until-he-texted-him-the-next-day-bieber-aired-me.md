@@ -14,9 +14,9 @@ tags:
 - music
 - justin-bieber
 temperature: 62.0
-title: "Lewis Capaldi Met Justin Bieber at a Party and Totally Thought They Were Pals\
-  \ Until He Texted Him the Next Day: \u2018Bieber Aired Me\u2019"
+title: 'Lewis Capaldi Met Justin Bieber at a Party and Totally Thought They Were Pals Until He Texted Him the Next Day: ‘Bieber Aired Me’'
 ---
+
 
 
 The "Someone You Loved" singer also admitted the real reason his collab with Calvin Harris has never been released.

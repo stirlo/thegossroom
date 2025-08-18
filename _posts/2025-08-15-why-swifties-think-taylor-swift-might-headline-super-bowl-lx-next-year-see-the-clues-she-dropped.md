@@ -15,9 +15,9 @@ tags:
 - music
 - taylor-swift
 temperature: 200
-title: Why Swifties Think Taylor Swift Might Headline Super Bowl LX Next Year! See
-  The Clues She Dropped...
+title: Why Swifties Think Taylor Swift Might Headline Super Bowl LX Next Year! See The Clues She Dropped...
 ---
+
 
 
 Strap in, Taylor Swift fans! We have another WILD new theory for you! All across social media, everyone’s been loving the latest New Heights podcast featuring the pop star, her beau Travis Kelce, and his big bro Jason. The album announcement for The Life of a Showgirl has had fans running wild with new theories [...] Read More... The post Why Swifties Think Taylor Swift Might Headline Super Bowl LX Next Year! See The Clues She Dropped... appeared first on Perez Hilton.

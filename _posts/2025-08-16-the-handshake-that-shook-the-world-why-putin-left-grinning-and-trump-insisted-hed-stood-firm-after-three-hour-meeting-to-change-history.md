@@ -13,9 +13,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 200
-title: 'The handshake that shook the world: Why Putin left grinning and Trump insisted
-  he''d stood firm after three-hour meeting to change history'
+title: 'The handshake that shook the world: Why Putin left grinning and Trump insisted he''d stood firm after three-hour meeting to change history'
 ---
+
 
 
 The world had waited with bated breath but the Don and Vlad show ended in confusion rather than with a bang.

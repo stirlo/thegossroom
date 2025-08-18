@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:45 +0000
-drama_score: 2
+drama_score: 0
 layout: post
-mentions:
-  sophie_turner: 2
-primary_celebrity: sophie_turner
+mentions: {}
 source: elle_alt
 source_url: https://www.elle.com/culture/celebrities/a65790522/sophie-turner-celebrity-couple-engagement-breakup-story/
 tags:
@@ -13,9 +11,10 @@ tags:
 - scandals
 - relationships
 - breakups
-title: Sophie Turner Says She Might’ve Accidentally Broken Up an A-List Celebrity
-  Couple
+title: Sophie Turner Says She Might’ve Accidentally Broken Up an A-List Celebrity Couple
+temperature: 0
 ---
+
 
 
 

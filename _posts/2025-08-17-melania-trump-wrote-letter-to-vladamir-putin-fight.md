@@ -19,6 +19,7 @@ title: Melania Trump Wrote Letter to Vladamir Putin Fighting for Abducted Childr
 ---
 
 
+
 Melania Trump may not have attended the big summit between President Donald Trump and Vladamir Putin Friday -- but she sure as Hell made her presence known in the form of a poignant personal letter. The United States' first lady penned a message to…
 
 [Read more at tmz](https://www.tmz.com/2025/08/16/melania-trump-wrote-letter-to-vladamir-putin-fighting-for-abducted-children/)

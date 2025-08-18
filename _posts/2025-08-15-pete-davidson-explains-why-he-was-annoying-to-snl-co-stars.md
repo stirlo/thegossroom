@@ -16,6 +16,7 @@ title: Pete Davidson Explains Why He Was 'Annoying' To SNL Co-Stars!
 ---
 
 
+
 Pete Davidson may be one of the most beloved comedians from Saturday Night Live these days — but it wasn’t always like that! While chatting in a very honest interview on The Breakfast Club radio show on Wednesday, The King of Staten Island himself opened up about his early years on SNL. Discussing his start [...] Read More... The post Pete Davidson Explains Why He Was 'Annoying' To <i>SNL</i> Co-Stars! appeared first on Perez Hilton.
 
 **Drama Score:** 21 | **Level:** EXPLOSIVE

@@ -12,9 +12,9 @@ tags:
 - celebrity-gossip
 - scandals
 temperature: 100
-title: '''F**king Hypocrites!'': Seth Meyers Rips Conservatives'' Radio Silence On
-  This Trump Claim'
+title: '''F**king Hypocrites!'': Seth Meyers Rips Conservatives'' Radio Silence On This Trump Claim'
 ---
+
 
 
 The "Late Night" host flagged what the MAGA movement just wants to "whine about" on Fox News.

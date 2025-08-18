@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 19:13:13 +0000
-drama_score: 12
+drama_score: 0
 layout: post
-mentions:
-  obama: 12
-primary_celebrity: obama
+mentions: {}
 source: e_news
 source_url: https://www.eonline.com/news/1421237/michelle-obamas-dating-advice-for-malia-sasha?cmpid=rss-syndicate-genericrss-us-top_stories
 tags:
@@ -13,7 +11,9 @@ tags:
 - scandals
 - relationships
 title: Michelle Obama Reveals the Dating Advice She Gave Malia and Sasha
+temperature: 0
 ---
+
 
 Sometimes, parents really do know best. And when it comes to her daughters Malia Obama, 27, and Sasha Obama, 24, Michelle Obama has advised them to take a page from her and President Barack...
 

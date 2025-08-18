@@ -14,9 +14,9 @@ tags:
 - scandals
 - movies
 temperature: 200
-title: "Repression And War Rage Across \u2018My Undesirable Friends\u2019, \u2018\
-  Checkpoint Zoo\u2019 As Trump, Putin To Meet \u2013 Specialty Preview"
+title: Repression And War Rage Across ‘My Undesirable Friends’, ‘Checkpoint Zoo’ As Trump, Putin To Meet – Specialty Preview
 ---
+
 
 
 Two documentaries paint a brutal reality of Vladimir Putin’s regime with the Russian press under siege in My Undesirable Friends, and of hundreds of terrified animals at risk in Checkpoint Zoo, an unusual Ukraine rescue story with Leonardo DiCaprio as EP. Russia invaded Ukraine in February of 2022 and the docs hit theaters in limited […]

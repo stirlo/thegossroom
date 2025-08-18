@@ -1,11 +1,9 @@
 ---
 categories: gossip
 date: 2025-08-15 17:15:21 +0000
-drama_score: 4
+drama_score: 0
 layout: post
-mentions:
-  drake: 4
-primary_celebrity: drake
+mentions: {}
 source: rolling_stone
 source_url: https://www.rollingstone.com/music/music-news/universal-lucian-grainge-drake-not-like-us-lawsuit-1235408568/
 tags:
@@ -13,9 +11,10 @@ tags:
 - scandals
 - music
 - drake
-title: Universal Music CEO Lucian Grainge Has Had Enough of Drake’s ‘Ridiculous’ ‘Not
-  Like Us’ Lawsuit
+title: Universal Music CEO Lucian Grainge Has Had Enough of Drake’s ‘Ridiculous’ ‘Not Like Us’ Lawsuit
+temperature: 0
 ---
+
 
 In new legal filings, the top executive has made his first public statements on the rapper's unprecedented lawsuit against his own label
 

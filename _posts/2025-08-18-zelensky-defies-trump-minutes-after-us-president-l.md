@@ -13,9 +13,9 @@ source_url: https://www.dailymail.co.uk/news/article-15009351/trump-zelensky-ukr
 tags:
 - trump
 temperature: 100
-title: Zelensky defies Trump minutes after US President lays out his terms for peace
-  - setting up another showdown at White House TODAY watched by European leaders
+title: Zelensky defies Trump minutes after US President lays out his terms for peace - setting up another showdown at White House TODAY watched by European leaders
 ---
+
 
 
 Trump categorically ruled out Zelensky's hope to see Ukraine join NATO and indicated he has no desire to see Crimea returned to Ukrainian rule.
