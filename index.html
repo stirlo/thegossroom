@@ -26,25 +26,25 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
         {% comment %}
-        🔥 FIXED: Sort by drama_score (descending) instead of alphabetically!
+        🔥 FIXED: Create array of celebrities with scores, then sort properly
         {% endcomment %}
-        {% assign sorted_celebs = '' | split: '' %}
-        {% for celeb_data in site.data.celebrities %}
-          {% assign celeb_key = celeb_data[0] %}
-          {% assign celeb_info = celeb_data[1] %}
+        {% assign celebrity_array = '' | split: '' %}
+        {% for celeb_pair in site.data.celebrities %}
+          {% assign celeb_key = celeb_pair[0] %}
+          {% assign celeb_info = celeb_pair[1] %}
           {% if celeb_info.drama_score and celeb_info.drama_score >= 10 %}
-            {% assign sorted_celebs = sorted_celebs | push: celeb_data %}
+            {% assign score_padded = celeb_info.drama_score | prepend: '000' | slice: -6, 6 %}
+            {% assign sortable_entry = score_padded | append: '|' | append: celeb_key %}
+            {% assign celebrity_array = celebrity_array | push: sortable_entry %}
           {% endif %}
         {% endfor %}
 
-        {% comment %}
-        Sort by drama_score using a custom sort approach
-        {% endcomment %}
-        {% assign final_sorted = sorted_celebs | sort: '[1].drama_score' | reverse %}
+        {% assign sorted_array = celebrity_array | sort | reverse %}
 
-        {% for celeb_data in final_sorted limit: 15 %}
-          {% assign celeb_key = celeb_data[0] %}
-          {% assign celeb_info = celeb_data[1] %}
+        {% for entry in sorted_array limit: 15 %}
+          {% assign parts = entry | split: '|' %}
+          {% assign celeb_key = parts[1] %}
+          {% assign celeb_info = site.data.celebrities[celeb_key] %}
           {% assign drama_score = celeb_info.drama_score %}
           {% assign celeb_name = celeb_info.name | default: celeb_key %}
           {% assign status = celeb_info.status | default: 'mild' %}
@@ -74,25 +74,28 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
         {% comment %}
-        🔥 FIXED: Sort weekly champions by drama_score, filter by recent activity
+        🔥 FIXED: Sort weekly champions by drama_score properly
         {% endcomment %}
-        {% assign weekly_celebs = '' | split: '' %}
+        {% assign weekly_array = '' | split: '' %}
         {% assign week_ago = 'now' | date: '%s' | minus: 604800 | date: '%Y-%m-%d' %}
 
-        {% for celeb_data in site.data.celebrities %}
-          {% assign celeb_key = celeb_data[0] %}
-          {% assign celeb_info = celeb_data[1] %}
+        {% for celeb_pair in site.data.celebrities %}
+          {% assign celeb_key = celeb_pair[0] %}
+          {% assign celeb_info = celeb_pair[1] %}
           {% assign last_update = celeb_info.last_temperature_update | date: '%Y-%m-%d' %}
           {% if celeb_info.drama_score >= 15 and last_update >= week_ago %}
-            {% assign weekly_celebs = weekly_celebs | push: celeb_data %}
+            {% assign score_padded = celeb_info.drama_score | prepend: '000' | slice: -6, 6 %}
+            {% assign sortable_entry = score_padded | append: '|' | append: celeb_key %}
+            {% assign weekly_array = weekly_array | push: sortable_entry %}
           {% endif %}
         {% endfor %}
 
-        {% assign weekly_sorted = weekly_celebs | sort: '[1].drama_score' | reverse %}
+        {% assign weekly_sorted = weekly_array | sort | reverse %}
 
-        {% for celeb_data in weekly_sorted limit: 12 %}
-          {% assign celeb_key = celeb_data[0] %}
-          {% assign celeb_info = celeb_data[1] %}
+        {% for entry in weekly_sorted limit: 12 %}
+          {% assign parts = entry | split: '|' %}
+          {% assign celeb_key = parts[1] %}
+          {% assign celeb_info = site.data.celebrities[celeb_key] %}
           {% assign drama_score = celeb_info.drama_score | default: 0 %}
           {% assign celeb_name = celeb_info.name | default: celeb_key %}
           {% assign status = celeb_info.status | default: 'mild' %}
@@ -118,26 +121,29 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
         {% comment %}
-        🔥 FIXED: Sort new discoveries by drama_score too!
+        🔥 FIXED: Sort new discoveries by drama_score properly
         {% endcomment %}
-        {% assign new_celebs = '' | split: '' %}
+        {% assign newbie_array = '' | split: '' %}
         {% assign month_ago = 'now' | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' %}
 
-        {% for celeb_data in site.data.celebrities %}
-          {% assign celeb_key = celeb_data[0] %}
-          {% assign celeb_info = celeb_data[1] %}
+        {% for celeb_pair in site.data.celebrities %}
+          {% assign celeb_key = celeb_pair[0] %}
+          {% assign celeb_info = celeb_pair[1] %}
           {% assign discovery_date = celeb_info.discovery_date | date: '%Y-%m-%d' %}
           {% if celeb_info.drama_score >= 5 and discovery_date >= month_ago %}
-            {% assign new_celebs = new_celebs | push: celeb_data %}
+            {% assign score_padded = celeb_info.drama_score | prepend: '000' | slice: -6, 6 %}
+            {% assign sortable_entry = score_padded | append: '|' | append: celeb_key %}
+            {% assign newbie_array = newbie_array | push: sortable_entry %}
           {% endif %}
         {% endfor %}
 
-        {% assign newbies_sorted = new_celebs | sort: '[1].drama_score' | reverse %}
+        {% assign newbies_sorted = newbie_array | sort | reverse %}
 
         {% if newbies_sorted.size > 0 %}
-          {% for celeb_data in newbies_sorted limit: 10 %}
-            {% assign celeb_key = celeb_data[0] %}
-            {% assign celeb_info = celeb_data[1] %}
+          {% for entry in newbies_sorted limit: 10 %}
+            {% assign parts = entry | split: '|' %}
+            {% assign celeb_key = parts[1] %}
+            {% assign celeb_info = site.data.celebrities[celeb_key] %}
             {% assign drama_score = celeb_info.drama_score | default: 25 %}
             {% assign celeb_name = celeb_info.name | default: celeb_key %}
             {% assign status = celeb_info.status | default: 'rising' %}
