@@ -1,0 +1,449 @@
+name: Jekyll Tag Cleanup & Normalization
+
+on:
+  workflow_dispatch:
+    inputs:
+      cleanup_mode:
+        description: 'Cleanup mode'
+        required: true
+        default: 'normalize'
+        type: choice
+        options:
+        - normalize
+        - reset
+        - map_and_clean
+      custom_tag_mapping:
+        description: 'Custom tag mappings (JSON format: {"old_tag": "new_tag"})'
+        required: false
+        default: '{}'
+        type: string
+      create_backup:
+        description: 'Create backup before cleanup'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  cleanup-tags:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🏷️ Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+
+    - name: 🏷️ Create Tag Cleanup Script
+      run: |
+        cat > tag_cleanup.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        Jekyll Tag Cleanup & Normalization Tool
+        Cleans up duplicate, inconsistent, and messy tags across all posts
+        """
+
+        import yaml
+        import os
+        import sys
+        import json
+        import re
+        from datetime import datetime
+        from pathlib import Path
+        from collections import Counter, defaultdict
+        import logging
+
+        logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+        logger = logging.getLogger(__name__)
+
+        class JekyllTagCleanup:
+            def __init__(self, mode='normalize', custom_mapping=None):
+                self.base_path = Path('.')
+                self.posts_dir = self.base_path / '_posts'
+                self.mode = mode
+                self.custom_mapping = custom_mapping or {}
+
+                # Built-in tag normalization mappings
+                self.TAG_MAPPINGS = {
+                    # Celebrity variations
+                    'taylor_swift': 'taylor-swift',
+                    'kim_kardashian': 'kim-kardashian',
+                    'bella_hadid': 'bella-hadid',
+                    'zendaya_coleman': 'zendaya',
+                    'jennifer_lopez': 'jennifer-lopez',
+                    'britney_spears': 'britney-spears',
+                    'justin_bieber': 'justin-bieber',
+                    'ariana_grande': 'ariana-grande',
+
+                    # Category standardization
+                    'celebrity_gossip': 'celebrity-gossip',
+                    'entertainment_news': 'entertainment',
+                    'hollywood_news': 'hollywood',
+                    'pop_culture': 'pop-culture',
+                    'social_media': 'social-media',
+                    'red_carpet': 'red-carpet',
+                    'award_shows': 'awards',
+                    'music_industry': 'music',
+                    'fashion_week': 'fashion',
+                    'movie_news': 'movies',
+                    'tv_shows': 'television',
+
+                    # Common duplicates/variations
+                    'breakup': 'breakups',
+                    'relationship': 'relationships',
+                    'scandal': 'scandals',
+                    'controversy': 'controversies',
+                    'rumor': 'rumors',
+                    'rumour': 'rumors',
+                    'gossip': 'celebrity-gossip',
+                    'news': 'entertainment',
+                    'update': 'updates',
+                    'drama': 'celebrity-drama',
+
+                    # Remove generic/useless tags
+                    'celebrity': None,  # Too generic
+                    'famous': None,     # Too generic
+                    'star': None,       # Too generic
+                    'news': None,       # Too generic
+                    'latest': None,     # Temporal, becomes outdated
+                    'new': None,        # Temporal, becomes outdated
+                    'hot': None,        # Subjective
+                    'trending': None,   # Temporal
+                }
+
+                # Merge custom mappings
+                self.TAG_MAPPINGS.update(self.custom_mapping)
+
+            def load_post_content(self, post_file):
+                """Load and parse a Jekyll post"""
+                try:
+                    with open(post_file, 'r', encoding='utf-8') as f:
+                        content = f.read()
+
+                    if not content.startswith('---'):
+                        return None, None, content
+
+                    parts = content.split('---', 2)
+                    if len(parts) < 3:
+                        return None, None, content
+
+                    frontmatter = yaml.safe_load(parts[1])
+                    body = parts[2] if len(parts) > 2 else ''
+
+                    return frontmatter, body, content
+
+                except Exception as e:
+                    logger.error(f"Error loading {post_file.name}: {e}")
+                    return None, None, None
+
+            def normalize_tag(self, tag):
+                """Normalize a single tag"""
+                if not tag or not isinstance(tag, str):
+                    return None
+
+                # Clean whitespace and convert to lowercase
+                tag = tag.strip().lower()
+
+                # Remove special characters except hyphens and underscores
+                tag = re.sub(r'[^\w\s\-]', '', tag)
+
+                # Replace spaces and underscores with hyphens
+                tag = re.sub(r'[\s_]+', '-', tag)
+
+                # Remove multiple consecutive hyphens
+                tag = re.sub(r'-+', '-', tag)
+
+                # Remove leading/trailing hyphens
+                tag = tag.strip('-')
+
+                # Skip if empty after cleaning
+                if not tag:
+                    return None
+
+                # Apply mappings
+                if tag in self.TAG_MAPPINGS:
+                    return self.TAG_MAPPINGS[tag]  # Could be None to remove
+
+                return tag
+
+            def clean_tags_list(self, tags):
+                """Clean and normalize a list of tags"""
+                if not tags:
+                    return []
+
+                # Handle string vs list
+                if isinstance(tags, str):
+                    # Split on common separators
+                    tags = re.split(r'[,;\s]+', tags)
+                elif not isinstance(tags, list):
+                    return []
+
+                cleaned_tags = []
+                seen_tags = set()
+
+                for tag in tags:
+                    normalized = self.normalize_tag(tag)
+
+                    if normalized and normalized not in seen_tags:
+                        cleaned_tags.append(normalized)
+                        seen_tags.add(normalized)
+
+                return sorted(cleaned_tags)
+
+            def get_standard_tags_for_post(self, frontmatter, body):
+                """Generate standard tags based on post content"""
+                standard_tags = []
+
+                # Get title and content for analysis
+                title = frontmatter.get('title', '').lower()
+                content = body.lower()
+                full_text = f"{title} {content}"
+
+                # Celebrity detection (basic)
+                celebrity_keywords = [
+                    'taylor-swift', 'kim-kardashian', 'bella-hadid', 'zendaya',
+                    'jennifer-lopez', 'britney-spears', 'justin-bieber', 'ariana-grande',
+                    'selena-gomez', 'rihanna', 'beyonce', 'drake', 'kanye-west'
+                ]
+
+                for celeb in celebrity_keywords:
+                    if celeb.replace('-', ' ') in full_text or celeb.replace('-', '') in full_text:
+                        standard_tags.append(celeb)
+
+                # Content type detection
+                if any(word in full_text for word in ['breakup', 'split', 'divorce', 'separated']):
+                    standard_tags.append('breakups')
+
+                if any(word in full_text for word in ['relationship', 'dating', 'couple', 'romance']):
+                    standard_tags.append('relationships')
+
+                if any(word in full_text for word in ['scandal', 'controversy', 'drama']):
+                    standard_tags.append('scandals')
+
+                if any(word in full_text for word in ['fashion', 'outfit', 'style', 'designer']):
+                    standard_tags.append('fashion')
+
+                if any(word in full_text for word in ['music', 'album', 'song', 'concert']):
+                    standard_tags.append('music')
+
+                if any(word in full_text for word in ['movie', 'film', 'cinema', 'hollywood']):
+                    standard_tags.append('movies')
+
+                # Always add general category
+                standard_tags.append('celebrity-gossip')
+
+                return list(set(standard_tags))
+
+            def save_post_content(self, post_file, frontmatter, body):
+                """Save updated post content"""
+                try:
+                    # Generate YAML frontmatter
+                    yaml_content = yaml.dump(frontmatter, default_flow_style=False, sort_keys=True, allow_unicode=True)
+
+                    # Reconstruct file
+                    new_content = f"---\n{yaml_content}---{body}"
+
+                    with open(post_file, 'w', encoding='utf-8') as f:
+                        f.write(new_content)
+
+                    return True
+
+                except Exception as e:
+                    logger.error(f"Error saving {post_file.name}: {e}")
+                    return False
+
+            def analyze_current_tags(self):
+                """Analyze current tag usage across all posts"""
+                all_tags = []
+                tag_counts = Counter()
+                posts_processed = 0
+
+                for post_file in self.posts_dir.glob('*.md'):
+                    frontmatter, body, content = self.load_post_content(post_file)
+
+                    if frontmatter and 'tags' in frontmatter:
+                        tags = frontmatter['tags']
+                        if isinstance(tags, str):
+                            tags = re.split(r'[,;\s]+', tags)
+                        elif isinstance(tags, list):
+                            pass
+                        else:
+                            continue
+
+                        for tag in tags:
+                            if tag and isinstance(tag, str):
+                                tag_counts[tag.strip()] += 1
+                                all_tags.append(tag.strip())
+
+                        posts_processed += 1
+
+                return tag_counts, posts_processed
+
+            def create_backup(self):
+                """Create backup of all posts"""
+                if os.getenv('CREATE_BACKUP', 'true').lower() != 'true':
+                    return
+
+                try:
+                    backup_dir = self.base_path / f'_posts_backup_tags_{datetime.now().strftime("%Y%m%d_%H%M%S")}'
+                    backup_dir.mkdir(exist_ok=True)
+
+                    import shutil
+                    for post_file in self.posts_dir.glob('*.md'):
+                        shutil.copy2(post_file, backup_dir / post_file.name)
+
+                    logger.info(f"📋 Created backup: {backup_dir.name}")
+
+                except Exception as e:
+                    logger.error(f"❌ Error creating backup: {e}")
+
+            def run_cleanup(self):
+                """Execute tag cleanup based on mode"""
+                logger.info(f"🏷️ Starting Jekyll tag cleanup (mode: {self.mode})")
+
+                # Create backup
+                self.create_backup()
+
+                # Analyze current tags
+                logger.info("📊 Analyzing current tags...")
+                tag_counts, total_posts = self.analyze_current_tags()
+
+                logger.info(f"📈 Found {len(tag_counts)} unique tags across {total_posts} posts")
+                logger.info(f"🔝 Most common tags: {dict(tag_counts.most_common(10))}")
+
+                # Process posts
+                posts_updated = 0
+                tags_before = 0
+                tags_after = 0
+
+                for post_file in self.posts_dir.glob('*.md'):
+                    frontmatter, body, content = self.load_post_content(post_file)
+
+                    if not frontmatter:
+                        continue
+
+                    # Get current tags
+                    current_tags = frontmatter.get('tags', [])
+                    tags_before += len(current_tags) if isinstance(current_tags, list) else 1
+
+                    # Apply cleanup based on mode
+                    if self.mode == 'reset':
+                        # Complete reset - generate new tags from content
+                        new_tags = self.get_standard_tags_for_post(frontmatter, body)
+                    elif self.mode == 'normalize':
+                        # Normalize existing tags
+                        new_tags = self.clean_tags_list(current_tags)
+                    elif self.mode == 'map_and_clean':
+                        # Clean and apply custom mappings
+                        new_tags = self.clean_tags_list(current_tags)
+                    else:
+                        continue
+
+                    # Update if changed
+                    if new_tags != current_tags:
+                        frontmatter['tags'] = new_tags
+
+                        if self.save_post_content(post_file, frontmatter, body):
+                            posts_updated += 1
+                            tags_after += len(new_tags)
+                            logger.debug(f"Updated {post_file.name}: {len(current_tags)} -> {len(new_tags)} tags")
+                    else:
+                        tags_after += len(new_tags)
+
+                # Generate report
+                self.generate_cleanup_report(posts_updated, tags_before, tags_after, tag_counts)
+
+            def generate_cleanup_report(self, posts_updated, tags_before, tags_after, original_tag_counts):
+                """Generate cleanup report"""
+                # Analyze final tags
+                final_tag_counts, _ = self.analyze_current_tags()
+
+                print("\n" + "="*60)
+                print("🏷️ JEKYLL TAG CLEANUP REPORT")
+                print("="*60)
+                print(f"📊 Posts Updated: {posts_updated}")
+                print(f"🏷️ Tags Before: {tags_before}")
+                print(f"🏷️ Tags After: {tags_after}")
+                print(f"📉 Tags Removed: {tags_before - tags_after}")
+                print(f"🔄 Cleanup Mode: {self.mode}")
+                print(f"📈 Unique Tags Before: {len(original_tag_counts)}")
+                print(f"📈 Unique Tags After: {len(final_tag_counts)}")
+
+                print(f"\n🔝 TOP 15 FINAL TAGS:")
+                for i, (tag, count) in enumerate(final_tag_counts.most_common(15), 1):
+                    print(f"  {i:2d}. {tag}: {count} posts")
+
+                if self.mode == 'reset':
+                    print(f"\n✨ STANDARDIZED TAGS APPLIED:")
+                    print(f"   - Celebrity names normalized")
+                    print(f"   - Content-based tags generated")
+                    print(f"   - Generic tags removed")
+
+                print("="*60)
+
+        if __name__ == "__main__":
+            mode = os.getenv('CLEANUP_MODE', 'normalize')
+            custom_mapping_str = os.getenv('CUSTOM_TAG_MAPPING', '{}')
+
+            try:
+                custom_mapping = json.loads(custom_mapping_str)
+            except:
+                custom_mapping = {}
+
+            cleanup_tool = JekyllTagCleanup(mode, custom_mapping)
+            cleanup_tool.run_cleanup()
+        EOF
+
+    - name: 🏷️ Run Tag Cleanup
+      env:
+        CLEANUP_MODE: ${{ inputs.cleanup_mode }}
+        CUSTOM_TAG_MAPPING: ${{ inputs.custom_tag_mapping }}
+        CREATE_BACKUP: ${{ inputs.create_backup }}
+      run: |
+        python tag_cleanup.py
+
+    - name: 📊 Show Changes
+      run: |
+        echo "📋 Files changed:"
+        git status --porcelain | head -20
+
+        echo -e "\n📈 Sample of updated posts:"
+        git diff --name-only | grep "\.md$" | head -10
+
+    - name: 🚀 Commit Changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Tag Cleanup Action"
+
+        git add _posts/*.md
+
+        if ls _posts_backup_tags_*.md 1> /dev/null 2>&1; then
+          git add _posts_backup_tags_*
+        fi
+
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🏷️ Jekyll Tag Cleanup & Normalization
+
+          Mode: ${{ inputs.cleanup_mode }}
+          - Normalized tag formatting
+          - Removed duplicate tags
+          - Applied tag mappings
+          - Cleaned up inconsistent naming
+
+          Automated by Tag Cleanup Action"
+
+          git push
+          echo "✅ Tag cleanup committed and pushed!"
+        fi
