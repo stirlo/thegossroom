@@ -26,7 +26,7 @@ aamir_bashir:
   drama_score: 26.5
   last_temperature_update: '2025-08-18 09:27:55'
   memorial: false
-  monthly_rank: 0.0
+  monthly_rank: 0.1
   name: Aamir Bashir
   promotion_date: '2025-08-18'
   status: mild
@@ -909,7 +909,7 @@ catherine_zeta:
   drama_score: 29.5
   last_temperature_update: '2025-08-18 09:27:45'
   memorial: false
-  monthly_rank: 0.0
+  monthly_rank: 0.3
   name: Catherine Zeta
   promotion_date: '2025-08-18'
   status: mild
@@ -3247,7 +3247,7 @@ michael_douglas:
   drama_score: 29.5
   last_temperature_update: '2025-08-18 09:27:45'
   memorial: false
-  monthly_rank: 0.0
+  monthly_rank: 0.3
   name: Michael Douglas
   promotion_date: '2025-08-18'
   status: mild
@@ -3501,19 +3501,6 @@ noah_schnapp:
   monthly_rank: 0.0
   promotion_date: '2020-01-01'
   status: cooling
-  temperature_change: 0
-nordic_council_film:
-  auto_discovered: true
-  category: unknown
-  context_score: 3
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 10:25:39'
-  memorial: false
-  monthly_rank: 0
-  name: Nordic Council Film
-  promotion_date: '2025-08-18'
-  status: mild
   temperature_change: 0
 obama:
   category: politician
@@ -3843,19 +3830,6 @@ rami_malek:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 0
-rao_bahadur:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 10:25:39'
-  memorial: false
-  monthly_rank: 0
-  name: Rao Bahadur
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 ray_j:
   category: musician
   discovery_date: '2020-01-01'
@@ -4124,7 +4098,7 @@ selling_sunset:
   drama_score: 28.5
   last_temperature_update: '2025-08-18 09:27:45'
   memorial: false
-  monthly_rank: 0.0
+  monthly_rank: 0.1
   name: Selling Sunset
   promotion_date: '2025-08-18'
   status: mild
@@ -4395,7 +4369,7 @@ super:
   drama_score: 34.1
   last_temperature_update: '2025-08-18 09:27:50'
   memorial: false
-  monthly_rank: 0.0
+  monthly_rank: 0.1
   promotion_date: '2025-08-04'
   status: mild
   temperature_change: 3.0
@@ -4517,7 +4491,7 @@ terence_stamp:
   drama_score: 26.5
   last_temperature_update: '2025-08-18 09:27:59'
   memorial: true
-  monthly_rank: 0.0
+  monthly_rank: 0.1
   name: Terence Stamp
   promotion_date: '2025-08-18'
   status: mild
@@ -4726,7 +4700,7 @@ trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-18 10:25:24'
+  last_temperature_update: '2025-08-18 09:27:50'
   memorial: false
   monthly_rank: 0.1
   promotion_date: '2025-08-04'
