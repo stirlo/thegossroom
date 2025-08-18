@@ -8,11 +8,16 @@ module Jekyll
 
       # Load celebrities.yml data
       celebrities_data = load_celebrities_data(site)
+
+      # 🎯 AUTO-TAG ALL CELEBRITIES FIRST
+      auto_tag_all_celebrities(site, celebrities_data)
+
       posts_data = extract_posts_data(site)
       puts "📊 Found #{posts_data.length} posts and #{celebrities_data.length} celebrities"
 
       # Generate all redirect types
       generate_celebrity_redirects_from_yml(site, celebrities_data, posts_data)
+      generate_exact_tag_redirects(site)  # 🎯 NEW: Handle all Jekyll tags
       generate_celebrity_redirects(site, posts_data)
       generate_date_celebrity_redirects_with_fallback(site, posts_data)
       generate_legacy_redirects(site, posts_data)
@@ -22,6 +27,88 @@ module Jekyll
     end
 
     private
+
+    # 🎯 NEW: Auto-tag all celebrities from YAML
+    def auto_tag_all_celebrities(site, celebrities_data)
+      puts "\n🏷️ AUTO-TAGGING ALL CELEBRITIES FROM YAML:"
+
+      tagged_count = 0
+
+      site.posts.docs.each do |post|
+        content = "#{post.data['title']} #{post.content}".downcase
+        post.data['tags'] ||= []
+        original_tag_count = post.data['tags'].size
+
+        celebrities_data.each do |celeb_key, celeb_info|
+          # Skip if already tagged
+          next if post.data['tags'].include?(celeb_key)
+
+          mentioned = false
+
+          # Check main name
+          if content.include?(celeb_info[:name].downcase)
+            mentioned = true
+          end
+
+          # Check aliases
+          unless mentioned
+            celeb_info[:aliases].each do |alias_name|
+              if content.include?(alias_name.downcase)
+                mentioned = true
+                break
+              end
+            end
+          end
+
+          # Check search terms
+          unless mentioned
+            celeb_info[:search_terms].each do |search_term|
+              if content.include?(search_term.downcase)
+                mentioned = true
+                break
+              end
+            end
+          end
+
+          # Add tag if mentioned
+          if mentioned
+            post.data['tags'] << celeb_key
+            puts "  ✅ Tagged '#{post.data['title']}' with '#{celeb_key}'"
+          end
+        end
+
+        if post.data['tags'].size > original_tag_count
+          tagged_count += 1
+        end
+      end
+
+      puts "📊 AUTO-TAGGED #{tagged_count} POSTS WITH CELEBRITY TAGS"
+    end
+
+    # 🎯 NEW: Generate redirects for ALL Jekyll tags
+    def generate_exact_tag_redirects(site)
+      puts "\n🎯 GENERATING EXACT TAG REDIRECTS:"
+
+      site.tags.each do |tag_name, tag_posts|
+        next if tag_posts.empty?
+
+        # Get the most recent post with highest drama score
+        latest_post = tag_posts
+          .sort_by { |p| [p.date, (p.data['drama_score'] || 0)] }
+          .reverse
+          .first
+
+        if latest_post
+          # Create redirect from /tag/exact-name/ to latest post
+          create_redirect_page(site, "/tag/#{tag_name}/", latest_post.url)
+          puts "  ✅ /tag/#{tag_name}/ -> #{latest_post.url}"
+
+          # Also create redirect without /tag/ prefix for direct access
+          create_redirect_page(site, "/#{tag_name}/", latest_post.url)
+          puts "  ✅ /#{tag_name}/ -> #{latest_post.url}"
+        end
+      end
+    end
 
     def load_celebrities_data(site)
       celebrities = {}
@@ -51,7 +138,7 @@ module Jekyll
     end
 
     def generate_celebrity_redirects_from_yml(site, celebrities_data, posts_data)
-      """Generate redirects for all celebrities in celebrities.yml"""
+      puts "\n🎭 GENERATING CELEBRITY REDIRECTS FROM YML:"
 
       celebrities_data.each do |celeb_key, celeb_info|
         # Find posts mentioning this celebrity
@@ -65,32 +152,34 @@ module Jekyll
 
           # Create redirect for celebrity key
           create_redirect_page(site, "/#{celeb_key}/", latest_post[:url])
-          puts "📍 Celebrity YML redirect: /#{celeb_key}/ -> #{latest_post[:url]}"
+          puts "  📍 Celebrity YML redirect: /#{celeb_key}/ -> #{latest_post[:url]}"
 
           # Create redirects for aliases
           celeb_info[:aliases].each do |alias_name|
             alias_slug = slugify(alias_name)
+            next if alias_slug.empty? || alias_slug == celeb_key
+
             create_redirect_page(site, "/#{alias_slug}/", latest_post[:url])
-            puts "📍 Alias redirect: /#{alias_slug}/ -> #{latest_post[:url]}"
+            puts "  📍 Alias redirect: /#{alias_slug}/ -> #{latest_post[:url]}"
           end
 
           # Create redirect for display name
           name_slug = slugify(celeb_info[:name])
-          if name_slug != celeb_key
+          if name_slug != celeb_key && !name_slug.empty?
             create_redirect_page(site, "/#{name_slug}/", latest_post[:url])
-            puts "📍 Name redirect: /#{name_slug}/ -> #{latest_post[:url]}"
+            puts "  📍 Name redirect: /#{name_slug}/ -> #{latest_post[:url]}"
           end
         else
           # No recent posts - redirect to search
           search_query = celeb_info[:name].gsub(' ', '+')
           create_redirect_page(site, "/#{celeb_key}/", "/search/?q=#{search_query}")
-          puts "📍 Celebrity search fallback: /#{celeb_key}/ -> /search/?q=#{search_query}"
+          puts "  📍 Celebrity search fallback: /#{celeb_key}/ -> /search/?q=#{search_query}"
         end
       end
     end
 
     def post_mentions_celebrity?(post, celeb_key, celeb_info)
-      # Check post tags
+      # Check post tags (most reliable)
       return true if post[:tags] && post[:tags].include?(celeb_key)
 
       # Check post mentions
@@ -138,6 +227,8 @@ module Jekyll
     end
 
     def generate_celebrity_redirects(site, posts_data)
+      puts "\n🎬 GENERATING CELEBRITY REDIRECTS FROM POSTS:"
+
       celebrity_posts = {}
 
       posts_data.each do |post|
@@ -169,15 +260,19 @@ module Jekyll
       end
 
       celebrity_posts.each do |celebrity_slug, posts|
+        next if celebrity_slug.empty?
+
         sorted_posts = posts.uniq.sort_by { |p| [p[:date], p[:drama_score]] }.reverse
         latest_post = sorted_posts.first
 
         create_redirect_page(site, "/#{celebrity_slug}/", latest_post[:url])
-        puts "📍 Celebrity redirect: /#{celebrity_slug}/ -> #{latest_post[:url]}"
+        puts "  📍 Celebrity redirect: /#{celebrity_slug}/ -> #{latest_post[:url]}"
       end
     end
 
     def generate_date_celebrity_redirects_with_fallback(site, posts_data)
+      puts "\n📅 GENERATING DATE-BASED CELEBRITY REDIRECTS:"
+
       date_celebrity_posts = {}
       celebrity_latest = {}
 
@@ -188,6 +283,7 @@ module Jekyll
         all_celebrity_keys << slugify(post[:primary_celebrity]) if post[:primary_celebrity]
         all_celebrity_keys.concat(post[:celebrities].map { |c| slugify(c) })
         all_celebrity_keys.uniq!
+        all_celebrity_keys.reject!(&:empty?)
 
         all_celebrity_keys.each do |celebrity_slug|
           if !celebrity_latest[celebrity_slug] || post[:date] > celebrity_latest[celebrity_slug][:date]
@@ -205,6 +301,7 @@ module Jekyll
         all_celebrity_keys << slugify(post[:primary_celebrity]) if post[:primary_celebrity]
         all_celebrity_keys.concat(post[:celebrities].map { |c| slugify(c) })
         all_celebrity_keys.uniq!
+        all_celebrity_keys.reject!(&:empty?)
 
         all_celebrity_keys.each do |celebrity_slug|
           key = "#{date_path}/#{celebrity_slug}"
@@ -216,13 +313,15 @@ module Jekyll
       date_celebrity_posts.each do |key, posts|
         latest_post = posts.sort_by { |p| [p[:date], p[:drama_score]] }.reverse.first
         create_redirect_page(site, "/#{key}/", latest_post[:url])
-        puts "📍 Date redirect: /#{key}/ -> #{latest_post[:url]}"
+        puts "  📍 Date redirect: /#{key}/ -> #{latest_post[:url]}"
       end
 
       create_fallback_handler(site, celebrity_latest)
     end
 
     def generate_legacy_redirects(site, posts_data)
+      puts "\n🔄 GENERATING LEGACY REDIRECTS:"
+
       # List of all articles that need redirects
       legacy_articles = %w[
         2025-08-07-jason-kylie-kelce-attend-funeral-of-dad-eds-partne
@@ -264,7 +363,7 @@ module Jekyll
             legacy_path = "/#{year}/#{month}/#{day}/#{slug}/"
 
             create_redirect_page(site, legacy_path, best_match[:url])
-            puts "📍 Legacy redirect: #{legacy_path} -> #{best_match[:url]}"
+            puts "  📍 Legacy redirect: #{legacy_path} -> #{best_match[:url]}"
           end
         else
           # Create fallback redirect to homepage or search
@@ -274,7 +373,7 @@ module Jekyll
             legacy_path = "/#{year}/#{month}/#{day}/#{slug}/"
 
             create_redirect_page(site, legacy_path, "/search/?q=#{slug.gsub('-', '+')}")
-            puts "📍 Legacy fallback: #{legacy_path} -> /search/"
+            puts "  📍 Legacy fallback: #{legacy_path} -> /search/"
           end
         end
       end
@@ -345,9 +444,12 @@ module Jekyll
         'Sophie Turner' => /sophie\s*turner/i,
         'Logan Paul' => /logan\s*paul/i,
         'Donald Trump' => /donald\s*trump|trump/i,
+        'Melania Trump' => /melania\s*trump/i,
         'Putin' => /putin|vladimir\s*putin/i,
         'Meghan Markle' => /meghan\s*markle/i,
         'Prince Harry' => /prince\s*harry/i,
+        'Prince William' => /prince\s*william/i,
+        'Kate McKinnon' => /kate\s*mckinnon/i,
         'Eminem' => /eminem/i,
         'Cardi B' => /cardi\s*b/i,
         'Nicki Minaj' => /nicki\s*minaj/i,
