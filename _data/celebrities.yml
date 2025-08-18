@@ -208,19 +208,6 @@ ana_de_armas:
   promotion_date: '2025-08-04'
   status: cooling
   temperature_change: 0
-and_encourages:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:57:57'
-  memorial: false
-  monthly_rank: 0
-  name: And Encourages
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 andre_young:
   category: musician
   discovery_date: '2025-08-04'
@@ -1857,19 +1844,6 @@ ian_roberts:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 0
-if_you_still_work:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:57:57'
-  memorial: false
-  monthly_rank: 0
-  name: If You Still Work
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 irina_shayk:
   category: model
   discovery_date: '2025-08-04'
@@ -2796,7 +2770,7 @@ lil_pump:
   promotion_date: '2025-08-04'
   status: cooling
   temperature_change: 0
-lil_tay_claims:
+lil_tay:
   auto_discovered: true
   category: unknown
   context_score: 2
@@ -2805,7 +2779,7 @@ lil_tay_claims:
   last_temperature_update: '2025-08-18 07:57:57'
   memorial: false
   monthly_rank: 0
-  name: Lil Tay Claims
+  name: Lil Tay
   promotion_date: '2025-08-18'
   status: mild
   temperature_change: 0
@@ -4474,7 +4448,7 @@ terence_stamp:
   discovery_date: '2025-08-18'
   drama_score: 25
   last_temperature_update: '2025-08-18 07:57:57'
-  memorial: false
+  memorial: true
   monthly_rank: 0
   name: Terence Stamp
   promotion_date: '2025-08-18'
@@ -4801,32 +4775,6 @@ william_pitt:
   monthly_rank: 0.0
   promotion_date: '2025-08-04'
   status: cooling
-  temperature_change: 0
-women_to_make_an:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:57:57'
-  memorial: false
-  monthly_rank: 0
-  name: Women To Make An
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
-you_are:
-  auto_discovered: true
-  category: unknown
-  context_score: 2
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 07:57:57'
-  memorial: false
-  monthly_rank: 0
-  name: You Are
-  promotion_date: '2025-08-18'
-  status: mild
   temperature_change: 0
 younes_bendjima:
   category: model
