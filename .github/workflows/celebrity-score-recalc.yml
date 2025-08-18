@@ -1,0 +1,495 @@
+name: Celebrity Score Recalculation with Decay
+
+on:
+  workflow_dispatch:
+    inputs:
+      decay_rate:
+        description: 'Daily decay rate (0.1 = 10% per day)'
+        required: false
+        default: '0.05'
+        type: string
+      min_score:
+        description: 'Minimum score floor'
+        required: false
+        default: '5'
+        type: string
+      days_to_analyze:
+        description: 'Days of posts to analyze for scoring'
+        required: false
+        default: '30'
+        type: string
+
+jobs:
+  recalculate-scores:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml python-dateutil
+
+    - name: 🌡️ Create Score Recalculation Script
+      run: |
+        cat > celebrity_score_recalc.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        Celebrity Drama Score Recalculation with Time Decay
+        Rebuilds scores from existing posts and applies realistic decay
+        """
+
+        import yaml
+        import re
+        import os
+        from datetime import datetime, timedelta
+        from pathlib import Path
+        from collections import defaultdict, Counter
+        import logging
+
+        logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+        logger = logging.getLogger(__name__)
+
+        class CelebrityScoreRecalculator:
+            def __init__(self, decay_rate=0.05, min_score=5, days_to_analyze=30):
+                self.base_path = Path('.')
+                self.posts_dir = self.base_path / '_posts'
+                self.celebrities_file = self.base_path / '_data' / 'celebrities.yml'
+
+                # Configuration
+                self.DECAY_RATE = float(decay_rate)  # Daily decay rate
+                self.MIN_SCORE = float(min_score)    # Score floor
+                self.DAYS_TO_ANALYZE = int(days_to_analyze)
+
+                # Scoring system
+                self.SCORING_CONFIG = {
+                    'base_mention_points': 2.0,
+                    'headline_bonus': 3.0,
+                    'explosive_keywords_bonus': 5.0,
+                    'recency_multiplier': {
+                        0: 2.0,    # Today: 2x multiplier
+                        1: 1.8,    # Yesterday: 1.8x
+                        2: 1.6,    # 2 days ago: 1.6x
+                        3: 1.4,    # 3 days ago: 1.4x
+                        7: 1.2,    # 1 week ago: 1.2x
+                        14: 1.0,   # 2 weeks ago: 1.0x
+                        30: 0.8,   # 1 month ago: 0.8x
+                    }
+                }
+
+                # Keywords that boost drama scores
+                self.EXPLOSIVE_KEYWORDS = [
+                    'scandal', 'affair', 'cheating', 'divorce', 'breakup', 'split',
+                    'fight', 'feud', 'drama', 'controversy', 'arrest', 'lawsuit',
+                    'explosive', 'bombshell', 'shocking', 'secret', 'reveals',
+                    'caught', 'exposed', 'leaked', 'exclusive', 'breaking',
+                    'emergency', 'crisis', 'meltdown', 'outrage', 'backlash'
+                ]
+
+            def load_celebrities(self):
+                """Load current celebrity database"""
+                try:
+                    if not self.celebrities_file.exists():
+                        logger.error("No celebrities.yml file found")
+                        return {}
+
+                    with open(self.celebrities_file, 'r', encoding='utf-8') as f:
+                        celebrities = yaml.safe_load(f) or {}
+
+                    logger.info(f"📊 Loaded {len(celebrities)} celebrities")
+                    return celebrities
+
+                except Exception as e:
+                    logger.error(f"❌ Error loading celebrities: {e}")
+                    return {}
+
+            def get_recency_multiplier(self, days_ago):
+                """Get scoring multiplier based on how recent the post is"""
+                for threshold, multiplier in sorted(self.SCORING_CONFIG['recency_multiplier'].items()):
+                    if days_ago <= threshold:
+                        return multiplier
+                return 0.5  # Very old posts get minimal weight
+
+            def extract_celebrity_mentions(self, post_content, celebrities):
+                """Extract celebrity mentions from post content"""
+                try:
+                    if not post_content.startswith('---'):
+                        return {}
+
+                    parts = post_content.split('---', 2)
+                    if len(parts) < 3:
+                        return {}
+
+                    # Parse frontmatter
+                    frontmatter = yaml.safe_load(parts[1])
+                    if not frontmatter:
+                        return {}
+
+                    title = frontmatter.get('title', '').lower()
+                    content = parts[2].lower() if len(parts) > 2 else ''
+                    full_text = f"{title} {content}"
+
+                    mentions = {}
+
+                    # Check each celebrity
+                    for celeb_key in celebrities.keys():
+                        # Create search variations
+                        search_terms = [
+                            celeb_key.replace('_', ' '),  # "taylor_swift" -> "taylor swift"
+                            celeb_key.replace('_', ''),   # "taylor_swift" -> "taylorswift"
+                            celeb_key,                    # "taylor_swift"
+                        ]
+
+                        # Add individual name parts for better matching
+                        name_parts = celeb_key.split('_')
+                        if len(name_parts) > 1:
+                            search_terms.extend(name_parts)
+
+                        total_mentions = 0
+                        title_mentions = 0
+
+                        for term in search_terms:
+                            if len(term) < 3:  # Skip very short terms
+                                continue
+
+                            # Count mentions with word boundaries
+                            pattern = r'\b' + re.escape(term.lower()) + r'\b'
+                            text_matches = len(re.findall(pattern, full_text))
+                            title_matches = len(re.findall(pattern, title))
+
+                            total_mentions += text_matches
+                            title_mentions += title_matches
+
+                        if total_mentions > 0:
+                            mentions[celeb_key] = {
+                                'total_mentions': total_mentions,
+                                'title_mentions': title_mentions,
+                                'in_headline': title_mentions > 0
+                            }
+
+                    return mentions
+
+                except Exception as e:
+                    logger.debug(f"Error parsing post: {e}")
+                    return {}
+
+            def calculate_post_drama_boost(self, mentions, title, content, post_date):
+                """Calculate drama boost for a post"""
+                if not mentions:
+                    return {}
+
+                full_text = f"{title} {content}".lower()
+
+                # Calculate days since post
+                today = datetime.now().date()
+                days_ago = (today - post_date.date()).days
+                recency_multiplier = self.get_recency_multiplier(days_ago)
+
+                celebrity_boosts = {}
+
+                for celeb_key, mention_data in mentions.items():
+                    # Base points for mentions
+                    boost = self.SCORING_CONFIG['base_mention_points'] * mention_data['total_mentions']
+
+                    # Headline bonus
+                    if mention_data['in_headline']:
+                        boost += self.SCORING_CONFIG['headline_bonus']
+
+                    # Explosive keywords bonus
+                    explosive_count = sum(1 for keyword in self.EXPLOSIVE_KEYWORDS if keyword in full_text)
+                    if explosive_count > 0:
+                        boost += self.SCORING_CONFIG['explosive_keywords_bonus'] * min(explosive_count, 3)
+
+                    # Apply recency multiplier
+                    boost *= recency_multiplier
+
+                    celebrity_boosts[celeb_key] = boost
+
+                    logger.debug(f"📈 {celeb_key}: +{boost:.1f} points (mentions: {mention_data['total_mentions']}, "
+                               f"headline: {mention_data['in_headline']}, explosive: {explosive_count}, "
+                               f"days_ago: {days_ago}, multiplier: {recency_multiplier:.1f})")
+
+                return celebrity_boosts
+
+            def apply_time_decay(self, celebrities):
+                """Apply time-based decay to celebrity scores"""
+                now = datetime.now()
+                decayed_count = 0
+
+                for celeb_key, celeb_data in celebrities.items():
+                    if not isinstance(celeb_data, dict):
+                        continue
+
+                    current_score = celeb_data.get('drama_score', 25)
+                    last_update = celeb_data.get('last_temperature_update')
+
+                    if last_update:
+                        try:
+                            last_update_date = datetime.strptime(last_update, '%Y-%m-%d %H:%M:%S')
+                            days_since_update = (now - last_update_date).days
+
+                            if days_since_update > 0:
+                                # Apply exponential decay
+                                decay_factor = (1 - self.DECAY_RATE) ** days_since_update
+                                new_score = max(self.MIN_SCORE, current_score * decay_factor)
+
+                                if new_score != current_score:
+                                    celeb_data['drama_score'] = round(new_score, 1)
+                                    decayed_count += 1
+                                    logger.debug(f"🕐 {celeb_key}: {current_score:.1f}° -> {new_score:.1f}° "
+                                               f"(decay over {days_since_update} days)")
+                        except ValueError:
+                            # Invalid date format, skip decay
+                            pass
+
+                logger.info(f"🕐 Applied decay to {decayed_count} celebrities")
+                return celebrities
+
+            def recalculate_scores_from_posts(self, celebrities):
+                """Recalculate celebrity scores from existing posts"""
+                if not self.posts_dir.exists():
+                    logger.warning("No _posts directory found")
+                    return celebrities
+
+                processed_posts = 0
+                total_boosts = defaultdict(float)
+                cutoff_date = datetime.now() - timedelta(days=self.DAYS_TO_ANALYZE)
+
+                # Process posts in date order (newest first)
+                post_files = sorted(self.posts_dir.glob('*.md'), reverse=True)
+
+                for post_file in post_files:
+                    try:
+                        # Check if post is recent enough
+                        if post_file.name.startswith('20'):
+                            try:
+                                file_date = datetime.strptime(post_file.name[:10], '%Y-%m-%d')
+                                if file_date < cutoff_date:
+                                    continue
+                            except ValueError:
+                                continue
+
+                        # Read post content
+                        with open(post_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        # Extract mentions
+                        mentions = self.extract_celebrity_mentions(content, celebrities)
+
+                        if mentions:
+                            # Parse frontmatter for title
+                            parts = content.split('---', 2)
+                            frontmatter = yaml.safe_load(parts[1])
+                            title = frontmatter.get('title', '')
+                            post_content = parts[2] if len(parts) > 2 else ''
+
+                            # Get post date
+                            post_date = frontmatter.get('date')
+                            if isinstance(post_date, str):
+                                try:
+                                    post_date = datetime.strptime(post_date[:10], '%Y-%m-%d')
+                                except ValueError:
+                                    post_date = file_date if 'file_date' in locals() else datetime.now()
+                            elif not post_date:
+                                post_date = file_date if 'file_date' in locals() else datetime.now()
+
+                            # Calculate boosts
+                            boosts = self.calculate_post_drama_boost(mentions, title, post_content, post_date)
+
+                            # Accumulate boosts
+                            for celeb_key, boost in boosts.items():
+                                total_boosts[celeb_key] += boost
+
+                            processed_posts += 1
+                            if processed_posts % 50 == 0:
+                                logger.info(f"📊 Processed {processed_posts} posts...")
+
+                    except Exception as e:
+                        logger.debug(f"Error processing {post_file.name}: {e}")
+                        continue
+
+                # Apply accumulated boosts to celebrity scores
+                updated_count = 0
+                for celeb_key, total_boost in total_boosts.items():
+                    if celeb_key in celebrities:
+                        current_score = celebrities[celeb_key].get('drama_score', 25)
+                        new_score = min(100, max(self.MIN_SCORE, current_score + total_boost))
+
+                        celebrities[celeb_key]['drama_score'] = round(new_score, 1)
+                        celebrities[celeb_key]['last_temperature_update'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        celebrities[celeb_key]['status'] = self.calculate_status(new_score)
+
+                        updated_count += 1
+                        logger.debug(f"📈 {celeb_key}: {current_score:.1f}° + {total_boost:.1f} = {new_score:.1f}°")
+
+                logger.info(f"📈 Recalculated scores for {updated_count} celebrities from {processed_posts} posts")
+                return celebrities
+
+            def calculate_status(self, drama_score):
+                """Calculate celebrity status based on drama score"""
+                if drama_score >= 80:
+                    return 'explosive'
+                elif drama_score >= 60:
+                    return 'hot'
+                elif drama_score >= 40:
+                    return 'warm'
+                elif drama_score >= 20:
+                    return 'mild'
+                else:
+                    return 'cooling'
+
+            def save_celebrities(self, celebrities):
+                """Save updated celebrity scores"""
+                try:
+                    # Create backup
+                    backup_file = self.celebrities_file.parent / f'celebrities_backup_recalc_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yml'
+                    if self.celebrities_file.exists():
+                        import shutil
+                        shutil.copy2(self.celebrities_file, backup_file)
+                        logger.info(f"📋 Created backup: {backup_file.name}")
+
+                    # Save updated celebrities
+                    with open(self.celebrities_file, 'w', encoding='utf-8') as f:
+                        yaml.dump(celebrities, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
+
+                    logger.info(f"💾 Saved updated celebrity scores")
+
+                except Exception as e:
+                    logger.error(f"❌ Error saving celebrities: {e}")
+
+            def generate_report(self, celebrities):
+                """Generate recalculation report"""
+                # Get score distribution
+                score_ranges = {'0-20': 0, '21-40': 0, '41-60': 0, '61-80': 0, '81-100': 0}
+                status_counts = Counter()
+
+                for celeb_data in celebrities.values():
+                    if isinstance(celeb_data, dict):
+                        score = celeb_data.get('drama_score', 0)
+                        status = celeb_data.get('status', 'unknown')
+
+                        status_counts[status] += 1
+
+                        if score <= 20:
+                            score_ranges['0-20'] += 1
+                        elif score <= 40:
+                            score_ranges['21-40'] += 1
+                        elif score <= 60:
+                            score_ranges['41-60'] += 1
+                        elif score <= 80:
+                            score_ranges['61-80'] += 1
+                        else:
+                            score_ranges['81-100'] += 1
+
+                # Top celebrities
+                top_celebs = sorted(
+                    [(k, v.get('drama_score', 0)) for k, v in celebrities.items() if isinstance(v, dict)],
+                    key=lambda x: x[1], reverse=True
+                )[:20]
+
+                print("\n" + "="*60)
+                print("🌡️ CELEBRITY SCORE RECALCULATION REPORT")
+                print("="*60)
+                print(f"📊 Total Celebrities: {len(celebrities)}")
+                print(f"📈 Status Distribution: {dict(status_counts)}")
+                print(f"🌡️ Score Ranges: {score_ranges}")
+                print(f"🕐 Decay Rate: {self.DECAY_RATE * 100}% per day")
+                print(f"📅 Days Analyzed: {self.DAYS_TO_ANALYZE}")
+                print("\n🔥 TOP 20 HOTTEST CELEBRITIES:")
+                for i, (celeb, score) in enumerate(top_celebs, 1):
+                    status = celebrities[celeb].get('status', 'unknown')
+                    print(f"  {i:2d}. {celeb.replace('_', ' ').title()}: {score:.1f}° ({status.upper()})")
+                print("="*60)
+
+            def run(self):
+                """Execute score recalculation"""
+                print("🌡️ Starting Celebrity Score Recalculation...")
+
+                # 1. Load celebrities
+                celebrities = self.load_celebrities()
+                if not celebrities:
+                    print("❌ No celebrities to process")
+                    return
+
+                # 2. Apply time decay
+                print("🕐 Applying time-based decay...")
+                celebrities = self.apply_time_decay(celebrities)
+
+                # 3. Recalculate from posts
+                print("📊 Recalculating scores from existing posts...")
+                celebrities = self.recalculate_scores_from_posts(celebrities)
+
+                # 4. Save results
+                print("💾 Saving updated scores...")
+                self.save_celebrities(celebrities)
+
+                # 5. Generate report
+                self.generate_report(celebrities)
+
+                print("✅ Score Recalculation Complete!")
+                print("🎯 Your celebrities now have dynamic, realistic scores!")
+
+        if __name__ == "__main__":
+            decay_rate = float(os.getenv('DECAY_RATE', '0.05'))
+            min_score = float(os.getenv('MIN_SCORE', '5'))
+            days_to_analyze = int(os.getenv('DAYS_TO_ANALYZE', '30'))
+
+            recalculator = CelebrityScoreRecalculator(decay_rate, min_score, days_to_analyze)
+            recalculator.run()
+        EOF
+
+    - name: 🌡️ Run Score Recalculation
+      env:
+        DECAY_RATE: ${{ inputs.decay_rate }}
+        MIN_SCORE: ${{ inputs.min_score }}
+        DAYS_TO_ANALYZE: ${{ inputs.days_to_analyze }}
+      run: |
+        python celebrity_score_recalc.py
+
+    - name: 📊 Show Results
+      run: |
+        echo "📋 Changes made:"
+        git status --porcelain
+
+        echo -e "\n📈 Top celebrities after recalculation:"
+        if [ -f "_data/celebrities.yml" ]; then
+          echo "✅ Scores recalculated successfully"
+        fi
+
+    - name: 🚀 Commit Results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Score Recalculation Action"
+
+        git add _data/celebrities.yml
+
+        if ls _data/celebrities_backup_recalc_*.yml 1> /dev/null 2>&1; then
+          git add _data/celebrities_backup_recalc_*.yml
+        fi
+
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🌡️ Celebrity Score Recalculation with Decay
+
+          - Applied time-based decay (rate: ${{ inputs.decay_rate }})
+          - Recalculated scores from last ${{ inputs.days_to_analyze }} days of posts
+          - Implemented recency multipliers for recent mentions
+          - Added explosive keyword bonuses
+          - Set minimum score floor: ${{ inputs.min_score }}°
+
+          Automated Score Recalculation"
+
+          git push
+          echo "✅ Recalculated scores committed!"
+        fi
