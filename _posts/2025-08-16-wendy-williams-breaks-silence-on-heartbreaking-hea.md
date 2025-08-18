@@ -11,7 +11,7 @@ primary_celebrity: liam
 source: page_six
 source_url: https://pagesix.com/2025/08/16/celebrity-news/wendy-williams-spotted-out-to-dinner-with-friends-after-heartbreaking-update-on-dementia-battle/
 tags:
-- liam
+- celebrity-gossip
 temperature: 100
 title: Wendy Williams breaks silence on heartbreaking health update while out to dinner
   with friends

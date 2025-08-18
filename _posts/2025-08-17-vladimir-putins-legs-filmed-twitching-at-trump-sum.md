@@ -12,8 +12,8 @@ primary_celebrity: trump
 source: tmz
 source_url: https://www.tmz.com/2025/08/17/vladimir-putin-legs-donald-trump-summit-alaska-anchorage/
 tags:
-- trump
-- ye
+- celebrity-gossip
+- movies
 temperature: 100
 title: Vladimir Putin's Legs Filmed Twitching at Trump Summit Amid Rumors of Health
   Issues

@@ -1,14 +1,20 @@
 ---
-layout: post
-title: "Warm smiles, a ride in the Beast and a united front - but no deal: Trump and Putin make 'great progress' but fail to seal Ukraine peace pact in Alaska as Russian president mulls Moscow talks"
-date: 2025-08-16 01:18:28 +0000
 categories: gossip
-tags: ['trump', 'source-daily_mail', 'drama-hot']
+date: 2025-08-16 01:18:28 +0000
 drama_score: 6
+layout: post
+mentions:
+  donald_trump: 2
+  trump: 4
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-15005287/red-carpet-Putin-Alaska-world-waits-Trump.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
-mentions: {'donald_trump': 2, 'trump': 4}
+source_url: https://www.dailymail.co.uk/news/article-15005287/red-carpet-Putin-Alaska-world-waits-Trump.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
+tags:
+- celebrity-gossip
+- scandals
+title: 'Warm smiles, a ride in the Beast and a united front - but no deal: Trump and
+  Putin make ''great progress'' but fail to seal Ukraine peace pact in Alaska as Russian
+  president mulls Moscow talks'
 ---
 
 Donald Trump declared 'there's no deal until there's a deal' tonight as his historic summit with Vladimir Putin failed to yield any immediate result.

@@ -1,14 +1,25 @@
 ---
-layout: post
-title: "Why Swifties Think Taylor Swift Might Headline Super Bowl LX Next Year! See The Clues She Dropped..."
-date: 2025-08-15 22:16:19 +0000
 categories: gossip
-tags: ['taylor-swift', 'source-perez_hilton', 'drama-explosive']
+date: 2025-08-15 22:16:19 +0000
 drama_score: 51
+layout: post
+mentions:
+  bowl: 6
+  kelce: 3
+  super: 6
+  super_bowl: 6
+  taylor_swift: 27
+  travis_kelce: 3
 primary_celebrity: taylor_swift
 source: perez_hilton
-source_url: "https://perezhilton.com/taylor-swift-super-bowl-lx-halftime-show-theory-clues-new-heights/"
-mentions: {'bowl': 6, 'kelce': 3, 'super': 6, 'super_bowl': 6, 'taylor_swift': 27, 'travis_kelce': 3}
+source_url: https://perezhilton.com/taylor-swift-super-bowl-lx-halftime-show-theory-clues-new-heights/
+tags:
+- celebrity-gossip
+- scandals
+- music
+- taylor-swift
+title: Why Swifties Think Taylor Swift Might Headline Super Bowl LX Next Year! See
+  The Clues She Dropped...
 ---
 
 Strap in, Taylor Swift fans! We have another WILD new theory for you! All across social media, everyone’s been loving the latest New Heights podcast featuring the pop star, her beau Travis Kelce, and his big bro Jason. The album announcement for The Life of a Showgirl has had fans running wild with new theories [...] Read More... The post Why Swifties Think Taylor Swift Might Headline Super Bowl LX Next Year! See The Clues She Dropped... appeared first on Perez Hilton.

@@ -12,8 +12,8 @@ primary_celebrity: met
 source: us_weekly
 source_url: https://www.usmagazine.com/entertainment/news/matt-rifes-ups-and-downs-elf-cosmetics-controversy-more/
 tags:
-- met
-- ye
+- celebrity-gossip
+- scandals
 temperature: 83
 title: 'Comedian Matt Rife''s Ups and Downs: E.l.f. Cosmetics Controversy and More'
 ---

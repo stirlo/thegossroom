@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "How to Watch 2025 NFL Preseason Games Live Online"
-date: 2025-08-15 20:18:43 +0000
 categories: gossip
-tags: ['bowl', 'source-variety_alt', 'drama-hot']
+date: 2025-08-15 20:18:43 +0000
 drama_score: 6
+layout: post
+mentions:
+  bowl: 2
+  super: 2
+  super_bowl: 2
 primary_celebrity: bowl
 source: variety_alt
-source_url: "https://variety.com/2025/shopping/news/how-to-watch-nfl-preseason-games-online-livestream-1236480652/"
-mentions: {'bowl': 2, 'super': 2, 'super_bowl': 2}
+source_url: https://variety.com/2025/shopping/news/how-to-watch-nfl-preseason-games-online-livestream-1236480652/
+tags:
+- celebrity-gossip
+- scandals
+title: How to Watch 2025 NFL Preseason Games Live Online
 ---
 
 The NFL 2025-26 season is just a few weeks away, while teams are getting ready to compete to win their division, make the playoffs and eventually hoist the Vince Lombardi Trophy at the end of Super Bowl LX at Levi’s Stadium in Santa Clara, California in Feb. 2026. The start of preseason week two features […]

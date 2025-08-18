@@ -12,8 +12,8 @@ primary_celebrity: bieber
 source: tmz
 source_url: https://www.tmz.com/2025/08/17/hailey-reacts-justin-bieber-kendall-jenner-photo/
 tags:
-- bieber
-- jenner
+- celebrity-gossip
+- justin-bieber
 temperature: 100
 title: Hailey Bieber Reacts to Justin Bieber and Kendall Jenner's Viral Picture
 ---

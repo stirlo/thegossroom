@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Logan Paul and Nina Agdal Marry in Lavish Italian Wedding Ceremony"
-date: 2025-08-15 20:18:40 +0000
 categories: gossip
-tags: ['logan-paul', 'source-e_news', 'drama-hot']
+date: 2025-08-15 20:18:40 +0000
 drama_score: 9
+layout: post
+mentions:
+  jake_paul: 3
+  logan_paul: 6
 primary_celebrity: logan_paul
 source: e_news
-source_url: "https://www.eonline.com/news/1421181/logan-paul-marries-nina-agdal-in-italy-wedding?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'jake_paul': 3, 'logan_paul': 6}
+source_url: https://www.eonline.com/news/1421181/logan-paul-marries-nina-agdal-in-italy-wedding?cmpid=rss-syndicate-genericrss-us-top_stories
+tags:
+- celebrity-gossip
+- scandals
+- relationships
+title: Logan Paul and Nina Agdal Marry in Lavish Italian Wedding Ceremony
 ---
 
 Logan Paul's wedding was a total knockout. The YouTube personality married Danish model Nina Agdal in Lake Como, Italy on Aug. 15 after three years of dating. Logan's brother Jake Paul shared a...

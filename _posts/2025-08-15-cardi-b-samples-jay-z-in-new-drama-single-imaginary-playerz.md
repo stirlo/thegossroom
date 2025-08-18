@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Cardi B Samples Jay-Z in New 'Drama' Single 'Imaginary Playerz'"
-date: 2025-08-15 23:16:24 +0000
 categories: gossip
-tags: ['cardi-b', 'source-us_weekly', 'drama-hot']
+date: 2025-08-15 23:16:24 +0000
 drama_score: 6
+layout: post
+mentions:
+  cardi_b: 6
 primary_celebrity: cardi_b
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/cardi-bs-new-album-everything-we-know-so-far/"
-mentions: {'cardi_b': 6}
+source_url: https://www.usmagazine.com/entertainment/news/cardi-bs-new-album-everything-we-know-so-far/
+tags:
+- celebrity-gossip
+- scandals
+- music
+title: Cardi B Samples Jay-Z in New 'Drama' Single 'Imaginary Playerz'
 ---
 
 It’s been more than years since Cardi B took over the rap world with Invasion of Privacy, and her fans are ready for the follow-up. One such supporter is Cardi’s estranged husband, Offset, who took to Instagram in February 2024 to encourage her to take the plunge. “Stop being [scared] and drop the album,” Offset […]

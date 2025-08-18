@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15007619/jeff-bezos-mom-jacklyn-amazon-investment.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- ye
+- celebrity-gossip
 temperature: 100
 title: 'From teen mom to raising a billionaire: How Jacklyn Bezos'' selfless sacrifices
   over the years secured son Jeff''s Amazon success'

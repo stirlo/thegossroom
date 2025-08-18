@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Friday Music Guide: New Music From Cardi B, Chance The Rapper, Dijon and More"
-date: 2025-08-15 15:17:42 +0000
 categories: gossip
-tags: ['cardi-b', 'source-billboard', 'drama-rising']
+date: 2025-08-15 15:17:42 +0000
 drama_score: 2
+layout: post
+mentions:
+  cardi_b: 2
 primary_celebrity: cardi_b
 source: billboard
-source_url: "https://www.billboard.com/music/pop/friday-music-guide-cardi-b-chance-dijon-1236045087/"
-mentions: {'cardi_b': 2}
+source_url: https://www.billboard.com/music/pop/friday-music-guide-cardi-b-chance-dijon-1236045087/
+tags:
+- celebrity-gossip
+- scandals
+- music
+title: 'Friday Music Guide: New Music From Cardi B, Chance The Rapper, Dijon and More'
 ---
 
 Check out the must-hear releases of the week.

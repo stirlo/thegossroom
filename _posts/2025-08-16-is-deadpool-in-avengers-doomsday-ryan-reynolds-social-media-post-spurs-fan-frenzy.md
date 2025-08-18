@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Is Deadpool In ‘Avengers: Doomsday’? Ryan Reynolds’ Social Media Post Spurs Fan Frenzy"
-date: 2025-08-16 01:18:26 +0000
 categories: gossip
-tags: ['ryan-reynolds', 'source-deadline', 'drama-rising']
+date: 2025-08-16 01:18:26 +0000
 drama_score: 4
+layout: post
+mentions:
+  ryan_reynolds: 4
 primary_celebrity: ryan_reynolds
 source: deadline
-source_url: "https://deadline.com/2025/08/ryan-reynolds-deadpool-avengers-doomsday-1236489929/"
-mentions: {'ryan_reynolds': 4}
+source_url: https://deadline.com/2025/08/ryan-reynolds-deadpool-avengers-doomsday-1236489929/
+tags:
+- celebrity-gossip
+- scandals
+- movies
+title: 'Is Deadpool In ‘Avengers: Doomsday’? Ryan Reynolds’ Social Media Post Spurs
+  Fan Frenzy'
 ---
 
 Ryan Reynolds’ posted a Deadpool graffiti-ed Avengers logo on Instagram today, which started the rumor mill that the Merc with a Mouth would be in the Russo Brothers’ Avengers: Doomsday movie. Sources tell us that they haven’t seen Reynolds on set in London, and he isn’t set to appear in the next two Avengers movie. […]

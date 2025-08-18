@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Disney Greenlights ‘Coven Academy,’ Supernatural Dramedy Series About Teenage Witches-in-Training"
-date: 2025-08-15 17:15:13 +0000
 categories: gossip
-tags: ['olivia-rodrigo', 'source-variety_alt', 'drama-rising']
+date: 2025-08-15 17:15:13 +0000
 drama_score: 4
+layout: post
+mentions:
+  olivia_rodrigo: 4
 primary_celebrity: olivia_rodrigo
 source: variety_alt
-source_url: "https://variety.com/2025/tv/news/disney-greenlights-coven-academy-show-teenage-witches-1236490517/"
-mentions: {'olivia_rodrigo': 4}
+source_url: https://variety.com/2025/tv/news/disney-greenlights-coven-academy-show-teenage-witches-1236490517/
+tags:
+- celebrity-gossip
+- scandals
+- music
+title: Disney Greenlights ‘Coven Academy,’ Supernatural Dramedy Series About Teenage
+  Witches-in-Training
 ---
 
 Disney Branded Television has given a series greenlight to the supernatural dramady “Coven Academy,” which follows a trio of teenage witches-in-training. The series is a single-camera project from Tim Federle, the creator of the Emmy-winning “High School Musical: The Musical: The Series” starring a young Olivia Rodrigo. “Coven Academy” was ordered to pilot in March. […]

@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15009385/Jack-Schlossberg-mock-Melania-Trump-Putin-Kennedy.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
+- celebrity-gossip
 temperature: 100
 title: Kennedy heir sports blond wig and fake accent for Melania Trump impression
   during unhinged video

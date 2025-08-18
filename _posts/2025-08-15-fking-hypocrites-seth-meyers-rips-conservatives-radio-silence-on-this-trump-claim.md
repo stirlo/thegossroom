@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "'F**king Hypocrites!': Seth Meyers Rips Conservatives' Radio Silence On This Trump Claim"
-date: 2025-08-15 16:20:58 +0000
 categories: gossip
-tags: ['trump', 'source-huffpost_entertainment', 'drama-rising']
+date: 2025-08-15 16:20:58 +0000
 drama_score: 2
+layout: post
+mentions:
+  trump: 2
 primary_celebrity: trump
 source: huffpost_entertainment
-source_url: "https://www.huffpost.com/entry/seth-meyers-trump-conservatives-cancel-culture-kennedy-center-honors_n_689e8740e4b0ef392c21d1e9"
-mentions: {'trump': 2}
+source_url: https://www.huffpost.com/entry/seth-meyers-trump-conservatives-cancel-culture-kennedy-center-honors_n_689e8740e4b0ef392c21d1e9
+tags:
+- celebrity-gossip
+- scandals
+title: '''F**king Hypocrites!'': Seth Meyers Rips Conservatives'' Radio Silence On
+  This Trump Claim'
 ---
 
 The "Late Night" host flagged what the MAGA movement just wants to "whine about" on Fox News.

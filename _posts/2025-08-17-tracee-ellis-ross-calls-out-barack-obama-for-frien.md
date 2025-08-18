@@ -11,7 +11,7 @@ primary_celebrity: obama
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-news/news/tracee-ellis-ross-confronts-barack-obama-over-friendship-mistake/
 tags:
-- obama
+- celebrity-gossip
 temperature: 100
 title: Tracee Ellis Ross Calls Out Barack Obama for Friendship Mistake
 ---

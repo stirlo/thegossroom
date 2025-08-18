@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "How one brand’s belts became must-haves for stars like Taylor Swift"
-date: 2025-08-15 20:18:46 +0000
 categories: gossip
-tags: ['taylor-swift', 'source-page_six', 'drama-hot']
+date: 2025-08-15 20:18:46 +0000
 drama_score: 6
+layout: post
+mentions:
+  taylor_swift: 6
 primary_celebrity: taylor_swift
 source: page_six
-source_url: "https://pagesix.com/2025/08/15/style/how-b-low-the-belt-became-a-favorite-of-stars-like-taylor-swift/"
-mentions: {'taylor_swift': 6}
+source_url: https://pagesix.com/2025/08/15/style/how-b-low-the-belt-became-a-favorite-of-stars-like-taylor-swift/
+tags:
+- celebrity-gossip
+- scandals
+- fashion
+- taylor-swift
+title: How one brand’s belts became must-haves for stars like Taylor Swift
 ---
 
 Right now, only Page Six Style readers can take 20% off with our exclusive promo code.

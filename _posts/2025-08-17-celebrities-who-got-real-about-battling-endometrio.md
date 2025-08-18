@@ -11,7 +11,7 @@ primary_celebrity: met
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-body/pictures/olivia-culpo-julianne-hough-and-more-battling-endometriosis/
 tags:
-- met
+- celebrity-gossip
 temperature: 100
 title: Celebrities Who Got Real About Battling Endometriosis
 ---

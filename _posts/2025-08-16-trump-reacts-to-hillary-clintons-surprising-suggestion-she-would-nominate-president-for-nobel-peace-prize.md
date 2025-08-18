@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Trump reacts to Hillary Clinton's surprising suggestion she would nominate president for Nobel Peace Prize"
-date: 2025-08-16 03:12:34 +0000
 categories: gossip
-tags: ['trump', 'source-daily_mail', 'drama-rising']
+date: 2025-08-16 03:12:34 +0000
 drama_score: 4
+layout: post
+mentions:
+  trump: 4
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-15005453/Trump-Hillary-Clinton-nomination-Nobel-Peace-Prize.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
-mentions: {'trump': 4}
+source_url: https://www.dailymail.co.uk/news/article-15005453/Trump-Hillary-Clinton-nomination-Nobel-Peace-Prize.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
+tags:
+- celebrity-gossip
+- scandals
+title: Trump reacts to Hillary Clinton's surprising suggestion she would nominate
+  president for Nobel Peace Prize
 ---
 
 The Former Secretary of State made the statement in a podcast appearance ahead of Trump's meeting with Russian President Vladimir Putin in Alaska.

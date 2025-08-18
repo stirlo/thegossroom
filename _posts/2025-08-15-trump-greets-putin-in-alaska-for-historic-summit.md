@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Trump Greets Putin in Alaska for Historic Summit"
-date: 2025-08-15 20:18:38 +0000
 categories: gossip
-tags: ['trump', 'source-tmz', 'drama-hot']
+date: 2025-08-15 20:18:38 +0000
 drama_score: 9
+layout: post
+mentions:
+  trump: 9
 primary_celebrity: trump
 source: tmz
-source_url: "https://www.tmz.com/2025/08/15/trump-putin-summit-greeting-alaska/"
-mentions: {'trump': 9}
+source_url: https://www.tmz.com/2025/08/15/trump-putin-summit-greeting-alaska/
+tags:
+- celebrity-gossip
+- scandals
+title: Trump Greets Putin in Alaska for Historic Summit
 ---
 
 President Trump and Russian strongman Vladimir Putin are both on the ground in Alaska for a high-stakes summit -- the powerful world leaders just greeted each other on the tarmac ... and it's all on video. Trump and Putin shook hands Friday after…

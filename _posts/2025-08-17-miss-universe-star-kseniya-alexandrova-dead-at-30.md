@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: perez_hilton
 source_url: https://perezhilton.com/miss-universe-star-kseniya-alexandrova-dead-at-30-car-accident/
 tags:
-- ye
+- celebrity-gossip
 temperature: 100
 title: Miss Universe Star Kseniya Alexandrova Dead At 30 After Tragic Car Accident
 ---

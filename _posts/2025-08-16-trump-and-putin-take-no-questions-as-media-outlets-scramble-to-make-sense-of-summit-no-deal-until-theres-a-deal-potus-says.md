@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Trump And Putin Take No Questions As Media Outlets Scramble To Make Sense Of Summit: “No Deal Until There’s A Deal,” POTUS Says"
-date: 2025-08-16 01:18:26 +0000
 categories: gossip
-tags: ['trump', 'source-deadline', 'drama-hot']
+date: 2025-08-16 01:18:26 +0000
 drama_score: 6
+layout: post
+mentions:
+  donald_trump: 2
+  trump: 4
 primary_celebrity: trump
 source: deadline
-source_url: "https://deadline.com/2025/08/trump-putin-summit-ukraine-1236489689/"
-mentions: {'donald_trump': 2, 'trump': 4}
+source_url: https://deadline.com/2025/08/trump-putin-summit-ukraine-1236489689/
+tags:
+- celebrity-gossip
+- scandals
+title: 'Trump And Putin Take No Questions As Media Outlets Scramble To Make Sense
+  Of Summit: “No Deal Until There’s A Deal,” POTUS Says'
 ---
 
 UPDATED: President Donald Trump and Russian President Vladimir Putin ended their summit with a press conference in which both leaders made statements but took no questions. Media outlets scrambled to try to figure out if there was any kind of agreement, with Putin talking about improved relations with the United States, yet calling the meeting […]

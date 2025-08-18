@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Foul-mouthed MSNBC host curses live on air during rant against Trump over Putin summit"
-date: 2025-08-16 06:23:39 +0000
 categories: gossip
-tags: ['trump', 'source-daily_mail', 'drama-rising']
+date: 2025-08-16 06:23:39 +0000
 drama_score: 2
+layout: post
+mentions:
+  trump: 2
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/media/article-15005469/MSNBC-host-curses-live-air-Trump-Putin-summit.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
-mentions: {'trump': 2}
+source_url: https://www.dailymail.co.uk/media/article-15005469/MSNBC-host-curses-live-air-Trump-Putin-summit.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
+tags:
+- celebrity-gossip
+- scandals
+title: Foul-mouthed MSNBC host curses live on air during rant against Trump over Putin
+  summit
 ---
 
 MSNBC host Nicolle Wallace went on a tirade against the president for meeting with the Russian leader on Friday.

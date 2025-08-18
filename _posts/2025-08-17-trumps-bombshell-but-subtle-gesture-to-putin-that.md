@@ -12,8 +12,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15006511/Trump-subtle-gesture-Putin-MARK-HALPERIN.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
-- ye
+- celebrity-gossip
 temperature: 100
 title: 'Trump''s bombshell but subtle gesture to Putin that everyone missed... it
   could be his most ingenious move yet: MARK HALPERIN'

@@ -12,8 +12,8 @@ primary_celebrity: met
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15001601/Andy-Warhol-Edie-Sedgwick.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- met
-- ye
+- celebrity-gossip
+- movies
 temperature: 100
 title: 'Chilling portrait of Warhol the monster: 60 years after Andy met his muse,
   how he sexually humiliated Edie Sedgwick, drove her to overdose... then mocked her

@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Comparing Taylor Swift’s Album Announcements: Which Was the Most Elaborate?"
-date: 2025-08-16 07:15:10 +0000
 categories: gossip
-tags: ['taylor-swift', 'source-us_weekly', 'drama-explosive']
+date: 2025-08-16 07:15:10 +0000
 drama_score: 21
+layout: post
+mentions:
+  taylor_swift: 21
 primary_celebrity: taylor_swift
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/taylor-swift-album-announcements-how-she-rolled-out-every-record/"
-mentions: {'taylor_swift': 21}
+source_url: https://www.usmagazine.com/entertainment/news/taylor-swift-album-announcements-how-she-rolled-out-every-record/
+tags:
+- celebrity-gossip
+- scandals
+- music
+- taylor-swift
+title: 'Comparing Taylor Swift’s Album Announcements: Which Was the Most Elaborate?'
 ---
 
 Taylor Swift is known for dropping Easter eggs in her songs and leading up to new album releases — but which of her album announcements has been the most elaborate? Swift made her music debut in 2006 with her self-titled record, but as an unknown there wasn’t much fanfare for the occasion. However, over the […]

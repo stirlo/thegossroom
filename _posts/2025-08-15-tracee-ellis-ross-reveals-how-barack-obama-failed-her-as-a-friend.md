@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Tracee Ellis Ross Reveals How Barack Obama “Failed” Her as a Friend"
-date: 2025-08-15 17:15:08 +0000
 categories: gossip
-tags: ['barack-obama', 'source-e_news', 'drama-explosive']
+date: 2025-08-15 17:15:08 +0000
 drama_score: 12
+layout: post
+mentions:
+  barack_obama: 6
+  obama: 6
 primary_celebrity: barack_obama
 source: e_news
-source_url: "https://www.eonline.com/news/1421228/tracee-ellis-ross-on-barack-obamas-dating-advice?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'barack_obama': 6, 'obama': 6}
+source_url: https://www.eonline.com/news/1421228/tracee-ellis-ross-on-barack-obamas-dating-advice?cmpid=rss-syndicate-genericrss-us-top_stories
+tags:
+- celebrity-gossip
+- scandals
+- relationships
+title: Tracee Ellis Ross Reveals How Barack Obama “Failed” Her as a Friend
 ---
 
 Not everyone can call up President Barack Obama for dating advice. But, Tracee Ellis Ross is among the lucky few. The Blackish alum recently revealed how her close relationship with the president...

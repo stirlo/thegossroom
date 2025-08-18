@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Trump Says He and Putin ‘Didn’t Get There’ on Deal Talks at Alaska Summit"
-date: 2025-08-16 01:18:29 +0000
 categories: gossip
-tags: ['trump', 'source-rolling_stone', 'drama-rising']
+date: 2025-08-16 01:18:29 +0000
 drama_score: 4
+layout: post
+mentions:
+  trump: 4
 primary_celebrity: trump
 source: rolling_stone
-source_url: "https://www.rollingstone.com/politics/politics-news/trump-putin-meet-alaska-russia-ukraine-war-1235409608/"
-mentions: {'trump': 4}
+source_url: https://www.rollingstone.com/politics/politics-news/trump-putin-meet-alaska-russia-ukraine-war-1235409608/
+tags:
+- celebrity-gossip
+- scandals
+title: Trump Says He and Putin ‘Didn’t Get There’ on Deal Talks at Alaska Summit
 ---
 
 "I won't be happy if I walk away without some form of a ceasefire," Trump said prior to the summit meeting

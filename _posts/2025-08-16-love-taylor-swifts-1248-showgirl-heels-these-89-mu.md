@@ -11,7 +11,9 @@ primary_celebrity: kelce
 source: us_weekly
 source_url: https://www.usmagazine.com/shopping/news/taylor-swifts-showgirl-heels/
 tags:
-- kelce
+- celebrity-gossip
+- music
+- taylor-swift
 temperature: 95
 title: Love Taylor Swifts $1,248 Showgirl Heels? These $89 Mules Look Nearly Identical
 ---

@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Everything We Know About Kate Gosselin's Relationship With Son Collin"
-date: 2025-08-15 23:16:24 +0000
 categories: gossip
-tags: ['kate-gosselin', 'source-us_weekly', 'drama-hot']
+date: 2025-08-15 23:16:24 +0000
 drama_score: 6
+layout: post
+mentions:
+  kate_gosselin: 6
 primary_celebrity: kate_gosselin
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/pictures/kate-gosselins-relationship-with-son-collin-details/"
-mentions: {'kate_gosselin': 6}
+source_url: https://www.usmagazine.com/celebrity-moms/pictures/kate-gosselins-relationship-with-son-collin-details/
+tags:
+- celebrity-gossip
+- scandals
+- relationships
+title: Everything We Know About Kate Gosselin's Relationship With Son Collin
 ---
 
 Kate Gosselin and her son Collin have been through their fair share of ups and downs over the years. The Kate Plus Date star welcomed Collin and his sextuplet siblings — Alexis, Hannah, Aaden, Leah and Joel — in 2004 with her now-ex-husband, Jon Gosselin. The little ones joined twins Madelyn and Cara, who arrived four […]

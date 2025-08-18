@@ -1,14 +1,20 @@
 ---
-layout: post
-title: "Kylie Jenner Subtly Shuts Down Timothée Chalamet Breakup Rumors"
-date: 2025-08-15 20:18:40 +0000
 categories: gossip
-tags: ['jenner', 'source-e_news', 'drama-explosive']
+date: 2025-08-15 20:18:40 +0000
 drama_score: 12
+layout: post
+mentions:
+  jenner: 6
+  kylie_jenner: 6
 primary_celebrity: jenner
 source: e_news
-source_url: "https://www.eonline.com/news/1421243/kylie-jenner-supports-timothee-chalamet-amid-breakup-rumors?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'jenner': 6, 'kylie_jenner': 6}
+source_url: https://www.eonline.com/news/1421243/kylie-jenner-supports-timothee-chalamet-amid-breakup-rumors?cmpid=rss-syndicate-genericrss-us-top_stories
+tags:
+- celebrity-gossip
+- scandals
+- relationships
+- breakups
+title: Kylie Jenner Subtly Shuts Down Timothée Chalamet Breakup Rumors
 ---
 
 Kylie Jenner and Timothée Chalamet's relationship status isn't a complete unknown. After all, as rumors have swirled about a potential breakup when the Call Me By Your Name actor was noticeably...

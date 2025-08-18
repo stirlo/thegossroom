@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Jeremy Thomas Reflects on His Rise “at the Tail End” of Cinema’s Golden Age: “I Can’t Find Somebody to Give Me 40 Million Bucks Anymore”"
-date: 2025-08-15 23:16:26 +0000
 categories: gossip
-tags: ['golden', 'source-hollywood_reporter', 'drama-rising']
+date: 2025-08-15 23:16:26 +0000
 drama_score: 2
+layout: post
+mentions:
+  golden: 2
 primary_celebrity: golden
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/movies/movie-news/jeremy-thomas-edinburgh-film-festival-harvey-weinstein-uk-1236345630/"
-mentions: {'golden': 2}
+source_url: https://www.hollywoodreporter.com/movies/movie-news/jeremy-thomas-edinburgh-film-festival-harvey-weinstein-uk-1236345630/
+tags:
+- celebrity-gossip
+- scandals
+- movies
+title: 'Jeremy Thomas Reflects on His Rise “at the Tail End” of Cinema’s Golden Age:
+  “I Can’t Find Somebody to Give Me 40 Million Bucks Anymore”'
 ---
 
 The legendary producer — an Oscar winner for 1987's 'The Last Emperor' — also spoke about hating Harvey Weinstein at an Edinburgh Film Festival session: "I took [it to] a shocking level of rudeness."

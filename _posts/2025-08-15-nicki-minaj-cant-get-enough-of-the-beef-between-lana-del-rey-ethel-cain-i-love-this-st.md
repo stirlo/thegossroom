@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Nicki Minaj Can’t Get Enough of the Beef Between Lana Del Rey & Ethel Cain: ‘I Love This S–t’"
-date: 2025-08-15 20:18:49 +0000
 categories: gossip
-tags: ['nicki-minaj', 'source-billboard', 'drama-rising']
+date: 2025-08-15 20:18:49 +0000
 drama_score: 2
+layout: post
+mentions:
+  nicki_minaj: 2
 primary_celebrity: nicki_minaj
 source: billboard
-source_url: "https://www.billboard.com/music/music-news/nicki-minaj-reacts-lana-del-rey-ethel-cain-beef-1236045380/"
-mentions: {'nicki_minaj': 2}
+source_url: https://www.billboard.com/music/music-news/nicki-minaj-reacts-lana-del-rey-ethel-cain-beef-1236045380/
+tags:
+- celebrity-gossip
+- scandals
+- music
+title: 'Nicki Minaj Can’t Get Enough of the Beef Between Lana Del Rey & Ethel Cain:
+  ‘I Love This S–t’'
 ---
 
 The rap superstar said she can't get Del Rey's diss track snippet out of her head.

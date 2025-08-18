@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Awards tracker: Collier, Bueckers dominate MVP, ROY talk; other races less set"
-date: 2025-08-15 22:16:32 +0000
 categories: gossip
-tags: ['awards', 'source-espn', 'drama-rising']
+date: 2025-08-15 22:16:32 +0000
 drama_score: 2
+layout: post
+mentions:
+  awards: 2
 primary_celebrity: awards
 source: espn
-source_url: "https://www.espn.com/wnba/story/_/id/45473671/wnba-2025-awards-mvp-rookie-year-coach-dpoy-most-improved-sixth-woman"
-mentions: {'awards': 2}
+source_url: https://www.espn.com/wnba/story/_/id/45473671/wnba-2025-awards-mvp-rookie-year-coach-dpoy-most-improved-sixth-woman
+tags:
+- celebrity-gossip
+- scandals
+title: 'Awards tracker: Collier, Bueckers dominate MVP, ROY talk; other races less
+  set'
 ---
 
 Napheesa Collier and Paige Bueckers will be hard to catch while the other player awards have changed front-runners in August.

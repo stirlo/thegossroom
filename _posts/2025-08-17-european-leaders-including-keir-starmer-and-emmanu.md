@@ -12,8 +12,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15008067/European-leaders-meet-Trump-White-House-Putin-Ukraine.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
-- ye
+- celebrity-gossip
 temperature: 100
 title: European leaders including Keir Starmer and Emmanuel Macron to join Zelensky
   in Washington for Trump summit after US President's Alaska showdown

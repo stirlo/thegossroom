@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Is this the A-list couple Sophie Turner accidentally broke up with her flirting?"
-date: 2025-08-15 22:16:25 +0000
 categories: gossip
-tags: ['sophie-turner', 'source-page_six', 'drama-rising']
+date: 2025-08-15 22:16:25 +0000
 drama_score: 2
+layout: post
+mentions:
+  sophie_turner: 2
 primary_celebrity: sophie_turner
 source: page_six
-source_url: "https://pagesix.com/2025/08/15/celebrity-news/is-this-the-a-list-couple-sophie-turner-accidentally-broke-up-with-her-flirting/"
-mentions: {'sophie_turner': 2}
+source_url: https://pagesix.com/2025/08/15/celebrity-news/is-this-the-a-list-couple-sophie-turner-accidentally-broke-up-with-her-flirting/
+tags:
+- celebrity-gossip
+- scandals
+- relationships
+title: Is this the A-list couple Sophie Turner accidentally broke up with her flirting?
 ---
 
 Internet sleuths speculated about their theories in Reddit threads.

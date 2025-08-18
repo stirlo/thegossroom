@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15009351/trump-zelenskyy-ukraine-russia-war-peace-terms.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
+- celebrity-gossip
 temperature: 100
 title: Trump tells Zelensky he can end Ukraine-Russia war 'immediately' as he lays
   out terms for peace with Putin ahead of White House summit

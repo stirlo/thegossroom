@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Summer Goth, Pucci Princess, Beachside Birkin: The Unhinged Anatomy of Celebrity Vacation Style"
-date: 2025-08-15 17:15:26 +0000
 categories: gossip
-tags: ['jenna-ortega', 'source-vogue_alt', 'drama-rising']
+date: 2025-08-15 17:15:26 +0000
 drama_score: 4
+layout: post
+mentions:
+  jenna_ortega: 4
 primary_celebrity: jenna_ortega
 source: vogue_alt
-source_url: "https://www.vogue.com/article/what-celebrity-vacation-style-are-you"
-mentions: {'jenna_ortega': 4}
+source_url: https://www.vogue.com/article/what-celebrity-vacation-style-are-you
+tags:
+- celebrity-gossip
+- scandals
+- fashion
+title: 'Summer Goth, Pucci Princess, Beachside Birkin: The Unhinged Anatomy of Celebrity
+  Vacation Style'
 ---
 
 From Jenna Ortega’s leather-clad paddle on Bondi Beach to Kate Moss’s sandy Birkin—this summer, celebrities have bent the rules of beachwear.

@@ -12,8 +12,7 @@ primary_celebrity: super
 source: tmz
 source_url: https://www.tmz.com/2025/08/17/terence-stamp-dead/
 tags:
-- super
-- ye
+- celebrity-gossip
 temperature: 100
 title: '''Superman'' Actor Terence Stamp Dead at 87'
 ---

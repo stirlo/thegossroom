@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Kate Gosselin Seemingly Addresses Son Collin's Claims About His Siblings"
-date: 2025-08-15 19:13:14 +0000
 categories: gossip
-tags: ['kate-gosselin', 'source-us_weekly', 'drama-hot']
+date: 2025-08-15 19:13:14 +0000
 drama_score: 6
+layout: post
+mentions:
+  kate_gosselin: 6
 primary_celebrity: kate_gosselin
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/kate-gosselin-seemingly-responds-to-son-collins-recent-claims/"
-mentions: {'kate_gosselin': 6}
+source_url: https://www.usmagazine.com/celebrity-news/news/kate-gosselin-seemingly-responds-to-son-collins-recent-claims/
+tags:
+- celebrity-gossip
+- scandals
+title: Kate Gosselin Seemingly Addresses Son Collin's Claims About His Siblings
 ---
 
 Kate Gosselin appeared to address estranged son Collin Gosselin’s recent TikTok video about his siblings. Kate, 50, posted a lengthy video via her own TikTok account earlier this week showing herself loading the dishwasher after a day at work. “Kitchen Talk and Tips,” she captioned the clip. However, one concerned fan was more interested in […]

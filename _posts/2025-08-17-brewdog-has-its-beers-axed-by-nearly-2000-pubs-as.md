@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15007833/BrewDog-beers-axed-nearly-2-000-pubs.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- ye
+- celebrity-gossip
 temperature: 100
 title: BrewDog has its beers axed by nearly 2,000 pubs as bars turn away from embattled
   brewer - as CEO warns it will make loss for third year in a row

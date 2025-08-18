@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-news/news/stacey-tourout-briefly-survived-fatal-accident-with-matthew-yeomans/
 tags:
-- ye
+- celebrity-gossip
 temperature: 100
 title: Influencer Stacey Tourout Initially Survived Accident With Matthew Yeomans
 ---

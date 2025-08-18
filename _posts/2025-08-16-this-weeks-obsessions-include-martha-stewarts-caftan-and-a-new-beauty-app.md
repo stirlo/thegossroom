@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "This Week’s Obsessions Include Martha Stewart’s Caftan and a New Beauty App"
-date: 2025-08-16 06:23:23 +0000
 categories: gossip
-tags: ['martha-stewart', 'source-us_weekly', 'drama-hot']
+date: 2025-08-16 06:23:23 +0000
 drama_score: 6
+layout: post
+mentions:
+  martha_stewart: 6
 primary_celebrity: martha_stewart
 source: us_weekly
-source_url: "https://www.usmagazine.com/stylish/pictures/end-of-summer-finds-martha-stewarts-caftan-and-more/"
-mentions: {'martha_stewart': 6}
+source_url: https://www.usmagazine.com/stylish/pictures/end-of-summer-finds-martha-stewarts-caftan-and-more/
+tags:
+- celebrity-gossip
+- scandals
+title: This Week’s Obsessions Include Martha Stewart’s Caftan and a New Beauty App
 ---
 
 This week’s latest and greatest finds from Us Weekly editors prove that summer 2025 is set to end on a high note. Martha Stewart proved it when she was spotted celebrating the new superyacht from the Ritz-Carlton Yacht Collection in an eye-catching Dianna Singh caftan. The flowy, sunshine-hued dress — from the newly launched brand […]

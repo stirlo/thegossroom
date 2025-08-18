@@ -1,14 +1,20 @@
 ---
-layout: post
-title: "Martin Short on the Future of ‘Only Murders in the Building,’ and Why He Didn’t Host ‘Match Game’ as Jiminy Glick"
-date: 2025-08-15 17:15:13 +0000
 categories: gossip
-tags: ['martin-short', 'source-variety_alt', 'drama-hot']
+date: 2025-08-15 17:15:13 +0000
 drama_score: 8
+layout: post
+mentions:
+  awards: 2
+  martin_short: 4
+  steve_martin: 2
 primary_celebrity: martin_short
 source: variety_alt
-source_url: "https://variety.com/2025/tv/awards/martin-short-only-murders-in-the-building-future-season-5-1236488896/"
-mentions: {'awards': 2, 'martin_short': 4, 'steve_martin': 2}
+source_url: https://variety.com/2025/tv/awards/martin-short-only-murders-in-the-building-future-season-5-1236488896/
+tags:
+- celebrity-gossip
+- scandals
+title: Martin Short on the Future of ‘Only Murders in the Building,’ and Why He Didn’t
+  Host ‘Match Game’ as Jiminy Glick
 ---
 
 Martin Short was the only one of the three “Only Murders in the Building” stars to receive an Emmy acting nomination this year — and he’s still laughing at how co-star Steve Martin took the news. “Steve phoned me about mid afternoon,” Short tells Variety‘s Awards Circuit Podcast. Martin proceeded to play dumb about the […]

@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: daily_mail
 source_url: https://www.dailymail.co.uk/tvshowbiz/article-15007049/Catherine-Zeta-Jones-marriage-Michael-Douglas-Netflix-Wednesday.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- ye
+- celebrity-gossip
 temperature: 82
 title: Why Catherine Zeta-Jones is finally in the driving seat of her volatile marriage
   to Michael Douglas

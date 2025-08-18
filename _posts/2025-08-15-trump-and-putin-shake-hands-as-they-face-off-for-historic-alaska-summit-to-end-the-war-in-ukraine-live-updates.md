@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Trump and Putin shake hands as they face off for historic Alaska summit to end the war in Ukraine: Live updates"
-date: 2025-08-15 19:13:20 +0000
 categories: gossip
-tags: ['trump', 'source-daily_mail', 'drama-hot']
+date: 2025-08-15 19:13:20 +0000
 drama_score: 6
+layout: post
+mentions:
+  donald_trump: 2
+  trump: 4
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-15000655/vladimir-putin-donald-trump-president-meeting-anchorage-alaska-deal-russia.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
-mentions: {'donald_trump': 2, 'trump': 4}
+source_url: https://www.dailymail.co.uk/news/article-15000655/vladimir-putin-donald-trump-president-meeting-anchorage-alaska-deal-russia.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
+tags:
+- celebrity-gossip
+- scandals
+title: 'Trump and Putin shake hands as they face off for historic Alaska summit to
+  end the war in Ukraine: Live updates'
 ---
 
 LIVE UPDATES: Follow the latest updates as Donald Trump and Vladimir Putin meet one another in an historic summit in Alaska to discuss how to end the war in Ukraine.

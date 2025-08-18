@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Olivia Rodrigo & Conan Gray Admit They Give Each Other \"Bad Advice\""
-date: 2025-08-16 01:18:23 +0000
 categories: gossip
-tags: ['olivia-rodrigo', 'source-e_news', 'drama-explosive']
+date: 2025-08-16 01:18:23 +0000
 drama_score: 12
+layout: post
+mentions:
+  olivia_rodrigo: 12
 primary_celebrity: olivia_rodrigo
 source: e_news
-source_url: "https://www.eonline.com/news/1421254/olivia-rodrigo-conan-gray-on-giving-each-other-bad-advice?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'olivia_rodrigo': 12}
+source_url: https://www.eonline.com/news/1421254/olivia-rodrigo-conan-gray-on-giving-each-other-bad-advice?cmpid=rss-syndicate-genericrss-us-top_stories
+tags:
+- celebrity-gossip
+- scandals
+title: Olivia Rodrigo & Conan Gray Admit They Give Each Other "Bad Advice"
 ---
 
 Olivia Rodrigo and Conan Gray don't mean to be traitors to one another. However, the Grammy winner and “Heather” singer admitted that they both have almost kept each other from releasing some of...

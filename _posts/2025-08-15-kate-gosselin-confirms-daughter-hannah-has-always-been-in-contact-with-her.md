@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Kate Gosselin Confirms Daughter Hannah Has ‘Always’ Been in Contact With Her"
-date: 2025-08-15 22:16:20 +0000
 categories: gossip
-tags: ['kate-gosselin', 'source-us_weekly', 'drama-hot']
+date: 2025-08-15 22:16:20 +0000
 drama_score: 6
+layout: post
+mentions:
+  kate_gosselin: 6
 primary_celebrity: kate_gosselin
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/kate-gosselin-confirms-daughter-hannah-has-always-been-in-contact-with-her-dont-believe-what-you-hear/"
-mentions: {'kate_gosselin': 6}
+source_url: https://www.usmagazine.com/celebrity-moms/news/kate-gosselin-confirms-daughter-hannah-has-always-been-in-contact-with-her-dont-believe-what-you-hear/
+tags:
+- celebrity-gossip
+- scandals
+title: Kate Gosselin Confirms Daughter Hannah Has ‘Always’ Been in Contact With Her
 ---
 
 Despite rumors claiming otherwise, Kate Gosselin confirmed her daughter Hannah is very much still a part of her life. In a TikTok video posted on Thursday, August 14, Kate, 50, explained that Hannah — one of the sextuplets she shares with ex-husband Jon Gosselin — helped her create an Amazon storefront. “Hannah just called me […]

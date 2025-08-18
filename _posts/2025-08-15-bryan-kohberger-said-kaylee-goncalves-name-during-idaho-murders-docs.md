@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Bryan Kohberger Said Kaylee Goncalves' Name During Idaho Murders: Docs"
-date: 2025-08-15 18:24:35 +0000
 categories: gossip
-tags: ['bryan-kohberger', 'source-e_news', 'drama-hot']
+date: 2025-08-15 18:24:35 +0000
 drama_score: 6
+layout: post
+mentions:
+  bryan_kohberger: 6
 primary_celebrity: bryan_kohberger
 source: e_news
-source_url: "https://www.eonline.com/news/1421230/bryan-kohberger-said-kaylee-goncalves-name-during-idaho-murders?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'bryan_kohberger': 6}
+source_url: https://www.eonline.com/news/1421230/bryan-kohberger-said-kaylee-goncalves-name-during-idaho-murders?cmpid=rss-syndicate-genericrss-us-top_stories
+tags:
+- celebrity-gossip
+- scandals
+title: 'Bryan Kohberger Said Kaylee Goncalves'' Name During Idaho Murders: Docs'
 ---
 
 More chilling details have come to light regarding the gruesome 2022 Idaho murders. Less than a month after Bryan Kohberger received four consecutive life sentences without the possibility of...

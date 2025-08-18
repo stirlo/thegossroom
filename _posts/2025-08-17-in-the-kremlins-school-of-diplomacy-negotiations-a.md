@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/debate/article-15007351/Kremlins-school-diplomacy-negotiations-US-Ukraine.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
+- celebrity-gossip
 temperature: 95
 title: In the Kremlin's school of diplomacy, negotiations are there to divide and
   weaken the enemy, writes military expert BOB SEELY

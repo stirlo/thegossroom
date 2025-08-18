@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15007069/Zelensky-trapped-Trump-Putin-Europe-powerless-Ukraine.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
+- celebrity-gossip
 temperature: 100
 title: 'Zelensky ''trapped in Trump and Putin vice'': Europe powerlessly looks on
   as Ukraine''s President is summoned to White House amid fears he''ll be forced to

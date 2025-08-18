@@ -1,14 +1,20 @@
 ---
-layout: post
-title: "Kanye West's wife Bianca Censori goes without a bra at family dining chain after seeing Weapons"
-date: 2025-08-15 17:15:19 +0000
 categories: gossip
-tags: ['kanye-west', 'source-daily_mail', 'drama-hot']
+date: 2025-08-15 17:15:19 +0000
 drama_score: 8
+layout: post
+mentions:
+  kanye: 2
+  kanye_west: 6
 primary_celebrity: kanye_west
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/tvshowbiz/article-15004461/Kanye-Wests-wife-Bianca-Censori-goes-without-bra-family-dining-chain-seeing-Weapons.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
-mentions: {'kanye': 2, 'kanye_west': 6}
+source_url: https://www.dailymail.co.uk/tvshowbiz/article-15004461/Kanye-Wests-wife-Bianca-Censori-goes-without-bra-family-dining-chain-seeing-Weapons.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
+tags:
+- celebrity-gossip
+- scandals
+- kanye-west
+title: Kanye West's wife Bianca Censori goes without a bra at family dining chain
+  after seeing Weapons
 ---
 
 In a shocking display, the 30-year-old model turned heads in a very low-cut, blue camisole with skinny spaghetti straps and a pair of ultra-tight micro shorts for their outing.

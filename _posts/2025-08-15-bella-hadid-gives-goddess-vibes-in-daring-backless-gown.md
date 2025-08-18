@@ -1,14 +1,24 @@
 ---
-layout: post
-title: "Bella Hadid gives goddess vibes in daring backless gown"
-date: 2025-08-15 18:24:40 +0000
 categories: gossip
-tags: ['bieber', 'source-page_six', 'drama-explosive']
+date: 2025-08-15 18:24:40 +0000
 drama_score: 10
+layout: post
+mentions:
+  bieber: 2
+  hailey_bieber: 2
+  jenner: 2
+  justin_bieber: 2
+  kylie_jenner: 2
 primary_celebrity: bieber
 source: page_six
-source_url: "https://pagesix.com/2025/08/15/style/bella-hadid-gives-goddess-vibes-in-daring-backless-gown/"
-mentions: {'bieber': 2, 'hailey_bieber': 2, 'jenner': 2, 'justin_bieber': 2, 'kylie_jenner': 2}
+source_url: https://pagesix.com/2025/08/15/style/bella-hadid-gives-goddess-vibes-in-daring-backless-gown/
+tags:
+- celebrity-gossip
+- bella-hadid
+- scandals
+- fashion
+- justin-bieber
+title: Bella Hadid gives goddess vibes in daring backless gown
 ---
 
 BFFs Hailey Bieber and Kendall and Kylie Jenner all supported the model's fragrance launch in matching black-and-white looks, too.

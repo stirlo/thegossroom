@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15008089/Russia-stages-fake-videos-troops-overtaking-Ukraine-territory-bid-fool-Trump-negotiating-table-European-leaders-dash-Washington-Zelensky-Putin-showdown.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
+- celebrity-gossip
 temperature: 95
 title: Russia stages fake videos of troops overtaking Ukraine territory in bid to
   fool Trump at the negotiating table - as European leaders dash to Washington with

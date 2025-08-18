@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Donald Trump’s granddaughter Kai kicks off her senior year with back-to-school snaps"
-date: 2025-08-15 15:17:37 +0000
 categories: gossip
-tags: ['donald-trump', 'source-page_six', 'drama-rising']
+date: 2025-08-15 15:17:37 +0000
 drama_score: 4
+layout: post
+mentions:
+  donald_trump: 2
+  trump: 2
 primary_celebrity: donald_trump
 source: page_six
-source_url: "https://pagesix.com/2025/08/15/celebrity-news/donald-trumps-granddaughter-kai-kicks-off-senior-year-with-back-to-school-snaps/"
-mentions: {'donald_trump': 2, 'trump': 2}
+source_url: https://pagesix.com/2025/08/15/celebrity-news/donald-trumps-granddaughter-kai-kicks-off-senior-year-with-back-to-school-snaps/
+tags:
+- celebrity-gossip
+- scandals
+title: Donald Trump’s granddaughter Kai kicks off her senior year with back-to-school
+  snaps
 ---
 
 While the 18-year-old golfer is still a high school student, she has already committed to attending the University of Miami next year.

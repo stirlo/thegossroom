@@ -12,8 +12,8 @@ primary_celebrity: kelce
 source: tmz
 source_url: https://www.tmz.com/2025/08/17/chuck-liddell-travis-jason-kelce-taylor-swift-garage-beer/
 tags:
-- kelce
-- super
+- celebrity-gossip
+- movies
 temperature: 100
 title: Chuck Liddell Says Ad Starring 'Awesome' Kelce Brothers Was 'Great'
 ---

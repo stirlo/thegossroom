@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Hillary Clinton says she'll nominate Trump for Nobel Peace Prize if Russia-Ukraine deal materializes"
-date: 2025-08-15 16:20:59 +0000
 categories: gossip
-tags: ['trump', 'source-daily_mail', 'drama-hot']
+date: 2025-08-15 16:20:59 +0000
 drama_score: 6
+layout: post
+mentions:
+  donald_trump: 2
+  trump: 4
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-15003913/hillary-clinton-trump-nobel-peace-prize-russia-ukraine-deal.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
-mentions: {'donald_trump': 2, 'trump': 4}
+source_url: https://www.dailymail.co.uk/news/article-15003913/hillary-clinton-trump-nobel-peace-prize-russia-ukraine-deal.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
+tags:
+- celebrity-gossip
+- scandals
+title: Hillary Clinton says she'll nominate Trump for Nobel Peace Prize if Russia-Ukraine
+  deal materializes
 ---
 
 Former Secretary of State Hillary Clinton has suggested that if Donald Trump brokers a successful Ukraine-Russia peace deal that he should win the Nobel Prize.

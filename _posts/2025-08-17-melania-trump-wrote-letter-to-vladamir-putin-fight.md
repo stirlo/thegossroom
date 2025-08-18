@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: tmz
 source_url: https://www.tmz.com/2025/08/16/melania-trump-wrote-letter-to-vladamir-putin-fighting-for-abducted-children/
 tags:
-- trump
+- celebrity-gossip
 temperature: 100
 title: Melania Trump Wrote Letter to Vladamir Putin Fighting for Abducted Children
 ---

@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Tristan Thompson’s Son Prince Gushes About 3rd Grade in Rare Video"
-date: 2025-08-16 03:12:29 +0000
 categories: gossip
-tags: ['tristan-thompson', 'source-us_weekly', 'drama-hot']
+date: 2025-08-16 03:12:29 +0000
 drama_score: 6
+layout: post
+mentions:
+  tristan_thompson: 6
 primary_celebrity: tristan_thompson
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-moms/news/tristan-thompsons-son-prince-excited-for-3rd-grade-in-rare-video/"
-mentions: {'tristan_thompson': 6}
+source_url: https://www.usmagazine.com/celebrity-moms/news/tristan-thompsons-son-prince-excited-for-3rd-grade-in-rare-video/
+tags:
+- celebrity-gossip
+- scandals
+title: Tristan Thompson’s Son Prince Gushes About 3rd Grade in Rare Video
 ---
 
 Tristan Thompson’s son Prince is thrilled to be a third grader. Thompson, 34, took Prince, 8, to school on his first day of third grade in a rare video shared via the basketball star’s Instagram account on Wednesday, August 13. The video first showed Thompson letting Prince ride in the passenger’s seat of his car […]

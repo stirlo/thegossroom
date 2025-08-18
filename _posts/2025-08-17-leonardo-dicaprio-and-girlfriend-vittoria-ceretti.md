@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-news/news/leonardo-dicaprio-and-vittoria-ceretti-pack-on-pda-in-mediterranean/
 tags:
-- ye
+- celebrity-gossip
 temperature: 82
 title: Leonardo DiCaprio and Girlfriend Vittoria Ceretti Enjoy PDA-Heavy Yacht Trip
 ---

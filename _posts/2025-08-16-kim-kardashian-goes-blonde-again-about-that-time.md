@@ -11,7 +11,8 @@ primary_celebrity: kardashian
 source: us_weekly
 source_url: https://www.usmagazine.com/stylish/news/kim-kardashian-shows-off-hair-transformation-returns-to-blonde-about-that-time/
 tags:
-- kardashian
+- celebrity-gossip
+- kim-kardashian
 temperature: 100
 title: 'Kim Kardashian Goes Blonde Again: ''About That Time'''
 ---

@@ -11,7 +11,7 @@ primary_celebrity: bieber
 source: us_weekly
 source_url: https://www.usmagazine.com/stylish/news/hailey-biebers-lip-gloss-phone-case-inspires-millie-bobby-brown/
 tags:
-- bieber
+- celebrity-gossip
 temperature: 100
 title: Millie Bobby Brown Has Genius DIY Hack to Copy Hailey Bieber's Phone Case
 ---

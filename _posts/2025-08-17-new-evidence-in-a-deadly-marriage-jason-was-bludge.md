@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15008017/deadly-marriage-Jason-blugeoned-death-book-shock-twist.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- ye
+- celebrity-gossip
 temperature: 100
 title: 'New evidence in a deadly marriage: Jason was bludgeoned to death by his second
   wife and father-in-law in the most gruesome way imaginable. Now a book reveals a

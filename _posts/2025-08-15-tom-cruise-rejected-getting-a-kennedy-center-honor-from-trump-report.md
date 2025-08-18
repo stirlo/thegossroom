@@ -1,14 +1,20 @@
 ---
-layout: post
-title: "Tom Cruise Rejected Getting a Kennedy Center Honor From Trump (Report)"
-date: 2025-08-15 18:24:39 +0000
 categories: gossip
-tags: ['tom-cruise', 'source-hollywood_reporter', 'drama-rising']
+date: 2025-08-15 18:24:39 +0000
 drama_score: 4
+layout: post
+mentions:
+  tom_cruise: 2
+  trump: 2
 primary_celebrity: tom_cruise
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/lifestyle/arts/tom-cruise-kennedy-center-honor-trump-1236345509/"
-mentions: {'tom_cruise': 2, 'trump': 2}
+source_url: https://www.hollywoodreporter.com/lifestyle/arts/tom-cruise-kennedy-center-honor-trump-1236345509/
+tags:
+- celebrity-gossip
+- scandals
+- movies
+- fashion
+title: Tom Cruise Rejected Getting a Kennedy Center Honor From Trump (Report)
 ---
 
 The 'Top Gun: Maverick' star has turned down the prestigious arts award, as the president says he plans to personally host this year's ceremony.

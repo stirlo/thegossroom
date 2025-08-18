@@ -12,8 +12,7 @@ primary_celebrity: golden
 source: vogue
 source_url: https://www.vogue.com/article/from-the-archives-give-a-dog-a-bone
 tags:
-- golden
-- met
+- celebrity-gossip
 temperature: 78
 title: 'From the Archives: Jeffrey Steingarten on Gourmet Doggy Dining'
 ---

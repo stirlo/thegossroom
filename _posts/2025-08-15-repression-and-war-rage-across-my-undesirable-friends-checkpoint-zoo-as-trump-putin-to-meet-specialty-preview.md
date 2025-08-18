@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Repression And War Rage Across ‘My Undesirable Friends’, ‘Checkpoint Zoo’ As Trump, Putin To Meet – Specialty Preview"
-date: 2025-08-15 18:24:40 +0000
 categories: gossip
-tags: ['trump', 'source-deadline', 'drama-rising']
+date: 2025-08-15 18:24:40 +0000
 drama_score: 2
+layout: post
+mentions:
+  trump: 2
 primary_celebrity: trump
 source: deadline
-source_url: "https://deadline.com/2025/08/indie-films-opening-my-undesirable-friends-checkpoint-zoo-1236489338/"
-mentions: {'trump': 2}
+source_url: https://deadline.com/2025/08/indie-films-opening-my-undesirable-friends-checkpoint-zoo-1236489338/
+tags:
+- celebrity-gossip
+- scandals
+- movies
+title: Repression And War Rage Across ‘My Undesirable Friends’, ‘Checkpoint Zoo’ As
+  Trump, Putin To Meet – Specialty Preview
 ---
 
 Two documentaries paint a brutal reality of Vladimir Putin’s regime with the Russian press under siege in My Undesirable Friends, and of hundreds of terrified animals at risk in Checkpoint Zoo, an unusual Ukraine rescue story with Leonardo DiCaprio as EP. Russia invaded Ukraine in February of 2022 and the docs hit theaters in limited […]

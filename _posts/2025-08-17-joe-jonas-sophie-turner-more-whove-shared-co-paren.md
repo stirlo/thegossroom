@@ -11,7 +11,8 @@ primary_celebrity: ye
 source: e_news
 source_url: https://www.eonline.com/news/1421161/stars-who-co-parent?cmpid=rss-syndicate-genericrss-us-top_stories
 tags:
-- ye
+- celebrity-gossip
+- relationships
 temperature: 82
 title: Joe Jonas, Sophie Turner & More Who've Shared Co-Parenting Experiences
 ---

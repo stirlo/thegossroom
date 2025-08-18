@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Why Frances Tiafoe Jokingly Calls Travis Kelce, Patrick Mahomes 'A--holes'"
-date: 2025-08-16 04:21:51 +0000
 categories: gossip
-tags: ['kelce', 'source-us_weekly', 'drama-explosive']
+date: 2025-08-16 04:21:51 +0000
 drama_score: 15
+layout: post
+mentions:
+  kelce: 9
+  travis_kelce: 6
 primary_celebrity: kelce
 source: us_weekly
-source_url: "https://www.usmagazine.com/entertainment/news/why-frances-tiafoe-jokingly-calls-travis-kelce-patrick-mahomes-a-holes-excl/"
-mentions: {'kelce': 9, 'travis_kelce': 6}
+source_url: https://www.usmagazine.com/entertainment/news/why-frances-tiafoe-jokingly-calls-travis-kelce-patrick-mahomes-a-holes-excl/
+tags:
+- celebrity-gossip
+- scandals
+title: Why Frances Tiafoe Jokingly Calls Travis Kelce, Patrick Mahomes 'A--holes'
 ---
 
 Tennis star Frances Tiafoe was one win away from a legendary U.S. Open moment — and Travis Kelce and Patrick Mahomes weren’t going to let him forget about it. Tiafoe, 27, lost to fellow American Taylor Fritz in the semifinals of last year’s tournament. Two days later, Kelce, 35, and Mahomes, 29, attended the men’s […]

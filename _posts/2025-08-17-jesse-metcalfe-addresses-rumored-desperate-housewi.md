@@ -11,7 +11,8 @@ primary_celebrity: met
 source: e_news
 source_url: https://www.eonline.com/news/1421267/jesse-metcalfe-addresses-desperate-housewives-drama?cmpid=rss-syndicate-genericrss-us-top_stories
 tags:
-- met
+- celebrity-gossip
+- scandals
 temperature: 100
 title: Jesse Metcalfe Addresses Rumored Desperate Housewives Cast Drama
 ---

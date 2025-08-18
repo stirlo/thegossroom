@@ -11,7 +11,8 @@ primary_celebrity: ye
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-news/news/what-happened-to-late-influencers-stacey-tourout-and-matthew-yeomans/
 tags:
-- ye
+- celebrity-gossip
+- relationships
 temperature: 100
 title: What Happened to Late Influencers Stacey Tourout and Matthew Yeomans?
 ---

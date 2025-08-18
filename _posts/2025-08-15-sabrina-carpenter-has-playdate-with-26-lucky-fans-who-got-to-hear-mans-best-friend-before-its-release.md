@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Sabrina Carpenter Has ‘Playdate’ With 26 Lucky Fans Who Got to Hear ‘Man’s Best Friend’ Before Its Release"
-date: 2025-08-15 18:24:44 +0000
 categories: gossip
-tags: ['sabrina-carpenter', 'source-billboard', 'drama-rising']
+date: 2025-08-15 18:24:44 +0000
 drama_score: 4
+layout: post
+mentions:
+  sabrina_carpenter: 4
 primary_celebrity: sabrina_carpenter
 source: billboard
-source_url: "https://www.billboard.com/music/music-news/sabrina-carpenter-plays-mans-best-friend-early-fans-1236045260/"
-mentions: {'sabrina_carpenter': 4}
+source_url: https://www.billboard.com/music/music-news/sabrina-carpenter-plays-mans-best-friend-early-fans-1236045260/
+tags:
+- celebrity-gossip
+- scandals
+- music
+title: Sabrina Carpenter Has ‘Playdate’ With 26 Lucky Fans Who Got to Hear ‘Man’s
+  Best Friend’ Before Its Release
 ---
 
 "It was genuinely one of my favorite nights in such a long time!" the pop star wrote.

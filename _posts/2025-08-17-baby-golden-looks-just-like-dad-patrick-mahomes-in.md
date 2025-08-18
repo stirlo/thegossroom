@@ -11,7 +11,7 @@ primary_celebrity: golden
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-moms/news/patrick-mahomes-daughter-golden-looks-just-like-him-in-new-photos/
 tags:
-- golden
+- celebrity-gossip
 temperature: 100
 title: Baby Golden Looks Just Like Dad Patrick Mahomes In New Photos
 ---

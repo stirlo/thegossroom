@@ -12,11 +12,11 @@ primary_celebrity: super
 source: hollywood_reporter
 source_url: https://www.hollywoodreporter.com/movies/movie-news/terence-stamp-hollywood-reaction-tributes-1236346597/
 tags:
-- super
-- ye
+- celebrity-gossip
+- movies
 temperature: 88
-title: "Edgar Wright, Guy Pearce, Gale Anne Hurd, Stephen Elliott Pay Tribute to \u201C\
-  Truly Iconic\u201D Terence Stamp: \u201CThe Most Mesmerizing Eyes\u201D"
+title: 'Edgar Wright, Guy Pearce, Gale Anne Hurd, Stephen Elliott Pay Tribute to “Truly
+  Iconic” Terence Stamp: “The Most Mesmerizing Eyes”'
 ---
 
 The British actor, who starred in 'Billy Budd,' 'Wall Street,' 'Superman II' and 'The Adventures of Priscilla, Queen of the Desert,' died Sunday at 87.

@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15009351/trump-zelensky-ukraine-russia-war-peace-terms.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- trump
+- celebrity-gossip
 temperature: 100
 title: Zelensky immediately defies Trump just moments after president lays out terms
   of peace plan with Putin setting up round two of combative White House clash

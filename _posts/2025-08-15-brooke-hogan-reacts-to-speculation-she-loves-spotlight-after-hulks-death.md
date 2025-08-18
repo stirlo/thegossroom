@@ -1,14 +1,20 @@
 ---
-layout: post
-title: "Brooke Hogan Reacts to Speculation She Loves 'Spotlight' After Hulk’s Death"
-date: 2025-08-15 23:16:24 +0000
 categories: gossip
-tags: ['hogan', 'source-us_weekly', 'drama-explosive']
+date: 2025-08-15 23:16:24 +0000
 drama_score: 21
+layout: post
+mentions:
+  brooke_hogan: 6
+  hogan: 9
+  hulk_hogan: 3
+  super: 3
 primary_celebrity: hogan
 source: us_weekly
-source_url: "https://www.usmagazine.com/celebrity-news/news/brooke-hogan-slams-speculation-she-loves-the-spotlight-after-dad-hulks-death-you-people-are-sick/"
-mentions: {'brooke_hogan': 6, 'hogan': 9, 'hulk_hogan': 3, 'super': 3}
+source_url: https://www.usmagazine.com/celebrity-news/news/brooke-hogan-slams-speculation-she-loves-the-spotlight-after-dad-hulks-death-you-people-are-sick/
+tags:
+- celebrity-gossip
+- scandals
+title: Brooke Hogan Reacts to Speculation She Loves 'Spotlight' After Hulk’s Death
 ---
 
 Brooke Hogan shut down speculation about her bereavement following the death of her father, Hulk Hogan. “Yeah, I love being in the spotlight crying about my deceased dad in a super low-key location,” Brooke, 37, sarcastically wrote via her Instagram Stories on Thursday, August 14, after photos were recently taken of her crying. “Disrespectfully, 🖕OFF.” […]

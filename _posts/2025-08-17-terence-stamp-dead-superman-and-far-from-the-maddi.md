@@ -11,7 +11,8 @@ primary_celebrity: super
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15008441/Actor-Terence-Stamp-dies-aged-87-Superman.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
-- super
+- celebrity-gossip
+- movies
 temperature: 100
 title: 'Terence Stamp dead: Superman and Far From The Madding Crowd star passes away
   at the age of 87'

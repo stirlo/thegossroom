@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Kylie Minogue Reacts to Taylor Swift Life of a Showgirl Comparisons"
-date: 2025-08-15 20:18:40 +0000
 categories: gossip
-tags: ['taylor-swift', 'source-e_news', 'drama-explosive']
+date: 2025-08-15 20:18:40 +0000
 drama_score: 18
+layout: post
+mentions:
+  taylor_swift: 18
 primary_celebrity: taylor_swift
 source: e_news
-source_url: "https://www.eonline.com/news/1421241/kylie-minogue-on-taylor-swift-life-of-a-showgirl-comparisons?cmpid=rss-syndicate-genericrss-us-top_stories"
-mentions: {'taylor_swift': 18}
+source_url: https://www.eonline.com/news/1421241/kylie-minogue-on-taylor-swift-life-of-a-showgirl-comparisons?cmpid=rss-syndicate-genericrss-us-top_stories
+tags:
+- celebrity-gossip
+- scandals
+- music
+- taylor-swift
+title: Kylie Minogue Reacts to Taylor Swift Life of a Showgirl Comparisons
 ---
 
 Kylie Minogue knows a thing or two about the life of a showgirl. No, Taylor Swift hasn’t leaked her 12th album, but the “Please Stay,” singer was living such a life when she embarked on her...

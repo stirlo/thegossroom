@@ -11,7 +11,7 @@ primary_celebrity: trump
 source: us_weekly
 source_url: https://www.usmagazine.com/celebrity-news/news/mark-hamill-considered-leaving-u-s-after-trumps-2024-reelection/
 tags:
-- trump
+- celebrity-gossip
 temperature: 100
 title: Mark Hamill Considered Moving to London or Ireland After Trump's Reelection
 ---

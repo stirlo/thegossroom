@@ -11,7 +11,8 @@ primary_celebrity: super
 source: e_news
 source_url: https://www.eonline.com/news/1421268/terence-stamp-superman-actor-dead-at-87?cmpid=rss-syndicate-genericrss-us-top_stories
 tags:
-- super
+- celebrity-gossip
+- movies
 temperature: 100
 title: Terence Stamp, Superman Actor, Dead at 87
 ---

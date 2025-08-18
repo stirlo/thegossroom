@@ -1,14 +1,22 @@
 ---
-layout: post
-title: "Sydney Sweeney Just Had the Biggest Controversy of Her Career. Now What?"
-date: 2025-08-15 17:15:16 +0000
 categories: gossip
-tags: ['donald-trump', 'source-hollywood_reporter', 'drama-hot']
+date: 2025-08-15 17:15:16 +0000
 drama_score: 8
+layout: post
+mentions:
+  donald_trump: 2
+  lizzo: 2
+  sydney_sweeney: 2
+  trump: 2
 primary_celebrity: donald_trump
 source: hollywood_reporter
-source_url: "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/sydney-sweeney-american-eagle-jeans-campaign-controversy-1236344338/"
-mentions: {'donald_trump': 2, 'lizzo': 2, 'sydney_sweeney': 2, 'trump': 2}
+source_url: https://www.hollywoodreporter.com/lifestyle/lifestyle-news/sydney-sweeney-american-eagle-jeans-campaign-controversy-1236344338/
+tags:
+- celebrity-gossip
+- scandals
+- movies
+- fashion
+title: Sydney Sweeney Just Had the Biggest Controversy of Her Career. Now What?
 ---
 
 Experts weigh in on where the 27-year-old actress goes after being at the center of the storm involving an American Eagle jeans campaign that had everyone from Donald Trump to Lizzo sharing hot takes.

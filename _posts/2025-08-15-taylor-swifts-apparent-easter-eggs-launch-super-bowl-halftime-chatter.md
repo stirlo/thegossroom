@@ -1,14 +1,23 @@
 ---
-layout: post
-title: "Taylor Swift's Apparent Easter Eggs Launch Super Bowl Halftime Chatter"
-date: 2025-08-15 23:16:21 +0000
 categories: gossip
-tags: ['taylor-swift', 'source-tmz', 'drama-explosive']
+date: 2025-08-15 23:16:21 +0000
 drama_score: 42
+layout: post
+mentions:
+  bowl: 6
+  jason_kelce: 3
+  kelce: 3
+  super: 6
+  super_bowl: 6
+  taylor_swift: 18
 primary_celebrity: taylor_swift
 source: tmz
-source_url: "https://www.tmz.com/2025/08/15/taylor-swift-super-bowl-halftime-show-rumors/"
-mentions: {'bowl': 6, 'jason_kelce': 3, 'kelce': 3, 'super': 6, 'super_bowl': 6, 'taylor_swift': 18}
+source_url: https://www.tmz.com/2025/08/15/taylor-swift-super-bowl-halftime-show-rumors/
+tags:
+- celebrity-gossip
+- scandals
+- taylor-swift
+title: Taylor Swift's Apparent Easter Eggs Launch Super Bowl Halftime Chatter
 ---
 
 The Super Bowl LX halftime show performer is Taylor Swift ... that is, if you're drinking the Swifties' Kool-Aid. Days after the pop superstar's appearance on Travis and Jason Kelce's "New Heights" podcast (and several rewatches, we're sure), her…

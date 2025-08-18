@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Sophie Turner Rocks a Sheer Lace Dress After Clapping Back at Mom-Shamers"
-date: 2025-08-15 23:16:24 +0000
 categories: gossip
-tags: ['sophie-turner', 'source-us_weekly', 'drama-hot']
+date: 2025-08-15 23:16:24 +0000
 drama_score: 6
+layout: post
+mentions:
+  sophie_turner: 6
 primary_celebrity: sophie_turner
 source: us_weekly
-source_url: "https://www.usmagazine.com/stylish/news/sophie-turner-rocks-sheer-dress-after-clapping-back-at-mom-shamers/"
-mentions: {'sophie_turner': 6}
+source_url: https://www.usmagazine.com/stylish/news/sophie-turner-rocks-sheer-dress-after-clapping-back-at-mom-shamers/
+tags:
+- celebrity-gossip
+- scandals
+- fashion
+title: Sophie Turner Rocks a Sheer Lace Dress After Clapping Back at Mom-Shamers
 ---
 
 Sophie Turner knows how to make a fashion statement. Turner, 29, gave fans a glimpse of her figure in a sheer black lace dress that exposed her undergarments while making an appearance on Late Night With Seth Meyers on Thursday, August 14. For the show, she slayed in a lace number featuring a scoop neck, […]

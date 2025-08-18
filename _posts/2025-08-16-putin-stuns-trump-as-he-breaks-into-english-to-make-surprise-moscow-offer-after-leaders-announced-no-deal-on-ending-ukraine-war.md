@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Putin stuns Trump as he breaks into English to make surprise Moscow offer after leaders announced 'no deal' on ending Ukraine war"
-date: 2025-08-16 06:23:39 +0000
 categories: gossip
-tags: ['trump', 'source-daily_mail', 'drama-rising']
+date: 2025-08-16 06:23:39 +0000
 drama_score: 4
+layout: post
+mentions:
+  trump: 4
 primary_celebrity: trump
 source: daily_mail
-source_url: "https://www.dailymail.co.uk/news/article-15005569/putin-stuns-trump-english-moscow-invite-summit.html?ns_mchannel=rss&ito=1490&ns_campaign=1490"
-mentions: {'trump': 4}
+source_url: https://www.dailymail.co.uk/news/article-15005569/putin-stuns-trump-english-moscow-invite-summit.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
+tags:
+- celebrity-gossip
+- scandals
+title: Putin stuns Trump as he breaks into English to make surprise Moscow offer after
+  leaders announced 'no deal' on ending Ukraine war
 ---
 
 Trump didn't appeared to have been caught off guard by his Russian counterpart, but winged an answer that was both encouraging and non-committal.

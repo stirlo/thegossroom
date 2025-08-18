@@ -1,14 +1,19 @@
 ---
-layout: post
-title: "Bosnian Director Srdan Vuletic on Sarajevo World Premiere ‘Otter,’ ‘Movie Jail’ and Shooting Two Films Back-to-Back After a 17-Year Gap"
-date: 2025-08-15 19:13:14 +0000
 categories: gossip
-tags: ['golden', 'source-variety_alt', 'drama-rising']
+date: 2025-08-15 19:13:14 +0000
 drama_score: 2
+layout: post
+mentions:
+  golden: 2
 primary_celebrity: golden
 source: variety_alt
-source_url: "https://variety.com/2025/film/global/srdan-vuletic-sarajevo-otter-1236490290/"
-mentions: {'golden': 2}
+source_url: https://variety.com/2025/film/global/srdan-vuletic-sarajevo-otter-1236490290/
+tags:
+- celebrity-gossip
+- scandals
+- movies
+title: Bosnian Director Srdan Vuletic on Sarajevo World Premiere ‘Otter,’ ‘Movie Jail’
+  and Shooting Two Films Back-to-Back After a 17-Year Gap
 ---
 
 In the decade between the late 90s and mid-2000s, Bosnian director Srdan Vuletic helmed several award-winning films such as “Summer in the Golden Valley” and “It’s Hard to Be Nice,” which premiered in major festivals such as Toronto and Berlin. After the latter, the director did not helm a project for 17 years, returning to […]

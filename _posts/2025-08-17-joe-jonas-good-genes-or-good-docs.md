@@ -11,7 +11,7 @@ primary_celebrity: ye
 source: tmz
 source_url: https://www.tmz.com/2025/08/17/joe-jonas-good-genes-or-good-docs/
 tags:
-- ye
+- celebrity-gossip
 temperature: 100
 title: Joe Jonas Good Genes or Good Docs?!
 ---
