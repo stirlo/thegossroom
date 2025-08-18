@@ -238,7 +238,7 @@ class AdaptiveGossipScraper:
 
             # Generic terms
             'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
-            'celebrity_news', 'entertainment_tonight', 'people_magazine',
+            'celebrity_news', 'entertainment_tonight', 'people_magazine', 'black_swan',
 
             # Common non-celebrity capitalized phrases
             'according_to', 'sources_say', 'insider_reveals', 'close_friend',
