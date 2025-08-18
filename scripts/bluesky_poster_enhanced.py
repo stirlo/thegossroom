@@ -172,12 +172,13 @@ class RSSBlueskyPoster:
         return best
 
     def create_post_text(self, article):
-        """Create Bluesky post"""
+        """Create Bluesky post with proper hashtags"""
         temp = article['temperature']
         title = article['title']
         url = article['url']
         celebrity = article['celebrity'].replace('_', ' ').title() if article['celebrity'] else ""
-
+        tags = article.get('tags', [])
+    
         # Temperature emoji
         if temp >= 40:
             emoji = "🔥🔥🔥 EXPLOSIVE"
@@ -185,22 +186,37 @@ class RSSBlueskyPoster:
             emoji = "🔥🔥 HOT"
         else:
             emoji = "🔥 HEATING UP"
-
+    
+        # Build hashtags from tags
+        hashtags = "#gossip"
+        if tags:
+            # Clean up tag names and add as hashtags
+            valid_tags = []
+            for tag in tags[:3]:  # Limit to 3 additional tags
+                # Convert celebrity keys to readable hashtags
+                clean_tag = tag.replace('_', '').replace('-', '').lower()
+                # Skip if too short or same as gossip
+                if len(clean_tag) > 2 and clean_tag != 'gossip':
+                    valid_tags.append(f"#{clean_tag}")
+    
+            if valid_tags:
+                hashtags += " " + " ".join(valid_tags)
+    
         # Build post
         post = f"{emoji}\n\n"
-
+    
         if celebrity:
             post += f"🎯 {celebrity}\n"
-
+    
         post += f"🌡️ {temp}°\n\n"
-
-        # Add title (truncated if needed)
-        remaining = 300 - len(post) - len(url) - 20  # Buffer for hashtags
+    
+        # Calculate remaining space for title
+        remaining = 300 - len(post) - len(url) - len(hashtags) - 10  # Buffer
         if len(title) > remaining:
             title = title[:remaining-3] + "..."
-
-        post += f"📰 {title}\n\n{url}\n\n#gossip"
-
+    
+        post += f"📰 {title}\n\n{url}\n\n{hashtags}"
+    
         return post[:300]
 
     def post_to_bluesky(self, text):
