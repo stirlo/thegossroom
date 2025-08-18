@@ -358,107 +358,107 @@ class AdaptiveGossipScraper:
     """Auto-discover new celebrities with ULTRA-STRICT filtering"""
     full_text = f"{title} {description}"
     discovered = []
-
+    
     # 🚫 EXPANDED BLACKLIST - Add more non-celebrity terms
     CELEBRITY_BLACKLIST = {
         # Sentence starters/fragments
         'you_are', 'if_you', 'women_to', 'and_encourages', 'to_make', 'still_work',
         'make_an', 'you_still', 'work_from', 'from_home', 'home_and', 'encourages_people',
-
+    
         # Common phrases that get capitalized
         'new_york', 'los_angeles', 'las_vegas', 'united_states', 'north_america',
         'social_media', 'real_estate', 'high_school', 'middle_east', 'south_korea',
         'prime_minister', 'white_house', 'red_carpet', 'golden_globes', 'harassing_young_actress',
-
+    
         # 🔧 AWARDS/ORGANIZATIONS/EVENTS (NOT CELEBRITIES)
         'academy_awards', 'oscar_awards', 'grammy_awards', 'emmy_awards', 'golden_globes',
         'cannes_festival', 'sundance_festival', 'toronto_film_festival', 'venice_biennale',
         'nordic_council', 'nordic_council_film', 'film_council', 'arts_council',
         'national_board', 'review_board', 'critics_choice', 'screen_actors_guild',
-
+    
         # 🔧 MOVIE/SHOW TITLES (NOT PEOPLE)
         'rao_bahadur', 'when_light_breaks', 'dreams_nominated', 'breaking_bad',
         'game_thrones', 'stranger_things', 'wednesday_addams', 'black_swan',
         'top_gun', 'star_wars', 'marvel_studios', 'dc_comics',
-
+    
         # 🔧 GENERIC ROLES/POSITIONS (NOT SPECIFIC PEOPLE)
         'film_director', 'movie_producer', 'casting_director', 'executive_producer',
         'associate_producer', 'production_designer', 'costume_designer',
         'music_director', 'art_director', 'script_writer',
-
+    
         # Generic terms
         'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
         'celebrity_news', 'entertainment_tonight', 'people_magazine', 'jesus_christ',
-
+    
         # Common non-celebrity capitalized phrases
         'according_to', 'sources_say', 'insider_reveals', 'close_friend',
         'family_member', 'representative_said', 'publicist_confirmed',
-
+    
         # Sentence fragments that appear in headlines
         'claims_that', 'reveals_shocking', 'admits_to', 'denies_rumors',
         'confirms_relationship', 'announces_divorce', 'spotted_with'
     }
-
+    
     # ✅ ULTRA-STRICT CELEBRITY INDICATORS - Must have MULTIPLE contexts
     CELEBRITY_CONTEXT_REQUIRED = [
         # Professional titles WITH action words
         'actor stars in', 'actress appears in', 'singer performs', 'rapper releases',
         'musician announces', 'model walks', 'influencer posts', 'comedian performs',
-
+    
         # Celebrity lifestyle WITH specificity
         'celebrity spotted', 'star photographed', 'famous couple', 'hollywood star',
         'a-list celebrity', 'pop star', 'movie star', 'tv star', 'reality star',
-
+    
         # Relationship context WITH celebrity indicators
         'celebrity dating', 'star married', 'famous relationship', 'hollywood couple',
         'celebrity engagement', 'star divorce', 'famous split',
-
+    
         # Social media WITH celebrity context
         'celebrity instagram', 'star twitter', 'famous tiktok', 'celebrity social media'
     ]
-
+    
     # 🔧 REQUIRE MULTIPLE CELEBRITY INDICATORS
     def has_strong_celebrity_context(text_lower, name_lower):
         """Require multiple strong celebrity indicators"""
         context_count = 0
-
+    
         # Check for celebrity titles near the name
         celebrity_titles = ['actor', 'actress', 'singer', 'rapper', 'musician', 'model', 
                           'influencer', 'celebrity', 'star', 'famous', 'hollywood']
-
+    
         name_position = text_lower.find(name_lower)
         if name_position != -1:
             # Check 50 characters before and after the name
             context_window = text_lower[max(0, name_position-50):name_position+len(name_lower)+50]
-
+    
             for title in celebrity_titles:
                 if title in context_window:
                     context_count += 1
-
+    
         # Check for celebrity actions
         celebrity_actions = ['performs', 'stars', 'appears', 'releases', 'announces', 
                            'spotted', 'photographed', 'dating', 'married', 'engaged']
-
+    
         for action in celebrity_actions:
             if action in text_lower and name_lower in text_lower:
                 context_count += 1
-
+    
         # Require at least 2 strong celebrity indicators
         return context_count >= 2
-
+    
     # Look for capitalized names with ULTRA-STRICT validation
     name_pattern = r'\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,})?)\b'
     potential_names = re.findall(name_pattern, full_text)
-
+    
     for name in potential_names:
         name_clean = name.strip()
         name_lower = name_clean.lower()
         name_key = re.sub(r'[^\w\s]', '', name_lower).replace(' ', '_')
-
+    
         # 🚫 IMMEDIATE BLACKLIST CHECK
         if name_key in CELEBRITY_BLACKLIST:
             continue
-
+    
         # 🚫 REJECT OBVIOUS NON-NAMES
         # Reject if contains common non-name patterns
         non_name_patterns = [
@@ -467,37 +467,37 @@ class AdaptiveGossipScraper:
             r'\b(light|dark|night|day|time|year|month|week)\b',
             r'\b(breaks?|dreams?|hopes?|plans?|ideas?)\b'
         ]
-
+    
         skip_name = False
         for pattern in non_name_patterns:
             if re.search(pattern, name_lower):
                 skip_name = True
                 break
-
+    
         if skip_name:
             continue
-
+    
         # Skip if already known
         if any(name_lower in search_term for search_term in self.celebrity_names):
             continue
-
+    
         # 🔍 ULTRA-STRICT CONTEXT VALIDATION
         if not has_strong_celebrity_context(full_text.lower(), name_lower):
             continue
-
+    
         # 🔧 ADDITIONAL VALIDATION: Must look like a real person's name
         name_parts = name_clean.split()
         if len(name_parts) < 2 or len(name_parts) > 3:  # Must be 2-3 parts
             continue
-
+    
         # Each part must be a reasonable name length
         if any(len(part) < 2 or len(part) > 15 for part in name_parts):
             continue
-
+    
         # Must not contain numbers or special characters
         if re.search(r'[0-9_\-]', name_clean):
             continue
-
+    
         # ✅ PASSED ALL ULTRA-STRICT FILTERS
         self.potential_new_celebrities[name_clean] += 1
         discovered.append({
@@ -506,7 +506,7 @@ class AdaptiveGossipScraper:
             'context_score': 5.0,  # Very high confidence due to ultra-strict filtering
             'source_text': full_text[:200] + '...'
         })
-
+    
     return discovered
 
 
