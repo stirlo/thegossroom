@@ -23,14 +23,14 @@ aamir_bashir:
   category: unknown
   context_score: 2
   discovery_date: '2025-08-18'
-  drama_score: 26.5
-  last_temperature_update: '2025-08-18 09:27:55'
+  drama_score: 25
+  last_temperature_update: '2025-08-18 08:32:18'
   memorial: false
-  monthly_rank: 0.1
+  monthly_rank: 0
   name: Aamir Bashir
   promotion_date: '2025-08-18'
   status: mild
-  temperature_change: 1.5
+  temperature_change: 0
 aaron_carpenter:
   category: influencer
   discovery_date: '2025-08-07'
@@ -581,19 +581,6 @@ blac_chyna:
   promotion_date: '2020-01-01'
   status: cooling
   temperature_change: 0
-black_swan:
-  auto_discovered: true
-  category: unknown
-  context_score: 3
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temperature_update: '2025-08-18 09:28:06'
-  memorial: false
-  monthly_rank: 0
-  name: Black Swan
-  promotion_date: '2025-08-18'
-  status: mild
-  temperature_change: 0
 blake_lively:
   category: actor
   discovery_date: '2025-08-04'
@@ -919,14 +906,14 @@ catherine_zeta:
   category: unknown
   context_score: 2
   discovery_date: '2025-08-18'
-  drama_score: 29.5
-  last_temperature_update: '2025-08-18 09:27:45'
+  drama_score: 25
+  last_temperature_update: '2025-08-18 08:32:18'
   memorial: false
-  monthly_rank: 0.3
+  monthly_rank: 0
   name: Catherine Zeta
   promotion_date: '2025-08-18'
   status: mild
-  temperature_change: 1.5
+  temperature_change: 0
 cecily_strong:
   category: comedian
   discovery_date: '2020-01-01'
@@ -2817,7 +2804,7 @@ lil_tay:
   drama_score: 26.5
   last_temperature_update: '2025-08-18 08:31:55'
   memorial: false
-  monthly_rank: 0.0
+  monthly_rank: 0.1
   name: Lil Tay
   promotion_date: '2025-08-18'
   status: mild
@@ -3267,14 +3254,14 @@ michael_douglas:
   category: unknown
   context_score: 4
   discovery_date: '2025-08-18'
-  drama_score: 29.5
-  last_temperature_update: '2025-08-18 09:27:45'
+  drama_score: 25
+  last_temperature_update: '2025-08-18 08:32:18'
   memorial: false
-  monthly_rank: 0.3
+  monthly_rank: 0
   name: Michael Douglas
   promotion_date: '2025-08-18'
   status: mild
-  temperature_change: 1.5
+  temperature_change: 0
 michael_ian_black:
   category: comedian
   discovery_date: '2025-08-04'
@@ -4118,14 +4105,14 @@ selling_sunset:
   category: unknown
   context_score: 2
   discovery_date: '2025-08-18'
-  drama_score: 28.5
-  last_temperature_update: '2025-08-18 09:27:45'
+  drama_score: 25
+  last_temperature_update: '2025-08-18 08:32:18'
   memorial: false
-  monthly_rank: 0.1
+  monthly_rank: 0
   name: Selling Sunset
   promotion_date: '2025-08-18'
   status: mild
-  temperature_change: 3.5
+  temperature_change: 0
 selma_hayek:
   category: actor
   discovery_date: '2025-08-04'
@@ -4389,13 +4376,13 @@ stranger_things_cast:
 super:
   category: event
   discovery_date: '2025-08-04'
-  drama_score: 34.1
-  last_temperature_update: '2025-08-18 09:27:50'
+  drama_score: 31.1
+  last_temperature_update: '2025-08-18 07:57:41'
   memorial: false
-  monthly_rank: 0.1
+  monthly_rank: 0.0
   promotion_date: '2025-08-04'
   status: mild
-  temperature_change: 3.0
+  temperature_change: 1.0
 super_bowl:
   category: event
   discovery_date: '2025-08-04'
@@ -4511,14 +4498,14 @@ terence_stamp:
   category: unknown
   context_score: 2
   discovery_date: '2025-08-18'
-  drama_score: 26.5
-  last_temperature_update: '2025-08-18 09:27:59'
+  drama_score: 25
+  last_temperature_update: '2025-08-18 07:57:57'
   memorial: true
-  monthly_rank: 0.1
+  monthly_rank: 0.0
   name: Terence Stamp
   promotion_date: '2025-08-18'
   status: mild
-  temperature_change: 1.5
+  temperature_change: 0
 the_alchemist:
   category: musician
   discovery_date: '2025-08-04'
@@ -4723,9 +4710,9 @@ trump:
   category: politician
   discovery_date: '2025-08-04'
   drama_score: 100
-  last_temperature_update: '2025-08-18 09:27:50'
+  last_temperature_update: '2025-08-18 06:11:16'
   memorial: false
-  monthly_rank: 0.1
+  monthly_rank: 0.0
   promotion_date: '2025-08-04'
   status: explosive
   temperature_change: 0
