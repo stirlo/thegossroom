@@ -221,83 +221,146 @@ class AdaptiveGossipScraper:
         return list(set(search_terms))
 
     def discover_new_celebrities(self, title, description):
-        """Auto-discover new celebrities using pattern matching"""
+        """Auto-discover new celebrities using pattern matching with STRICT filtering"""
         full_text = f"{title} {description}"
         discovered = []
 
-        # Look for capitalized names that aren't already known
-        # Pattern: Two capitalized words (First Last)
-        name_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b'
+        # 🚫 NUCLEAR BLACKLIST - Never consider these as celebrities
+        CELEBRITY_BLACKLIST = {
+            # Sentence starters/fragments
+            'you_are', 'if_you', 'women_to', 'and_encourages', 'to_make', 'still_work',
+            'make_an', 'you_still', 'work_from', 'from_home', 'home_and', 'encourages_people',
+
+            # Common phrases that get capitalized
+            'new_york', 'los_angeles', 'las_vegas', 'united_states', 'north_america',
+            'social_media', 'real_estate', 'high_school', 'middle_east', 'south_korea',
+            'prime_minister', 'white_house', 'red_carpet', 'golden_globes',
+
+            # Generic terms
+            'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
+            'celebrity_news', 'entertainment_tonight', 'people_magazine',
+
+            # Common non-celebrity capitalized phrases
+            'according_to', 'sources_say', 'insider_reveals', 'close_friend',
+            'family_member', 'representative_said', 'publicist_confirmed',
+
+            # Sentence fragments that appear in headlines
+            'claims_that', 'reveals_shocking', 'admits_to', 'denies_rumors',
+            'confirms_relationship', 'announces_divorce', 'spotted_with'
+        }
+
+        # ✅ CELEBRITY INDICATORS - Must have at least one of these contexts
+        CELEBRITY_CONTEXT_REQUIRED = [
+            # Professional titles
+            'actor', 'actress', 'singer', 'rapper', 'musician', 'model', 'influencer',
+            'director', 'producer', 'writer', 'comedian', 'host', 'presenter',
+
+            # Celebrity actions
+            'stars in', 'performs', 'released album', 'dropped single', 'announced tour',
+            'walked red carpet', 'attended premiere', 'won award', 'nominated for',
+
+            # Celebrity relationships
+            'dating', 'married to', 'engaged to', 'divorced from', 'split from',
+            'relationship with', 'spotted with', 'seen kissing', 'holding hands',
+
+            # Celebrity lifestyle
+            'instagram post', 'twitter account', 'social media', 'paparazzi photos',
+            'red carpet', 'hollywood', 'celebrity', 'famous', 'star'
+        ]
+
+        # Look for capitalized names with STRICT validation
+        name_pattern = r'\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,})?)\b'
         potential_names = re.findall(name_pattern, full_text)
 
         for name in potential_names:
             name_clean = name.strip()
             name_lower = name_clean.lower()
+            name_key = re.sub(r'[^\w\s]', '', name_lower).replace(' ', '_')
+
+            # 🚫 IMMEDIATE BLACKLIST CHECK
+            if name_key in CELEBRITY_BLACKLIST:
+                continue
 
             # Skip if already known
             if any(name_lower in search_term for search_term in self.celebrity_names):
                 continue
 
-            # Skip common non-celebrity words
-            skip_words = [
-                'new york', 'los angeles', 'las vegas', 'united states', 'north america',
-                'social media', 'real estate', 'high school', 'middle east', 'south korea',
-                'prime minister', 'president biden', 'donald trump', 'joe biden'
-            ]
-
-            if name_lower in skip_words:
-                continue
-
-            # Check for celebrity context patterns
-            context_score = 0
+            # 🔍 STRICT CONTEXT VALIDATION
+            context_found = False
             category = 'unknown'
 
-            # Family relationship context
-            for pattern in self.CELEBRITY_PATTERNS['family']:
-                if re.search(pattern.replace(r'(\w+(?:\s+\w+)?)', re.escape(name_clean)), full_text, re.IGNORECASE):
-                    context_score += 3
-                    category = 'family'
-                    break
+            # Must have celebrity context in the same article
+            full_text_lower = full_text.lower()
+            for context_phrase in CELEBRITY_CONTEXT_REQUIRED:
+                if context_phrase in full_text_lower:
+                    context_found = True
 
-            # Professional context
-            for pattern in self.CELEBRITY_PATTERNS['professional']:
-                if re.search(pattern.replace(r'(\w+(?:\s+\w+)?)', re.escape(name_clean)), full_text, re.IGNORECASE):
-                    context_score += 2
-                    if 'actor' in full_text.lower() or 'actress' in full_text.lower():
+                    # Determine category from context
+                    if any(word in context_phrase for word in ['actor', 'actress', 'stars']):
                         category = 'actor'
-                    elif any(word in full_text.lower() for word in ['singer', 'rapper', 'musician']):
+                    elif any(word in context_phrase for word in ['singer', 'rapper', 'musician', 'album', 'tour']):
                         category = 'musician'
-                    elif 'model' in full_text.lower():
+                    elif 'model' in context_phrase:
                         category = 'model'
-                    elif 'influencer' in full_text.lower():
+                    elif 'influencer' in context_phrase:
                         category = 'influencer'
                     break
 
-            # General celebrity context
-            for pattern in self.CELEBRITY_PATTERNS['context']:
-                if re.search(pattern.replace(r'(\w+(?:\s+\w+)?)', re.escape(name_clean)), full_text, re.IGNORECASE):
-                    context_score += 1
-                    break
+            # 🚫 REJECT if no celebrity context found
+            if not context_found:
+                continue
 
-            # Additional context clues
-            celebrity_context_words = [
-                'celebrity', 'star', 'famous', 'hollywood', 'red carpet', 'paparazzi',
-                'instagram', 'twitter', 'social media', 'fans', 'followers'
+            # 🚫 ADDITIONAL FILTERS
+
+            # Reject common sentence patterns
+            sentence_patterns = [
+                r'^(you|if|and|the|to|from|with|about|when|where|what|how|why)\s',
+                r'\s(are|is|was|were|will|can|should|would|could|might)\s',
+                r'\s(to|from|with|about|after|before|during|while|since|until)$',
+                r'(work|make|still|encourages|claims|says|tells|reveals)$'
             ]
 
-            for word in celebrity_context_words:
-                if word in full_text.lower():
-                    context_score += 0.5
+            skip_name = False
+            for pattern in sentence_patterns:
+                if re.search(pattern, name_lower):
+                    skip_name = True
+                    break
 
-            # Only consider if there's enough context
-            if context_score >= 1.5:
-                self.potential_new_celebrities[name_clean] += 1
-                discovered.append({
-                    'name': name_clean,
-                    'category': category,
-                    'context_score': context_score,
-                    'source_text': full_text[:200] + '...'
-                })
+            if skip_name:
+                continue
+
+            # Reject if name contains common non-name words
+            non_name_words = [
+                'you', 'are', 'if', 'still', 'work', 'make', 'and', 'encourages',
+                'claims', 'says', 'tells', 'reveals', 'according', 'sources',
+                'breaking', 'exclusive', 'latest', 'update', 'news', 'report'
+            ]
+
+            if any(word in name_lower.split() for word in non_name_words):
+                continue
+
+            # Reject very long names (likely sentences)
+            if len(name_clean.split()) > 3:
+                continue
+
+            # 🎯 PROXIMITY CHECK - Celebrity context must be near the name
+            name_position = full_text_lower.find(name_lower)
+            if name_position != -1:
+                # Check 100 characters before and after the name
+                context_window = full_text_lower[max(0, name_position-100):name_position+len(name_lower)+100]
+
+                context_nearby = any(phrase in context_window for phrase in CELEBRITY_CONTEXT_REQUIRED)
+                if not context_nearby:
+                    continue
+
+            # ✅ PASSED ALL FILTERS - This might be a real celebrity
+            self.potential_new_celebrities[name_clean] += 1
+            discovered.append({
+                'name': name_clean,
+                'category': category,
+                'context_score': 3.0,  # High confidence due to strict filtering
+                'source_text': full_text[:200] + '...'
+            })
 
         return discovered
 
