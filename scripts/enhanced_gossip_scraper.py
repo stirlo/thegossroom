@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Complete Adaptive Temperature-Based Gossip Scraper with Dynamic Celebrity Scoring & Auto-Discovery
+Enhanced Adaptive Gossip Scraper with Celebrity Temperature System
+Scrapes multiple gossip sources and creates Jekyll blog posts with dynamic celebrity tracking
 """
 
 import feedparser
@@ -8,232 +9,176 @@ import requests
 import yaml
 import json
 import re
-from datetime import datetime, timedelta
-from collections import defaultdict, Counter
-from pathlib import Path
-import time
-import logging
-import hashlib
-from difflib import SequenceMatcher
 import html
-import shutil
+import hashlib
+import time
 import statistics
+import shutil
+from datetime import datetime, timedelta
+from pathlib import Path
+from collections import defaultdict, Counter
+import logging
 
-# Setup logging
-logging.basicConfig(level=logging.INFO)
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(levelname)s:%(name)s:%(message)s'
+)
 logger = logging.getLogger(__name__)
 
 class AdaptiveGossipScraper:
     def __init__(self):
+        # Base configuration
         self.base_path = Path('.')
-        self.celebrities = self.load_celebrities()
-        self.celebrity_names = self.extract_celebrity_names()
-        self.processed_articles = self.load_processed_articles()
-        self.daily_queue = self.load_daily_queue()
+        self.DAILY_POST_LIMIT = 33
+        self.TARGET_POSTS_PER_RUN = 5
+        self.IDEAL_MIN_TEMP = 35
+        self.FALLBACK_MIN_TEMP = 15
+
+        # 🌡️ CELEBRITY TEMPERATURE SYSTEM CONFIGURATION
+        self.TEMPERATURE_CONFIG = {
+            'max_temperature': 100,
+            'min_temperature': 0,
+            'new_celebrity_base_temp': 5.0,
+            'hourly_decay_rate': 1.0,  # 1 degree per hour
+            'story_boost_base': 3.0,
+            'headline_bonus': 2.0,
+            'explosive_keywords_bonus': 2.0,
+            'new_celebrity_threshold': 3  # Mentions needed to add new celebrity
+        }
+
+        # Data structures
+        self.celebrities = {}
+        self.celebrity_names = []
         self.new_posts = []
+        self.processed_articles = set()
         self.celebrity_mentions = defaultdict(int)
-        self.celebrity_article_mentions = defaultdict(set)  # Track unique articles per celebrity
+        self.celebrity_article_mentions = defaultdict(set)
         self.potential_new_celebrities = Counter()
         self.new_celebrities_discovered = []
 
-        # Adaptive temperature settings
-        self.DAILY_POST_LIMIT = 33
-        self.TARGET_POSTS_PER_RUN = 3
-        self.FALLBACK_MIN_TEMP = 15
-        self.IDEAL_MIN_TEMP = 35
-        self.ARCHIVE_DAYS = 30
+        # Load existing data
+        self.load_celebrities()
+        self.load_processed_articles()
 
-        # 🌡️ ENHANCED CELEBRITY TEMPERATURE SYSTEM
-        self.TEMPERATURE_CONFIG = {
-            # Decay rates (per hour)
-            'hourly_decay_rate': 1.0/24.0,      # Loses ~1 degree per day (24 hours)
-            'max_temperature': 100.0,
-            'min_temperature': 0.0,
-            'new_celebrity_base_temp': 5.0,     # New celebrities start very low
-
-            # Story boost system
-            'story_boost_base': 2.0,            # Base points per story
-            'headline_bonus': 1.0,              # Extra if in headline
-            'explosive_keywords_bonus': 3.0,    # Bonus for drama keywords
-            'recency_multiplier': 1.5,          # Recent stories worth more
-
-            # Thresholds
-            'top_chart_threshold': 10.0,        # Must be above 10° to appear in charts
-            'new_celebrity_threshold': 2,       # Mentions needed to add new celebrity
-            'monthly_max_articles': 1000,       # ~33 articles/day × 30 days
-        }
-
-        # CELEBRITY AUTO-DISCOVERY PATTERNS 🔍
-        self.CELEBRITY_PATTERNS = {
-            # Family relationships
-            'family': [
-                r"(\w+(?:\s+\w+)?)'s (?:daughter|son|child|kid)",
-                r"(\w+(?:\s+\w+)?)'s (?:wife|husband|partner|boyfriend|girlfriend)",
-                r"(\w+(?:\s+\w+)?)'s (?:mother|father|parent|mom|dad)",
-                r"(\w+(?:\s+\w+)?)'s (?:sister|brother|sibling)",
-                r"(\w+(?:\s+\w+)?)'s (?:ex-wife|ex-husband|ex-partner|ex-boyfriend|ex-girlfriend)"
-            ],
-            # Professional relationships
-            'professional': [
-                r"(?:actor|actress|singer|rapper|musician|model|influencer|celebrity)\s+(\w+(?:\s+\w+)?)",
-                r"(\w+(?:\s+\w+)?)\s+(?:stars?|performs?|sings?|acts?)",
-                r"(?:director|producer|writer)\s+(\w+(?:\s+\w+)?)",
-                r"(\w+(?:\s+\w+)?)\s+(?:released|dropped|announced)"
-            ],
-            # Context clues
-            'context': [
-                r"(\w+(?:\s+\w+)?)\s+(?:was spotted|seen|photographed|caught)",
-                r"(\w+(?:\s+\w+)?)\s+(?:reveals?|admits?|confesses?|says?|tells?)",
-                r"(\w+(?:\s+\w+)?)\s+(?:dating|married|engaged|divorced)"
-            ]
-        }
-
-        # RSS feeds - 12 optimized sources
+        # RSS feeds configuration
         self.rss_feeds = {
-            # PURE GOSSIP GOLD 🔥
-            'tmz': {'url': 'https://www.tmz.com/rss.xml', 'weight': 3},
-            'page_six': {'url': 'https://pagesix.com/feed/', 'weight': 3},
-            'perez_hilton': {'url': 'https://perezhilton.com/feed/', 'weight': 3},
-            'us_weekly': {'url': 'https://www.usmagazine.com/feed/', 'weight': 3},
-
-            # CELEBRITY NEWS ⭐
-            'e_news': {'url': 'http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml', 'weight': 2},
-            'daily_mail': {'url': 'https://www.dailymail.co.uk/articles.rss', 'weight': 2},
-            'hollywood_reporter': {'url': 'https://www.hollywoodreporter.com/feed/', 'weight': 2},
-            'variety': {'url': 'https://variety.com/feed/', 'weight': 2},
-
-            # MUSIC/ENTERTAINMENT DRAMA 🎭
-            'billboard': {'url': 'https://www.billboard.com/feed/', 'weight': 2},
-            'rolling_stone': {'url': 'https://www.rollingstone.com/feed/', 'weight': 2},
-
-            # FASHION/LIFESTYLE (Celebrity focused) 💅
-            'elle': {'url': 'https://www.elle.com/rss/all.xml/', 'weight': 1},
-            'vogue': {'url': 'https://www.vogue.com/feed/rss', 'weight': 1}
+            'tmz': {
+                'url': 'https://www.tmz.com/rss.xml',
+                'category': 'celebrity'
+            },
+            'page_six': {
+                'url': 'https://pagesix.com/feed/',
+                'category': 'celebrity'
+            },
+            'perez_hilton': {
+                'url': 'https://perezhilton.com/feed/',
+                'category': 'celebrity'
+            },
+            'us_weekly': {
+                'url': 'https://www.usmagazine.com/feed/',
+                'category': 'celebrity'
+            },
+            'e_news': {
+                'url': 'https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml',
+                'category': 'celebrity'
+            },
+            'daily_mail': {
+                'url': 'https://www.dailymail.co.uk/tvshowbiz/index.rss',
+                'category': 'celebrity'
+            },
+            'hollywood_reporter': {
+                'url': 'https://www.hollywoodreporter.com/feed/',
+                'category': 'entertainment'
+            },
+            'variety': {
+                'url': 'https://variety.com/feed/',
+                'category': 'entertainment'
+            },
+            'billboard': {
+                'url': 'https://www.billboard.com/feed/',
+                'category': 'music'
+            },
+            'rolling_stone': {
+                'url': 'https://www.rollingstone.com/feed/',
+                'category': 'music'
+            },
+            'elle': {
+                'url': 'https://www.elle.com/rss/all.xml/',
+                'category': 'fashion'
+            },
+            'vogue': {
+                'url': 'https://www.vogue.com/feed/rss',
+                'category': 'fashion'
+            }
         }
 
     def load_celebrities(self):
-        """Load celebrity database with enhanced name handling"""
-        try:
-            celebrities_file = self.base_path / '_data' / 'celebrities.yml'
-            if celebrities_file.exists():
+        """Load celebrities from YAML file with temperature system support"""
+        celebrities_file = self.base_path / '_data' / 'celebrities.yml'
+
+        if celebrities_file.exists():
+            try:
                 with open(celebrities_file, 'r', encoding='utf-8') as f:
-                    celebrities = yaml.safe_load(f) or {}
+                    self.celebrities = yaml.safe_load(f) or {}
 
-                # FIX PROBLEMATIC NAMES 🔧
-                celebrities = self.fix_celebrity_names(celebrities)
-                return celebrities
-            else:
-                logger.info("No celebrities.yml found, starting with empty database")
-                return {}
-        except Exception as e:
-            logger.error(f"Error loading celebrities: {e}")
-            return {}
+                # Ensure all celebrities have temperature system fields
+                current_time = datetime.now()
+                for celeb_key, celeb_data in self.celebrities.items():
+                    if isinstance(celeb_data, dict):
+                        # Initialize temperature system fields if missing
+                        if 'temperature' not in celeb_data:
+                            celeb_data['temperature'] = self.TEMPERATURE_CONFIG['new_celebrity_base_temp']
 
-    def fix_celebrity_names(self, celebrities):
-        """Fix problematic celebrity name configurations"""
-        fixes_applied = []
+                        if 'last_temp_update' not in celeb_data:
+                            celeb_data['last_temp_update'] = current_time.isoformat()
 
-        # FIX: "ye" -> Only match as "Kanye" or "Kanye West"
-        if 'ye' in celebrities:
-            ye_data = celebrities.pop('ye')
-            celebrities['kanye_west'] = {
-                **ye_data,
-                'name': 'Kanye West',
-                'aliases': ['kanye', 'kanye west'],
-                'disambiguation': 'rapper formerly known as Kanye',
-                'search_terms': ['kanye west', 'kanye'],  # Never search for just "ye"
-            }
-            fixes_applied.append("ye -> kanye_west")
+                        if 'recent_story_count' not in celeb_data:
+                            celeb_data['recent_story_count'] = 0
 
-        # FIX: "liam" -> "liam_payne" with disambiguation
-        if 'liam' in celebrities:
-            liam_data = celebrities.pop('liam')
-            # Check if this is likely Liam Payne based on category
-            if liam_data.get('category') in ['actor', 'musician', 'unknown']:
-                celebrities['liam_payne'] = {
-                    **liam_data,
-                    'name': 'Liam Payne',
-                    'aliases': ['liam payne'],
-                    'disambiguation': 'former One Direction member',
-                    'search_terms': ['liam payne'],  # Never search for just "liam"
-                    'category': 'musician'
-                }
-                fixes_applied.append("liam -> liam_payne")
+                        if 'status' not in celeb_data:
+                            celeb_data['status'] = self.calculate_celebrity_status_from_temp(celeb_data['temperature'])
 
-        # 🔧 FIX: "met" -> "met_gala" with specific search terms
-        if 'met' in celebrities:
-            met_data = celebrities.pop('met')
-            celebrities['met_gala'] = {
-                **met_data,
-                'name': 'Met Gala',
-                'aliases': ['met gala', 'metropolitan museum gala'],
-                'disambiguation': 'annual fashion fundraising gala',
-                'search_terms': ['met gala', 'metropolitan museum gala'],  # Never search for just "met"
-                'category': 'event'
-            }
-            fixes_applied.append("met -> met_gala")
+                logger.info(f"📚 Loaded {len(self.celebrities)} celebrities with temperature system")
 
-        # ADD: Prince William disambiguation
-        if 'prince_william' not in celebrities:
-            # Check if there's a generic "william" entry
-            william_data = celebrities.pop('william', {})
-            celebrities['prince_william'] = {
-                **william_data,
-                'name': 'Prince William',
-                'aliases': ['prince william', 'william prince of wales'],
-                'disambiguation': 'husband of Kate Middleton',
-                'search_terms': ['prince william', 'william prince'],
-                'category': 'royal',
-                'temperature': william_data.get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp']),
-                'last_temp_update': william_data.get('last_temp_update', datetime.now().isoformat()),
-                'recent_story_count': william_data.get('recent_story_count', 0),
-                'discovery_date': william_data.get('discovery_date', datetime.now().strftime('%Y-%m-%d')),
-                'status': william_data.get('status', 'mild'),
-                'memorial': False,
-            }
-            if william_data:
-                fixes_applied.append("william -> prince_william")
+            except Exception as e:
+                logger.error(f"Error loading celebrities: {e}")
+                self.celebrities = {}
+        else:
+            logger.info("📚 No existing celebrities file found, starting fresh")
+            self.celebrities = {}
 
-        if fixes_applied:
-            logger.info(f"🔧 Applied celebrity name fixes: {', '.join(fixes_applied)}")
+        # Build search terms for celebrity detection
+        self.build_celebrity_search_terms()
 
-        return celebrities
-
-    def extract_celebrity_names(self):
-        """Extract searchable celebrity names with smart disambiguation"""
-        search_terms = []
+    def build_celebrity_search_terms(self):
+        """Build optimized search terms for celebrity detection"""
+        self.celebrity_names = []
 
         for celeb_key, celeb_data in self.celebrities.items():
             if isinstance(celeb_data, dict):
-                # Use custom search terms if available
-                if 'search_terms' in celeb_data:
-                    search_terms.extend([term.lower() for term in celeb_data['search_terms']])
+                # Use search terms if available
+                search_terms = celeb_data.get('search_terms', [])
+                if search_terms:
+                    self.celebrity_names.extend([term.lower() for term in search_terms])
                 else:
-                    # Use name and aliases
+                    # Fallback to name and aliases
                     name = celeb_data.get('name', celeb_key)
-                    search_terms.append(name.lower())
+                    self.celebrity_names.append(name.lower())
 
-                    # Add aliases
                     aliases = celeb_data.get('aliases', [])
-                    search_terms.extend([alias.lower() for alias in aliases])
+                    self.celebrity_names.extend([alias.lower() for alias in aliases])
 
-                    # Add name variations for longer names only
-                    if ' ' in name and len(name.split()) >= 2:
-                        name_parts = name.split()
-                        if len(name_parts[0]) > 3 and len(name_parts[-1]) > 3:  # Avoid short names
-                            search_terms.append(f"{name_parts[0].lower()} {name_parts[-1].lower()}")
+        logger.info(f"🔍 Built {len(self.celebrity_names)} search terms")
 
-        return list(set(search_terms))
-
-    # 🌡️ ENHANCED TEMPERATURE MANAGEMENT SYSTEM
     def apply_celebrity_temperature_decay(self):
         """Apply hourly temperature decay to all celebrities with reasonable limits"""
         current_time = datetime.now()
-    
+
         for celeb_key, celeb_data in self.celebrities.items():
             if not isinstance(celeb_data, dict):
                 continue
-    
+
             # Get last update time (default to 1 hour ago max for first run)
             last_update_str = celeb_data.get('last_temp_update')
             if last_update_str:
@@ -246,17 +191,17 @@ class AdaptiveGossipScraper:
                     last_update = current_time - timedelta(hours=1)  # Default to 1 hour ago
             else:
                 last_update = current_time - timedelta(hours=1)  # Default to 1 hour ago
-    
+
             hours_passed = (current_time - last_update).total_seconds() / 3600.0
-    
+
             # 🔧 CAP MAXIMUM DECAY TIME - Since this runs hourly, limit to 24 hours max
             max_decay_hours = 24.0  # Maximum 24 hours of decay between runs
             hours_passed = min(hours_passed, max_decay_hours)
-    
+
             # Apply decay
             current_temp = celeb_data.get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp'])
             decay_amount = hours_passed * self.TEMPERATURE_CONFIG['hourly_decay_rate']
-    
+
             # 🔧 SMART DECAY LIMITS based on current temperature
             if current_temp <= 10:
                 # Slow decay for low temperatures
@@ -267,18 +212,18 @@ class AdaptiveGossipScraper:
             else:
                 # Normal decay for high temperatures
                 max_decay_per_run = 2.0
-    
+
             decay_amount = min(decay_amount, max_decay_per_run)
-    
+
             decayed_temp = max(current_temp - decay_amount, self.TEMPERATURE_CONFIG['min_temperature'])
-    
+
             # Update temperature
             celeb_data['temperature'] = round(decayed_temp, 1)
             celeb_data['last_temp_update'] = current_time.isoformat()
-    
+
             # Update status based on temperature
             celeb_data['status'] = self.calculate_celebrity_status_from_temp(decayed_temp)
-    
+
             if decay_amount > 0.1:  # Only log significant decay
                 logger.info(f"⏰ {celeb_key}: {current_temp:.1f}° -> {decayed_temp:.1f}° (-{decay_amount:.1f} decay)")
 
@@ -355,160 +300,159 @@ class AdaptiveGossipScraper:
         return min(self.TEMPERATURE_CONFIG['max_temperature'], avg_temp)
 
     def discover_new_celebrities(self, title, description):
-    """Auto-discover new celebrities with ULTRA-STRICT filtering"""
-    full_text = f"{title} {description}"
-    discovered = []
-    
-    # 🚫 EXPANDED BLACKLIST - Add more non-celebrity terms
-    CELEBRITY_BLACKLIST = {
-        # Sentence starters/fragments
-        'you_are', 'if_you', 'women_to', 'and_encourages', 'to_make', 'still_work',
-        'make_an', 'you_still', 'work_from', 'from_home', 'home_and', 'encourages_people',
-    
-        # Common phrases that get capitalized
-        'new_york', 'los_angeles', 'las_vegas', 'united_states', 'north_america',
-        'social_media', 'real_estate', 'high_school', 'middle_east', 'south_korea',
-        'prime_minister', 'white_house', 'red_carpet', 'golden_globes', 'harassing_young_actress',
-    
-        # 🔧 AWARDS/ORGANIZATIONS/EVENTS (NOT CELEBRITIES)
-        'academy_awards', 'oscar_awards', 'grammy_awards', 'emmy_awards', 'golden_globes',
-        'cannes_festival', 'sundance_festival', 'toronto_film_festival', 'venice_biennale',
-        'nordic_council', 'nordic_council_film', 'film_council', 'arts_council',
-        'national_board', 'review_board', 'critics_choice', 'screen_actors_guild',
-    
-        # 🔧 MOVIE/SHOW TITLES (NOT PEOPLE)
-        'rao_bahadur', 'when_light_breaks', 'dreams_nominated', 'breaking_bad',
-        'game_thrones', 'stranger_things', 'wednesday_addams', 'black_swan',
-        'top_gun', 'star_wars', 'marvel_studios', 'dc_comics',
-    
-        # 🔧 GENERIC ROLES/POSITIONS (NOT SPECIFIC PEOPLE)
-        'film_director', 'movie_producer', 'casting_director', 'executive_producer',
-        'associate_producer', 'production_designer', 'costume_designer',
-        'music_director', 'art_director', 'script_writer',
-    
-        # Generic terms
-        'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
-        'celebrity_news', 'entertainment_tonight', 'people_magazine', 'jesus_christ',
-    
-        # Common non-celebrity capitalized phrases
-        'according_to', 'sources_say', 'insider_reveals', 'close_friend',
-        'family_member', 'representative_said', 'publicist_confirmed',
-    
-        # Sentence fragments that appear in headlines
-        'claims_that', 'reveals_shocking', 'admits_to', 'denies_rumors',
-        'confirms_relationship', 'announces_divorce', 'spotted_with'
-    }
-    
-    # ✅ ULTRA-STRICT CELEBRITY INDICATORS - Must have MULTIPLE contexts
-    CELEBRITY_CONTEXT_REQUIRED = [
-        # Professional titles WITH action words
-        'actor stars in', 'actress appears in', 'singer performs', 'rapper releases',
-        'musician announces', 'model walks', 'influencer posts', 'comedian performs',
-    
-        # Celebrity lifestyle WITH specificity
-        'celebrity spotted', 'star photographed', 'famous couple', 'hollywood star',
-        'a-list celebrity', 'pop star', 'movie star', 'tv star', 'reality star',
-    
-        # Relationship context WITH celebrity indicators
-        'celebrity dating', 'star married', 'famous relationship', 'hollywood couple',
-        'celebrity engagement', 'star divorce', 'famous split',
-    
-        # Social media WITH celebrity context
-        'celebrity instagram', 'star twitter', 'famous tiktok', 'celebrity social media'
-    ]
-    
-    # 🔧 REQUIRE MULTIPLE CELEBRITY INDICATORS
-    def has_strong_celebrity_context(text_lower, name_lower):
-        """Require multiple strong celebrity indicators"""
-        context_count = 0
-    
-        # Check for celebrity titles near the name
-        celebrity_titles = ['actor', 'actress', 'singer', 'rapper', 'musician', 'model', 
-                          'influencer', 'celebrity', 'star', 'famous', 'hollywood']
-    
-        name_position = text_lower.find(name_lower)
-        if name_position != -1:
-            # Check 50 characters before and after the name
-            context_window = text_lower[max(0, name_position-50):name_position+len(name_lower)+50]
-    
-            for title in celebrity_titles:
-                if title in context_window:
-                    context_count += 1
-    
-        # Check for celebrity actions
-        celebrity_actions = ['performs', 'stars', 'appears', 'releases', 'announces', 
-                           'spotted', 'photographed', 'dating', 'married', 'engaged']
-    
-        for action in celebrity_actions:
-            if action in text_lower and name_lower in text_lower:
-                context_count += 1
-    
-        # Require at least 2 strong celebrity indicators
-        return context_count >= 2
-    
-    # Look for capitalized names with ULTRA-STRICT validation
-    name_pattern = r'\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,})?)\b'
-    potential_names = re.findall(name_pattern, full_text)
-    
-    for name in potential_names:
-        name_clean = name.strip()
-        name_lower = name_clean.lower()
-        name_key = re.sub(r'[^\w\s]', '', name_lower).replace(' ', '_')
-    
-        # 🚫 IMMEDIATE BLACKLIST CHECK
-        if name_key in CELEBRITY_BLACKLIST:
-            continue
-    
-        # 🚫 REJECT OBVIOUS NON-NAMES
-        # Reject if contains common non-name patterns
-        non_name_patterns = [
-            r'\b(council|board|awards?|festival|review|studio|production|company)\b',
-            r'\b(when|where|what|how|why|the|and|for|with|from)\b',
-            r'\b(light|dark|night|day|time|year|month|week)\b',
-            r'\b(breaks?|dreams?|hopes?|plans?|ideas?)\b'
-        ]
-    
-        skip_name = False
-        for pattern in non_name_patterns:
-            if re.search(pattern, name_lower):
-                skip_name = True
-                break
-    
-        if skip_name:
-            continue
-    
-        # Skip if already known
-        if any(name_lower in search_term for search_term in self.celebrity_names):
-            continue
-    
-        # 🔍 ULTRA-STRICT CONTEXT VALIDATION
-        if not has_strong_celebrity_context(full_text.lower(), name_lower):
-            continue
-    
-        # 🔧 ADDITIONAL VALIDATION: Must look like a real person's name
-        name_parts = name_clean.split()
-        if len(name_parts) < 2 or len(name_parts) > 3:  # Must be 2-3 parts
-            continue
-    
-        # Each part must be a reasonable name length
-        if any(len(part) < 2 or len(part) > 15 for part in name_parts):
-            continue
-    
-        # Must not contain numbers or special characters
-        if re.search(r'[0-9_\-]', name_clean):
-            continue
-    
-        # ✅ PASSED ALL ULTRA-STRICT FILTERS
-        self.potential_new_celebrities[name_clean] += 1
-        discovered.append({
-            'name': name_clean,
-            'category': 'unknown',
-            'context_score': 5.0,  # Very high confidence due to ultra-strict filtering
-            'source_text': full_text[:200] + '...'
-        })
-    
-    return discovered
+        """Auto-discover new celebrities with ULTRA-STRICT filtering"""
+        full_text = f"{title} {description}"
+        discovered = []
 
+        # 🚫 EXPANDED BLACKLIST - Add more non-celebrity terms
+        CELEBRITY_BLACKLIST = {
+            # Sentence starters/fragments
+            'you_are', 'if_you', 'women_to', 'and_encourages', 'to_make', 'still_work',
+            'make_an', 'you_still', 'work_from', 'from_home', 'home_and', 'encourages_people',
+
+            # Common phrases that get capitalized
+            'new_york', 'los_angeles', 'las_vegas', 'united_states', 'north_america',
+            'social_media', 'real_estate', 'high_school', 'middle_east', 'south_korea',
+            'prime_minister', 'white_house', 'red_carpet', 'golden_globes', 'harassing_young_actress',
+
+            # 🔧 AWARDS/ORGANIZATIONS/EVENTS (NOT CELEBRITIES)
+            'academy_awards', 'oscar_awards', 'grammy_awards', 'emmy_awards', 'golden_globes',
+            'cannes_festival', 'sundance_festival', 'toronto_film_festival', 'venice_biennale',
+            'nordic_council', 'nordic_council_film', 'film_council', 'arts_council',
+            'national_board', 'review_board', 'critics_choice', 'screen_actors_guild',
+
+            # 🔧 MOVIE/SHOW TITLES (NOT PEOPLE)
+            'rao_bahadur', 'when_light_breaks', 'dreams_nominated', 'breaking_bad',
+            'game_thrones', 'stranger_things', 'wednesday_addams', 'black_swan',
+            'top_gun', 'star_wars', 'marvel_studios', 'dc_comics',
+
+            # 🔧 GENERIC ROLES/POSITIONS (NOT SPECIFIC PEOPLE)
+            'film_director', 'movie_producer', 'casting_director', 'executive_producer',
+            'associate_producer', 'production_designer', 'costume_designer',
+            'music_director', 'art_director', 'script_writer',
+
+            # Generic terms
+            'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
+            'celebrity_news', 'entertainment_tonight', 'people_magazine', 'jesus_christ',
+
+            # Common non-celebrity capitalized phrases
+            'according_to', 'sources_say', 'insider_reveals', 'close_friend',
+            'family_member', 'representative_said', 'publicist_confirmed',
+
+            # Sentence fragments that appear in headlines
+            'claims_that', 'reveals_shocking', 'admits_to', 'denies_rumors',
+            'confirms_relationship', 'announces_divorce', 'spotted_with'
+        }
+
+        # ✅ ULTRA-STRICT CELEBRITY INDICATORS - Must have MULTIPLE contexts
+        CELEBRITY_CONTEXT_REQUIRED = [
+            # Professional titles WITH action words
+            'actor stars in', 'actress appears in', 'singer performs', 'rapper releases',
+            'musician announces', 'model walks', 'influencer posts', 'comedian performs',
+
+            # Celebrity lifestyle WITH specificity
+            'celebrity spotted', 'star photographed', 'famous couple', 'hollywood star',
+            'a-list celebrity', 'pop star', 'movie star', 'tv star', 'reality star',
+
+            # Relationship context WITH celebrity indicators
+            'celebrity dating', 'star married', 'famous relationship', 'hollywood couple',
+            'celebrity engagement', 'star divorce', 'famous split',
+
+            # Social media WITH celebrity context
+            'celebrity instagram', 'star twitter', 'famous tiktok', 'celebrity social media'
+        ]
+
+        # 🔧 REQUIRE MULTIPLE CELEBRITY INDICATORS
+        def has_strong_celebrity_context(text_lower, name_lower):
+            """Require multiple strong celebrity indicators"""
+            context_count = 0
+
+            # Check for celebrity titles near the name
+            celebrity_titles = ['actor', 'actress', 'singer', 'rapper', 'musician', 'model', 
+                              'influencer', 'celebrity', 'star', 'famous', 'hollywood']
+
+            name_position = text_lower.find(name_lower)
+            if name_position != -1:
+                # Check 50 characters before and after the name
+                context_window = text_lower[max(0, name_position-50):name_position+len(name_lower)+50]
+
+                for title in celebrity_titles:
+                    if title in context_window:
+                        context_count += 1
+
+            # Check for celebrity actions
+            celebrity_actions = ['performs', 'stars', 'appears', 'releases', 'announces', 
+                               'spotted', 'photographed', 'dating', 'married', 'engaged']
+
+            for action in celebrity_actions:
+                if action in text_lower and name_lower in text_lower:
+                    context_count += 1
+
+            # Require at least 2 strong celebrity indicators
+            return context_count >= 2
+
+        # Look for capitalized names with ULTRA-STRICT validation
+        name_pattern = r'\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,})?)\b'
+        potential_names = re.findall(name_pattern, full_text)
+
+        for name in potential_names:
+            name_clean = name.strip()
+            name_lower = name_clean.lower()
+            name_key = re.sub(r'[^\w\s]', '', name_lower).replace(' ', '_')
+
+            # 🚫 IMMEDIATE BLACKLIST CHECK
+            if name_key in CELEBRITY_BLACKLIST:
+                continue
+
+            # 🚫 REJECT OBVIOUS NON-NAMES
+            # Reject if contains common non-name patterns
+            non_name_patterns = [
+                r'\b(council|board|awards?|festival|review|studio|production|company)\b',
+                r'\b(when|where|what|how|why|the|and|for|with|from)\b',
+                r'\b(light|dark|night|day|time|year|month|week)\b',
+                r'\b(breaks?|dreams?|hopes?|plans?|ideas?)\b'
+            ]
+
+            skip_name = False
+            for pattern in non_name_patterns:
+                if re.search(pattern, name_lower):
+                    skip_name = True
+                    break
+
+            if skip_name:
+                continue
+
+            # Skip if already known
+            if any(name_lower in search_term for search_term in self.celebrity_names):
+                continue
+
+            # 🔍 ULTRA-STRICT CONTEXT VALIDATION
+            if not has_strong_celebrity_context(full_text.lower(), name_lower):
+                continue
+
+            # 🔧 ADDITIONAL VALIDATION: Must look like a real person's name
+            name_parts = name_clean.split()
+            if len(name_parts) < 2 or len(name_parts) > 3:  # Must be 2-3 parts
+                continue
+
+            # Each part must be a reasonable name length
+            if any(len(part) < 2 or len(part) > 15 for part in name_parts):
+                continue
+
+            # Must not contain numbers or special characters
+            if re.search(r'[0-9_\-]', name_clean):
+                continue
+
+            # ✅ PASSED ALL ULTRA-STRICT FILTERS
+            self.potential_new_celebrities[name_clean] += 1
+            discovered.append({
+                'name': name_clean,
+                'category': 'unknown',
+                'context_score': 5.0,  # Very high confidence due to ultra-strict filtering
+                'source_text': full_text[:200] + '...'
+            })
+
+        return discovered
 
     def add_new_celebrity(self, name, category='unknown', context_score=0):
         """Add a new celebrity to the database with temperature system"""
@@ -554,11 +498,21 @@ class AdaptiveGossipScraper:
         return True
 
     def process_potential_new_celebrities(self):
-        """Process potential new celebrities and add qualifying ones"""
-        threshold = self.TEMPERATURE_CONFIG['new_celebrity_threshold']
+        """Process potential new celebrities with higher threshold"""
+        # 🔧 INCREASE THRESHOLD - Require more mentions before adding
+        threshold = 3  # Increased from 2 to 3
 
         for name, mention_count in self.potential_new_celebrities.items():
             if mention_count >= threshold:
+                # Additional validation before adding
+                name_parts = name.split()
+
+                # Skip if looks like a title/organization
+                organization_words = ['council', 'board', 'awards', 'festival', 'company', 'studio']
+                if any(word.lower() in name.lower() for word in organization_words):
+                    logger.info(f"🚫 Skipping organization: {name}")
+                    continue
+
                 # Try to determine category from recent context
                 category = 'unknown'
 
@@ -568,6 +522,7 @@ class AdaptiveGossipScraper:
                 elif name.endswith(' Jr.') or name.endswith(' Sr.'):
                     category = 'family'  # Likely family member
 
+                logger.info(f"🌟 Adding new celebrity: {name} (mentioned {mention_count} times)")
                 self.add_new_celebrity(name, category, mention_count)
 
     def contains_celebrity(self, text, title=""):
@@ -638,22 +593,9 @@ class AdaptiveGossipScraper:
         """Load processed articles to avoid duplicates"""
         try:
             with open('data/processed_articles.json', 'r') as f:
-                return set(json.load(f))
+                self.processed_articles = set(json.load(f))
         except FileNotFoundError:
-            return set()
-
-    def load_daily_queue(self):
-        """Load daily posting queue"""
-        Path('data').mkdir(exist_ok=True)
-        try:
-            with open('data/daily_queue.json', 'r') as f:
-                queue_data = json.load(f)
-                today = datetime.now().strftime('%Y-%m-%d')
-                if queue_data.get('date') != today:
-                    return {'date': today, 'posted_count': 0, 'queue': []}
-                return queue_data
-        except FileNotFoundError:
-            return {'date': datetime.now().strftime('%Y-%m-%d'), 'posted_count': 0, 'queue': []}
+            self.processed_articles = set()
 
     def clean_text(self, text):
         """Clean and normalize text"""
