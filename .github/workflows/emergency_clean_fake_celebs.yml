@@ -1,0 +1,309 @@
+name: Emergency Celebrity Blacklist Cleanup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  emergency-cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+
+    - name: 🚨 Create Emergency Cleanup Script
+      run: |
+        cat > emergency_cleanup.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        Emergency Celebrity Blacklist Cleanup
+        Removes all the fake "celebrity" entries that keep coming back
+        """
+
+        import yaml
+        import re
+        from pathlib import Path
+        from datetime import datetime
+        import logging
+
+        logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+        logger = logging.getLogger(__name__)
+
+        class EmergencyCelebrityCleanup:
+            def __init__(self):
+                self.base_path = Path('.')
+                self.celebrities_file = self.base_path / '_data' / 'celebrities.yml'
+
+                # 🚫 NUCLEAR BLACKLIST - Remove these immediately
+                self.NUCLEAR_BLACKLIST = {
+                    # The persistent fake ones
+                    'you_are', 'women_to_make_an', 'if_you_still_work', 'and_encourages',
+                    'lil_tay_claims', 'terence_stamp',
+
+                    # Sentence fragments
+                    'to_make_an', 'still_work', 'you_still', 'make_an', 'encourages',
+                    'claims', 'work_from', 'from_home', 'home_and',
+
+                    # Generic terms
+                    'celebrity', 'famous', 'star', 'news', 'latest', 'new', 'hot', 'trending',
+                    'update', 'breaking', 'exclusive', 'report', 'story', 'drama', 'gossip',
+                    'entertainment', 'hollywood', 'music', 'movie', 'film', 'show',
+
+                    # Common words
+                    'the', 'and', 'or', 'but', 'with', 'from', 'about', 'after', 'before',
+                    'during', 'while', 'since', 'until', 'through', 'over', 'under',
+                    'says', 'tells', 'reveals', 'admits', 'claims', 'denies', 'confirms',
+                    'according', 'sources', 'insider', 'close', 'friend', 'family',
+
+                    # Numbers and weird entries
+                    '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+                    'first', 'second', 'third', 'last', 'next', 'previous',
+                    'one', 'two', 'three', 'four', 'five',
+
+                    # Partial names that shouldn't exist alone
+                    'kelce', 'kardashian', 'jenner', 'swift', 'bieber', 'trump',
+                    'biden', 'harris', 'west', 'musk', 'bezos',
+
+                    # Common non-celebrity terms
+                    'show', 'movie', 'film', 'album', 'song', 'book', 'series',
+                    'episode', 'season', 'chapter', 'part', 'volume',
+                    'video', 'photo', 'image', 'picture', 'post', 'tweet',
+                    'instagram', 'twitter', 'facebook', 'tiktok', 'youtube',
+
+                    # Time/date related
+                    'today', 'yesterday', 'tomorrow', 'week', 'month', 'year',
+                    'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
+                    'january', 'february', 'march', 'april', 'may', 'june',
+                    'july', 'august', 'september', 'october', 'november', 'december',
+                }
+
+                # ✅ WHITELIST - Keep these even if they might match blacklist
+                self.PROTECTED_CELEBRITIES = {
+                    'saturday_night_live', 'snl',
+                    'travis_kelce', 'jason_kelce', 'ed_kelce',
+                    'donald_trump', 'melania_trump', 'ivanka_trump', 'eric_trump', 'don_jr',
+                    'joe_biden', 'kamala_harris', 'ron_desantis', 'vladimir_putin',
+                    'taylor_swift', 'justin_bieber', 'ariana_grande',
+                    'kim_kardashian', 'kourtney_kardashian', 'khloe_kardashian',
+                    'kylie_jenner', 'kendall_jenner', 'caitlyn_jenner',
+                    'kanye_west', 'elon_musk', 'jeff_bezos', 'mark_zuckerberg',
+                    'jeffree_star', 'donald_glover', 'travis_scott', 'travis_barker',
+                    'lil_tay', 'prince_william', 'britney_spears', 'madonna',
+                }
+
+            def load_celebrities(self):
+                """Load current celebrity database"""
+                try:
+                    if not self.celebrities_file.exists():
+                        logger.error("❌ No celebrities.yml file found")
+                        return {}
+
+                    with open(self.celebrities_file, 'r', encoding='utf-8') as f:
+                        celebrities = yaml.safe_load(f) or {}
+
+                    logger.info(f"📊 Loaded {len(celebrities)} celebrity entries")
+                    return celebrities
+
+                except Exception as e:
+                    logger.error(f"❌ Error loading celebrities: {e}")
+                    return {}
+
+            def is_fake_celebrity(self, celeb_key):
+                """Check if a celebrity entry is fake/invalid"""
+                if not celeb_key or not isinstance(celeb_key, str):
+                    return True
+
+                celeb_clean = celeb_key.lower().strip().replace(' ', '_')
+
+                # Check whitelist first (always keep these)
+                if celeb_clean in self.PROTECTED_CELEBRITIES:
+                    return False
+
+                # Check nuclear blacklist
+                if celeb_clean in self.NUCLEAR_BLACKLIST:
+                    logger.info(f"🚫 BLACKLISTED: {celeb_key}")
+                    return True
+
+                # Length checks
+                if len(celeb_clean) < 3:
+                    logger.info(f"🚫 TOO SHORT: {celeb_key}")
+                    return True
+
+                if len(celeb_clean) > 50:
+                    logger.info(f"🚫 TOO LONG: {celeb_key}")
+                    return True
+
+                # Check for sentence patterns
+                sentence_patterns = [
+                    r'^(you|if|and|the|to|from|with|about)_',
+                    r'_(are|is|was|were|will|can|should|would)_',
+                    r'_(to|from|with|about|after|before)$',
+                    r'_(work|make|still|encourages|claims)$',
+                ]
+
+                for pattern in sentence_patterns:
+                    if re.search(pattern, celeb_clean):
+                        logger.info(f"🚫 SENTENCE PATTERN: {celeb_key}")
+                        return True
+
+                # Check for numbers
+                if re.search(r'^\d+$', celeb_clean):
+                    logger.info(f"🚫 JUST A NUMBER: {celeb_key}")
+                    return True
+
+                # Check word count (too many words = probably not a name)
+                word_count = len(celeb_clean.split('_'))
+                if word_count > 4:
+                    logger.info(f"🚫 TOO MANY WORDS: {celeb_key}")
+                    return True
+
+                return False
+
+            def emergency_cleanup(self, celebrities):
+                """Remove all fake celebrities"""
+                cleaned_celebrities = {}
+                removed_count = 0
+                kept_count = 0
+
+                logger.info("🚨 Starting emergency cleanup...")
+
+                for celeb_key, celeb_data in celebrities.items():
+                    if self.is_fake_celebrity(celeb_key):
+                        removed_count += 1
+                        logger.info(f"🗑️ REMOVED: {celeb_key}")
+                    else:
+                        cleaned_celebrities[celeb_key] = celeb_data
+                        kept_count += 1
+
+                logger.info(f"✅ Cleanup complete: {kept_count} kept, {removed_count} removed")
+                return cleaned_celebrities
+
+            def save_cleaned_celebrities(self, celebrities):
+                """Save the cleaned celebrity database"""
+                try:
+                    # Create backup
+                    backup_file = self.celebrities_file.parent / f'celebrities_backup_emergency_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yml'
+                    if self.celebrities_file.exists():
+                        import shutil
+                        shutil.copy2(self.celebrities_file, backup_file)
+                        logger.info(f"📋 Created backup: {backup_file.name}")
+
+                    # Save cleaned celebrities
+                    with open(self.celebrities_file, 'w', encoding='utf-8') as f:
+                        yaml.dump(celebrities, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
+
+                    logger.info(f"💾 Saved {len(celebrities)} cleaned celebrities")
+
+                except Exception as e:
+                    logger.error(f"❌ Error saving celebrities: {e}")
+
+            def generate_report(self, original_count, cleaned_celebrities):
+                """Generate cleanup report"""
+                removed_count = original_count - len(cleaned_celebrities)
+
+                # Top celebrities after cleanup
+                top_celebs = sorted(
+                    [(k, v.get('drama_score', 0)) for k, v in cleaned_celebrities.items() if isinstance(v, dict)],
+                    key=lambda x: x[1], reverse=True
+                )[:15]
+
+                print("\n" + "="*60)
+                print("🚨 EMERGENCY CELEBRITY CLEANUP REPORT")
+                print("="*60)
+                print(f"📊 Original entries: {original_count}")
+                print(f"🗑️ Removed fake entries: {removed_count}")
+                print(f"✅ Valid celebrities remaining: {len(cleaned_celebrities)}")
+                print(f"📈 Cleanup success rate: {(removed_count/original_count)*100:.1f}%")
+                print("\n🔥 TOP 15 VALID CELEBRITIES:")
+                for i, (celeb, score) in enumerate(top_celebs, 1):
+                    print(f"  {i:2d}. {celeb.replace('_', ' ').title()}: {score}°")
+                print("\n🚫 Removed fake entries like:")
+                print("   - 'You Are', 'Women To Make An', 'If You Still Work'")
+                print("   - 'And Encourages', 'Lil Tay Claims', 'Terence Stamp'")
+                print("   - Sentence fragments and generic terms")
+                print("="*60)
+
+            def run(self):
+                """Execute emergency cleanup"""
+                print("🚨 Starting Emergency Celebrity Cleanup...")
+
+                # 1. Load celebrities
+                celebrities = self.load_celebrities()
+                if not celebrities:
+                    print("❌ No celebrities to clean")
+                    return
+
+                original_count = len(celebrities)
+
+                # 2. Emergency cleanup
+                cleaned_celebrities = self.emergency_cleanup(celebrities)
+
+                # 3. Save cleaned database
+                self.save_cleaned_celebrities(cleaned_celebrities)
+
+                # 4. Generate report
+                self.generate_report(original_count, cleaned_celebrities)
+
+                print("✅ Emergency Cleanup Complete!")
+                print("🎯 All fake celebrities have been NUKED!")
+
+        if __name__ == "__main__":
+            cleanup = EmergencyCelebrityCleanup()
+            cleanup.run()
+        EOF
+
+    - name: 🚨 Run Emergency Cleanup
+      run: |
+        python emergency_cleanup.py
+
+    - name: 📊 Show Cleanup Results
+      run: |
+        echo "📋 Cleanup results:"
+        echo "Remaining celebrities:"
+        if [ -f "_data/celebrities.yml" ]; then
+          grep -c "^[a-z]" _data/celebrities.yml || echo "Could not count entries"
+          echo ""
+          echo "Top 10 remaining celebrities:"
+          head -30 _data/celebrities.yml | grep -E "^[a-z]" | head -10
+        fi
+
+    - name: 🚀 Commit Emergency Cleanup
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Emergency Cleanup Action"
+
+        git add _data/celebrities.yml
+
+        if ls _data/celebrities_backup_emergency_*.yml 1> /dev/null 2>&1; then
+          git add _data/celebrities_backup_emergency_*.yml
+        fi
+
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🚨 Emergency Celebrity Database Cleanup
+
+          NUKED all fake celebrity entries:
+          - 'You Are', 'Women To Make An', 'If You Still Work'
+          - 'And Encourages', 'Lil Tay Claims', 'Terence Stamp'
+          - All sentence fragments and generic terms
+          - Numbers and partial names
+
+          Nuclear Blacklist Cleanup"
+
+          git push
+          echo "✅ Emergency cleanup committed!"
+        fi
