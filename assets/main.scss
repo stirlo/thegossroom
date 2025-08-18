@@ -925,6 +925,30 @@ body {
   }
 }
 
+/* ==========================================================================
+   HIDE TAG HAMBURGER/OVERLAY ON INDEX ONLY
+   ========================================================================== */
+
+/* Hide tag hamburger menu and overlays on homepage/index */
+.home .tag-hamburger,
+.home .tags-toggle,
+.home .tag-overlay,
+.home .tags-menu,
+.home .tag-nav {
+  display: none !important;
+}
+
+/* Hide any mobile tag hamburger on index */
+@media (max-width: 768px) {
+  .home .tag-hamburger,
+  .home .tags-toggle,
+  .home .tag-overlay,
+  .home .tags-menu {
+    display: none !important;
+  }
+}
+
+
 /* EXPLANATION SECTION - SUBTLE GRADIENTS RESTORED */
 .temperature-explanation {
   background: linear-gradient(135deg, #a8edea, #fed6e3) !important;
