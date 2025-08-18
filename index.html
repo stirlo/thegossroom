@@ -9,32 +9,33 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
   <p class="hero-subtitle">Real-time celebrity drama temperature tracking</p>
 </div>
 
-<!-- 🏆 LIVE CELEBRITY SCOREBOARD -->
+<!-- 🏆 LIVE CELEBRITY TEMPERATURE SCOREBOARD -->
 <section class="celebrity-scoreboard">
-  <h2>👑 Celebrity Drama Leaderboard</h2>
+  <h2>🌡️ Celebrity Temperature Leaderboard</h2>
 
   <!-- Scoreboard Tabs -->
   <div class="scoreboard-tabs">
-    <button class="tab-btn active" data-tab="daily">📈 Daily Risers</button>
-    <button class="tab-btn" data-tab="weekly">🌟 Weekly Champions</button>
-    <button class="tab-btn" data-tab="newbies">🌱 Rising Stars</button>
+    <button class="tab-btn active" data-tab="hottest">🔥 Hottest Now</button>
+    <button class="tab-btn" data-tab="rising">📈 Rising Fast</button>
+    <button class="tab-btn" data-tab="newbies">🌱 New Discoveries</button>
   </div>
 
-  <!-- DAILY RISERS (Highest Current Scores) -->
-  <div class="scoreboard-content active" id="daily">
-    <h3>📈 Hottest Celebrities Right Now</h3>
+  <!-- HOTTEST CELEBRITIES (Above 10° threshold) -->
+  <div class="scoreboard-content active" id="hottest">
+    <h3>🔥 Hottest Celebrities Right Now</h3>
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
         {% comment %}
-        🔥 FIXED: Create array of celebrities with scores, then sort properly
+        🌡️ TEMPERATURE-BASED SORTING: Only show celebrities above 10° threshold
         {% endcomment %}
         {% assign celebrity_array = '' | split: '' %}
         {% for celeb_pair in site.data.celebrities %}
           {% assign celeb_key = celeb_pair[0] %}
           {% assign celeb_info = celeb_pair[1] %}
-          {% if celeb_info.drama_score and celeb_info.drama_score >= 10 %}
-            {% assign score_padded = celeb_info.drama_score | prepend: '000' | slice: -6, 6 %}
-            {% assign sortable_entry = score_padded | append: '|' | append: celeb_key %}
+          {% assign temperature = celeb_info.temperature | default: celeb_info.drama_score | default: 0 %}
+          {% if temperature >= 10 %}
+            {% assign temp_padded = temperature | times: 100 | round | prepend: '00000' | slice: -8, 8 %}
+            {% assign sortable_entry = temp_padded | append: '|' | append: celeb_key %}
             {% assign celebrity_array = celebrity_array | push: sortable_entry %}
           {% endif %}
         {% endfor %}
@@ -45,17 +46,21 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
           {% assign parts = entry | split: '|' %}
           {% assign celeb_key = parts[1] %}
           {% assign celeb_info = site.data.celebrities[celeb_key] %}
-          {% assign drama_score = celeb_info.drama_score %}
+          {% assign temperature = celeb_info.temperature | default: celeb_info.drama_score | default: 0 %}
           {% assign celeb_name = celeb_info.name | default: celeb_key %}
           {% assign status = celeb_info.status | default: 'mild' %}
+          {% assign recent_stories = celeb_info.recent_story_count | default: 0 %}
 
           <div class="celeb-card temp-{{ status }}">
             <div class="celeb-rank">{{ forloop.index }}</div>
             <div class="celeb-info">
               <h4><a href="/tag/{{ celeb_key | slugify }}/">{{ celeb_name | replace: '_', ' ' | title }}</a></h4>
               <div class="celeb-stats">
-                <span class="current-temp">🌡️ {{ drama_score }}°</span>
+                <span class="current-temp">🌡️ {{ temperature }}°</span>
                 <span class="status">{{ status | upcase }}</span>
+                {% if recent_stories > 0 %}
+                  <span class="story-count">📰 {{ recent_stories }} stories</span>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -68,45 +73,54 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     </div>
   </div>
 
-  <!-- WEEKLY CHAMPIONS -->
-  <div class="scoreboard-content" id="weekly">
-    <h3>🌟 Most Active This Week</h3>
+  <!-- RISING FAST (Recent temperature increases) -->
+  <div class="scoreboard-content" id="rising">
+    <h3>📈 Rising Fast (Recent Activity)</h3>
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
         {% comment %}
-        🔥 FIXED: Sort weekly champions by drama_score properly
+        🚀 RISING STARS: Sort by recent story count and temperature change
         {% endcomment %}
-        {% assign weekly_array = '' | split: '' %}
+        {% assign rising_array = '' | split: '' %}
         {% assign week_ago = 'now' | date: '%s' | minus: 604800 | date: '%Y-%m-%d' %}
 
         {% for celeb_pair in site.data.celebrities %}
           {% assign celeb_key = celeb_pair[0] %}
           {% assign celeb_info = celeb_pair[1] %}
-          {% assign last_update = celeb_info.last_temperature_update | date: '%Y-%m-%d' %}
-          {% if celeb_info.drama_score >= 15 and last_update >= week_ago %}
-            {% assign score_padded = celeb_info.drama_score | prepend: '000' | slice: -6, 6 %}
+          {% assign temperature = celeb_info.temperature | default: celeb_info.drama_score | default: 0 %}
+          {% assign recent_stories = celeb_info.recent_story_count | default: 0 %}
+          {% assign last_update = celeb_info.last_temp_update | default: celeb_info.last_temperature_update | date: '%Y-%m-%d' %}
+
+          {% if temperature >= 15 and recent_stories > 0 and last_update >= week_ago %}
+            {% assign activity_score = recent_stories | times: 10 | plus: temperature %}
+            {% assign score_padded = activity_score | times: 100 | round | prepend: '00000' | slice: -8, 8 %}
             {% assign sortable_entry = score_padded | append: '|' | append: celeb_key %}
-            {% assign weekly_array = weekly_array | push: sortable_entry %}
+            {% assign rising_array = rising_array | push: sortable_entry %}
           {% endif %}
         {% endfor %}
 
-        {% assign weekly_sorted = weekly_array | sort | reverse %}
+        {% assign rising_sorted = rising_array | sort | reverse %}
 
-        {% for entry in weekly_sorted limit: 12 %}
+        {% for entry in rising_sorted limit: 12 %}
           {% assign parts = entry | split: '|' %}
           {% assign celeb_key = parts[1] %}
           {% assign celeb_info = site.data.celebrities[celeb_key] %}
-          {% assign drama_score = celeb_info.drama_score | default: 0 %}
+          {% assign temperature = celeb_info.temperature | default: celeb_info.drama_score | default: 0 %}
           {% assign celeb_name = celeb_info.name | default: celeb_key %}
           {% assign status = celeb_info.status | default: 'mild' %}
+          {% assign recent_stories = celeb_info.recent_story_count | default: 0 %}
+          {% assign temp_change = celeb_info.temperature_change | default: 0 %}
 
-          <div class="celeb-card temp-{{ status }}">
+          <div class="celeb-card temp-{{ status }} rising">
             <div class="celeb-rank">{{ forloop.index }}</div>
             <div class="celeb-info">
               <h4><a href="/tag/{{ celeb_key | slugify }}/">{{ celeb_name | replace: '_', ' ' | title }}</a></h4>
               <div class="celeb-stats">
-                <span class="current-temp">🌡️ {{ drama_score }}°</span>
-                <span class="last-active">{{ celeb_info.last_temperature_update | date: "%b %d" }}</span>
+                <span class="current-temp">🌡️ {{ temperature }}°</span>
+                {% if temp_change > 0 %}
+                  <span class="temp-change positive">📈 +{{ temp_change }}°</span>
+                {% endif %}
+                <span class="story-count">📰 {{ recent_stories }} recent</span>
               </div>
             </div>
           </div>
@@ -115,13 +129,13 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     </div>
   </div>
 
-  <!-- RISING STARS -->
+  <!-- NEW DISCOVERIES -->
   <div class="scoreboard-content" id="newbies">
-    <h3>🌱 Rising Stars (New Discoveries)</h3>
+    <h3>🌱 New Celebrity Discoveries</h3>
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
         {% comment %}
-        🔥 FIXED: Sort new discoveries by drama_score properly
+        🌟 NEW DISCOVERIES: Sort by discovery date and temperature
         {% endcomment %}
         {% assign newbie_array = '' | split: '' %}
         {% assign month_ago = 'now' | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' %}
@@ -130,8 +144,12 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
           {% assign celeb_key = celeb_pair[0] %}
           {% assign celeb_info = celeb_pair[1] %}
           {% assign discovery_date = celeb_info.discovery_date | date: '%Y-%m-%d' %}
-          {% if celeb_info.drama_score >= 5 and discovery_date >= month_ago %}
-            {% assign score_padded = celeb_info.drama_score | prepend: '000' | slice: -6, 6 %}
+          {% assign temperature = celeb_info.temperature | default: celeb_info.drama_score | default: 0 %}
+          {% assign auto_discovered = celeb_info.auto_discovered | default: false %}
+
+          {% if temperature >= 5 and discovery_date >= month_ago %}
+            {% assign discovery_score = temperature | times: 100 | plus: 1000 %}
+            {% assign score_padded = discovery_score | prepend: '00000' | slice: -8, 8 %}
             {% assign sortable_entry = score_padded | append: '|' | append: celeb_key %}
             {% assign newbie_array = newbie_array | push: sortable_entry %}
           {% endif %}
@@ -144,17 +162,21 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
             {% assign parts = entry | split: '|' %}
             {% assign celeb_key = parts[1] %}
             {% assign celeb_info = site.data.celebrities[celeb_key] %}
-            {% assign drama_score = celeb_info.drama_score | default: 25 %}
+            {% assign temperature = celeb_info.temperature | default: celeb_info.drama_score | default: 0 %}
             {% assign celeb_name = celeb_info.name | default: celeb_key %}
-            {% assign status = celeb_info.status | default: 'rising' %}
+            {% assign status = celeb_info.status | default: 'cooling' %}
+            {% assign auto_discovered = celeb_info.auto_discovered | default: false %}
 
             <div class="celeb-card temp-{{ status }} newbie">
               <div class="celeb-rank">{{ forloop.index }}</div>
               <div class="celeb-info">
                 <h4><a href="/tag/{{ celeb_key | slugify }}/">{{ celeb_name | replace: '_', ' ' | title }}</a></h4>
                 <div class="celeb-stats">
-                  <span class="current-temp">🌡️ {{ drama_score }}°</span>
+                  <span class="current-temp">🌡️ {{ temperature }}°</span>
                   <span class="discovery-date">🌱 {{ celeb_info.discovery_date | date: "%b %d" }}</span>
+                  {% if auto_discovered %}
+                    <span class="auto-tag">🤖 AUTO</span>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -169,31 +191,37 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
   </div>
 </section>
 
-<!-- TEMPERATURE LEGEND (Compact) -->
+<!-- ENHANCED TEMPERATURE LEGEND -->
 <section class="temperature-legend-compact">
+  <h3>🌡️ Temperature Scale</h3>
   <div class="legend-items">
     <span class="temp-explosive">💥 80+ EXPLOSIVE</span>
     <span class="temp-hot">🔥 60+ HOT</span>
-    <span class="temp-rising">🌶️ 40+ WARM</span>
+    <span class="temp-warm">🌶️ 40+ WARM</span>
     <span class="temp-mild">😐 20+ MILD</span>
     <span class="temp-cooling">❄️ <20 COOLING</span>
   </div>
+  <p class="legend-note">
+    🕐 Temperatures decay ~1° per day without new stories. New celebrities start at 5°.
+  </p>
 </section>
 
-<!-- LATEST DRAMA -->
+<!-- LATEST DRAMA (Temperature-Enhanced) -->
 <section class="latest-drama">
   <h2>📰 Latest Drama</h2>
   <div class="posts-grid">
     {% for post in site.posts limit: 8 %}
       {% assign temp_class = 'cooling' %}
       {% assign drama_score = post.drama_score | default: 0 %}
-      {% if drama_score >= 80 %}
+      {% assign temperature = post.temperature | default: drama_score %}
+
+      {% if temperature >= 80 %}
         {% assign temp_class = 'explosive' %}
-      {% elsif drama_score >= 60 %}
+      {% elsif temperature >= 60 %}
         {% assign temp_class = 'hot' %}
-      {% elsif drama_score >= 40 %}
-        {% assign temp_class = 'rising' %}
-      {% elsif drama_score >= 20 %}
+      {% elsif temperature >= 40 %}
+        {% assign temp_class = 'warm' %}
+      {% elsif temperature >= 20 %}
         {% assign temp_class = 'mild' %}
       {% endif %}
 
@@ -201,11 +229,18 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <div class="post-meta">
           <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
-          <span class="temperature">🌡️ {{ drama_score }}°</span>
+          <span class="temperature">🌡️ {{ temperature }}°</span>
           {% if post.primary_celebrity %}
             <a href="/tag/{{ post.primary_celebrity | slugify }}/" class="primary-celeb">
               {{ post.primary_celebrity | replace: '_', ' ' | title }}
             </a>
+          {% endif %}
+          {% if post.celebrity_temps %}
+            <div class="celeb-temps">
+              {% for temp_pair in post.celebrity_temps limit: 3 %}
+                <span class="celeb-temp">{{ temp_pair[0] }}: {{ temp_pair[1] }}°</span>
+              {% endfor %}
+            </div>
           {% endif %}
         </div>
         <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
@@ -231,10 +266,21 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(targetTab).classList.add('active');
         });
     });
+
+    // Auto-refresh temperature display every 30 seconds
+    setInterval(function() {
+        const tempElements = document.querySelectorAll('.current-temp');
+        tempElements.forEach(el => {
+            el.style.animation = 'pulse 0.5s ease-in-out';
+            setTimeout(() => {
+                el.style.animation = '';
+            }, 500);
+        });
+    }, 30000);
 });
 </script>
 
-<!-- CSS for Scoreboard -->
+<!-- Enhanced CSS for Temperature System -->
 <style>
 .celebrity-scoreboard {
     margin: 2rem 0;
@@ -277,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .leaderboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1rem;
 }
 
@@ -290,6 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
     gap: 1rem;
     transition: all 0.3s ease;
     border-left: 4px solid #666;
+    position: relative;
 }
 
 .celeb-card:hover {
@@ -297,17 +344,90 @@ document.addEventListener('DOMContentLoaded', function() {
     background: rgba(255,255,255,0.1);
 }
 
+/* Temperature-based styling */
+.celeb-card.temp-explosive {
+    border-left-color: #ff4757;
+    background: rgba(255,
+
+continue from 
+<!-- Enhanced CSS for Temperature System -->
+<style>
+.celebrity-scoreboard {
+    margin: 2rem 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+}
+
+.scoreboard-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    transform: translateY(-2px);
+}
+
+.scoreboard-content {
+    display: none;
+}
+
+.scoreboard-content.active {
+    display: block;
+}
+
+.leaderboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.celeb-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid #666;
+    position: relative;
+}
+
+.celeb-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* Temperature-based styling */
 .celeb-card.temp-explosive {
     border-left-color: #ff4757;
     background: rgba(255, 71, 87, 0.1);
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.3);
 }
 
 .celeb-card.temp-hot {
     border-left-color: #ff6348;
     background: rgba(255, 99, 72, 0.1);
+    box-shadow: 0 0 15px rgba(255, 99, 72, 0.2);
 }
 
-.celeb-card.temp-rising {
+.celeb-card.temp-warm {
     border-left-color: #ffa502;
     background: rgba(255, 165, 2, 0.1);
 }
@@ -325,6 +445,11 @@ document.addEventListener('DOMContentLoaded', function() {
 .celeb-card.newbie {
     border-left-color: #2ed573;
     background: rgba(46, 213, 115, 0.1);
+}
+
+.celeb-card.rising {
+    border-left-color: #ff9ff3;
+    background: rgba(255, 159, 243, 0.1);
 }
 
 .celeb-rank {
@@ -350,16 +475,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .celeb-stats {
     display: flex;
-    gap: 1rem;
-    font-size: 0.9rem;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.current-temp {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.temp-change.positive {
+    color: #2ed573;
+    font-weight: bold;
+}
+
+.story-count {
+    color: #70a1ff;
+}
+
+.auto-tag {
+    background: rgba(46, 213, 115, 0.2);
+    color: #2ed573;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
 }
 
 .temperature-legend-compact {
     text-align: center;
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
     background: rgba(0,0,0,0.1);
     border-radius: 10px;
+}
+
+.temperature-legend-compact h3 {
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .legend-items {
@@ -367,6 +520,7 @@ document.addEventListener('DOMContentLoaded', function() {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 
 .legend-items span {
@@ -376,11 +530,36 @@ document.addEventListener('DOMContentLoaded', function() {
     font-weight: 600;
 }
 
-.temp-explosive { background: rgba(255, 71, 87, 0.2); color: #ff4757; }
-.temp-hot { background: rgba(255, 99, 72, 0.2); color: #ff6348; }
-.temp-rising { background: rgba(255, 165, 2, 0.2); color: #ffa502; }
-.temp-mild { background: rgba(112, 161, 255, 0.2); color: #70a1ff; }
-.temp-cooling { background: rgba(83, 82, 237, 0.2); color: #5352ed; }
+.legend-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.temp-explosive { 
+    background: rgba(255, 71, 87, 0.2); 
+    color: #ff4757; 
+}
+
+.temp-hot { 
+    background: rgba(255, 99, 72, 0.2); 
+    color: #ff6348; 
+}
+
+.temp-warm { 
+    background: rgba(255, 165, 2, 0.2); 
+    color: #ffa502; 
+}
+
+.temp-mild { 
+    background: rgba(112, 161, 255, 0.2); 
+    color: #70a1ff; 
+}
+
+.temp-cooling { 
+    background: rgba(83, 82, 237, 0.2); 
+    color: #5352ed; 
+}
 
 .no-data, .no-newbies {
     text-align: center;
@@ -388,7 +567,190 @@ document.addEventListener('DOMContentLoaded', function() {
     color: #ccc;
 }
 
+/* Enhanced post cards */
+.latest-drama {
+    margin: 3rem 0;
+}
+
+.latest-drama h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.post-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 4px solid #666;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.post-card.temp-explosive {
+    border-left-color: #ff4757;
+    background: linear-gradient(135deg, #fff, rgba(255, 71, 87, 0.05));
+}
+
+.post-card.temp-hot {
+    border-left-color: #ff6348;
+    background: linear-gradient(135deg, #fff, rgba(255, 99, 72, 0.05));
+}
+
+.post-card.temp-warm {
+    border-left-color: #ffa502;
+    background: linear-gradient(135deg, #fff, rgba(255, 165, 2, 0.05));
+}
+
+.post-card.temp-mild {
+    border-left-color: #70a1ff;
+    background: linear-gradient(135deg, #fff, rgba(112, 161, 255, 0.05));
+}
+
+.post-card.temp-cooling {
+    border-left-color: #5352ed;
+    background: linear-gradient(135deg, #fff, rgba(83, 82, 237, 0.05));
+}
+
+.post-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.post-card h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post-card h3 a:hover {
+    color: #ff6b6b;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.post-meta .date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.post-meta .temperature {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ff8c00;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.post-meta .primary-celeb {
+    background: rgba(112, 161, 255, 0.2);
+    color: #70a1ff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.post-meta .primary-celeb:hover {
+    background: rgba(112, 161, 255, 0.3);
+    color: #5a8cff;
+}
+
+.celeb-temps {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.celeb-temp {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    color: #ff8c00;
+    font-weight: 500;
+}
+
+.post-card .excerpt {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Homepage hero styling */
+.homepage-hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.homepage-hero h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Animation effects */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(255, 71, 87, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 71, 87, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(255, 71, 87, 0.3); }
+}
+
+.celeb-card.temp-explosive:hover {
+    animation: glow 2s infinite;
+}
+
+.current-temp {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
+    .homepage-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
     .scoreboard-tabs {
         justify-content: center;
     }
@@ -400,6 +762,168 @@ document.addEventListener('DOMContentLoaded', function() {
 
     .leaderboard-grid {
         grid-template-columns: 1fr;
+    }
+
+    .celeb-stats {
+        font-size: 0.8rem;
+    }
+
+    .legend-items {
+        gap: 0.5rem;
+    }
+
+    .legend-items span {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-meta {
+        gap: 0.5rem;
+    }
+
+    .celeb-temps {
+        gap: 0.3rem;
+    }
+
+    .celebrity-scoreboard {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-hero {
+        padding: 2rem 1rem;
+    }
+
+    .homepage-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .celeb-card {
+        padding: 0.8rem;
+    }
+
+    .celeb-rank {
+        font-size: 1.2rem;
+        min-width: 1.5rem;
+    }
+
+    .post-card {
+        padding: 1rem;
+    }
+
+    .post-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .post-card {
+        background: #2a2a2a;
+        color: #e0e0e0;
+    }
+
+    .post-card h3 a {
+        color: #e0e0e0;
+    }
+
+    .post-card h3 a:hover {
+        color: #ff6b6b;
+    }
+
+    .post-card .excerpt {
+        color: #b0b0b0;
+    }
+
+    .temperature-legend-compact {
+        background: rgba(255,255,255,0.05);
+    }
+
+    .temperature-legend-compact h3 {
+        color: #e0e0e0;
+    }
+
+    .legend-note {
+        color: #b0b0b0;
+    }
+
+    .latest-drama h2 {
+        color: #e0e0e0;
+    }
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ff6b6b;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Accessibility improvements */
+.tab-btn:focus,
+.celeb-card:focus,
+.post-card:focus {
+    outline: 2px solid #ff6b6b;
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Print styles */
+@media print {
+    .scoreboard-tabs,
+    .homepage-hero {
+        display: none;
+    }
+
+    .celebrity-scoreboard {
+        background: white;
+        color: black;
+        box-shadow: none;
+    }
+
+    .celeb-card {
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+
+    .post-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
     }
 }
 </style>
