@@ -1,18 +1,20 @@
 ---
 categories: gossip
 date: 2025-08-15 17:15:21 +0000
-drama_score: 2
+drama_score: 100
 layout: post
 mentions:
-  trump: 2
-primary_celebrity: trump
+  donald_trump: 2
+primary_celebrity: donald_trump
 source: rolling_stone
 source_url: https://www.rollingstone.com/politics/politics-news/gavin-newsom-redistricting-press-conference-border-patrol-1235408893/
 tags:
 - celebrity-gossip
 - scandals
+temperature: 100
 title: Feds Stake Out Gavin Newsom Press Conference as Gov. Trolls Trump
 ---
+
 
 The California governor's office has been mocking the president on X all week
 

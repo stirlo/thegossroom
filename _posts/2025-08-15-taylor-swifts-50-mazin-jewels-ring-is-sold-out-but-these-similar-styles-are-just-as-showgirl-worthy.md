@@ -1,10 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-15 21:13:52 +0000
-drama_score: 6
+drama_score: 100
 layout: post
 mentions:
-  taylor_swift: 6
+  taylor_swift: 9
 primary_celebrity: taylor_swift
 source: page_six
 source_url: https://pagesix.com/2025/08/15/style/taylor-swift-mazin-jewels-ring/
@@ -13,9 +13,11 @@ tags:
 - scandals
 - fashion
 - taylor-swift
-title: Taylor Swift’s $50 Mazin Jewels ring is sold out, but these similar styles
-  are just as showgirl-worthy
+temperature: 100
+title: "Taylor Swift\u2019s $50 Mazin Jewels ring is sold out, but these similar styles\
+  \ are just as showgirl-worthy"
 ---
+
 
 “I sent Taylor a bunch of stuff through her stylist’s team, and it’s just so amazing that she keeps wearing it,” designer Lily Nizam told us in 2023.
 

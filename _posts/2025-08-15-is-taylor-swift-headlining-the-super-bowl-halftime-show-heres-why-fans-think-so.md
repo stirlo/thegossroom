@@ -1,13 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-15 21:13:55 +0000
-drama_score: 12
+drama_score: 100
 layout: post
 mentions:
-  bowl: 2
-  super: 2
-  super_bowl: 2
-  taylor_swift: 6
+  taylor_swift: 8
 primary_celebrity: taylor_swift
 source: rolling_stone
 source_url: https://www.rollingstone.com/music/music-news/taylor-swift-super-bowl-halftime-easter-eggs-1235409046/
@@ -16,9 +13,11 @@ tags:
 - scandals
 - music
 - taylor-swift
-title: Is Taylor Swift Headlining the Super Bowl Halftime Show? Here’s Why Fans Think
-  So
+temperature: 100
+title: "Is Taylor Swift Headlining the Super Bowl Halftime Show? Here\u2019s Why Fans\
+  \ Think So"
 ---
+
 
 Fans are convinced these Easter eggs mean the pop superstar is finally taking the famed stage in 2026
 

@@ -1,12 +1,11 @@
 ---
 categories: gossip
 date: 2025-08-16 03:12:28 +0000
-drama_score: 30
+drama_score: 200
 layout: post
 mentions:
-  kelce: 6
-  taylor_swift: 18
-  travis_kelce: 6
+  taylor_swift: 11
+  travis_kelce: 8
 primary_celebrity: taylor_swift
 source: e_news
 source_url: https://www.eonline.com/news/1421260/patrick-mahomes-didnt-believe-travis-kelce-taylor-swift-relationship?cmpid=rss-syndicate-genericrss-us-top_stories
@@ -15,8 +14,10 @@ tags:
 - scandals
 - relationships
 - taylor-swift
-title: Patrick Mahomes’ First Reaction to Travis Kelce Dating Taylor Swift
+temperature: 200
+title: "Patrick Mahomes\u2019 First Reaction to Travis Kelce Dating Taylor Swift"
 ---
+
 
 Patrick Mahomes needed a video review before making the final call. The Kansas City Chiefs quarterback revealed he was hesitant to believe his teammate Travis Kelce was dating Taylor Swift until...
 

@@ -1,10 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-15 22:16:28 +0000
-drama_score: 6
+drama_score: 100
 layout: post
 mentions:
-  taylor_swift: 6
+  taylor_swift: 8
 primary_celebrity: taylor_swift
 source: billboard
 source_url: https://www.billboard.com/music/music-news/taylor-swift-new-heights-breaks-youtube-podcast-record-1236045668/
@@ -13,9 +13,11 @@ tags:
 - scandals
 - music
 - taylor-swift
-title: Taylor Swift’s Podcast Debut Climbs to ‘New Heights’ by Setting This YouTube
-  Record
+temperature: 100
+title: "Taylor Swift\u2019s Podcast Debut Climbs to \u2018New Heights\u2019 by Setting\
+  \ This YouTube Record"
 ---
+
 
 The show peaked at 1.3 million concurrent livestream viewers -- a new podcast high on the platform.
 

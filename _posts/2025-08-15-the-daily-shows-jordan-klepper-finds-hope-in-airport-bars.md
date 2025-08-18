@@ -1,18 +1,20 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:40 +0000
-drama_score: 2
+drama_score: 100
 layout: post
 mentions:
-  trump: 2
-primary_celebrity: trump
+  donald_trump: 2
+primary_celebrity: donald_trump
 source: deadline
 source_url: https://deadline.com/2025/08/the-daily-show-jordan-klepper-interview-1236483275/
 tags:
 - celebrity-gossip
 - scandals
-title: ‘The Daily Show’s Jordan Klepper Finds Hope In Airport Bars
+temperature: 100
+title: "\u2018The Daily Show\u2019s Jordan Klepper Finds Hope In Airport Bars"
 ---
+
 
 During the last Presidential election, Jordan Klepper, one of the hosts of The Daily Show, was snowed in in at Straubel International Airport in Green Bay, Wisconsin after a Trump rally. His flight was delayed three and a half hours so he decamped to the airport bar. Who happened to be sitting next to him? […]
 

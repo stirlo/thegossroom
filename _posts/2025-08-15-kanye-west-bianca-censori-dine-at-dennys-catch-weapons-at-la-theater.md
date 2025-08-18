@@ -1,11 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-15 16:20:50 +0000
-drama_score: 30
+drama_score: 100
 layout: post
 mentions:
-  kanye: 9
-  kanye_west: 21
+  kanye_west: 9
 primary_celebrity: kanye_west
 source: tmz
 source_url: https://www.tmz.com/2025/08/15/kanye-west-bianca-censori-movie-weapons-dennys-date/
@@ -14,8 +13,10 @@ tags:
 - scandals
 - movies
 - kanye-west
+temperature: 100
 title: Kanye West & Bianca Censori Dine at Denny's, Catch 'Weapons' at L.A. Theater
 ---
+
 
 Kanye West and Bianca Censori hit up an L.A. theater for a movie date -- and we're just gonna point out the obvious ... they didn’t exactly blend in with the rest of the popcorn crowd! Peep the pics -- Kanye left the IPIC in Westwood with his…
 

@@ -1,11 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-16 03:12:32 +0000
-drama_score: 8
+drama_score: 100
 layout: post
 mentions:
-  kardashian: 2
-  kim_kardashian: 6
+  kim_kardashian: 2
 primary_celebrity: kim_kardashian
 source: page_six
 source_url: https://pagesix.com/2025/08/15/style/kim-kardashian-shows-off-blond-hair-transformation/
@@ -14,8 +13,10 @@ tags:
 - scandals
 - kim-kardashian
 - fashion
-title: 'Kim Kardashian shows off blond hair transformation: ‘About that time’'
+temperature: 100
+title: "Kim Kardashian shows off blond hair transformation: \u2018About that time\u2019"
 ---
+
 
 The Skims founder debuted her switched-up look with a sultry snap shared on her Instagram Friday.
 

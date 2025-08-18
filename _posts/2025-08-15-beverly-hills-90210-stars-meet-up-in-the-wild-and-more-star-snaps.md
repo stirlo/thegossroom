@@ -1,21 +1,22 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:40 +0000
-drama_score: 6
+drama_score: 100
 layout: post
 mentions:
-  kardashian: 2
-  kim_kardashian: 2
-  kourtney_kardashian: 2
-primary_celebrity: kardashian
+  kim_kardashian: 1
+primary_celebrity: kim_kardashian
 source: page_six
 source_url: https://pagesix.com/2025/08/15/photos/beverly-hills-90210-stars-meet-up-in-the-wild-and-more-star-snaps/
 tags:
 - celebrity-gossip
 - scandals
 - kim-kardashian
-title: ‘Beverly Hills, 90210’ stars meet up ‘in the wild’ and more star snaps
+temperature: 100
+title: "\u2018Beverly Hills, 90210\u2019 stars meet up \u2018in the wild\u2019 and\
+  \ more star snaps"
 ---
+
 
 Olivia Munn hangs with her daughter Méi, Kourtney Kardashian takes a boat ride and more snaps...
 

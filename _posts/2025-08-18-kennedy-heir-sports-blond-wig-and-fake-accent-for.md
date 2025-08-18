@@ -3,19 +3,22 @@ categories:
 - gossip
 - entertainment
 date: '2025-08-18T03:16:05'
-drama_score: 100
+drama_score: 300
 layout: post
 mentions:
-  trump: 2
-primary_celebrity: trump
+  donald_trump: 3
+  melania_trump: 5
+  vladimir_putin: 3
+primary_celebrity: melania_trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15009385/Jack-Schlossberg-mock-Melania-Trump-Putin-Kennedy.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
 - celebrity-gossip
-temperature: 100
+temperature: 300
 title: Kennedy heir sports blond wig and fake accent for Melania Trump impression
   during unhinged video
 ---
+
 
 John F. Kennedy heir Jack Schlossberg brutally mocked First Lady Melania Trump over her letter to Russian President Vladimir Putin in an unhinged video on Sunday.
 

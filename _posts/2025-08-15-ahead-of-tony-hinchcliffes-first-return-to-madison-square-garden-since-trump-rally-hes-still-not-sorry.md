@@ -1,19 +1,21 @@
 ---
 categories: gossip
 date: 2025-08-15 23:16:31 +0000
-drama_score: 4
+drama_score: 100
 layout: post
 mentions:
-  trump: 4
-primary_celebrity: trump
+  donald_trump: 3
+primary_celebrity: donald_trump
 source: billboard
 source_url: https://www.billboard.com/culture/events/tony-hinchcliffe-returns-madison-square-garden-not-sorry-1236045428/
 tags:
 - celebrity-gossip
 - scandals
-title: Ahead of Tony Hinchcliffe’s First Return to Madison Square Garden Since Trump
-  Rally, He’s Still Not Sorry
+temperature: 100
+title: "Ahead of Tony Hinchcliffe\u2019s First Return to Madison Square Garden Since\
+  \ Trump Rally, He\u2019s Still Not Sorry"
 ---
+
 
 The comedian referenced his controversial Trump rally appearance during a set at The Stand comedy club, on the eve of his two-night stint at MSG.
 

@@ -1,12 +1,11 @@
 ---
 categories: gossip
 date: 2025-08-16 01:18:24 +0000
-drama_score: 33
+drama_score: 200
 layout: post
 mentions:
-  kelce: 9
-  taylor_swift: 18
-  travis_kelce: 6
+  taylor_swift: 11
+  travis_kelce: 9
 primary_celebrity: taylor_swift
 source: us_weekly
 source_url: https://www.usmagazine.com/stylish/news/travis-kelce-wears-taylor-swift-merch-in-chiefs-the-kingdom-doc/
@@ -15,8 +14,10 @@ tags:
 - scandals
 - music
 - taylor-swift
+temperature: 200
 title: Travis Kelce Supports Taylor Swift by Wearing Her Merch in 'The Kingdom'
 ---
+
 
 Travis Kelce is in his Swiftie era — and his wardrobe confirms it. Eagle-eyed fans spotted the NFL star, 35, wearing merchandise from girlfriend Taylor Swift’s 11th studio album, ​​The Tortured Poets Department, while appearing in ESPN’s new Kansas City Chiefs documentary, The Kingdom, during training camp. Kelce was sporting a TTPD Gray Embossed Hoodie, […]
 

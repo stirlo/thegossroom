@@ -1,20 +1,22 @@
 ---
 categories: gossip
 date: 2025-08-15 21:13:54 +0000
-drama_score: 6
+drama_score: 200
 layout: post
 mentions:
-  donald_trump: 2
-  trump: 4
-primary_celebrity: trump
+  donald_trump: 7
+  vladimir_putin: 3
+primary_celebrity: donald_trump
 source: daily_mail
 source_url: https://www.dailymail.co.uk/news/article-15005013/Inside-Trump-Putins-cozy-10-minute-surprise-secret-meeting-fortified-Beast.html?ns_mchannel=rss&ito=1490&ns_campaign=1490
 tags:
 - celebrity-gossip
 - scandals
+temperature: 200
 title: Inside Trump and Putin's very cozy 10-minute surprise secret meeting in the
   fortified Beast
 ---
+
 
 President Donald Trump made an unusual gesture by inviting Russian President Vladimir Putin to ride along with him in the Beast, the presidential limo.
 

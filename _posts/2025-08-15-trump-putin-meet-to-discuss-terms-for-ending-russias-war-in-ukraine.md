@@ -1,18 +1,21 @@
 ---
 categories: gossip
 date: 2025-08-15 20:18:48 +0000
-drama_score: 4
+drama_score: 200
 layout: post
 mentions:
-  trump: 4
-primary_celebrity: trump
+  donald_trump: 4
+  vladimir_putin: 2
+primary_celebrity: donald_trump
 source: rolling_stone
 source_url: https://www.rollingstone.com/politics/politics-news/trump-putin-meet-alaska-russia-ukraine-war-1235409608/
 tags:
 - celebrity-gossip
 - scandals
-title: Trump, Putin Meet to Discuss Terms for Ending Russia’s War in Ukraine
+temperature: 200
+title: "Trump, Putin Meet to Discuss Terms for Ending Russia\u2019s War in Ukraine"
 ---
+
 
 The Ukrainians were not invited, and Trump said he’s not planning to “negotiate for Ukraine”
 

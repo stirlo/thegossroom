@@ -1,10 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-15 16:21:03 +0000
-drama_score: 6
+drama_score: 100
 layout: post
 mentions:
-  taylor_swift: 6
+  taylor_swift: 8
 primary_celebrity: taylor_swift
 source: billboard
 source_url: https://www.billboard.com/music/music-news/jared-goff-reacts-taylor-swift-name-drop-him-new-heights-1236045058/
@@ -14,9 +14,11 @@ tags:
 - scandals
 - relationships
 - music
-title: 'Watch Jared Goff React to Taylor Swift Name-Dropping Him on ‘New Heights’:
-  ‘That Was a Crazy Couple of Hours’'
+temperature: 100
+title: "Watch Jared Goff React to Taylor Swift Name-Dropping Him on \u2018New Heights\u2019\
+  : \u2018That Was a Crazy Couple of Hours\u2019"
 ---
+
 
 The pop star gave him a shout-out while explaining her newfound obsession with football.
 

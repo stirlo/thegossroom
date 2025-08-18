@@ -1,10 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-15 21:13:47 +0000
-drama_score: 18
+drama_score: 100
 layout: post
 mentions:
-  taylor_swift: 18
+  taylor_swift: 11
 primary_celebrity: taylor_swift
 source: tmz
 source_url: https://www.tmz.com/2025/08/15/daniel-franzese-taylor-swift-mean-girls-blake-lively/
@@ -14,8 +14,10 @@ tags:
 - taylor-swift
 - scandals
 - music
+temperature: 100
 title: Daniel Franzese Jokes Why Taylor Swift's Dropping Album on 'Mean Girls' Day
 ---
+
 
 Taylor Swift lives for Easter eggs ... so it’s no accident her new album’s dropping October 3, AKA "Mean Girls" Day -- and now, one of the movie’s stars is spilling to us what he thinks she’s really up to. We bumped into Daniel Franzese in…
 

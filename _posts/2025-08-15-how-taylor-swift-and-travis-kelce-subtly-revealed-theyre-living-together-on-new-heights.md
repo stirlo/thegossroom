@@ -1,12 +1,11 @@
 ---
 categories: gossip
 date: 2025-08-15 18:24:45 +0000
-drama_score: 10
+drama_score: 200
 layout: post
 mentions:
-  kelce: 2
-  taylor_swift: 6
-  travis_kelce: 2
+  taylor_swift: 8
+  travis_kelce: 6
 primary_celebrity: taylor_swift
 source: elle_alt
 source_url: https://www.elle.com/culture/celebrities/a65792258/taylor-swift-travis-kelce-living-together-reveal-new-heights/
@@ -14,9 +13,11 @@ tags:
 - celebrity-gossip
 - scandals
 - taylor-swift
-title: How Taylor Swift and Travis Kelce Subtly Revealed They’re Living Together on
-  New Heights
+temperature: 200
+title: "How Taylor Swift and Travis Kelce Subtly Revealed They\u2019re Living Together\
+  \ on New Heights"
 ---
+
 
 
 

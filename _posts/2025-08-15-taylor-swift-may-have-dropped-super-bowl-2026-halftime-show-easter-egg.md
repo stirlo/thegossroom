@@ -1,13 +1,10 @@
 ---
 categories: gossip
 date: 2025-08-15 22:16:20 +0000
-drama_score: 36
+drama_score: 100
 layout: post
 mentions:
-  bowl: 6
-  super: 6
-  super_bowl: 6
-  taylor_swift: 18
+  taylor_swift: 11
 primary_celebrity: taylor_swift
 source: e_news
 source_url: https://www.eonline.com/news/1421244/taylor-swift-super-bowl-2026-halftime-show-performer-easter-eggs?cmpid=rss-syndicate-genericrss-us-top_stories
@@ -15,8 +12,10 @@ tags:
 - celebrity-gossip
 - scandals
 - taylor-swift
+temperature: 100
 title: Taylor Swift May Have Dropped Super Bowl 2026 Halftime Show Easter Egg
 ---
+
 
 Taylor Swift may be masterminding her very first Super Bowl halftime show performance. At least, that's what Swifties believe after picking up on several seemingly cryptic comments from the...
 
