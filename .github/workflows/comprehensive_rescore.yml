@@ -1,0 +1,509 @@
+name: Complete Content-Based Celebrity Scoring
+
+on:
+  workflow_dispatch:
+    inputs:
+      reset_celebrities:
+        description: 'Reset all celebrity scores to 0 first'
+        required: false
+        default: true
+        type: boolean
+      base_mention_points:
+        description: 'Points per celebrity mention'
+        required: false
+        default: '2'
+        type: string
+      headline_bonus:
+        description: 'Extra points for headline mentions'
+        required: false
+        default: '5'
+        type: string
+
+jobs:
+  content-based-scoring:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml python-dateutil
+
+    - name: 🎯 Create Complete Content Scoring System
+      run: |
+        cat > complete_content_scorer.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        Complete Content-Based Celebrity Scoring System
+        1. Scans ALL markdown files for celebrity mentions
+        2. Builds celebrity scores from actual content
+        3. Updates post temperatures based on mentioned celebrities
+        """
+
+        import yaml
+        import re
+        import os
+        from datetime import datetime, timedelta
+        from pathlib import Path
+        from collections import defaultdict, Counter
+        import logging
+
+        logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+        logger = logging.getLogger(__name__)
+
+        class CompleteContentScorer:
+            def __init__(self, reset_celebrities=True, base_mention_points=2, headline_bonus=5):
+                self.base_path = Path('.')
+                self.celebrities_file = self.base_path / '_data' / 'celebrities.yml'
+
+                # Content directories to scan
+                self.content_dirs = [
+                    self.base_path / '_posts',
+                    self.base_path / '_archive', 
+                    self.base_path / '_cold_storage'
+                ]
+
+                # Configuration
+                self.RESET_CELEBRITIES = reset_celebrities
+                self.BASE_MENTION_POINTS = float(base_mention_points)
+                self.HEADLINE_BONUS = float(headline_bonus)
+
+                # Celebrity detection patterns
+                self.CELEBRITY_PATTERNS = {
+                    # Trump family
+                    'donald_trump': ['donald trump', 'trump', 'president trump', 'former president trump'],
+                    'melania_trump': ['melania trump', 'melania', 'first lady trump'],
+                    'ivanka_trump': ['ivanka trump', 'ivanka'],
+                    'eric_trump': ['eric trump'],
+                    'don_jr': ['donald trump jr', 'don jr', 'trump jr'],
+
+                    # Celebrities
+                    'taylor_swift': ['taylor swift', 'taylor', 'swift'],
+                    'travis_kelce': ['travis kelce', 'kelce'],
+                    'jason_kelce': ['jason kelce'],
+                    'ed_kelce': ['ed kelce'],
+                    'kim_kardashian': ['kim kardashian', 'kim k'],
+                    'kanye_west': ['kanye west', 'kanye', 'ye'],
+                    'elon_musk': ['elon musk', 'musk'],
+                    'jeff_bezos': ['jeff bezos', 'bezos'],
+                    'mark_zuckerberg': ['mark zuckerberg', 'zuckerberg'],
+
+                    # Entertainment
+                    'saturday_night_live': ['saturday night live', 'snl'],
+                    'jeffree_star': ['jeffree star'],
+                    'donald_glover': ['donald glover', 'childish gambino'],
+                    'travis_scott': ['travis scott'],
+                    'travis_barker': ['travis barker'],
+                    'lil_tay': ['lil tay'],
+
+                    # Politicians
+                    'joe_biden': ['joe biden', 'biden', 'president biden'],
+                    'kamala_harris': ['kamala harris', 'harris', 'vice president harris'],
+                    'ron_desantis': ['ron desantis', 'desantis'],
+                    'vladimir_putin': ['vladimir putin', 'putin'],
+
+                    # Add more as needed...
+                }
+
+                # Explosive keywords for bonus points
+                self.EXPLOSIVE_KEYWORDS = [
+                    'scandal', 'affair', 'cheating', 'divorce', 'breakup', 'split',
+                    'fight', 'feud', 'drama', 'controversy', 'arrest', 'lawsuit',
+                    'explosive', 'bombshell', 'shocking', 'secret', 'reveals',
+                    'caught', 'exposed', 'leaked', 'exclusive', 'breaking',
+                    'emergency', 'crisis', 'meltdown', 'outrage', 'backlash',
+                    'unhinged', 'brutal', 'savage', 'destroys', 'slams'
+                ]
+
+            def load_or_create_celebrities(self):
+                """Load existing celebrities or create fresh database"""
+                try:
+                    if self.celebrities_file.exists() and not self.RESET_CELEBRITIES:
+                        with open(self.celebrities_file, 'r', encoding='utf-8') as f:
+                            celebrities = yaml.safe_load(f) or {}
+                        logger.info(f"📊 Loaded {len(celebrities)} existing celebrities")
+                    else:
+                        celebrities = {}
+                        logger.info("🆕 Starting with fresh celebrity database")
+
+                    return celebrities
+
+                except Exception as e:
+                    logger.error(f"❌ Error loading celebrities: {e}")
+                    return {}
+
+            def detect_celebrities_in_text(self, title, content):
+                """Detect celebrity mentions in title and content"""
+                title_lower = title.lower()
+                content_lower = content.lower()
+                full_text = f"{title_lower} {content_lower}"
+
+                detected_celebrities = {}
+
+                for celeb_key, patterns in self.CELEBRITY_PATTERNS.items():
+                    total_mentions = 0
+                    title_mentions = 0
+
+                    for pattern in patterns:
+                        # Use word boundaries for accurate matching
+                        pattern_regex = r'\b' + re.escape(pattern.lower()) + r'\b'
+
+                        title_matches = len(re.findall(pattern_regex, title_lower))
+                        content_matches = len(re.findall(pattern_regex, content_lower))
+
+                        title_mentions += title_matches
+                        total_mentions += title_matches + content_matches
+
+                    if total_mentions > 0:
+                        detected_celebrities[celeb_key] = {
+                            'total_mentions': total_mentions,
+                            'title_mentions': title_mentions,
+                            'in_headline': title_mentions > 0
+                        }
+
+                return detected_celebrities
+
+            def calculate_explosive_bonus(self, title, content):
+                """Calculate bonus points for explosive keywords"""
+                full_text = f"{title} {content}".lower()
+                explosive_count = sum(1 for keyword in self.EXPLOSIVE_KEYWORDS if keyword in full_text)
+                return min(explosive_count * 2, 10)  # Max 10 bonus points
+
+            def scan_all_content_files(self):
+                """Scan all markdown files and build celebrity scores"""
+                celebrity_scores = defaultdict(float)
+                post_data = {}  # Store data for updating post files
+                total_files = 0
+                processed_files = 0
+
+                # Scan all content directories
+                for content_dir in self.content_dirs:
+                    if not content_dir.exists():
+                        logger.info(f"📁 Directory not found: {content_dir}")
+                        continue
+
+                    logger.info(f"📁 Scanning {content_dir}...")
+
+                    # Find all markdown files
+                    md_files = list(content_dir.glob('**/*.md'))
+                    total_files += len(md_files)
+
+                    for md_file in md_files:
+                        try:
+                            with open(md_file, 'r', encoding='utf-8') as f:
+                                content = f.read()
+
+                            # Parse frontmatter
+                            if not content.startswith('---'):
+                                continue
+
+                            parts = content.split('---', 2)
+                            if len(parts) < 3:
+                                continue
+
+                            frontmatter = yaml.safe_load(parts[1])
+                            if not frontmatter:
+                                continue
+
+                            title = frontmatter.get('title', '')
+                            body_content = parts[2]
+
+                            # Detect celebrities
+                            detected_celebs = self.detect_celebrities_in_text(title, body_content)
+
+                            if detected_celebs:
+                                # Calculate explosive bonus
+                                explosive_bonus = self.calculate_explosive_bonus(title, body_content)
+
+                                # Build celebrity scores
+                                post_celebrity_scores = {}
+
+                                for celeb_key, mention_data in detected_celebs.items():
+                                    # Base points
+                                    points = self.BASE_MENTION_POINTS * mention_data['total_mentions']
+
+                                    # Headline bonus
+                                    if mention_data['in_headline']:
+                                        points += self.HEADLINE_BONUS
+
+                                    # Share explosive bonus among all celebrities in post
+                                    if explosive_bonus > 0:
+                                        points += explosive_bonus / len(detected_celebs)
+
+                                    celebrity_scores[celeb_key] += points
+                                    post_celebrity_scores[celeb_key] = points
+
+                                # Store post data for later update (only _posts)
+                                if content_dir.name == '_posts':
+                                    post_data[md_file] = {
+                                        'celebrities': detected_celebs,
+                                        'celebrity_scores': post_celebrity_scores,
+                                        'frontmatter': frontmatter,
+                                        'content': body_content
+                                    }
+
+                                processed_files += 1
+
+                                if processed_files % 100 == 0:
+                                    logger.info(f"📊 Processed {processed_files}/{total_files} files...")
+
+                        except Exception as e:
+                            logger.debug(f"Error processing {md_file}: {e}")
+                            continue
+
+                logger.info(f"✅ Scanned {total_files} files, processed {processed_files} with celebrity mentions")
+                return celebrity_scores, post_data
+
+            def update_celebrity_database(self, celebrity_scores):
+                """Update celebrity database with calculated scores"""
+                celebrities = self.load_or_create_celebrities()
+                now = datetime.now()
+
+                # Reset scores if requested
+                if self.RESET_CELEBRITIES:
+                    for celeb_key in celebrities.keys():
+                        if isinstance(celebrities[celeb_key], dict):
+                            celebrities[celeb_key]['drama_score'] = 0
+
+                # Update scores from content analysis
+                for celeb_key, total_score in celebrity_scores.items():
+                    if celeb_key not in celebrities:
+                        # Create new celebrity entry
+                        celebrities[celeb_key] = {
+                            'drama_score': 0,
+                            'last_temperature_update': now.strftime('%Y-%m-%d %H:%M:%S'),
+                            'status': 'cooling',
+                            'temperature_change': 0,
+                            'memorial': False,
+                            'discovery_date': now.strftime('%Y-%m-%d'),
+                            'promotion_date': now.strftime('%Y-%m-%d'),
+                            'category': 'entertainment'
+                        }
+
+                    # Update score
+                    current_score = celebrities[celeb_key].get('drama_score', 0)
+                    new_score = min(100, max(0, current_score + total_score))
+
+                    celebrities[celeb_key]['drama_score'] = round(new_score, 1)
+                    celebrities[celeb_key]['last_temperature_update'] = now.strftime('%Y-%m-%d %H:%M:%S')
+                    celebrities[celeb_key]['status'] = self.calculate_status(new_score)
+                    celebrities[celeb_key]['temperature_change'] = round(total_score, 1)
+
+                return celebrities
+
+            def calculate_status(self, drama_score):
+                """Calculate celebrity status based on drama score"""
+                if drama_score >= 80:
+                    return 'explosive'
+                elif drama_score >= 60:
+                    return 'hot'
+                elif drama_score >= 40:
+                    return 'warm'
+                elif drama_score >= 20:
+                    return 'mild'
+                else:
+                    return 'cooling'
+
+            def update_post_files(self, post_data, celebrities):
+                """Update individual post files with calculated temperatures"""
+                updated_count = 0
+
+                for post_file, data in post_data.items():
+                    try:
+                        # Calculate post temperature (sum of mentioned celebrity scores)
+                        post_temperature = 0
+                        post_mentions = {}
+
+                        for celeb_key in data['celebrities'].keys():
+                            if celeb_key in celebrities:
+                                celeb_score = celebrities[celeb_key].get('drama_score', 0)
+                                post_temperature += celeb_score
+                                post_mentions[celeb_key] = data['celebrities'][celeb_key]['total_mentions']
+
+                        # Find primary celebrity (most mentions)
+                        primary_celebrity = max(post_mentions.items(), key=lambda x: x[1])[0] if post_mentions else None
+
+                        # Update frontmatter
+                        frontmatter = data['frontmatter']
+                        frontmatter['temperature'] = round(post_temperature, 1)
+                        frontmatter['drama_score'] = round(post_temperature, 1)
+                        frontmatter['mentions'] = post_mentions
+                        if primary_celebrity:
+                            frontmatter['primary_celebrity'] = primary_celebrity
+
+                        # Reconstruct file content
+                        new_content = "---\n"
+                        new_content += yaml.dump(frontmatter, default_flow_style=False, sort_keys=True)
+                        new_content += "---\n"
+                        new_content += data['content']
+
+                        # Write updated file
+                        with open(post_file, 'w', encoding='utf-8') as f:
+                            f.write(new_content)
+
+                        updated_count += 1
+
+                        if updated_count % 50 == 0:
+                            logger.info(f"📝 Updated {updated_count} post files...")
+
+                    except Exception as e:
+                        logger.error(f"Error updating {post_file}: {e}")
+                        continue
+
+                logger.info(f"📝 Updated {updated_count} post files with new temperatures")
+
+            def save_celebrities(self, celebrities):
+                """Save updated celebrity database"""
+                try:
+                    # Create backup
+                    backup_file = self.celebrities_file.parent / f'celebrities_backup_content_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yml'
+                    if self.celebrities_file.exists():
+                        import shutil
+                        shutil.copy2(self.celebrities_file, backup_file)
+                        logger.info(f"📋 Created backup: {backup_file.name}")
+
+                    # Ensure directory exists
+                    self.celebrities_file.parent.mkdir(exist_ok=True)
+
+                    # Save celebrities
+                    with open(self.celebrities_file, 'w', encoding='utf-8') as f:
+                        yaml.dump(celebrities, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
+
+                    logger.info(f"💾 Saved {len(celebrities)} celebrities")
+
+                except Exception as e:
+                    logger.error(f"❌ Error saving celebrities: {e}")
+
+            def generate_report(self, celebrities, celebrity_scores):
+                """Generate comprehensive scoring report"""
+                # Top celebrities by score
+                top_celebs = sorted(
+                    [(k, v.get('drama_score', 0)) for k, v in celebrities.items() if isinstance(v, dict)],
+                    key=lambda x: x[1], reverse=True
+                )[:25]
+
+                # Status distribution
+                status_counts = Counter()
+                for celeb_data in celebrities.values():
+                    if isinstance(celeb_data, dict):
+                        status = celeb_data.get('status', 'unknown')
+                        status_counts[status] += 1
+
+                # Content analysis stats
+                total_content_score = sum(celebrity_scores.values())
+
+                print("\n" + "="*70)
+                print("🎯 COMPLETE CONTENT-BASED CELEBRITY SCORING REPORT")
+                print("="*70)
+                print(f"📊 Total Celebrities: {len(celebrities)}")
+                print(f"📈 Status Distribution: {dict(status_counts)}")
+                print(f"🔥 Total Content Score Points: {total_content_score:.1f}")
+                print(f"📝 Base Points per Mention: {self.BASE_MENTION_POINTS}")
+                print(f"🎯 Headline Bonus: {self.HEADLINE_BONUS}")
+                print("\n🔥 TOP 25 CELEBRITIES BY CONTENT ANALYSIS:")
+                for i, (celeb, score) in enumerate(top_celebs, 1):
+                    status = celebrities[celeb].get('status', 'unknown')
+                    content_points = celebrity_scores.get(celeb, 0)
+                    print(f"  {i:2d}. {celeb.replace('_', ' ').title()}: {score:.1f}° "
+                          f"({status.upper()}) [+{content_points:.1f} from content]")
+                print("\n📁 Content Sources Analyzed:")
+                for content_dir in self.content_dirs:
+                    if content_dir.exists():
+                        file_count = len(list(content_dir.glob('**/*.md')))
+                        print(f"  - {content_dir.name}: {file_count} files")
+                print("="*70)
+
+            def run(self):
+                """Execute complete content-based scoring"""
+                print("🎯 Starting Complete Content-Based Celebrity Scoring...")
+
+                # 1. Scan all content files
+                print("📁 Scanning all content files for celebrity mentions...")
+                celebrity_scores, post_data = self.scan_all_content_files()
+
+                # 2. Update celebrity database
+                print("📊 Updating celebrity database with content-based scores...")
+                celebrities = self.update_celebrity_database(celebrity_scores)
+
+                # 3. Update individual post files
+                print("📝 Updating post files with calculated temperatures...")
+                self.update_post_files(post_data, celebrities)
+
+                # 4. Save celebrity database
+                print("💾 Saving updated celebrity database...")
+                self.save_celebrities(celebrities)
+
+                # 5. Generate report
+                self.generate_report(celebrities, celebrity_scores)
+
+                print("✅ Complete Content-Based Scoring Finished!")
+                print("🎯 All celebrities now have scores based on actual content!")
+                print("📝 All posts now have temperatures based on mentioned celebrities!")
+
+        if __name__ == "__main__":
+            reset_celebrities = os.getenv('RESET_CELEBRITIES', 'true').lower() == 'true'
+            base_mention_points = float(os.getenv('BASE_MENTION_POINTS', '2'))
+            headline_bonus = float(os.getenv('HEADLINE_BONUS', '5'))
+
+            scorer = CompleteContentScorer(reset_celebrities, base_mention_points, headline_bonus)
+            scorer.run()
+        EOF
+
+    - name: 🎯 Run Complete Content Scoring
+      env:
+        RESET_CELEBRITIES: ${{ inputs.reset_celebrities }}
+        BASE_MENTION_POINTS: ${{ inputs.base_mention_points }}
+        HEADLINE_BONUS: ${{ inputs.headline_bonus }}
+      run: |
+        python complete_content_scorer.py
+
+    - name: 📊 Show Results
+      run: |
+        echo "📋 Files changed:"
+        git status --porcelain | head -20
+        echo "..."
+
+        echo -e "\n📈 Sample updated post:"
+        find _posts -name "*.md" -type f | head -1 | xargs head -15
+
+    - name: 🚀 Commit All Changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Content Scoring Action"
+
+        git add _data/celebrities.yml
+        git add _posts/*.md
+
+        if ls _data/celebrities_backup_content_*.yml 1> /dev/null 2>&1; then
+          git add _data/celebrities_backup_content_*.yml
+        fi
+
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🎯 Complete Content-Based Celebrity Scoring
+
+          - Scanned ALL markdown files (_posts, _archive, _cold_storage)
+          - Built celebrity scores from actual content mentions
+          - Updated post temperatures based on mentioned celebrities
+          - Added mentions, primary_celebrity, temperature to post frontmatter
+          - Reset: ${{ inputs.reset_celebrities }}
+          - Points per mention: ${{ inputs.base_mention_points }}
+          - Headline bonus: ${{ inputs.headline_bonus }}
+
+          Complete Content Analysis"
+
+          git push
+          echo "✅ Content-based scoring committed!"
+        fi
