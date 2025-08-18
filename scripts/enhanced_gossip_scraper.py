@@ -227,14 +227,14 @@ class AdaptiveGossipScraper:
 
     # 🌡️ ENHANCED TEMPERATURE MANAGEMENT SYSTEM
     def apply_celebrity_temperature_decay(self):
-        """Apply hourly temperature decay to all celebrities"""
+        """Apply hourly temperature decay to all celebrities with reasonable limits"""
         current_time = datetime.now()
-
+    
         for celeb_key, celeb_data in self.celebrities.items():
             if not isinstance(celeb_data, dict):
                 continue
-
-            # Get last update time (default to 30 days ago if new)
+    
+            # Get last update time (default to 1 hour ago max for first run)
             last_update_str = celeb_data.get('last_temp_update')
             if last_update_str:
                 try:
@@ -243,24 +243,42 @@ class AdaptiveGossipScraper:
                     else:
                         last_update = datetime.strptime(last_update_str, '%Y-%m-%d %H:%M:%S')
                 except:
-                    last_update = current_time - timedelta(days=30)
+                    last_update = current_time - timedelta(hours=1)  # Default to 1 hour ago
             else:
-                last_update = current_time - timedelta(days=30)
-
+                last_update = current_time - timedelta(hours=1)  # Default to 1 hour ago
+    
             hours_passed = (current_time - last_update).total_seconds() / 3600.0
-
+    
+            # 🔧 CAP MAXIMUM DECAY TIME - Since this runs hourly, limit to 24 hours max
+            max_decay_hours = 24.0  # Maximum 24 hours of decay between runs
+            hours_passed = min(hours_passed, max_decay_hours)
+    
             # Apply decay
             current_temp = celeb_data.get('temperature', self.TEMPERATURE_CONFIG['new_celebrity_base_temp'])
             decay_amount = hours_passed * self.TEMPERATURE_CONFIG['hourly_decay_rate']
+    
+            # 🔧 SMART DECAY LIMITS based on current temperature
+            if current_temp <= 10:
+                # Slow decay for low temperatures
+                max_decay_per_run = 0.5
+            elif current_temp <= 30:
+                # Medium decay for medium temperatures  
+                max_decay_per_run = 1.0
+            else:
+                # Normal decay for high temperatures
+                max_decay_per_run = 2.0
+    
+            decay_amount = min(decay_amount, max_decay_per_run)
+    
             decayed_temp = max(current_temp - decay_amount, self.TEMPERATURE_CONFIG['min_temperature'])
-
+    
             # Update temperature
             celeb_data['temperature'] = round(decayed_temp, 1)
             celeb_data['last_temp_update'] = current_time.isoformat()
-
+    
             # Update status based on temperature
             celeb_data['status'] = self.calculate_celebrity_status_from_temp(decayed_temp)
-
+    
             if decay_amount > 0.1:  # Only log significant decay
                 logger.info(f"⏰ {celeb_key}: {current_temp:.1f}° -> {decayed_temp:.1f}° (-{decay_amount:.1f} decay)")
 
@@ -337,148 +355,160 @@ class AdaptiveGossipScraper:
         return min(self.TEMPERATURE_CONFIG['max_temperature'], avg_temp)
 
     def discover_new_celebrities(self, title, description):
-        """Auto-discover new celebrities using pattern matching with STRICT filtering"""
-        full_text = f"{title} {description}"
-        discovered = []
+    """Auto-discover new celebrities with ULTRA-STRICT filtering"""
+    full_text = f"{title} {description}"
+    discovered = []
 
-        # 🚫 NUCLEAR BLACKLIST - Never consider these as celebrities
-        CELEBRITY_BLACKLIST = {
-            # Sentence starters/fragments
-            'you_are', 'if_you', 'women_to', 'and_encourages', 'to_make', 'still_work',
-            'make_an', 'you_still', 'work_from', 'from_home', 'home_and', 'encourages_people',
+    # 🚫 EXPANDED BLACKLIST - Add more non-celebrity terms
+    CELEBRITY_BLACKLIST = {
+        # Sentence starters/fragments
+        'you_are', 'if_you', 'women_to', 'and_encourages', 'to_make', 'still_work',
+        'make_an', 'you_still', 'work_from', 'from_home', 'home_and', 'encourages_people',
 
-            # Common phrases that get capitalized
-            'new_york', 'los_angeles', 'las_vegas', 'united_states', 'north_america',
-            'social_media', 'real_estate', 'high_school', 'middle_east', 'south_korea',
-            'prime_minister', 'white_house', 'red_carpet', 'golden_globes', 'harassing_young_actress',
+        # Common phrases that get capitalized
+        'new_york', 'los_angeles', 'las_vegas', 'united_states', 'north_america',
+        'social_media', 'real_estate', 'high_school', 'middle_east', 'south_korea',
+        'prime_minister', 'white_house', 'red_carpet', 'golden_globes', 'harassing_young_actress',
 
-            # Generic terms
-            'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
-            'celebrity_news', 'entertainment_tonight', 'people_magazine', 'black_swan', 'jesus_christ',
+        # 🔧 AWARDS/ORGANIZATIONS/EVENTS (NOT CELEBRITIES)
+        'academy_awards', 'oscar_awards', 'grammy_awards', 'emmy_awards', 'golden_globes',
+        'cannes_festival', 'sundance_festival', 'toronto_film_festival', 'venice_biennale',
+        'nordic_council', 'nordic_council_film', 'film_council', 'arts_council',
+        'national_board', 'review_board', 'critics_choice', 'screen_actors_guild',
 
-            # Common non-celebrity capitalized phrases
-            'according_to', 'sources_say', 'insider_reveals', 'close_friend',
-            'family_member', 'representative_said', 'publicist_confirmed',
+        # 🔧 MOVIE/SHOW TITLES (NOT PEOPLE)
+        'rao_bahadur', 'when_light_breaks', 'dreams_nominated', 'breaking_bad',
+        'game_thrones', 'stranger_things', 'wednesday_addams', 'black_swan',
+        'top_gun', 'star_wars', 'marvel_studios', 'dc_comics',
 
-            # Sentence fragments that appear in headlines
-            'claims_that', 'reveals_shocking', 'admits_to', 'denies_rumors',
-            'confirms_relationship', 'announces_divorce', 'spotted_with'
-        }
+        # 🔧 GENERIC ROLES/POSITIONS (NOT SPECIFIC PEOPLE)
+        'film_director', 'movie_producer', 'casting_director', 'executive_producer',
+        'associate_producer', 'production_designer', 'costume_designer',
+        'music_director', 'art_director', 'script_writer',
 
-        # ✅ CELEBRITY INDICATORS - Must have at least one of these contexts
-        CELEBRITY_CONTEXT_REQUIRED = [
-            # Professional titles
-            'actor', 'actress', 'singer', 'rapper', 'musician', 'model', 'influencer',
-            'director', 'producer', 'writer', 'comedian', 'host', 'presenter',
+        # Generic terms
+        'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
+        'celebrity_news', 'entertainment_tonight', 'people_magazine', 'jesus_christ',
 
-            # Celebrity actions
-            'stars in', 'performs', 'released album', 'dropped single', 'announced tour',
-            'walked red carpet', 'attended premiere', 'won award', 'nominated for',
+        # Common non-celebrity capitalized phrases
+        'according_to', 'sources_say', 'insider_reveals', 'close_friend',
+        'family_member', 'representative_said', 'publicist_confirmed',
 
-            # Celebrity relationships
-            'dating', 'married to', 'engaged to', 'divorced from', 'split from',
-            'relationship with', 'spotted with', 'seen kissing', 'holding hands',
+        # Sentence fragments that appear in headlines
+        'claims_that', 'reveals_shocking', 'admits_to', 'denies_rumors',
+        'confirms_relationship', 'announces_divorce', 'spotted_with'
+    }
 
-            # Celebrity lifestyle
-            'instagram post', 'twitter account', 'social media', 'paparazzi photos',
-            'red carpet', 'hollywood', 'celebrity', 'famous', 'star'
+    # ✅ ULTRA-STRICT CELEBRITY INDICATORS - Must have MULTIPLE contexts
+    CELEBRITY_CONTEXT_REQUIRED = [
+        # Professional titles WITH action words
+        'actor stars in', 'actress appears in', 'singer performs', 'rapper releases',
+        'musician announces', 'model walks', 'influencer posts', 'comedian performs',
+
+        # Celebrity lifestyle WITH specificity
+        'celebrity spotted', 'star photographed', 'famous couple', 'hollywood star',
+        'a-list celebrity', 'pop star', 'movie star', 'tv star', 'reality star',
+
+        # Relationship context WITH celebrity indicators
+        'celebrity dating', 'star married', 'famous relationship', 'hollywood couple',
+        'celebrity engagement', 'star divorce', 'famous split',
+
+        # Social media WITH celebrity context
+        'celebrity instagram', 'star twitter', 'famous tiktok', 'celebrity social media'
+    ]
+
+    # 🔧 REQUIRE MULTIPLE CELEBRITY INDICATORS
+    def has_strong_celebrity_context(text_lower, name_lower):
+        """Require multiple strong celebrity indicators"""
+        context_count = 0
+
+        # Check for celebrity titles near the name
+        celebrity_titles = ['actor', 'actress', 'singer', 'rapper', 'musician', 'model', 
+                          'influencer', 'celebrity', 'star', 'famous', 'hollywood']
+
+        name_position = text_lower.find(name_lower)
+        if name_position != -1:
+            # Check 50 characters before and after the name
+            context_window = text_lower[max(0, name_position-50):name_position+len(name_lower)+50]
+
+            for title in celebrity_titles:
+                if title in context_window:
+                    context_count += 1
+
+        # Check for celebrity actions
+        celebrity_actions = ['performs', 'stars', 'appears', 'releases', 'announces', 
+                           'spotted', 'photographed', 'dating', 'married', 'engaged']
+
+        for action in celebrity_actions:
+            if action in text_lower and name_lower in text_lower:
+                context_count += 1
+
+        # Require at least 2 strong celebrity indicators
+        return context_count >= 2
+
+    # Look for capitalized names with ULTRA-STRICT validation
+    name_pattern = r'\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,})?)\b'
+    potential_names = re.findall(name_pattern, full_text)
+
+    for name in potential_names:
+        name_clean = name.strip()
+        name_lower = name_clean.lower()
+        name_key = re.sub(r'[^\w\s]', '', name_lower).replace(' ', '_')
+
+        # 🚫 IMMEDIATE BLACKLIST CHECK
+        if name_key in CELEBRITY_BLACKLIST:
+            continue
+
+        # 🚫 REJECT OBVIOUS NON-NAMES
+        # Reject if contains common non-name patterns
+        non_name_patterns = [
+            r'\b(council|board|awards?|festival|review|studio|production|company)\b',
+            r'\b(when|where|what|how|why|the|and|for|with|from)\b',
+            r'\b(light|dark|night|day|time|year|month|week)\b',
+            r'\b(breaks?|dreams?|hopes?|plans?|ideas?)\b'
         ]
 
-        # Look for capitalized names with STRICT validation
-        name_pattern = r'\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,})?)\b'
-        potential_names = re.findall(name_pattern, full_text)
+        skip_name = False
+        for pattern in non_name_patterns:
+            if re.search(pattern, name_lower):
+                skip_name = True
+                break
 
-        for name in potential_names:
-            name_clean = name.strip()
-            name_lower = name_clean.lower()
-            name_key = re.sub(r'[^\w\s]', '', name_lower).replace(' ', '_')
+        if skip_name:
+            continue
 
-            # 🚫 IMMEDIATE BLACKLIST CHECK
-            if name_key in CELEBRITY_BLACKLIST:
-                continue
+        # Skip if already known
+        if any(name_lower in search_term for search_term in self.celebrity_names):
+            continue
 
-            # Skip if already known
-            if any(name_lower in search_term for search_term in self.celebrity_names):
-                continue
+        # 🔍 ULTRA-STRICT CONTEXT VALIDATION
+        if not has_strong_celebrity_context(full_text.lower(), name_lower):
+            continue
 
-            # 🔍 STRICT CONTEXT VALIDATION
-            context_found = False
-            category = 'unknown'
+        # 🔧 ADDITIONAL VALIDATION: Must look like a real person's name
+        name_parts = name_clean.split()
+        if len(name_parts) < 2 or len(name_parts) > 3:  # Must be 2-3 parts
+            continue
 
-            # Must have celebrity context in the same article
-            full_text_lower = full_text.lower()
-            for context_phrase in CELEBRITY_CONTEXT_REQUIRED:
-                if context_phrase in full_text_lower:
-                    context_found = True
+        # Each part must be a reasonable name length
+        if any(len(part) < 2 or len(part) > 15 for part in name_parts):
+            continue
 
-                    # Determine category from context
-                    if any(word in context_phrase for word in ['actor', 'actress', 'stars']):
-                        category = 'actor'
-                    elif any(word in context_phrase for word in ['singer', 'rapper', 'musician', 'album', 'tour']):
-                        category = 'musician'
-                    elif 'model' in context_phrase:
-                        category = 'model'
-                    elif 'influencer' in context_phrase:
-                        category = 'influencer'
-                    break
+        # Must not contain numbers or special characters
+        if re.search(r'[0-9_\-]', name_clean):
+            continue
 
-            # 🚫 REJECT if no celebrity context found
-            if not context_found:
-                continue
+        # ✅ PASSED ALL ULTRA-STRICT FILTERS
+        self.potential_new_celebrities[name_clean] += 1
+        discovered.append({
+            'name': name_clean,
+            'category': 'unknown',
+            'context_score': 5.0,  # Very high confidence due to ultra-strict filtering
+            'source_text': full_text[:200] + '...'
+        })
 
-            # 🚫 ADDITIONAL FILTERS
+    return discovered
 
-            # Reject common sentence patterns
-            sentence_patterns = [
-                r'^(you|if|and|the|to|from|with|about|when|where|what|how|why)\s',
-                r'\s(are|is|was|were|will|can|should|would|could|might)\s',
-                r'\s(to|from|with|about|after|before|during|while|since|until)$',
-                r'(work|make|still|encourages|claims|says|tells|reveals)$'
-            ]
-
-            skip_name = False
-            for pattern in sentence_patterns:
-                if re.search(pattern, name_lower):
-                    skip_name = True
-                    break
-
-            if skip_name:
-                continue
-
-            # Reject if name contains common non-name words
-            non_name_words = [
-                'you', 'are', 'if', 'still', 'work', 'make', 'and', 'encourages',
-                'claims', 'says', 'tells', 'reveals', 'according', 'sources',
-                'breaking', 'exclusive', 'latest', 'update', 'news', 'report'
-            ]
-
-            if any(word in name_lower.split() for word in non_name_words):
-                continue
-
-            # Reject very long names (likely sentences)
-            if len(name_clean.split()) > 3:
-                continue
-
-            # 🎯 PROXIMITY CHECK - Celebrity context must be near the name
-            name_position = full_text_lower.find(name_lower)
-            if name_position != -1:
-                # Check 100 characters before and after the name
-                context_window = full_text_lower[max(0, name_position-100):name_position+len(name_lower)+100]
-
-                context_nearby = any(phrase in context_window for phrase in CELEBRITY_CONTEXT_REQUIRED)
-                if not context_nearby:
-                    continue
-
-            # ✅ PASSED ALL FILTERS - This might be a real celebrity
-            self.potential_new_celebrities[name_clean] += 1
-            discovered.append({
-                'name': name_clean,
-                'category': category,
-                'context_score': 3.0,  # High confidence due to strict filtering
-                'source_text': full_text[:200] + '...'
-            })
-
-        return discovered
 
     def add_new_celebrity(self, name, category='unknown', context_score=0):
         """Add a new celebrity to the database with temperature system"""
