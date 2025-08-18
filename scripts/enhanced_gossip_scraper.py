@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Complete Adaptive Temperature-Based Gossip Scraper
+Complete Adaptive Temperature-Based Gossip Scraper with Dynamic Celebrity Scoring & Auto-Discovery
 """
 
 import feedparser
@@ -32,7 +32,9 @@ class AdaptiveGossipScraper:
         self.daily_queue = self.load_daily_queue()
         self.new_posts = []
         self.celebrity_mentions = defaultdict(int)
+        self.celebrity_article_mentions = defaultdict(set)  # Track unique articles per celebrity
         self.potential_new_celebrities = Counter()
+        self.new_celebrities_discovered = []
 
         # Adaptive temperature settings
         self.DAILY_POST_LIMIT = 33
@@ -40,7 +42,46 @@ class AdaptiveGossipScraper:
         self.FALLBACK_MIN_TEMP = 15
         self.IDEAL_MIN_TEMP = 35
         self.ARCHIVE_DAYS = 30
-        
+
+        # CELEBRITY SCORING SYSTEM 🎯
+        self.SCORING_CONFIG = {
+            'base_article_points': 1.0,      # Base points per article mention
+            'headline_bonus': 0.5,           # Extra if in headline
+            'explosive_keywords_bonus': 2.0, # Bonus for drama keywords
+            'daily_decay_rate': 0.003,       # 0.3% daily decay
+            'weekly_decay_rate': 0.02,       # 2% weekly decay  
+            'monthly_decay_rate': 0.08,      # 8% monthly decay
+            'monthly_max_articles': 1000,    # ~33 articles/day × 30 days
+            'rank_scale': 100,               # Scale to 0-100 ranking
+            'new_celebrity_threshold': 2,    # Mentions needed to add new celebrity
+            'starting_drama_score': 25       # Starting score for new celebrities
+        }
+
+        # CELEBRITY AUTO-DISCOVERY PATTERNS 🔍
+        self.CELEBRITY_PATTERNS = {
+            # Family relationships
+            'family': [
+                r"(\w+(?:\s+\w+)?)'s (?:daughter|son|child|kid)",
+                r"(\w+(?:\s+\w+)?)'s (?:wife|husband|partner|boyfriend|girlfriend)",
+                r"(\w+(?:\s+\w+)?)'s (?:mother|father|parent|mom|dad)",
+                r"(\w+(?:\s+\w+)?)'s (?:sister|brother|sibling)",
+                r"(\w+(?:\s+\w+)?)'s (?:ex-wife|ex-husband|ex-partner|ex-boyfriend|ex-girlfriend)"
+            ],
+            # Professional relationships
+            'professional': [
+                r"(?:actor|actress|singer|rapper|musician|model|influencer|celebrity)\s+(\w+(?:\s+\w+)?)",
+                r"(\w+(?:\s+\w+)?)\s+(?:stars?|performs?|sings?|acts?)",
+                r"(?:director|producer|writer)\s+(\w+(?:\s+\w+)?)",
+                r"(\w+(?:\s+\w+)?)\s+(?:released|dropped|announced)"
+            ],
+            # Context clues
+            'context': [
+                r"(\w+(?:\s+\w+)?)\s+(?:was spotted|seen|photographed|caught)",
+                r"(\w+(?:\s+\w+)?)\s+(?:reveals?|admits?|confesses?|says?|tells?)",
+                r"(\w+(?:\s+\w+)?)\s+(?:dating|married|engaged|divorced)"
+            ]
+        }
+
         # RSS feeds - 12 optimized sources
         self.rss_feeds = {
             # PURE GOSSIP GOLD 🔥
@@ -48,30 +89,33 @@ class AdaptiveGossipScraper:
             'page_six': {'url': 'https://pagesix.com/feed/', 'weight': 3},
             'perez_hilton': {'url': 'https://perezhilton.com/feed/', 'weight': 3},
             'us_weekly': {'url': 'https://www.usmagazine.com/feed/', 'weight': 3},
-        
+
             # CELEBRITY NEWS ⭐
             'e_news': {'url': 'http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml', 'weight': 2},
             'daily_mail': {'url': 'https://www.dailymail.co.uk/articles.rss', 'weight': 2},
             'hollywood_reporter': {'url': 'https://www.hollywoodreporter.com/feed/', 'weight': 2},
             'variety': {'url': 'https://variety.com/feed/', 'weight': 2},
-        
+
             # MUSIC/ENTERTAINMENT DRAMA 🎭
             'billboard': {'url': 'https://www.billboard.com/feed/', 'weight': 2},
             'rolling_stone': {'url': 'https://www.rollingstone.com/feed/', 'weight': 2},
-        
+
             # FASHION/LIFESTYLE (Celebrity focused) 💅
             'elle': {'url': 'https://www.elle.com/rss/all.xml/', 'weight': 1},
             'vogue': {'url': 'https://www.vogue.com/feed/rss', 'weight': 1}
         }
 
-
     def load_celebrities(self):
-        """Load celebrity database"""
+        """Load celebrity database with enhanced name handling"""
         try:
             celebrities_file = self.base_path / '_data' / 'celebrities.yml'
             if celebrities_file.exists():
                 with open(celebrities_file, 'r', encoding='utf-8') as f:
-                    return yaml.safe_load(f) or {}
+                    celebrities = yaml.safe_load(f) or {}
+
+                # FIX PROBLEMATIC NAMES 🔧
+                celebrities = self.fix_celebrity_names(celebrities)
+                return celebrities
             else:
                 logger.info("No celebrities.yml found, starting with empty database")
                 return {}
@@ -79,19 +123,414 @@ class AdaptiveGossipScraper:
             logger.error(f"Error loading celebrities: {e}")
             return {}
 
+    def fix_celebrity_names(self, celebrities):
+        """Fix problematic celebrity name configurations"""
+        fixes_applied = []
+
+        # FIX: "ye" -> Only match as "Kanye" or "Kanye West"
+        if 'ye' in celebrities:
+            ye_data = celebrities.pop('ye')
+            celebrities['kanye_west'] = {
+                **ye_data,
+                'name': 'Kanye West',
+                'aliases': ['kanye', 'kanye west'],
+                'disambiguation': 'rapper formerly known as Kanye',
+                'search_terms': ['kanye west', 'kanye'],  # Never search for just "ye"
+            }
+            fixes_applied.append("ye -> kanye_west")
+
+        # FIX: "liam" -> "liam_payne" with disambiguation
+        if 'liam' in celebrities:
+            liam_data = celebrities.pop('liam')
+            # Check if this is likely Liam Payne based on category
+            if liam_data.get('category') in ['actor', 'musician', 'unknown']:
+                celebrities['liam_payne'] = {
+                    **liam_data,
+                    'name': 'Liam Payne',
+                    'aliases': ['liam payne'],
+                    'disambiguation': 'former One Direction member',
+                    'search_terms': ['liam payne'],  # Never search for just "liam"
+                    'category': 'musician'
+                }
+                fixes_applied.append("liam -> liam_payne")
+
+        # 🔧 FIX: "met" -> "met_gala" with specific search terms
+        if 'met' in celebrities:
+            met_data = celebrities.pop('met')
+            celebrities['met_gala'] = {
+                **met_data,
+                'name': 'Met Gala',
+                'aliases': ['met gala', 'metropolitan museum gala'],
+                'disambiguation': 'annual fashion fundraising gala',
+                'search_terms': ['met gala', 'metropolitan museum gala'],  # Never search for just "met"
+                'category': 'event'
+            }
+            fixes_applied.append("met -> met_gala")
+
+        # ADD: Prince William disambiguation
+        if 'prince_william' not in celebrities:
+            # Check if there's a generic "william" entry
+            william_data = celebrities.pop('william', {})
+            celebrities['prince_william'] = {
+                **william_data,
+                'name': 'Prince William',
+                'aliases': ['prince william', 'william prince of wales'],
+                'disambiguation': 'husband of Kate Middleton',
+                'search_terms': ['prince william', 'william prince'],
+                'category': 'royal',
+                'drama_score': william_data.get('drama_score', 50),
+                'discovery_date': william_data.get('discovery_date', datetime.now().strftime('%Y-%m-%d')),
+                'last_temperature_update': william_data.get('last_temperature_update', datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
+                'status': william_data.get('status', 'mild'),
+                'temperature_change': william_data.get('temperature_change', 0),
+                'memorial': False,
+                'promotion_date': william_data.get('promotion_date', datetime.now().strftime('%Y-%m-%d'))
+            }
+            if william_data:
+                fixes_applied.append("william -> prince_william")
+
+        if fixes_applied:
+            logger.info(f"🔧 Applied celebrity name fixes: {', '.join(fixes_applied)}")
+
+        return celebrities
+
     def extract_celebrity_names(self):
-        """Extract searchable celebrity names"""
-        names = []
+        """Extract searchable celebrity names with smart disambiguation"""
+        search_terms = []
+
         for celeb_key, celeb_data in self.celebrities.items():
             if isinstance(celeb_data, dict):
-                name = celeb_data.get('name', celeb_key)
-                names.append(name.lower())
+                # Use custom search terms if available
+                if 'search_terms' in celeb_data:
+                    search_terms.extend([term.lower() for term in celeb_data['search_terms']])
+                else:
+                    # Use name and aliases
+                    name = celeb_data.get('name', celeb_key)
+                    search_terms.append(name.lower())
 
-                # Add variations
-                if ' ' in name:
-                    names.extend([part.lower() for part in name.split() if len(part) > 2])
+                    # Add aliases
+                    aliases = celeb_data.get('aliases', [])
+                    search_terms.extend([alias.lower() for alias in aliases])
 
-        return list(set(names))
+                    # Add name variations for longer names only
+                    if ' ' in name and len(name.split()) >= 2:
+                        name_parts = name.split()
+                        if len(name_parts[0]) > 3 and len(name_parts[-1]) > 3:  # Avoid short names
+                            search_terms.append(f"{name_parts[0].lower()} {name_parts[-1].lower()}")
+
+        return list(set(search_terms))
+
+    def discover_new_celebrities(self, title, description):
+        """Auto-discover new celebrities using pattern matching"""
+        full_text = f"{title} {description}"
+        discovered = []
+
+        # Look for capitalized names that aren't already known
+        # Pattern: Two capitalized words (First Last)
+        name_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b'
+        potential_names = re.findall(name_pattern, full_text)
+
+        for name in potential_names:
+            name_clean = name.strip()
+            name_lower = name_clean.lower()
+
+            # Skip if already known
+            if any(name_lower in search_term for search_term in self.celebrity_names):
+                continue
+
+            # Skip common non-celebrity words
+            skip_words = [
+                'new york', 'los angeles', 'las vegas', 'united states', 'north america',
+                'social media', 'real estate', 'high school', 'middle east', 'south korea',
+                'prime minister', 'president biden', 'donald trump', 'joe biden'
+            ]
+
+            if name_lower in skip_words:
+                continue
+
+            # Check for celebrity context patterns
+            context_score = 0
+            category = 'unknown'
+
+            # Family relationship context
+            for pattern in self.CELEBRITY_PATTERNS['family']:
+                if re.search(pattern.replace(r'(\w+(?:\s+\w+)?)', re.escape(name_clean)), full_text, re.IGNORECASE):
+                    context_score += 3
+                    category = 'family'
+                    break
+
+            # Professional context
+            for pattern in self.CELEBRITY_PATTERNS['professional']:
+                if re.search(pattern.replace(r'(\w+(?:\s+\w+)?)', re.escape(name_clean)), full_text, re.IGNORECASE):
+                    context_score += 2
+                    if 'actor' in full_text.lower() or 'actress' in full_text.lower():
+                        category = 'actor'
+                    elif any(word in full_text.lower() for word in ['singer', 'rapper', 'musician']):
+                        category = 'musician'
+                    elif 'model' in full_text.lower():
+                        category = 'model'
+                    elif 'influencer' in full_text.lower():
+                        category = 'influencer'
+                    break
+
+            # General celebrity context
+            for pattern in self.CELEBRITY_PATTERNS['context']:
+                if re.search(pattern.replace(r'(\w+(?:\s+\w+)?)', re.escape(name_clean)), full_text, re.IGNORECASE):
+                    context_score += 1
+                    break
+
+            # Additional context clues
+            celebrity_context_words = [
+                'celebrity', 'star', 'famous', 'hollywood', 'red carpet', 'paparazzi',
+                'instagram', 'twitter', 'social media', 'fans', 'followers'
+            ]
+
+            for word in celebrity_context_words:
+                if word in full_text.lower():
+                    context_score += 0.5
+
+            # Only consider if there's enough context
+            if context_score >= 1.5:
+                self.potential_new_celebrities[name_clean] += 1
+                discovered.append({
+                    'name': name_clean,
+                    'category': category,
+                    'context_score': context_score,
+                    'source_text': full_text[:200] + '...'
+                })
+
+        return discovered
+
+    def add_new_celebrity(self, name, category='unknown', context_score=0):
+        """Add a new celebrity to the database"""
+        # Create celebrity key (lowercase, underscores)
+        celeb_key = re.sub(r'[^\w\s]', '', name.lower()).replace(' ', '_')
+
+        # Avoid duplicates
+        if celeb_key in self.celebrities:
+            return False
+
+        now = datetime.now()
+
+        # Create new celebrity entry
+        self.celebrities[celeb_key] = {
+            'name': name,
+            'category': category,
+            'drama_score': self.SCORING_CONFIG['starting_drama_score'],
+            'discovery_date': now.strftime('%Y-%m-%d'),
+            'last_temperature_update': now.strftime('%Y-%m-%d %H:%M:%S'),
+            'status': 'mild',
+            'temperature_change': 0,
+            'memorial': False,
+            'promotion_date': now.strftime('%Y-%m-%d'),
+            'monthly_rank': 0,
+            'context_score': context_score,
+            'auto_discovered': True
+        }
+
+        # Add to search terms
+        self.celebrity_names.append(name.lower())
+        if ' ' in name:
+            name_parts = name.split()
+            if len(name_parts) >= 2 and len(name_parts[0]) > 3 and len(name_parts[-1]) > 3:
+                self.celebrity_names.append(f"{name_parts[0].lower()} {name_parts[-1].lower()}")
+
+        self.new_celebrities_discovered.append(name)
+        logger.info(f"🌟 NEW CELEBRITY DISCOVERED: {name} ({category}) - Starting at {self.SCORING_CONFIG['starting_drama_score']}°")
+
+        return True
+
+    def process_potential_new_celebrities(self):
+        """Process potential new celebrities and add qualifying ones"""
+        threshold = self.SCORING_CONFIG['new_celebrity_threshold']
+
+        for name, mention_count in self.potential_new_celebrities.items():
+            if mention_count >= threshold:
+                # Try to determine category from recent context
+                category = 'unknown'
+
+                # Simple category detection based on name patterns or context
+                if any(word in name.lower() for word in ['prince', 'princess', 'duke', 'duchess']):
+                    category = 'royal'
+                elif name.endswith(' Jr.') or name.endswith(' Sr.'):
+                    category = 'family'  # Likely family member
+
+                self.add_new_celebrity(name, category, mention_count)
+
+    def contains_celebrity(self, text, title=""):
+        """Enhanced celebrity detection with disambiguation"""
+        text_lower = text.lower()
+        title_lower = title.lower()
+        mentioned_celebrities = {}
+
+        for celeb_key, celeb_data in self.celebrities.items():
+            if isinstance(celeb_data, dict):
+                # Use search terms if available
+                search_terms = celeb_data.get('search_terms', [])
+                if not search_terms:
+                    # Fallback to name and aliases
+                    name = celeb_data.get('name', celeb_key)
+                    search_terms = [name] + celeb_data.get('aliases', [])
+
+                for term in search_terms:
+                    term_lower = term.lower()
+
+                    # Count mentions in text
+                    text_count = text_lower.count(term_lower)
+                    title_count = title_lower.count(term_lower)
+
+                    if text_count > 0 or title_count > 0:
+                        # Apply context filtering for ambiguous names
+                        if self.is_valid_celebrity_mention(term_lower, text_lower, celeb_data):
+                            mentioned_celebrities[celeb_key] = {
+                                'text_mentions': text_count,
+                                'title_mentions': title_count,
+                                'total_mentions': text_count + title_count,
+                                'in_headline': title_count > 0
+                            }
+                            break  # Found this celebrity, move to next
+
+        return mentioned_celebrities
+
+    def is_valid_celebrity_mention(self, term, text, celeb_data):
+        """Context-based validation for celebrity mentions"""
+        # Skip very short terms that are likely false positives
+        if len(term) <= 2:
+            return False
+
+        # Category-based context validation
+        category = celeb_data.get('category', '').lower()
+
+        # For musicians, look for music context
+        if category == 'musician':
+            music_context = any(word in text for word in [
+                'album', 'song', 'music', 'concert', 'tour', 'rapper', 'singer', 
+                'band', 'performance', 'lyrics', 'record', 'studio'
+            ])
+            if term in ['liam', 'william'] and not music_context:
+                return False
+
+        # For royals, look for royal context
+        elif category == 'royal':
+            royal_context = any(word in text for word in [
+                'prince', 'princess', 'royal', 'palace', 'crown', 'king', 'queen',
+                'duchess', 'duke', 'windsor', 'cambridge', 'wales'
+            ])
+            if term in ['william'] and not royal_context:
+                return False
+
+        return True
+
+    def apply_celebrity_scoring_boost(self, article_id, mentions, title, description):
+        """Apply scoring boosts to celebrities mentioned in this article"""
+        now = datetime.now()
+
+        for celeb_key, mention_data in mentions.items():
+            if celeb_key not in self.celebrities:
+                continue
+
+            # Track unique articles (not mention count per article)
+            self.celebrity_article_mentions[celeb_key].add(article_id)
+
+            # Calculate boost for this article
+            boost = self.SCORING_CONFIG['base_article_points']
+
+            # Headline bonus
+            if mention_data.get('in_headline', False):
+                boost += self.SCORING_CONFIG['headline_bonus']
+
+            # Explosive keywords bonus
+            full_text = f"{title} {description}".lower()
+            explosive_keywords = [
+                'scandal', 'affair', 'cheating', 'divorce', 'breakup', 'fight', 
+                'feud', 'drama', 'controversy', 'arrest', 'lawsuit', 'explosive',
+                'bombshell', 'shocking', 'secret', 'reveals'
+            ]
+
+            if any(keyword in full_text for keyword in explosive_keywords):
+                boost += self.SCORING_CONFIG['explosive_keywords_bonus']
+
+            # Apply boost to celebrity
+            current_score = self.celebrities[celeb_key].get('drama_score', 50)
+            new_score = min(100, current_score + boost)
+
+            # Calculate temperature change
+            temp_change = new_score - current_score
+
+            self.celebrities[celeb_key]['drama_score'] = round(new_score, 1)
+            self.celebrities[celeb_key]['last_temperature_update'] = now.strftime('%Y-%m-%d %H:%M:%S')
+            self.celebrities[celeb_key]['temperature_change'] = round(temp_change, 1)
+
+            # Update status based on score
+            self.celebrities[celeb_key]['status'] = self.calculate_celebrity_status(new_score)
+
+            logger.info(f"🎯 {celeb_key}: {current_score:.1f} -> {new_score:.1f} (+{boost:.1f})")
+
+    def apply_celebrity_decay(self):
+        """Apply time-based decay to all celebrities"""
+        now = datetime.now()
+
+        for celeb_key, celeb_data in self.celebrities.items():
+            if not isinstance(celeb_data, dict):
+                continue
+
+            last_update_str = celeb_data.get('last_temperature_update')
+            if not last_update_str:
+                continue
+
+            try:
+                last_update = datetime.strptime(last_update_str, '%Y-%m-%d %H:%M:%S')
+                hours_since_update = (now - last_update).total_seconds() / 3600
+
+                # Calculate decay
+                decay = 0
+                if hours_since_update >= 24 * 30:  # 30+ days
+                    decay = self.SCORING_CONFIG['monthly_decay_rate']
+                elif hours_since_update >= 24 * 7:  # 7+ days
+                    decay = self.SCORING_CONFIG['weekly_decay_rate']
+                elif hours_since_update >= 24:  # 1+ day
+                    decay = self.SCORING_CONFIG['daily_decay_rate']
+
+                if decay > 0:
+                    current_score = celeb_data.get('drama_score', 50)
+                    decay_amount = current_score * decay
+                    new_score = max(0, current_score - decay_amount)
+
+                    # Calculate temperature change (negative for decay)
+                    temp_change = -(decay_amount)
+
+                    self.celebrities[celeb_key]['drama_score'] = round(new_score, 1)
+                    self.celebrities[celeb_key]['status'] = self.calculate_celebrity_status(new_score)
+                    self.celebrities[celeb_key]['temperature_change'] = round(temp_change, 1)
+
+                    if decay_amount > 0.1:  # Only log significant decay
+                        logger.info(f"⏰ {celeb_key}: {current_score:.1f} -> {new_score:.1f} (-{decay_amount:.1f} decay)")
+
+            except ValueError:
+                continue
+
+    def calculate_celebrity_status(self, drama_score):
+        """Calculate celebrity status based on drama score"""
+        if drama_score >= 80:
+            return 'explosive'
+        elif drama_score >= 60:
+            return 'hot'
+        elif drama_score >= 40:
+            return 'warm'
+        elif drama_score >= 20:
+            return 'mild'
+        else:
+            return 'cooling'
+
+    def calculate_celebrity_monthly_rank(self, celeb_key):
+        """Calculate celebrity's rank out of 100 based on monthly activity"""
+        # Get articles mentioning this celebrity in the last 30 days
+        monthly_articles = len(self.celebrity_article_mentions.get(celeb_key, set()))
+
+        # Calculate rank (0-100 scale)
+        rank = min(100, (monthly_articles / self.SCORING_CONFIG['monthly_max_articles']) * 100)
+
+        return round(rank, 1)
 
     def load_processed_articles(self):
         """Load processed articles to avoid duplicates"""
@@ -130,44 +569,18 @@ class AdaptiveGossipScraper:
 
         return text
 
-    def contains_celebrity(self, text):
-        """Check if text contains celebrity mentions"""
-        text_lower = text.lower()
-        mentioned_celebrities = {}
-
-        for celeb_key, celeb_data in self.celebrities.items():
-            if isinstance(celeb_data, dict):
-                name = celeb_data.get('name', celeb_key).lower()
-
-                # Count mentions
-                count = text_lower.count(name)
-                if count > 0:
-                    mentioned_celebrities[celeb_key] = count
-
-                # Check name parts for longer names
-                if ' ' in name and count == 0:
-                    name_parts = name.split()
-                    if len(name_parts) >= 2:
-                        first_last = f"{name_parts[0]} {name_parts[-1]}"
-                        count = text_lower.count(first_last)
-                        if count > 0:
-                            mentioned_celebrities[celeb_key] = count
-
-        return mentioned_celebrities
-
     def extract_celebrity_mentions(self, title, description):
         """Extract celebrity mentions from title and description"""
-        full_text = f"{title} {description}".lower()
-        mentions = self.contains_celebrity(full_text)
+        mentions = self.contains_celebrity(f"{title} {description}", title)
 
         # Update global celebrity mention counter
-        for celeb_key, count in mentions.items():
-            self.celebrity_mentions[celeb_key] += count
+        for celeb_key, mention_data in mentions.items():
+            self.celebrity_mentions[celeb_key] += mention_data['total_mentions']
 
         return mentions
 
     def calculate_drama_score(self, title, description, mentions):
-        """Calculate drama score based on content"""
+        """Calculate drama score based on content and celebrity temperatures"""
         full_text = f"{title} {description}".lower()
 
         # Drama keywords with weights
@@ -186,35 +599,35 @@ class AdaptiveGossipScraper:
             count = full_text.count(keyword)
             score += count * weight
 
-        # Celebrity boost
+        # Celebrity boost based on their current drama scores
         celebrity_boost = 0
         if mentions:
-            for celeb_key, mention_count in mentions.items():
+            for celeb_key, mention_data in mentions.items():
                 celeb_data = self.celebrities.get(celeb_key, {})
                 celeb_drama_score = celeb_data.get('drama_score', 50)
-                celebrity_boost += celeb_drama_score * mention_count
+                celebrity_boost += celeb_drama_score * mention_data['total_mentions']
 
             celebrity_boost = celebrity_boost / len(mentions)
 
-        # Combine scores
+        # Combine scores - now articles inherit celebrity temperatures!
         total_score = score + (celebrity_boost * 0.6)
 
         return min(100, max(0, int(total_score)))
 
     def calculate_temperature(self, drama_score, mentions, pub_date):
-        """Calculate temperature (hotness) of gossip"""
+        """Calculate temperature using celebrity-driven scoring"""
         base_temp = drama_score
 
-        # Celebrity temperature boost
+        # Celebrity temperature boost (now more accurate)
         celebrity_boost = 0
         if mentions:
-            for celeb_key, mention_count in mentions.items():
+            for celeb_key, mention_data in mentions.items():
                 celeb_data = self.celebrities.get(celeb_key, {})
                 celeb_temp = celeb_data.get('drama_score', 50)
-                celebrity_boost += celeb_temp * mention_count
+                celebrity_boost += celeb_temp * mention_data['total_mentions']
             celebrity_boost = celebrity_boost / len(mentions) if mentions else 0
 
-        # Time decay (gossip gets cooler over time)
+        # Time decay
         time_penalty = 0
         if pub_date:
             try:
@@ -264,7 +677,7 @@ class AdaptiveGossipScraper:
         # Determine primary celebrity
         primary_celebrity = ""
         if mentions:
-            primary_celeb_key = max(mentions.items(), key=lambda x: x[1])[0]
+            primary_celeb_key = max(mentions.items(), key=lambda x: x[1]['total_mentions'])[0]
             primary_celebrity = self.celebrities.get(primary_celeb_key, {}).get('name', primary_celeb_key)
 
         # Create front matter
@@ -277,7 +690,7 @@ class AdaptiveGossipScraper:
             'drama_score': drama_score,
             'temperature': temperature,
             'primary_celebrity': primary_celebrity,
-            'mentions': mentions,
+            'mentions': {k: v['total_mentions'] for k, v in mentions.items()},
             'categories': ['gossip', 'entertainment'],
             'tags': list(mentions.keys()) if mentions else []
         }
@@ -302,7 +715,7 @@ class AdaptiveGossipScraper:
         }
 
     def scrape_feed(self, feed_name, feed_config):
-        """Scrape individual RSS feed"""
+        """Scrape individual RSS feed with celebrity scoring and auto-discovery"""
         try:
             logger.info(f"Scraping {feed_name}...")
 
@@ -319,23 +732,30 @@ class AdaptiveGossipScraper:
                 logger.warning(f"No entries found in {feed_name}")
                 return
 
-            for entry in feed.entries[:10]:  # Limit to recent entries
+            for entry in feed.entries[:10]:
                 # Create unique ID for deduplication
                 article_id = hashlib.md5(f"{entry.get('link', '')}{entry.get('title', '')}".encode()).hexdigest()
 
                 if article_id in self.processed_articles:
                     continue
 
-                # Extract celebrity mentions
                 title = entry.get('title', '')
                 description = entry.get('summary', entry.get('description', ''))
+
+                # 🔍 AUTO-DISCOVER NEW CELEBRITIES
+                discovered = self.discover_new_celebrities(title, description)
+
+                # Extract celebrity mentions (including newly discovered ones)
                 mentions = self.extract_celebrity_mentions(title, description)
 
                 # Skip if no celebrity mentions
                 if not mentions:
                     continue
 
-                # Calculate scores
+                # 🎯 APPLY CELEBRITY SCORING BOOSTS
+                self.apply_celebrity_scoring_boost(article_id, mentions, title, description)
+
+                # Calculate scores (now celebrity-driven)
                 drama_score = self.calculate_drama_score(title, description, mentions)
                 pub_date = entry.get('published_parsed')
                 temperature = self.calculate_temperature(drama_score, mentions, pub_date)
@@ -431,11 +851,36 @@ class AdaptiveGossipScraper:
         logger.info(f"🎯 Publishing {len(posts_to_publish)} posts this run")
         return posts_to_publish
 
+    def save_celebrities_yml(self):
+        """Save celebrities.yml with proper formatting"""
+        try:
+            celebrities_dir = self.base_path / '_data'
+            celebrities_dir.mkdir(exist_ok=True)
+
+            # Create backup
+            celebrities_file = celebrities_dir / 'celebrities.yml'
+            if celebrities_file.exists():
+                backup_file = celebrities_dir / f'celebrities_backup_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yml'
+                shutil.copy2(celebrities_file, backup_file)
+                logger.info(f"📋 Created backup: {backup_file.name}")
+
+            # Save updated celebrities
+            with open(celebrities_file, 'w', encoding='utf-8') as f:
+                yaml.dump(self.celebrities, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
+
+            logger.info(f"💾 Saved {len(self.celebrities)} celebrities to celebrities.yml")
+
+        except Exception as e:
+            logger.error(f"❌ Error saving celebrities.yml: {e}")
+
     def save_data(self):
-        """Save all data"""
+        """Save all data including updated celebrities"""
         Path('data').mkdir(exist_ok=True)
 
         logger.info(f"🌡️ Found {len(self.new_posts)} potential posts")
+
+        # Process potential new celebrities before publishing
+        self.process_potential_new_celebrities()
 
         posts_to_publish = self.manage_daily_posts()
 
@@ -458,26 +903,44 @@ class AdaptiveGossipScraper:
         with open('data/processed_articles.json', 'w') as f:
             json.dump(list(self.processed_articles), f, indent=2)
 
-        # Save celebrities
-        try:
-            celebrities_dir = self.base_path / '_data'
-            celebrities_dir.mkdir(exist_ok=True)
-            with open(celebrities_dir / 'celebrities.yml', 'w') as f:
-                yaml.dump(self.celebrities, f, default_flow_style=False, sort_keys=True)
-        except Exception as e:
-            logger.error(f"Error saving celebrities: {e}")
+        # 💾 SAVE UPDATED CELEBRITIES.YML
+        self.save_celebrities_yml()
 
     def run(self):
-        """Main execution"""
-        logger.info("🎭 Starting Adaptive Gossip Scraper...")
+        """Main execution with celebrity scoring and auto-discovery"""
+        logger.info("🎭 Starting Adaptive Gossip Scraper with Celebrity Scoring & Auto-Discovery...")
 
-        # Scrape all feeds
+        # 1. Apply decay to all celebrities first
+        logger.info("⏰ Applying celebrity score decay...")
+        self.apply_celebrity_decay()
+
+        # 2. Scrape all feeds (this will boost celebrity scores and discover new ones)
         for feed_name, feed_config in self.rss_feeds.items():
             self.scrape_feed(feed_name, feed_config)
-            time.sleep(2)  # Be nice to servers
+            time.sleep(2)
 
-        # Save data
+        # 3. Calculate monthly ranks for all celebrities
+        logger.info("📊 Calculating celebrity monthly ranks...")
+        for celeb_key in self.celebrities:
+            monthly_rank = self.calculate_celebrity_monthly_rank(celeb_key)
+            self.celebrities[celeb_key]['monthly_rank'] = monthly_rank
+
+        # 4. Save data (including updated celebrities.yml)
         self.save_data()
+
+        # 5. Log results
+        if self.new_celebrities_discovered:
+            logger.info(f"🌟 NEW CELEBRITIES DISCOVERED: {', '.join(self.new_celebrities_discovered)}")
+
+        top_celebs = sorted(
+            [(k, v.get('drama_score', 0)) for k, v in self.celebrities.items() if isinstance(v, dict)],
+            key=lambda x: x[1], reverse=True
+        )[:10]
+
+        logger.info("🏆 Top 10 Hottest Celebrities:")
+        for i, (celeb, score) in enumerate(top_celebs, 1):
+            status = self.celebrities[celeb].get('status', 'unknown')
+            logger.info(f"  {i}. {celeb}: {score:.1f}° ({status})")
 
         logger.info("✅ Scraping complete!")
 
