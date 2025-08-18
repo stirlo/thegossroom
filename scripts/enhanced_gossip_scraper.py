@@ -234,7 +234,7 @@ class AdaptiveGossipScraper:
             # Common phrases that get capitalized
             'new_york', 'los_angeles', 'las_vegas', 'united_states', 'north_america',
             'social_media', 'real_estate', 'high_school', 'middle_east', 'south_korea',
-            'prime_minister', 'white_house', 'red_carpet', 'golden_globes',
+            'prime_minister', 'white_house', 'red_carpet', 'golden_globes', 'harassing_young_actress',
 
             # Generic terms
             'breaking_news', 'exclusive_interview', 'latest_update', 'hot_gossip',
