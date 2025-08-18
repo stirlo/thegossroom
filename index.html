@@ -25,35 +25,40 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     <h3>📈 Hottest Celebrities Right Now</h3>
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
-        {% assign sorted_celebs = site.data.celebrities | sort %}
-        {% for celeb_data in sorted_celebs limit: 15 %}
+        {% comment %}
+        🔥 FIXED: Sort by drama_score (descending) instead of alphabetically!
+        {% endcomment %}
+        {% assign sorted_celebs = '' | split: '' %}
+        {% for celeb_data in site.data.celebrities %}
           {% assign celeb_key = celeb_data[0] %}
           {% assign celeb_info = celeb_data[1] %}
-          {% if celeb_info.drama_score %}
-            {% assign drama_score = celeb_info.drama_score %}
-            {% assign celeb_name = celeb_info.name | default: celeb_key %}
-            {% assign status = celeb_info.status | default: 'mild' %}
+          {% if celeb_info.drama_score and celeb_info.drama_score >= 10 %}
+            {% assign sorted_celebs = sorted_celebs | push: celeb_data %}
+          {% endif %}
+        {% endfor %}
 
-            {% assign temp_class = 'mild' %}
-            {% if drama_score >= 80 %}
-              {% assign temp_class = 'explosive' %}
-            {% elsif drama_score >= 60 %}
-              {% assign temp_class = 'hot' %}
-            {% elsif drama_score >= 40 %}
-              {% assign temp_class = 'rising' %}
-            {% endif %}
+        {% comment %}
+        Sort by drama_score using a custom sort approach
+        {% endcomment %}
+        {% assign final_sorted = sorted_celebs | sort: '[1].drama_score' | reverse %}
 
-            <div class="celeb-card temp-{{ temp_class }}">
-              <div class="celeb-rank">{{ forloop.index }}</div>
-              <div class="celeb-info">
-                <h4><a href="/tag/{{ celeb_key | slugify }}/">{{ celeb_name | replace: '_', ' ' | title }}</a></h4>
-                <div class="celeb-stats">
-                  <span class="current-temp">🌡️ {{ drama_score }}°</span>
-                  <span class="status">{{ status | upcase }}</span>
-                </div>
+        {% for celeb_data in final_sorted limit: 15 %}
+          {% assign celeb_key = celeb_data[0] %}
+          {% assign celeb_info = celeb_data[1] %}
+          {% assign drama_score = celeb_info.drama_score %}
+          {% assign celeb_name = celeb_info.name | default: celeb_key %}
+          {% assign status = celeb_info.status | default: 'mild' %}
+
+          <div class="celeb-card temp-{{ status }}">
+            <div class="celeb-rank">{{ forloop.index }}</div>
+            <div class="celeb-info">
+              <h4><a href="/tag/{{ celeb_key | slugify }}/">{{ celeb_name | replace: '_', ' ' | title }}</a></h4>
+              <div class="celeb-stats">
+                <span class="current-temp">🌡️ {{ drama_score }}°</span>
+                <span class="status">{{ status | upcase }}</span>
               </div>
             </div>
-          {% endif %}
+          </div>
         {% endfor %}
       {% else %}
         <div class="no-data">
@@ -68,31 +73,31 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     <h3>🌟 Most Active This Week</h3>
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
+        {% comment %}
+        🔥 FIXED: Sort weekly champions by drama_score, filter by recent activity
+        {% endcomment %}
         {% assign weekly_celebs = '' | split: '' %}
+        {% assign week_ago = 'now' | date: '%s' | minus: 604800 | date: '%Y-%m-%d' %}
+
         {% for celeb_data in site.data.celebrities %}
           {% assign celeb_key = celeb_data[0] %}
           {% assign celeb_info = celeb_data[1] %}
-          {% if celeb_info.last_temperature_update %}
+          {% assign last_update = celeb_info.last_temperature_update | date: '%Y-%m-%d' %}
+          {% if celeb_info.drama_score >= 15 and last_update >= week_ago %}
             {% assign weekly_celebs = weekly_celebs | push: celeb_data %}
           {% endif %}
         {% endfor %}
 
-        {% for celeb_data in weekly_celebs limit: 12 %}
+        {% assign weekly_sorted = weekly_celebs | sort: '[1].drama_score' | reverse %}
+
+        {% for celeb_data in weekly_sorted limit: 12 %}
           {% assign celeb_key = celeb_data[0] %}
           {% assign celeb_info = celeb_data[1] %}
           {% assign drama_score = celeb_info.drama_score | default: 0 %}
           {% assign celeb_name = celeb_info.name | default: celeb_key %}
+          {% assign status = celeb_info.status | default: 'mild' %}
 
-          {% assign temp_class = 'mild' %}
-          {% if drama_score >= 80 %}
-            {% assign temp_class = 'explosive' %}
-          {% elsif drama_score >= 60 %}
-            {% assign temp_class = 'hot' %}
-          {% elsif drama_score >= 40 %}
-            {% assign temp_class = 'rising' %}
-          {% endif %}
-
-          <div class="celeb-card temp-{{ temp_class }}">
+          <div class="celeb-card temp-{{ status }}">
             <div class="celeb-rank">{{ forloop.index }}</div>
             <div class="celeb-info">
               <h4><a href="/tag/{{ celeb_key | slugify }}/">{{ celeb_name | replace: '_', ' ' | title }}</a></h4>
@@ -112,23 +117,32 @@ description: "Real-time celebrity drama tracking with dynamic temperature scores
     <h3>🌱 Rising Stars (New Discoveries)</h3>
     <div class="leaderboard-grid">
       {% if site.data.celebrities %}
+        {% comment %}
+        🔥 FIXED: Sort new discoveries by drama_score too!
+        {% endcomment %}
         {% assign new_celebs = '' | split: '' %}
+        {% assign month_ago = 'now' | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' %}
+
         {% for celeb_data in site.data.celebrities %}
           {% assign celeb_key = celeb_data[0] %}
           {% assign celeb_info = celeb_data[1] %}
-          {% if celeb_info.auto_discovered or celeb_info.discovery_date %}
+          {% assign discovery_date = celeb_info.discovery_date | date: '%Y-%m-%d' %}
+          {% if celeb_info.drama_score >= 5 and discovery_date >= month_ago %}
             {% assign new_celebs = new_celebs | push: celeb_data %}
           {% endif %}
         {% endfor %}
 
-        {% if new_celebs.size > 0 %}
-          {% for celeb_data in new_celebs limit: 10 %}
+        {% assign newbies_sorted = new_celebs | sort: '[1].drama_score' | reverse %}
+
+        {% if newbies_sorted.size > 0 %}
+          {% for celeb_data in newbies_sorted limit: 10 %}
             {% assign celeb_key = celeb_data[0] %}
             {% assign celeb_info = celeb_data[1] %}
             {% assign drama_score = celeb_info.drama_score | default: 25 %}
             {% assign celeb_name = celeb_info.name | default: celeb_key %}
+            {% assign status = celeb_info.status | default: 'rising' %}
 
-            <div class="celeb-card temp-rising newbie">
+            <div class="celeb-card temp-{{ status }} newbie">
               <div class="celeb-rank">{{ forloop.index }}</div>
               <div class="celeb-info">
                 <h4><a href="/tag/{{ celeb_key | slugify }}/">{{ celeb_name | replace: '_', ' ' | title }}</a></h4>
@@ -295,6 +309,11 @@ document.addEventListener('DOMContentLoaded', function() {
 .celeb-card.temp-mild {
     border-left-color: #70a1ff;
     background: rgba(112, 161, 255, 0.1);
+}
+
+.celeb-card.temp-cooling {
+    border-left-color: #5352ed;
+    background: rgba(83, 82, 237, 0.1);
 }
 
 .celeb-card.newbie {
