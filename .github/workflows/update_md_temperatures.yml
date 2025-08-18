@@ -1,0 +1,381 @@
+name: Update Post Temperatures from Celebrity Scores
+
+on:
+  workflow_dispatch:
+    inputs:
+      recalculate_all:
+        description: 'Recalculate all post temperatures'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  update-post-temperatures:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🔄 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml python-dateutil
+
+    - name: 🌡️ Create Post Temperature Updater
+      run: |
+        cat > post_temperature_updater.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        Post Temperature Updater
+        Updates all post files with temperatures based on current celebrity scores
+        """
+
+        import yaml
+        import re
+        import os
+        from datetime import datetime
+        from pathlib import Path
+        from collections import defaultdict
+        import logging
+
+        logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+        logger = logging.getLogger(__name__)
+
+        class PostTemperatureUpdater:
+            def __init__(self):
+                self.base_path = Path('.')
+                self.posts_dir = self.base_path / '_posts'
+                self.celebrities_file = self.base_path / '_data' / 'celebrities.yml'
+
+                # Celebrity detection patterns (same as content scorer)
+                self.CELEBRITY_PATTERNS = {
+                    # Trump family
+                    'donald_trump': ['donald trump', 'trump', 'president trump', 'former president trump'],
+                    'melania_trump': ['melania trump', 'melania', 'first lady trump'],
+                    'ivanka_trump': ['ivanka trump', 'ivanka'],
+                    'eric_trump': ['eric trump'],
+                    'don_jr': ['donald trump jr', 'don jr', 'trump jr'],
+
+                    # Celebrities
+                    'taylor_swift': ['taylor swift', 'taylor', 'swift'],
+                    'travis_kelce': ['travis kelce', 'kelce'],
+                    'jason_kelce': ['jason kelce'],
+                    'ed_kelce': ['ed kelce'],
+                    'kim_kardashian': ['kim kardashian', 'kim k'],
+                    'kanye_west': ['kanye west', 'kanye', 'ye'],
+                    'elon_musk': ['elon musk', 'musk'],
+                    'jeff_bezos': ['jeff bezos', 'bezos'],
+                    'mark_zuckerberg': ['mark zuckerberg', 'zuckerberg'],
+
+                    # Entertainment
+                    'saturday_night_live': ['saturday night live', 'snl'],
+                    'jeffree_star': ['jeffree star'],
+                    'donald_glover': ['donald glover', 'childish gambino'],
+                    'travis_scott': ['travis scott'],
+                    'travis_barker': ['travis barker'],
+                    'lil_tay': ['lil tay'],
+
+                    # Politicians
+                    'joe_biden': ['joe biden', 'biden', 'president biden'],
+                    'kamala_harris': ['kamala harris', 'harris', 'vice president harris'],
+                    'ron_desantis': ['ron desantis', 'desantis'],
+                    'vladimir_putin': ['vladimir putin', 'putin'],
+
+                    # Add more as discovered
+                }
+
+            def load_celebrities(self):
+                """Load current celebrity scores"""
+                try:
+                    if not self.celebrities_file.exists():
+                        logger.error("❌ No celebrities.yml file found")
+                        return {}
+
+                    with open(self.celebrities_file, 'r', encoding='utf-8') as f:
+                        celebrities = yaml.safe_load(f) or {}
+
+                    logger.info(f"📊 Loaded {len(celebrities)} celebrities")
+
+                    # Show top celebrities for reference
+                    top_celebs = sorted(
+                        [(k, v.get('drama_score', 0)) for k, v in celebrities.items() if isinstance(v, dict)],
+                        key=lambda x: x[1], reverse=True
+                    )[:10]
+
+                    logger.info("🔥 Top 10 celebrities:")
+                    for celeb, score in top_celebs:
+                        logger.info(f"   {celeb}: {score}°")
+
+                    return celebrities
+
+                except Exception as e:
+                    logger.error(f"❌ Error loading celebrities: {e}")
+                    return {}
+
+            def detect_celebrities_in_text(self, title, content):
+                """Detect celebrity mentions in title and content"""
+                title_lower = title.lower()
+                content_lower = content.lower()
+
+                detected_celebrities = {}
+
+                for celeb_key, patterns in self.CELEBRITY_PATTERNS.items():
+                    total_mentions = 0
+                    title_mentions = 0
+
+                    for pattern in patterns:
+                        # Use word boundaries for accurate matching
+                        pattern_regex = r'\b' + re.escape(pattern.lower()) + r'\b'
+
+                        title_matches = len(re.findall(pattern_regex, title_lower))
+                        content_matches = len(re.findall(pattern_regex, content_lower))
+
+                        title_mentions += title_matches
+                        total_mentions += title_matches + content_matches
+
+                    if total_mentions > 0:
+                        detected_celebrities[celeb_key] = {
+                            'total_mentions': total_mentions,
+                            'title_mentions': title_mentions,
+                            'in_headline': title_mentions > 0
+                        }
+
+                return detected_celebrities
+
+            def update_post_file(self, post_file, celebrities):
+                """Update a single post file with new temperature"""
+                try:
+                    # Read current file
+                    with open(post_file, 'r', encoding='utf-8') as f:
+                        content = f.read()
+
+                    # Parse frontmatter
+                    if not content.startswith('---'):
+                        logger.debug(f"⚠️ No frontmatter in {post_file.name}")
+                        return False
+
+                    parts = content.split('---', 2)
+                    if len(parts) < 3:
+                        logger.debug(f"⚠️ Invalid frontmatter in {post_file.name}")
+                        return False
+
+                    frontmatter = yaml.safe_load(parts[1])
+                    if not frontmatter:
+                        logger.debug(f"⚠️ Empty frontmatter in {post_file.name}")
+                        return False
+
+                    title = frontmatter.get('title', '')
+                    body_content = parts[2]
+
+                    # Detect celebrities in this post
+                    detected_celebs = self.detect_celebrities_in_text(title, body_content)
+
+                    if not detected_celebs:
+                        # No celebrities found - set temperature to 0
+                        frontmatter['temperature'] = 0
+                        frontmatter['drama_score'] = 0
+                        frontmatter['mentions'] = {}
+                        if 'primary_celebrity' in frontmatter:
+                            del frontmatter['primary_celebrity']
+
+                        logger.debug(f"📝 {post_file.name}: No celebrities found, temperature = 0")
+                    else:
+                        # Calculate post temperature (sum of mentioned celebrity scores)
+                        post_temperature = 0
+                        post_mentions = {}
+                        celebrity_scores_in_post = {}
+
+                        for celeb_key, mention_data in detected_celebs.items():
+                            if celeb_key in celebrities and isinstance(celebrities[celeb_key], dict):
+                                celeb_score = celebrities[celeb_key].get('drama_score', 0)
+                                post_temperature += celeb_score
+                                post_mentions[celeb_key] = mention_data['total_mentions']
+                                celebrity_scores_in_post[celeb_key] = celeb_score
+                            else:
+                                # Celebrity not in database, count mentions but no score
+                                post_mentions[celeb_key] = mention_data['total_mentions']
+
+                        # Find primary celebrity (most mentions, or highest score if tied)
+                        if post_mentions:
+                            primary_celebrity = max(
+                                post_mentions.items(), 
+                                key=lambda x: (x[1], celebrity_scores_in_post.get(x[0], 0))
+                            )[0]
+                        else:
+                            primary_celebrity = None
+
+                        # Update frontmatter
+                        frontmatter['temperature'] = round(post_temperature, 1)
+                        frontmatter['drama_score'] = round(post_temperature, 1)
+                        frontmatter['mentions'] = post_mentions
+                        if primary_celebrity:
+                            frontmatter['primary_celebrity'] = primary_celebrity
+
+                        logger.debug(f"📝 {post_file.name}: Temperature = {post_temperature:.1f}° "
+                                   f"(mentions: {list(post_mentions.keys())})")
+
+                    # Reconstruct file content with proper YAML formatting
+                    new_content = "---\n"
+
+                    # Custom YAML dump to maintain order and formatting
+                    yaml_content = yaml.dump(
+                        frontmatter, 
+                        default_flow_style=False, 
+                        sort_keys=False,  # Keep original order
+                        allow_unicode=True,
+                        width=1000  # Prevent line wrapping
+                    )
+
+                    new_content += yaml_content
+                    new_content += "---\n"
+                    new_content += body_content
+
+                    # Write updated file
+                    with open(post_file, 'w', encoding='utf-8') as f:
+                        f.write(new_content)
+
+                    return True
+
+                except Exception as e:
+                    logger.error(f"❌ Error updating {post_file.name}: {e}")
+                    return False
+
+            def update_all_posts(self, celebrities):
+                """Update all post files with new temperatures"""
+                if not self.posts_dir.exists():
+                    logger.error("❌ No _posts directory found")
+                    return
+
+                # Find all markdown files in _posts
+                post_files = list(self.posts_dir.glob('*.md'))
+                logger.info(f"📁 Found {len(post_files)} post files to update")
+
+                updated_count = 0
+                error_count = 0
+
+                for post_file in post_files:
+                    if self.update_post_file(post_file, celebrities):
+                        updated_count += 1
+                    else:
+                        error_count += 1
+
+                    # Progress update
+                    if (updated_count + error_count) % 50 == 0:
+                        logger.info(f"📊 Progress: {updated_count + error_count}/{len(post_files)} files processed")
+
+                logger.info(f"✅ Updated {updated_count} post files successfully")
+                if error_count > 0:
+                    logger.warning(f"⚠️ {error_count} files had errors")
+
+            def generate_sample_report(self, celebrities):
+                """Show sample of updated posts"""
+                if not self.posts_dir.exists():
+                    return
+
+                # Find a few sample posts to show
+                post_files = list(self.posts_dir.glob('*.md'))[:5]
+
+                print("\n" + "="*60)
+                print("📝 SAMPLE POST TEMPERATURE UPDATES")
+                print("="*60)
+
+                for post_file in post_files:
+                    try:
+                        with open(post_file, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        parts = content.split('---', 2)
+                        if len(parts) >= 2:
+                            frontmatter = yaml.safe_load(parts[1])
+                            if frontmatter:
+                                title = frontmatter.get('title', 'No title')[:50]
+                                temperature = frontmatter.get('temperature', 0)
+                                mentions = frontmatter.get('mentions', {})
+                                primary = frontmatter.get('primary_celebrity', 'None')
+
+                                print(f"\n📄 {post_file.name}")
+                                print(f"   Title: {title}...")
+                                print(f"   Temperature: {temperature}°")
+                                print(f"   Primary Celebrity: {primary}")
+                                print(f"   Mentions: {mentions}")
+
+                    except Exception as e:
+                        print(f"\n📄 {post_file.name}: Error reading - {e}")
+
+                print("="*60)
+
+            def run(self):
+                """Execute post temperature updates"""
+                print("🌡️ Starting Post Temperature Updates...")
+
+                # 1. Load current celebrity scores
+                print("📊 Loading celebrity scores...")
+                celebrities = self.load_celebrities()
+
+                if not celebrities:
+                    print("❌ No celebrity data available")
+                    return
+
+                # 2. Update all post files
+                print("📝 Updating all post files with new temperatures...")
+                self.update_all_posts(celebrities)
+
+                # 3. Show sample results
+                self.generate_sample_report(celebrities)
+
+                print("✅ Post Temperature Updates Complete!")
+                print("🎯 All posts now have temperatures based on current celebrity scores!")
+
+        if __name__ == "__main__":
+            updater = PostTemperatureUpdater()
+            updater.run()
+        EOF
+
+    - name: 🌡️ Run Post Temperature Updates
+      run: |
+        python post_temperature_updater.py
+
+    - name: 📊 Show Update Results
+      run: |
+        echo "📋 Files changed:"
+        git status --porcelain | head -10
+        echo "..."
+
+        echo -e "\n📈 Sample updated posts:"
+        find _posts -name "*.md" -type f | head -3 | while read file; do
+          echo "📄 $file:"
+          grep -A 5 -B 1 "temperature:" "$file" || echo "  No temperature found"
+          echo ""
+        done
+
+    - name: 🚀 Commit Temperature Updates
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Post Temperature Action"
+
+        git add _posts/*.md
+
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🌡️ Updated Post Temperatures from Celebrity Scores
+
+          - Recalculated all post temperatures based on current celebrity scores
+          - Updated drama_score, temperature, mentions, primary_celebrity
+          - Posts now reflect sum of mentioned celebrity scores
+          - Temperature = sum of all mentioned celebrity drama scores
+
+          Post Temperature Update"
+
+          git push
+          echo "✅ Post temperature updates committed!"
+        fi
