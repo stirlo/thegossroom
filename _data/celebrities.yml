@@ -4194,22 +4194,6 @@ noah_schnapp:
   status: cooling
   temperature: 0.0
   temperature_change: 0
-nordic_council_film:
-  auto_discovered: true
-  category: unknown
-  context_score: 3
-  discovery_date: '2025-08-18'
-  drama_score: 25
-  last_temp_update: '2025-08-18T10:36:48.626134'
-  last_temperature_update: '2025-08-18 10:25:39'
-  memorial: false
-  monthly_rank: 0
-  name: Nordic Council Film
-  promotion_date: '2025-08-18'
-  recent_story_count: 1
-  status: cooling
-  temperature: 3.0
-  temperature_change: 0
 obama:
   category: politician
   discovery_date: '2025-08-04'
