@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-08-31T03:10:36.378690",
-  "total_posts": 2638,
+  "timestamp": "2025-09-01T03:52:24.059075",
+  "total_posts": 1611,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1021,
-    "Explosive (60-79\u00b0)": 125,
-    "Hot (40-59\u00b0)": 237,
-    "Warm (25-39\u00b0)": 201,
-    "Cool (<25\u00b0)": 1054
+    "Nuclear (80-100\u00b0)": 1036,
+    "Explosive (60-79\u00b0)": 131,
+    "Hot (40-59\u00b0)": 239,
+    "Warm (25-39\u00b0)": 205,
+    "Cool (<25\u00b0)": 0
   },
   "location_distribution": {
-    "Active": 200,
-    "Archived": 2438
+    "Active": 1167,
+    "Archived": 444
   },
   "age_distribution": {
-    "Today": 31,
-    "This week": 252,
-    "This month": 2355,
+    "Today": 23,
+    "This week": 257,
+    "This month": 1331,
     "Older": 0
   },
   "hottest_posts": [
     {
+      "title": "Zo\u00eb Kravitz Recalls Almost Losing Mom\u2019s Pet Snake ...",
+      "temperature": 100,
+      "days_old": 18,
+      "location": "active"
+    },
+    {
+      "title": "What Happened to Travis Kelce\u2019s Friendship Bracele...",
+      "temperature": 100,
+      "days_old": 17,
+      "location": "active"
+    },
+    {
+      "title": "Taylor Swift Curates Spotify Playlist Ahead of New...",
+      "temperature": 100,
+      "days_old": 19,
+      "location": "active"
+    },
+    {
+      "title": "See Taylor Swift Make Debut on Travis Kelce\u2019s New ...",
+      "temperature": 100,
+      "days_old": 20,
+      "location": "active"
+    },
+    {
+      "title": "Taylor Swift, The Beatles, Elvis & More Artists Wi...",
+      "temperature": 100,
+      "days_old": 21,
+      "location": "active"
+    },
+    {
+      "title": "Taylor Swift's Apparent Easter Eggs Launch Super B...",
+      "temperature": 100,
+      "days_old": 16,
+      "location": "active"
+    },
+    {
       "title": "\u2018South Park\u2019 Mocks Trump\u2019s \u2018Small Penis,\u2019 His Brib...",
       "temperature": 100,
-      "days_old": 10,
+      "days_old": 11,
       "location": "active"
     },
     {
-      "title": "Kumail Nanjiani Signed on for Six Marvel Movies Be...",
+      "title": "Taylor Swift and Travis Kelce\u2019s New Heights Teaser...",
       "temperature": 100,
-      "days_old": 6,
+      "days_old": 18,
       "location": "active"
     },
     {
-      "title": "Supermodel Karen Elson reveals effects of 'frighte...",
+      "title": "Taylor Swift Announced Her New Album \u2018The Life of ...",
       "temperature": 100,
-      "days_old": 1,
+      "days_old": 18,
       "location": "active"
     },
     {
-      "title": "Jason Kelce Reacts to Taylor Swift, Travis Kelce's...",
+      "title": "Taylor Swift's Song 'Opalite' Fuels Theories About...",
       "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Why Travis Kelce Is Better For Taylor Swift Than A...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Daymond John Calls Taylor Swift, Travis Kelce Enga...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Selena Gomez Reacts to Taylor Swift and Travis Kel...",
-      "temperature": 100,
-      "days_old": 2,
-      "location": "active"
-    },
-    {
-      "title": "Willem Dafoe Talks Marvel, David Lynch, \u2018Platoon,\u2019...",
-      "temperature": 100,
-      "days_old": 9,
-      "location": "active"
-    },
-    {
-      "title": "How Travis Kelce Picked Out Taylor Swift's Engagem...",
-      "temperature": 100,
-      "days_old": 4,
-      "location": "active"
-    },
-    {
-      "title": "Donald Trump Revokes Kamala Harris' Secret Service...",
-      "temperature": 100,
-      "days_old": 1,
+      "days_old": 17,
       "location": "active"
     }
   ]
