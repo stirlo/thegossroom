@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-09-01T03:53:22.149344",
-  "total_posts": 1611,
+  "timestamp": "2025-09-07T03:05:21.442513",
+  "total_posts": 1818,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1036,
-    "Explosive (60-79\u00b0)": 131,
-    "Hot (40-59\u00b0)": 239,
-    "Warm (25-39\u00b0)": 205,
-    "Cool (<25\u00b0)": 0
+    "Nuclear (80-100\u00b0)": 1149,
+    "Explosive (60-79\u00b0)": 153,
+    "Hot (40-59\u00b0)": 257,
+    "Warm (25-39\u00b0)": 201,
+    "Cool (<25\u00b0)": 58
   },
   "location_distribution": {
-    "Active": 1167,
-    "Archived": 444
+    "Active": 200,
+    "Archived": 1618
   },
   "age_distribution": {
-    "Today": 23,
-    "This week": 257,
-    "This month": 1331,
-    "Older": 0
+    "Today": 30,
+    "This week": 235,
+    "This month": 1525,
+    "Older": 28
   },
   "hottest_posts": [
     {
-      "title": "Zo\u00eb Kravitz Recalls Almost Losing Mom\u2019s Pet Snake ...",
+      "title": "Travis Kelce Gets Slapped in the Face by Chargers\u2019...",
       "temperature": 100,
-      "days_old": 18,
+      "days_old": 0,
       "location": "active"
     },
     {
-      "title": "What Happened to Travis Kelce\u2019s Friendship Bracele...",
+      "title": "Giorgio Armani\u2019s 10 Best Fashion Moments On Film",
       "temperature": 100,
-      "days_old": 17,
+      "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Taylor Swift Curates Spotify Playlist Ahead of New...",
+      "title": "Barron Trump ditches Big Apple for another NYU cam...",
       "temperature": 100,
-      "days_old": 19,
+      "days_old": 1,
       "location": "active"
     },
     {
-      "title": "See Taylor Swift Make Debut on Travis Kelce\u2019s New ...",
+      "title": "Supermodel Karen Elson reveals effects of 'frighte...",
       "temperature": 100,
-      "days_old": 20,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Taylor Swift, The Beatles, Elvis & More Artists Wi...",
+      "title": "Taylor Swift\u2019s \u2018The Life of a Showgirl\u2019 Breaks Spo...",
       "temperature": 100,
-      "days_old": 21,
+      "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Taylor Swift's Apparent Easter Eggs Launch Super B...",
+      "title": "Justin Bieber Gushes Over Jack Blues, Hailey on 'S...",
       "temperature": 100,
-      "days_old": 16,
+      "days_old": 1,
       "location": "active"
     },
     {
-      "title": "\u2018South Park\u2019 Mocks Trump\u2019s \u2018Small Penis,\u2019 His Brib...",
+      "title": "Why Travis Kelce Is Better For Taylor Swift Than A...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Taylor Swift and Travis Kelce\u2019s New Heights Teaser...",
+      "title": "Daymond John Calls Taylor Swift, Travis Kelce Enga...",
       "temperature": 100,
-      "days_old": 18,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Taylor Swift Announced Her New Album \u2018The Life of ...",
+      "title": "Dylan Efron Says Brother Zac Efron Is 'Supportive'...",
       "temperature": 100,
-      "days_old": 18,
+      "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Taylor Swift's Song 'Opalite' Fuels Theories About...",
+      "title": "Woody Allen Wants to Direct Donald Trump in Anothe...",
       "temperature": 100,
-      "days_old": 17,
+      "days_old": 5,
       "location": "active"
     }
   ]
