@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-09-07T03:06:24.680323",
-  "total_posts": 1818,
+  "timestamp": "2025-09-14T03:04:57.519826",
+  "total_posts": 2097,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1149,
-    "Explosive (60-79\u00b0)": 153,
-    "Hot (40-59\u00b0)": 257,
-    "Warm (25-39\u00b0)": 201,
-    "Cool (<25\u00b0)": 58
+    "Nuclear (80-100\u00b0)": 1152,
+    "Explosive (60-79\u00b0)": 237,
+    "Hot (40-59\u00b0)": 249,
+    "Warm (25-39\u00b0)": 246,
+    "Cool (<25\u00b0)": 213
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 1618
+    "Archived": 1897
   },
   "age_distribution": {
     "Today": 30,
-    "This week": 235,
-    "This month": 1525,
-    "Older": 28
+    "This week": 279,
+    "This month": 996,
+    "Older": 792
   },
   "hottest_posts": [
     {
-      "title": "Travis Kelce Gets Slapped in the Face by Chargers\u2019...",
+      "title": "Ed Sheeran Plays On \u2014 But It\u2019s the Same Old Song",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Ukraine Selects Oscar-Winning Director Mstyslav Ch...",
       "temperature": 100,
       "days_old": 0,
       "location": "active"
     },
     {
-      "title": "Giorgio Armani\u2019s 10 Best Fashion Moments On Film",
+      "title": "Machel Montano & Ayetian Make Surprise Appearance ...",
       "temperature": 100,
-      "days_old": 2,
+      "days_old": 1,
       "location": "active"
     },
     {
       "title": "Barron Trump ditches Big Apple for another NYU cam...",
       "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Supermodel Karen Elson reveals effects of 'frighte...",
-      "temperature": 100,
       "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Taylor Swift\u2019s \u2018The Life of a Showgirl\u2019 Breaks Spo...",
+      "title": "President Donald Trump Gets Cheers at US Open Men\u2019...",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Justin Bieber Gushes Over Jack Blues, Hailey on 'S...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Why Travis Kelce Is Better For Taylor Swift Than A...",
-      "temperature": 100,
-      "days_old": 8,
-      "location": "active"
-    },
-    {
-      "title": "Daymond John Calls Taylor Swift, Travis Kelce Enga...",
-      "temperature": 100,
-      "days_old": 8,
-      "location": "active"
-    },
-    {
-      "title": "Dylan Efron Says Brother Zac Efron Is 'Supportive'...",
+      "title": "Taylor Swift Doesn't Want To Be Travis Kelce's 'Gi...",
       "temperature": 100,
       "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Woody Allen Wants to Direct Donald Trump in Anothe...",
+      "title": "Donald Trump Calls Charlie Kirk a 'Martyr for Free...",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Trump Was On AN Epstein List! Until Ghislaine Maxw...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Offset Happy For Cardi B's Album While Riding High...",
+      "temperature": 100,
+      "days_old": 4,
+      "location": "active"
+    },
+    {
+      "title": "Nicholas Braun, Malika Haqq & More You Forgot Were...",
+      "temperature": 100,
+      "days_old": 0,
       "location": "active"
     }
   ]
