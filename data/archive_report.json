@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-09-14T03:06:10.082676",
-  "total_posts": 2097,
+  "timestamp": "2025-09-21T03:10:40.081229",
+  "total_posts": 2388,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1152,
-    "Explosive (60-79\u00b0)": 237,
-    "Hot (40-59\u00b0)": 249,
-    "Warm (25-39\u00b0)": 246,
-    "Cool (<25\u00b0)": 213
+    "Nuclear (80-100\u00b0)": 1221,
+    "Explosive (60-79\u00b0)": 352,
+    "Hot (40-59\u00b0)": 299,
+    "Warm (25-39\u00b0)": 257,
+    "Cool (<25\u00b0)": 259
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 1897
+    "Archived": 2188
   },
   "age_distribution": {
-    "Today": 30,
-    "This week": 279,
-    "This month": 996,
-    "Older": 792
+    "Today": 34,
+    "This week": 287,
+    "This month": 838,
+    "Older": 1229
   },
   "hottest_posts": [
     {
-      "title": "Ed Sheeran Plays On \u2014 But It\u2019s the Same Old Song",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Ukraine Selects Oscar-Winning Director Mstyslav Ch...",
+      "title": "Stars React to Jimmy Kimmel Being Taken Off the Ai...",
       "temperature": 100,
       "days_old": 0,
       "location": "active"
     },
     {
-      "title": "Machel Montano & Ayetian Make Surprise Appearance ...",
+      "title": "Mohanlal to Receive India\u2019s Top Film Honor",
       "temperature": 100,
-      "days_old": 1,
+      "days_old": 0,
       "location": "active"
     },
     {
-      "title": "Barron Trump ditches Big Apple for another NYU cam...",
+      "title": "Trump Celebrates After ABC Suspends \u2018Jimmy Kimmel ...",
       "temperature": 100,
-      "days_old": 8,
+      "days_old": 3,
       "location": "active"
     },
     {
-      "title": "President Donald Trump Gets Cheers at US Open Men\u2019...",
+      "title": "Trump and Epstein Image Projected on Windsor Castl...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Jake Gyllenhaal and GF Jeanne Cadieu Enjoy Date Ni...",
       "temperature": 100,
       "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Taylor Swift Doesn't Want To Be Travis Kelce's 'Gi...",
+      "title": "Colin Farrell and More Stars Who've Brought Family...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Donald Trump Calls Charlie Kirk a 'Martyr for Free...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Trump Was On AN Epstein List! Until Ghislaine Maxw...",
+      "title": "Jimmy Kimmel Fans and Protesters Decry Trump, ICE ...",
       "temperature": 100,
       "days_old": 1,
       "location": "active"
     },
     {
-      "title": "Offset Happy For Cardi B's Album While Riding High...",
+      "title": "Jay Leno Supports Jimmy Kimmel Years After Feud: \u2018...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 1,
       "location": "active"
     },
     {
-      "title": "Nicholas Braun, Malika Haqq & More You Forgot Were...",
+      "title": "Jimmy Fallon Says He Hopes Kimmel Returns, Mocks T...",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Jenna Ortega, More Stars Walk 2025 Emmy Awards Red...",
+      "temperature": 100,
+      "days_old": 6,
       "location": "active"
     }
   ]
