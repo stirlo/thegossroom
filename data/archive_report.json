@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-09-28T03:11:35.620117",
-  "total_posts": 2653,
+  "timestamp": "2025-10-01T03:42:23.519898",
+  "total_posts": 2482,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1229,
-    "Explosive (60-79\u00b0)": 456,
-    "Hot (40-59\u00b0)": 397,
-    "Warm (25-39\u00b0)": 288,
-    "Cool (<25\u00b0)": 283
+    "Nuclear (80-100\u00b0)": 1230,
+    "Explosive (60-79\u00b0)": 515,
+    "Hot (40-59\u00b0)": 446,
+    "Warm (25-39\u00b0)": 291,
+    "Cool (<25\u00b0)": 0
   },
   "location_distribution": {
-    "Active": 200,
-    "Archived": 2453
+    "Active": 1745,
+    "Archived": 737
   },
   "age_distribution": {
-    "Today": 23,
-    "This week": 276,
-    "This month": 879,
-    "Older": 1475
+    "Today": 36,
+    "This week": 265,
+    "This month": 866,
+    "Older": 1315
   },
   "hottest_posts": [
     {
+      "title": "Taylor Swift wears her own merch to announce \u2018The ...",
+      "temperature": 100,
+      "days_old": 49,
+      "location": "active"
+    },
+    {
       "title": "'Love on the Spectrum' Dani Bowman Flips Off Trump...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Did Justin Baldoni Okay This? CRAZY Antics Trying ...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "Royal Watchers Claim Queen Camilla Told Kate Middl...",
-      "temperature": 100,
-      "days_old": 10,
-      "location": "active"
-    },
-    {
-      "title": "The Reason Taylor Swift Missed Travis Kelce\u2019s Game...",
       "temperature": 100,
       "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Trump Rages at Jimmy Kimmel and ABC as Late-Night ...",
+      "title": "Jason Kelce Gets Emotional Hearing Taylor Swift De...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 47,
       "location": "active"
     },
     {
-      "title": "Alan Cumming Invites Donald Trump to Compete on \u2018T...",
+      "title": "Donald Trump plans return to US Open finals decade...",
       "temperature": 100,
-      "days_old": 12,
+      "days_old": 26,
       "location": "active"
     },
     {
-      "title": "Jason Kelce's HILARIOUS Response To NBA Stars Want...",
+      "title": "Mark Carney Takes Subtle Jab at Trump Opening Toro...",
+      "temperature": 100,
+      "days_old": 25,
+      "location": "active"
+    },
+    {
+      "title": "Kate Moss puts on a glamorous display in a black b...",
       "temperature": 100,
       "days_old": 1,
       "location": "active"
     },
     {
-      "title": "The Dark Knight Trilogy Gets A New Steelbook Box S...",
+      "title": "Did Taylor Swift Make a Secret Cameo in Happy Gilm...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 59,
       "location": "active"
     },
     {
-      "title": "Did Elon Musk Go To Epstein Island?! Subpoenaed Sc...",
+      "title": "Here Are All the Ways You Can Catch Taylor Swift\u2019s...",
       "temperature": 100,
-      "days_old": 1,
+      "days_old": 48,
       "location": "active"
     },
     {
-      "title": "Donald Trump Threatens to Sue \u2018ABC Fake News\u2019 Over...",
+      "title": "Every Revelation From Taylor Swift's Most Most Per...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 48,
+      "location": "active"
+    },
+    {
+      "title": "\u2018South Park\u2019: Donald Trump Gets Satan Pregnant in ...",
+      "temperature": 100,
+      "days_old": 27,
       "location": "active"
     }
   ]

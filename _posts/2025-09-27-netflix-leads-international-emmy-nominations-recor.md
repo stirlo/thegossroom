@@ -3,9 +3,9 @@ categories:
 - gossip
 - entertainment
 celebrity_temps:
-  awards: 88.9
+  awards: 83.5
 date: '2025-09-27T23:56:47'
-drama_score: 88
+drama_score: 83
 layout: post
 mentions:
   awards: 1
@@ -14,8 +14,8 @@ source: variety
 source_url: https://variety.com/2025/tv/news/international-emmy-awards-2025-nominations-1236533204/
 tags:
 - awards
-temperature: 83
-title: Netflix Leads International Emmy Nominations, Record-Breaking 26 Countries
+temperature: 78
+title: Netflix Leads International Emmy Nominations, Record-Breaking 64 Countries
   Across All Categories
 ---
 
