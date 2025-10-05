@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-10-01T03:43:25.423527",
-  "total_posts": 2482,
+  "timestamp": "2025-10-05T03:10:27.359898",
+  "total_posts": 2635,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1230,
-    "Explosive (60-79\u00b0)": 515,
-    "Hot (40-59\u00b0)": 446,
-    "Warm (25-39\u00b0)": 291,
-    "Cool (<25\u00b0)": 0
+    "Nuclear (80-100\u00b0)": 1248,
+    "Explosive (60-79\u00b0)": 570,
+    "Hot (40-59\u00b0)": 493,
+    "Warm (25-39\u00b0)": 306,
+    "Cool (<25\u00b0)": 18
   },
   "location_distribution": {
-    "Active": 1745,
-    "Archived": 737
+    "Active": 200,
+    "Archived": 2435
   },
   "age_distribution": {
-    "Today": 36,
-    "This week": 264,
-    "This month": 867,
-    "Older": 1315
+    "Today": 31,
+    "This week": 268,
+    "This month": 910,
+    "Older": 1426
   },
   "hottest_posts": [
     {
-      "title": "Taylor Swift wears her own merch to announce \u2018The ...",
-      "temperature": 100,
-      "days_old": 49,
-      "location": "active"
-    },
-    {
       "title": "'Love on the Spectrum' Dani Bowman Flips Off Trump...",
       "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Jason Kelce Gets Emotional Hearing Taylor Swift De...",
-      "temperature": 100,
-      "days_old": 47,
-      "location": "active"
-    },
-    {
-      "title": "Donald Trump plans return to US Open finals decade...",
-      "temperature": 100,
-      "days_old": 26,
-      "location": "active"
-    },
-    {
-      "title": "Mark Carney Takes Subtle Jab at Trump Opening Toro...",
-      "temperature": 100,
-      "days_old": 25,
+      "days_old": 10,
       "location": "active"
     },
     {
       "title": "Kate Moss puts on a glamorous display in a black b...",
       "temperature": 100,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Kylie Jenner stuns in silver sequined gown as she ...",
+      "temperature": 100,
+      "days_old": 2,
+      "location": "active"
+    },
+    {
+      "title": "When Taylor Swift knew she wanted to marry Travis ...",
+      "temperature": 100,
       "days_old": 1,
       "location": "active"
     },
     {
-      "title": "Did Taylor Swift Make a Secret Cameo in Happy Gilm...",
+      "title": "Shailene Woodley dazzles in a strapless feathered ...",
       "temperature": 100,
-      "days_old": 59,
+      "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Here Are All the Ways You Can Catch Taylor Swift\u2019s...",
+      "title": "Trump Rages at Jimmy Kimmel and ABC as Late-Night ...",
       "temperature": 100,
-      "days_old": 48,
+      "days_old": 11,
       "location": "active"
     },
     {
-      "title": "Every Revelation From Taylor Swift's Most Most Per...",
+      "title": "Jason Kelce's HILARIOUS Response To NBA Stars Want...",
       "temperature": 100,
-      "days_old": 48,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "\u2018South Park\u2019: Donald Trump Gets Satan Pregnant in ...",
+      "title": "All Taylor Swift\u2019s \u2018The Life of a Showgirl\u2019 songs ...",
       "temperature": 100,
-      "days_old": 27,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Did Elon Musk Go To Epstein Island?! Subpoenaed Sc...",
+      "temperature": 100,
+      "days_old": 8,
+      "location": "active"
+    },
+    {
+      "title": "Donald Trump Threatens to Sue \u2018ABC Fake News\u2019 Over...",
+      "temperature": 100,
+      "days_old": 10,
       "location": "active"
     }
   ]
