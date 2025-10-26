@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-10-19T03:19:43.152656",
-  "total_posts": 3211,
+  "timestamp": "2025-10-26T03:13:50.210317",
+  "total_posts": 3478,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1368,
-    "Explosive (60-79\u00b0)": 570,
-    "Hot (40-59\u00b0)": 844,
-    "Warm (25-39\u00b0)": 379,
-    "Cool (<25\u00b0)": 50
+    "Nuclear (80-100\u00b0)": 1391,
+    "Explosive (60-79\u00b0)": 597,
+    "Hot (40-59\u00b0)": 1007,
+    "Warm (25-39\u00b0)": 409,
+    "Cool (<25\u00b0)": 74
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 3011
+    "Archived": 3278
   },
   "age_distribution": {
-    "Today": 38,
-    "This week": 301,
-    "This month": 886,
-    "Older": 1986
+    "Today": 29,
+    "This week": 276,
+    "This month": 908,
+    "Older": 2265
   },
   "hottest_posts": [
     {
-      "title": "Kim Kardashian Says She's Designing A Wedding Dres...",
+      "title": "Bad Bunny Did Nothing Wrong By Sitting During \u2018God...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Ryan Murphy Praises Kim Kardashian and Refers to \u2018...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Kylie Kelce Explains Taylor Swift's Most Controver...",
-      "temperature": 100,
-      "days_old": 9,
-      "location": "active"
-    },
-    {
-      "title": "Star snaps of the week: Kylie Jenner, Madonna, Lou...",
-      "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "Sarah Paulson Details Hilarious on Set Moment With...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Taylor Swift Takes Over \u2018Late Night with Seth Meye...",
-      "temperature": 100,
-      "days_old": 9,
-      "location": "active"
-    },
-    {
-      "title": "Donald Trump Got His Glowing Time Magazine Cover, ...",
-      "temperature": 100,
-      "days_old": 4,
-      "location": "active"
-    },
-    {
-      "title": "Kids and Drag Queen Trixie Mattel Quite Literally ...",
+      "title": "Peso Pluma Accepts First-Ever Vanguard Honor, Gush...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
     },
     {
-      "title": "These \u2018Work Pants That Feel Like Sweatpants\u2019 Are t...",
+      "title": "Kenny Loggins Exploring Legal Options to Stop Trum...",
       "temperature": 100,
       "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Taylor Swift torches critics of her The Life of a ...",
+      "title": "Kim Kardashian\u2019s Birthday Suit Is Gold Archival Gi...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "\u2018Wonder Man\u2019 Trailer: Yahya Abdul-Mateen II and Be...",
+      "temperature": 100,
+      "days_old": 14,
+      "location": "active"
+    },
+    {
+      "title": "Robert De Niro Speaks Up in Support of Anti-Trump ...",
+      "temperature": 100,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Jennifer Lawrence asked Robert Pattinson about Don...",
+      "temperature": 100,
+      "days_old": 0,
+      "location": "active"
+    },
+    {
+      "title": "Khlo\u00e9 Kardashian responds to Savannah Guthrie\u2019s ca...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Kim Kardashian turns heads in two of her sexiest l...",
+      "temperature": 100,
+      "days_old": 2,
+      "location": "active"
+    },
+    {
+      "title": "Savannah Guthrie reveals biggest \u2018Today\u2019 show regr...",
+      "temperature": 100,
+      "days_old": 5,
       "location": "active"
     }
   ]
