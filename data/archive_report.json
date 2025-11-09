@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-11-02T03:19:29.971642",
-  "total_posts": 3621,
+  "timestamp": "2025-11-09T03:16:43.399940",
+  "total_posts": 3895,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1403,
-    "Explosive (60-79\u00b0)": 635,
-    "Hot (40-59\u00b0)": 1118,
-    "Warm (25-39\u00b0)": 462,
-    "Cool (<25\u00b0)": 3
+    "Nuclear (80-100\u00b0)": 1380,
+    "Explosive (60-79\u00b0)": 676,
+    "Hot (40-59\u00b0)": 1190,
+    "Warm (25-39\u00b0)": 458,
+    "Cool (<25\u00b0)": 191
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 3421
+    "Archived": 3695
   },
   "age_distribution": {
     "Today": 33,
-    "This week": 252,
-    "This month": 911,
-    "Older": 2425
+    "This week": 274,
+    "This month": 891,
+    "Older": 2697
   },
   "hottest_posts": [
     {
-      "title": "Kenny Loggins Exploring Legal Options to Stop Trum...",
-      "temperature": 100,
-      "days_old": 12,
-      "location": "active"
-    },
-    {
-      "title": "Jennifer Lawrence Says \u2018I Don\u2019t Really Know If I S...",
-      "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "Robert De Niro Speaks Up in Support of Anti-Trump ...",
-      "temperature": 100,
-      "days_old": 12,
-      "location": "active"
-    },
-    {
-      "title": "Jennifer Lawrence asked Robert Pattinson about Don...",
-      "temperature": 100,
-      "days_old": 7,
-      "location": "active"
-    },
-    {
-      "title": "Heidi Klum Is Truly Petrifying as Medusa at Her An...",
-      "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "See the Kardashian-Jenner Family\u2019s Spooky and Swee...",
-      "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "Justin Bieber Recalls \u2018Butting Heads\u2019 With Doula D...",
+      "title": "Love Island copycat rivalry continues! Maura Higgi...",
       "temperature": 100,
       "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Kim Kardashian Fires Back at Critics Over North\u2019s ...",
+      "title": "Would Selling Sunset's Emma Reconcile With Chrishe...",
       "temperature": 100,
-      "days_old": 6,
+      "days_old": 4,
       "location": "active"
     },
     {
-      "title": "\u2018A Lot of Us Have Made Wills\u2019: Anti-Fascists Dig I...",
+      "title": "Jennifer Lawrence Says \u2018I Don\u2019t Really Know If I S...",
+      "temperature": 100,
+      "days_old": 7,
+      "location": "active"
+    },
+    {
+      "title": "The Best Looks at the 2025 CFDA Fashion Awards, Fr...",
+      "temperature": 100,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Ashley Graham Reveals How She Wore a Braless Look ...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Hailey Bieber wears head-to-toe leather for WSJ In...",
+      "title": "Bryce Harper Allegedly Threatened By MLB Official ...",
+      "temperature": 100,
+      "days_old": 0,
+      "location": "active"
+    },
+    {
+      "title": "\u2018Godzilla -0.0\u2019 Marks Next Chapter for Toho\u2019s Mons...",
+      "temperature": 100,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Did Kylie Jenner's Friends SHADE Her Behind Her Ba...",
       "temperature": 100,
       "days_old": 2,
+      "location": "active"
+    },
+    {
+      "title": "Kim Kardashian reveals how North reacted to backla...",
+      "temperature": 100,
+      "days_old": 2,
+      "location": "active"
+    },
+    {
+      "title": "Jason Tartick Says He Ran Into Taylor Swift and Tr...",
+      "temperature": 100,
+      "days_old": 0,
       "location": "active"
     }
   ]
