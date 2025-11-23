@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-11-16T03:22:31.318192",
-  "total_posts": 4179,
+  "timestamp": "2025-11-23T03:39:07.191192",
+  "total_posts": 4464,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1151,
-    "Explosive (60-79\u00b0)": 553,
-    "Hot (40-59\u00b0)": 1377,
-    "Warm (25-39\u00b0)": 535,
-    "Cool (<25\u00b0)": 563
+    "Nuclear (80-100\u00b0)": 1154,
+    "Explosive (60-79\u00b0)": 543,
+    "Hot (40-59\u00b0)": 1461,
+    "Warm (25-39\u00b0)": 547,
+    "Cool (<25\u00b0)": 759
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 3979
+    "Archived": 4264
   },
   "age_distribution": {
-    "Today": 34,
-    "This week": 283,
-    "This month": 874,
-    "Older": 2988
+    "Today": 28,
+    "This week": 291,
+    "This month": 880,
+    "Older": 3265
   },
   "hottest_posts": [
     {
-      "title": "Inside Kendall Jenner's campaign to become the nex...",
-      "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "The Devastating Legacy of Nuclear Weapons Tests",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
       "title": "Firelight Media Chief Doubles Down Amid Trump Thre...",
       "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "See the Kardashian-Jenner Sisters' Chic Looks at M...",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Kim Kardashian Slams 4 Psychics Who Told Her She'd...",
-      "temperature": 100,
-      "days_old": 4,
+      "days_old": 10,
       "location": "active"
     },
     {
       "title": "Trump\u2019s History of Weird Comments About Magnets",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 7,
       "location": "active"
     },
     {
-      "title": "The best celebrity looks from Kris Jenner\u2019s Bond-t...",
+      "title": "CMA Awards 2025: Lainey Wilson Reclaims Entertaine...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Kourtney Kardashian Celebrates Travis Barker\u2019s 50t...",
+      "title": "Kelsea Ballerini Walks 2025 CMAs Red Carpet Solo A...",
       "temperature": 100,
-      "days_old": 2,
+      "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Strictly's George Clarke goes official with linger...",
+      "title": "Jimmy Kimmel Skewers Trump Over Renewed Call to Pu...",
       "temperature": 100,
       "days_old": 1,
       "location": "active"
     },
     {
-      "title": "Kim Kardashian's Hopes for 'All's Fair' and Bar Ex...",
+      "title": "FCC Chairman Shares Trump Post Calling for NBC to ...",
       "temperature": 100,
-      "days_old": 2,
+      "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "Kim Kardashian & North West Respond To Backlash Ov...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Family Says Ozzy Osbourne Was Hospitalized Two Wee...",
+      "temperature": 100,
+      "days_old": 9,
+      "location": "active"
+    },
+    {
+      "title": "Is This A Bad Thing? Britney Spears And The Kardas...",
+      "temperature": 100,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Timoth\u00e9e Chalamet Feels 'Something Is Broken' In K...",
+      "temperature": 100,
+      "days_old": 11,
       "location": "active"
     }
   ]
