@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-11-23T03:39:58.954730",
-  "total_posts": 4464,
+  "timestamp": "2025-11-30T03:38:58.462420",
+  "total_posts": 4696,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1153,
-    "Explosive (60-79\u00b0)": 542,
-    "Hot (40-59\u00b0)": 1461,
-    "Warm (25-39\u00b0)": 547,
-    "Cool (<25\u00b0)": 761
+    "Nuclear (80-100\u00b0)": 1027,
+    "Explosive (60-79\u00b0)": 547,
+    "Hot (40-59\u00b0)": 1537,
+    "Warm (25-39\u00b0)": 586,
+    "Cool (<25\u00b0)": 999
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 4264
+    "Archived": 4496
   },
   "age_distribution": {
-    "Today": 28,
-    "This week": 291,
-    "This month": 880,
-    "Older": 3265
+    "Today": 15,
+    "This week": 245,
+    "This month": 930,
+    "Older": 3506
   },
   "hottest_posts": [
     {
       "title": "Firelight Media Chief Doubles Down Amid Trump Thre...",
       "temperature": 100,
-      "days_old": 10,
+      "days_old": 17,
       "location": "active"
     },
     {
-      "title": "Trump\u2019s History of Weird Comments About Magnets",
-      "temperature": 100,
-      "days_old": 7,
-      "location": "active"
-    },
-    {
-      "title": "CMA Awards 2025: Lainey Wilson Reclaims Entertaine...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Kelsea Ballerini Walks 2025 CMAs Red Carpet Solo A...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Jimmy Kimmel Skewers Trump Over Renewed Call to Pu...",
+      "title": "'Stranger Things' Spinoffs We Want to See: Steve, ...",
       "temperature": 100,
       "days_old": 1,
       "location": "active"
     },
     {
-      "title": "FCC Chairman Shares Trump Post Calling for NBC to ...",
+      "title": "Trump\u2019s History of Weird Comments About Magnets",
+      "temperature": 100,
+      "days_old": 14,
+      "location": "active"
+    },
+    {
+      "title": "Travis Kelce\u2019s Dad Ed Kelce Defends Him Against NF...",
       "temperature": 100,
       "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Kim Kardashian & North West Respond To Backlash Ov...",
+      "title": "Ed Sheeran insists he had 'four-hour' talk with Ta...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 0,
       "location": "active"
     },
     {
-      "title": "Family Says Ozzy Osbourne Was Hospitalized Two Wee...",
+      "title": "Jimmy Kimmel Skewers Trump Over Renewed Call to Pu...",
       "temperature": 100,
-      "days_old": 9,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Is This A Bad Thing? Britney Spears And The Kardas...",
+      "title": "FCC Chairman Shares Trump Post Calling for NBC to ...",
+      "temperature": 100,
+      "days_old": 13,
+      "location": "active"
+    },
+    {
+      "title": "Netflix Will Lose This Fan-Favorite CW Show in Dec...",
       "temperature": 100,
       "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Timoth\u00e9e Chalamet Feels 'Something Is Broken' In K...",
+      "title": "Kim Kardashian & North West Respond To Backlash Ov...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 10,
+      "location": "active"
+    },
+    {
+      "title": "Family Says Ozzy Osbourne Was Hospitalized Two Wee...",
+      "temperature": 100,
+      "days_old": 16,
       "location": "active"
     }
   ]
