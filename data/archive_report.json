@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-12-07T03:40:07.080600",
-  "total_posts": 3914,
+  "timestamp": "2025-12-14T03:41:23.471731",
+  "total_posts": 4176,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 999,
-    "Explosive (60-79\u00b0)": 517,
-    "Hot (40-59\u00b0)": 1527,
-    "Warm (25-39\u00b0)": 623,
-    "Cool (<25\u00b0)": 248
+    "Nuclear (80-100\u00b0)": 917,
+    "Explosive (60-79\u00b0)": 563,
+    "Hot (40-59\u00b0)": 1535,
+    "Warm (25-39\u00b0)": 648,
+    "Cool (<25\u00b0)": 513
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 3714
+    "Archived": 3976
   },
   "age_distribution": {
-    "Today": 32,
-    "This week": 219,
-    "This month": 878,
-    "Older": 2785
+    "Today": 26,
+    "This week": 268,
+    "This month": 819,
+    "Older": 3063
   },
   "hottest_posts": [
     {
-      "title": "Adam Sandler honors Noah Baumbach at bigger 2025 G...",
+      "title": "David Ellison\u2019s Netflix Scare Tactic Runs Into Eur...",
       "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Kim Kardashian jokes about being \u2018cringiest mom on...",
-      "temperature": 100,
-      "days_old": 2,
+      "days_old": 0,
       "location": "active"
     },
     {
       "title": "Travis Kelce\u2019s Dad Ed Kelce Defends Him Against NF...",
       "temperature": 100,
-      "days_old": 13,
+      "days_old": 20,
       "location": "active"
     },
     {
-      "title": "Jimmy Kimmel Skewers Trump Over Renewed Call to Pu...",
-      "temperature": 100,
-      "days_old": 15,
-      "location": "active"
-    },
-    {
-      "title": "Leonardo DiCaprio\u2019s \u2018One Battle After Another\u2019 dom...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Kim Kardashian & North West Respond To Backlash Ov...",
-      "temperature": 100,
-      "days_old": 17,
-      "location": "active"
-    },
-    {
-      "title": "Prince Harry Takes Jab At Trump, Almost Kisses Ste...",
+      "title": "\u2018South Park\u2019 Season 28 Finale: Trump Celebrates th...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Rihanna, Jennifer Lawrence, Jacob Elordi and more ...",
+      "title": "The Antichrist\u2019s Arrival in \u2018South Park\u2019 Gets a Da...",
+      "temperature": 100,
+      "days_old": 2,
+      "location": "active"
+    },
+    {
+      "title": "Rhea Seehorn Celebrates Golden Globe Nomination fo...",
       "temperature": 100,
       "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Warner Bros.\u2019 Hidden Appeal to Netflix: AI Superch...",
+      "title": "Donald Trump Takes Center Stage at 2025 Kennedy Ce...",
       "temperature": 100,
-      "days_old": 1,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Prince Harry Takes Jab At Trump, Almost Kisses Ste...",
+      "temperature": 100,
+      "days_old": 9,
+      "location": "active"
+    },
+    {
+      "title": "Kim Kardashian Gives Inside Look at Hangout with B...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Where the Original \u2018America First\u2019 Leader Went to ...",
+      "temperature": 100,
+      "days_old": 6,
       "location": "active"
     },
     {
       "title": "Trump White House Twists Sabrina Carpenter\u2019s \u2018Have...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 11,
       "location": "active"
     }
   ]
