@@ -1,38 +1,62 @@
 {
-  "timestamp": "2025-12-14T03:42:41.451902",
-  "total_posts": 4176,
+  "timestamp": "2025-12-21T03:41:37.427266",
+  "total_posts": 4446,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 917,
-    "Explosive (60-79\u00b0)": 563,
-    "Hot (40-59\u00b0)": 1535,
-    "Warm (25-39\u00b0)": 648,
-    "Cool (<25\u00b0)": 513
+    "Nuclear (80-100\u00b0)": 876,
+    "Explosive (60-79\u00b0)": 540,
+    "Hot (40-59\u00b0)": 1566,
+    "Warm (25-39\u00b0)": 686,
+    "Cool (<25\u00b0)": 778
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 3976
+    "Archived": 4246
   },
   "age_distribution": {
-    "Today": 26,
-    "This week": 268,
-    "This month": 819,
-    "Older": 3063
+    "Today": 27,
+    "This week": 269,
+    "This month": 800,
+    "Older": 3350
   },
   "hottest_posts": [
     {
-      "title": "David Ellison\u2019s Netflix Scare Tactic Runs Into Eur...",
+      "title": "\u2018SNL\u2019 Cold Open: Trump Stumped By Epstein Photos W...",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Travis Kelce\u2019s Dad Ed Kelce Defends Him Against NF...",
+      "title": "David Ellison\u2019s Netflix Scare Tactic Runs Into Eur...",
       "temperature": 100,
-      "days_old": 20,
+      "days_old": 7,
+      "location": "active"
+    },
+    {
+      "title": "Why Travis Kelce Didn't Speak to the Media After C...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Rob Reiner and Wife Michele's History With Donald ...",
+      "temperature": 100,
+      "days_old": 4,
       "location": "active"
     },
     {
       "title": "\u2018South Park\u2019 Season 28 Finale: Trump Celebrates th...",
+      "temperature": 100,
+      "days_old": 9,
+      "location": "active"
+    },
+    {
+      "title": "\u2018Landman\u2019 Slams \u2018The View\u2019: Taylor Sheridan Script...",
+      "temperature": 100,
+      "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "Beyonc\u00e9\u2019s Company Parkwood Fights \u2018Alien Superstar...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
@@ -40,43 +64,19 @@
     {
       "title": "The Antichrist\u2019s Arrival in \u2018South Park\u2019 Gets a Da...",
       "temperature": 100,
-      "days_old": 2,
-      "location": "active"
-    },
-    {
-      "title": "Rhea Seehorn Celebrates Golden Globe Nomination fo...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "Donald Trump Takes Center Stage at 2025 Kennedy Ce...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "Prince Harry Takes Jab At Trump, Almost Kisses Ste...",
-      "temperature": 100,
       "days_old": 9,
       "location": "active"
     },
     {
-      "title": "Kim Kardashian Gives Inside Look at Hangout with B...",
+      "title": "Khloe Kardashian Shares Kids True and Tatum's Chri...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Where the Original \u2018America First\u2019 Leader Went to ...",
+      "title": "\u2018Sinners\u2019 Leads 2025 Black Film Critics Circle Awa...",
       "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Trump White House Twists Sabrina Carpenter\u2019s \u2018Have...",
-      "temperature": 100,
-      "days_old": 11,
+      "days_old": 2,
       "location": "active"
     }
   ]
