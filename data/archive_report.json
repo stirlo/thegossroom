@@ -1,82 +1,82 @@
 {
-  "timestamp": "2025-12-28T03:52:04.739230",
-  "total_posts": 4690,
+  "timestamp": "2026-01-01T04:10:58.135085",
+  "total_posts": 3611,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 905,
-    "Explosive (60-79\u00b0)": 543,
-    "Hot (40-59\u00b0)": 1479,
-    "Warm (25-39\u00b0)": 709,
-    "Cool (<25\u00b0)": 1054
+    "Nuclear (80-100\u00b0)": 888,
+    "Explosive (60-79\u00b0)": 548,
+    "Hot (40-59\u00b0)": 1457,
+    "Warm (25-39\u00b0)": 718,
+    "Cool (<25\u00b0)": 0
   },
   "location_distribution": {
-    "Active": 200,
-    "Archived": 4490
+    "Active": 1436,
+    "Archived": 2175
   },
   "age_distribution": {
-    "Today": 25,
-    "This week": 246,
-    "This month": 824,
-    "Older": 3595
+    "Today": 35,
+    "This week": 217,
+    "This month": 833,
+    "Older": 2526
   },
   "hottest_posts": [
     {
-      "title": "Travis Kelce Wrote Taylor Swift a Romantic Letter ...",
+      "title": "David Ellison\u2019s Netflix Scare Tactic Runs Into Eur...",
       "temperature": 100,
-      "days_old": 4,
-      "location": "active"
-    },
-    {
-      "title": "Model Anok Yai Shares Congenital Defect Is \u201cDestro...",
-      "temperature": 100,
-      "days_old": 5,
+      "days_old": 18,
       "location": "active"
     },
     {
       "title": "Rob Kardashian Reveals If He'll Appear on 'The Kar...",
       "temperature": 100,
-      "days_old": 2,
+      "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "CNN\u2019s Jake Tapper Calls Out Trump for \u2018Attacking t...",
+      "temperature": 100,
+      "days_old": 0,
       "location": "active"
     },
     {
       "title": "Rob Reiner and Wife Michele's History With Donald ...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 15,
+      "location": "active"
+    },
+    {
+      "title": "Rosie O\u2019Donnell Is Close to Securing Her Irish Cit...",
+      "temperature": 100,
+      "days_old": 85,
       "location": "active"
     },
     {
       "title": "Taylor Swift Wears a Bold Red Jacket at Travis Kel...",
       "temperature": 100,
-      "days_old": 2,
-      "location": "active"
-    },
-    {
-      "title": "Diamonds and designer vintage: All the details on ...",
-      "temperature": 100,
-      "days_old": 2,
-      "location": "active"
-    },
-    {
-      "title": "Meghan King Shares Post About Navigating \u2018Tough Ye...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Guess Who This Jet-Setting Superstar Is!",
-      "temperature": 100,
       "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Watch Jason Kelce Rock Out as Santa Claus on \u2018Mond...",
+      "title": "\u2018South Park\u2019 Season 28 Finale: Trump Celebrates th...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 21,
       "location": "active"
     },
     {
-      "title": "Donald Trump\u2019s National Address: Where to Watch th...",
+      "title": "\u2018Landman\u2019 Slams \u2018The View\u2019: Taylor Sheridan Script...",
       "temperature": 100,
-      "days_old": 10,
+      "days_old": 17,
+      "location": "active"
+    },
+    {
+      "title": "The Sneaky Way Patrick Mahomes Learned About Taylo...",
+      "temperature": 100,
+      "days_old": 140,
+      "location": "active"
+    },
+    {
+      "title": "The Antichrist\u2019s Arrival in \u2018South Park\u2019 Gets a Da...",
+      "temperature": 100,
+      "days_old": 20,
       "location": "active"
     }
   ]
