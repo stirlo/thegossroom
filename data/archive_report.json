@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-01-04T03:54:17.374951",
-  "total_posts": 3684,
+  "timestamp": "2026-01-11T03:53:36.810614",
+  "total_posts": 3951,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 862,
-    "Explosive (60-79\u00b0)": 516,
-    "Hot (40-59\u00b0)": 1471,
-    "Warm (25-39\u00b0)": 723,
-    "Cool (<25\u00b0)": 112
+    "Nuclear (80-100\u00b0)": 921,
+    "Explosive (60-79\u00b0)": 460,
+    "Hot (40-59\u00b0)": 1418,
+    "Warm (25-39\u00b0)": 762,
+    "Cool (<25\u00b0)": 390
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 3484
+    "Archived": 3751
   },
   "age_distribution": {
-    "Today": 12,
-    "This week": 207,
-    "This month": 828,
-    "Older": 2637
+    "Today": 33,
+    "This week": 246,
+    "This month": 776,
+    "Older": 2896
   },
   "hottest_posts": [
     {
-      "title": "Rob Kardashian Reveals If He'll Appear on 'The Kar...",
+      "title": "Travis Kelce Is Grifting! THIS Is So Disappointing...",
       "temperature": 100,
-      "days_old": 9,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Timothee Chalamet and Kylie Jenner Steal the Show ...",
+      "temperature": 100,
+      "days_old": 6,
       "location": "active"
     },
     {
       "title": "CNN\u2019s Jake Tapper Calls Out Trump for \u2018Attacking t...",
       "temperature": 100,
+      "days_old": 10,
+      "location": "active"
+    },
+    {
+      "title": "Love Gisele Bundchen's Roomy Airport Tote? Nail th...",
+      "temperature": 100,
       "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Taylor Swift Wears a Bold Red Jacket at Travis Kel...",
+      "title": "Iman Honors Husband David Bowie On 10th Anniversar...",
       "temperature": 100,
-      "days_old": 9,
+      "days_old": 0,
       "location": "active"
     },
     {
-      "title": "Shoppers Swear by These Super-Strong Hairsprays Th...",
+      "title": "Amanda Seyfried baffled by Timothee Chalamet's gus...",
       "temperature": 100,
       "days_old": 4,
       "location": "active"
     },
     {
-      "title": "Travis Kelce reveals Christmas celebration with Ta...",
+      "title": "Justin Sylvester Jokes About Alix Earle's DMs Afte...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 6,
       "location": "active"
     },
     {
-      "title": "Watch Jason Kelce Rock Out as Santa Claus on \u2018Mond...",
+      "title": "Kristen Bell Rocks Black Dress as She Attends Crit...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 6,
       "location": "active"
     },
     {
-      "title": "The BOTS Act Was Created by Ticketmaster. So Why I...",
+      "title": "Was a Priest Behind the Steelers\u2019 Playoff-Clinchin...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Jason Kelce Gets SUPER REAL About The Fame That Co...",
+      "title": "Timoth\u00e9e Chalamet declares his love for Kylie Jenn...",
       "temperature": 100,
-      "days_old": 10,
-      "location": "active"
-    },
-    {
-      "title": "Travis Kelce Reveals Best Gift He's Gotten for Fia...",
-      "temperature": 100,
-      "days_old": 10,
-      "location": "active"
-    },
-    {
-      "title": "Travis Kelce Hints at Secret Christmas Present Fro...",
-      "temperature": 100,
-      "days_old": 3,
+      "days_old": 6,
       "location": "active"
     }
   ]
