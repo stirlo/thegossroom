@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-01-18T03:50:17.016378",
-  "total_posts": 4213,
+  "timestamp": "2026-01-25T03:57:22.830662",
+  "total_posts": 4471,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 997,
-    "Explosive (60-79\u00b0)": 448,
-    "Hot (40-59\u00b0)": 1352,
-    "Warm (25-39\u00b0)": 736,
-    "Cool (<25\u00b0)": 680
+    "Nuclear (80-100\u00b0)": 920,
+    "Explosive (60-79\u00b0)": 516,
+    "Hot (40-59\u00b0)": 1343,
+    "Warm (25-39\u00b0)": 754,
+    "Cool (<25\u00b0)": 938
   },
   "location_distribution": {
-    "Active": 187,
-    "Archived": 4026
+    "Active": 200,
+    "Archived": 4271
   },
   "age_distribution": {
-    "Today": 29,
-    "This week": 266,
-    "This month": 774,
-    "Older": 3144
+    "Today": 23,
+    "This week": 264,
+    "This month": 788,
+    "Older": 3396
   },
   "hottest_posts": [
     {
       "title": "Travis Kelce Is Grifting! THIS Is So Disappointing...",
       "temperature": 100,
-      "days_old": 8,
+      "days_old": 15,
       "location": "active"
     },
     {
-      "title": "CNN\u2019s Jake Tapper Calls Out Trump for \u2018Attacking t...",
+      "title": "Kristen Bell to Return as Host of SAG Actor Awards",
       "temperature": 100,
-      "days_old": 17,
+      "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Jennifer Lawrence Attends 2026 Golden Globes in Ja...",
+      "title": "\u2018Sinners\u2019 Breaks All-Time Oscar Nomination Record ...",
       "temperature": 100,
-      "days_old": 6,
+      "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Timothee Chalamet FINALLY goes Instagram official ...",
+      "title": "Trump\u2019s Greenland Takeover Could Be Silicon Valley...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 1,
       "location": "active"
     },
     {
       "title": "What Can Actually Be Done to Rein in ICE?",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 7,
       "location": "active"
     },
     {
       "title": "This Viral \u2018No War Yes Peace\u2019 Remix Took Over the ...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 18,
       "location": "active"
     },
     {
-      "title": "Travis Kelce reveals Christmas celebration with Ta...",
+      "title": "Billie Eilish Slams Trump Administration Over ICE ...",
       "temperature": 100,
-      "days_old": 17,
+      "days_old": 4,
+      "location": "active"
+    },
+    {
+      "title": "Britney Spears Praises Madonna For Being \u2018Wise\u2019 an...",
+      "temperature": 100,
+      "days_old": 4,
+      "location": "active"
+    },
+    {
+      "title": "\u2018SNL\u2019 Weekend Update Calls Out \u2018Psycho\u2019 Trump for ...",
+      "temperature": 100,
+      "days_old": 6,
       "location": "active"
     },
     {
       "title": "\u2018Awards Chatter\u2019 Pod: Wagner Moura on Brazil\u2019s \u2018Th...",
       "temperature": 100,
-      "days_old": 10,
-      "location": "active"
-    },
-    {
-      "title": "Teyana Taylor Shares Her Daughter\u2019s Sweet Reaction...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "iHeartPodcast Awards Reveal 2026 Nominees (Exclusi...",
-      "temperature": 100,
-      "days_old": 3,
+      "days_old": 17,
       "location": "active"
     }
   ]
