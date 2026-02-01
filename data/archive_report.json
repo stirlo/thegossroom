@@ -1,28 +1,58 @@
 {
-  "timestamp": "2026-02-01T04:33:38.592034",
-  "total_posts": 4739,
+  "timestamp": "2026-02-01T05:03:37.084311",
+  "total_posts": 3568,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 962,
-    "Explosive (60-79\u00b0)": 535,
-    "Hot (40-59\u00b0)": 1295,
+    "Nuclear (80-100\u00b0)": 964,
+    "Explosive (60-79\u00b0)": 536,
+    "Hot (40-59\u00b0)": 1296,
     "Warm (25-39\u00b0)": 772,
-    "Cool (<25\u00b0)": 1175
+    "Cool (<25\u00b0)": 0
   },
   "location_distribution": {
-    "Active": 200,
-    "Archived": 4539
+    "Active": 1500,
+    "Archived": 2068
   },
   "age_distribution": {
-    "Today": 27,
-    "This week": 264,
-    "This month": 837,
-    "Older": 3611
+    "Today": 32,
+    "This week": 260,
+    "This month": 816,
+    "Older": 2460
   },
   "hottest_posts": [
+    {
+      "title": "Travis Kelce Is Grifting! THIS Is So Disappointing...",
+      "temperature": 100,
+      "days_old": 23,
+      "location": "active"
+    },
     {
       "title": "Bella Hadid\u2019s Ex Adan Banuelos Arrested for Public...",
       "temperature": 100,
       "days_old": 0,
+      "location": "active"
+    },
+    {
+      "title": "CNN\u2019s Jake Tapper Calls Out Trump for \u2018Attacking t...",
+      "temperature": 100,
+      "days_old": 31,
+      "location": "active"
+    },
+    {
+      "title": "Rob Reiner and Wife Michele's History With Donald ...",
+      "temperature": 100,
+      "days_old": 46,
+      "location": "active"
+    },
+    {
+      "title": "\u2018South Park\u2019 Season 28 Finale: Trump Celebrates th...",
+      "temperature": 100,
+      "days_old": 52,
+      "location": "active"
+    },
+    {
+      "title": "The Sneaky Way Patrick Mahomes Learned About Taylo...",
+      "temperature": 100,
+      "days_old": 171,
       "location": "active"
     },
     {
@@ -47,36 +77,6 @@
       "title": "Melania Trump Calls for Peaceful Protest in Minnea...",
       "temperature": 100,
       "days_old": 4,
-      "location": "active"
-    },
-    {
-      "title": "Future In-Laws Andrea Swift & Donna Kelce Look Lik...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "Billie Eilish Slams Trump Administration Over ICE ...",
-      "temperature": 100,
-      "days_old": 11,
-      "location": "active"
-    },
-    {
-      "title": "How to Watch the 2026 BAFTA Film Awards Nomination...",
-      "temperature": 100,
-      "days_old": 4,
-      "location": "active"
-    },
-    {
-      "title": "Britney Spears Praises Madonna For Being \u2018Wise\u2019 an...",
-      "temperature": 100,
-      "days_old": 11,
-      "location": "active"
-    },
-    {
-      "title": "Kandy Red Bread on \u2018Safety Watch\u2019 After Allegedly ...",
-      "temperature": 100,
-      "days_old": 6,
       "location": "active"
     }
   ]
