@@ -1,0 +1,24 @@
+---
+categories:
+- gossip
+- entertainment
+celebrity_temps:
+  awards: 100
+date: '2026-02-28T19:00:00'
+drama_score: 100
+layout: post
+mentions:
+  awards: 1
+primary_celebrity: awards
+source: variety
+source_url: https://variety.com/2026/awards/columns/black-awards-shows-safe-spaces-bafta-n-word-controversy-1236675224/
+tags:
+- awards
+temperature: 95
+title: "Why Black Award Shows Matter Amid BAFTAs N-Word Controversy: \u2018Safe Spaces\
+  \ Are Not About Retreat, They Are About Dignity\u2019 (Guest Column)"
+---
+
+When a racial slur was shouted from the audience as Michael B. Jordan and Delroy Lindo presented at the BAFTA Awards, many viewers experienced a familiar mix of shock and exhaustion. The moment was brief. The impact was not. Subsequent reporting indicated that the individual responsible is a Tourette’s activist and that a warning had […]
+
+[Read more at variety](https://variety.com/2026/awards/columns/black-awards-shows-safe-spaces-bafta-n-word-controversy-1236675224/)
