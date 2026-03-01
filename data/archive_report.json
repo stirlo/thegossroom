@@ -1,24 +1,36 @@
 {
-  "timestamp": "2026-03-01T04:27:11.232890",
-  "total_posts": 4601,
+  "timestamp": "2026-03-01T04:56:43.261202",
+  "total_posts": 3644,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1099,
+    "Nuclear (80-100\u00b0)": 1104,
     "Explosive (60-79\u00b0)": 446,
     "Hot (40-59\u00b0)": 1268,
     "Warm (25-39\u00b0)": 826,
-    "Cool (<25\u00b0)": 962
+    "Cool (<25\u00b0)": 0
   },
   "location_distribution": {
-    "Active": 200,
-    "Archived": 4401
+    "Active": 1550,
+    "Archived": 2094
   },
   "age_distribution": {
-    "Today": 29,
+    "Today": 32,
     "This week": 253,
-    "This month": 866,
-    "Older": 3453
+    "This month": 851,
+    "Older": 2508
   },
   "hottest_posts": [
+    {
+      "title": "Travis Kelce Jokes He Gained Weight After Eating T...",
+      "temperature": 100,
+      "days_old": 23,
+      "location": "active"
+    },
+    {
+      "title": "Taylor Swift Reveals Travis Kelce's Surprising Rol...",
+      "temperature": 100,
+      "days_old": 15,
+      "location": "active"
+    },
     {
       "title": "Arab Superstar Mohamed Ramadan, Egypt\u2019s First Arti...",
       "temperature": 100,
@@ -32,51 +44,39 @@
       "location": "active"
     },
     {
+      "title": "White House Celebrates Valentine's Day with Cards ...",
+      "temperature": 100,
+      "days_old": 14,
+      "location": "active"
+    },
+    {
+      "title": "Disney Is Launching Its 2027 Super Bowl Blitz",
+      "temperature": 100,
+      "days_old": 16,
+      "location": "active"
+    },
+    {
+      "title": "\u2018Kennedy Center Honors\u2019 Will Be Renamed \u2018Trump Ken...",
+      "temperature": 100,
+      "days_old": 0,
+      "location": "active"
+    },
+    {
       "title": "Noel Gallagher praises his younger brother Liam af...",
       "temperature": 100,
       "days_old": 0,
       "location": "active"
     },
     {
+      "title": "Elizabeth Taylor's Son Hopes New Taylor Swift Song...",
+      "temperature": 100,
+      "days_old": 198,
+      "location": "active"
+    },
+    {
       "title": "Visual Effects Society Awards: \u2018Avatar: Fire and A...",
       "temperature": 100,
       "days_old": 2,
-      "location": "active"
-    },
-    {
-      "title": "Trump Touts Economic Record and Slams Immigrants i...",
-      "temperature": 100,
-      "days_old": 4,
-      "location": "active"
-    },
-    {
-      "title": "WWE Superstar Kiana James Fires Back At Tom Brady,...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Ted Sarandos Responds to Donald Trump\u2019s Call to Fi...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "Alan Cumming Addresses Attendee\u2019s Tourette's Outbu...",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Stars Who Showed Off Their Baby Bumps at SAG's Act...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "NAACP Image Awards: \u2018Sinners\u2019 Captures Three Prize...",
-      "temperature": 100,
-      "days_old": 3,
       "location": "active"
     }
   ]
