@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-02-22T04:22:58.413129",
-  "total_posts": 4342,
+  "timestamp": "2026-03-01T04:25:47.137585",
+  "total_posts": 4601,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 1078,
-    "Explosive (60-79\u00b0)": 426,
-    "Hot (40-59\u00b0)": 1247,
-    "Warm (25-39\u00b0)": 802,
-    "Cool (<25\u00b0)": 789
+    "Nuclear (80-100\u00b0)": 1099,
+    "Explosive (60-79\u00b0)": 446,
+    "Hot (40-59\u00b0)": 1268,
+    "Warm (25-39\u00b0)": 826,
+    "Cool (<25\u00b0)": 962
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 4142
+    "Archived": 4401
   },
   "age_distribution": {
-    "Today": 23,
-    "This week": 258,
-    "This month": 859,
-    "Older": 3202
+    "Today": 29,
+    "This week": 253,
+    "This month": 866,
+    "Older": 3453
   },
   "hottest_posts": [
     {
-      "title": "Berlinale Award Winners (Updating Live)",
+      "title": "Arab Superstar Mohamed Ramadan, Egypt\u2019s First Arti...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Revisit the Biggest Moments From SAG's Actor Award...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "Noel Gallagher praises his younger brother Liam af...",
       "temperature": 100,
       "days_old": 0,
       "location": "active"
     },
     {
-      "title": "Trump Says It's 'A Very Sad Thing' Andrew Got Arre...",
+      "title": "Visual Effects Society Awards: \u2018Avatar: Fire and A...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Tom Brady's Dating History: From Gisele Bundchen M...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Donald Trump Declares \u2018I Love Nicki Minaj\u2019 at Whit...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Make-Up Artists and Hair Stylists Guild Awards: \u2018O...",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Spirit Awards: Clint Bentley Says \u2018Train Dreams\u2019 I...",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Donald Trump Demands Netflix \u2018Immediately Fire\u2019 Bo...",
-      "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "Donald Trump Warns Nancy Guthrie Abductors Will Fa...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "Bad Bunny\u2019s \u2018DtMF\u2019 Touches Down at No. 1 on Billbo...",
+      "title": "Trump Touts Economic Record and Slams Immigrants i...",
       "temperature": 100,
       "days_old": 4,
       "location": "active"
     },
     {
-      "title": "Taylor Swift Reveals Travis Kelce's Surprising Rol...",
+      "title": "WWE Superstar Kiana James Fires Back At Tom Brady,...",
       "temperature": 100,
-      "days_old": 8,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Ted Sarandos Responds to Donald Trump\u2019s Call to Fi...",
+      "temperature": 100,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Alan Cumming Addresses Attendee\u2019s Tourette's Outbu...",
+      "temperature": 100,
+      "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "Stars Who Showed Off Their Baby Bumps at SAG's Act...",
+      "temperature": 100,
+      "days_old": 1,
+      "location": "active"
+    },
+    {
+      "title": "NAACP Image Awards: \u2018Sinners\u2019 Captures Three Prize...",
+      "temperature": 100,
+      "days_old": 3,
       "location": "active"
     }
   ]
