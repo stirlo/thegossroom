@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-03-29T04:42:09.757747",
-  "total_posts": 4660,
+  "timestamp": "2026-04-01T05:27:37.716905",
+  "total_posts": 3793,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 844,
-    "Explosive (60-79\u00b0)": 514,
-    "Hot (40-59\u00b0)": 1552,
-    "Warm (25-39\u00b0)": 859,
-    "Cool (<25\u00b0)": 891
+    "Nuclear (80-100\u00b0)": 784,
+    "Explosive (60-79\u00b0)": 531,
+    "Hot (40-59\u00b0)": 1584,
+    "Warm (25-39\u00b0)": 894,
+    "Cool (<25\u00b0)": 0
   },
   "location_distribution": {
-    "Active": 200,
-    "Archived": 4460
+    "Active": 1315,
+    "Archived": 2478
   },
   "age_distribution": {
-    "Today": 26,
-    "This week": 261,
-    "This month": 840,
-    "Older": 3533
+    "Today": 37,
+    "This week": 251,
+    "This month": 794,
+    "Older": 2711
   },
   "hottest_posts": [
     {
       "title": "Window Company Wants Donna Kelce as Spokesperson A...",
       "temperature": 100,
-      "days_old": 16,
+      "days_old": 19,
+      "location": "active"
+    },
+    {
+      "title": "President Trump Posts Video Showing Fiery Bunker B...",
+      "temperature": 100,
+      "days_old": 0,
       "location": "active"
     },
     {
       "title": "White House Slams Joy Behar After Latest Donald Tr...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 6,
       "location": "active"
     },
     {
       "title": "Diane Warren Takes Shots at 'Puppy Killer Barbie' ...",
       "temperature": 100,
-      "days_old": 22,
+      "days_old": 25,
+      "location": "active"
+    },
+    {
+      "title": "Why Taylor Swift Really Hid in Cleaning Carts Duri...",
+      "temperature": 100,
+      "days_old": 229,
       "location": "active"
     },
     {
       "title": "Supernatural Star Dead At 51 -- TV Husband Writes ...",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Miley Cyrus What's The Big Frigin' Difference?!",
+      "title": "Taylor Swift\u2019s Close Relationship With Her Dad Sco...",
       "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "How Luxury Travel Is Going Overboard for Superyach...",
-      "temperature": 100,
-      "days_old": 4,
+      "days_old": 228,
       "location": "active"
     },
     {
       "title": "Jack Schlossberg Reveals 1 Way Trump Could Win Ken...",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 8,
       "location": "active"
     },
     {
       "title": "Markets Watchdog Rolls Over Amid Iran Insider Trad...",
       "temperature": 100,
-      "days_old": 0,
-      "location": "active"
-    },
-    {
-      "title": "Jon Stewart Takes Aim at Trump Sending ICE Into Ai...",
-      "temperature": 100,
-      "days_old": 4,
-      "location": "active"
-    },
-    {
-      "title": "Who Won Awards Season on Social Media?",
-      "temperature": 100,
       "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Trump's Border Patrol Took Blind Refugee, Realized...",
+      "temperature": 100,
+      "days_old": 33,
       "location": "active"
     }
   ]
