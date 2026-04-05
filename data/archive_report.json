@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-04-01T05:28:24.344061",
-  "total_posts": 3793,
+  "timestamp": "2026-04-05T04:40:54.558185",
+  "total_posts": 3931,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 784,
-    "Explosive (60-79\u00b0)": 531,
+    "Nuclear (80-100\u00b0)": 781,
+    "Explosive (60-79\u00b0)": 552,
     "Hot (40-59\u00b0)": 1584,
-    "Warm (25-39\u00b0)": 894,
-    "Cool (<25\u00b0)": 0
+    "Warm (25-39\u00b0)": 898,
+    "Cool (<25\u00b0)": 116
   },
   "location_distribution": {
-    "Active": 1315,
-    "Archived": 2478
+    "Active": 200,
+    "Archived": 3731
   },
   "age_distribution": {
-    "Today": 37,
-    "This week": 251,
-    "This month": 794,
-    "Older": 2711
+    "Today": 27,
+    "This week": 250,
+    "This month": 812,
+    "Older": 2842
   },
   "hottest_posts": [
     {
       "title": "Window Company Wants Donna Kelce as Spokesperson A...",
       "temperature": 100,
-      "days_old": 19,
+      "days_old": 23,
       "location": "active"
     },
     {
       "title": "President Trump Posts Video Showing Fiery Bunker B...",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 4,
       "location": "active"
     },
     {
-      "title": "White House Slams Joy Behar After Latest Donald Tr...",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Diane Warren Takes Shots at 'Puppy Killer Barbie' ...",
-      "temperature": 100,
-      "days_old": 25,
-      "location": "active"
-    },
-    {
-      "title": "Why Taylor Swift Really Hid in Cleaning Carts Duri...",
-      "temperature": 100,
-      "days_old": 229,
-      "location": "active"
-    },
-    {
-      "title": "Supernatural Star Dead At 51 -- TV Husband Writes ...",
-      "temperature": 100,
-      "days_old": 8,
-      "location": "active"
-    },
-    {
-      "title": "Taylor Swift\u2019s Close Relationship With Her Dad Sco...",
-      "temperature": 100,
-      "days_old": 228,
-      "location": "active"
-    },
-    {
-      "title": "Jack Schlossberg Reveals 1 Way Trump Could Win Ken...",
-      "temperature": 100,
-      "days_old": 8,
-      "location": "active"
-    },
-    {
-      "title": "Markets Watchdog Rolls Over Amid Iran Insider Trad...",
+      "title": "\u2018The Last One for the Road\u2019 Leads Italy\u2019s David Aw...",
       "temperature": 100,
       "days_old": 3,
       "location": "active"
     },
     {
-      "title": "Trump's Border Patrol Took Blind Refugee, Realized...",
+      "title": "White House Slams Joy Behar After Latest Donald Tr...",
       "temperature": 100,
-      "days_old": 33,
+      "days_old": 10,
+      "location": "active"
+    },
+    {
+      "title": "Why Was Pam Bondi Fired? Her Replacement Revealed",
+      "temperature": 100,
+      "days_old": 2,
+      "location": "active"
+    },
+    {
+      "title": "Could You Convince Donald Trump Your Child Is a U....",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Supernatural Star Dead At 51 -- TV Husband Writes ...",
+      "temperature": 100,
+      "days_old": 12,
+      "location": "active"
+    },
+    {
+      "title": "Jack Schlossberg Reveals 1 Way Trump Could Win Ken...",
+      "temperature": 100,
+      "days_old": 12,
+      "location": "active"
+    },
+    {
+      "title": "Markets Watchdog Rolls Over Amid Iran Insider Trad...",
+      "temperature": 100,
+      "days_old": 7,
+      "location": "active"
+    },
+    {
+      "title": "Jon Stewart Takes Aim at Trump Sending ICE Into Ai...",
+      "temperature": 100,
+      "days_old": 11,
       "location": "active"
     }
   ]
