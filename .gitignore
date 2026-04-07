@@ -1,0 +1,10 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+node_modules/
+*.log
+_posts/temp.txt
+data/gossip_data.json
+data/processed_articles.json
