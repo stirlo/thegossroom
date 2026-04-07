@@ -8,6 +8,11 @@ on:
 permissions:
   contents: write
 
+# Prevent parallel runs from double-posting the same item
+concurrency:
+  group: bluesky-poster-gossroom
+  cancel-in-progress: false
+
 jobs:
   post-to-bluesky:
     runs-on: ubuntu-latest
@@ -36,6 +41,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git pull --rebase origin main
           git add _data/bluesky_posted.yml
           git diff --staged --quiet || git commit -m "Update Bluesky posted tracking [skip ci]"
           git push

@@ -45,7 +45,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "🎭 Hourly gossip update - $(date '+%Y-%m-%d %H:%M UTC')"
+            git commit -m "🎭 Hourly gossip update - $(date '+%Y-%m-%d %H:%M UTC') [skip ci]"
             git push
           fi
 
