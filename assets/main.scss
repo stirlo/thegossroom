@@ -822,3 +822,68 @@ h1, h2, h3, h4, h5, h6,
   .celebrity-temp-card, .post-card, .topic-card, .explosive-card { padding: 14px; }
 }
 
+
+/* ── NAV FIX ─────────────────────────────────────────────────────────────────
+   Override Minima's .site-nav which goes position:absolute on mobile breakpoint
+   and was expanding .trigger over the page content.
+   We've replaced the checkbox/label hamburger with a plain nav, so none of
+   the Minima mobile nav JS/CSS machinery is needed. Keep it simple.
+   ──────────────────────────────────────────────────────────────────────────── */
+.site-nav {
+  /* Always inline, never absolute */
+  position: static !important;
+  float: right;
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  /* Kill the checkbox/label machinery entirely */
+  .nav-trigger,
+  .menu-icon,
+  label[for="nav-trigger"] { display: none !important; }
+
+  /* The trigger div: always visible, never a dropdown */
+  .trigger {
+    display: flex !important;
+    align-items: center;
+    gap: 4px;
+    position: static !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    clear: none !important;
+  }
+
+  .page-link {
+    color: var(--text-md);
+    font-size: 0.82em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+    line-height: 1;
+
+    &:hover {
+      color: var(--heat-bright);
+      background: rgba(232, 48, 90, 0.1);
+    }
+
+    &:not(:last-child) { margin-right: 0; }
+  }
+}
+
+/* On very small screens stack below the title */
+@media (max-width: 480px) {
+  .site-header .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  .site-nav { float: none; }
+}
