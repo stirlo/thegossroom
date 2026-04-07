@@ -22,12 +22,12 @@ incremental: true        # Enable incremental builds
 
 # Plugins (optimized)
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-compose
-  # Removed jekyll-feed - using custom solution
 
 # Pagination (increased for daily top stories)
 paginate: 33              # Show top 33 daily stories

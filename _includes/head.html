@@ -3,53 +3,76 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Plugin Tags -->
+  <!-- Jekyll SEO Tag — handles title, description, OG, Twitter base -->
   {%- seo -%}
 
-  <!-- Your Original Meta Tags (Merged) -->
-  <meta name="title" content="{{ page.title | default: site.title }}">
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta name="keywords" content="celebrity gossip, drama scores, entertainment news, celebrity news, gossip blog, celebrity drama, entertainment gossip">
+  <!-- ── ARTICLE METADATA (ported from littleBunker — these are what Google News needs) ── -->
+  {% if page.date %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  {% endif %}
+  {% if page.modified_date %}
+  <meta property="article:modified_time" content="{{ page.modified_date | date_to_xmlschema }}">
+  {% endif %}
+
+  <!-- Article tags — critical for topical relevance signals -->
+  {% if page.tags %}
+  <meta name="keywords" content="{{ page.tags | join: ', ' }}, celebrity gossip, drama scores, entertainment news">
+  <meta property="article:tag" content="{{ page.tags | join: ', ' }}">
+  {% else %}
+  <meta name="keywords" content="celebrity gossip, drama scores, entertainment news, celebrity news, gossip blog">
+  {% endif %}
+
+  <!-- Article section — helps crawlers categorise content type -->
+  {% if page.categories %}
+  <meta property="article:section" content="{{ page.categories | first | replace: '_', ' ' | capitalize }}">
+  {% elsif page.layout == 'post' %}
+  <meta property="article:section" content="Entertainment">
+  {% endif %}
+
+  <!-- OG image dimensions — suppresses Facebook/LinkedIn warnings -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter contextual labels — drama score + celebrity surfaced in cards -->
+  {% if page.drama_score %}
+    {% if page.drama_score >= 75 %}
+  <meta name="twitter:label1" content="Drama Level">
+  <meta name="twitter:data1" content="🔥🔥🔥 EXPLOSIVE ({{ page.drama_score }}°)">
+    {% elsif page.drama_score >= 50 %}
+  <meta name="twitter:label1" content="Drama Level">
+  <meta name="twitter:data1" content="🔥🔥 HOT ({{ page.drama_score }}°)">
+    {% elsif page.drama_score >= 25 %}
+  <meta name="twitter:label1" content="Drama Level">
+  <meta name="twitter:data1" content="🔥 Rising ({{ page.drama_score }}°)">
+    {% endif %}
+  {% endif %}
+  {% if page.primary_celebrity %}
+  <meta name="twitter:label2" content="Celebrity">
+  <meta name="twitter:data2" content="{{ page.primary_celebrity | replace: '_', ' ' | capitalize }}">
+  {% endif %}
+
+  <!-- Author + robots -->
   <meta name="author" content="{{ site.author | default: site.title }}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-  <!-- Open Graph / Facebook (Your Original Format) -->
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta property="og:image" content="{{ page.image | default: '/android-chrome-512x512.png' | absolute_url }}">
-
-  <!-- Twitter (Your Original Format) -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
-  <meta property="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta property="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta property="twitter:image" content="{{ page.image | default: '/android-chrome-512x512.png' | absolute_url }}">
-
-  <!-- Your Original Favicon and App Icons (Exact Paths) -->
+  <!-- ── FAVICONS ──────────────────────────────────────────────────────── -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#f2059f">
+  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#e8305a">
   <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+  <meta name="msapplication-TileColor" content="#e8305a">
+  <meta name="theme-color" content="#0d0d0f">
 
-  <!-- Your Original Theme Colors -->
-  <meta name="msapplication-TileColor" content="#f2059f">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- RSS Feed -->
+  <!-- ── FEEDS + FONTS ─────────────────────────────────────────────────── -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-
-  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  {%- feed_meta -%}
+  <!-- ── STYLES ────────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
