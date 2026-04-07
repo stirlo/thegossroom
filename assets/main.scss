@@ -98,6 +98,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  /* Prevent header from creating a stacking context that traps children */
+  isolation: isolate;
+  /* Explicit height so browser reserves space correctly */
+  min-height: 56px;
 }
 
 .page-content {
@@ -824,11 +828,14 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* ── NAV FIX ─────────────────────────────────────────────────────────────────
-   Override Minima's .site-nav which goes position:absolute on mobile breakpoint
-   and was expanding .trigger over the page content.
-   We've replaced the checkbox/label hamburger with a plain nav, so none of
-   the Minima mobile nav JS/CSS machinery is needed. Keep it simple.
+   Minima sets .site-header { position: relative } which conflicts with our
+   sticky. Also sets .site-nav { position: absolute } in mobile breakpoint.
+   Belt-and-suspenders overrides below kill all of it.
    ──────────────────────────────────────────────────────────────────────────── */
+
+/* Force site-header position — overrides Minima's `position: relative` */
+.site-header { position: sticky !important; }
+
 .site-nav {
   /* Always inline, never absolute */
   position: static !important;
