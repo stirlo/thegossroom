@@ -58,18 +58,47 @@ class SmartBlueskyPoster:
             return False
 
     def validate_url(self, url, timeout=10):
-        """Validate that a URL is accessible before posting"""
-        try:
-            # Quick HEAD request to check if URL exists
-            response = requests.head(url, timeout=timeout, allow_redirects=True)
+        """
+        Validate that a URL is a real page, not a soft-404.
 
-            # Accept 2xx and 3xx status codes
-            if 200 <= response.status_code < 400:
-                logger.info(f"✅ URL validated: {url}")
-                return True
-            else:
-                logger.warning(f"⚠️ URL returned {response.status_code}: {url}")
+        GitHub Pages returns HTTP 200 for ALL URLs — including missing ones —
+        because it serves the custom 404.html with status 200. A HEAD request
+        therefore always passes, even for broken links.
+
+        Fix: do a GET request and check the response body doesn't contain
+        the 404 page markers ('404', 'Page Not Found', 'not found').
+        Also check the final URL after redirects matches what we expected
+        (a redirect to / means the page doesn't exist).
+        """
+        try:
+            # GET needed — HEAD won't give us body to inspect for soft-404
+            response = requests.get(url, timeout=timeout, allow_redirects=True)
+
+            # Hard HTTP failures (non-GitHub-Pages hosts)
+            if response.status_code >= 400:
+                logger.warning(f"⚠️ URL returned HTTP {response.status_code}: {url}")
                 return False
+
+            # Detect silent redirect to homepage (GitHub Pages 404 behaviour)
+            final_url = response.url.rstrip('/')
+            expected_base = self.site_base_url.rstrip('/')
+            if final_url == expected_base:
+                logger.warning(f"⚠️ URL redirected to homepage (soft-404): {url}")
+                return False
+
+            # Detect soft-404 page content
+            body_lower = response.text[:2000].lower()
+            soft_404_markers = [
+                '404', 'page not found', 'not found',
+                "couldn't find", 'does not exist', 'checking if we can find'
+            ]
+            for marker in soft_404_markers:
+                if marker in body_lower:
+                    logger.warning(f"⚠️ URL returned soft-404 (found '{marker}'): {url}")
+                    return False
+
+            logger.info(f"✅ URL validated: {url}")
+            return True
 
         except requests.exceptions.Timeout:
             logger.warning(f"⏰ URL validation timeout: {url}")
@@ -230,13 +259,28 @@ class SmartBlueskyPoster:
         with open(self.queue_file, 'w') as f:
             yaml.dump(cleaned_queue, f, default_flow_style=False)
 
-    def generate_post_url(self, filename):
-        """Generate Jekyll post URL from filename"""
+    def generate_post_url(self, filename, frontmatter=None):
+        """
+        Generate Jekyll post URL from filename.
+
+        Prefers frontmatter slug/permalink fields if available, since
+        Jekyll may derive the URL from the post title rather than filename
+        (especially when titles contain special characters or the filename
+        was truncated to 50 chars during scraping).
+        """
+        # Prefer explicit permalink in frontmatter
+        if frontmatter:
+            if frontmatter.get('permalink'):
+                perm = frontmatter['permalink'].strip('/')
+                return f"{self.site_base_url}/{perm}/"
+            if frontmatter.get('slug'):
+                slug = frontmatter['slug'].strip()
+                # Still need the date — fall through to extract it from filename
+
         if not filename.endswith('.md'):
             return self.site_base_url
 
         name_without_ext = filename[:-3]
-
         if len(name_without_ext) < 10:
             return self.site_base_url
 
@@ -245,15 +289,20 @@ class SmartBlueskyPoster:
 
         try:
             year, month, day = date_part.split('-')
-            clean_slug = slug_part.rstrip('-').rstrip('_')
-            clean_slug = re.sub(r'-+', '-', clean_slug)
-            clean_slug = clean_slug.strip('-')
+
+            # Use frontmatter slug if we have one but no explicit permalink
+            if frontmatter and frontmatter.get('slug'):
+                clean_slug = frontmatter['slug'].strip().strip('/')
+            else:
+                clean_slug = slug_part.rstrip('-').rstrip('_')
+                clean_slug = re.sub(r'-+', '-', clean_slug)
+                clean_slug = clean_slug.strip('-')
 
             if not clean_slug:
                 clean_slug = "post"
 
             return f"{self.site_base_url}/{year}/{month}/{day}/{clean_slug}/"
-        except:
+        except Exception:
             return self.site_base_url
 
     def get_file_creation_time(self, file_path):
@@ -309,8 +358,8 @@ class SmartBlueskyPoster:
             if temperature < 25:
                 continue
 
-            # Generate and validate URL
-            url = self.generate_post_url(post_file.name)
+            # Generate URL — pass frontmatter so slug/permalink fields are preferred
+            url = self.generate_post_url(post_file.name, frontmatter)
 
             # Skip if URL validation fails (but don't block queue building)
             url_valid = self.validate_url(url, timeout=5)

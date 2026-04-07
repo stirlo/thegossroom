@@ -1,26 +1,194 @@
 ---
 layout: default
-title: "404 – Page Not Found"
+title: "404 – Lost in the Drama"
+permalink: /404.html
 ---
 
-<h1>404 – Page Not Found</h1>
-<p id="msg">Checking if we can find what you meant…</p>
+<style>
+  .not-found-wrap {
+    max-width: 600px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .not-found-wrap h1 {
+    font-size: 5em;
+    margin: 0;
+    background: linear-gradient(135deg, #e8305a, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .not-found-wrap h2 {
+    font-size: 1.4em;
+    margin: 12px 0 8px;
+    color: #f0f0f0;
+    font-weight: 700;
+  }
+  .not-found-status {
+    font-size: 0.95em;
+    color: #b8b8c8;
+    margin-bottom: 32px;
+    min-height: 1.4em;
+  }
+  .not-found-status.searching::after {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: #e8305a;
+    border-radius: 50%;
+    margin-left: 8px;
+    animation: blink 0.8s ease-in-out infinite;
+    vertical-align: middle;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+  .not-found-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #c0254a, #e8305a);
+    color: #fff !important;
+    padding: 14px 32px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.95em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 24px rgba(232, 48, 90, 0.3);
+  }
+  .not-found-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(232, 48, 90, 0.45);
+  }
+  .not-found-btn.secondary {
+    background: rgba(255,255,255,0.08);
+    box-shadow: none;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .not-found-btn.secondary:hover {
+    background: rgba(255,255,255,0.14);
+    box-shadow: none;
+  }
+  #redirect-notice {
+    display: none;
+    background: rgba(232, 48, 90, 0.12);
+    border: 1px solid rgba(232, 48, 90, 0.3);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #f0a0b8;
+  }
+</style>
+
+<div class="not-found-wrap">
+  <h1>404</h1>
+  <h2>Lost in the Drama 🎭</h2>
+
+  <div id="redirect-notice"></div>
+  <p class="not-found-status searching" id="status-msg">Scanning the gossip archive…</p>
+
+  <div id="action-buttons" style="display:none">
+    <a href="/" class="not-found-btn">🔥 Latest Gossip</a>
+    <a href="/archive.html" class="not-found-btn secondary">📰 Full Archive</a>
+  </div>
+</div>
 
 <script>
-// Levenshtein distance helper
-function levenshtein(a,b){if(!a.length)return b.length;if(!b.length)return a.length;let prev=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){const cur=[i];for(let j=1;j<=b.length;j++){cur[j]=a[i-1]===b[j-1]?prev[j-1]:1+Math.min(prev[j],cur[j-1],prev[j-1]);}prev=cur;}return prev[b.length];}
+(function () {
+  'use strict';
 
-(async()=>{
-  const wantedSlug = window.location.pathname.replace(/\/$/,'').toLowerCase().split('/').pop();
-  try{
-    const slugs = await fetch('/slugs.json').then(r=>r.json());
-    let best=null,bestDist=Infinity;
-    slugs.forEach(({url,slug})=>{
-      const d=levenshtein(wantedSlug,slug);
-      if(d<bestDist){bestDist=d;best=url;}
-    });
-    if(best && bestDist<=2){location.replace(best);}
-    else{document.getElementById('msg').innerHTML='Sorry, we couldn’t find that post.<br><a href="/">Go home</a>';}
-  }catch{document.getElementById('msg').innerHTML='Lookup failed.<br><a href="/">Go home</a>';}
+  // Levenshtein distance
+  function lev(a, b) {
+    if (!a.length) return b.length;
+    if (!b.length) return a.length;
+    let prev = [...Array(b.length + 1).keys()];
+    for (let i = 1; i <= a.length; i++) {
+      const cur = [i];
+      for (let j = 1; j <= b.length; j++) {
+        cur[j] = a[i-1] === b[j-1]
+          ? prev[j-1]
+          : 1 + Math.min(prev[j], cur[j-1], prev[j-1]);
+      }
+      prev = cur;
+    }
+    return prev[b.length];
+  }
+
+  // Extract the most meaningful slug segment from the current path
+  function getWantedSlug() {
+    const parts = window.location.pathname
+      .replace(/\/+$/, '')
+      .toLowerCase()
+      .split('/')
+      .filter(Boolean);
+    // Skip date segments like 2025, 08, 02
+    const slug = parts.filter(p => !/^\d{1,4}$/.test(p)).pop();
+    return slug || '';
+  }
+
+  function setStatus(msg, searching) {
+    const el = document.getElementById('status-msg');
+    el.textContent = msg;
+    el.className = 'not-found-status' + (searching ? ' searching' : '');
+  }
+
+  function showButtons() {
+    document.getElementById('action-buttons').style.display = 'block';
+  }
+
+  function showRedirectNotice(url, title) {
+    const el = document.getElementById('redirect-notice');
+    el.style.display = 'block';
+    el.innerHTML = `Found a close match: redirecting you to <strong>${title || url}</strong>…`;
+  }
+
+  async function smartRedirect() {
+    const wantedSlug = getWantedSlug();
+
+    if (!wantedSlug) {
+      setStatus("Couldn't figure out what you were looking for.");
+      showButtons();
+      return;
+    }
+
+    try {
+      const slugs = await fetch('/slugs.json').then(r => {
+        if (!r.ok) throw new Error('slugs.json not found');
+        return r.json();
+      });
+
+      let best = null, bestDist = Infinity;
+
+      slugs.forEach(entry => {
+        const d = lev(wantedSlug, entry.slug || '');
+        if (d < bestDist) { bestDist = d; best = entry; }
+      });
+
+      // Tight match threshold: 3 edits max, and at most 30% of slug length
+      const threshold = Math.max(2, Math.floor(wantedSlug.length * 0.3));
+
+      if (best && bestDist <= threshold) {
+        showRedirectNotice(best.url, best.title);
+        setStatus(`Redirecting… (matched "${best.slug}")`);
+        setTimeout(() => location.replace(best.url), 1200);
+      } else {
+        setStatus("That post doesn't seem to exist — it may have been removed.");
+        showButtons();
+      }
+    } catch (err) {
+      // slugs.json missing or network error — fail gracefully
+      setStatus("That post doesn't seem to exist.");
+      showButtons();
+    }
+  }
+
+  smartRedirect();
 })();
 </script>
