@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-04-19T04:55:32.498458",
-  "total_posts": 4443,
+  "timestamp": "2026-04-26T05:15:46.007292",
+  "total_posts": 4697,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 803,
-    "Explosive (60-79\u00b0)": 514,
+    "Nuclear (80-100\u00b0)": 854,
+    "Explosive (60-79\u00b0)": 491,
     "Hot (40-59\u00b0)": 1579,
-    "Warm (25-39\u00b0)": 932,
-    "Cool (<25\u00b0)": 615
+    "Warm (25-39\u00b0)": 899,
+    "Cool (<25\u00b0)": 874
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 4243
+    "Archived": 4497
   },
   "age_distribution": {
-    "Today": 32,
-    "This week": 250,
-    "This month": 843,
-    "Older": 3318
+    "Today": 28,
+    "This week": 258,
+    "This month": 834,
+    "Older": 3577
   },
   "hottest_posts": [
     {
-      "title": "Fandoms: Inside the Superfan Economy",
+      "title": "Khlo\u00e9 Kardashian Reveals Her Biggest Personal Stru...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 5,
       "location": "active"
     },
     {
       "title": "Justin Bieber Coachella Merch Going for Big Bucks ...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 11,
       "location": "active"
     },
     {
-      "title": "Justin Baldoni Wants Blake Lively's Net Worth Disc...",
+      "title": "Trump Labor Secretary Resigns Amid Misconduct Scan...",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "It seems Kendall and Kylie Jenner\u2019s men smell the ...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Nancy Sinatra Slams Donald Trump's Clip of Frank S...",
+      "temperature": 100,
+      "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "Who Was Justin Bieber's 'One Less Lonely Girl' Dur...",
+      "temperature": 100,
+      "days_old": 6,
       "location": "active"
     },
     {
       "title": "Trump Answers Iran Questions Amid DoorDash Deliver...",
       "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "Trump's Easter Message Was So Disturbing! Calls To...",
-      "temperature": 100,
       "days_old": 12,
       "location": "active"
     },
     {
-      "title": "Tiger Woods Says He Was Talking To President Donal...",
-      "temperature": 100,
-      "days_old": 15,
-      "location": "active"
-    },
-    {
-      "title": "Inside Justin Bieber and Hailey Bieber's Enduring ...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "\u2018Late Show\u2019 Spoofs Trump Vs. Pope Leo Feud In Kend...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Taylor Swift & Travis Kelce Shut Their Parents Out...",
+      "title": "Hailey Bieber Shares Cryptic Message About Not Nee...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
     },
     {
-      "title": "The Super Sweet Wedding Day Surprise Taylor Swift'...",
+      "title": "Donald Trump Jr. and Bettina Anderson to wed withi...",
       "temperature": 100,
-      "days_old": 6,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "\u2018Super Mario Galaxy Movie\u2019 Holds No. 1 at U.K., Ir...",
+      "temperature": 100,
+      "days_old": 4,
       "location": "active"
     }
   ]
