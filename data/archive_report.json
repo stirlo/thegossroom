@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-04-26T05:17:28.109205",
-  "total_posts": 4697,
+  "timestamp": "2026-05-01T06:17:49.087980",
+  "total_posts": 3827,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 854,
-    "Explosive (60-79\u00b0)": 491,
-    "Hot (40-59\u00b0)": 1579,
-    "Warm (25-39\u00b0)": 899,
-    "Cool (<25\u00b0)": 874
+    "Nuclear (80-100\u00b0)": 895,
+    "Explosive (60-79\u00b0)": 482,
+    "Hot (40-59\u00b0)": 1542,
+    "Warm (25-39\u00b0)": 908,
+    "Cool (<25\u00b0)": 0
   },
   "location_distribution": {
-    "Active": 200,
-    "Archived": 4497
+    "Active": 1377,
+    "Archived": 2450
   },
   "age_distribution": {
-    "Today": 28,
-    "This week": 258,
-    "This month": 834,
-    "Older": 3577
+    "Today": 33,
+    "This week": 255,
+    "This month": 828,
+    "Older": 2711
   },
   "hottest_posts": [
     {
       "title": "Khlo\u00e9 Kardashian Reveals Her Biggest Personal Stru...",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 10,
       "location": "active"
     },
     {
-      "title": "Justin Bieber Coachella Merch Going for Big Bucks ...",
+      "title": "Matty Healy Consoles Mom Denise Welch After Taylor...",
       "temperature": 100,
-      "days_old": 11,
+      "days_old": 271,
       "location": "active"
     },
     {
-      "title": "Trump Labor Secretary Resigns Amid Misconduct Scan...",
-      "temperature": 100,
-      "days_old": 5,
-      "location": "active"
-    },
-    {
-      "title": "It seems Kendall and Kylie Jenner\u2019s men smell the ...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Nancy Sinatra Slams Donald Trump's Clip of Frank S...",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Who Was Justin Bieber's 'One Less Lonely Girl' Dur...",
-      "temperature": 100,
-      "days_old": 6,
-      "location": "active"
-    },
-    {
-      "title": "Trump Answers Iran Questions Amid DoorDash Deliver...",
-      "temperature": 100,
-      "days_old": 12,
-      "location": "active"
-    },
-    {
-      "title": "Hailey Bieber Shares Cryptic Message About Not Nee...",
+      "title": "Jimmy Kimmel defends Melania Trump \u2018widow\u2019 joke af...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Donald Trump Jr. and Bettina Anderson to wed withi...",
+      "title": "Fandoms: Inside the Superfan Economy",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 23,
       "location": "active"
     },
     {
-      "title": "\u2018Super Mario Galaxy Movie\u2019 Holds No. 1 at U.K., Ir...",
+      "title": "Vanessa Trump standing by boyfriend Tiger Woods af...",
+      "temperature": 100,
+      "days_old": 29,
+      "location": "active"
+    },
+    {
+      "title": "Kylie Kelce Reveals Jason Kelce Already Changed Na...",
+      "temperature": 100,
+      "days_old": 28,
+      "location": "active"
+    },
+    {
+      "title": "President Trump Honors Team USA Hockey At State of...",
+      "temperature": 100,
+      "days_old": 65,
+      "location": "active"
+    },
+    {
+      "title": "Justin Bieber Coachella Merch Going for Big Bucks ...",
+      "temperature": 100,
+      "days_old": 16,
+      "location": "active"
+    },
+    {
+      "title": "Trump Rushed Off Stage At White House Corresponden...",
       "temperature": 100,
       "days_old": 4,
+      "location": "active"
+    },
+    {
+      "title": "Trump Labor Secretary Resigns Amid Misconduct Scan...",
+      "temperature": 100,
+      "days_old": 10,
       "location": "active"
     }
   ]
