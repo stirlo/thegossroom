@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-05-01T06:19:07.998322",
-  "total_posts": 3827,
+  "timestamp": "2026-05-03T05:34:46.310843",
+  "total_posts": 3901,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 895,
-    "Explosive (60-79\u00b0)": 482,
-    "Hot (40-59\u00b0)": 1542,
-    "Warm (25-39\u00b0)": 908,
-    "Cool (<25\u00b0)": 0
+    "Nuclear (80-100\u00b0)": 911,
+    "Explosive (60-79\u00b0)": 481,
+    "Hot (40-59\u00b0)": 1528,
+    "Warm (25-39\u00b0)": 898,
+    "Cool (<25\u00b0)": 83
   },
   "location_distribution": {
-    "Active": 1377,
-    "Archived": 2450
+    "Active": 200,
+    "Archived": 3701
   },
   "age_distribution": {
-    "Today": 33,
-    "This week": 255,
-    "This month": 828,
-    "Older": 2711
+    "Today": 32,
+    "This week": 256,
+    "This month": 821,
+    "Older": 2792
   },
   "hottest_posts": [
     {
-      "title": "Khlo\u00e9 Kardashian Reveals Her Biggest Personal Stru...",
-      "temperature": 100,
-      "days_old": 10,
-      "location": "active"
-    },
-    {
-      "title": "Matty Healy Consoles Mom Denise Welch After Taylor...",
-      "temperature": 100,
-      "days_old": 271,
-      "location": "active"
-    },
-    {
       "title": "Jimmy Kimmel defends Melania Trump \u2018widow\u2019 joke af...",
-      "temperature": 100,
-      "days_old": 2,
-      "location": "active"
-    },
-    {
-      "title": "Fandoms: Inside the Superfan Economy",
-      "temperature": 100,
-      "days_old": 23,
-      "location": "active"
-    },
-    {
-      "title": "Vanessa Trump standing by boyfriend Tiger Woods af...",
-      "temperature": 100,
-      "days_old": 29,
-      "location": "active"
-    },
-    {
-      "title": "Kylie Kelce Reveals Jason Kelce Already Changed Na...",
-      "temperature": 100,
-      "days_old": 28,
-      "location": "active"
-    },
-    {
-      "title": "President Trump Honors Team USA Hockey At State of...",
-      "temperature": 100,
-      "days_old": 65,
-      "location": "active"
-    },
-    {
-      "title": "Justin Bieber Coachella Merch Going for Big Bucks ...",
-      "temperature": 100,
-      "days_old": 16,
-      "location": "active"
-    },
-    {
-      "title": "Trump Rushed Off Stage At White House Corresponden...",
       "temperature": 100,
       "days_old": 4,
       "location": "active"
     },
     {
-      "title": "Trump Labor Secretary Resigns Amid Misconduct Scan...",
+      "title": "Donald Trump Says Melania \u2018Hates\u2019 When He Dances t...",
       "temperature": 100,
-      "days_old": 10,
+      "days_old": 0,
+      "location": "active"
+    },
+    {
+      "title": "Trump Rushed Off Stage At White House Corresponden...",
+      "temperature": 100,
+      "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "\u201cMy Style Is Evolving\u201d: Kylie Jenner Is Refreshing...",
+      "temperature": 100,
+      "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "Zoe Saldana and Demi Moore are all smiles as they ...",
+      "temperature": 100,
+      "days_old": 0,
+      "location": "active"
+    },
+    {
+      "title": "Kylie Jenner & Timoth\u00e9e Chalamet Have Slam Dunk Da...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Jimmy Kimmel Defends Melania Trump \u201cWidow\u201d Joke, R...",
+      "temperature": 100,
+      "days_old": 5,
+      "location": "active"
+    },
+    {
+      "title": "Hailey Bieber Shares Cryptic Message About Not Nee...",
+      "temperature": 100,
+      "days_old": 9,
+      "location": "active"
+    },
+    {
+      "title": "Donald Trump Suggests His Dance Moves Made 'Y.M.C....",
+      "temperature": 100,
+      "days_old": 0,
+      "location": "active"
+    },
+    {
+      "title": "Hailey Bieber, Kylie Jenner, Sabrina Carpenter & M...",
+      "temperature": 100,
+      "days_old": 6,
       "location": "active"
     }
   ]
