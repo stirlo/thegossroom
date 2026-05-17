@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-05-10T05:42:38.461469",
-  "total_posts": 4166,
+  "timestamp": "2026-05-17T05:52:28.138032",
+  "total_posts": 4417,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 973,
-    "Explosive (60-79\u00b0)": 466,
-    "Hot (40-59\u00b0)": 1433,
-    "Warm (25-39\u00b0)": 935,
-    "Cool (<25\u00b0)": 359
+    "Nuclear (80-100\u00b0)": 929,
+    "Explosive (60-79\u00b0)": 550,
+    "Hot (40-59\u00b0)": 1369,
+    "Warm (25-39\u00b0)": 955,
+    "Cool (<25\u00b0)": 614
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 3966
+    "Archived": 4217
   },
   "age_distribution": {
-    "Today": 31,
-    "This week": 266,
-    "This month": 834,
-    "Older": 3035
+    "Today": 26,
+    "This week": 256,
+    "This month": 855,
+    "Older": 3280
   },
   "hottest_posts": [
     {
-      "title": "Judge Apologizes in Court to Man Accused of Trying...",
+      "title": "Khlo\u00e9 Kardashian Reveals She Was \u2018Drugged\u2019 At Her ...",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 9,
       "location": "active"
     },
     {
-      "title": "White House Slams Mark Hamill as \u2018Sick Individual\u2019...",
+      "title": "Donald Trump Jr. and Bettina Anderson spotted on r...",
       "temperature": 100,
-      "days_old": 2,
+      "days_old": 14,
       "location": "active"
     },
     {
-      "title": "The Hilarious Way Olivia Wilde Is Preparing for Me...",
+      "title": "\u2018SNL\u2019 Weekend Update Mocks Trump\u2019s Vain Passport M...",
       "temperature": 100,
-      "days_old": 5,
+      "days_old": 14,
       "location": "active"
     },
     {
-      "title": "Jimmy Kimmel defends Melania Trump \u2018widow\u2019 joke af...",
+      "title": "Ray J 'Wouldn't Put It Past' Kris Jenner to Order ...",
+      "temperature": 100,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Chuck Schumer Posts Photo of Donald Trump With Jef...",
       "temperature": 100,
       "days_old": 11,
       "location": "active"
     },
     {
-      "title": "Donald Trump Says Melania \u2018Hates\u2019 When He Dances t...",
-      "temperature": 100,
-      "days_old": 7,
-      "location": "active"
-    },
-    {
-      "title": "White House Calls Mark Hamill \u201cSick Individual\u201d fo...",
+      "title": "Kylie Jenner reveals parents\u2019 reaction to finding ...",
       "temperature": 100,
       "days_old": 2,
       "location": "active"
     },
     {
-      "title": "Trump Rushed Off Stage At White House Corresponden...",
+      "title": "Seth Meyers Disses CBS at Upfronts, a Term He Says...",
       "temperature": 100,
-      "days_old": 13,
+      "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Taylor Swift rocks lacy silk top and skirt for rom...",
+      "title": "Late-Night Hosts Take Aim at Trump Reinstating Fit...",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 10,
       "location": "active"
     },
     {
-      "title": "Khlo\u00e9 Kardashian Reveals She Was \u2018Drugged\u2019 At Her ...",
+      "title": "Donald Trump Calls Reporter 'Dumb Person' for Whit...",
+      "temperature": 100,
+      "days_old": 4,
+      "location": "active"
+    },
+    {
+      "title": "Eight Times Janet Jackson Was in Control at Awards...",
       "temperature": 100,
       "days_old": 2,
-      "location": "active"
-    },
-    {
-      "title": "President Trump's Media Company Reports $405 Milli...",
-      "temperature": 100,
-      "days_old": 1,
       "location": "active"
     }
   ]
