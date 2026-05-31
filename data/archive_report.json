@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-05-24T06:08:12.754944",
-  "total_posts": 4671,
+  "timestamp": "2026-05-31T06:24:17.321701",
+  "total_posts": 4904,
   "temperature_distribution": {
-    "Nuclear (80-100\u00b0)": 942,
-    "Explosive (60-79\u00b0)": 547,
-    "Hot (40-59\u00b0)": 1352,
-    "Warm (25-39\u00b0)": 997,
-    "Cool (<25\u00b0)": 833
+    "Nuclear (80-100\u00b0)": 976,
+    "Explosive (60-79\u00b0)": 522,
+    "Hot (40-59\u00b0)": 1306,
+    "Warm (25-39\u00b0)": 1028,
+    "Cool (<25\u00b0)": 1072
   },
   "location_distribution": {
     "Active": 200,
-    "Archived": 4471
+    "Archived": 4704
   },
   "age_distribution": {
-    "Today": 30,
-    "This week": 250,
-    "This month": 852,
-    "Older": 3539
+    "Today": 32,
+    "This week": 231,
+    "This month": 847,
+    "Older": 3794
   },
   "hottest_posts": [
     {
-      "title": "WWE Superstar Arrested After Being \u2018Uncontrollably...",
+      "title": "Vanessa Trump Diagnosed With Breast Cancer, Seekin...",
       "temperature": 100,
-      "days_old": 2,
+      "days_old": 10,
       "location": "active"
     },
     {
-      "title": "AI-Created Vintage Adult Film Unveiled at Cannes (...",
+      "title": "Travis Kelce Defends \"Classy\" Beer Chug During Dat...",
       "temperature": 100,
-      "days_old": 4,
+      "days_old": 3,
+      "location": "active"
+    },
+    {
+      "title": "Furious Taylor Swift and Travis Kelce wedding gues...",
+      "temperature": 100,
+      "days_old": 8,
       "location": "active"
     },
     {
       "title": "Trump Celebrates Colbert\u2019s Exit From CBS, Says of ...",
       "temperature": 100,
-      "days_old": 1,
+      "days_old": 8,
       "location": "active"
     },
     {
-      "title": "Ivanka Trump Reportedly the Subject of Terrorist A...",
+      "title": "American Music Awards 2026 Red Carpet Arrivals",
       "temperature": 100,
-      "days_old": 0,
+      "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Shania Twain, 60, makes ferocious fashion statemen...",
+      "title": "Where to Watch the 2026 American Music Awards Live...",
       "temperature": 100,
-      "days_old": 6,
+      "days_old": 5,
       "location": "active"
     },
     {
-      "title": "Vanessa Trump's Family and Friend Show Support Ami...",
+      "title": "Universal Studio Group Brings \u2018A Salute to Artisan...",
       "temperature": 100,
-      "days_old": 3,
+      "days_old": 4,
       "location": "active"
     },
     {
-      "title": "The Hottest Celeb Bikini Moments in 2026: Mikayla ...",
-      "temperature": 100,
-      "days_old": 3,
-      "location": "active"
-    },
-    {
-      "title": "Kyle Busch Was Coughing Up Blood Day Before Death,...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "Khloe Kardashian Says Kendall Jenner & Kim Kardash...",
-      "temperature": 100,
-      "days_old": 1,
-      "location": "active"
-    },
-    {
-      "title": "'SNL' Ends Season with Will Ferrell as Epstein Hau...",
+      "title": "Taylor Swift & Travis Kelce Turn Heads Sitting Cou...",
       "temperature": 100,
       "days_old": 6,
+      "location": "active"
+    },
+    {
+      "title": "Martina McBride Becomes Fourth Performer to Withdr...",
+      "temperature": 100,
+      "days_old": 2,
+      "location": "active"
+    },
+    {
+      "title": "Trump's Name Must Be Stripped From Kennedy Center ...",
+      "temperature": 100,
+      "days_old": 1,
       "location": "active"
     }
   ]
