@@ -110,7 +110,76 @@ class AdaptiveGossipScraper:
             'vogue': {
                 'url': 'https://www.vogue.com/feed/rss',
                 'category': 'fashion'
-            }
+            },
+            # --- UK Celebrity ---
+            'ok_magazine_uk': {
+                'url': 'https://okmagazine.com/rss',
+                'category': 'celebrity'
+            },
+            'closer_magazine': {
+                'url': 'https://www.closermagazine.co.uk/feed/',
+                'category': 'celebrity'
+            },
+            'hello_magazine': {
+                'url': 'https://www.hellomagazine.com/rss',
+                'category': 'celebrity'
+            },
+            'now_to_love_au': {
+                'url': 'https://www.nowtolove.com.au/feed',
+                'category': 'celebrity'
+            },
+            # --- Music Industry ---
+            'pitchfork': {
+                'url': 'https://pitchfork.com/rss/news/',
+                'category': 'music'
+            },
+            'nme': {
+                'url': 'https://www.nme.com/feed',
+                'category': 'music'
+            },
+            'consequence': {
+                'url': 'https://consequence.net/feed/',
+                'category': 'music'
+            },
+            # --- Reality TV (high drama density) ---
+            'reality_blurred': {
+                'url': 'https://realityblurred.com/realitytv/feed/',
+                'category': 'reality_tv'
+            },
+            'reality_tv_world': {
+                'url': 'https://www.realitytvworld.com/rss/newsfeed.xml',
+                'category': 'reality_tv'
+            },
+            # --- Film / Awards / Industry ---
+            'deadline': {
+                'url': 'https://deadline.com/feed/',
+                'category': 'entertainment'
+            },
+            'the_blast': {
+                'url': 'https://theblast.com/feed',
+                'category': 'celebrity'
+            },
+            # --- Bonus UK / Gossip sources ---
+            'mirror_3am': {
+                'url': 'https://www.mirror.co.uk/3am/?service=rss',
+                'category': 'celebrity'
+            },
+            'express_showbiz': {
+                'url': 'https://www.express.co.uk/posts/rss/79/celebrity-news',
+                'category': 'celebrity'
+            },
+            'entertainment_daily': {
+                'url': 'https://www.entertainmentdaily.co.uk/feed/',
+                'category': 'celebrity'
+            },
+            'female_first': {
+                'url': 'https://www.femalefirst.co.uk/celebrities/rss',
+                'category': 'celebrity'
+            },
+            'the_sun_showbiz': {
+                'url': 'https://www.thesun.co.uk/feed/',
+                'category': 'celebrity'
+            },
         }
 
     def load_celebrities(self):
