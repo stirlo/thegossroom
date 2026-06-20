@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-RSS-Based Bluesky Poster - Zero File Dependencies
+Bluesky Poster (RSS-dedup edition)
+Uses Bluesky's own RSS feed to prevent double-posting.
+URL generation uses frontmatter slug field (written by scraper) — no more 404s.
 """
 
 import requests
@@ -10,236 +12,245 @@ import re
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 
-logging.basicConfig(level=logging.INFO, format='%(levelname)s:%(name)s:%(message)s')
+logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(name)s:%(message)s")
 logger = logging.getLogger(__name__)
 
-class RSSBlueskyPoster:
-    def __init__(self):
-        self.base_url = "https://bsky.social/xrpc"
-        self.handle = os.getenv('BLUESKY_HANDLE')
-        self.password = os.getenv('BLUESKY_PASSWORD')
-        self.session = None
-        self.site_base_url = "https://thegossroom.com"
+SITE_BASE = "https://thegossroom.com"
+BSKY_API  = "https://bsky.social/xrpc"
+# Your Bluesky RSS — update DID if handle changes
+BSKY_RSS  = "https://bsky.app/profile/did:plc:gx7eych32oavyzd2sydcjqki/rss"
 
-        # RSS feed for duplicate checking
-        self.rss_url = "https://bsky.app/profile/did:plc:gx7eych32oavyzd2sydcjqki/rss"
+
+class BlueskyPoster:
+    def __init__(self):
+        self.handle   = os.getenv("BLUESKY_HANDLE")
+        self.password = os.getenv("BLUESKY_PASSWORD")
+        self.session  = None
+        self.base     = Path.cwd()
+
+    # ------------------------------------------------------------------
+    # Auth
+    # ------------------------------------------------------------------
 
     def authenticate(self):
-        """Authenticate with Bluesky"""
-        auth_data = {"identifier": self.handle, "password": self.password}
-
         try:
-            response = requests.post(f"{self.base_url}/com.atproto.server.createSession", 
-                                   json=auth_data, timeout=30)
-            if response.status_code == 200:
-                self.session = response.json()
-                logger.info("✅ Bluesky authenticated")
+            r = requests.post(
+                f"{BSKY_API}/com.atproto.server.createSession",
+                json={"identifier": self.handle, "password": self.password},
+                timeout=30
+            )
+            if r.status_code == 200:
+                self.session = r.json()
+                logger.info("Authenticated with Bluesky")
                 return True
-            else:
-                logger.error(f"❌ Auth failed: {response.status_code}")
-                return False
+            logger.error(f"Auth failed: {r.status_code}")
         except Exception as e:
-            logger.error(f"❌ Auth error: {e}")
-            return False
+            logger.error(f"Auth error: {e}")
+        return False
 
-    def get_posted_urls_from_rss(self):
-        """Get already posted URLs from RSS feed"""
+    # ------------------------------------------------------------------
+    # URL generation — uses frontmatter slug, falls back to filename
+    # ------------------------------------------------------------------
+
+    def post_url(self, filename: str, frontmatter: dict) -> str | None:
+        """
+        Build the canonical post URL.
+        Priority:
+          1. frontmatter['permalink']
+          2. frontmatter['slug']  ← scraper writes this now, always reliable
+          3. slug derived from filename (may be truncated — last resort)
+        """
+        if not filename.endswith(".md"):
+            return None
+
+        stem = filename[:-3]
+        if len(stem) < 11:
+            return None
+
+        date_str = stem[:10]
         try:
-            response = requests.get(self.rss_url, timeout=15)
-            if response.status_code != 200:
-                logger.warning("⚠️ RSS feed unavailable, proceeding without duplicate check")
+            year, month, day = date_str.split("-")
+        except ValueError:
+            return None
+
+        # 1. Explicit permalink
+        if frontmatter.get("permalink"):
+            perm = str(frontmatter["permalink"]).strip("/")
+            return f"{SITE_BASE}/{perm}/"
+
+        # 2. Frontmatter slug (written by enhanced_gossip_scraper.py)
+        if frontmatter.get("slug"):
+            slug = str(frontmatter["slug"]).strip().strip("/")
+            if slug:
+                return f"{SITE_BASE}/{year}/{month}/{day}/{slug}/"
+
+        # 3. Filename fallback (truncated at 50 chars — may 404 on long titles)
+        slug = re.sub(r"-+", "-", stem[11:]).strip("-")
+        if slug:
+            return f"{SITE_BASE}/{year}/{month}/{day}/{slug}/"
+
+        return None
+
+    # ------------------------------------------------------------------
+    # Duplicate detection via Bluesky RSS
+    # ------------------------------------------------------------------
+
+    def already_posted_urls(self) -> set:
+        try:
+            r = requests.get(BSKY_RSS, timeout=15)
+            if r.status_code != 200:
                 return set()
-
-            root = ET.fromstring(response.content)
-            posted_urls = set()
-
-            # Extract URLs from RSS descriptions
-            for item in root.findall('.//item'):
-                description = item.find('description')
-                if description is not None and description.text:
-                    # Look for thegossroom.com URLs in the description
-                    urls = re.findall(r'https://thegossroom\.com/[^\s]+', description.text)
-                    posted_urls.update(urls)
-
-            logger.info(f"📡 Found {len(posted_urls)} already posted URLs from RSS")
-            return posted_urls
-
+            root = ET.fromstring(r.content)
+            urls = set()
+            for item in root.findall(".//item"):
+                desc = item.find("description")
+                if desc is not None and desc.text:
+                    urls.update(re.findall(rf"{re.escape(SITE_BASE)}/[^\s\"<]+", desc.text))
+            logger.info(f"RSS dedup: {len(urls)} already-posted URLs found")
+            return urls
         except Exception as e:
-            logger.warning(f"⚠️ RSS check failed: {e}, proceeding without duplicate check")
+            logger.warning(f"RSS dedup failed ({e}), proceeding without")
             return set()
 
-    def validate_url(self, url):
-        """Quick URL check"""
+    # ------------------------------------------------------------------
+    # Validate URL
+    # ------------------------------------------------------------------
+
+    def url_ok(self, url: str) -> bool:
         try:
-            response = requests.head(url, timeout=8, allow_redirects=True)
-            return 200 <= response.status_code < 400
-        except:
+            r = requests.get(url, timeout=10, allow_redirects=True)
+            if r.status_code >= 400:
+                return False
+            # Detect soft-404 (GitHub Pages / CF Pages style)
+            if r.url.rstrip("/") == SITE_BASE.rstrip("/"):
+                return False
+            body = r.text[:2000].lower()
+            for marker in ("page not found", "404", "doesn't exist", "not found"):
+                if marker in body:
+                    return False
+            return True
+        except Exception:
             return False
 
-    def generate_url(self, filename):
-        """Generate post URL"""
-        if not filename.endswith('.md') or len(filename) < 14:
-            return None
+    # ------------------------------------------------------------------
+    # Find best unposted article
+    # ------------------------------------------------------------------
 
-        date_part = filename[:10]
-        slug_part = filename[11:-3]
-
-        try:
-            year, month, day = date_part.split('-')
-            slug = re.sub(r'-+', '-', slug_part.strip('-'))
-            return f"{self.site_base_url}/{year}/{month}/{day}/{slug}/"
-        except:
-            return None
-
-    def parse_post(self, file_path):
-        """Minimal post parsing"""
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            if not content.startswith('---'):
-                return None
-
-            parts = content.split('---', 2)
-            if len(parts) < 3:
-                return None
-
-            frontmatter = yaml.safe_load(parts[1])
-            return frontmatter if frontmatter else None
-
-        except Exception as e:
-            logger.debug(f"Parse failed {file_path.name}: {e}")
-            return None
-
-    def get_best_unposted(self):
-        """Get the hottest unposted article using RSS check"""
-        posted_urls = self.get_posted_urls_from_rss()
-        posts_dir = Path('_posts')
-
+    def best_candidate(self) -> dict | None:
+        posted = self.already_posted_urls()
+        posts_dir = self.base / "_posts"
         if not posts_dir.exists():
             return None
 
         candidates = []
 
-        for post_file in posts_dir.glob('*.md'):
-            # Skip recovered files
-            if 'recovered' in post_file.name:
+        for f in posts_dir.glob("*.md"):
+            if "recovered" in f.name:
                 continue
 
-            # Generate URL first
-            url = self.generate_url(post_file.name)
-            if not url:
+            try:
+                content = f.read_text(encoding="utf-8")
+            except Exception:
                 continue
 
-            # RSS DUPLICATE CHECK - This is the magic!
-            if url in posted_urls:
-                logger.debug(f"🛡️ RSS BLOCKED: {post_file.name}")
+            if not content.startswith("---"):
                 continue
 
-            # Parse frontmatter
-            fm = self.parse_post(post_file)
-            if not fm or not fm.get('title'):
+            parts = content.split("---", 2)
+            if len(parts) < 3:
                 continue
 
-            # Check temperature
-            temp = fm.get('temperature', fm.get('drama_score', 0))
+            try:
+                fm = yaml.safe_load(parts[1]) or {}
+            except Exception:
+                continue
+
+            if not fm.get("title"):
+                continue
+
+            temp = fm.get("temperature", fm.get("drama_score", 0))
             if temp < 25:
                 continue
 
-            # Validate URL
-            if not self.validate_url(url):
-                logger.warning(f"⚠️ Bad URL: {post_file.name}")
+            url = self.post_url(f.name, fm)
+            if not url:
+                continue
+
+            if url in posted:
+                continue
+
+            if not self.url_ok(url):
+                logger.warning(f"Bad URL skipped: {url}")
                 continue
 
             candidates.append({
-                'filename': post_file.name,
-                'title': fm['title'],
-                'temperature': temp,
-                'celebrity': fm.get('primary_celebrity', ''),
-                'tags': fm.get('tags', []),
-                'url': url
+                "filename": f.name,
+                "title":    fm["title"],
+                "temp":     temp,
+                "celebrity": fm.get("primary_celebrity", ""),
+                "tags":     fm.get("tags", []),
+                "url":      url,
             })
 
         if not candidates:
             return None
 
-        # Return hottest
-        best = max(candidates, key=lambda x: x['temperature'])
-        logger.info(f"🔥 Selected: {best['title'][:50]}... (Temp: {best['temperature']}°)")
+        best = max(candidates, key=lambda x: x["temp"])
+        logger.info(f"Selected: {best['title'][:60]} ({best['temp']}°)")
         return best
 
-    def create_post_text(self, article):
-        """Create Bluesky post with proper hashtags"""
-        temp = article['temperature']
-        title = article['title']
-        url = article['url']
-        celebrity = article['celebrity'].replace('_', ' ').title() if article['celebrity'] else ""
-        tags = article.get('tags', [])
-    
-        # Temperature emoji
-        if temp >= 40:
-            emoji = "🔥🔥🔥 EXPLOSIVE"
-        elif temp >= 30:
-            emoji = "🔥🔥 HOT"
-        else:
-            emoji = "🔥 HEATING UP"
-    
-        # Build hashtags from tags
-        hashtags = "#gossip"
-        if tags:
-            # Clean up tag names and add as hashtags
-            valid_tags = []
-            for tag in tags[:3]:  # Limit to 3 additional tags
-                # Convert celebrity keys to readable hashtags
-                clean_tag = tag.replace('_', '').replace('-', '').lower()
-                # Skip if too short or same as gossip
-                if len(clean_tag) > 2 and clean_tag != 'gossip':
-                    valid_tags.append(f"#{clean_tag}")
-    
-            if valid_tags:
-                hashtags += " " + " ".join(valid_tags)
-    
-        # Build post
-        post = f"{emoji}\n\n"
-    
-        if celebrity:
-            post += f"🎯 {celebrity}\n"
-    
-        post += f"🌡️ {temp}°\n\n"
-    
-        # Calculate remaining space for title
-        remaining = 300 - len(post) - len(url) - len(hashtags) - 10  # Buffer
-        if len(title) > remaining:
-            title = title[:remaining-3] + "..."
-    
-        post += f"📰 {title}\n\n{url}\n\n{hashtags}"
-    
-        return post[:300]
+    # ------------------------------------------------------------------
+    # Compose post text
+    # ------------------------------------------------------------------
 
-    def post_to_bluesky(self, text):
-        """Post with clickable links"""
+    def compose(self, article: dict) -> str:
+        temp      = article["temp"]
+        title     = article["title"]
+        url       = article["url"]
+        celebrity = article["celebrity"].replace("_", " ").title() if article["celebrity"] else ""
+        tags      = article.get("tags", [])
+
+        badge = "🔥🔥🔥 EXPLOSIVE" if temp >= 40 else ("🔥🔥 HOT" if temp >= 30 else "🔥 HEATING UP")
+
+        hashtags = "#gossip"
+        for tag in tags[:3]:
+            clean = re.sub(r"[^a-z0-9]", "", tag.lower())
+            if len(clean) > 2 and clean != "gossip":
+                hashtags += f" #{clean}"
+
+        body = f"{badge}\n\n"
+        if celebrity:
+            body += f"🎯 {celebrity}\n"
+        body += f"🌡️ {temp}°\n\n"
+
+        space = 300 - len(body) - len(url) - len(hashtags) - 10
+        if len(title) > space:
+            title = title[:space - 3] + "..."
+
+        body += f"📰 {title}\n\n{url}\n\n{hashtags}"
+        return body[:300]
+
+    # ------------------------------------------------------------------
+    # Post
+    # ------------------------------------------------------------------
+
+    def post(self, text: str) -> bool:
         if not self.session:
             return False
 
-        # Create URL facets
         facets = []
-        url_pattern = r'https?://[^\s]+'
-        for match in re.finditer(url_pattern, text):
+        for m in re.finditer(r"https?://\S+", text):
             facets.append({
                 "index": {
-                    "byteStart": len(text[:match.start()].encode('utf-8')),
-                    "byteEnd": len(text[:match.end()].encode('utf-8'))
+                    "byteStart": len(text[:m.start()].encode()),
+                    "byteEnd":   len(text[:m.end()].encode())
                 },
-                "features": [{
-                    "$type": "app.bsky.richtext.facet#link",
-                    "uri": match.group()
-                }]
+                "features": [{"$type": "app.bsky.richtext.facet#link", "uri": m.group()}]
             })
 
-        post_data = {
+        payload = {
             "repo": self.session["did"],
             "collection": "app.bsky.feed.post",
             "record": {
@@ -250,43 +261,54 @@ class RSSBlueskyPoster:
             }
         }
 
-        headers = {
-            "Authorization": f"Bearer {self.session['accessJwt']}",
-            "Content-Type": "application/json"
-        }
-
         try:
-            response = requests.post(f"{self.base_url}/com.atproto.repo.createRecord",
-                                   json=post_data, headers=headers, timeout=30)
-            return response.status_code == 200
-        except:
-            return False
+            r = requests.post(
+                f"{BSKY_API}/com.atproto.repo.createRecord",
+                json=payload,
+                headers={
+                    "Authorization": f"Bearer {self.session['accessJwt']}",
+                    "Content-Type": "application/json"
+                },
+                timeout=30
+            )
+            if r.status_code == 200:
+                logger.info("Posted successfully")
+                return True
+            logger.error(f"Post failed: {r.status_code} {r.text[:200]}")
+        except Exception as e:
+            logger.error(f"Post error: {e}")
+        return False
+
+    # ------------------------------------------------------------------
+    # Run
+    # ------------------------------------------------------------------
 
     def run(self):
-        """Main process"""
-        logger.info("📡 RSS-Based Bluesky Poster starting...")
+        logger.info("Bluesky poster starting...")
+
+        if not self.handle or not self.password:
+            logger.error("BLUESKY_HANDLE / BLUESKY_PASSWORD not set")
+            print("posts_made=false")
+            return
 
         if not self.authenticate():
             print("posts_made=false")
             return
 
-        article = self.get_best_unposted()
+        article = self.best_candidate()
         if not article:
-            logger.info("❄️ No unposted articles (RSS filtered)")
+            logger.info("No eligible articles")
             print("posts_made=false")
             return
 
-        # Create and post
-        post_text = self.create_post_text(article)
-        logger.info(f"🚀 Posting: {article['title'][:50]}...")
+        text = self.compose(article)
+        logger.info(f"Posting: {article['title'][:60]}...")
 
-        if self.post_to_bluesky(post_text):
-            logger.info(f"✅ SUCCESS: Posted {article['filename']}")
+        if self.post(text):
             print("posts_made=true")
         else:
-            logger.error("❌ Post failed")
             print("posts_made=false")
 
+
 if __name__ == "__main__":
-    poster = RSSBlueskyPoster()
-    poster.run()
+    BlueskyPoster().run()

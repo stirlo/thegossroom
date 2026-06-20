@@ -8,3 +8,22 @@ node_modules/
 _posts/temp.txt
 data/gossip_data.json
 data/processed_articles.json
+
+# --- Added by tgr_final_cleanup.py ---
+# Harold SQLite DB - lives on Harold, not in git
+_data/tgr.db
+# Harold log
+harold.log
+automation.log
+# Retired scripts - kept locally, not needed in repo
+scripts/_retired/
+# Jekyll build output
+# Python
+__pycache__/
+*.pyc
+*.pyo
+# Archive dirs - large, not needed in git
+_archive/
+_cold_storage/
+# Cloudflare wrangler
+.wrangler/

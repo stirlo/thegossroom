@@ -31,9 +31,20 @@ class IntelligentArchiveManager:
         self.COLD_STORAGE_AFTER_DAYS = 90 # Cold storage after 3 months
 
     def load_celebrities(self):
+        """Load from SQLite snapshot JSON (Harold source of truth)."""
+        snapshot = self.base_path / '_data' / 'celebrities_snapshot.json'
+        if snapshot.exists():
+            try:
+                import json as _json
+                data = _json.loads(snapshot.read_text())
+                # Convert list to dict keyed by 'key' field
+                return {c['key']: c for c in data.get('celebrities', [])}
+            except Exception:
+                pass
+        # Fallback to YAML for local dev without Harold DB
+        yml = self.base_path / '_data' / 'celebrities.yml'
         try:
-            with open(self.base_path / '_data' / 'celebrities.yml', 'r') as f:
-                return yaml.safe_load(f) or {}
+            return yaml.safe_load(yml.read_text()) or {}
         except FileNotFoundError:
             return {}
 

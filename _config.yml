@@ -1,6 +1,6 @@
 # Site settings
 title: "The Gossip Room"
-email: <mailto:s@oursquadis.top>
+email: s@oursquadis.top
 description: >-
   Real-time celebrity gossip aggregation with drama scoring and trending analysis.
   Track the hottest entertainment news and rising stars with The Gossip Room.
@@ -95,7 +95,6 @@ exclude:
   - requirements.txt
   - README.md
   - "*.py"
-  - "_posts/202[0-3]-*"     # Exclude posts older than 2024
   - data/
   - scraper_debug.log
 
