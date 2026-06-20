@@ -723,6 +723,7 @@ class AdaptiveGossipScraper:
         front_matter = {
             'layout': 'post',
             'title': title,
+            'slug': slug,
             'date': pub_datetime.isoformat(),
             'source': source_name,
             'source_url': link,
@@ -897,12 +898,8 @@ class AdaptiveGossipScraper:
             celebrities_dir = self.base_path / '_data'
             celebrities_dir.mkdir(exist_ok=True)
 
-            # Create backup
             celebrities_file = celebrities_dir / 'celebrities.yml'
-            if celebrities_file.exists():
-                backup_file = celebrities_dir / f'celebrities_backup_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yml'
-                shutil.copy2(celebrities_file, backup_file)
-                logger.info(f"📋 Created backup: {backup_file.name}")
+            # NOTE: Backups removed - Harold SQLite is the source of truth now
 
             # Save updated celebrities with temperature data
             with open(celebrities_file, 'w', encoding='utf-8') as f:

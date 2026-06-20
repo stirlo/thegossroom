@@ -261,49 +261,47 @@ class SmartBlueskyPoster:
 
     def generate_post_url(self, filename, frontmatter=None):
         """
-        Generate Jekyll post URL from filename.
+        Generate Jekyll post URL from filename + frontmatter.
 
-        Prefers frontmatter slug/permalink fields if available, since
-        Jekyll may derive the URL from the post title rather than filename
-        (especially when titles contain special characters or the filename
-        was truncated to 50 chars during scraping).
+        Priority order:
+          1. frontmatter['permalink'] - explicit override
+          2. frontmatter['slug'] - written by scraper from clean_slug()
+          3. filename slug - fallback only (may be truncated, use with caution)
+
+        The scraper now writes slug: to every post frontmatter so option 2
+        should always be available, making 404s from truncated filenames impossible.
         """
-        # Prefer explicit permalink in frontmatter
-        if frontmatter:
-            if frontmatter.get('permalink'):
-                perm = frontmatter['permalink'].strip('/')
-                return f"{self.site_base_url}/{perm}/"
-            if frontmatter.get('slug'):
-                slug = frontmatter['slug'].strip()
-                # Still need the date — fall through to extract it from filename
-
         if not filename.endswith('.md'):
             return self.site_base_url
 
+        # Extract date from filename - always reliable
         name_without_ext = filename[:-3]
         if len(name_without_ext) < 10:
             return self.site_base_url
 
         date_part = name_without_ext[:10]
-        slug_part = name_without_ext[11:]
-
         try:
             year, month, day = date_part.split('-')
-
-            # Use frontmatter slug if we have one but no explicit permalink
-            if frontmatter and frontmatter.get('slug'):
-                clean_slug = frontmatter['slug'].strip().strip('/')
-            else:
-                clean_slug = slug_part.rstrip('-').rstrip('_')
-                clean_slug = re.sub(r'-+', '-', clean_slug)
-                clean_slug = clean_slug.strip('-')
-
-            if not clean_slug:
-                clean_slug = "post"
-
-            return f"{self.site_base_url}/{year}/{month}/{day}/{clean_slug}/"
-        except Exception:
+        except ValueError:
             return self.site_base_url
+
+        # Prefer explicit permalink
+        if frontmatter and frontmatter.get('permalink'):
+            perm = str(frontmatter['permalink']).strip('/')
+            return f"{self.site_base_url}/{perm}/"
+
+        # Use frontmatter slug (written by scraper - matches Jekyll exactly)
+        if frontmatter and frontmatter.get('slug'):
+            clean_slug = str(frontmatter['slug']).strip().strip('/')
+            if clean_slug:
+                return f"{self.site_base_url}/{year}/{month}/{day}/{clean_slug}/"
+
+        # Fallback: derive slug from filename (may be truncated - less reliable)
+        slug_part = name_without_ext[11:]
+        clean_slug = re.sub(r'-+', '-', slug_part).strip('-')
+        if not clean_slug:
+            clean_slug = "post"
+        return f"{self.site_base_url}/{year}/{month}/{day}/{clean_slug}/"
 
     def get_file_creation_time(self, file_path):
         """Get file creation/modification time"""
