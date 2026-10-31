@@ -316,7 +316,8 @@ module Jekyll
         puts "  📍 Date redirect: /#{key}/ -> #{latest_post[:url]}"
       end
 
-      create_fallback_handler(site, celebrity_latest)
+      # The source 404 page owns removed-article recovery. Generating another
+      # page here used to override it with invalid JavaScript and raw front matter.
     end
 
     def generate_legacy_redirects(site, posts_data)

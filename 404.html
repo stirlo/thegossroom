@@ -1,194 +1,143 @@
 ---
 layout: default
-title: "404 – Lost in the Drama"
+title: "Finding a related story"
 permalink: /404.html
+robots: noindex
 ---
 
 <style>
-  .not-found-wrap {
-    max-width: 600px;
-    margin: 60px auto;
+  .recovery-wrap {
+    max-width: 680px;
+    margin: 72px auto;
+    padding: 0 24px;
     text-align: center;
-    padding: 0 20px;
   }
-  .not-found-wrap h1 {
-    font-size: 5em;
-    margin: 0;
-    background: linear-gradient(135deg, #e8305a, #ffff00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .recovery-mark {
+    color: #e8305a;
+    font-size: 3.5rem;
     font-weight: 900;
     line-height: 1;
   }
-  .not-found-wrap h2 {
-    font-size: 1.4em;
-    margin: 12px 0 8px;
+  .recovery-wrap h1 {
     color: #f0f0f0;
-    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 18px 0 10px;
   }
-  .not-found-status {
-    font-size: 0.95em;
+  .recovery-status {
     color: #b8b8c8;
-    margin-bottom: 32px;
-    min-height: 1.4em;
+    min-height: 1.5em;
   }
-  .not-found-status.searching::after {
-    content: '';
-    display: inline-block;
-    width: 6px; height: 6px;
+  .recovery-status.searching::after {
+    animation: recovery-pulse 0.8s ease-in-out infinite;
     background: #e8305a;
     border-radius: 50%;
-    margin-left: 8px;
-    animation: blink 0.8s ease-in-out infinite;
-    vertical-align: middle;
-  }
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
-  }
-  .not-found-btn {
+    content: '';
     display: inline-block;
-    background: linear-gradient(135deg, #c0254a, #e8305a);
-    color: #fff !important;
-    padding: 14px 32px;
-    border-radius: 28px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.95em;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin: 8px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 8px 24px rgba(232, 48, 90, 0.3);
+    height: 7px;
+    margin-left: 9px;
+    width: 7px;
   }
-  .not-found-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(232, 48, 90, 0.45);
-  }
-  .not-found-btn.secondary {
-    background: rgba(255,255,255,0.08);
-    box-shadow: none;
-    border: 1px solid rgba(255,255,255,0.15);
-  }
-  .not-found-btn.secondary:hover {
-    background: rgba(255,255,255,0.14);
-    box-shadow: none;
-  }
-  #redirect-notice {
+  .recovery-actions {
     display: none;
-    background: rgba(232, 48, 90, 0.12);
-    border: 1px solid rgba(232, 48, 90, 0.3);
-    border-radius: 10px;
-    padding: 14px 20px;
-    margin-bottom: 24px;
-    font-size: 0.9em;
-    color: #f0a0b8;
+    margin-top: 28px;
+  }
+  .recovery-actions a {
+    background: #c0254a;
+    border-radius: 24px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 800;
+    margin: 6px;
+    padding: 12px 24px;
+    text-decoration: none;
+  }
+  .recovery-actions a:last-child {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  @keyframes recovery-pulse {
+    50% { opacity: 0.2; }
   }
 </style>
 
-<div class="not-found-wrap">
-  <h1>404</h1>
-  <h2>Lost in the Drama 🎭</h2>
-
-  <div id="redirect-notice"></div>
-  <p class="not-found-status searching" id="status-msg">Scanning the gossip archive…</p>
-
-  <div id="action-buttons" style="display:none">
-    <a href="/" class="not-found-btn">🔥 Latest Gossip</a>
-    <a href="/archive/" class="not-found-btn secondary">📰 Full Archive</a>
+<main class="recovery-wrap" aria-live="polite">
+  <div class="recovery-mark" aria-hidden="true">◆</div>
+  <h1>Finding the next chapter</h1>
+  <p class="recovery-status searching" id="recovery-status">
+    Matching this link with the latest related story…
+  </p>
+  <div class="recovery-actions" id="recovery-actions">
+    <a href="/">Latest gossip</a>
+    <a href="/archive/">Browse the archive</a>
   </div>
-</div>
+</main>
 
 <script>
 (function () {
   'use strict';
 
-  // Levenshtein distance
-  function lev(a, b) {
-    if (!a.length) return b.length;
-    if (!b.length) return a.length;
-    let prev = [...Array(b.length + 1).keys()];
-    for (let i = 1; i <= a.length; i++) {
-      const cur = [i];
-      for (let j = 1; j <= b.length; j++) {
-        cur[j] = a[i-1] === b[j-1]
-          ? prev[j-1]
-          : 1 + Math.min(prev[j], cur[j-1], prev[j-1]);
-      }
-      prev = cur;
-    }
-    return prev[b.length];
+  const status = document.getElementById('recovery-status');
+  const actions = document.getElementById('recovery-actions');
+
+  function canonicalPath() {
+    // Jekyll post URLs always end in a slash; normalize copied links to match.
+    const decoded = decodeURI(window.location.pathname).replace(/\/+$/, '');
+    return (decoded || '/') + (decoded === '' || decoded === '/' ? '' : '/');
   }
 
-  // Extract the most meaningful slug segment from the current path
-  function getWantedSlug() {
-    const parts = window.location.pathname
-      .replace(/\/+$/, '')
-      .toLowerCase()
-      .split('/')
-      .filter(Boolean);
-    // Skip date segments like 2025, 08, 02
-    const slug = parts.filter(p => !/^\d{1,4}$/.test(p)).pop();
-    return slug || '';
+  function words(value) {
+    return new Set(
+      value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/).filter(Boolean)
+    );
   }
 
-  function setStatus(msg, searching) {
-    const el = document.getElementById('status-msg');
-    el.textContent = msg;
-    el.className = 'not-found-status' + (searching ? ' searching' : '');
-  }
+  function fallbackStory(live) {
+    // Unknown legacy variants still receive a relevant live story based on
+    // celebrity-tag components and meaningful words from the requested slug.
+    const wanted = words(canonicalPath().split('/').filter(Boolean).pop() || '');
+    let best = live[0] || null;
+    let bestScore = -1;
 
-  function showButtons() {
-    document.getElementById('action-buttons').style.display = 'block';
-  }
-
-  function showRedirectNotice(url, title) {
-    const el = document.getElementById('redirect-notice');
-    el.style.display = 'block';
-    el.innerHTML = `Found a close match: redirecting you to <strong>${title || url}</strong>…`;
-  }
-
-  async function smartRedirect() {
-    const wantedSlug = getWantedSlug();
-
-    if (!wantedSlug) {
-      setStatus("Couldn't figure out what you were looking for.");
-      showButtons();
-      return;
-    }
-
-    try {
-      const slugs = await fetch('/slugs.json').then(r => {
-        if (!r.ok) throw new Error('slugs.json not found');
-        return r.json();
+    live.forEach(function (story) {
+      const titleWords = words(story.title || '');
+      let tagHits = 0;
+      let titleHits = 0;
+      (story.tags || []).forEach(function (tag) {
+        const tagParts = tag.split('_').filter(function (part) { return part.length > 3; });
+        if (tagParts.some(function (part) { return wanted.has(part); })) tagHits += 1;
       });
-
-      let best = null, bestDist = Infinity;
-
-      slugs.forEach(entry => {
-        const d = lev(wantedSlug, entry.slug || '');
-        if (d < bestDist) { bestDist = d; best = entry; }
+      wanted.forEach(function (word) {
+        if (word.length > 3 && titleWords.has(word)) titleHits += 1;
       });
-
-      // Tight match threshold: 3 edits max, and at most 30% of slug length
-      const threshold = Math.max(2, Math.floor(wantedSlug.length * 0.3));
-
-      if (best && bestDist <= threshold) {
-        showRedirectNotice(best.url, best.title);
-        setStatus(`Redirecting… (matched "${best.slug}")`);
-        setTimeout(() => location.replace(best.url), 1200);
-      } else {
-        setStatus("That post doesn't seem to exist — it may have been removed.");
-        showButtons();
+      const score = (tagHits * 100) + (titleHits * 10) + Number(story.heat || 0);
+      if (score > bestScore) {
+        best = story;
+        bestScore = score;
       }
-    } catch (err) {
-      // slugs.json missing or network error — fail gracefully
-      setStatus("That post doesn't seem to exist.");
-      showButtons();
-    }
+    });
+    return best;
   }
 
-  smartRedirect();
+  function continueTo(story) {
+    if (!story || !story.url) throw new Error('No live stories available');
+    status.className = 'recovery-status';
+    status.textContent = 'Taking you to “' + (story.title || 'the latest related story') + '”…';
+    window.setTimeout(function () { window.location.replace(story.url); }, 120);
+  }
+
+  fetch('/recovery-index.json', { cache: 'force-cache' })
+    .then(function (response) {
+      if (!response.ok) throw new Error('Recovery index unavailable');
+      return response.json();
+    })
+    .then(function (index) {
+      const position = index.redirects[canonicalPath()];
+      const exact = Number.isInteger(position) ? index.live[position] : null;
+      continueTo(exact || fallbackStory(index.live || []));
+    })
+    .catch(function () {
+      status.className = 'recovery-status';
+      status.textContent = 'The story desk is refreshing. Choose where to continue:';
+      actions.style.display = 'block';
+    });
 })();
 </script>

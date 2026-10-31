@@ -136,6 +136,12 @@ def build_and_deploy():
     """Build Jekyll and push to Cloudflare Pages via Direct Upload API."""
     import os
 
+    # A failed recovery index must stop publication; otherwise newly archived
+    # article URLs would fall back to a stale or missing redirect map.
+    if not run("build_recovery_index.py"):
+        log("Recovery index build failed; refusing to publish", "ERROR")
+        return False
+
     log("Building Jekyll...")
     result = subprocess.run(
         ["bundle", "exec", "jekyll", "build", "--incremental"],
